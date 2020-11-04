@@ -112,5 +112,5 @@ Regardless of your Marketing team’s structure, funnel charts are essential. To
 
 ### Conclusion
 
-By design, marketing dashboards are meant to deliver insights that drive action and data-informed decisions. To get the definitive guide to marketing dashboards, [download the white paper, The CMO’s Guide to Marketing Dashboards](https://landing.chartio.com/whitepaper-marketing-guide-to-dashboards%20).
+By design, marketing dashboards are meant to deliver insights that drive action and data-informed decisions. To get the definitive guide to marketing dashboards, [download the white paper, The CMO’s Guide to Marketing Dashboards](https://landing.chartio.com/whitepaper-marketing-guide-to-dashboards).
 

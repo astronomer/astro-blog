@@ -54,7 +54,7 @@ So, all this to say, having an&nbsp;SDR isn’t the best use of growth resources
 
 We tried everything from running promos (e.g. 10% off October Deals) to changing our messaging (i.e. technical, non-technical, cold, urgent, funny, etc.) to personalizing emails with cool new tools like [Nova.ai](https://www.nova.ai/). We connected with prospects on LinkedIn and sought out full teams. Nothing really moved the needle at scale. People are desensitized.
 
-![giphy (1) 2.gif](./giphy%20(1)%202.gif)
+![giphy (1) 2.gif](./giphy(1)2.gif)
 
 #### 3. Software Isn’t Shoes
 

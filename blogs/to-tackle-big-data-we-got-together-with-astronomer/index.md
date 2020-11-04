@@ -19,7 +19,7 @@ Without data scientists consumers wouldn’t have the personalized recommendatio
 
 According to a [McKinsey study](https://www.mckinsey.com/business-functions/digital-mckinsey/our-insights/big-data-the-next-frontier-for-innovation), by next year the demand for data scientists in the U.S. alone will be half a million jobs. The problem is that there will be less than a quarter of a million data scientists available, globally. To make the problem even worse, the majority of most data scientists’ time today is spent doing data engineering… which simply sets the table for them to start doing real data science.
 
-![Data Engineering in Action 2.jpeg](./Data%20Engineering%20in%20Action%202.jpeg)
+![Data Engineering in Action 2.jpeg](./DataEngineeringinAction2.jpeg)
 
 ### **Data Engineering**
 
@@ -37,7 +37,7 @@ A step further, data engineering can require developing services and tooling to 
 
 Sounds like a lot of work, right? Well, we happen to know some folks that rather than letting a shortage of talent be a crux to improvements in this space have built their own “software to eat the world” with technology to solve this problem.
 
-![pacman 2.png](./pacman%202.png) **Chomp Chomp.** _Nomnomnomnom…_
+![pacman 2.png](./pacman2.png) **Chomp Chomp.** _Nomnomnomnom…_
 
 ### **Enter Astronomer**
 
@@ -47,7 +47,7 @@ One of the most exciting things about this team is that they’ve developed a pl
 
 To give you a real sense of what makes them so special, though, I went ahead and did a quick Q&A with Astronomer Co-founders Ry Walker and Tim Brunk:
 
-![AstronomerCoFoundersTimBrunkRyWalkerHorizontalOffice (1).jpg](./AstronomerCoFoundersTimBrunkRyWalkerHorizontalOffice%20(1).jpg)
+![AstronomerCoFoundersTimBrunkRyWalkerHorizontalOffice (1).jpg](./AstronomerCoFoundersTimBrunkRyWalkerHorizontalOffice(1).jpg)
 
 **What’s surprised you guys most about everything that’s happening with big data?**
 

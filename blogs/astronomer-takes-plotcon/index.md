@@ -39,9 +39,9 @@ Let’s say I was trying to plot some trigonometric functions. Just look at the 
 
 Here's the code and output with&nbsp;Matplotlib:
 
-![Screen Shot 2016-11-15 at 10.39.59 AM copy 2.png](./Screen%20Shot%202016-11-15%20at%2010.39.59%20AM%20copy%202.png) ![Screen Shot 2016-11-15 at 10.39.59 AM copy.png](./Screen%20Shot%202016-11-15%20at%2010.39.59%20AM%20copy.png)&nbsp;And here it is with Plotly:
+![Screen Shot 2016-11-15 at 10.39.59 AM copy 2.png](./ScreenShot2016-11-15at10.39.59AMcopy2.png) ![Screen Shot 2016-11-15 at 10.39.59 AM copy.png](./ScreenShot2016-11-15at10.39.59AMcopy.png)&nbsp;And here it is with Plotly:
 
-![Screen Shot 2016-11-15 at 10.40.12 AM.png](./Screen%20Shot%202016-11-15%20at%2010.40.12%20AM.png)
+![Screen Shot 2016-11-15 at 10.40.12 AM.png](./ScreenShot2016-11-15at10.40.12AM.png)
 
 [![Sine Curve vs Cosine Curve](https://plot.ly/~virajparekh94/64.png)](https://plot.ly/~virajparekh94/64/)
 

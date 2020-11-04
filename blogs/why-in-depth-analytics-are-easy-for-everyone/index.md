@@ -17,7 +17,7 @@ The same pattern holds true in many different industries—tech and non-tech—a
 
 The first computers consisted of DOS-based interfaces with brazen black backgrounds, a glaring white cursor and some gauche purple or neon green code.
 
-![Glaring Screen.png](./Glaring%20Screen.png)
+![Glaring Screen.png](./GlaringScreen.png)
 
 Early websites were built from scratch in HTML or JavaScript and had static content, mostly text. Quickly, these limitations drove developers to make improvements. New languages like PHP, Python and ASP emerged to make coding web apps easier, more stable and more efficient when troubleshooting.
 

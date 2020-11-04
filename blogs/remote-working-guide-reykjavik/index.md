@@ -47,7 +47,7 @@ Day one, this became our go-to. It’s got an old, eclectic, almost-hippie feel.
 
 **Bonus tip:** Since it doesn’t open until 11am anyway, start the work day at your Airbnb/hotel, then pause for breakfast at [The Laundromat Cafe](https://www.thelaundromatcafe.com/en/home), whose shelves of color-coded books and friendly menu make you fall in love with the city instantly.
 
-![Laundromat Cafe.png](./Laundromat%20Cafe.png "Laundromat Cafe.png")
+![Laundromat Cafe.png](./LaundromatCafe.png "Laundromat Cafe.png")
 
 #### 2. C is for Cookie
 
@@ -99,7 +99,7 @@ All that said, don’t miss Reykjavik Roasters. Just be prepared: bring a notebo
 
 _\* [Snæfellsnes Peninsula road trip](https://bit.ly/2o1M2Sm)_
 
-![golden circle.jpg](./golden%20circle.jpg)_\*[Golden Circle road trip](https://bit.ly/2nwadqY)_
+![golden circle.jpg](./goldencircle.jpg)_\*[Golden Circle road trip](https://bit.ly/2nwadqY)_
 
 ![southwestern.jpg](./southwestern.jpg)_\*[West Coast road trip](https://bit.ly/2nef2CU) plus stop to hike Sólheimajökull Glacier near Eyjafjallajökull_&nbsp;
 

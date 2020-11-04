@@ -49,7 +49,7 @@ The only thing nagging at me was the expectation that there could be complicatio
 
 As much as we don’t want to admit it, roles and titles deeply impact a person’s sense of identity. Even in a startup where roles can often be ambiguous and rapidly changing, people almost instantly attach a level of meaning and self-worth to their title or function. So translating a list of titles on paper to the people wearing those titles is a delicate matter.
 
-![office space.gif](./office%20space.gif)
+![office space.gif](./officespace.gif)
 
 If you’re considering a re-org, I would strongly encourage you make sure you get facetime with individuals whenever possible and be strategic about how you communicate the changes. Define the new role clearly and give people the chance to ask questions and process with you. It takes some time, but it’s important. That leads to another lesson:
 

@@ -102,7 +102,7 @@ Two words: bottomless cup. At under $4, you can enjoy an infinitely refillable b
 
 _976 Barret Avenue, Louisville, KY 40204 • [Find it on Google Maps](https://www.google.com/maps/place/976+Barret+Ave,+Louisville,+KY+40204/data=!4m2!3m1!1s0x88690d2b0dce73a7:0x687c3f5caeabba7e?sa=X&ved=0ahUKEwjkyu2NsKbRAhViq1QKHTzPCOwQ8gEIGzAA)_
 
- ![Gallery K.png](./Gallery%20K.png)  
+ ![Gallery K.png](./GalleryK.png)  
 
 #### The Stats:
 

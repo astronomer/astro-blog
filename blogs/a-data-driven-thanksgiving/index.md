@@ -21,7 +21,7 @@ Without further adieu, here are ten intriguing tidbits&nbsp;of Thanksgiving data
 
 1. The Butterball Turkey Talk-Line&nbsp;(1-800-BUTTERBALL) answers more than 100,000 questions every November/December (What are giblets? How long can I store a turkey in the freezer? And our favorite: What’s the difference between fresh and frozen?)
 
-1. The most pinned side dish on Pinterest? Green beans. We’ll give you [a head start](https://www.pinterest.com/search/pins/?q=green%20beans&rs=typed&term_meta%5B%5D=green%7Ctyped&term_meta%5B%5D=beans%7Ctyped).
+1. The most pinned side dish on Pinterest? Green beans. We’ll give you [a head start](https://www.pinterest.com/search/pins/?q=greenbeans&rs=typed&term_meta%5B%5D=green%7Ctyped&term_meta%5B%5D=beans%7Ctyped).
 
 1. Your textbook might have said Plymouth, Massachusetts, was home to the first Thanksgiving. But Florida, Maine, Virginia and [especially Texas](https://texasalmanac.com/topics/history/timeline/first-thanksgiving) disagree.
 

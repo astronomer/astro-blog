@@ -71,7 +71,7 @@ This project is the most active we’ve profiled with ~250 active contributors, 
 
 **The Dashboard Hustler&nbsp;-&nbsp;** [Re:Dash](https://github.com/getredash/redash)
 
-![Screen Shot 2016-10-28 at 9.59.18 AM.png](./Screen%20Shot%202016-10-28%20at%209.59.18%20AM.png)
+![Screen Shot 2016-10-28 at 9.59.18 AM.png](./ScreenShot2016-10-28at9.59.18AM.png)
 
 This one is an honorable mention of sorts because, in all honesty, we didn't initially have Re:Dash on our list when this post was first published. That's absolutely our mistake because after it's creator Arik Fraimovich reached out (see below), we checked it out and have had a great experience with it. Re:Dash uses the robustness of other open-source guru Plot.ly (see previous adorations of plot.ly from this blog [here](https://medium.com/the-astronomer-journey/what-i-learned-from-analyzing-1700-blog-posts-4a607431a32f#.5br7nk5xh), [here](https://www.astronomer.io/blog/what-i-learned-from-analyzing-1700-blog-posts-part-ii), and [here](https://www.astronomer.io/blog/data-in-basketball)) to power its&nbsp;visualizations and plugs in easily with mail clients like [Mailgun](https://mailgun.com) to create a simple but reliable alert system. Hat's off to Arik for creating some [AWS AMI's](https://docs.redash.io/en/latest/setup.html) for easy install on EC2. We&nbsp;set Re:Dash up the day we've learned about it and have had it running without incident ever since. Highly recommend.
 

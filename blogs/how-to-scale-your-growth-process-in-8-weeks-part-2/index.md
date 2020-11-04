@@ -64,7 +64,7 @@ Knowing their&nbsp;information was coming soon, I quickly had to build the syste
 
 Here’s a visual of that structure:
 
-![strategy](./Screen%20Shot%202017-05-02%20at%2010.03.47%20AM.png "strategy")This theoretical structure turned into the following “tactical capacity menu”:
+![strategy](./ScreenShot2017-05-02at10.03.47AM.png "strategy")This theoretical structure turned into the following “tactical capacity menu”:
 
 ![capacity.png](./capacity.png)
 
@@ -78,7 +78,7 @@ Below is a screenshot of our “Unit Economics Scorecard” MVP ([click here](ht
 - Projected and real campaign results
 - Unit economics of a campaign
 
-[![Screen Shot 2017-05-02 at 9.56.44 AM.png](./Screen%20Shot%202017-05-02%20at%209.56.44%20AM.png)](https://docs.google.com/a/astronomer.io/spreadsheets/d/1hKq2b29u7ahFrkWqjIHFEYhMb9JBxlp0sAO4PVahSwY/edit?usp=sharing)
+[![Screen Shot 2017-05-02 at 9.56.44 AM.png](./ScreenShot2017-05-02at9.56.44AM.png)](https://docs.google.com/a/astronomer.io/spreadsheets/d/1hKq2b29u7ahFrkWqjIHFEYhMb9JBxlp0sAO4PVahSwY/edit?usp=sharing)
 
 Because the system was built based on formulas, changes to any assumptions in the scheme will immediately be updated in the other tabs. It’s the beginning of what our algorithm will eventually look like when the system is automated.
 

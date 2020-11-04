@@ -40,7 +40,7 @@ _![capacity.png](./capacity.png)_
 
 _Tactical Capacity Menu **after** :__&nbsp;[Click to view full details in Google Spreadsheet](https://docs.google.com/spreadsheets/d/1DhrV5qcmAea6Gpo_CnpiNt3BLsICZxZlHZwVVUkemoQ/edit#gid=0).&nbsp;_
 
-_[![tactical capacity.png](./tactical%20capacity.png)](https://docs.google.com/spreadsheets/d/1DhrV5qcmAea6Gpo_CnpiNt3BLsICZxZlHZwVVUkemoQ/edit#gid=0)_
+_[![tactical capacity.png](./tacticalcapacity.png)](https://docs.google.com/spreadsheets/d/1DhrV5qcmAea6Gpo_CnpiNt3BLsICZxZlHZwVVUkemoQ/edit#gid=0)_
 
 This format also made it easier to update our primary Growth Scorecard so anything that changes in this unit economics menu is reflected there. More on that later, though. For now, another big change:
 
@@ -84,11 +84,11 @@ Similar to the first time around, it was time to bring all our unit and campaign
 
 _Scorecard framework **before** ([click for full details](https://docs.google.com/spreadsheets/d/1hKq2b29u7ahFrkWqjIHFEYhMb9JBxlp0sAO4PVahSwY/edit#gid=0)):_
 
-_[![old scorecard.png](./old%20scorecard.png)](https://docs.google.com/spreadsheets/d/1hKq2b29u7ahFrkWqjIHFEYhMb9JBxlp0sAO4PVahSwY/edit#gid=0)_
+_[![old scorecard.png](./oldscorecard.png)](https://docs.google.com/spreadsheets/d/1hKq2b29u7ahFrkWqjIHFEYhMb9JBxlp0sAO4PVahSwY/edit#gid=0)_
 
 _Scorecard framework **after** ([click for full details](https://docs.google.com/spreadsheets/d/1DhrV5qcmAea6Gpo_CnpiNt3BLsICZxZlHZwVVUkemoQ/edit#gid=1095173760)):_
 
-_[![new scorecard.png](./new%20scorecard.png)](https://docs.google.com/spreadsheets/d/1DhrV5qcmAea6Gpo_CnpiNt3BLsICZxZlHZwVVUkemoQ/edit#gid=1095173760)_
+_[![new scorecard.png](./newscorecard.png)](https://docs.google.com/spreadsheets/d/1DhrV5qcmAea6Gpo_CnpiNt3BLsICZxZlHZwVVUkemoQ/edit#gid=1095173760)_
 
 I changed the format of the page slightly for ease of viewing as we look across multiple sprints. The most important “before and after” differences are in the blue and green highlighted cells.
 
@@ -102,7 +102,7 @@ But that’s just one example. To truly execute, we need to go through this exer
 
 ### Getting Focused and Kicking Off
 
-![star wars.png](./star%20wars.png)
+![star wars.png](./starwars.png)
 
 All the work I just described was preparation for us to begin executing broad-based, integrated marketing and sales campaigns. That started the week of May 15 with a push into “Account-based Marketing.”
 
@@ -131,7 +131,7 @@ As such, two roles have been identified as being a bridge between the outbound e
 
 In our version of ABM, ADRs run a series of “plays” that are part of a broader campaign. Initially, we will keep our number of plays tight to ensure we get _great_ at executing fundamentals. Over time, as we get more creative with individual accounts, we will add plays we have seen work consistently.
 
-![play menu](./Screen%20Shot%202017-05-23%20at%202.15.54%20PM.png "play menu")
+![play menu](./ScreenShot2017-05-23at2.15.54PM.png "play menu")
 
 _\*[Astronomer’s full menu of ABM plays](https://docs.google.com/spreadsheets/d/1x3fM1d0BlkoY1g4Ge7fKa2azHQ8Inz4D0Cp66xg6QN0/edit#gid=0)_
 

@@ -43,7 +43,7 @@ This isn’t meant to be a full fledged tutorial on writing server apps in Node 
 
 Let’s see some code. First, let’s take a look at the Node.js version. We’ll discuss what’s going on below.
 
- ![Screen Shot 2017-02-07 at 8.24.37 AM.png](./Screen%20Shot%202017-02-07%20at%208.24.37%20AM.png) ![Screen Shot 2017-02-07 at 8.24.55 AM.png](./Screen%20Shot%202017-02-07%20at%208.24.55%20AM.png)
+ ![Screen Shot 2017-02-07 at 8.24.37 AM.png](./ScreenShot2017-02-07at8.24.37AM.png) ![Screen Shot 2017-02-07 at 8.24.55 AM.png](./ScreenShot2017-02-07at8.24.55AM.png)
 #### &nbsp;
 
 #### Server.js: Node.js Implementation
@@ -60,9 +60,9 @@ Using Node.js, we were able to write 42 lines of code to meet our minimal requir
 
 Next stop, Go. We ended up writing two files here, just to separate some of the logic needed to put records to Kinesis. So there’s a bit more code, and therefore more to discuss, but the idea is the still the same.
 
-![Screen Shot 2017-02-07 at 8.32.08 AM.png](./Screen%20Shot%202017-02-07%20at%208.32.08%20AM.png)
+![Screen Shot 2017-02-07 at 8.32.08 AM.png](./ScreenShot2017-02-07at8.32.08AM.png)
 
-![Screen Shot 2017-02-07 at 8.32.18 AM.png](./Screen%20Shot%202017-02-07%20at%208.32.18%20AM.png)
+![Screen Shot 2017-02-07 at 8.32.18 AM.png](./ScreenShot2017-02-07at8.32.18AM.png)
 
 #### aws/aws.go: Go Implementation
 
@@ -77,7 +77,7 @@ Let’s break this down again.
 
 Now that we have a helper function for putting data to Kinesis, we can focus on the web server. This part is the most similar to what we discussed above for the Node.js version.
 
-![Screen Shot 2017-02-07 at 8.37.55 AM.png](./Screen%20Shot%202017-02-07%20at%208.37.55%20AM.png) ![Screen Shot 2017-02-07 at 8.38.17 AM.png](./Screen%20Shot%202017-02-07%20at%208.38.17%20AM.png)
+![Screen Shot 2017-02-07 at 8.37.55 AM.png](./ScreenShot2017-02-07at8.37.55AM.png) ![Screen Shot 2017-02-07 at 8.38.17 AM.png](./ScreenShot2017-02-07at8.38.17AM.png)
 
 #### main.go: Go Implementation
 
@@ -105,7 +105,7 @@ I’m actually going to say that one more time: benchmarks are tough. This is in
 
 To simulate load against both servers, we used [Apache JMeter](https://jmeter.apache.org/). JMeter bills itself as “a 100% pure Java application designed to load test functional behavior and measure performance.” I won’t go into too much detail on using JMeter, but I’ll include the test plans I made with it at the end of this post. In short, JMeter allows you to spawn many concurrent threads (or users), each of which can interface with the system under test. In our case, we ran multiple tests against each server with 1 user (for a baseline), 50 users, 500 users, and 1000 users. In addition to the number of users, JMeter allows you to specify the ramp time, or the time it takes for all specified threads to become active. In the case where we ran the test with a single user, a ramp time of 0 seconds was used. For all other tests, a ramp time corresponding to 1/10th of the number of users was used. For the duration of the test, each “user” made an HTTP request equivalent to the following curl command:
 
-![Screen Shot 2017-02-07 at 8.45.28 AM-1.png](./Screen%20Shot%202017-02-07%20at%208.45.28%20AM-1.png)
+![Screen Shot 2017-02-07 at 8.45.28 AM-1.png](./ScreenShot2017-02-07at8.45.28AM-1.png)
 
 The body of this request (the value specified after the -d) is an example of what a single event looks like when tracked from one of our many sdks.&nbsp;
 

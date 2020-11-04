@@ -19,13 +19,13 @@ Astronomer’s core comprises an API and the tooling to help our customers use p
 
 Astronomer is still young, and like all young technology companies, we’ve already had some interesting pivots and stack changes. We started out as an analytics/visualization company focused on user retention. We prototyped some fun visualizations into a web application, and immediately noticed our customers struggling to get their data into the system.&nbsp;
 
-![active users.png](./active%20users.png)
+![active users.png](./activeusers.png)
 
 As our quest to accelerate customer insights began, we decided to focus our attention on the biggest bottleneck: data pipelining.
 
 Our first challenge was getting data out of customer applications in the form of user event data, or clickstream data. We used an open source SDK that app developers could install in their applications, which would send us (and our integration partners) events about how their users were interacting with their app over time. In a JavaScript app, the code might look something like this:&nbsp;
 
-![tracked event.png](./tracked%20event.png)
+![tracked event.png](./trackedevent.png)
 
 Developers could quickly start tracking new users, pageviews or other important user-application interactions. On the front end we provided a web application, which let users enable and configure connectors that forwarded events to other SaaS products (Analytics, CRM, Marketing, etc), as well as data warehouses like Amazon Redshift. To handle all these events on our backend, we needed a scalable way to ingest large volumes of event data and turned to AWS managed services.
 

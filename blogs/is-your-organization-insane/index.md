@@ -38,7 +38,7 @@ A quick word of caution: What often happens when an organization grows without d
 
 … it doesn’t accurately represent the whole company. Which makes it easy for stewards of the organization (central management) to focus on the peaks and ignore the valleys where a lot of people live. So they might genuinely see something like this:
 
-[![purejoy.gif](./happy%20computer.gif "purejoy.gif")](https://giphy.com/)
+[![purejoy.gif](./happycomputer.gif "purejoy.gif")](https://giphy.com/)
 
 This disparity actually forces people to continue to fend for themselves. Many people want to put their data to use and move up the sophistication scale, but suddenly find there is no internal support for this.
 
@@ -48,7 +48,7 @@ When a data initiative isn't central enough to be covered by management and/or I
 
 #### Learn more about your options.
 
-Take the aforementioned data maturity self-assessment, even if you want to find or engineer your own solution. Identify&nbsp;your current weaknesses and explore more mature data uses like analytics tools, algorithms or predictive analytics. (Shameless plug: We have&nbsp;a webinar about maximizing the data in all your tools for more robust customer analytics this Thursday at 1pm EST.&nbsp;[Register here](https://www.astronomer.io/webinar3-23-17?utm_campaign=Q1%20-%202017%20-%20Webinar%20Series%20-%20Ruberg&utm_source=hs_email&utm_medium=email&utm_content=46260858&_hsenc=p2ANqtz--qJto29jSfqD_KR8tMXb_6VUZzKFq3ORRE12iPcIUlzZHXoFDL5-CrYBohZ8yYpD-RCYEi81H0DFtOIHHpbxJqW1Xw9A&_hsmi=46260858)!)
+Take the aforementioned data maturity self-assessment, even if you want to find or engineer your own solution. Identify&nbsp;your current weaknesses and explore more mature data uses like analytics tools, algorithms or predictive analytics. (Shameless plug: We have&nbsp;a webinar about maximizing the data in all your tools for more robust customer analytics this Thursday at 1pm EST.&nbsp;[Register here](https://www.astronomer.io/webinar3-23-17?utm_campaign=Q1-2017-WebinarSeries-Ruberg&utm_source=hs_email&utm_medium=email&utm_content=46260858&_hsenc=p2ANqtz--qJto29jSfqD_KR8tMXb_6VUZzKFq3ORRE12iPcIUlzZHXoFDL5-CrYBohZ8yYpD-RCYEi81H0DFtOIHHpbxJqW1Xw9A&_hsmi=46260858)!)
 
 #### Access more data.
 

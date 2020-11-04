@@ -25,7 +25,7 @@ Getting around Nashville is easiest by car. Most of us drove from Cincinnati and
 
 As for lodging, thanks to [Airbnb](https://www.airbnb.com/), it was easy for us to find the kind of house we wanted in [one of the hottest neighborhoods](https://www.nashvillelifestyles.com/bestof/the-five-hottest-neighborhoods-in-nashville) in Nashville, 12 South. [The BIG House](https://www.airbnb.com/rooms/6660503?sug=50#host-profile) allowed us to share spontaneous dance parties, late night drinking games and bathrooms: you know, it brought us together in ways an office can’t. (We highly recommend this location. And if you want something smaller for 1-2 people, check out [Elm “Hotel” Room Tree House](https://www.airbnb.com/rooms/14729724) around the corner. We can vouch for that one, too.)
 
-![house 1.jpg](./house%201.jpg)_Photo cred: Brad_
+![house 1.jpg](./house1.jpg)_Photo cred: Brad_
 
 From our pad in 12 South, we came up with some tips on where to be productive, some favorite Nashville experiences and a bit of general commentary. We didn’t follow any formula to make these decisions, but the whole team was polled and asked to consider typical productivity necessities. So assume that the wifi is reliable, outlets are available and seating is ample, unless otherwise specified. Without further adieu, here is our collective guide to working remotely in Nashville:
 
@@ -80,7 +80,7 @@ We’re not sure if Fido is a coffee shop or a restaurant, but [they’re okay w
 
 ![ci-nashville-convention-and-visitors-corp-fidos-hillsboro-village.jpg.rend.hgtvcom.1280.640.jpeg](./ci-nashville-convention-and-visitors-corp-fidos-hillsboro-village.jpg.rend.hgtvcom.1280.640.jpeg)_Photo cred: [Great American Country](https://www.greatamericancountry.com/places/local-life/nashville-essentials)_
 
-“Fido is a huge place with a ton of seating,” says Head of Design, Chris. “It’s also in a very cool strip of Nashville on 21st Ave near Vanderbilt University, featuring a lot of restaurants and boutiques. You &nbsp;get the sense that it’s been a Nashville staple for a long time. Plus, they have a full breakfast, lunch and dinner menu and are open until 11pm 7 days a week for some late night work.”&nbsp; ![Screen Shot 2017-01-09 at 8.59.50 AM.png](./Screen%20Shot%202017-01-09%20at%208.59.50%20AM.png)
+“Fido is a huge place with a ton of seating,” says Head of Design, Chris. “It’s also in a very cool strip of Nashville on 21st Ave near Vanderbilt University, featuring a lot of restaurants and boutiques. You &nbsp;get the sense that it’s been a Nashville staple for a long time. Plus, they have a full breakfast, lunch and dinner menu and are open until 11pm 7 days a week for some late night work.”&nbsp; ![Screen Shot 2017-01-09 at 8.59.50 AM.png](./ScreenShot2017-01-09at8.59.50AM.png)
 
 **Bonus tip from Ben** : Need a break? Drive or Uber 8 minutes further west to visit the [Parthenon](https://en.wikipedia.org/wiki/Parthenon_(Nashville)), the only full-size replica of the original from Athens in the world. Oh, and there’s a 50-foot-tall gold plated statue of Athena inside.
 
@@ -132,7 +132,7 @@ According to [Zagat](https://www.zagat.com/r/biscuit-love-nashville), “this Gu
 
 Biscuit Love is also a great kick-off or cap to a hike on the gorgeous [Timberland Park Nachez Trace](https://www.natcheztracetravel.com/natchez-trace-tennessee/nashville-franklin-tn/1911-timberland-park.html), which has a trailhead right by the restaurant.
 
- ![Slack for iOS Upload-2.jpg](./Slack%20for%20iOS%20Upload-2.jpg)
+ ![Slack for iOS Upload-2.jpg](./SlackforiOSUpload-2.jpg)
 
 _Photo cred: Becky_
 
