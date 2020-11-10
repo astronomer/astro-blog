@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo:  sunkickr/gatsby-starter-hello-world 
+  repo:  astronomer/astro-blog 
 
 media_folder: /assets
 public_folder: ../assets
