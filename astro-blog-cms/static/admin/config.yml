@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-   commit_messages:
+  commit_messages:
     create: 'Create {{slug}}'
     update: 'Update {{slug}}'
     delete: 'Delete {{slug}}'
