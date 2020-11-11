@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo:  astronomer/astro-blog 
+  name: git-gateway
+  branch: main
 
 media_folder: /assets
 public_folder: ../assets
