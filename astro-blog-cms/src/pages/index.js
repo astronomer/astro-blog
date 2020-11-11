@@ -1,15 +1,20 @@
 import React from "react"
 import './index.css'
+import { Button, AstroLogo } from "@astronomer/spectra";
 
 export default function Home() {
   return (
     <body>
-      <header>
-        <image></image>
-        <div className='top'>Astronomer Blog CMS</div>
-      </header>
-      <div className='form'>
-        <a href='/admin/' className='button'>Continue to CMS</a>
+      <div className='top'>
+        <AstroLogo />
+      </div>
+      <div className='button'>
+        <Button
+          label="Continue to Blog CMS"
+          to="/admin/"
+          type="external"
+          gatsby
+        />
       </div>
     </body>
   )
