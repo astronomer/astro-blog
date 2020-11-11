@@ -1,20 +1,21 @@
 ---
 title: Introducing Airflow 2.0
 slug: introducing-airflow-2-0
-description: 'A breakdown of the major features incorporated in Apache Airflow 2.0, including a refactored, highly-available Scheduler, over 30 UI/UX improvements, a new REST API and much more.'
-heroImagePath: ''
+description: A breakdown of the major features incorporated in Apache Airflow
+  2.0, including a refactored, highly-available Scheduler, over 30 UI/UX
+  improvements, a new REST API and much more.
+heroImagePath: ""
+heroImage: '"https://assets2.astronomer.io/main/blog/airflow-2.png"'
 authors:
   - Paola Peraza Calderon
   - Vikram Koka
 date: 2020-10-29T00:00:00.000Z
 ---
-
 <meta property="og:image" content="../assets/airflow-2.png" class="next-head">
 <meta property="twitter:image:src" content="../assets/airflow-2.png" class="next-head">
 <meta property="twitter:image:src" content="../assets/airflow-2.png" class="next-head">
 
-
-![airflow-2-hero](../assets/airflow-2.png),Apache Airflow was created by Airbnb’s Maxime Beauchemin as an open-source project in late 2014. It was brought into the Apache Software Foundation’s Incubator Program in March 2016 and saw growing success in the wake of Maxime’s well-known [“The Rise of the Data Engineer”](https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603) blog post. By January of 2019, Airflow was [announced as a Top-Level Apache Project](https://blogs.apache.org/foundation/entry/the-apache-software-foundation-announces44) by the Foundation and is now concretely considered the industry’s leading workflow orchestration solution.
+Apache Airflow was created by Airbnb’s Maxime Beauchemin as an open-source project in late 2014. It was brought into the Apache Software Foundation’s Incubator Program in March 2016 and saw growing success in the wake of Maxime’s well-known [“The Rise of the Data Engineer”](https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603) blog post. By January of 2019, Airflow was [announced as a Top-Level Apache Project](https://blogs.apache.org/foundation/entry/the-apache-software-foundation-announces44) by the Foundation and is now concretely considered the industry’s leading workflow orchestration solution.
 
 Airflow’s strength as a tool for dataflow automation has grown for a few reasons:
 
@@ -72,7 +73,7 @@ These capabilities enable a variety of use cases and create new opportunities fo
 
 For more information, you can reference REST API documentation [here](https://airflow.readthedocs.io/en/latest/stable-rest-api-ref.html).,## Smart Sensors
 
-In the context of dependency management in Airflow, it’s been common for data engineers to design data pipelines that employ [*Sensors*](https://www.astronomer.io/guides/what-is-a-sensor/). Sensors are a special kind of Airflow Operator whose purpose is to wait on a particular trigger, such as a file landing at an expected location or an external task completing successfully. Although Sensors are idle for most of their execution time, they nonetheless hold a “worker slot” that can cost significant CPU and memory.
+In the context of dependency management in Airflow, it’s been common for data engineers to design data pipelines that employ *[Sensors](https://www.astronomer.io/guides/what-is-a-sensor/)*. Sensors are a special kind of Airflow Operator whose purpose is to wait on a particular trigger, such as a file landing at an expected location or an external task completing successfully. Although Sensors are idle for most of their execution time, they nonetheless hold a “worker slot” that can cost significant CPU and memory.
 
 The “Smart Sensor” introduced in Airflow 2.0 is an “early access” (subject to change) foundational feature that:
 
@@ -119,7 +120,7 @@ Providers have historically been bundled into the core Airflow distribution and 
 
 It’s worth noting that some operators, including the Bash and Python Operators, remain in the core distribution given their widespread usage.,## Simplified Kubernetes Executor
 
-Airflow 2.0 includes a re-architecture of the [Kubernetes Executor](https://airflow.apache.org/docs/stable/executor/kubernetes.html) and [KubernetesPodOperator](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/), both of which allow users to dynamically launch tasks as individual Kubernetes Pods to optimize overall resource consumption.  
+Airflow 2.0 includes a re-architecture of the [Kubernetes Executor](https://airflow.apache.org/docs/stable/executor/kubernetes.html) and [KubernetesPodOperator](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/), both of which allow users to dynamically launch tasks as individual Kubernetes Pods to optimize overall resource consumption.\
 Given the known complexity users previously had to overcome to successfully leverage the Executor and Operator, we drove a concerted effort towards simplification that ultimately involved removing over 3,000 lines of code. The changes incorporated in Airflow 2.0 make the Executor and Operator easier to understand, faster to execute and offers far more flexibility in configuration.
 
 Data Engineers will now have access to the full Kubernetes API to create a yaml ‘pod_template_file’ instead of being restricted to a partial set of configurations through parameters defined in the airflow.cfg file. We’ve also replaced the `executor_config` dictionary with the `pod_override` parameter, which takes a Kubernetes V1Pod object for a clear 1:1 override setting.
