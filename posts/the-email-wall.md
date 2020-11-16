@@ -2,7 +2,7 @@
 title: The Email Wall
 slug: the-email-wall
 description: Product emails tend to fall into one of a few categories...what happens when you start making connections between them?
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ben Gregory
 date: 2015-07-28T00:00:00.000Z

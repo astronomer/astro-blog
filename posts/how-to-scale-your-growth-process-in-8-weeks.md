@@ -4,7 +4,7 @@ slug: how-to-scale-your-growth-process-in-8-weeks
 description: |+
   To scale the growth team, I'm documenting hypotheses, tests, iterations and use cases that will impact the way Astronomer acquires and services customers.
 
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Kevin Mackey
 date: 2017-04-18T00:00:00.000Z

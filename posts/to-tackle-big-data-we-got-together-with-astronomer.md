@@ -2,7 +2,7 @@
 title: 'To Tackle Big Data, We Got Together with Astronomer'
 slug: to-tackle-big-data-we-got-together-with-astronomer
 description: 'To give you a real sense of what makes Astronomer so special, I went did a quick Q&A with co-founders Ry Walker and Tim Brunk.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Mike Asem
 date: 2017-04-11T00:00:00.000Z

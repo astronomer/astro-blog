@@ -2,7 +2,7 @@
 title: A Data-Driven Thanksgiving
 slug: a-data-driven-thanksgiving
 description: We've extracted some interesting and perhaps rather insightful Thanksgiving data to transport from us to you.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Dave Paprocki
 date: 2016-11-23T00:00:00.000Z

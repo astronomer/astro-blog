@@ -2,7 +2,7 @@
 title: Building an Unforgettable Product
 slug: building-an-unforgettable-product
 description: A simple childhood story offers some useful parallels to help navigate the complexity of the product development process.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Greg Brunk
 date: 2016-11-30T00:00:00.000Z

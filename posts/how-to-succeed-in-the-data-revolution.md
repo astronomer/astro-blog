@@ -2,7 +2,7 @@
 title: How to Succeed in the Data Revolution
 slug: how-to-succeed-in-the-data-revolution
 description: 'Organizations of all sizes in every industry are uncovering groundbreaking, data-driven insights and are putting data to extraordinary uses.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ry Walker
 date: 2016-06-22T00:00:00.000Z

@@ -2,7 +2,7 @@
 title: Why In-Depth Analytics Are Easier Than You Think
 slug: why-in-depth-analytics-are-easy-for-everyone
 description: 'Ready to get product analytics started? Download Astronomer’s free guide to product analytics that discusses what’s possible and how to map next steps. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - R. Brad Kirn
 date: 2017-05-16T00:00:00.000Z

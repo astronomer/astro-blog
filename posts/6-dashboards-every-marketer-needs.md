@@ -2,7 +2,7 @@
 title: 6 Dashboards Every Marketer Needs
 slug: 6-dashboards-every-marketer-needs
 description: 'With Astronomer and Chartio, marketers can consolidate all their data sources and visualize their data.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Tina Nguyen
 date: 2017-06-06T00:00:00.000Z

@@ -2,7 +2,7 @@
 title: Building An Org Chart That Scales
 slug: building-an-org-chart-that-scales
 description: 'Three lessons we learned when building an org chart that scales. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Tim Brunk
 date: 2017-03-07T00:00:00.000Z

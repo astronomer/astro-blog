@@ -2,7 +2,7 @@
 title: Location Wars
 slug: location-wars-part-1
 description: Deciding where to locate is critical element of building a company and Silicon Valley has a great reputation for this rooted far back its history.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Tim Brunk
 date: 2016-02-22T00:00:00.000Z

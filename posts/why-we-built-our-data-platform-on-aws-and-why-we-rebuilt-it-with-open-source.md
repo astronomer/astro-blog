@@ -2,7 +2,7 @@
 title: 'Why We Built Our Data Platform on AWS, and Why We Rebuilt It with Open Source'
 slug: why-we-built-our-data-platform-on-aws-and-why-we-rebuilt-it-with-open-source
 description: 'As Astronomer’s CTO, I’m going to chronicle our journey, from a technical perspective, as we grow our platform and home in on how to meet our users’ real needs.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Greg Neiheisel
 date: 2016-07-20T00:00:00.000Z

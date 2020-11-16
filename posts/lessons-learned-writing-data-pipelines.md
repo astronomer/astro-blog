@@ -2,7 +2,7 @@
 title: Lessons Learned Writing Data Pipelines
 slug: lessons-learned-writing-data-pipelines
 description: I know firsthand how challenging data pipelines can be. Here's a peek under the hood of Astronomer at what makes our growing platform unique.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Alois Barreras
 date: 2016-08-23T00:00:00.000Z

@@ -2,7 +2,7 @@
 title: Why Are Data Scientists Frustrated?
 slug: why-are-data-scientists-frustrated
 description: 'Data Scientist Viraj Parekh talks about why he''s frustrated and how Astronomer overcomes those frustrations. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Viraj Parekh
 date: 2017-07-13T00:00:00.000Z

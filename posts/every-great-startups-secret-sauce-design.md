@@ -2,7 +2,7 @@
 title: 'Every Great Startup''s Secret Sauce: Design'
 slug: every-great-startups-secret-sauce-design
 description: 'There’s a major trend happening in tech companies today: design teams are growing like mad. And there''s a very good reason.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Chris Hendrixson
 date: 2017-04-27T00:00:00.000Z

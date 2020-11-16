@@ -2,7 +2,7 @@
 title: 'Remote Working Guide: Nashville'
 slug: remote-working-guide-nashville
 description: Our team hit the road in November for our first-ever Astronomer remote-working week. Here is our collective guide to working remotely in Nashville.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Laurel Brunk
 date: 2017-01-17T00:00:00.000Z

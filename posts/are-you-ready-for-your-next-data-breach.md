@@ -2,7 +2,7 @@
 title: Are You Ready for A Data Breach?
 slug: are-you-ready-for-your-next-data-breach
 description: 'With big data comes (pretty big) risk, especially for SMBs. Like most things in life, though, there are ways to mitigate and manage that risk. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Max Berg
 date: 2016-09-07T00:00:00.000Z

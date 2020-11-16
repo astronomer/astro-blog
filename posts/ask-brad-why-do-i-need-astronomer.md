@@ -2,7 +2,7 @@
 title: 'Ask RBK: Why Do I Need Astronomer?'
 slug: ask-brad-why-do-i-need-astronomer
 description: 'The question I’ve been asked most frequently over the past few years is this: Why do I need Astronomer?'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - R. Brad Kirn
 date: 2016-11-08T00:00:00.000Z

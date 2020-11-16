@@ -2,7 +2,7 @@
 title: Translating Real-World Randomness To Create Digital Security
 slug: translating-real-world-randomness-to-create-digital-security
 description: 'Every year, our data becomes more accessible as the world is increasingly interconnected and more services are available online. Our best defense? Randomness.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Andrew Murray
 date: 2017-02-14T00:00:00.000Z

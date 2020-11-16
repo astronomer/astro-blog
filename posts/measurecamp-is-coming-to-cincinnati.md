@@ -4,7 +4,7 @@ slug: measurecamp-is-coming-to-cincinnati
 description: |+
   Astronomer is prooud to sponsor the first U.S. MeasureCamp conference coming to Cincinnati, Ohio, in May, 2017. 
 
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Dave Paprocki
 date: 2017-02-21T00:00:00.000Z

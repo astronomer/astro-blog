@@ -2,7 +2,7 @@
 title: Setting Up Your Redshift Cluster
 slug: setting-up-first-redshift-cluster
 description: 'Redshift is popular but you still need to know what you''re doing when spinning up your first cluster. In this tutorial, we walk you through the process.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ben Gregory
 date: 2016-02-24T00:00:00.000Z

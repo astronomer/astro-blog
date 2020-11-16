@@ -2,7 +2,7 @@
 title: The Problem with Process
 slug: the-problem-with-process
 description: ' In theory, process is a way to keep an organization running smoothly.  But there’s a sinister side to it as well…'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Tim Brunk
 date: 2016-04-13T00:00:00.000Z

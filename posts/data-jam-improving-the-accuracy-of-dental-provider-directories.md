@@ -2,7 +2,7 @@
 title: 'Data Jam: Improving the Accuracy of Dental Provider Directories'
 slug: data-jam-improving-the-accuracy-of-dental-provider-directories
 description: 'Last week, we participated in (and won!) our first official hackathon, Data Jam, sponsored by Humana and Spry Labs.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Becky Steele
 date: 2016-10-07T00:00:00.000Z

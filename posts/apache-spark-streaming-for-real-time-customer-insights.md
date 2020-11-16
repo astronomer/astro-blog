@@ -2,7 +2,7 @@
 title: Apache Spark Streaming for Real-Time Customer Insights
 slug: apache-spark-streaming-for-real-time-customer-insights
 description: 'What was built as an MVP to fill a big need for customers has evolved into one of Astronomer''s first products. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Taylor Edmiston
   - Ryan Palmer

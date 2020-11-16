@@ -2,7 +2,7 @@
 title: 'Press Release: CVG Announces Partnership with Astronomer'
 slug: cvg-announces-partnership-with-astronomer
 description: Airport samples innovative data science with local startup.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Dave Paprocki
 date: 2016-10-18T00:00:00.000Z

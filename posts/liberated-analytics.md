@@ -2,7 +2,7 @@
 title: Liberated Analytics
 slug: liberated-analytics
 description: 'Having past the tipping point of too much data, businesses will begin to feel the effects of the slow, yet unstoppable force of liberated analytics.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ry Walker
 date: 2016-02-18T00:00:00.000Z

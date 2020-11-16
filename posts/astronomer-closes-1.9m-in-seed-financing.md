@@ -2,7 +2,7 @@
 title: 'Press Release: Astronomer Announces Seed Financing'
 slug: astronomer-closes-1.9m-in-seed-financing
 description: 'Press Release: Astronomer Closes $1.9M in Seed Financing'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Laurel Brunk
 date: 2016-10-11T00:00:00.000Z

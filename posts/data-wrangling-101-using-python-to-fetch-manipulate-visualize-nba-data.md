@@ -2,7 +2,7 @@
 title: 'Data Wrangling 101: Using Python to Fetch, Manipulate & Visualize NBA Data'
 slug: data-wrangling-101-using-python-to-fetch-manipulate-visualize-nba-data
 description: This is meant to be used as a general tutorial for beginners with some experience in Python or R.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Viraj Parekh
 date: 2017-04-13T00:00:00.000Z

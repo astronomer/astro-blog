@@ -2,7 +2,7 @@
 title: How to Scale Your Growth Process in 8 Weeks - Part 2
 slug: how-to-scale-your-growth-process-in-8-weeks-part-2
 description: 'For those new to this series, I’m chronicling my first 8 weeks at Astronomer as I build the growth model that will position us for Series A funding and beyond.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Kevin Mackey
 date: 2017-05-02T00:00:00.000Z

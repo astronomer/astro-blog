@@ -2,7 +2,7 @@
 title: What I Learned From Analyzing 1700 Blog Posts (Part II)
 slug: what-i-learned-from-analyzing-1700-blog-posts-part-ii
 description: 'Part II of a series where we use common data extraction, analysis, and machine learning techniques to make our business smarter.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ben Gregory
 date: 2016-04-04T00:00:00.000Z

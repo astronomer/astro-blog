@@ -2,7 +2,7 @@
 title: Why Every Data Scientist Needs A Data Engineer
 slug: why-every-data-scientist-needs-a-data-engineer
 description: 'The data scientist, the sexiest role of the 21st century, isn''t actually very sexy. But it could be. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Laurel Brunk
 date: 2017-07-18T00:00:00.000Z

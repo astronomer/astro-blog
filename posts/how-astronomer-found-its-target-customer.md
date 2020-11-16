@@ -2,7 +2,7 @@
 title: How Astronomer Found Its Target Customer
 slug: how-astronomer-found-its-target-customer
 description: How did Astronomer discover who it's true target is? How did they get on calls with early targets?
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - R. Brad Kirn
 date: 2016-03-02T00:00:00.000Z

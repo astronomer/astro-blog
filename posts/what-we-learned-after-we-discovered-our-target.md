@@ -2,7 +2,7 @@
 title: What We Learned After We Discovered Our Target
 slug: what-we-learned-after-we-discovered-our-target
 description: '"I’ve learned that I still have a lot to learn." - Maya Angelou'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - R. Brad Kirn
 date: 2016-04-19T00:00:00.000Z

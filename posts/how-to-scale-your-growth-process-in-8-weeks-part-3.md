@@ -2,7 +2,7 @@
 title: How to Scale Your Growth Process In 8 Weeks - Part 3
 slug: how-to-scale-your-growth-process-in-8-weeks-part-3
 description: Here’s the behind-the-scenes peek at what we did to quantify our growth process and shed light on—and attract—best-fit customer profiles.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Kevin Mackey
 date: 2017-05-23T00:00:00.000Z

@@ -2,7 +2,7 @@
 title: How to Make Stuff Design-y
 slug: how-to-make-stuff-design-y
 description: 'Our product developer (who has not just an eye for design but also a degree in it) tells us how to make all things "design-y." '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Andrew Murray
 date: 2017-05-09T00:00:00.000Z

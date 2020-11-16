@@ -2,7 +2,7 @@
 title: 'Astronomer Takes PLOTCON: Day 3'
 slug: astronomer-takes-plotcon-day-3
 description: 'Day 3 of PLOTCON''s wrap-up turned into an open fanboy letter to the analytics community... '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Dave Paprocki
 date: 2016-11-18T00:00:00.000Z

@@ -2,7 +2,7 @@
 title: 'The Power of DC/OS, Apache Mesos and Containerization: A Q&A With Mesosphere'
 slug: os-apache-mesos-and-containerization-a-qa-with-mesosphere
 description: 'Amr Abdelrazik from Mesosphere answers our questions about Apache Mesos and DC/OS. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Amr Abdelrazik
 date: 2017-07-06T00:00:00.000Z

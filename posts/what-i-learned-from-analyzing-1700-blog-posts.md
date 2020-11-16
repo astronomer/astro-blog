@@ -2,7 +2,7 @@
 title: What I Learned from Analyzing 1700 Blog Posts
 slug: what-i-learned-from-analyzing-1700-blog-posts
 description: We analyzed over 1700 blog posts from our competitors to uncover the elements that make a great data blog.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ben Gregory
 date: 2016-02-19T00:00:00.000Z

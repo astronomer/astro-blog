@@ -2,7 +2,7 @@
 title: Normalizing Data for Warehouse Centralization
 slug: normalizing-data-for-data-warehouse-centralization
 description: 'Knowing the options for storing data will help you make the right decisions for your company when you’re ready to take this step. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ben Gregory
 date: 2017-06-20T00:00:00.000Z

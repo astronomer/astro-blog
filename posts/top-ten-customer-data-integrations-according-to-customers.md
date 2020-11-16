@@ -2,7 +2,7 @@
 title: 'Top Ten Customer Data Integrations, According to Our Customers'
 slug: top-ten-customer-data-integrations-according-to-customers
 description: The top ten popular customer data and web analytics integrations your company needs. Turn on new integrations instantaneously with Astronomer.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Trent Baer
 date: 2017-02-23T00:00:00.000Z

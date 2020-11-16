@@ -2,7 +2,7 @@
 title: Building Next-Generation Data Infrastructure with Apache Mesos and DC/OS
 slug: building-next-generation-data-infrastructure-with-apache-mesos-and-dc-os
 description: 'Data is becoming the most valuable resource a company owns. With DC/OS, we’re lowering the barrier to entry for anyone who wants to put their data to work.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Greg Neiheisel
 date: 2017-06-26T00:00:00.000Z

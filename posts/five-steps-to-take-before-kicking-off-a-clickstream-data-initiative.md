@@ -2,7 +2,7 @@
 title: Five Steps to Take Before Kicking Off A Clickstream Data Initiative
 slug: five-steps-to-take-before-kicking-off-a-clickstream-data-initiative
 description: 'If you’re interested in integrating customer data from your website or app, here are the top 5 things to keep in mind before kicking that off.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ry Walker
 date: 2017-01-25T00:00:00.000Z

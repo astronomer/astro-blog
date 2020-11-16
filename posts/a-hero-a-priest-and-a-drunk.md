@@ -2,7 +2,7 @@
 title: '“A Hero, a Priest, and a Drunk Each Send an Email…"'
 slug: a-hero-a-priest-and-a-drunk
 description: 'We all get a lot of emails when we sign up for a new product. But have you ever read them? Well, we did.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ben Gregory
 date: 2015-07-06T00:00:00.000Z

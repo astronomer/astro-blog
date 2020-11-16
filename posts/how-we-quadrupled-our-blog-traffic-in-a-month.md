@@ -3,7 +3,7 @@ title: How We Quadrupled Our Blog Traffic in A Month
 slug: how-we-quadrupled-our-blog-traffic-in-a-month
 description: |
   This week, we’re getting meta and blogging about how we blog.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Laurel Brunk
 date: 2016-06-08T00:00:00.000Z

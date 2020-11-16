@@ -2,7 +2,7 @@
 title: Astronomer for Data Engineers
 slug: astronomer-for-data-engineers
 description: Astronomer is a data engineering platform for data engineers. CEO Ry Walker explains why in this video.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Laurel Brunk
 date: 2017-08-04T00:00:00.000Z

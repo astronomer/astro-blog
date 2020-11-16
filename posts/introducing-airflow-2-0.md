@@ -2,7 +2,7 @@
 title: Introducing Airflow 2.0
 slug: introducing-airflow-2-0
 description: 'A breakdown of the major features incorporated in Apache Airflow 2.0, including a refactored, highly-available Scheduler, over 30 UI/UX improvements, a new REST API and much more.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Paola Peraza Calderon
   - Vikram Koka

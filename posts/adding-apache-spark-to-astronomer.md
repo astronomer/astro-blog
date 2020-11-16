@@ -3,7 +3,7 @@ title: Adding Apache Spark to Astronomer
 slug: adding-apache-spark-to-astronomer
 description: |
   Sometimes a step in a data pipeline is exceptionally long-running. Could Apache Spark change that?
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ry Walker
 date: 2016-05-04T00:00:00.000Z

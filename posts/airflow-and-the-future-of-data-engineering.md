@@ -2,7 +2,7 @@
 title: "Apache Airflow and the Future of Data Engineering: A\_Q&A with Maxime Beauchemin"
 slug: airflow-and-the-future-of-data-engineering
 description: 'I reached out to Max about doing an interview post, and to my delight, he agreed. Here are thoughtful answers to questions about Airflow and data engineering.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Taylor Edmiston
 date: 2017-02-28T00:00:00.000Z

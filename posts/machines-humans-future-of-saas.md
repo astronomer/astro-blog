@@ -4,7 +4,7 @@ slug: machines-humans-future-of-saas
 description: |+
   The Machine + Human Hybrid SaaS Model enables our customers to get the touch and feel of professional services with the speed and predictability of SaaS. 
 
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ry Walker
 date: 2016-08-18T00:00:00.000Z

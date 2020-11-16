@@ -2,7 +2,7 @@
 title: Data Engineering Platform Astronomer Closes $3.5M Financing
 slug: data-engineering-platform-astronomer-closes-3.5m-financing
 description: 'The Astronomer platform collects, processes and unifies data, allowing organizations to scale analytics, data science and insights.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Dave Paprocki
 date: 2017-06-28T00:00:00.000Z

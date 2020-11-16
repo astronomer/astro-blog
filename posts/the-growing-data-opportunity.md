@@ -2,7 +2,7 @@
 title: The Growing Data Opportunity
 slug: the-growing-data-opportunity
 description: 'We’re entering a new Internet era—“a rise of the machines”—due to a confluence of trends: computers are everywhere (mobile, wearables, IoT), cloud computing continues to proliferate, SaaS/microservices are multiplying, and computer cognition is emerging, and it’s data hungry.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ry Walker
 date: 2016-02-18T00:00:00.000Z

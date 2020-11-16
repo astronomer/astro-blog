@@ -2,7 +2,7 @@
 title: 4 Pillars to Becoming Data Driven
 slug: 4-pillars-to-becoming-data-driven
 description: 'When I wanted to improve the health of my company, I took this approach: just get started.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - R. Brad Kirn
 date: 2016-08-11T00:00:00.000Z

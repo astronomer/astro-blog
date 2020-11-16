@@ -3,7 +3,7 @@ title: Write With Us
 slug: write-with-us
 description: |
   We’d like to open our blog up to other contributors, starting with our favorite readers.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Laurel Brunk
 date: 2017-06-29T00:00:00.000Z

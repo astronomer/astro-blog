@@ -2,7 +2,7 @@
 title: A Crisis of Confidence
 slug: the-crisis-of-confidence
 description: 'It’s a crisis faced more intensely in startups than almost anywhere else—one that far too often leads to serious depression, burnout and even suicide. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Tim Brunk
 date: 2016-09-14T00:00:00.000Z

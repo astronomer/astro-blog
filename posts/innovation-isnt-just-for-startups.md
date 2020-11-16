@@ -2,7 +2,7 @@
 title: Innovation Isn't Just for Startups
 slug: innovation-isnt-just-for-startups
 description: Companies can’t be driven by just hindsight (reporting) or observation (basic business intelligence)—they need to be driven by foresight (predictive analytics).
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Andy Ruberg
 date: 2017-06-15T00:00:00.000Z

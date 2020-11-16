@@ -2,7 +2,7 @@
 title: 5 Sci-Fi Movies That Overlap With Modern Technology
 slug: 5-sci-fi-movies-that-overlap-with-modern-technology
 description: Let's explore some of the ways science fiction and real life overlap (as far as we can tell). And how these “fantastic” ideas can play out in business.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Josh Bonomini
 date: 2017-07-25T00:00:00.000Z

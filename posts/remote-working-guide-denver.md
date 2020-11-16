@@ -2,7 +2,7 @@
 title: 'Remote Working Guide: Denver'
 slug: remote-working-guide-denver
 description: 'This is the first of a series of Remote Working Guides in our favorite cities to work in, outside of Astronomer’s hometown, Cincinnati.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Chris Hendrixson
 date: 2016-10-19T00:00:00.000Z

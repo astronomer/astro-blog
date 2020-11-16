@@ -2,7 +2,7 @@
 title: Branding is a Relationship
 slug: branding-is-relationship
 description: 'If there’s one consistent thing about a startup, it’s change. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Chris Hendrixson
 date: 2016-04-27T00:00:00.000Z

@@ -2,7 +2,7 @@
 title: What Exactly is a DAG?
 slug: what-exactly-is-a-dag
 description: What exactly is a DAG and what does it tell us that the term “data pipeline” can't?
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ben Gregory
 date: 2017-07-27T00:00:00.000Z

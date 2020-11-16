@@ -2,7 +2,7 @@
 title: 3 Reasons Why Astronomer is Betting on GraphQL
 slug: 3-reasons-why-astronomer-is-betting-on-graphql
 description: 'There are many things that set GraphQL apart, but the main difference is that the requester has more control over exactly which parts of the response they want.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Andrew Murray
 date: 2017-08-23T00:00:00.000Z

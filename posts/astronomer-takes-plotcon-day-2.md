@@ -2,7 +2,7 @@
 title: 'Astronomer Takes PLOTCON: Day 2'
 slug: astronomer-takes-plotcon-day-2
 description: 'Day 2 of PlotCon has wrapped, so it’s time for the Astronomer team to debrief from the day. '
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Dave Paprocki
 date: 2016-11-17T00:00:00.000Z

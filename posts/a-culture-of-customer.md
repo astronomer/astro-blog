@@ -2,7 +2,7 @@
 title: A Culture of Customer
 slug: a-culture-of-customer
 description: 'Astronomer is a customer-first organization. But what does that mean, really?'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - R. Brad Kirn
 date: 2016-06-15T00:00:00.000Z

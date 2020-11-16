@@ -2,7 +2,7 @@
 title: Does Your Logo Really Matter?
 slug: does-your-logo-really-matter
 description: 'Two weeks ago, Instagram changed their logo. The Internet blew up.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Chris Hendrixson
 date: 2016-05-27T00:00:00.000Z

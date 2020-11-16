@@ -2,7 +2,7 @@
 title: 'A Sales Experiment: Why We Scrapped the SDR Role'
 slug: experimenting-with-a-sales-development-representative-role
 description: This post is about how we tested a growth strategy and successfully failed—and what we learned from it going forward.
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Max Berg
 date: 2017-02-01T00:00:00.000Z

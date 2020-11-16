@@ -2,7 +2,7 @@
 title: Why Is My Data Playing Hard to Get?
 slug: why-is-my-data-playing-hard-to-get
 description: 'When we talk about "hard to reach" data, what kind of data are we talking about, and why exactly is it so hard to access, organize and store?'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Ben Gregory
 date: 2016-12-14T00:00:00.000Z

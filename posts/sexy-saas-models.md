@@ -2,7 +2,7 @@
 title: Sexy SaaS Models
 slug: sexy-saas-models
 description: 'At Astronomer, we use a few different financial models to understand what happened in the past, what’s happening right now and what may happen in the future.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Tim Brunk
 date: 2016-05-18T00:00:00.000Z

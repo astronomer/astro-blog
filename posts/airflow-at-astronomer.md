@@ -2,7 +2,7 @@
 title: Airflow at Astronomer
 slug: airflow-at-astronomer
 description: 'To extract and monitor all types of data pipelines, we needed a unified scheduling system. Airflow was our answer— and a whole lot more.'
-heroImagePath: ''
+heroImagePath: ../assets/blank.png
 authors:
   - Greg Neiheisel
 date: 2016-11-02T00:00:00.000Z
