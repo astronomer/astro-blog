@@ -1,0 +1,26 @@
+/* Variables */
+
+@import '~@astronomer/spectra/dist/css/fonts/goodSans.css';
+@import '~@astronomer/spectra/dist/css/variables.css';
+
+body {
+    background: var(--purple10);
+    font-weight: 300;
+    margin: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top {
+    max-width: 400px
+}
+
+.button {
+    padding-top: 3rem;
+}
+
+a {
+    text-decoration: none !important; 
+  }
