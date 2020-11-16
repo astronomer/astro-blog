@@ -15,7 +15,7 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: description, label: Description, widget: string }
-      - { name: heroImage, label: Hero Image Path, default: ../assets/blank.png }
+      - { name: heroImagePath, label: Hero Image Path, default: ../assets/blank.png }
       - { name: authors, label: Authors, widget: list }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
