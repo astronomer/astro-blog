@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: static/blog
+media_folder: /assets
 public_folder: ../assets
 publish_mode: editorial_workflow
 
