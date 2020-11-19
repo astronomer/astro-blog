@@ -2,7 +2,7 @@
 title: Introducing Airflow 2.0
 slug: introducing-airflow-2-0
 description: 'A breakdown of the major features incorporated in Apache Airflow 2.0, including a refactored, highly-available Scheduler, over 30 UI/UX improvements, a new REST API and much more.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/airflow-2.png
 authors:
   - Paola Peraza Calderon
   - Vikram Koka
@@ -14,7 +14,7 @@ date: 2020-10-29T00:00:00.000Z
 <meta property="twitter:image:src" content="../assets/airflow-2.png" class="next-head">
 
 
-![airflow-2-hero](../assets/airflow-2.png),Apache Airflow was created by Airbnb’s Maxime Beauchemin as an open-source project in late 2014. It was brought into the Apache Software Foundation’s Incubator Program in March 2016 and saw growing success in the wake of Maxime’s well-known [“The Rise of the Data Engineer”](https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603) blog post. By January of 2019, Airflow was [announced as a Top-Level Apache Project](https://blogs.apache.org/foundation/entry/the-apache-software-foundation-announces44) by the Foundation and is now concretely considered the industry’s leading workflow orchestration solution.
+Apache Airflow was created by Airbnb’s Maxime Beauchemin as an open-source project in late 2014. It was brought into the Apache Software Foundation’s Incubator Program in March 2016 and saw growing success in the wake of Maxime’s well-known [“The Rise of the Data Engineer”](https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603) blog post. By January of 2019, Airflow was [announced as a Top-Level Apache Project](https://blogs.apache.org/foundation/entry/the-apache-software-foundation-announces44) by the Foundation and is now concretely considered the industry’s leading workflow orchestration solution.
 
 Airflow’s strength as a tool for dataflow automation has grown for a few reasons:
 
