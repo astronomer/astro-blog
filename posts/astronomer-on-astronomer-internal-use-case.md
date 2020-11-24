@@ -16,7 +16,8 @@ A few months back, we were struggling to run two separate products, one powered 
 Metarouter was the product from which Astronomer was born. It was because of the unique challenges Metarouter presented us with that we discovered Airflow in the first place; everything from the pain points and workarounds to the pro tips, growing community and compelling use cases.
 
 This post will walk you through our very own internal use case from start to finish. We'll top it off with some thoughts on what that experience has taught us about Airflow, and what we’re building to make running Airflow a better, more flexible, and more reliable experience.
-,## Part I: What we were looking for
+
+## Part I: What we were looking for
 
 ### Metarouter.io's Value Prop
 
@@ -46,7 +47,8 @@ As we explored solutions, Airflow among others, we recognized a few additional c
 4. Everything needs to be fault tolerant enough to handle a system failure without losing any customer data.
 
 And to Apache Airflow we turned. 
-,## Part II: Where Airflow Comes In
+
+## Part II: Where Airflow Comes In
 
 Apache Airflow was, and still is, the rising industry standard for dev-friendly ETL. 
 
@@ -61,7 +63,8 @@ More specifically, here’s a breakdown of what exactly Airflow offered as a sol
    **3. Defining Dependencies in code.** Raw event logs of varying size needed to be transformed before being loaded into Redshift. Apache Airflow’s protocol for processing tasks within DAGs took full advantage of independent events and parallelism, which meant that ultimately, performance would be optimized, regardless of input size.
 
    **4. Robust Error Handling.** Customer data is valuable to any organization, and a fault-intolerant system could have potentially disastrous company-wide implications. Defining DAGs in Apache Airflow allows for tasks to be retried a specific number of times upon failure, and also trigger alerts if a task is taking an unusual amount of time.
-,## Part III: Airflow in Practice
+
+## Part III: Airflow in Practice
 
 Powered by Airflow, here’s a breakdown of how Metarouter.io runs. 
  
@@ -76,13 +79,19 @@ Vortex is responsible for microbatching the data, and performing necessary trans
 Every customer receives their own Clickstream DAG, which consists of tasks for each customer-specified event. Given the need for customers to create and remove events, DAGs needed to be generated dynamically each time they are run. Our Houston API was the perfect answer. Houston stores event types- it is the single source of truth, and all pieces of Clickstream rely on the information it sends them on request (good name, isn’t it?). The first step in a Clickstream DAG is to make a call to Houston. Houston will relay event information back about the event types in the DAG, and dynamic task generation will begin. All DAGs are configured to look for the S3key with the corresponding event and time period for each task.
 
 **3. From S3, events are finally loaded onto Redshift, each event into its own table with the necessary complementary information**
-,,In order for an event to be fully processed, it must successfully pass through two Airflow tasks - a Sensor Operator and a Docker Operator using the Databricks Redshift Loader (this is entirely for performance reasons, but there is an operator in Airflow to push data from S3 to Redshift). The sensor operator is designed to check a specified S3 bucket for a key given a timestamp. If a key is found (i.e. a user has hit “Add to Cart” in a mobile app), the downstream Docker operator is triggered to load data into Redshift. Every task will run in a separate Docker container, which is dynamically allocated resources from a DC/OS cluster, preventing unnecessary upkeep costs. ,### How we optimized Airflow to fit our needs
+
+
+![1537239957-astronomerairflows3-to-redshift-dagblog.png](../assets/1537239957-astronomerairflows3-to-redshift-dagblog.png)
+
+In order for an event to be fully processed, it must successfully pass through two Airflow tasks - a Sensor Operator and a Docker Operator using the Databricks Redshift Loader (this is entirely for performance reasons, but there is an operator in Airflow to push data from S3 to Redshift). The sensor operator is designed to check a specified S3 bucket for a key given a timestamp. If a key is found (i.e. a user has hit “Add to Cart” in a mobile app), the downstream Docker operator is triggered to load data into Redshift. Every task will run in a separate Docker container, which is dynamically allocated resources from a DC/OS cluster, preventing unnecessary upkeep costs. 
+### How we optimized Airflow to fit our needs
 
 **1. Core Settings.** We tinkered around with airflow.cfg, the configuration file in every Airflow deployment to ensure scalability and make sure that it could handle all the DAGs that were being thrown at it (ex. setting parallelism to 1 million).
 
 **2. Going back to Cron.** The Airflow scheduler can be temperamental at times, by crashing or hanging in general, so we found that having a cron job reset the scheduler every 15 minutes kept it in check.
 
-**3. Utilizing Variables in Airflow.** Airflow ships with a Variable abstraction, that provides a key value data structure for storing data. We found that saving destinations to an Airflow variable made dynamic DAG generation simpler, and much more efficient.,## Part IV: Moving to Kubernetes
+**3. Utilizing Variables in Airflow.** Airflow ships with a Variable abstraction, that provides a key value data structure for storing data. We found that saving destinations to an Airflow variable made dynamic DAG generation simpler, and much more efficient.
+## Part IV: Moving to Kubernetes
 
 Recently, we moved the Metarouter Loader from DC/OS to Kubernetes, specifically, [Google's Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) (GKE). We absolutely love the Kubernetes + Helm ecosystem and were able to make a few significant improvements to the system by migrating it over.
 
@@ -95,7 +104,8 @@ By running our jobs in Kubernetes Pods instead of Docker containers, we were abl
 **3. Kubernetes native monitoring with Prometheus**
 Airflow comes with some great built-in alerting tools for jobs, but there's not much for the Airflow instance itself. As described above, we scheduled automatic scheduler restarts and other preventative measures to prevent silent failures. The new Metarouter Loader runs with a Prometheus [side car pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) that pushes metrics to Grafana dashboards to give us some "single pane" views and platform level alerting. Furthermore, Kubernetes healthchecks gave us a much higher level of stability.
 
-![Grafana Dashboard](../assets/grafana-dashboard.png),## Part V: Future Vision
+![Grafana Dashboard](../assets/grafana-dashboard.png)
+## Part V: Future Vision
 
 Apache Airflow is still very much in active development, and new features and updates are being rolled out consistently. We’re dedicated to not only building out features on our platform to offer a better managed Airflow, but also actively contributing back to the open source Airflow community. While Airflow is a powerful DevOps tool that streamlines much of the process of setting up a highly scalable data infrastructure, it has its own quirks and shortcomings. We’ve learned a lot about how to best configure Airflow from using it internally and developing a managed platform, so there’s a lot on our radar in terms of future direction. We keep an updated product roadmap [here]
 (https://www.astronomer.io/docs/roadmap/), so things are sure to change, but as of right now, some of the things we’re working on include:

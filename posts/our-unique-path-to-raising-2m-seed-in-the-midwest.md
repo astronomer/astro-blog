@@ -2,7 +2,7 @@
 title: Our Unique Path to Raising $2M Seed in the Midwest
 slug: our-unique-path-to-raising-2m-seed-in-the-midwest
 description: Our path to raising $2M is a series of short stories with some amazing protagonists.
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/seedroundWallpaperA.jpg
 authors:
   - Ry Walker
 date: 2016-10-11T00:00:00.000Z

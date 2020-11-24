@@ -2,7 +2,7 @@
 title: Is Your Organization Insane?
 slug: is-your-organization-insane
 description: 'Every organization is at a slightly different place with how they use data. See where you are. '
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/saganQuoteA@2x.jpg
 authors:
   - Ry Walker
 date: 2017-03-21T00:00:00.000Z

@@ -2,7 +2,7 @@
 title: When Should You Start to Warehouse Your Data?
 slug: when-should-you-start-to-warehouse-your-data
 description: 'These days, startups want to be data-driven, and web and mobile apps can generate quite a bit of data.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ''
 authors:
   - R. Brad Kirn
 date: 2016-02-18T00:00:00.000Z

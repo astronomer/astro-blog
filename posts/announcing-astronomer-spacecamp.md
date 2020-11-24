@@ -21,7 +21,11 @@ As a system agnostic task orchestrator, Airflow’s flexibility can make it hard
 * what should be passed in XComms
 
 Learning this on your own is definitely possible - but it takes time and resources that could delay your next data initiative.  
-,,SpaceCamp is designed to get your team up and running with Airflow as fast as possible. With the goal of giving anyone with basic knowledge of SQL and Python data engineering capabilities, SpaceCamp aims to fundamentally shift your org’s data culture towards [data democratization](https://channels.theinnovationenterprise.com/articles/beginners-guide-to-data-democratization). 
+
+
+![1519686931-wasting_time.gif](../assets/1519686931-wasting_time.gif)
+
+SpaceCamp is designed to get your team up and running with Airflow as fast as possible. With the goal of giving anyone with basic knowledge of SQL and Python data engineering capabilities, SpaceCamp aims to fundamentally shift your org’s data culture towards [data democratization](https://channels.theinnovationenterprise.com/articles/beginners-guide-to-data-democratization). 
 
 SpaceCamp not only guides teams in developing production grade ETL workflows, but also helps identify infrastructure requirements for the organization's batch ETL needs. 
 
@@ -47,7 +51,8 @@ Premium.
 __Output:__
 * Team equipped with industry best-practices around building custom Airflow plugins
 * Production ready workflows for your organization
-* Strong recommendations of what infrastructure and platform are needed to fulfill data goals,### Falcon Heavy
+* Strong recommendations of what infrastructure and platform are needed to fulfill data goals
+### Falcon Heavy
 
 Falcon Heavy is designed for large organizations seeking a drastic shift in their data culture. In addition to everything in Falcon 9, you get:
 
@@ -56,7 +61,8 @@ Falcon Heavy is designed for large organizations seeking a drastic shift in thei
 * Dedicated Support
 * Unlimited use of the Astronomer Platform
 
-For larger teams who have a variety of different projects and initiatives, Falcon Heavy is the fastest way up the Data Maturity Mountain.,## Climb the Data Maturity Mountain
+For larger teams who have a variety of different projects and initiatives, Falcon Heavy is the fastest way up the Data Maturity Mountain.
+## Climb the Data Maturity Mountain
 
 The goal of Falcon 9 and Falcon Heavy is to help your team up the "data maturity mountain" and on your way to the moon!
 

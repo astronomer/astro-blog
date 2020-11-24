@@ -18,9 +18,18 @@ With that, we’d like to formally introduce you to the latest version of our ma
 ## Meet Astronomer v0.3
 Our team has continued to build on our [last release](https://www.astronomer.io/blog/announcing-astronomer-enterprise-edition-0-2-0/), which laid the foundation for easy Apache Airflow deployments in a user’s own, secure environment.
 
-Astronomer v0.3 brings improvements across the board, including optimizations to our CLI, authentication methods, monitoring stack, out-of-the-box security, scalability with Kubernetes, and a brand new UI for simplified deployment of multiple Airflow clusters with custom permission groups. ,,The latest release allows users to spin up multiple Airflow clusters anywhere Kubernetes runs, including both public clouds (AWS, GCP, Azure) and on-prem private clouds. It is designed to simplify the process of running and monitoring data workflows and clusters at scale, with high-availability and maximum security. Now, you can access and monitor Celery worker queues right in the new UI–and that's just the tip of the iceberg regarding our plans to improve Airflow monitoring.,,While this release allows our infrustructure to scale up to support larger organizations with many workflows and complex requirements, it also allows us to scale down to serve smaller teams (we can even run on a single-node Kubernetes cluster!). Astronomer v0.3 is designed to greatly reduce the time and effort required to get Airflow running in a stable and secure way, even at scale.
+Astronomer v0.3 brings improvements across the board, including optimizations to our CLI, authentication methods, monitoring stack, out-of-the-box security, scalability with Kubernetes, and a brand new UI for simplified deployment of multiple Airflow clusters with custom permission groups. 
 
-> “Astronomer provides a turn-key, flexible, scalable, and affordable ETL solution to power our batch processing of billions of rows of data per day for our customers. In addition, their expert data engineers have trained our engineering team so we could be self-sufficient; they've been a great partner! - Nic Zangre, VP Product, CaliberMind,### Our Newest Release, Unpacked
+![1531895646-featurescalability.png](../assets/1531895646-featurescalability.png)
+
+The latest release allows users to spin up multiple Airflow clusters anywhere Kubernetes runs, including both public clouds (AWS, GCP, Azure) and on-prem private clouds. It is designed to simplify the process of running and monitoring data workflows and clusters at scale, with high-availability and maximum security. Now, you can access and monitor Celery worker queues right in the new UI–and that's just the tip of the iceberg regarding our plans to improve Airflow monitoring.
+
+![1531896701-featuredeployments.png](../assets/1531896701-featuredeployments.png)
+
+While this release allows our infrustructure to scale up to support larger organizations with many workflows and complex requirements, it also allows us to scale down to serve smaller teams (we can even run on a single-node Kubernetes cluster!). Astronomer v0.3 is designed to greatly reduce the time and effort required to get Airflow running in a stable and secure way, even at scale.
+
+> “Astronomer provides a turn-key, flexible, scalable, and affordable ETL solution to power our batch processing of billions of rows of data per day for our customers. In addition, their expert data engineers have trained our engineering team so we could be self-sufficient; they've been a great partner! - Nic Zangre, VP Product, CaliberMind
+### Our Newest Release, Unpacked
 
 Here are a few specific benefits and features of the v0.3 release: 
 
@@ -34,5 +43,9 @@ We made it incredibly easy to create and manage these Airflow clusters and teams
 Astronomer relies exclusively on Kubernetes to provide maximum uptime and reliability, and this version brings even deeper integration. We have seen big improvements in availability with v0.3 installs vs competitors such as Google's Cloud Composer, as well as previous versions of our own product.
 
 #### Improved CLI.
-We drastically improved our authentication process for maximum security and usability, and made several additional improvements to our configuration process from start to finish. ,,## Try it Out
-If you’re interested in exploring Astronomer, [request beta access v0.3](https://www.astronomer.io/#beta-request) on our website. If you have any questions or feedback, don’t hesitate to drop us an email at [humans@astronomer.io](mailto:humans@astronomer.io).,
+We drastically improved our authentication process for maximum security and usability, and made several additional improvements to our configuration process from start to finish. 
+
+![1531896597-featuredeveloper.png](../assets/1531896597-featuredeveloper.png)
+
+## Try it Out
+If you’re interested in exploring Astronomer, [request beta access v0.3](https://www.astronomer.io/#beta-request) on our website. If you have any questions or feedback, don’t hesitate to drop us an email at [humans@astronomer.io](mailto:humans@astronomer.io).

@@ -2,7 +2,7 @@
 title: Approach The Next Data Initiative Like A Data Analyst
 slug: approach-the-next-data-initiative-like-a-data-analyst
 description: 'I’ve experienced great successes ... and epic failures (big data can be a big challenge). From those failures, I’ve developed a few guiding principles.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/startsmallHeader@2x.jpg
 authors:
   - Sam McFarland
 date: 2016-12-07T00:00:00.000Z

@@ -2,7 +2,7 @@
 title: 'Remote Working Guide: Reykjavik'
 slug: remote-working-guide-reykjavik
 description: 'If you’re looking for a new place to work remotely (and explore a little on nights and weekends), you should seriously consider Reykjavik.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/rwgReykjavikHeaderB@2x.jpg
 authors:
   - Laurel Brunk
 date: 2017-03-28T00:00:00.000Z

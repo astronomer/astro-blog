@@ -33,11 +33,19 @@ We’ll innovate however we have to, so that others can do the same.
 ### Our First Product, A Good First Step
 Clickstream is now relatively simple. You might need a few minutes of dev time, but the setup is fast. It’s a perfect first step for any company ([and an initiative is fairly painless to kick off](https://preview.astronomer.io/blog/five-steps-to-take-before-kicking-off-a-clickstream-data-initiative/)). Clickstream’s sole focus is ingestion—no transformation, processing or manipulating. Ingestion is the first thing to tackle because if you get down the road with logic too early, you won’t have the right data, and the whole process will need to be re-worked once you do. 
 
-*Here's a peek at our current clickstream interface: *,,Of course, the ingestion market is more mature, so the window of opportunity will close sooner. But at that point, Apache Airflow and Kafka Connect will be accessible through the “command center.” Companies at any stage can sign up and access one, two or three of these “modules.” 
+*Here's a peek at our current clickstream interface: *
+
+![1508860879-laptopwithstars3.gif](../assets/1508860879-laptopwithstars3.gif)
+
+Of course, the ingestion market is more mature, so the window of opportunity will close sooner. But at that point, Apache Airflow and Kafka Connect will be accessible through the “command center.” Companies at any stage can sign up and access one, two or three of these “modules.” 
 
 You can think of us like a platform with multiple applications on top, which means we’re going to use the same components to drive different applications and can freely share these (open source) tools. Then organizations will install one platform and get different tools. It’s worth it, even if they don’t use all of them at first, because deployment is so simple. And when they do grow, the tool’s there. All they have to do is turn it on.
 
-*Here's a sneak peek at our command center interface: *,,So while we’re currently a great alternative for someone like Segment, we’re built for so much more. And as we grow into more of a data engineering platform, we’ll continue focus on whatever our customers need. It might be building out hundreds of clickstream integrations, but it also might be focused on operationalizing a vendor-neutral data warehouse or streaming third party data to a private data lake. It’s all about being agile enough to give our customers what they need to be agile. 
+*Here's a sneak peek at our command center interface: *
+
+![1508860921-adminclickstream2aag-2x.png](../assets/1508860921-adminclickstream2aag-2x.png)
+
+So while we’re currently a great alternative for someone like Segment, we’re built for so much more. And as we grow into more of a data engineering platform, we’ll continue focus on whatever our customers need. It might be building out hundreds of clickstream integrations, but it also might be focused on operationalizing a vendor-neutral data warehouse or streaming third party data to a private data lake. It’s all about being agile enough to give our customers what they need to be agile. 
 
 ### It All Comes Down to Agility
 This agile, [Lean Startup](http://theleanstartup.com/) mentality has always resonated with me: build something small, measure it, learn from it, make changes. Companies have read the book, but most aren’t doing it. And once the few who are doing it with data start taking off, it’s going to be too late for everyone else. That’s the nature of technology. Our tools are centered around that concept. We want people to be able to try new tools, and quickly. 

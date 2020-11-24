@@ -2,7 +2,7 @@
 title: Data Formats 101
 slug: data-formats-101
 description: 'Business analysts generally encounter four main formats of data: JSON, XML, CSV, and TSV. So what are these types and why would we use them? '
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/Blog_WhatisDag.jpg
 authors:
   - Ben Gregory
 date: 2017-08-03T00:00:00.000Z

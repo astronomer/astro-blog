@@ -2,7 +2,7 @@
 title: 'Astronomer Takes PLOTCON: Day 1'
 slug: astronomer-takes-plotcon-2016-day-1
 description: 'Ben and Viraj just got done with day 1 of PLOTCON 2016. After all the presentations and exhibitions, they sat down to go over their thoughts. '
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/plotconDAYONEheader@2x.jpg
 authors:
   - Laurel Brunk
 date: 2016-11-16T00:00:00.000Z

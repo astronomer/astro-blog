@@ -2,7 +2,7 @@
 title: Our Open Source Philosophy
 slug: our-open-source-philosophy
 description: 'The world where technology is open sourced is the world we want to live in. Our CTO explains why. '
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/horizonB@2x.jpg
 authors:
   - Greg Neiheisel
 date: 2016-12-20T00:00:00.000Z

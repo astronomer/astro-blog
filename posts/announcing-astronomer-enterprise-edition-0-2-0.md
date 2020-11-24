@@ -31,7 +31,9 @@ Not to mention, for many companies, the ability to control the security of their
 The implications from a data security standpoint and the fact that Astronomer Enterprise can be installed on any Kubernetes cluster in under an hour, is a game changer.
 
 
-,,## Our Newest Release, Unpacked
+
+
+## Our Newest Release, Unpacked
 
 Here’s the breakdown of what this release allows you to do: 
 

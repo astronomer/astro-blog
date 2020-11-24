@@ -2,7 +2,7 @@
 title: Six Open Source Dashboards to Organize Your Data
 slug: six-open-source-dashboards
 description: 'At Astronomer, we believe every organization benefits from having data properly centralized, organized and cleaned. We’re building a company to do just that.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/dashboardsB.png
 authors:
   - Ben Gregory
 date: 2016-06-29T00:00:00.000Z

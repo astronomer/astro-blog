@@ -2,7 +2,7 @@
 title: 'From Superstar Culture to Moneyball: How Data is Changing the NBA'
 slug: data-in-basketball
 description: 'In honor of the tip-off of the 2016-2017 NBA season, let’s take a look at how data is revolutionizing basketball.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/NEWnbaData2560x1600b@2x.jpg
 authors:
   - Viraj Parekh
 date: 2016-10-25T00:00:00.000Z

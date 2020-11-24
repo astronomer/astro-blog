@@ -2,7 +2,7 @@
 title: 'Ask RBK: Tell me more about getting the right data pipelines.'
 slug: ask-rbk-how-do-i-get-the-right-data-pipelines
 description: 'In this episode, RBK calls in one of our data engineers to tell us more about what they are and how they work. '
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/askrbkHeaderB.jpg
 authors:
   - R. Brad Kirn
 date: 2017-07-11T00:00:00.000Z

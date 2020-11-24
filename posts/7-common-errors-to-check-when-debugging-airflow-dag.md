@@ -214,7 +214,8 @@ Log files should be in `~/logs`. From there, they'll be split up by DAG/TASK/RUN
 
 1. Inserting `AIRFLOW__SCHEDULER__RUN_DURATION={num_seconds_between_restarts} `as an Environment Variable in the Configure page of the Astronomer UI to set a recurring restart OR
 
-2. Running `astro airflow deploy` via your CLI to immediately restart everything (if you're running Celery, there is a [Worker Termination Grace Period](https://forum.astronomer.io/t/what-is-the-worker-termination-grace-period-on-astronomers-ui/141) you can leverage here to minimize existing immediate task disruption),**Was this helpful?**
+2. Running `astro airflow deploy` via your CLI to immediately restart everything (if you're running Celery, there is a [Worker Termination Grace Period](https://forum.astronomer.io/t/what-is-the-worker-termination-grace-period-on-astronomers-ui/141) you can leverage here to minimize existing immediate task disruption)
+**Was this helpful?**
 
 This list is based on our experience helping Astronomer customers with core Airflow issues, but we want to hear from you. Don't hesitate to reach out to us at humans@astronomer.io if we missed something that you think would be valuable to include.
 

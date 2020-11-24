@@ -10,7 +10,11 @@ date: 2018-01-29T00:00:00.000Z
 
 Throughout Astronomer’s short but exciting life so far, we’ve changed our stack, product direction, and target market more times than we can count. The flux has definitely caused some stress, but it has ultimately been a major source of growth both for me individually and for our company as a whole.
 
-However, all this pivoting has been unequivocally unkind to two things: our Github org and our cofounder’s hair.,,
+However, all this pivoting has been unequivocally unkind to two things: our Github org and our cofounder’s hair.
+
+![1517248988-tim_dumbl.png](../assets/1517248988-tim_dumbl.png)
+
+
 The last few years have left us with a mess of Github repos and orgs. As you can imagine, this made it difficult to do any internal github reporting on who was closing out issues, what type of issues stay open, and track milestone progress.
 
 ## Apache Airflow
@@ -30,7 +34,11 @@ Jump into the airflows directory and run the start script pointing to the DAG di
 cd astronomer/examples/airflow
 ./start YOURDIRECTORYHERE
 ```
-A bunch of stuff will pop up in the command line, including the address where everything will be located,,All custom requirements can be stored in a requirements.txt file in the directory you're pointed at.
+A bunch of stuff will pop up in the command line, including the address where everything will be located
+
+![1517249161-astro_open.png](../assets/1517249161-astro_open.png)
+
+All custom requirements can be stored in a requirements.txt file in the directory you're pointed at.
 
 Any custom packages you want (CLIs, SDKs, etc.) can be added to packages.txt.
 
@@ -83,7 +91,11 @@ class GithubHook(HttpHook):
         return super().get_conn(headers)
 ```
 
-When converting this to an Airflow hook, all the credentials can be stored in the Connections panel (from above, airflow spins up at `http://localhost:8080`.,,
+When converting this to an Airflow hook, all the credentials can be stored in the Connections panel (from above, airflow spins up at `http://localhost:8080`.
+
+![1517249275-github_connections.png](../assets/1517249275-github_connections.png)
+
+
 ## Moving Data
 Now that there's an interface to interact with the external system, we need to define what actually needs to be done.
 
@@ -352,7 +364,11 @@ Apart from the SQL and some `for` loops, our DAG is essentially a config file - 
 
 We use DummyOperators to separate the use of systems in our DAGs. In the DAG above, we have one that starts the DAG, and one that separates the moving of data into Redshift from the using of data in Redshift. This makes our DAGs more idempotent and makes debugging a lot easier (i.e. I can easily iterate on my SQL in the DAG above once I've gotten all the data into Redshift the way that I like it).
 
-Our folder structure for our internal Github DAG looks like this:,,The _init.py_ files in the hooks and operators folders are empty, but the one in the GithubPlugin directory tells Airflow that this is a plugins folder:
+Our folder structure for our internal Github DAG looks like this:
+
+![1517249874-github_files.png](../assets/1517249874-github_files.png)
+
+The _init.py_ files in the hooks and operators folders are empty, but the one in the GithubPlugin directory tells Airflow that this is a plugins folder:
 ```
 from airflow.plugins_manager import AirflowPlugin
 from GithubPlugin.hooks.github_hook import GithubHook
@@ -366,13 +382,25 @@ class GithubPlugin(AirflowPlugin):
 ```
 
 ## Running Locally with Open
-Now that the workflow has been defined, pop over to [https://localport:8080](https://localport:8080) to see the workflow run.,,This is a pretty simple workflow where there's not a whole lot that can go wrong. But what if there was a lot more going on, and you needed information on which part of your DAG was using the most resource intensive or what worker utilization looked like?
+Now that the workflow has been defined, pop over to [https://localport:8080](https://localport:8080) to see the workflow run.
 
-With Prometheus and Grafana bundled with Open, you get all this and more.,,
+![1517249942-airflow_ui.png](../assets/1517249942-airflow_ui.png)
+
+This is a pretty simple workflow where there's not a whole lot that can go wrong. But what if there was a lot more going on, and you needed information on which part of your DAG was using the most resource intensive or what worker utilization looked like?
+
+With Prometheus and Grafana bundled with Open, you get all this and more.
+
+![1517249993-open_dashboards.png](../assets/1517249993-open_dashboards.png)
+
+
 ## Visualizing and Dashboarding
 Now that all the data is in Redshift, it's ready for visualization and dashboarding. The SQL in the DAG is what we started with, but our dashboard ended up showing a lot more.
 
-There are a ton of [great dashboarding tools](http://astronomer.io/blog/six-open-source-dashboards/) out there, but for this use case, [Apache Superset](https://superset.incubator.apache.org/) was the best option.,,
+There are a ton of [great dashboarding tools](http://astronomer.io/blog/six-open-source-dashboards/) out there, but for this use case, [Apache Superset](https://superset.incubator.apache.org/) was the best option.
+
+![1517262842-image.png](../assets/1517262842-image.png)
+
+
 Unsurprisingly, our CTO [Schnie](https://github.com/schnie) is leading the way with commits - guess he's CTO for a reason.
 
 We maintain all of our Airflow plugins [here](https://github.com/airflow-plugins) and have a list of [best practices](https://docs.astronomer.io/v2/apache_airflow/tutorial/best-practices.html) that we briefly touched on.

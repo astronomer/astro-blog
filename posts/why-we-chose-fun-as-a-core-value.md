@@ -2,7 +2,7 @@
 title: Why We Chose “Fun” as a Core Value
 slug: why-we-chose-fun-as-a-core-value
 description: 'From the outside, startups can seem like a lot of fun. The reality, though, is that an early-stage startup is mostly grueling work.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/funHeader.jpg
 authors:
   - Chris Hendrixson
 date: 2016-08-03T00:00:00.000Z

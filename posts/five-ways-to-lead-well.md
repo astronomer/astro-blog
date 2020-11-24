@@ -2,7 +2,7 @@
 title: Five Ways to Lead Well
 slug: five-ways-to-lead-well
 description: 'Leading is hard, even if you know all the right ways to do it. Here are five ways to lead in your organization.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/leadwellHeaderB@2x.png
 authors:
   - Andy Ruberg
 date: 2017-03-14T00:00:00.000Z

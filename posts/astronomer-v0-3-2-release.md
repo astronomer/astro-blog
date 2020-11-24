@@ -9,7 +9,8 @@ date: 2018-07-31T00:00:00.000Z
 ---
 
 Our team launched [Astronomer v0.3.0](http://https://www.astronomer.io/blog/announcing-astronomer-v0-3-0/) two weeks ago, timely delivering our strongest release yet. We set a solid foundation for both our Enterprise and Cloud Editions and are getting in the rhythm of shipping releases regularly and openly. In that spirit, read below for a short update that breaks down v.0.3.2, officially released this week.
-,## A Breakdown of v0.3.2
+
+## A Breakdown of v0.3.2
    
 **(1) All charts and their pods are now selected by a `NetworkPolicy` that defines strict `Ingress` rules.** 
 - This will prevent pods from talking to pods they shouldn't be talking to. Individual airflow deployments will now also be isolated at the network level. We're looking to define `Egress` rules in the future, but these improvements give us a good start.

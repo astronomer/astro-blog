@@ -2,7 +2,7 @@
 title: 'Remote Working Guide: Louisville'
 slug: remote-working-guide-louisville
 description: 'This edition of Astronomer’s Remote Working Guide takes you to Louisville, Kentucky. Or Loo-a-vul. Or Loo-ee-ville? '
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/rwgLouisville@2x.jpg
 authors:
   - Becky Steele
 date: 2017-01-03T00:00:00.000Z

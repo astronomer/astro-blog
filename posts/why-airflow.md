@@ -18,7 +18,19 @@ Apache Airflow continues to win vs. other workflow orchestration tools due to tw
 As a result, thousands of companies — including Fortune 500s, tech giants, and early-stage startups — are adopting Airflow as their “master” data pipeline orchestration tool. 
 
 The Airflow community is strong, healthy, and vibrant, with over 1,000 code contributors — and growing at a healthy pace.
-,,The velocity of Github stars for Airflow [continues to accelerate](https://star-history.t9t.io/#apache/airflow).,,And as Airflow approaches a Version 2 release, the project has entered a second golden age of productivity in the past three quarters, eclipsing the number of commits from even the early days when the first generation of project developers Maxime, Bolke, Jeremiah, Chris, Sid and Arthur were building it out.,,The Airflow project was already gaining momentum in 2018 thanks to open-source activities in companies like Airbnb, Lyft, Twitter, Glassdoor, and [many, many others](https://github.com/apache/airflow#who-uses-apache-airflow). 
+
+
+![1573238242-screen-shot-2019-11-08-at-1-35-26-pm.png](../assets/1573238242-screen-shot-2019-11-08-at-1-35-26-pm.png)
+
+The velocity of Github stars for Airflow [continues to accelerate](https://star-history.t9t.io/#apache/airflow).
+
+![1575383573-screen-shot-2019-12-03-at-9-32-20-am.png](../assets/1575383573-screen-shot-2019-12-03-at-9-32-20-am.png)
+
+And as Airflow approaches a Version 2 release, the project has entered a second golden age of productivity in the past three quarters, eclipsing the number of commits from even the early days when the first generation of project developers Maxime, Bolke, Jeremiah, Chris, Sid and Arthur were building it out.
+
+![1573238254-screen-shot-2019-11-08-at-1-36-30-pm.png](../assets/1573238254-screen-shot-2019-11-08-at-1-36-30-pm.png)
+
+The Airflow project was already gaining momentum in 2018 thanks to open-source activities in companies like Airbnb, Lyft, Twitter, Glassdoor, and [many, many others](https://github.com/apache/airflow#who-uses-apache-airflow). 
 
 In 2019, an elevated level of activity has been driven by companies like Astronomer, Google, Polidea, and GoDataDriven, who are dedicating significant resources to the project, including an expanded group of people working on the project full-time.
 
