@@ -73,7 +73,8 @@ To enhance the Astro CLI’s functionality, we’ve refactored commands for more
 
 **In-App Billing**
 
-In an effort to improve the administrative experience for our users, Workspace Admins can now manage their billing information directly in the Astronomer UI.,### Getting Started
+In an effort to improve the administrative experience for our users, Workspace Admins can now manage their billing information directly in the Astronomer UI.
+### Getting Started
 
 **Existing Customers:**
 

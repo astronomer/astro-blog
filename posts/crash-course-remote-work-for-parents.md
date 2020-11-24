@@ -66,6 +66,7 @@ As a tried and true veteran of remote working (as a parent) - this is probably s
 
 Best of luck!
 
-✌️,[Sam](https://www.linkedin.com/in/samantha-black/) is a Full-Stack Developer at Astronomer.
+✌️
+[Sam](https://www.linkedin.com/in/samantha-black/) is a Full-Stack Developer at Astronomer.
 
 Astronomer is hiring! If you’re looking for a remote first culture and love Airflow, apply at [https://careers.astronomer.io/](https://careers.astronomer.io/) or contact us at [humans@astronomer.io](humans@astronomer.io).

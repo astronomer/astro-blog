@@ -13,9 +13,17 @@ Hello there, fellow Airflowers!
 
 As some of you may know, we've been busy for the past few years trying to find an ideal autoscaling architecture for Apache Airflow. This journey has taken us through multiple architectures and cutting edge technologies. With the release of KEDA (Kubernetes Event-Driven Autoscaler), we believe we have found a new option that merges the best technology available with an architecture that is both efficient and easy to maintain.
 
-When the KubernetesExecutor was first released, it was the first time that Airflow had a working scale-to-zero solution. The executor can launch a pod for each task, and shrink back down to a single instance when all tasks complete. While this system has huge benefits for users, it is not without its drawbacks.,,<br>
+When the KubernetesExecutor was first released, it was the first time that Airflow had a working scale-to-zero solution. The executor can launch a pod for each task, and shrink back down to a single instance when all tasks complete. While this system has huge benefits for users, it is not without its drawbacks.
 
-Launching an entire Airflow virtual environment for each task leads to a fair amount of wasted resources, and running hundreds or thousands of tasks in parallel can place significant pressure on a Kubernetes cluster. So while the KubernetesExecutor is valuable for users who want per-task configurations and don't want to use Celery, it is not our ideal autoscaling solution.,,<br>
+![1584137870-blog-keda-podcast-1.jpeg](../assets/1584137870-blog-keda-podcast-1.jpeg)
+
+<br>
+
+Launching an entire Airflow virtual environment for each task leads to a fair amount of wasted resources, and running hundreds or thousands of tasks in parallel can place significant pressure on a Kubernetes cluster. So while the KubernetesExecutor is valuable for users who want per-task configurations and don't want to use Celery, it is not our ideal autoscaling solution.
+
+![1584137936-blog-keda-podcast-2.jpeg](../assets/1584137936-blog-keda-podcast-2.jpeg)
+
+<br>
 
 In continuing our search for an ideal autoscaling solution, we felt that these were the three most important factors:
 
@@ -37,19 +45,31 @@ In the following example, we start with an Airflow cluster that has zero Celery 
 
 ```
 CEIL(0 RUNNING + 0 QUEUED/16) = 0 WORKERS
-```,,<br>
+```
+
+![1584137990-blog-keda-podcast-3.jpeg](../assets/1584137990-blog-keda-podcast-3.jpeg)
+
+<br>
 
 Using the equation CEIL(RUNNING + QUEUED)/worker_concurrency, KEDA launches a single worker that will handle the first 16 (our default concurrency) tasks in parallel. Even as Airflow adds tasks, as long as old tasks finish before the number of running + queued tasks rise above 16, KEDA will only run a single worker!
 
 ```
 CEIL(0 RUNNING + 1 QUEUED/16) = 1 WORKERS
-```,,<br>
+```
+
+![1584138020-blog-keda-podcast-4.jpeg](../assets/1584138020-blog-keda-podcast-4.jpeg)
+
+<br>
 
 If there is a period of high load, KEDA will be able to launch new Celery workers, all of which are pulling tasks from the Celery Queue as quickly as possible. There is no loading time as the Celery worker maintains a python environment between task executions. This consistency means that these Celery + KEDA workers are signficantly faster than KubernetesExecutor workers while having the same scale-to-zero efficiency.
 
 ```
 CEIL(32 RUNNING + 30 QUEUED/16)  = 4 WORKERS
-```,,<br>
+```
+
+![1584138064-blog-keda-podcast-5.jpeg](../assets/1584138064-blog-keda-podcast-5.jpeg)
+
+<br>
 
 ### Is it Difficult to Maintain?
 
@@ -79,6 +99,7 @@ For those who are interested in trying the KEDA autoscaler out, Astronomer has r
 With all of the core open source contributions merged and released, our next step is to prepare, test, and release KEDA for all astronomer customers as a default feature of all cloud and enterprise deployments. We hope that with this feature release, customers will see a noticeable improvement in the efficiency of their airflow deployments, both in cost and speed. Users of the KubernetesExecutor will get more bang-per-buck as they can merge tasks into single workers, and users of the CeleryExecutor will find that their idle costs drop. Customers will also soon have more flexibility to create queues that match each task or DAG's unique use-case.
 
 We want to thank everyone in the Apache Airflow and Astronomer communities for your continued support, and we can't wait to show you all the cool things we have in store :).
-,[Daniel](https://www.linkedin.com/in/danielimberman?originalSubdomain=co) works for Astronomer as a full-time committer to the Apache Airflow Project.
+
+[Daniel](https://www.linkedin.com/in/danielimberman?originalSubdomain=co) works for Astronomer as a full-time committer to the Apache Airflow Project.
 
 Astronomer is hiring! If you’re looking for a remote first culture and love Airflow, apply at [https://careers.astronomer.io/](https://careers.astronomer.io/) or contact us at [humans@astronomer.io](humans@astronomer.io).

@@ -2,7 +2,7 @@
 title: A New Way to Look at NPS
 slug: a-new-way-to-look-at-nps
 description: 'Astronomer wouldn’t be where it is today without the NPS (Net Promoter Score, a customer satisfaction metric).'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/nps2560x1600a.png
 authors:
   - Ben Gregory
 date: 2016-08-31T00:00:00.000Z

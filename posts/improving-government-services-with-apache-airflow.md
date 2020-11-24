@@ -27,7 +27,11 @@ I’ve loved computers and technology ever since my Dad got me my first computer
 Somehow I met Alan Palazollo, one of the original CfA fellows at a DrupalCon. He told me about Code for America, and I decided to apply. Somehow, I got in and convinced my wife to support my crazy idea of moving to California … to take a paycut.  But hey - we lived in Chicago at the time, and there’s only so many Snowmaggeddons you can take. 
 
 
-,,We worked with the government of Puerto Rico to develop PrimerPeso, a way for business owners to find incentives from the local, state and federal governments to help their businesses.  What really blew my mind at the time was that it was not a difficult technology problem. But execution depended on finding the right problem and the right way to solve it and getting the data in the right place.  
+
+
+![1516912306-giphy-3.gif](../assets/1516912306-giphy-3.gif)
+
+We worked with the government of Puerto Rico to develop PrimerPeso, a way for business owners to find incentives from the local, state and federal governments to help their businesses.  What really blew my mind at the time was that it was not a difficult technology problem. But execution depended on finding the right problem and the right way to solve it and getting the data in the right place.  
 
 When the 11-month fellowship was coming to an end, I really got hooked on working on government technology. What’s better than using my skills to help people? And then I saw the SD CDO opportunity come up.  There’s actually an interesting story there, as well
 https://www.youtube.com/watch?v=6BGw2Msv2Wg. 

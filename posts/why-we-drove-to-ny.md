@@ -2,7 +2,7 @@
 title: Why we drove to NY and back over the past 48 hours for a 15 minute meeting
 slug: why-we-drove-to-ny
 description: 'The Astronomer team drove from Cincinnati, OH to New York, NY for a fifteen minute meeting with the top accelerator in the world. Now...why did we do that?'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/angelpad.jpg
 authors:
   - Ry Walker
 date: 2015-07-16T00:00:00.000Z

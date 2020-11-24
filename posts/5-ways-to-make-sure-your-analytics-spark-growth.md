@@ -11,7 +11,8 @@ date: 2017-09-12T00:00:00.000Z
 *Note: David Fauchier works for [Mr Wolf](http://https://fantasticmrwolf.com/), a London-based, data-driven SWAT team for venture-backed companies. They help companies upgrade their data infrastructure, become more data-driven and translate all of that into faster growth and higher revenue. Through their collection of war stories and experiences, they have gained insider insight to the deliberate preparation it takes to do analytics in a way that is meaningful. According to Mr. Wolf, here are the five steps every company should take to make their product and marketing analytics worthwhile:*
 
 # 1. Set the right KPIs
-,*Metrics and KPIs are like squares and rectangles: All squares are rectangles, but not all rectangles are squares. Similarly, all KPIs are metrics, but not all metrics are KPIs. KPIs are essentially a set of metrics that you’ve judged to be "Key" to business success.
+
+*Metrics and KPIs are like squares and rectangles: All squares are rectangles, but not all rectangles are squares. Similarly, all KPIs are metrics, but not all metrics are KPIs. KPIs are essentially a set of metrics that you’ve judged to be "Key" to business success.
 
 Pretty much any business model in the world can be placed somewhere on a spectrum between groceries and engagement rings. When you’re selling groceries, you’re going to extract value from a customer, ideally over their lifetime—customers have to eat, and they’re unlikely to ever eat less. So if they’re not shopping with you, they’re shopping with someone else. Meanwhile, if you’re selling engagement rings, your customers are only ever going to buy from you once, so you need to capture all the value you can in that one transaction. Each business, therefore, needs to optimise for very different things. Knowing which type of business you are in is critical to success.
 
@@ -33,7 +34,11 @@ It’s easy for such discussions to get way complicated, way quick. As a result,
 
 "Data" is in serious need of being de-mythologised. In fact, "data" is a loose term for "anything you can use to answer a question," whether that be numbers or customer conversations or patterns you’re seeing in your support queue. 
 
-In actuality, data is the easy part. The most important thing you can do is ask the right questions. And the questions you should be asking depend entirely on the stage you’re at, the vertical you’re in and the type of product you’re building.,,The first stage of any product is "Discovery"—you’re identifying a customer problem you think you can solve. "Iteration" is all about finding product / market fit and building a solution that users want to use to solve the problem you discovered. "Scaling" is about growing the product usage once you know your solution works and can scale. "Optimisation" is the last stage of a product lifecycle. It’s about taking something that’s relatively mature and tweaking it to perfection: a few basis points of extra conversion here, and a percentage or two’s increase in lifetime value (LTV) over a six month period there.
+In actuality, data is the easy part. The most important thing you can do is ask the right questions. And the questions you should be asking depend entirely on the stage you’re at, the vertical you’re in and the type of product you’re building.
+
+![1505694106-stages.jpg](../assets/1505694106-stages.jpg)
+
+The first stage of any product is "Discovery"—you’re identifying a customer problem you think you can solve. "Iteration" is all about finding product / market fit and building a solution that users want to use to solve the problem you discovered. "Scaling" is about growing the product usage once you know your solution works and can scale. "Optimisation" is the last stage of a product lifecycle. It’s about taking something that’s relatively mature and tweaking it to perfection: a few basis points of extra conversion here, and a percentage or two’s increase in lifetime value (LTV) over a six month period there.
 
 Each of these stages also has a corresponding set of metrics to focus on. "Understand" metrics over-index for qualitative data points like customer conversations, and under-index for multi-variate testing and data exploration. The goal is to gain context around a problem. Conversely, "Growth" metrics are all about optimising the top of the conversion funnel. They’re about acquiring more users for less money, getting them to that first "[aha moment](http://medium.com/parsa-vc/how-to-discover-your-apps-aha-moment-5f75dd7b6536)," and letting the product do the work from there. Growth metrics are 90% of the reading you’ll find on "data" on the internet.
 
@@ -62,13 +67,37 @@ Your process should look something like this:
 
 *We had a client whose data was like spaghetti. Each product had multiple integrations (usually with an associated software development kit, or SDK), sending the same data to lots of different services—one for analytics, one for messaging, another for Salesforce, etc. When it comes to event-driven products, it’s a slippery slope.*
 
-In the beginning, it’s wonderful:,,Then you add a couple more tools that your sales and marketing team asked for:,,And then one day, it looks like this:,,Data spaghetti sucks for all those involved. It leads to fragmentation, mistakes, data paralysis and the occasional engineering mutiny (as performance degrades beyond what any self-respecting developer will bear).
+In the beginning, it’s wonderful:
+
+![1505694245-image-2.png](../assets/1505694245-image-2.png)
+
+Then you add a couple more tools that your sales and marketing team asked for:
+
+![1505694267-image-3.png](../assets/1505694267-image-3.png)
+
+And then one day, it looks like this:
+
+![1505694288-image-4.png](../assets/1505694288-image-4.png)
+
+Data spaghetti sucks for all those involved. It leads to fragmentation, mistakes, data paralysis and the occasional engineering mutiny (as performance degrades beyond what any self-respecting developer will bear).
 
 You can avoid it all by using an events dispatcher, like [Astronomer’s](http://www.astronomer.io/).
 
 Analytics, push messaging, email, user testing and support tools all require pretty much the same data: who are your users and what are they doing. Instead of doing an integration for each of these, send your data once to platform like Astronomer, and have it automagically translated and pushed to whatever service you want ([Mixpanel](http://mixpanel.com/) / [Amplitude](http://amplitude.com/) / [Salesforce](http://www.salesforce.com/) / [Mailchimp](http://mailchimp.com/)…). This saves on engineering time, boosts your load performance and gives your product, sales and marketing teams the freedom to use the best tool for them, at the flick of a switch.
 
-It looks something like this:,,Much neater. Using a dispatcher lets you scale faster: you can start with one team (i.e. Product) who might require Mixpanel. Then suddenly your marketing team needs to send triggered personalized emails—you just flick a switch on the Astronomer dashboard:,,And:,,Congratulations, you just implemented a whole new tool and you’re pushing all your data to it without needing to disturb your engineer. If engineering does want to get involved, the news is good! Astronomer leverages [Apache Airflow](http://www.astronomer.io/blog/airflow-at-astronomer/) to define all workflows as code. So your team can modify, collaborate, port and extend anytime (using Astronomer’s custom pipes or building your own—it’s up to you). And you can repeat this again and again, for as many destinations as you need, as your teams grow and as their needs evolve.
+It looks something like this:
+
+![1505694410-image-5.png](../assets/1505694410-image-5.png)
+
+Much neater. Using a dispatcher lets you scale faster: you can start with one team (i.e. Product) who might require Mixpanel. Then suddenly your marketing team needs to send triggered personalized emails—you just flick a switch on the Astronomer dashboard:
+
+![1505694434-image-6.png](../assets/1505694434-image-6.png)
+
+And:
+
+![1505694457-image-7.png](../assets/1505694457-image-7.png)
+
+Congratulations, you just implemented a whole new tool and you’re pushing all your data to it without needing to disturb your engineer. If engineering does want to get involved, the news is good! Astronomer leverages [Apache Airflow](http://www.astronomer.io/blog/airflow-at-astronomer/) to define all workflows as code. So your team can modify, collaborate, port and extend anytime (using Astronomer’s custom pipes or building your own—it’s up to you). And you can repeat this again and again, for as many destinations as you need, as your teams grow and as their needs evolve.
 
 ### 5. Send events from the right place
 
@@ -102,7 +131,11 @@ Each has its advantages and disadvantages, so it really depends what you’re tr
 
 - You’re reliant on the user updating the mobile app. In practice, you’ll have multiple versions of the same event floating around (unless you get it all right on the first go, which you never will).
 
-Here’s a flowchart to help you make the decision:,,### In Summary
+Here’s a flowchart to help you make the decision:
+
+![1505694551-image-8.png](../assets/1505694551-image-8.png)
+
+### In Summary
 
 Nobody ever complained that they over-invested in knowing their customers too well. Understanding your customers, understanding how they’re using your products and using that knowledge to better serve them is the only formula for long-term sustainable growth.
 

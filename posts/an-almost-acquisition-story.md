@@ -2,7 +2,7 @@
 title: An Almost Acquisition Story
 slug: an-almost-acquisition-story
 description: 'TL;DR: Coming out of AngelPad’s 2015 Demo Day, we found ourselves vacillating between an acquisition and Series A, though we were arguably too early for either.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/palmtreesC-1.jpg
 authors:
   - Tim Brunk
 date: 2016-07-13T00:00:00.000Z

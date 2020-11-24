@@ -2,7 +2,7 @@
 title: 'Astronomer Takes PLOTCON 2016: Why We''re Excited'
 slug: astronomer-takes-plotcon
 description: Plotly is one of Astronomer’s favorite open source tools and always gets great reactions from our clients.
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/plotconINTROheader.jpg
 authors:
   - Viraj Parekh
 date: 2016-11-15T00:00:00.000Z

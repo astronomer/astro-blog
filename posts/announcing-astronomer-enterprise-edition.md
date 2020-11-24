@@ -18,7 +18,9 @@ Astronomer is dedicated to building the best platform for data engineers that al
 
 Installing and deploying is easy, just follow [these docs](https://enterprise.astronomer.io/guides/google-cloud/index.html), or this video walk through:
 
-,,### Try it Out
+
+
+### Try it Out
 
 If you want to give it a test drive without deploying it to your infrastructure, you can try out [Astronomer Open](https://open.astronomer.io/), which provides a local version of the platform that runs on your computer via Docker Compose.
 

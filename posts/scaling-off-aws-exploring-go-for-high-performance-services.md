@@ -2,7 +2,7 @@
 title: 'Scaling off AWS: Exploring Go for High Performance Services'
 slug: scaling-off-aws-exploring-go-for-high-performance-services
 description: 'To handle an arbitrarily large number of requests, we need a language built for maximum concurrency and performance. We think that language could be Go. '
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/goapiHeaderA@2x.png
 authors:
   - Mike Perry
 date: 2017-02-08T00:00:00.000Z

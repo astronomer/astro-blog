@@ -10,7 +10,9 @@ date: 2019-09-03T00:00:00.000Z
 
 Last week, we released v0.10 of Astronomer to enterprise customers. Astronomer Cloud (our SaaS service) will be upgraded to v0.10 in the coming weeks.
 
-This release includes an upgrade to allow Airflow 1.10.4, a brand new dashboard for system admins of Enterprise installs, and a variety of security improvements.,,## What's new in 0.10
+This release includes an upgrade to allow Airflow 1.10.4, a brand new dashboard for system admins of Enterprise installs, and a variety of security improvements.
+
+## What's new in 0.10
 
 **1. Support for Airflow v1.10.4**
 

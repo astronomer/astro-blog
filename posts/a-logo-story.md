@@ -2,7 +2,7 @@
 title: A Logo Story
 slug: a-logo-story
 description: 'Astronomer''s Head of Design, Chris Hendrixson, explains how he created the design aesthetic to encompass data, futurism, and a little bit of fun.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/firstlogo.png
 authors:
   - Chris Hendrixson
 date: 2016-03-17T00:00:00.000Z

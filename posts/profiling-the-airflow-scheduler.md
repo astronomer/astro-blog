@@ -27,7 +27,8 @@ td {
   background-color: #f3f3f3;
 }
 </style>
-,A good chunk of my role at Astronomer is working on making Airflow better for everyone – working directly on the open-source project, reviewing and merging PRs, preparing releases, and lately working on the roadmap for Airflow 2.0. (In many ways getting paid to work on open-source is my ideal job, but that is the subject of another blog post).
+
+A good chunk of my role at Astronomer is working on making Airflow better for everyone – working directly on the open-source project, reviewing and merging PRs, preparing releases, and lately working on the roadmap for Airflow 2.0. (In many ways getting paid to work on open-source is my ideal job, but that is the subject of another blog post).
 
 One of the big items on the [roadmap for Airflow 2.0][roadmap] is to “Improve Scheduler performance and reliability”. I’ve certainly seen cases where the scheduler just takes longer than it should to run tasks to completion. 
 
@@ -363,7 +364,8 @@ I’ll be opening a PR for this, just as soon as I work out all the bugs in it :
 RuntimeError: reentrant call inside <_io.BufferedWriter name='<stdout>'>
 ```
 
-Let's just hope the performance increase isn't because of a bug!,
+Let's just hope the performance increase isn't because of a bug!
+
 [Ash](https://www.linkedin.com/in/ashberlin/?originalSubdomain=uk) is an Airflow Team Lead at Astronomer and Project Management Committee member of Apache Airflow. Find him on Twitter [@AshBerlin](https://twitter.com/AshBerlin).
 
 Astronomer is hiring! If you’re looking for a remote first culture and love Airflow+Kubernetes, contact us at [humans@astronomer.io](humans@astronomer.io).

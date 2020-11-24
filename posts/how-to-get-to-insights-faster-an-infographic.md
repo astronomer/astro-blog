@@ -2,7 +2,7 @@
 title: How to Get to Insights Faster (An Infographic)
 slug: how-to-get-to-insights-faster-an-infographic
 description: Get big insights from big data by following Gartner's 2016 Market Guide to Self-Service Data Preparation trends. Here they are as an infographic.
-heroImagePath: ../assets/blank.png
+heroImagePath: ''
 authors:
   - Laurel Brunk
 date: 2017-08-15T00:00:00.000Z

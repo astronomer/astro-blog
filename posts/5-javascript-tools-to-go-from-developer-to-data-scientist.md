@@ -2,7 +2,7 @@
 title: 5 JavaScript Tools to go from Developer to Data Scientist
 slug: 5-javascript-tools-to-go-from-developer-to-data-scientist
 description: What if data science could be done in one ubiquitous language – one that is already often being used in the current data stack for data visualization?
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/5javascripttools_2x.png
 authors:
   - Ben Gregory
 date: 2016-05-10T00:00:00.000Z

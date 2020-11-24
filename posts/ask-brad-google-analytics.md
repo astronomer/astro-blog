@@ -4,7 +4,7 @@ slug: ask-brad-google-analytics
 description: |+
   In this video-edition of 'Ask RBK,' we answer some of the most common questions we hear about Google Analytics.
 
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/askrbkHeaderC@2x.jpg
 authors:
   - R. Brad Kirn
 date: 2017-01-11T00:00:00.000Z
