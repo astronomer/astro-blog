@@ -87,7 +87,7 @@ Fortunately, Tim’s cousin and SF-based banker, [Joel](https://www.linkedin.com
 
 The new year began, and we hadn’t gotten our round closed. It was becoming clear the only path to Seed was through results…traction. We needed revenue. On January 1, we had $3.5K MRR, and it was a start. But our focus through the spring and summer paid off. We’ve come a long way, baby:
 
-![unnamed_1.png](../assets/unnamed_1.png)
+![unnamed_1.jpg](../assets/unnamed_1.jpg)
 
 ### Spring '16: Possible Acquisition + Possible “Big Investor”
 

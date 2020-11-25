@@ -12,11 +12,11 @@ _Disclaimer: Astronomer account manager and author of this blog post, Becky Stee
 
 This edition of Astronomer’s Remote Working Guide takes you to Louisville, Kentucky. Or Loo-a-vul. Or Loo-ee-ville? You choose your pronunciation—we accept them all!
 
-![Louisville.png](../assets/Louisville.png)
+![Louisville.jpg](../assets/Louisville.jpg)
 
 What does the idea of visiting Louisville bring to mind? The Kentucky Derby? Bourbon? Home of The Greatest, Muhammad Ali (another soul taken by the curse of 2016, RIP)? Perhaps the lesser-known yet super cool title of [largest (and last) producer of disco balls in the world](https://www.wsj.com/articles/louisvilles-secret-past-disco-ball-building-boomtown-1464708833)?
 
-![WSJ.png](../assets/WSJ.png)_\*Photo Source: [Wall Street Journal](https://www.wsj.com/articles/louisvilles-secret-past-disco-ball-building-boomtown-1464708833)_
+![WSJ.jpg](../assets/WSJ.jpg)_\*Photo Source: [Wall Street Journal](https://www.wsj.com/articles/louisvilles-secret-past-disco-ball-building-boomtown-1464708833)_
 
 Actually, while we’re at it, add [one of the greatest destination food towns](https://www.huffingtonpost.com/2014/10/31/best-food-cities_n_6054716.html) (with over 2,500 restaurants for my foodie friends out there), [home of the largest annual fireworks display in the country](https://en.wikipedia.org/wiki/Thunder_Over_Louisville) and [Google Fiber candidate city](https://fiber.google.com/cities/louisville/) to your list. &nbsp;
 
@@ -36,7 +36,7 @@ All of the destinations are Louisville originals and have free parking within st
 
 _800 East Market Street, Louisville, KY 40206 • [Find it on Google Maps](https://www.google.com/maps/place/800+E+Market+St,+Louisville,+KY+40206/data=!4m2!3m1!1s0x886972c4fa664b73:0x51f20d40579a73ee?sa=X&ved=0ahUKEwjYk-_lrqbRAhVERSYKHT4xDP8Q8gEIGzAA)_
 
-#### ![PTY.png](../assets/PTY.png)  
+#### ![PTY.jpg](../assets/PTY.jpg)  
   
  The Stats:
 
@@ -66,7 +66,7 @@ They make a _mean_ soy latte, and their coffee is excellent! I’d be remiss if 
 
 _930 Baxter Avenue, Louisville, KY 40204 • [Find it on Google Maps](https://www.google.com/maps/place/930+Baxter+Ave,+Louisville,+KY+40204/data=!4m2!3m1!1s0x8869732a801393d9:0x5a22e3040ea8c6bf?sa=X&ved=0ahUKEwif9NLxr6bRAhXDWSYKHXAyA8kQ8gEIGzAA)_
 
- ![Quills.png](../assets/Quills.png)  
+ ![Quills.jpg](../assets/Quills.jpg)  
   
 
 #### The Stats:
@@ -85,7 +85,7 @@ If it were possible to marry a coffee shop, I’d put a ring on Quills Coffee. S
 
 Quills has a special place in my heart: this is where I taught myself iOS Programming almost three years ago (below, circa June 2013). &nbsp;I credit where I am today to long hours in this coffee shop.
 
-![programming.png](../assets/programming.png)
+![programming.jpg](../assets/programming.jpg)
 
 The atmosphere is highly conducive to deep work. If you’re looking for a place to put your headphones on, crank up your favorite playlist and turn out your best work, this is it.
 
@@ -101,7 +101,7 @@ Two words: bottomless cup. At under $4, you can enjoy an infinitely refillable b
 
 _976 Barret Avenue, Louisville, KY 40204 • [Find it on Google Maps](https://www.google.com/maps/place/976+Barret+Ave,+Louisville,+KY+40204/data=!4m2!3m1!1s0x88690d2b0dce73a7:0x687c3f5caeabba7e?sa=X&ved=0ahUKEwjkyu2NsKbRAhViq1QKHTzPCOwQ8gEIGzAA)_
 
- ![Gallery K.png](../assets/GalleryK.png)  
+ ![Gallery K.jpg](../assets/GalleryK.jpg)  
 
 #### The Stats:
 
@@ -133,7 +133,7 @@ I’m a big fan of the loose leaf tea (over 10 varieties to choose from)! The Re
 
 _1707 Bardstown Road, Louisville, KY 40205 • [Find it on Google Maps](https://www.google.com/maps/place/1707+Bardstown+Rd,+Louisville,+KY+40205/data=!4m2!3m1!1s0x88690cb7ad87328d:0x930da7ab3654816f?sa=X&ved=0ahUKEwiJ3MOtsKbRAhWMKCYKHdWlBowQ8gEIGzAA)_
 
- ![Safai.png](../assets/Safai.png)  
+ ![Safai.jpg](../assets/Safai.jpg)  
   
 
 #### The Stats:
@@ -165,7 +165,7 @@ Try their pour-over coffee! Safai also has great seasonal lattes, so be sure to 
 No buddies to crash with in Louisville? Want a unique Louisville multi-day stay? Look no further. You’re welcome in advance!
 
 #### **[Gralehaus Bed & Beverage](https://gralehaus.com/sleepytime/)**
- ![Gralehaus.png](../assets/Gralehaus.png)  
+ ![Gralehaus.jpg](../assets/Gralehaus.jpg)  
 
 [Gralehaus Bed & Beverage](https://gralehaus.com/sleepytime/), my top recommendation for overnight accommodations, delivers an unforgettable bed and “beverage” (and breakfast) experience with a Louisville twist. The guestrooms are the upstairs portion of a beautiful, century-old Victorian house.
 

@@ -30,11 +30,11 @@ Let's say I'm making a social web application that has a page in which I need to
 
 So this:
 
-![Visual1.png](../assets/Visual1.png "Visual1.png")
+![Visual1.jpg](../assets/Visual1.jpg "Visual1.jpg")
 
 Gets replaced with this:
 
-![Visual2.png](../assets/Visual2.png "Visual2.png")
+![Visual2.jpg](../assets/Visual2.jpg "Visual2.jpg")
 
 #### **Joining Rich Data Sources**
 

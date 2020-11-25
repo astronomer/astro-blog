@@ -2,7 +2,7 @@
 title: Branding is a Relationship
 slug: branding-is-relationship
 description: 'If there’s one consistent thing about a startup, it’s change. '
-heroImagePath: ../assets/gbike.png
+heroImagePath: ../assets/gbike.jpg
 authors:
   - Chris Hendrixson
 date: 2016-04-27T00:00:00.000Z
@@ -58,7 +58,7 @@ Nike obviously has enough resources to distribute as many Air Jordan 6 sneakers 
 
 **The Swoosh is Nike’s logo, a graphic symbol that represents the company. A limited edition rerelease of classic Nike sneakers is a marketing campaign, a proactive attempt by Nike to remind you of its products. Those immediate feelings you get when you see The Swoosh or open up that box and get a whiff of that new shoe smell is Nike’s brand.**
 
-![logoD2x.png](../assets/logoD2x.png "logoD2x.png")
+![logoD2x.jpg](../assets/logoD2x.jpg "logoD2x.jpg")
 
 What does all this mean for Astronomer?
 

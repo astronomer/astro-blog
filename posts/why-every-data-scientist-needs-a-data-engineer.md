@@ -51,7 +51,7 @@ In other words, data engineering alone doesn’t reveal insights; it readies you
 
 ([We couldn’t resist](https://www.youtube.com/watch?v=3gOHvDP_vCs).) If data engineers handled the cleaning and organizing and collecting data sets, data scientists could focus on mining for data patterns, refining algorithms and more—you know, the sexy parts of their job. In the simplest of terms, data engineering and data science work together like this:
 
-![Picture1-5.png](../assets/Picture1-5.png)To build the kind of organization that gets prepared data into the hands of the analysts, companies can take two major action steps:
+![Picture1-5.jpg](../assets/Picture1-5.jpg)To build the kind of organization that gets prepared data into the hands of the analysts, companies can take two major action steps:
 
 1. Create a new role, the data engineer, and establish [a culture of data engineering and democratization](https://medium.com/airbnb-engineering/democratizing-data-at-airbnb-852d76c51770) within their organization. 
 2. Adopt amazing new data processing technology (Airflow, Kafka, Spark and Mesos, to name a few) that can handle both big data and fast data.

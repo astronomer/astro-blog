@@ -12,7 +12,7 @@ Traditional astronomers know that you can look up at the sky with a naked eye an
 
 Same thing with data. Most companies now collect data and use it in varying ways, whether that’s downloading CSV reports and manually combining them with other data sets or hiring a Chief Data Officer and team of data scientists. We like to think of that as a company’s data maturity across a spectrum, from “flying blind” to “insanity mode.”
 
-![datamaturitymodelMAINb@2x.jpeg](../assets/datamaturityMAIN-1.png)
+![datamaturitymodelMAINb@2x.jpeg](../assets/datamaturityMAIN-1.jpg)
 
 ### Understanding Where You Rank
 

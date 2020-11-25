@@ -3,13 +3,13 @@ title: How We Quadrupled Our Blog Traffic in A Month
 slug: how-we-quadrupled-our-blog-traffic-in-a-month
 description: |
   This week, we’re getting meta and blogging about how we blog.
-heroImagePath: ../assets/quadrupleblogpost2x.png
+heroImagePath: ../assets/quadrupleblogpost2x.jpg
 authors:
   - Laurel Brunk
 date: 2016-06-08T00:00:00.000Z
 ---
 
-![](../assets/quadrupleblogpostx2.png?noresize)
+![](../assets/quadrupleblogpostx2.jpg?noresize)
 
 > Either write something worth reading or do something worth writing. –Benjamin Franklin
 
@@ -17,7 +17,7 @@ We haven’t been blogging regularly for long at Astronomer. We’re still gaini
 
 While we don’t pretend to be experts, last month, our analytics exceeded our goals:
 
-![ANALYTICS.png](../assets/ANALYTICS.png?noresize)
+![ANALYTICS.jpg](../assets/ANALYTICS.jpg?noresize)
 
 After a slow start, we more than quadrupled our readership last month, so this week, we’re getting meta and blogging about how we blog.
 
@@ -49,7 +49,7 @@ Every Monday, I send reminders via Slack so the team knows who owes what. Though
 
 This is a snapshot of what I use for big picture planning:
 
- ![SCHEDULE.png](../assets/SCHEDULE.png?noresize)  
+ ![SCHEDULE.jpg](../assets/SCHEDULE.jpg?noresize)  
   
 
 The day-to-day deadlines obviously get much more complicated, but this is the foundation from which I make my weekly schedules. The 4-week system ensures that ideas have time to percolate and every team member has time to offer feedback. If a final post is different from the original abstract, that’s okay – as long as it’s better.
@@ -62,7 +62,7 @@ The sharing is probably obvious. Why write something we don’t plan to share? W
 
 Once our&nbsp;thoughts have been shared with the world at large, nothing’s more exciting than knowing we’ve provided value (and, of course, expanded Astronomer’s audience). Each week, the team gets a content impact report with a screenshot of the analytics and any exciting mentions on social media. We’ll share things, like this shoutout to Chris, our Head of Design, for his [post about branding](https://www.astronomer.io/blog/branding-is-relationship):
 
-![ANOTHER.png](../assets/ANOTHER.png?noresize)
+![ANOTHER.jpg](../assets/ANOTHER.jpg?noresize)
 
 As we get better about sharing, we find more reasons to celebrate. It helps that we’re all in this together: we all want to see those positive analytics for Astronomer. And, really, is there anything better than celebrating or being celebrated?
 

@@ -32,7 +32,7 @@ Here are six dashboards that every CMO should know about:
 
 This sample KPI dashboard is tied to broader business goals. In this example, we’re tracking MQLs, because that’s a high-level company goal and how we calculate overall pipeline revenue.
 
- ![performance_db.png](../assets/performance_db.png)  
+ ![performance_db.jpg](../assets/performance_db.jpg)  
 
 From this dashboard, we can access the health of our top of funnel and drill down into what’s working and iterate on what isn’t working. In analyzing what’s working, we can improve our messaging for low-performing channels and continue to grow the top of funnel pipeline. It’s clear visualization that enables us do this quickly.
 
@@ -57,7 +57,7 @@ Here are a few key metrics to track in your SEM dashboard:
 - **ACV (of wins from paid search):** Again, aligning your paid search efforts with its impact on revenue
 - **Cost Per Click** : The cost that you pay for every click coming from a search engine 
 - **Total Cost** : The difference between how much money you planned on spending and how much you actually spent 
- ![SEM.png](../assets/SEM.png)  
+ ![SEM.jpg](../assets/SEM.jpg)  
   
 
 To create an optimal Paid Search dashboard, you’ll need to combine data from your website analytics, search engine data (AdWords, Bing) and CRM data.
@@ -66,7 +66,7 @@ To create an optimal Paid Search dashboard, you’ll need to combine data from y
 
 According to a 2015 report by [Social Media Examiner](https://www.socialmediaexaminer.com/SocialMediaMarketingIndustryReport2015.pdf), “88% of marketers want to know how to measure their return on investment (ROI) for social media activities." With the continued emphasis on social, that number has more than likely grown. A Social Media dashboard contains all the metrics from your social channels, shares, engagements, followers, etc.
 
- ![social.png](../assets/social.png)  
+ ![social.jpg](../assets/social.jpg)  
 
 To create this dashboard, you’ll need to connect data from Marketing Automation, CRM and social channels (Facebook, LinkedIn, Twitter, Google +).
 
@@ -74,7 +74,7 @@ To create this dashboard, you’ll need to connect data from Marketing Automatio
 
 As Content Marketing continues to grow, metrics provide insights into how content is performing. Taking a page from Jay Baer’s book, content marketers can track consumption, sharing, lead generation and sales metrics all from one dashboard.
 
- ![contentmktg.png](../assets/contentmktg.png)  
+ ![contentmktg.jpg](../assets/contentmktg.jpg)  
 
 To create this dashboard, you’ll need to connect data from your Marketing Automation, CRM, content management system, social channels and website analytics.
 
@@ -82,7 +82,7 @@ To create this dashboard, you’ll need to connect data from your Marketing Auto
 
 A web analytics dashboard focuses on your web analytics data, detailing specific numbers such as site traffic and time spent on site.
 
- ![webanalytics.png](../assets/webanalytics.png) ![webanalytics-1.png](../assets/webanalytics-1.png)  
+ ![webanalytics.jpg](../assets/webanalytics.jpg) ![webanalytics-1.jpg](../assets/webanalytics-1.jpg)  
 
 Metrics on this dashboard should include:
 
@@ -103,7 +103,7 @@ Since Marketing encompasses a spectrum of disciplines, nearly every Marketing in
 - **Conversion funnel** : Tracks a prospect’s progressions as they move through the funnel and towards the desired outcome such as a conversion to a sales opportunity
 - **Customer Acquisition funnel** : This funnel stems from digital marketing data and tracks campaign efforts
 - **Content Marketing funnel** : Showcasing when a new contact downloads a piece of content and monitors their journey throughout the buyer’s journey
- ![](https://cdn-images-1.medium.com/max/1600/1*sn1UC4_pV2FfqkHTU-f36g.png)
+ ![](https://cdn-images-1.medium.com/max/1600/1*sn1UC4_pV2FfqkHTU-f36g.jpg)
 
 &nbsp;
 

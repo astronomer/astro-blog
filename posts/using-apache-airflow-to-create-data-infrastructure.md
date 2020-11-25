@@ -58,7 +58,7 @@ Apache Airflow allowed us to ingest, parse and refine water use data from any wa
 
 We are also conscious of operating in an "eTl" environment where we are light on “e” and “l” as they do not involve time-sensitive ingestion or loading—and instead emphasize the “T” as our value lies in parsing data from different shapes into a single “shape” to help power analytics.
 
-![1507586369-power-analytics.png](../assets/1507586369-power-analytics.png)
+![1507586369-power-analytics.jpg](../assets/1507586369-power-analytics.jpg)
 
 A capital E and L would imply ingesting real-time streaming data and loading it in highly available, possibly NoSQL databases. We are not there yet, and understanding this current need has helped us build consciously and deliver our core suite of analytics. These include the State efficiency explorer and Neighborhood efficiency explorer that reflect the diversity of local conditions while evaluating statewide conservation policies and programs.
 
@@ -70,13 +70,13 @@ This Airflow-powered data infrastructure provides key planning benefits, which a
 
 If you want to dig into some details, check out the latest screenshots from our CaDC Water Analytics Portal:
 
-![1507666371-image.png](../assets/1507666371-image.png)
+![1507666371-image.jpg](../assets/1507666371-image.jpg)
 
 
-![1507666378-image-1.png](../assets/1507666378-image-1.png)
+![1507666378-image-1.jpg](../assets/1507666378-image-1.jpg)
 
 
-![1507666385-image-2.png](../assets/1507666385-image-2.png)
+![1507666385-image-2.jpg](../assets/1507666385-image-2.jpg)
 
 #### Anything else? 
 
@@ -92,14 +92,14 @@ Answering this question, we believe, is key to prepare cities for a future that 
 
 *The SQUID Bike Data workflow, which started with riding 75 miles of NYC bike lanes and then used computer vision to automatically measure bike lane quality:*
 
-![1507586533-squid.png](../assets/1507586533-squid.png)
+![1507586533-squid.jpg](../assets/1507586533-squid.jpg)
 
 *Our computer vision algorithm at work detecting cracks on the street imagery we collected:*
 
-![1507586627-computer.png](../assets/1507586627-computer.png)
+![1507586627-computer.jpg](../assets/1507586627-computer.jpg)
 
 *In April 2016, we worked with the city of Syracuse to measure over 75% of Syracuse’s street grid in just 10 days. (110,000 images) that we streamed into an AWS S3 bucket:*
 
-![1507586658-algorithm.png](../assets/1507586658-algorithm.png)
+![1507586658-algorithm.jpg](../assets/1507586658-algorithm.jpg)
 
 Stay tuned to see how ARGO's city streets initiative proceeds—and find out what they do next—[by following them on Medium](http://medium.com/a-r-g-o).   

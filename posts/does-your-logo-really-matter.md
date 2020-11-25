@@ -2,13 +2,13 @@
 title: Does Your Logo Really Matter?
 slug: does-your-logo-really-matter
 description: 'Two weeks ago, Instagram changed their logo. The Internet blew up.'
-heroImagePath: ../assets/intstagram_header.png
+heroImagePath: ../assets/intstagram_header.jpg
 authors:
   - Chris Hendrixson
 date: 2016-05-27T00:00:00.000Z
 ---
 
-![logomatterHeaderB2x.png](../assets/logomatterHeaderB2x.png "logomatterHeaderB2x.png")
+![logomatterHeaderB2x.jpg](../assets/logomatterHeaderB2x.jpg "logomatterHeaderB2x.jpg")
 
 **_Two weeks ago, Instagram changed their logo. The Internet blew up._**
 
@@ -18,7 +18,7 @@ On May 11, 2016...
 
 ...just minutes after Instagram’s colorful new logos arrived, the Internet responded, naturally, using emojis:&nbsp;
 
-![tweetA.png](../assets/tweetA.png "tweetA.png")**Sentiment of new posts about the logo, according to [Amobee Brand Intelligence](https://medium.com/r/?url=http%3A%2F%2Fwww.adweek.com%2Fsocialtimes%2Famobee-brand-intelligence-new-instagram-logo-sentiment%2F639495), was overwhelmingly negative:**
+![tweetA.jpg](../assets/tweetA.jpg "tweetA.jpg")**Sentiment of new posts about the logo, according to [Amobee Brand Intelligence](https://medium.com/r/?url=http%3A%2F%2Fwww.adweek.com%2Fsocialtimes%2Famobee-brand-intelligence-new-instagram-logo-sentiment%2F639495), was overwhelmingly negative:**
 
 ### 🙂 14%&nbsp;… 🤔 33%&nbsp;… 😡 53%
 
@@ -34,13 +34,13 @@ A bunch of people were pissed about Instagram’s new logo but did it make them 
 
 I’ve spent the past few weeks talking with friends, family, colleagues and fellow designers (amateur and professional) about this:&nbsp;
 
-![mattlehmanC.png](../assets/mattlehmanC.png "mattlehmanC.png")
+![mattlehmanC.jpg](../assets/mattlehmanC.jpg "mattlehmanC.jpg")
 
 [Matt Lehman](https://medium.com/r/?url=http%3A%2F%2Fwww.mattlehmanstudio.com) is a designer and illustrator in Nashville, a good friend and one of the most insanely talented people I know. I met Matt at my first summer internship. His question is what started me down this path in the first place. It turns out he was right, mostly. At least anecdotally, my Instagram habits haven’t changed much since the update.
 
 At Astronomer, we recently [changed our logo](https://medium.com/the-astronomer-journey/a-logo-story-2ea9a5f90a61#.ofs75518l) too:
 
-![astroLogos2x.png](../assets/astroLogos2x.png "astroLogos2x.png")
+![astroLogos2x.jpg](../assets/astroLogos2x.jpg "astroLogos2x.jpg")
 
 But does it matter? The question is actually much bigger than I originally thought:&nbsp;
 

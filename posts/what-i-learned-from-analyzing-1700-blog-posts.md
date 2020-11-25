@@ -2,7 +2,7 @@
 title: What I Learned from Analyzing 1700 Blog Posts
 slug: what-i-learned-from-analyzing-1700-blog-posts
 description: We analyzed over 1700 blog posts from our competitors to uncover the elements that make a great data blog.
-heroImagePath: ../assets/scatterplot.png
+heroImagePath: ../assets/scatterplot.jpg
 authors:
   - Ben Gregory
 date: 2016-02-19T00:00:00.000Z
@@ -62,9 +62,9 @@ I’m generally trying to switch to [PANDAS](https://pandas.pydata.org/)/[Jupyte
 
 What do I now know with over 1700 blog posts in my Evernote? That’s a damn good question.
 
- &nbsp; ![summary_stats.png](../assets/summary_stats.png "summary\_stats.png")_(I did blur out the specifics. Gotta keep it classy.)_
+ &nbsp; ![summary_stats.jpg](../assets/summary_stats.jpg "summary\_stats.jpg")_(I did blur out the specifics. Gotta keep it classy.)_
 
-_![histogram_by_day.png](../assets/histogram_by_day.png "histogram\_by\_day.png")_
+_![histogram_by_day.jpg](../assets/histogram_by_day.jpg "histogram\_by\_day.jpg")_
 
 _Histogram of posts by day of the week. (From Left: Sun-Sat)_
 
@@ -72,13 +72,13 @@ _Histogram of posts by day of the week. (From Left: Sun-Sat)_
 
 **What if we break it out by competitor?**
 
-**![histogram_by_competitor.png](../assets/histogram_by_competitor.png "histogram\_by\_competitor.png")**
+**![histogram_by_competitor.jpg](../assets/histogram_by_competitor.jpg "histogram\_by\_competitor.jpg")**
 
 Histogram of posing frequency broken out by competitor
 
 Yikes — looks like three companies are voracious posters. That makes it kinda hard to get a good sense of the rest of them…Let’s reset the y-axis to 30 posts and check it out again.
 
-![histogram_by_competitor_reset.png](../assets/histogram_by_competitor_reset.png "histogram\_by\_competitor\_reset.png")
+![histogram_by_competitor_reset.jpg](../assets/histogram_by_competitor_reset.jpg "histogram\_by\_competitor\_reset.jpg")
 
 Histogram reset to make the scale easier to read.
 
@@ -90,7 +90,7 @@ But wait a minute — does this prove that Tuesday or Thursday is the _best_
 
 The boxplots below represent the distribution of shares posts receive on any given day. The box themselves are the middle 50% (25–75%) of shares with the line in the middle being the median shares for that day and dots representing outliers.&nbsp;
 
-![box_plot_competitors.png](../assets/box_plot_competitors.png "box\_plot\_competitors.png")
+![box_plot_competitors.jpg](../assets/box_plot_competitors.jpg "box\_plot\_competitors.jpg")
 
 Answer: **It seemingly depends on the company\*** , but there do appear to be a number who publish their most successful posts on Tuesday. Now, whether or not that is because they _too_ believe that Tuesday is the best day to publish and thus save their best posts for then I can’t say. But it won’t matter either way if it isn’t statistically significant. To that, we turn to our handy dandy [Kruskal-Wallis Test](https://en.wikipedia.org/wiki/Kruskal%E2%80%93Wallis_one-way_analysis_of_variance), a statistical method ( **fun nerd fact** :  it’s actually just an extension of the [_Mann-Whitney U Test_](https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test)) of determining whether a distribution of data is significantly different (technically: testing for the existence of stochastic dominance — whether a random data point of one group is prone to be above or below a random data point of another group) than all other distributions. Importantly, this test is useful for our purposes because it does NOT assume a normal distribution within the sets.
 
@@ -104,7 +104,7 @@ A normal distribution occurs when the majority of the data (68%) falls within 1 
 
 &nbsp;
 
- &nbsp; ![1-ffJuv8Uc62s1FIvzY94OMg.png](../assets/1-ffJuv8Uc62s1FIvzY94OMg.png "1-ffJuv8Uc62s1FIvzY94OMg.png") Histogram representing shares/day. Left Top Row: Sunday, Monday, Tuesday; Left Middle Row: Wednesday, Thursday, Friday; Bottom Row: Saturday 
+ &nbsp; ![1-ffJuv8Uc62s1FIvzY94OMg.jpg](../assets/1-ffJuv8Uc62s1FIvzY94OMg.jpg "1-ffJuv8Uc62s1FIvzY94OMg.jpg") Histogram representing shares/day. Left Top Row: Sunday, Monday, Tuesday; Left Middle Row: Wednesday, Thursday, Friday; Bottom Row: Saturday 
 
 &nbsp;
 
@@ -120,7 +120,7 @@ So much for that…we’ll probably still post on Tuesday…&nbsp;
 
 Looking at the distribution of social shares across channels, both Facebook and Google+ are heavily skewed to the right while Twitter and Linkedin are somewhat bimodal. Consistently, they compose either ~25% or ~75% of the total.
 
-> The average post gets ~44% of total shares from Twitter, 43% from Linkedin, 10% from Facebook, and 3% from Google Plus. ![histogram_by_network.png](../assets/histogram_by_network.png "histogram\_by\_network.png")Distribution of % shares across channels. Clockwise from Top Left: Twitter, Facebook, Linkedin, Google+.&nbsp;
+> The average post gets ~44% of total shares from Twitter, 43% from Linkedin, 10% from Facebook, and 3% from Google Plus. ![histogram_by_network.jpg](../assets/histogram_by_network.jpg "histogram\_by\_network.jpg")Distribution of % shares across channels. Clockwise from Top Left: Twitter, Facebook, Linkedin, Google+.&nbsp;
 
 **What about Post-Length?**
 

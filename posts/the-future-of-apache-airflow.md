@@ -2,7 +2,7 @@
 title: The Future of Apache Airflow
 slug: the-future-of-apache-airflow
 description: Discussing the potential future direction of the Apache Airflow project.
-heroImagePath: ../assets/1533578390-theairflowuipreview.png
+heroImagePath: ../assets/1533578390-theairflowuipreview.jpg
 authors:
   - Ben Gregory
 date: 2018-08-06T00:00:00.000Z

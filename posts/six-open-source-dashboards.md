@@ -2,7 +2,7 @@
 title: Six Open Source Dashboards to Organize Your Data
 slug: six-open-source-dashboards
 description: 'At Astronomer, we believe every organization benefits from having data properly centralized, organized and cleaned. We’re building a company to do just that.'
-heroImagePath: ../assets/dashboardsB.png
+heroImagePath: ../assets/dashboardsB.jpg
 authors:
   - Ben Gregory
 date: 2016-06-29T00:00:00.000Z
@@ -20,7 +20,7 @@ If you [know what KPIs you want to track](http://www.astronomer.io/blog/5-ways-t
 
 **The Every(wo)man’s Dashboard - [Metabase](https://github.com/metabase/metabase)**
 
-![1_metabase.png](../assets/1_metabase.png)
+![1_metabase.jpg](../assets/1_metabase.jpg)
 
 The [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) says that 80% of effects can be traced back to 20% of causes, and this holds true with dashboards. When you’re paying for an expensive suite of tools, the majority of your work will require you to return to the same core functionality over and over again without a lot of the fine-tuning, in most cases. Metabase _is_ the 20% that lets you answer 80% of your questions without needing to know SQL or navigate a complicated interface.
 
@@ -30,7 +30,7 @@ You start with a question like, _”How many women between the ages of 18 and 25
 
 **The E-Commerce Darling - [Dashing](https://github.com/Shopify/dashing)**
 
-![2_Dashing.png](../assets/2_Dashing.png)
+![2_Dashing.jpg](../assets/2_Dashing.jpg)
 
 If you’ve done work in the ecommerce space in the past 5 years, you’ve probably seen Dashing in action or, at least, will recognize the patron company behind it: Shopify. Originally published in 2012, Dashing is a battle-tested dashboard with over 10,000 stars on Github and roughly 50 contributors. It’s designed for static monitoring of important key metrics (perfect for an e-commerce use case) and has a beautifully clean design to make that unused flat screen in your office the new centerpiece. In our mind, there are only two cons with Dashing. 1) It was written in Ruby (for us that’s a con...#JS) 2) It’s not really being maintained anymore....
 
@@ -38,7 +38,7 @@ As it turns out, neither of these cons are actually too bad. Although Dashing wa
 
 **The Superpowered Open Source - [Keen Dashboard](https://keen.github.io/dashboards/)**
 
-![3_Keen.png](../assets/3_Keen.png)
+![3_Keen.jpg](../assets/3_Keen.jpg)
 
 Like Dashing to Shopify, the Keen Dashboard is built and maintained by the fantastic team at Keen IO. But unlike Shopify, Keen IO is all about analytics so it makes sense that their dashboard is streamlined to work especially well with their ‘Analytics as a Service’ infrastructure.
 
@@ -46,13 +46,13 @@ When [we interviewed Dustin Larimer](https://www.astronomer.io/blog/way-more-an-
 
 While your life might be easier if you use Keen IO’s backend and [visualization library] (https://github.com/keen/keen-dataviz.js) to power your dashboard, the Keen team is generous and thus made their open-source dashboard compatible with any data source or charting library. But honestly, if you choose to use the templating dashboard without Keen IO’s other features (e.g. the backend, the actual viz itself), you’ll be missing out on some core functionality. Without Keen IO, it’s a great, open-source dashboard framework. With Keen IO, it’s open-source with super powers.
 
-**The IoT Tracker - [Freeboard](https://github.com/Freeboard/freeboard)**![4_IoT.png](../assets/4_IoT.png)
+**The IoT Tracker - [Freeboard](https://github.com/Freeboard/freeboard)**![4_IoT.jpg](../assets/4_IoT.jpg)
 
 Although IoT can be accomplished by and is even an area of strength for Keen IO ([partnership with Electric Imp](https://keen.io/blog/88522353601/electric-imp-keen-io-iot-analytics-magic)!), another dashboard is putting that use case front and center (literally). Freeboard bills itself as the “free open-source alternative to Geckboard,” another dashboard that allows chart embedding from various tools and services. Freeboard is written in Node and has an [easy-to-follow architecture](https://freeboard.github.io/freeboard/docs/plugin_example.html) for building your own plugin. The biggest (perhaps only) con that we can see is that Freeboard _seemingly_ only supports event data (read: real-time, JSON objects) but doesn’t pull from databases. So if you’re looking to connect your SQL database to a simple dashboard that you use to visualize some basic KPIs, this might not be your best bet.
 
 **The Modular Master - [Mozaik](https://github.com/plouc/mozaik)**
 
-![5_Mozaik.png](../assets/5_Mozaik.png)
+![5_Mozaik.jpg](../assets/5_Mozaik.jpg)
 
 A relatively new entry (first commit in Dec ‘14) into the open-source dashboard space that we’re pretty excited about is the modularly designed Mozaik. Mozaik was built using our favorite JS trifecta (Node, React, d3) and while it still has room to grow, its extendable and customizable modules make it both a powerful and flexible choice. Need to add a new widget type to your dashboard? Just `npm install mozaik-ext-{widget-name}` and there you have it. There are already widgets built to access Github, Travis, Google Analytics, Twitter, AWS, and ElasticSearch, among many others. And if they don’t have what you’re looking for? Build it yourself with React and d3! Simple as that.
 
@@ -60,7 +60,7 @@ For more information on when to choose Mozaik, the Cloud Data Services team at I
 
 **The Dashboard Hipster - [Grafana](https://github.com/grafana/grafana)**
 
-![6_Grafana.png](../assets/6_Grafana.png)
+![6_Grafana.jpg](../assets/6_Grafana.jpg)
 
 Grafana is powerful but by no means is it a dashboard for the faint of heart. This project has graphing plugins, embeddable apps, and integrations to databases too intense for the typical analyst. Best way to sum up Grafana? They were connecting to Prometheus BEFORE it was cool.
 
@@ -70,7 +70,7 @@ This project is the most active we’ve profiled with ~250 active contributors, 
 
 **The Dashboard Hustler&nbsp;-&nbsp;** [Re:Dash](https://github.com/getredash/redash)
 
-![Screen Shot 2016-10-28 at 9.59.18 AM.png](../assets/ScreenShot2016-10-28at9.59.18AM.png)
+![Screen Shot 2016-10-28 at 9.59.18 AM.jpg](../assets/ScreenShot2016-10-28at9.59.18AM.jpg)
 
 This one is an honorable mention of sorts because, in all honesty, we didn't initially have Re:Dash on our list when this post was first published. That's absolutely our mistake because after it's creator Arik Fraimovich reached out (see below), we checked it out and have had a great experience with it. Re:Dash uses the robustness of other open-source guru Plot.ly (see previous adorations of plot.ly from this blog [here](https://medium.com/the-astronomer-journey/what-i-learned-from-analyzing-1700-blog-posts-4a607431a32f#.5br7nk5xh), [here](https://www.astronomer.io/blog/what-i-learned-from-analyzing-1700-blog-posts-part-ii), and [here](https://www.astronomer.io/blog/data-in-basketball)) to power its&nbsp;visualizations and plugs in easily with mail clients like [Mailgun](https://mailgun.com) to create a simple but reliable alert system. Hat's off to Arik for creating some [AWS AMI's](https://docs.redash.io/en/latest/setup.html) for easy install on EC2. We&nbsp;set Re:Dash up the day we've learned about it and have had it running without incident ever since. Highly recommend.
 

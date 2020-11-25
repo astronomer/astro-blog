@@ -2,7 +2,7 @@
 title: 'An Airflow Story: Cleaning & Visualizing our Github Data'
 slug: an-airflow-story-1
 description: How we used Airflow to clean up a Github mess
-heroImagePath: ../assets/1517252199-an-airflow-story-hero.png
+heroImagePath: ../assets/1517252199-an-airflow-story-hero.jpg
 authors:
   - Viraj Parekh
 date: 2018-01-29T00:00:00.000Z
@@ -12,7 +12,7 @@ Throughout Astronomer’s short but exciting life so far, we’ve changed our st
 
 However, all this pivoting has been unequivocally unkind to two things: our Github org and our cofounder’s hair.
 
-![1517248988-tim_dumbl.png](../assets/1517248988-tim_dumbl.png)
+![1517248988-tim_dumbl.jpg](../assets/1517248988-tim_dumbl.jpg)
 
 
 The last few years have left us with a mess of Github repos and orgs. As you can imagine, this made it difficult to do any internal github reporting on who was closing out issues, what type of issues stay open, and track milestone progress.
@@ -36,7 +36,7 @@ cd astronomer/examples/airflow
 ```
 A bunch of stuff will pop up in the command line, including the address where everything will be located
 
-![1517249161-astro_open.png](../assets/1517249161-astro_open.png)
+![1517249161-astro_open.jpg](../assets/1517249161-astro_open.jpg)
 
 All custom requirements can be stored in a requirements.txt file in the directory you're pointed at.
 
@@ -93,7 +93,7 @@ class GithubHook(HttpHook):
 
 When converting this to an Airflow hook, all the credentials can be stored in the Connections panel (from above, airflow spins up at `http://localhost:8080`.
 
-![1517249275-github_connections.png](../assets/1517249275-github_connections.png)
+![1517249275-github_connections.jpg](../assets/1517249275-github_connections.jpg)
 
 
 ## Moving Data
@@ -366,7 +366,7 @@ We use DummyOperators to separate the use of systems in our DAGs. In the DAG abo
 
 Our folder structure for our internal Github DAG looks like this:
 
-![1517249874-github_files.png](../assets/1517249874-github_files.png)
+![1517249874-github_files.jpg](../assets/1517249874-github_files.jpg)
 
 The _init.py_ files in the hooks and operators folders are empty, but the one in the GithubPlugin directory tells Airflow that this is a plugins folder:
 ```
@@ -384,13 +384,13 @@ class GithubPlugin(AirflowPlugin):
 ## Running Locally with Open
 Now that the workflow has been defined, pop over to [https://localport:8080](https://localport:8080) to see the workflow run.
 
-![1517249942-airflow_ui.png](../assets/1517249942-airflow_ui.png)
+![1517249942-airflow_ui.jpg](../assets/1517249942-airflow_ui.jpg)
 
 This is a pretty simple workflow where there's not a whole lot that can go wrong. But what if there was a lot more going on, and you needed information on which part of your DAG was using the most resource intensive or what worker utilization looked like?
 
 With Prometheus and Grafana bundled with Open, you get all this and more.
 
-![1517249993-open_dashboards.png](../assets/1517249993-open_dashboards.png)
+![1517249993-open_dashboards.jpg](../assets/1517249993-open_dashboards.jpg)
 
 
 ## Visualizing and Dashboarding
@@ -398,7 +398,7 @@ Now that all the data is in Redshift, it's ready for visualization and dashboard
 
 There are a ton of [great dashboarding tools](http://astronomer.io/blog/six-open-source-dashboards/) out there, but for this use case, [Apache Superset](https://superset.incubator.apache.org/) was the best option.
 
-![1517262842-image.png](../assets/1517262842-image.png)
+![1517262842-image.jpg](../assets/1517262842-image.jpg)
 
 
 Unsurprisingly, our CTO [Schnie](https://github.com/schnie) is leading the way with commits - guess he's CTO for a reason.

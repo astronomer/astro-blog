@@ -2,7 +2,7 @@
 title: Announcing Astronomer SpaceCamp
 slug: announcing-astronomer-spacecamp
 description: The fastest way to ramp up your data team.
-heroImagePath: ../assets/1519759012-space_camp4.png
+heroImagePath: ../assets/1519759012-space_camp4.jpg
 authors:
   - Viraj Parekh
 date: 2018-02-26T00:00:00.000Z

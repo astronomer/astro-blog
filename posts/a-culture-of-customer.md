@@ -2,7 +2,7 @@
 title: A Culture of Customer
 slug: a-culture-of-customer
 description: 'Astronomer is a customer-first organization. But what does that mean, really?'
-heroImagePath: ../assets/BlogPostGraphicx2.png
+heroImagePath: ../assets/BlogPostGraphicx2.jpg
 authors:
   - R. Brad Kirn
 date: 2016-06-15T00:00:00.000Z
@@ -26,13 +26,13 @@ We’re still iterating as we go, learning through real-world trial and error, b
 
 Staying organized is crucial to maintaining focus, so we started by breaking the whole process into four phases. In our document, we describe them like this:&nbsp;
 
-![EXCERPT1_blogpost.png](../assets/EXCERPT1_blogpost.png)
+![EXCERPT1_blogpost.jpg](../assets/EXCERPT1_blogpost.jpg)
 
 **"Rules" to Live By**
 
 Early-stage startups, especially highly technical startups, can be a whirlwind of innovation, iteration and pivots. Because we value simplicity and focus, we’ve included&nbsp;a list of guidelines. We don't want to give away all our secrets but here's a small taste:
 
-![EXCERPT2_blogpost.png](../assets/EXCERPT2_blogpost.png)
+![EXCERPT2_blogpost.jpg](../assets/EXCERPT2_blogpost.jpg)
 
 Some of our&nbsp;guidelines probably&nbsp;seem obvious, but we don’t want to leave anything to chance.
 
@@ -40,7 +40,7 @@ Some of our&nbsp;guidelines probably&nbsp;seem obvious, but we don’t want to l
 
 Any effective sales organization has clearly defined roles in order to holistically serve the customer. Here are our main three:
 
-![EXCERPT3_blogpost.png](../assets/EXCERPT3_blogpost.png)
+![EXCERPT3_blogpost.jpg](../assets/EXCERPT3_blogpost.jpg)
 
 In our model, we address the responsibilities of each role, including tasks and personal development, and the metrics used to measure success.
 
@@ -55,7 +55,7 @@ In this document, we outline the four specific phases (Initial Meeting, Needs An
 Actually, it's more like strategy with a side of meeting. We know our AE’s will be out hunting and our ADR’s will be out researching, and we don’t want to hinder their progress or their mojo. To maximize each team member’s time, we have an all-hands meeting with the sales organization every Monday. We call this, creatively, the Monday Meeting. This excerpt is from our model:
 ## &nbsp;
 
-![EXCERPT4_blogpost.png](../assets/EXCERPT4_blogpost.png)
+![EXCERPT4_blogpost.jpg](../assets/EXCERPT4_blogpost.jpg)
 
 Keeping a strict agenda is important. This meeting is like the “stretching period” before the big game. Everyone creates a clear plan and gets ready to run.
 
@@ -63,7 +63,7 @@ We have a monthly rhythm too, inspired by my past life as a corporate accountant
 
 Taking a page from that book, we developed "Deals Week":
 
-![EXCERPT5_blogpost.png](../assets/EXCERPT5_blogpost.png)
+![EXCERPT5_blogpost.jpg](../assets/EXCERPT5_blogpost.jpg)
 
 Deals Week has already proven successful. During our most recent Deals Week, we reprioritized our prospective deals. The ones that seemed serious about closing rose to the top, and the ones that needed more time sunk to the bottom – or got placed in a separate category to receive some further nurturing. Not long afterwards, one of our newly prioritized deals got closed and another is currently working through an agreement.
 

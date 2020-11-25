@@ -32,15 +32,15 @@ It made sense that devs were our target so, practicing what I preach, I started 
 
 Have a look at some real emails I sent to IT professionals looking to get on their calendar.&nbsp;
 
-![1.png](../assets/1.png "1.png")
+![1.jpg](../assets/1.jpg "1.jpg")
 
 Short and to the point. It was an honest ask too...we talked with a VP of Engineering and asked a bunch of helpful questions.
 
-![2.png](../assets/2.png "2.png")
+![2.jpg](../assets/2.jpg "2.jpg")
 
 I started writing longer, more in depth emails that explained a bit more of what we're doing. My tactic here was to divulge more in the initial email in hopes to spark some interest in the actual product.
 
-![3.png](../assets/3.png "3.png")
+![3.jpg](../assets/3.jpg "3.jpg")
 
 I tried getting more specific on what I was looking to learn about (data warehouses) and seemed to have lost the genuine ask to learn.
 

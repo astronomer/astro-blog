@@ -2,7 +2,7 @@
 title: What We Learned After We Discovered Our Target
 slug: what-we-learned-after-we-discovered-our-target
 description: '"I’ve learned that I still have a lot to learn." - Maya Angelou'
-heroImagePath: ../assets/afterTargetHeader2x.png
+heroImagePath: ../assets/afterTargetHeader2x.jpg
 authors:
   - R. Brad Kirn
 date: 2016-04-19T00:00:00.000Z
@@ -39,7 +39,7 @@ Let’s dive into these to see what else we can learn.
 
 Your target is deeper than one position or title.
 
-**![afterTargetInlineC2x.png](../assets/afterTargetInlineC2x.png "afterTargetInlineC2x.png")**
+**![afterTargetInlineC2x.jpg](../assets/afterTargetInlineC2x.jpg "afterTargetInlineC2x.jpg")**
 
 Understanding this was a breakthrough for us, but to get there took a bit of light analysis. We identified the pain data scientists feel by talking to over 30 of them. And we figured this pain must be felt by others, right?...but, who? Through a series of positioning exercises obtained from a [great book](https://startups.salesforce.com/article/The-SaaS-Startup-Founder-s-Guide), we laid out who in an organization may feel the same pain. We analyzed our current customer base, asking questions like:
 
@@ -81,7 +81,7 @@ But of course, even if you talk to the right people in the right way, you can ru
 
 Tweak the process until you find something that works.
 
-**![afterTargetInlineA2x.png](../assets/afterTargetInlineA2x.png "afterTargetInlineA2x.png")**
+**![afterTargetInlineA2x.jpg](../assets/afterTargetInlineA2x.jpg "afterTargetInlineA2x.jpg")**
 
 Our first tactic was reaching out cold to individual data scientists or those doing data science in their job. But using (quite a few) prospecting tools to get email addresses for marketers, data scientists and product managers was a tedious task. You feel like you’re getting sh!t done because there is a lot of activity, but when you stop and look, the results don’t justify the effort. During Q1 2016, our SDR and I sent over 2,000 cold emails to our targets. We did A/B testing on roles/titles, messaging and subject lines. Still, our response rate was unimpressive...about 1 out of 100 unimpressive.
 

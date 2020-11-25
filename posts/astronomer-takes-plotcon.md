@@ -38,11 +38,11 @@ Let’s say I was trying to plot some trigonometric functions. Just look at the 
 
 Here's the code and output with&nbsp;Matplotlib:
 
-![Screen Shot 2016-11-15 at 10.39.59 AM copy 2.png](../assets/ScreenShot2016-11-15at10.39.59AMcopy2.png) ![Screen Shot 2016-11-15 at 10.39.59 AM copy.png](../assets/ScreenShot2016-11-15at10.39.59AMcopy.png)&nbsp;And here it is with Plotly:
+![Screen Shot 2016-11-15 at 10.39.59 AM copy 2.jpg](../assets/ScreenShot2016-11-15at10.39.59AMcopy2.jpg) ![Screen Shot 2016-11-15 at 10.39.59 AM copy.jpg](../assets/ScreenShot2016-11-15at10.39.59AMcopy.jpg)&nbsp;And here it is with Plotly:
 
-![Screen Shot 2016-11-15 at 10.40.12 AM.png](../assets/ScreenShot2016-11-15at10.40.12AM.png)
+![Screen Shot 2016-11-15 at 10.40.12 AM.jpg](../assets/ScreenShot2016-11-15at10.40.12AM.jpg)
 
-[![Sine Curve vs Cosine Curve](https://plot.ly/~virajparekh94/64.png)](https://plot.ly/~virajparekh94/64/)
+[![Sine Curve vs Cosine Curve](https://plot.ly/~virajparekh94/64.jpg)](https://plot.ly/~virajparekh94/64/)
 
 Matplotlib is definitely an incredibly powerful open source tool that can be fine-tuned to make exactly what you want. However, things like hover-text, an interactive axis and dynamic dashboards take a great deal of effort and have a pretty steep learning curve.
 

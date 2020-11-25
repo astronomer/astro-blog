@@ -34,33 +34,33 @@ In balancing the above considerations, a method of how to think about structurin
 
 Take the JSON example below:
 
-![JSON.png](../assets/JSON.png)This can easily be converted to a structured format as follows:
+![JSON.jpg](../assets/JSON.jpg)This can easily be converted to a structured format as follows:
 
-![chart1.png](../assets/chart1.png)
+![chart1.jpg](../assets/chart1.jpg)
 
 The values that were nested within the value of “hockey” have been moved up to the top level with the prefix “hockey\_” added to them to ensure they are unique. Had we not included the “hockey\_” to each value, we would have had a conflict between the two “favorite\_team” values as one already exists at the top level. This process is called “flattening” -- whereas there used to be a complex structure, now they are all on the same row. &nbsp;This creates a greater uniformity between records and easier traversing for analysts.
 
 But what if we had something like this?
 
-![Second Norm](../assets/ScreenShot2017-07-28at12.25.03PM.png "Second Norm")&nbsp;This is a much harder example to flatten because we’ve introduced “Sports” that has an array of corresponding values, each with the same sub-fields. If we were to flatten this JSON object, the result would look something like this:
+![Second Norm](../assets/ScreenShot2017-07-28at12.25.03PM.jpg "Second Norm")&nbsp;This is a much harder example to flatten because we’ve introduced “Sports” that has an array of corresponding values, each with the same sub-fields. If we were to flatten this JSON object, the result would look something like this:
 
-![complexchart.png](../assets/complexchart.png)
+![complexchart.jpg](../assets/complexchart.jpg)
 
 This isn’t great. For every person we add to this list, a corresponding number of columns for each field get created. Instead of a “names” column, we would get people\_0\_name, people\_1\_name, people\_3\_name. This makes even basic analysis impossible because you need to complete rebuild the table through convoluted queries to build the table you actually want where each column is the comprehensive source of truth for a given metric or trait.
 
 An alternative would be to associate the top level information to each person like the following.
 
-![First normal part 1.png](../assets/Firstnormalpart1.png "First normal part 1.png") ![First normal part 2.png](../assets/Firstnormalpart2.png "First normal part 2.png")
+![First normal part 1.jpg](../assets/Firstnormalpart1.jpg "First normal part 1.jpg") ![First normal part 2.jpg](../assets/Firstnormalpart2.jpg "First normal part 2.jpg")
 
-![First Normal Chart.png](../assets/FirstNormalChart.png)
+![First Normal Chart.jpg](../assets/FirstNormalChart.jpg)
 
 This organization is called [**First Normal Form**](https://en.wikipedia.org/wiki/First_normal_form), where all attributes are represented by individual columns and each value within that column represents an atomic value (e.g. name="Chelsea”; not name=`[“Eric”,"Chelsea"]`). This is very easy to conceptualize as a person new to database structure because it basically functions as any CSV or Excel file we may have used in the past and is thus very intuitive to analyze. If you want a count of people from Cincinnati, you only need to count how many rows are are in the table with the correct value in the location column.
 
 **First Normal Form** helps us create fewer tables but now we have a lot of duplicate data that we don’t need to unnecessarily include. We end up sacrificing storage for ease-of-use, and speed improvements by having minimal tables are likely a wash with the unnecessary data you end up traversing (unless your storage is columnar based, but that’s a whole other story). If Astronomer is in Cincinnati and the team’s favorite food is Peanut Butter Pretzels, those values don’t need to be explicitly repeated for each person on the Astronomer team. We could instead take the previous JSON object with the array of people and break up the response into two tables.
 
-![Second Normal 1.png](../assets/SecondNormal1.png)
+![Second Normal 1.jpg](../assets/SecondNormal1.jpg)
 
-![Second Norm](../assets/ScreenShot2017-07-28at12.28.25PM-1.png "Second Norm")
+![Second Norm](../assets/ScreenShot2017-07-28at12.28.25PM-1.jpg "Second Norm")
 
 This is much better. Organizing your data this way is called [**Second Normal Form**](https://en.wikipedia.org/wiki/Second_normal_form) and, in addition to the requirements of 1NF, requires that “_no non-prime attribute is dependent on any proper subset of any candidate key of the relation._” The simpler way of thinking about this is that no variables can relate directly to each other instead of to the key value of the table.
 
@@ -70,29 +70,29 @@ If we want to get a count of people who work in Cincinnati, we can easily join t
 
 The last organizational method is the [**Third Normal Form**](https://en.wikipedia.org/wiki/Third_normal_form), and this is a highly, highly normalized structure.&nbsp;The rule of thumb with Third Normal Form follows the oath you swear in court: “Every non-key attribute must provide a fact about the key, the whole key and nothing but the key.” In this scenario, each person’s last attended championship of their favorite team would violate 3NF as, while it does reflect a fact about the key (i.e. the person), it is only transitively related through the person’s favorite team. To solve this, the table needs to be broken out further.
 
-![Third Normal 1.png](../assets/ThirdNormal1.png "Third Normal 1.png")
+![Third Normal 1.jpg](../assets/ThirdNormal1.jpg "Third Normal 1.jpg")
 
-![Third Normal 2.png](../assets/ThirdNormal2.png "Third Normal 2.png")
+![Third Normal 2.jpg](../assets/ThirdNormal2.jpg "Third Normal 2.jpg")
 
-![Third Normal 3.png](../assets/ThirdNormal3.png "Third Normal 3.png")
+![Third Normal 3.jpg](../assets/ThirdNormal3.jpg "Third Normal 3.jpg")
 
-![Third Normal 4.png](../assets/ThirdNormal4.png "Third Normal 4.png")
+![Third Normal 4.jpg](../assets/ThirdNormal4.jpg "Third Normal 4.jpg")
 
-![Third Normal 5.png](../assets/ThirdNormal5.png "Third Normal 5.png")
+![Third Normal 5.jpg](../assets/ThirdNormal5.jpg "Third Normal 5.jpg")
 
-![Third Normal 6.png](../assets/ThirdNormal6.png "Third Normal 6.png")
+![Third Normal 6.jpg](../assets/ThirdNormal6.jpg "Third Normal 6.jpg")
 
-![Third Normal 7.png](../assets/ThirdNormal7.png "Third Normal 7.png")
+![Third Normal 7.jpg](../assets/ThirdNormal7.jpg "Third Normal 7.jpg")
 
-![Screen Shot 2017-07-28 at 12.42.25 PM copy 2.png](../assets/ScreenShot2017-07-28at12.42.25PMcopy2.png "Screen Shot 2017-07-28 at 12.42.25 PM copy 2.png")
+![Screen Shot 2017-07-28 at 12.42.25 PM copy 2.jpg](../assets/ScreenShot2017-07-28at12.42.25PMcopy2.jpg "Screen Shot 2017-07-28 at 12.42.25 PM copy 2.jpg")
 
-![Team name.png](../assets/Teamname.png "Team name.png")
+![Team name.jpg](../assets/Teamname.jpg "Team name.jpg")
 
-![Last Championship.png](../assets/LastChampionship.png "Last Championship.png")
+![Last Championship.jpg](../assets/LastChampionship.jpg "Last Championship.jpg")
 
-![Third Normal 8.png](../assets/ThirdNormal8.png "Third Normal 8.png")
+![Third Normal 8.jpg](../assets/ThirdNormal8.jpg "Third Normal 8.jpg")
 
-![Third Normal 9.png](../assets/ThirdNormal9.png "Third Normal 9.png")
+![Third Normal 9.jpg](../assets/ThirdNormal9.jpg "Third Normal 9.jpg")
 
 What was originally one table when we started is now nine! With this method, you would be able to return simple requests (e.g. how many people are there) very efficiently while reducing a lot of the storage we saw earlier. But let’s take our example from before and ask which people are in Cincinnati. We would have to query the table of names for each person, the table that maps those people to the appropriate team, the table that maps teams to locations and the table of overall locations. If we also wanted to know how many people worked at Astronomer in Cincinnati, we’d have to bring in yet another table. This all drastically slows down your query performance and will cause your analyst to want to strangle you with an ethernet cord. While this atomic structure can make sense if application building, it’s too normalized for people who need to deftly maneuver around a large amount of complex data and experiment quickly.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 

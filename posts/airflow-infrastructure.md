@@ -2,7 +2,7 @@
 title: 'Airflow Design Principles: Multi-tenant vs. Monolithic Architecture'
 slug: airflow-infrastructure
 description: Why we decided that a multi-tenant Airflow architecture would be the most efficient and reliable way to run our DAGs.
-heroImagePath: ../assets/1533578390-theairflowuipreview.png
+heroImagePath: ../assets/1533578390-theairflowuipreview.jpg
 authors:
   - Viraj Parekh
   - Pete DeJoy
@@ -51,17 +51,17 @@ They have three Airflow deployments:
 2. An old deployment that handles some legacy workloads
 3. A reporting deployment for their Kairos rollups
 
-![dash](../assets/metarouter_dash.png)
+![dash](../assets/metarouter_dash.jpg)
 
 In the production deployment, each customer has their own DAG:
 
-![dash](../assets/metarouter_prod.png)
+![dash](../assets/metarouter_prod.jpg)
 
 The production deployment runs 5 beefy workers in a Kubernetes namespace with a pretty high resource quota. Note that everything runs in a Kubernetes pod directly on the cluster, while Airflow simply keeps state.
 
 However, the reporting instance runs much slimmer and only requires a small amount of resources to run efficiently:
 
-![dash](../assets/metarouter_kairos.png)
+![dash](../assets/metarouter_kairos.jpg)
 
 This keeps their set up nice and clean and allows us to iterate much faster (they'll also usually have one or two other environments where they are testing out new features) than we would be able to if everything ran on one massive Airflow deployment. In this case, we were able to migrate production DAGs from the "Old" environment (New-Booster-5133) to their new one (Dense-Wave-6085) without disturbing any of their reporting pipelines. This setup is also significantly more stable-it's not as big of a deal if internal reporting metrics go down for a few hours, but it's a huge problem if the production cluster isn't performing. Setting things up in a distributed way allows us to crank up resources on the business-critical deployment so that it's infinitely less likely to go dark.
 

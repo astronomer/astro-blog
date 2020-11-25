@@ -20,11 +20,11 @@ Our team has continued to build on our [last release](https://www.astronomer.io/
 
 Astronomer v0.3 brings improvements across the board, including optimizations to our CLI, authentication methods, monitoring stack, out-of-the-box security, scalability with Kubernetes, and a brand new UI for simplified deployment of multiple Airflow clusters with custom permission groups. 
 
-![1531895646-featurescalability.png](../assets/1531895646-featurescalability.png)
+![1531895646-featurescalability.jpg](../assets/1531895646-featurescalability.jpg)
 
 The latest release allows users to spin up multiple Airflow clusters anywhere Kubernetes runs, including both public clouds (AWS, GCP, Azure) and on-prem private clouds. It is designed to simplify the process of running and monitoring data workflows and clusters at scale, with high-availability and maximum security. Now, you can access and monitor Celery worker queues right in the new UI–and that's just the tip of the iceberg regarding our plans to improve Airflow monitoring.
 
-![1531896701-featuredeployments.png](../assets/1531896701-featuredeployments.png)
+![1531896701-featuredeployments.jpg](../assets/1531896701-featuredeployments.jpg)
 
 While this release allows our infrustructure to scale up to support larger organizations with many workflows and complex requirements, it also allows us to scale down to serve smaller teams (we can even run on a single-node Kubernetes cluster!). Astronomer v0.3 is designed to greatly reduce the time and effort required to get Airflow running in a stable and secure way, even at scale.
 
@@ -45,7 +45,7 @@ Astronomer relies exclusively on Kubernetes to provide maximum uptime and reliab
 #### Improved CLI.
 We drastically improved our authentication process for maximum security and usability, and made several additional improvements to our configuration process from start to finish. 
 
-![1531896597-featuredeveloper.png](../assets/1531896597-featuredeveloper.png)
+![1531896597-featuredeveloper.jpg](../assets/1531896597-featuredeveloper.jpg)
 
 ## Try it Out
 If you’re interested in exploring Astronomer, [request beta access v0.3](https://www.astronomer.io/#beta-request) on our website. If you have any questions or feedback, don’t hesitate to drop us an email at [humans@astronomer.io](mailto:humans@astronomer.io).

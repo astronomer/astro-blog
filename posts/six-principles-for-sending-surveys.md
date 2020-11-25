@@ -2,7 +2,7 @@
 title: Six Principles for Sending Surveys
 slug: six-principles-for-sending-surveys
 description: Here are some basic principles to keep in mind to collect data that is actually usable.
-heroImagePath: ../assets/surveysHeader@2x.png
+heroImagePath: ../assets/surveysHeader@2x.jpg
 authors:
   - Ben Gregory
 date: 2017-01-19T00:00:00.000Z

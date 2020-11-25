@@ -2,7 +2,7 @@
 title: Syncing MongoDB Collections with Amazon Redshift
 slug: syncing-mongodb-collections-with-redshift
 description: 'When it came time to scale up our reporting, we realized we were missing some crucial data. Good thing we built a connector between MongoDB and Redshift.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/blank.jpg
 authors:
   - Ben Gregory
 date: 2016-03-15T00:00:00.000Z

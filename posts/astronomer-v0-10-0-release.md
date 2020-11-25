@@ -2,7 +2,7 @@
 title: Astronomer v0.10
 slug: astronomer-v0-10-0-release
 description: Announcing v0.10 of the Astronomer platform.
-heroImagePath: ../assets/1567172549-v010c.png
+heroImagePath: ../assets/1567172549-v010c.jpg
 authors:
   - Pete DeJoy
 date: 2019-09-03T00:00:00.000Z

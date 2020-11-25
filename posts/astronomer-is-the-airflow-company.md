@@ -47,7 +47,7 @@ Please visit [our updated site](https://www.astronomer.io) and have a look aroun
 
 Thank you from all of us at Astronomer.
 
-<p><img src="https://astronomer.imgix.net/website/img/blog/2591/1526943687-rysig.png" alt="drawing" style="width: 200px;"/></p>
+<p><img src="https://astronomer.imgix.net/website/img/blog/2591/1526943687-rysig.jpg" alt="drawing" style="width: 200px;"/></p>
 
 Co-Founder & CEO Astronomer
 

@@ -2,7 +2,7 @@
 title: What I Learned From Analyzing 1700 Blog Posts (Part II)
 slug: what-i-learned-from-analyzing-1700-blog-posts-part-ii
 description: 'Part II of a series where we use common data extraction, analysis, and machine learning techniques to make our business smarter.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/blank.jpg
 authors:
   - Ben Gregory
 date: 2016-04-04T00:00:00.000Z
@@ -63,17 +63,17 @@ After our last post, a few people reached out to learn more about our process/to
 - With all the data in Redshift, I worked on it in-memory through R’s “RPostgreSQL” package. Just instantiate the driver, set standard credentials (e.g. host, port, dbname, user, pw), and start passing in standard SQL queries that you can store as separate dataframes.
 - To make the charts a little more interactive, I used the fantastic [Plot.ly](https://plot.ly/) R package, available on [CRAN](https://cran.r-project.org/web/packages/plotly/index.html) and [Github](https://github.com/ropensci/plotly). If you don’t know about Plot.ly already, I can’t recommend them highly enough. Their free-to-use libraries (Not just for R!) instantly speed up any work you’re doing. Quick example — by just wrapping a ggplot graph I made in ggplotly(), Plot.ly lets me zoom, pan, and preview values by hovering.
 
-![plotly_graphs.png](../assets/plotly_graphs.png "plotly\_graphs.png")
+![plotly_graphs.jpg](../assets/plotly_graphs.jpg "plotly\_graphs.jpg")
 
 Keywords, Keywords, Keywords
 
 The first endpoint from AlchemyAPI we used was Keyword Extraction. Depending on the length of the post, it’ll give you up to 50 top keywords with individual sentiment and relevancy scores. Overall? Pretty positive phrasing. Well, done people. Positive keywords are used almost 5:1 against negative keywords.
 
-![1-ccSfKUUyOxhXe1fAA3yFyw.png](../assets/1-ccSfKUUyOxhXe1fAA3yFyw.png "1-ccSfKUUyOxhXe1fAA3yFyw.png")
+![1-ccSfKUUyOxhXe1fAA3yFyw.jpg](../assets/1-ccSfKUUyOxhXe1fAA3yFyw.jpg "1-ccSfKUUyOxhXe1fAA3yFyw.jpg")
 
 Nice to have a basic understanding of the distribution but we can (and should) always get a little more granular. Using some basic GROUP BY commands to consolidate the most commonly used keywords by company and then a quick `plyr.arrange` in R to rank order them by frequency, we get the following:
 
-&nbsp; ![1-3Rz97-jPXhnS00TItMY9RQ.png](../assets/1-3Rz97-jPXhnS00TItMY9RQ.png "1-3Rz97-jPXhnS00TItMY9RQ.png")
+&nbsp; ![1-3Rz97-jPXhnS00TItMY9RQ.jpg](../assets/1-3Rz97-jPXhnS00TItMY9RQ.jpg "1-3Rz97-jPXhnS00TItMY9RQ.jpg")
 
 The above is the top 10 keywords used by one company. Generally, there aren’t any HUGE surprises here but it is interesting to see what they’re mentioning and how often. The real value of this will come into play as we track this list over time and begin to understand how it changes. What new technologies are suddenly getting mentioned? What product features are suddenly being highlighted as very important?
 
@@ -85,33 +85,33 @@ Beyond keyword inspection, we needed a more holistic view of the posts themselve
 
 It may surprise you but there are actually some posts (\<100) with an overall negative tone. The majority, however, fall on the positive side with a mostly normal distribution centered around 0.4–0.5.&nbsp;
 
-![sentiment_count.png](../assets/sentiment_count.png "sentiment\_count.png")
+![sentiment_count.jpg](../assets/sentiment_count.jpg "sentiment\_count.jpg")
 
 Breaking it down by company doesn’t really tell us anything further. Some skew to the more positive side than others but there is generally still a normal distribution around 0.4–0.5 and few negative posts.
 
-![sentiment_histogram.png](../assets/sentiment_histogram.png "sentiment\_histogram.png")&nbsp;
+![sentiment_histogram.jpg](../assets/sentiment_histogram.jpg "sentiment\_histogram.jpg")&nbsp;
 
 In the boxplots below, we can confirm that for most companies, the negative posts that exist are statistical outliers. For others…well, maybe focus on being a bit more positive.
 
-![1-zyizBC_mp6eFK1pJCMrI8g.png](../assets/1-zyizBC_mp6eFK1pJCMrI8g.png "1-zyizBC\_mp6eFK1pJCMrI8g.png")&nbsp;
+![1-zyizBC_mp6eFK1pJCMrI8g.jpg](../assets/1-zyizBC_mp6eFK1pJCMrI8g.jpg "1-zyizBC\_mp6eFK1pJCMrI8g.jpg")&nbsp;
 
 #### How about Readability?
 
 Now, we didn’t exclusively use Bluemix to perform this analysis. We also wanted to examine the readability of each post and, for that, all I needed was a Python package that implemented the ’[Flesch Reading-Ease](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)’ index. You can read more about it at the link I’ve provided. Essentially, as the average words per sentence and syllables per word increases, the lower the score becomes. The highest possible score is 120 (using a two-word sentence each with one syllable) with no theoretical lowest score (as some sentences can go on and on and on and on and you get the idea.) Any score lower than 50 is considered to be at or above college-level. Here’s the quick wiki-reference that we used:
 
-![1-FcgO5m2r4Cc1zRTKJ_-tyA.png](../assets/1-FcgO5m2r4Cc1zRTKJ_-tyA.png "1-FcgO5m2r4Cc1zRTKJ\_-tyA.png")&nbsp;
+![1-FcgO5m2r4Cc1zRTKJ_-tyA.jpg](../assets/1-FcgO5m2r4Cc1zRTKJ_-tyA.jpg "1-FcgO5m2r4Cc1zRTKJ\_-tyA.jpg")&nbsp;
 
 So across all posts, how difficult are these posts to read?
 
- &nbsp; ![1-Uxm8rfvU91NLXhsFkOvJxg.png](../assets/1-Uxm8rfvU91NLXhsFkOvJxg.png "1-Uxm8rfvU91NLXhsFkOvJxg.png") &nbsp; 
+ &nbsp; ![1-Uxm8rfvU91NLXhsFkOvJxg.jpg](../assets/1-Uxm8rfvU91NLXhsFkOvJxg.jpg "1-Uxm8rfvU91NLXhsFkOvJxg.jpg") &nbsp; 
 
 There is a fairly normal distribution in readability difficulty with a majority of posts falling in the “Fairly Difficult” category and overall slight skew to the left. Notice that there are no “Very Easy to Read” posts, suggesting that we’re all at least smarter than a 5th grader. Now, let’s break it down by company.
 
-![1-dTLnUVimUAOtHispsWeqgQ.png](../assets/1-dTLnUVimUAOtHispsWeqgQ.png "1-dTLnUVimUAOtHispsWeqgQ.png")
+![1-dTLnUVimUAOtHispsWeqgQ.jpg](../assets/1-dTLnUVimUAOtHispsWeqgQ.jpg "1-dTLnUVimUAOtHispsWeqgQ.jpg")
 
  This starts to get really interesting because we’re beginning to understand the complexity distribution across every competitor. Although readability has an overall normal distribution around “Fairly Difficult,” you can see some skew towards easier-to-read posts and some skew towards more difficult. In the boxplots below, we see how reliably each company posts in certain difficulty ranges. 
 
-![1-XbM2tRoKvt_aaTUM1e3MAA.png](../assets/1-XbM2tRoKvt_aaTUM1e3MAA.png "1-XbM2tRoKvt\_aaTUM1e3MAA.png")
+![1-XbM2tRoKvt_aaTUM1e3MAA.jpg](../assets/1-XbM2tRoKvt_aaTUM1e3MAA.jpg "1-XbM2tRoKvt\_aaTUM1e3MAA.jpg")
 
 The Social Vortex
 
@@ -125,15 +125,15 @@ _\*If you’re interested in learning more and having your team work faster thro
 
 What I’m trying to say is that good viz can help make insights much more pronounced. Case in point- what if I gave you a chart mapping the distribution of total shares by sentiment?
 
-![1-157-cMl73-6TUI5h57NsLQ.png](../assets/1-157-cMl73-6TUI5h57NsLQ.png "1-157-cMl73-6TUI5h57NsLQ.png")
+![1-157-cMl73-6TUI5h57NsLQ.jpg](../assets/1-157-cMl73-6TUI5h57NsLQ.jpg "1-157-cMl73-6TUI5h57NsLQ.jpg")
 
 And shares by readability?
 
-![1-QJbpiiWJp6TR7FAPoaLexQ.png](../assets/1-QJbpiiWJp6TR7FAPoaLexQ.png "1-QJbpiiWJp6TR7FAPoaLexQ.png")
+![1-QJbpiiWJp6TR7FAPoaLexQ.jpg](../assets/1-QJbpiiWJp6TR7FAPoaLexQ.jpg "1-QJbpiiWJp6TR7FAPoaLexQ.jpg")
 
 And what about readability by sentiment?
 
- &nbsp; ![1-U94tJI2Q1pe_rtp2C5F8Dw.png](../assets/1-U94tJI2Q1pe_rtp2C5F8Dw.png "1-U94tJI2Q1pe\_rtp2C5F8Dw.png") &nbsp; 
+ &nbsp; ![1-U94tJI2Q1pe_rtp2C5F8Dw.jpg](../assets/1-U94tJI2Q1pe_rtp2C5F8Dw.jpg "1-U94tJI2Q1pe\_rtp2C5F8Dw.jpg") &nbsp; 
 
 All somewhat interesting but these charts don’t tell us much by themselves. But what if I could combine all of these into one three-dimensional view?
 
@@ -147,7 +147,7 @@ Notice how when we view this in three dimensions that there seems to be a vortex
 
 What’s also interesting is that you can see a clear pattern of higher shares as readability increases (i.e. becomes easier.) Sharing begins rising around 35 — approximately college level — and peaks around 75, which corresponds to about a 7th grade reading level.
 
-![1-M636k-m42YKIaSV83h9uag.png](../assets/1-M636k-m42YKIaSV83h9uag.png "1-M636k-m42YKIaSV83h9uag.png")
+![1-M636k-m42YKIaSV83h9uag.jpg](../assets/1-M636k-m42YKIaSV83h9uag.jpg "1-M636k-m42YKIaSV83h9uag.jpg")
 
 Because there are many more less-frequently shared posts, it’s a bit difficult to see how this patterns holds for the entire distribution. The top posts are easy to see but what about the lower ones. Are these high ranking posts outliers? Let’s log transform total social shares to spread the distribution out more.
 

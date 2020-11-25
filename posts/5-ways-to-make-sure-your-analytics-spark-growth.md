@@ -69,15 +69,15 @@ Your process should look something like this:
 
 In the beginning, it’s wonderful:
 
-![1505694245-image-2.png](../assets/1505694245-image-2.png)
+![1505694245-image-2.jpg](../assets/1505694245-image-2.jpg)
 
 Then you add a couple more tools that your sales and marketing team asked for:
 
-![1505694267-image-3.png](../assets/1505694267-image-3.png)
+![1505694267-image-3.jpg](../assets/1505694267-image-3.jpg)
 
 And then one day, it looks like this:
 
-![1505694288-image-4.png](../assets/1505694288-image-4.png)
+![1505694288-image-4.jpg](../assets/1505694288-image-4.jpg)
 
 Data spaghetti sucks for all those involved. It leads to fragmentation, mistakes, data paralysis and the occasional engineering mutiny (as performance degrades beyond what any self-respecting developer will bear).
 
@@ -87,15 +87,15 @@ Analytics, push messaging, email, user testing and support tools all require pre
 
 It looks something like this:
 
-![1505694410-image-5.png](../assets/1505694410-image-5.png)
+![1505694410-image-5.jpg](../assets/1505694410-image-5.jpg)
 
 Much neater. Using a dispatcher lets you scale faster: you can start with one team (i.e. Product) who might require Mixpanel. Then suddenly your marketing team needs to send triggered personalized emails—you just flick a switch on the Astronomer dashboard:
 
-![1505694434-image-6.png](../assets/1505694434-image-6.png)
+![1505694434-image-6.jpg](../assets/1505694434-image-6.jpg)
 
 And:
 
-![1505694457-image-7.png](../assets/1505694457-image-7.png)
+![1505694457-image-7.jpg](../assets/1505694457-image-7.jpg)
 
 Congratulations, you just implemented a whole new tool and you’re pushing all your data to it without needing to disturb your engineer. If engineering does want to get involved, the news is good! Astronomer leverages [Apache Airflow](http://www.astronomer.io/blog/airflow-at-astronomer/) to define all workflows as code. So your team can modify, collaborate, port and extend anytime (using Astronomer’s custom pipes or building your own—it’s up to you). And you can repeat this again and again, for as many destinations as you need, as your teams grow and as their needs evolve.
 
@@ -133,7 +133,7 @@ Each has its advantages and disadvantages, so it really depends what you’re tr
 
 Here’s a flowchart to help you make the decision:
 
-![1505694551-image-8.png](../assets/1505694551-image-8.png)
+![1505694551-image-8.jpg](../assets/1505694551-image-8.jpg)
 
 ### In Summary
 

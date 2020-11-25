@@ -2,7 +2,7 @@
 title: 4 Pillars to Becoming Data Driven
 slug: 4-pillars-to-becoming-data-driven
 description: 'When I wanted to improve the health of my company, I took this approach: just get started.'
-heroImagePath: ../assets/wallpaper2560x1600b.png
+heroImagePath: ../assets/wallpaper2560x1600b.jpg
 authors:
   - R. Brad Kirn
 date: 2016-08-11T00:00:00.000Z
@@ -64,8 +64,8 @@ Our world is&nbsp;entering a Data Revolution, and [it’s time to get ready](htt
 
 _If you still have questions or wonder how Astronomer can help, email me at_ [_brad@astronomer.io_](mailto:brad@astronomer.io)_._
 
-![mobilewallpaper-1.png](../assets/mobilewallpaper-1.png)  
-[Download This Wallpaper](../assets/wallpaperiPhone6a-1.png)
+![mobilewallpaper-1.jpg](../assets/mobilewallpaper-1.jpg)  
+[Download This Wallpaper](../assets/wallpaperiPhone6a-1.jpg)
 
 &nbsp;
 

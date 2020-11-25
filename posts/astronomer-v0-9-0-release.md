@@ -42,7 +42,7 @@ You can now stream logs from your Airflow deployments directly to your terminal.
 
 We roped in a smarter default backend for NGINX that allows us to show custom error messages based on the errors getting returned from Airflow. For example, you'll no longer see a scary 503 if you try to access your Airflow deployment while it's still booting up.
 
-![error](../assets/error.png)
+![error](../assets/error.jpg)
 
 **6. Support for Okta Oauth Integration in Astronomer Enterprise**
 

@@ -2,7 +2,7 @@
 title: 'Every Great Startup''s Secret Sauce: Design'
 slug: every-great-startups-secret-sauce-design
 description: 'There’s a major trend happening in tech companies today: design teams are growing like mad. And there''s a very good reason.'
-heroImagePath: ../assets/headerB@2x.png
+heroImagePath: ../assets/headerB@2x.jpg
 authors:
   - Chris Hendrixson
 date: 2017-04-27T00:00:00.000Z
@@ -24,13 +24,13 @@ A [unicorn](https://en.wikipedia.org/wiki/Unicorn_(finance)) is a startup valued
 
 When it comes to companies who aren't valued over $1 billion, the sentiment around design is different. A lot fewer believe in the importance. Nearly all unicorns (88%) believe it is important to have a dedicated design team. Among non-unicorns, just&nbsp;56% agree.
 
-![designteamsA@2x.png](../assets/designteamsA@2x.png)
+![designteamsA@2x.jpg](../assets/designteamsA@2x.jpg)
 
 Unicorns also recognize the value of design across departments. Companies valued over $1 billion more strongly believe that design leads to higher sales and twice as many unicorns as non-unicorns believe that designs leads to higher customer retention.
 
 When it comes to investors, can design lead to a higher valuation? Startups that have raised more than $20 million can’t quite decide. They’re split 50/50. Unicorns, however, are more certain: 75% say “yes.”
 
-![valuationsA@2x.png](../assets/valuationsA@2x.png)
+![valuationsA@2x.jpg](../assets/valuationsA@2x.jpg)
 
 Are unicorns simply more mature — and therefore more enlightened — than other startups when it comes to design? And, if so, can less mature startups learn from them and start to make design more of a priority today? Yes!
 
@@ -38,7 +38,7 @@ But it’s also a bit more complicated than that.
 
 ### Great Design&nbsp;vs.&nbsp;The Startup Mentality
 
-![triumvirateA@2x.png](../assets/triumvirateA@2x.png)
+![triumvirateA@2x.jpg](../assets/triumvirateA@2x.jpg)
 
 As a young designer starting to pick up freelance jobs, I was often warned that most clients are looking for something cheap, fast and great. This is an impossible utopia. A project can be cheap and great but it won’t be fast. It can be fast and great, but it will require extra resources or an extraordinary effort and, therefore, will not be cheap.
 

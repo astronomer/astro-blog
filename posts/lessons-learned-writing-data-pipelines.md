@@ -24,7 +24,7 @@ There are over 300 databases. With such a vast number of options to store data, 
 
 Writing data pipelines that scale is really hard. Just because a data pipeline moves 10,000 rows of data from Mongo to Redshift with no problem does not mean the same thing will happen with 50 million rows (ever seen an ENOMEM error?). There are a lot of&nbsp;considerations to take into account when dealing with large volumes of data.
 
-![1-464650023924.png](../assets/1-464650023924.png)
+![1-464650023924.jpg](../assets/1-464650023924.jpg)
 
 I have been working at Astronomer as an integration engineer for a few months now, and I know firsthand how challenging data pipelines can be. I’ve learned a lot on the job and want to give you a peek under the hood of Astronomer at what makes our growing platform unique.
 

@@ -26,7 +26,7 @@ Aries wrapped up all the back and forth between an Amazon customer’s programs 
 
 So we&nbsp;set up an Elastic Beanstalk environment to host our decider, and another one where we would execute tasks. This kept the two services separated to reduce failures and allow them to be scaled independently. The worker nodes would long-poll the SWF service for tasks to execute. When one got a task, it ran it directly and reported the status back to the SWF service—and the cycle continues. This was exactly what we needed, at first.
 
-![chart1@2x.png](../assets/chart1@2x.png)
+![chart1@2x.jpg](../assets/chart1@2x.jpg)
 
 ### Oversimplified
 
@@ -44,7 +44,7 @@ Things were already looking good when we discovered a lone community contributed
 
 Now we had a plan: build up a Mesos cluster, run the Airflow service components in containers and delegate the tasks to run in containers on the cluster when it was time to do some work. So we packaged Airflow up into a Docker container and used Marathon to run the various components. Marathon is the Mesos framework that allows cluster operators to execute and scale long-running applications. Our Marathon application group consists of a Postgres database, the Airflow scheduler and the Airflow webserver. Marathon also keeps track of these services and will scale and restart them if they fail to start over.
 
-![chart2@2x.png](../assets/chart2@2x.png)
+![chart2@2x.jpg](../assets/chart2@2x.jpg)
 
 ### Astronomer Reloaded
 

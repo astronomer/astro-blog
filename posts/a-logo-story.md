@@ -2,7 +2,7 @@
 title: A Logo Story
 slug: a-logo-story
 description: 'Astronomer''s Head of Design, Chris Hendrixson, explains how he created the design aesthetic to encompass data, futurism, and a little bit of fun.'
-heroImagePath: ../assets/firstlogo.png
+heroImagePath: ../assets/firstlogo.jpg
 authors:
   - Chris Hendrixson
 date: 2016-03-17T00:00:00.000Z
@@ -34,9 +34,9 @@ The following images are in order of when I saved them, starting with Vermeer’
 
 ![aaaab.jpg](../assets/aaaab.jpg "aaaab.jpg")
 
-![aaaac.png](../assets/aaaac.png "aaaac.png")
+![aaaac.jpg](../assets/aaaac.jpg "aaaac.jpg")
 
-![aaaad.png](../assets/aaaad.png "aaaad.png")
+![aaaad.jpg](../assets/aaaad.jpg "aaaad.jpg")
 
 ![aaaae.jpg](../assets/aaaae.jpg "aaaae.jpg")
 
@@ -46,11 +46,11 @@ The following images are in order of when I saved them, starting with Vermeer’
 
 ![aaaah.jpg](../assets/aaaah.jpg "aaaah.jpg")
 
-![aaaai.png](../assets/aaaai.png "aaaai.png")
+![aaaai.jpg](../assets/aaaai.jpg "aaaai.jpg")
 
 ![aaaaj.jpg](../assets/aaaaj.jpg "aaaaj.jpg")
 
-![aaaak.png](../assets/aaaak.png "aaaak.png")
+![aaaak.jpg](../assets/aaaak.jpg "aaaak.jpg")
 
 **12:37 PM**
 
@@ -85,7 +85,7 @@ I figured that some, most even, would not immediately interpret the logo as_a vi
 
 I chose a font that I’d been using with vigor recently, called [Filmotype Fashion](https://www.myfonts.com%2Ffonts%2Ffilmotype%2Ffashion%2F). Its wide letters seemed the right choice for a word wrapping around a circle. It is a beautiful font, from a collection of outstanding display fonts from the 1950s, called [Filmotype](https://www.myfonts.com%2Ffoundry%2FFilmotype%2F).&nbsp;
 
-![](https://cdn-images-1.medium.com/max/800/1*g68boGDBi4DRvpVrfYb9RQ.png)
+![](https://cdn-images-1.medium.com/max/800/1*g68boGDBi4DRvpVrfYb9RQ.jpg)
 
 While one of my rules was to not focus too much on astronauts or space travel, [NASA’s Brand Guidelines Manual](https://www.flickr.com%2Fphotos%2Ftimgeorge%2Fsets%2F72157627210540947%2F), published in 1976, was a huge inspiration for the logo and visuals. With its retro look, Filmotype Fashion feels like it was plucked right from those pages.
 
@@ -103,7 +103,7 @@ I chose the secondary colors (orange, blue, gray and white) without profound for
 
 By the middle of the night I was still awake noodling around in Illustrator, an all-hours-of-the-night activity I do too often. Earlier in the evening I had mocked up the newly created logo for Astronomer’s Twitter page wherein I broke apart the word and telescope graphic to better fit horizontally inside the Twitter header image. I got rid of the “telescope” circle and sprinkled the stars (carefully, randomly) on either side of the word. I initially thought of this variation onlyas a secondary logo but soon it would become Astronomer’s primary logo. This was the first iteration that nearly resembles what we use today at Astronomer:
 
-![secondlogo.png](../assets/secondlogo.png "secondlogo.png")
+![secondlogo.jpg](../assets/secondlogo.jpg "secondlogo.jpg")
 
 And _that_ was the end of my first day at Astronomer.
 
@@ -157,7 +157,7 @@ The whimsy of colors and shapes in the HDF became a major piece of inspiration f
 
 About a week into the job, I presented a Keynote to the Astronomer team, the first of what came to be known as “Design Dailies.” I outlined the work I had done so far—basically, what I’ve shared with you so far in this blog post—and shared an updated version of the logo (in the middle below, alongside of the first version of the logo from _ **August 18, 2015** _ and the most recent version I’ve been using as of _ **March 16, 2016** _:
 
- &nbsp; ![allLogosC.png](../assets/allLogosC.png "allLogosC.png")&nbsp; &nbsp; 
+ &nbsp; ![allLogosC.jpg](../assets/allLogosC.jpg "allLogosC.jpg")&nbsp; &nbsp; 
 
 **Fun**
 
@@ -165,7 +165,7 @@ I always wanted the Astronomer logo to be fun. I latched onto this from the very
 
 &nbsp;
 
-![slackIcon2x.png](../assets/slackIcon2x.png "slackIcon2x.png")
+![slackIcon2x.jpg](../assets/slackIcon2x.jpg "slackIcon2x.jpg")
 
 > > _As I was starting to work on Astronomer’s logo and visuals last fall, [Slack](https://www.slack.com) was just coming on to the scene as an enterprise product both playful and robust. Slack remains a big inspiration for its simplicity, fun user experience, and, above all, its great utility as a team communication tool. Our team uses Slack all day, every day._
 

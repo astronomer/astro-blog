@@ -2,15 +2,15 @@
 title: A Great Expectations Provider for Apache Airflow
 slug: airflow-great-expectations
 description: We're pleased to announce an official integration that allows users to leverage Great Expectations natively in their DAGs.
-heroImagePath: ../assets/ge-blog.png
+heroImagePath: ../assets/ge-blog.jpg
 authors:
   - Pete DeJoy
 date: 2020-11-23T00:00:00.000Z
 ---
 
-<meta property="og:image" content="../assets/ge-blog.png" class="next-head">
-<meta property="twitter:image:src" content="../assets/ge-blog.png" class="next-head">
-<meta property="twitter:image:src" content="../assets/ge-blog.png" class="next-head">
+<meta property="og:image" content="../assets/ge-blog.jpg" class="next-head">
+<meta property="twitter:image:src" content="../assets/ge-blog.jpg" class="next-head">
+<meta property="twitter:image:src" content="../assets/ge-blog.jpg" class="next-head">
 
 
 ## A Short History of Airflow Providers

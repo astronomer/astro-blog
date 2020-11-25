@@ -16,7 +16,7 @@ Data pipeline as a term is pretty straightforward. It leverages a common occurre
 
 Let’s start with breaking down the acronym:
 
- ![Graphic1_2x.png](../assets/Graphic1_2x.png)  
+ ![Graphic1_2x.jpg](../assets/Graphic1_2x.jpg)  
 
 &nbsp;
 
@@ -30,7 +30,7 @@ Let's start with Graph. A graph in data engineering means a finite set of nodes 
 - Node E could be putting that data into a database.
 - Node F could be running a SQL query on the new tables to update a dashboard.
 
-![Graphic3_2x.png](../assets/Graphic3_2x.png)
+![Graphic3_2x.jpg](../assets/Graphic3_2x.jpg)
 
 Doesn’t really look like a pipe, does it? Tasks branch out and come back together with new inputs being brought in along the way. So why does the “data pipeline” moniker still roughly apply? That’s where Directed and Acyclic come in.
 
@@ -40,7 +40,7 @@ Notice that in addition to data moving in one direction, nodes never becomes sel
 
 If F had a “downstream” process (meaning something that comes after it) in the form of D, then we would see a graph like the below form where D informs E, which informs F, which informs D and so on and so forth. This creates a scenario where the pipeline could run indefinitely without ever ending. Like water that can’t ever make it to the faucet, this loop is a waste of data flow.
 
-![Graphic2_2x.png](../assets/Graphic2_2x.png)
+![Graphic2_2x.jpg](../assets/Graphic2_2x.jpg)
 
 And that’s pretty much it for DAGs! If you find yourself having a hard time remembering the finer details, just keep the following in mind:
 

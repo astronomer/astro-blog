@@ -2,7 +2,7 @@
 title: The Next Generation of Astronomer Cloud
 slug: new-cloud
 description: A new release of Astronomer Cloud built to support our latest features and designed to be a first step towards multi-cloud and multi-region support.
-heroImagePath: ../assets/1573693110-blognextgencloudb.png
+heroImagePath: ../assets/1573693110-blognextgencloudb.jpg
 authors:
   - Paola Peraza Calderon
 date: 2019-11-12T00:00:00.000Z
@@ -32,7 +32,7 @@ For more info, reference [Airflow’s v1.10.5 Changelog](https://github.com/apac
 
 With Astronomer Cloud, we've re-architected our Airflow + Astronomer logging stack for added observability and usability. For the first time as an Astronomer Cloud customer, you can search and filter your Scheduler, Webserver, and Worker logs from the Astronomer UI. Leverage these logs for informed, real-time troubleshooting and gain deeper exposure into Airflow’s internal processes.
 
-![Logging](../assets/new-cloud-logging.png)
+![Logging](../assets/new-cloud-logging.jpg)
 
 Check out our [logging doc](https://www.astronomer.io/docs/deployment-level-logs/) for a closer look at our new view.
 
@@ -40,7 +40,7 @@ Check out our [logging doc](https://www.astronomer.io/docs/deployment-level-logs
 
 Your deployment on Astronomer Cloud now comes with a dedicated Metrics tab for a birds-eye view of your deployment’s resource usage, the overall health of its components, and a real-time stream of task failures and successes.
 
-![Metrics](../assets/new-cloud-metrics.png)
+![Metrics](../assets/new-cloud-metrics.jpg)
 
 
 **Support for the KubernetesExecutor**
@@ -49,13 +49,13 @@ In a significant step towards making serverless Airflow a reality, we’ve added
 
 When you use the KubernetesExecutor on Astronomer, you'll be billed dynamically according to true CPU and Memory usage.
 
-![Configure](../assets/new-cloud-configure.png)
+![Configure](../assets/new-cloud-configure.jpg)
 
 **Role-Based Access Control at the Workspace Level**
 
 Astronomer Cloud is now fully integrated with Airflow’s native RBAC functionality. You can now assign users one of three granularly mapped roles and control the level of access they have to your deployments and Workspace-level settings. You can also apply these RBAC policies to Service Accounts at the Workspace level.
 
-![RBAC](../assets/new-cloud-rbac.png)
+![RBAC](../assets/new-cloud-rbac.jpg)
 
 For a detailed breakdown of roles, refer to our docs [here](https://www.astronomer.io/docs/rbac/).
 

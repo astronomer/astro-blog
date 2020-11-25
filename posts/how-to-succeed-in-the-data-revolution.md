@@ -2,7 +2,7 @@
 title: How to Succeed in the Data Revolution
 slug: how-to-succeed-in-the-data-revolution
 description: 'Organizations of all sizes in every industry are uncovering groundbreaking, data-driven insights and are putting data to extraordinary uses.'
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/blank.jpg
 authors:
   - Ry Walker
 date: 2016-06-22T00:00:00.000Z
@@ -44,7 +44,7 @@ _If you answered yes 4 or 5 times, congratulations, you’ve likely moved to mor
 4. **Establish an accountability mechanism** where this new team regularly reports to the entire organization. Ask them to list every potential data source/silo, and to report what percentage of the _potential_ _value_ of that data they’ve captured for the organization.
 5. **Challenge the data team to seek external data** , not only relying on internal data. Winners in the Data Revolution will push themselves to use data in innovative ways and will engage in data collaboration projects with external parties.
 6. Track your [DETLT metric](https://medium.com/the-astronomer-journey/how-to-measure-data-drivenness-7bd027e63da3#.x0lswsod6) ( **D** aily **ETL**  **T** asks). It’s simple: how many ETL jobs has your organization automated to run each day? ETL jobs create value. Used correctly, they generate **information** from **raw data** , which is the first step towards obtaining **insights** from raw data. Automating this value creation should be a key goal.&nbsp;
- ![blog_data_utilization.png](../assets/blog_data_utilization.png?noresize "blog\_data\_utilization.png")_Your accountability report could look something like this. Expect data sources to grow._
+ ![blog_data_utilization.jpg](../assets/blog_data_utilization.jpg?noresize "blog\_data\_utilization.jpg")_Your accountability report could look something like this. Expect data sources to grow._
 
 &nbsp;
 

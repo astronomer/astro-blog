@@ -2,7 +2,7 @@
 title: Why Airflow?
 slug: why-airflow
 description: 'Airflow continues to win due to an active and expanding community, and very deep, proven functionality.'
-heroImagePath: ../assets/1573246544-screen-shot-2019-11-08-at-3-55-29-pm.png
+heroImagePath: ../assets/1573246544-screen-shot-2019-11-08-at-3-55-29-pm.jpg
 authors:
   - Ry Walker
 date: 2019-12-03T00:00:00.000Z
@@ -20,15 +20,15 @@ As a result, thousands of companies — including Fortune 500s, tech giants, and
 The Airflow community is strong, healthy, and vibrant, with over 1,000 code contributors — and growing at a healthy pace.
 
 
-![1573238242-screen-shot-2019-11-08-at-1-35-26-pm.png](../assets/1573238242-screen-shot-2019-11-08-at-1-35-26-pm.png)
+![1573238242-screen-shot-2019-11-08-at-1-35-26-pm.jpg](../assets/1573238242-screen-shot-2019-11-08-at-1-35-26-pm.jpg)
 
 The velocity of Github stars for Airflow [continues to accelerate](https://star-history.t9t.io/#apache/airflow).
 
-![1575383573-screen-shot-2019-12-03-at-9-32-20-am.png](../assets/1575383573-screen-shot-2019-12-03-at-9-32-20-am.png)
+![1575383573-screen-shot-2019-12-03-at-9-32-20-am.jpg](../assets/1575383573-screen-shot-2019-12-03-at-9-32-20-am.jpg)
 
 And as Airflow approaches a Version 2 release, the project has entered a second golden age of productivity in the past three quarters, eclipsing the number of commits from even the early days when the first generation of project developers Maxime, Bolke, Jeremiah, Chris, Sid and Arthur were building it out.
 
-![1573238254-screen-shot-2019-11-08-at-1-36-30-pm.png](../assets/1573238254-screen-shot-2019-11-08-at-1-36-30-pm.png)
+![1573238254-screen-shot-2019-11-08-at-1-36-30-pm.jpg](../assets/1573238254-screen-shot-2019-11-08-at-1-36-30-pm.jpg)
 
 The Airflow project was already gaining momentum in 2018 thanks to open-source activities in companies like Airbnb, Lyft, Twitter, Glassdoor, and [many, many others](https://github.com/apache/airflow#who-uses-apache-airflow). 
 

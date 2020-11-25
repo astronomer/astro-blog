@@ -2,7 +2,7 @@
 title: 'Remote Working Guide: Denver'
 slug: remote-working-guide-denver
 description: 'This is the first of a series of Remote Working Guides in our favorite cities to work in, outside of Astronomer’s hometown, Cincinnati.'
-heroImagePath: ../assets/title.png
+heroImagePath: ../assets/title.jpg
 authors:
   - Chris Hendrixson
 date: 2016-10-19T00:00:00.000Z
@@ -14,7 +14,7 @@ date: 2016-10-19T00:00:00.000Z
 
 At the Global Leadership Summit in London recently, 1 in 3 business leaders predicted that a majority of their full-time workforce will be [working remotely by 2020](https://www.fastcompany.com/3034286/the-future-of-work/will-half-of-people-be-working-remotely-by-2020). We’re living in an increasingly mobile world, aren’t we? Aside from the fact that we have supercomputers in our pockets, laptops are thinner, lighter and more powerful than ever. My entire hard drive is in the cloud, to boot. As a graphic designer, I used to dream of the Apple G5 tower with multiple monitors and stacks of hard drives to store all my stuff. Now, I’m happier than ever with nothing but my Macbook and [Topo](https://topodesigns.com/collections/bags/products/trip-pack) backpack.
 
- _![digital-nomad-gear-by-dan-dragomir2x.png](../assets/digital-nomad-gear-by-dan-dragomir2x.png)_
+ _![digital-nomad-gear-by-dan-dragomir2x.jpg](../assets/digital-nomad-gear-by-dan-dragomir2x.jpg)_
 
 _To see this and more of Dan’s work, check him out on_ [_dribbble_](https://dribbble.com/DanDragomir)_._
 
@@ -26,7 +26,7 @@ Personally, I try to get to Denver whenever I can. It is, by all accounts, a cit
 
 One of the biggest challenges about working in a new city, however, is figuring out how to maximize productivity. As a team, we decided to share ways we are&nbsp;successful in different cities by drafting up “remote working guides.” Then, we thought, with the rise of remote working in general, why not share it? I agreed to take on our inaugural guide during my most recent trip.
 
-![denvermapA2x.png](../assets/denvermapA2x.png)_Read the story behind this cool map of Denver by Raybo Design_ [_here_](https://raybodesign.wordpress.com/2012/01/30/map-of-denver-co/)_._
+![denvermapA2x.jpg](../assets/denvermapA2x.jpg)_Read the story behind this cool map of Denver by Raybo Design_ [_here_](https://raybodesign.wordpress.com/2012/01/30/map-of-denver-co/)_._
 
 So, when I arrived in Denver, I started searching Google for [“best coffee shops to work denver.”](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=bestcoffeeshopstoworkdenver) I found a bunch of articles, blogs and lists but only some were helpful. Many were outdated or featured way too many places to convey any real sense of curation. After much sifting and a lot of cross referencing, I began to notice a few places that tended to make the lists. I stockpiled some favorites in Google Maps and on Monday morning, I started at Black Eye Coffee, but I’ll get to all that.
 
@@ -48,7 +48,7 @@ The newest line opened in April 2016 and connects Denver International Airport t
 
 Nearly 90,000 visitors and locals ride the light rail everyday, and new lines are being built as I'm typing this. There are numerous expansion routes planned via the multibillion dollar [FasTracks](https://en.wikipedia.org/wiki/FasTracks) project, including a rail to Boulder, which is about 30 miles northwest of Denver. The Boulder expansion is planned for completion in 2044, which I find equally&nbsp;perplexing and amusing.
 
-![light_rail.png](../assets/light_rail.png)
+![light_rail.jpg](../assets/light_rail.jpg)
 
 My advice? Ride the light rail as much as possible! It’s convenient, [cheap](https://www.rtd-denver.com/Fares.shtml) ($5–$9 for an unlimited day pass) and can get you to downtown Denver from almost anywhere in the area.
 

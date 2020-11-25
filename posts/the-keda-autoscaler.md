@@ -2,7 +2,7 @@
 title: Introducing KEDA for Airflow
 slug: the-keda-autoscaler
 description: 'Using KEDA (Kubernetes Event-Driven Autoscaler), we''ve developed a robust method to scale Apache Airflow workers to be faster and more versatile than any previous architecture.'
-heroImagePath: ../assets/1584386412-kedaa.png
+heroImagePath: ../assets/1584386412-kedaa.jpg
 authors:
   - Daniel Imberman
 date: 2020-03-17T00:00:00.000Z

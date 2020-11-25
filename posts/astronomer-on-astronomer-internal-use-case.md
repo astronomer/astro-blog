@@ -2,7 +2,7 @@
 title: 'Astronomer on Astronomer: Loading Thousands of Files into Redshift with Apache Airflow'
 slug: astronomer-on-astronomer-internal-use-case
 description: 'Here''s the story of why we chose Airflow, how we use it, what we''ve learned, and what we''re building to make it better. '
-heroImagePath: ../assets/1537239957-astronomerairflows3-to-redshift-dagblog.png
+heroImagePath: ../assets/1537239957-astronomerairflows3-to-redshift-dagblog.jpg
 authors:
   - Paola Peraza Calderon
   - Robert Hwang
@@ -81,7 +81,7 @@ Every customer receives their own Clickstream DAG, which consists of tasks for e
 **3. From S3, events are finally loaded onto Redshift, each event into its own table with the necessary complementary information**
 
 
-![1537239957-astronomerairflows3-to-redshift-dagblog.png](../assets/1537239957-astronomerairflows3-to-redshift-dagblog.png)
+![1537239957-astronomerairflows3-to-redshift-dagblog.jpg](../assets/1537239957-astronomerairflows3-to-redshift-dagblog.jpg)
 
 In order for an event to be fully processed, it must successfully pass through two Airflow tasks - a Sensor Operator and a Docker Operator using the Databricks Redshift Loader (this is entirely for performance reasons, but there is an operator in Airflow to push data from S3 to Redshift). The sensor operator is designed to check a specified S3 bucket for a key given a timestamp. If a key is found (i.e. a user has hit “Add to Cart” in a mobile app), the downstream Docker operator is triggered to load data into Redshift. Every task will run in a separate Docker container, which is dynamically allocated resources from a DC/OS cluster, preventing unnecessary upkeep costs. 
 ### How we optimized Airflow to fit our needs
@@ -104,7 +104,7 @@ By running our jobs in Kubernetes Pods instead of Docker containers, we were abl
 **3. Kubernetes native monitoring with Prometheus**
 Airflow comes with some great built-in alerting tools for jobs, but there's not much for the Airflow instance itself. As described above, we scheduled automatic scheduler restarts and other preventative measures to prevent silent failures. The new Metarouter Loader runs with a Prometheus [side car pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) that pushes metrics to Grafana dashboards to give us some "single pane" views and platform level alerting. Furthermore, Kubernetes healthchecks gave us a much higher level of stability.
 
-![Grafana Dashboard](../assets/grafana-dashboard.png)
+![Grafana Dashboard](../assets/grafana-dashboard.jpg)
 ## Part V: Future Vision
 
 Apache Airflow is still very much in active development, and new features and updates are being rolled out consistently. We’re dedicated to not only building out features on our platform to offer a better managed Airflow, but also actively contributing back to the open source Airflow community. While Airflow is a powerful DevOps tool that streamlines much of the process of setting up a highly scalable data infrastructure, it has its own quirks and shortcomings. We’ve learned a lot about how to best configure Airflow from using it internally and developing a managed platform, so there’s a lot on our radar in terms of future direction. We keep an updated product roadmap [here]

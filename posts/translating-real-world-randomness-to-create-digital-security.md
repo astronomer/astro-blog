@@ -30,7 +30,7 @@ If you don’t feel like doing it yourself, I got you covered below. Since I don
 
 The red candy was created by me trying to be as random as possible and the green candy shows the results of flipping a piece of candy 25 times:
 
-![Candy.png](../assets/Candy.png)
+![Candy.jpg](../assets/Candy.jpg)
 
 While 25 flips is not enough to truly tell if something is random, it can still illustrate the differences between the two methods. When we attempt to emulate randomness, [we tend to avoid repetition and tend to repeat groups of characters](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.211.9085). This is noticeable within the red candy where there is a heavy amount of single runs that are back-to-back and never longer than 4 candies. Comparing this to the green candy, where there is a run of 8 candies and only an occurrence of 1 run back-to-back with another.
 
@@ -70,7 +70,7 @@ Since we are using 52 playing cards, we can use the 26-letter alphabet to encode
 
 Here is an example of a cipher you can use to create your random passcode. You can change any of the details you want as long as you make sure that each card has it’s own specific letter:
 
-![Cipher.png](../assets/Cipher.png)
+![Cipher.jpg](../assets/Cipher.jpg)
 
 Using this cipher, I laid out a newly- and thoroughly-shuffled deck of cards and got this new passcode: FvXpuaYNwTZNDQgAqrJonWHxPIvpcyFRjlasbtdGXLhEKiSOuYVm.
 

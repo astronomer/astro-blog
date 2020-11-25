@@ -64,7 +64,7 @@ And of course, every season is full of surprises—that’s what makes the game 
 
 In honor of speculating, let’s take a quick look at my 2015-2016 NBA MVP pick’s ridiculous efficiency from last year. Huge shoutout to [Plotly](https://plot.ly) for their incredible visualization library and great email tutorials:
 
-[![](https://plot.ly/~virajparekh94/32.png)](https://plot.ly/~virajparekh94/32/)
+[![](https://plot.ly/~virajparekh94/32.jpg)](https://plot.ly/~virajparekh94/32/)
 
 _\*With the league taking more 3-pointers than ever before, the organization with [the best analytics in the league](https://digit.hbs.org/submission/san-antonio-spurs-data-driven-approach-to-win-games/), the Spurs, found that team defensive schemes were built towards defending 3s and shots in the paint, both of which are more "efficient" than mid-range 2-pointers (shooting 40% from 3 is roughly equivalent to shooting 60% from 2).&nbsp;The Spurs exploited this, realizing that opposing defensive schemes allowed for high percentage mid-range shots, which was a big part of Kawhi’s success._
 

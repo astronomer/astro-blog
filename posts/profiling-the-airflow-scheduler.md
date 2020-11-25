@@ -2,7 +2,7 @@
 title: Profiling the Airflow Scheduler
 slug: profiling-the-airflow-scheduler
 description: 'Ash explains how he''s been benchmarking and profiling the Airflow scheduler using py-spy and Flame Graphs. '
-heroImagePath: ../assets/1575580690-flamegraphicsa.png
+heroImagePath: ../assets/1575580690-flamegraphicsa.jpg
 authors:
   - Ash Berlin-Taylor
 date: 2019-12-05T00:00:00.000Z
@@ -202,7 +202,7 @@ This is looking more promising and interesting:
 
 It isn’t immediately obvious just from looking, but by using the interactive search function, something pops out. If I highlight the search term “compiler,” it becomes much clearer:
 
-[![Flamegraph of SchedulerJob.process_file with 23% of time speant in "compiler"](https://astronomer.imgix.net/website/img/blog/2591/1573845258-flame-airflow-schedulerjob-processfile-hlcompiler.png)](https://astronomer.imgix.net/website/img/blog/2591/1573845245-flame-airflow-schedulerjob-processfile.svg?compiler)
+[![Flamegraph of SchedulerJob.process_file with 23% of time speant in "compiler"](https://astronomer.imgix.net/website/img/blog/2591/1573845258-flame-airflow-schedulerjob-processfile-hlcompiler.jpg)](https://astronomer.imgix.net/website/img/blog/2591/1573845245-flame-airflow-schedulerjob-processfile.svg?compiler)
 
 All of that time is spent building SQL strings, not running the queries and not sending network requires.
 

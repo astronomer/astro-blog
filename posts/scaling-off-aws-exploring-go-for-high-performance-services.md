@@ -2,7 +2,7 @@
 title: 'Scaling off AWS: Exploring Go for High Performance Services'
 slug: scaling-off-aws-exploring-go-for-high-performance-services
 description: 'To handle an arbitrarily large number of requests, we need a language built for maximum concurrency and performance. We think that language could be Go. '
-heroImagePath: ../assets/goapiHeaderA@2x.png
+heroImagePath: ../assets/goapiHeaderA@2x.jpg
 authors:
   - Mike Perry
 date: 2017-02-08T00:00:00.000Z
@@ -42,7 +42,7 @@ This isn’t meant to be a full fledged tutorial on writing server apps in Node 
 
 Let’s see some code. First, let’s take a look at the Node.js version. We’ll discuss what’s going on below.
 
- ![Screen Shot 2017-02-07 at 8.24.37 AM.png](../assets/ScreenShot2017-02-07at8.24.37AM.png) ![Screen Shot 2017-02-07 at 8.24.55 AM.png](../assets/ScreenShot2017-02-07at8.24.55AM.png)
+ ![Screen Shot 2017-02-07 at 8.24.37 AM.jpg](../assets/ScreenShot2017-02-07at8.24.37AM.jpg) ![Screen Shot 2017-02-07 at 8.24.55 AM.jpg](../assets/ScreenShot2017-02-07at8.24.55AM.jpg)
 #### &nbsp;
 
 #### Server.js: Node.js Implementation
@@ -59,9 +59,9 @@ Using Node.js, we were able to write 42 lines of code to meet our minimal requir
 
 Next stop, Go. We ended up writing two files here, just to separate some of the logic needed to put records to Kinesis. So there’s a bit more code, and therefore more to discuss, but the idea is the still the same.
 
-![Screen Shot 2017-02-07 at 8.32.08 AM.png](../assets/ScreenShot2017-02-07at8.32.08AM.png)
+![Screen Shot 2017-02-07 at 8.32.08 AM.jpg](../assets/ScreenShot2017-02-07at8.32.08AM.jpg)
 
-![Screen Shot 2017-02-07 at 8.32.18 AM.png](../assets/ScreenShot2017-02-07at8.32.18AM.png)
+![Screen Shot 2017-02-07 at 8.32.18 AM.jpg](../assets/ScreenShot2017-02-07at8.32.18AM.jpg)
 
 #### aws/aws.go: Go Implementation
 
@@ -76,7 +76,7 @@ Let’s break this down again.
 
 Now that we have a helper function for putting data to Kinesis, we can focus on the web server. This part is the most similar to what we discussed above for the Node.js version.
 
-![Screen Shot 2017-02-07 at 8.37.55 AM.png](../assets/ScreenShot2017-02-07at8.37.55AM.png) ![Screen Shot 2017-02-07 at 8.38.17 AM.png](../assets/ScreenShot2017-02-07at8.38.17AM.png)
+![Screen Shot 2017-02-07 at 8.37.55 AM.jpg](../assets/ScreenShot2017-02-07at8.37.55AM.jpg) ![Screen Shot 2017-02-07 at 8.38.17 AM.jpg](../assets/ScreenShot2017-02-07at8.38.17AM.jpg)
 
 #### main.go: Go Implementation
 
@@ -104,7 +104,7 @@ I’m actually going to say that one more time: benchmarks are tough. This is in
 
 To simulate load against both servers, we used [Apache JMeter](https://jmeter.apache.org/). JMeter bills itself as “a 100% pure Java application designed to load test functional behavior and measure performance.” I won’t go into too much detail on using JMeter, but I’ll include the test plans I made with it at the end of this post. In short, JMeter allows you to spawn many concurrent threads (or users), each of which can interface with the system under test. In our case, we ran multiple tests against each server with 1 user (for a baseline), 50 users, 500 users, and 1000 users. In addition to the number of users, JMeter allows you to specify the ramp time, or the time it takes for all specified threads to become active. In the case where we ran the test with a single user, a ramp time of 0 seconds was used. For all other tests, a ramp time corresponding to 1/10th of the number of users was used. For the duration of the test, each “user” made an HTTP request equivalent to the following curl command:
 
-![Screen Shot 2017-02-07 at 8.45.28 AM-1.png](../assets/ScreenShot2017-02-07at8.45.28AM-1.png)
+![Screen Shot 2017-02-07 at 8.45.28 AM-1.jpg](../assets/ScreenShot2017-02-07at8.45.28AM-1.jpg)
 
 The body of this request (the value specified after the -d) is an example of what a single event looks like when tracked from one of our many sdks.&nbsp;
 
@@ -134,19 +134,19 @@ In hindsight, I didn’t need anywhere near this much horsepower for these tests
 
 As we mentioned above, we ran this test multiple times with varying numbers of users (threads). For each variation, we ran the test 3 times. In order to get a baseline, we first ran the tests against both servers with a single user with a ramp time of 0 seconds. For each test, we were interested in seeing what &nbsp; was (typically, I’d use median or percentile, but I'm really only using it to see the patterns that emerge when running two similar implementations under load). The graph below compares the results of the Node.js and Go versions for all three tests.
 
-![Picture1-3.png](../assets/Picture1-3.png)_Figure 1: 1 user, 0 Second ramp up time_
+![Picture1-3.jpg](../assets/Picture1-3.jpg)_Figure 1: 1 user, 0 Second ramp up time_
 
 What’s interesting about this first test is that in the first run, the Node.js version was drastically slower than the Go version to respond. However, in the final two runs, the Node.js version was slightly faster.&nbsp;
 
 Alright, so we have a one user baseline out of the way. Now let’s add some more users and see what happens. For the second test, recall that we used 50 users with a ramp up time of 5 seconds (ramp up time is the time it takes for all users to become active).
 
-![Picture2.png](../assets/Picture2.png)_Figure 2: 50 users, 5 second ramp up time_
+![Picture2.jpg](../assets/Picture2.jpg)_Figure 2: 50 users, 5 second ramp up time_
 
 Here we start to see that performance we’ve heard from so many others. Node.js is still performing very well, but the Go version is able to process and respond a whole lot more quickly. From here on out, the pattern is pretty consistent in these tests so I’ll just leave the remaining results below. In every case, Go is simply better suited at handling the increasing load.
 
-![Picture3.png](../assets/Picture3.png)_Figure 3: 500 users, 50 second ramp up time_
+![Picture3.jpg](../assets/Picture3.jpg)_Figure 3: 500 users, 50 second ramp up time_
 
-![Picture4.png](../assets/Picture4.png)_Figure 4: 1000 users, 100 second ramp up time_
+![Picture4.jpg](../assets/Picture4.jpg)_Figure 4: 1000 users, 100 second ramp up time_
 
 What can we infer about these results? Again, this alone is not a definitive enough answer to prove that one language is faster than other. But by running this test multiple times with an increasing amount of load, patterns start to emerge. It’s the pattern that we’re most concerned with, rather than the actual numbers themselves. Our tests show us that Go is able to consistently process requests in nearly half the time as the Node.js version, regardless of the number of the requests we throw at it.
 

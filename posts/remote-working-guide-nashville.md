@@ -65,7 +65,7 @@ He’s right, describing Pinewood Social is tricky. The space seeks to “accomm
 
 **Double bonus** : If you’re in Nashville on a second Saturday, see a laser show at [Sudekum Planetarium](https://www.adventuresci.org/events/event/second-saturday-3/). (It’s also a great way to celebrate a 21st birthday.) Here's&nbsp;the sweet tracklist that some of us experienced:
 
- ![pasted_image_at_2016_11_12_06_51_pm.png](../assets/pasted_image_at_2016_11_12_06_51_pm.png)
+ ![pasted_image_at_2016_11_12_06_51_pm.jpg](../assets/pasted_image_at_2016_11_12_06_51_pm.jpg)
 
 _Photo cred: Becky_
 
@@ -79,7 +79,7 @@ We’re not sure if Fido is a coffee shop or a restaurant, but [they’re okay w
 
 ![ci-nashville-convention-and-visitors-corp-fidos-hillsboro-village.jpg.rend.hgtvcom.1280.640.jpeg](../assets/ci-nashville-convention-and-visitors-corp-fidos-hillsboro-village.jpg.rend.hgtvcom.1280.640.jpeg)_Photo cred: [Great American Country](https://www.greatamericancountry.com/places/local-life/nashville-essentials)_
 
-“Fido is a huge place with a ton of seating,” says Head of Design, Chris. “It’s also in a very cool strip of Nashville on 21st Ave near Vanderbilt University, featuring a lot of restaurants and boutiques. You &nbsp;get the sense that it’s been a Nashville staple for a long time. Plus, they have a full breakfast, lunch and dinner menu and are open until 11pm 7 days a week for some late night work.”&nbsp; ![Screen Shot 2017-01-09 at 8.59.50 AM.png](../assets/ScreenShot2017-01-09at8.59.50AM.png)
+“Fido is a huge place with a ton of seating,” says Head of Design, Chris. “It’s also in a very cool strip of Nashville on 21st Ave near Vanderbilt University, featuring a lot of restaurants and boutiques. You &nbsp;get the sense that it’s been a Nashville staple for a long time. Plus, they have a full breakfast, lunch and dinner menu and are open until 11pm 7 days a week for some late night work.”&nbsp; ![Screen Shot 2017-01-09 at 8.59.50 AM.jpg](../assets/ScreenShot2017-01-09at8.59.50AM.jpg)
 
 **Bonus tip from Ben** : Need a break? Drive or Uber 8 minutes further west to visit the [Parthenon](https://en.wikipedia.org/wiki/Parthenon_(Nashville)), the only full-size replica of the original from Athens in the world. Oh, and there’s a 50-foot-tall gold plated statue of Athena inside.
 

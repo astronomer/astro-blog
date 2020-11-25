@@ -46,7 +46,7 @@ Day one, this became our go-to. It’s got an old, eclectic, almost-hippie feel.
 
 **Bonus tip:** Since it doesn’t open until 11am anyway, start the work day at your Airbnb/hotel, then pause for breakfast at [The Laundromat Cafe](https://www.thelaundromatcafe.com/en/home), whose shelves of color-coded books and friendly menu make you fall in love with the city instantly.
 
-![Laundromat Cafe.png](../assets/LaundromatCafe.png "Laundromat Cafe.png")
+![Laundromat Cafe.jpg](../assets/LaundromatCafe.jpg "Laundromat Cafe.jpg")
 
 #### 2. C is for Cookie
 

@@ -2,7 +2,7 @@
 title: Five Ways to Lead Well
 slug: five-ways-to-lead-well
 description: 'Leading is hard, even if you know all the right ways to do it. Here are five ways to lead in your organization.'
-heroImagePath: ../assets/leadwellHeaderB@2x.png
+heroImagePath: ../assets/leadwellHeaderB@2x.jpg
 authors:
   - Andy Ruberg
 date: 2017-03-14T00:00:00.000Z
@@ -30,7 +30,7 @@ Then write it down. Track progress against it. And build your team to crush it. 
 
 As a leader, demonstrating this same commitment and resolve is critical as it will rub off on your team and together, you’ll start to raise the water. That will allow you to execute another important ideal:
 
- ![boss-vs-leader-800x800.png](../assets/boss-vs-leader-800x800.png)
+ ![boss-vs-leader-800x800.jpg](../assets/boss-vs-leader-800x800.jpg)
 
 _\*From [Modern Servant Leader](https://modernservantleader.com/servant-leadership/bad-boss-vs-good-leader-image/)_
 

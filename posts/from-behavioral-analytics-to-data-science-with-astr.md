@@ -43,7 +43,7 @@ You can think of us like a platform with multiple applications on top, which mea
 
 *Here's a sneak peek at our command center interface: *
 
-![1508860921-adminclickstream2aag-2x.png](../assets/1508860921-adminclickstream2aag-2x.png)
+![1508860921-adminclickstream2aag-2x.jpg](../assets/1508860921-adminclickstream2aag-2x.jpg)
 
 So while we’re currently a great alternative for someone like Segment, we’re built for so much more. And as we grow into more of a data engineering platform, we’ll continue focus on whatever our customers need. It might be building out hundreds of clickstream integrations, but it also might be focused on operationalizing a vendor-neutral data warehouse or streaming third party data to a private data lake. It’s all about being agile enough to give our customers what they need to be agile. 
 

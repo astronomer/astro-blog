@@ -2,7 +2,7 @@
 title: 5 JavaScript Tools to go from Developer to Data Scientist
 slug: 5-javascript-tools-to-go-from-developer-to-data-scientist
 description: What if data science could be done in one ubiquitous language – one that is already often being used in the current data stack for data visualization?
-heroImagePath: ../assets/5javascripttools_2x.png
+heroImagePath: ../assets/5javascripttools_2x.jpg
 authors:
   - Ben Gregory
 date: 2016-05-10T00:00:00.000Z
@@ -12,11 +12,11 @@ In 2011, the consulting firm McKinsey & Co caught headlines when they predicted 
 
 We’ll dive into why this skill gap is occurring in a second. But first, let’s jump back to 2011. Or rather, to December 2010 when Drew Conway and John Myles White [published their analysis](https://www.dataists.com/2010/12/ranking-the-popularity-of-programming-langauges/) on the relative number of Github repositories and StackOverflow questions to assess relative “popularity” among programming languages. Their analysis produced three key insights, the most interesting for our purposes being that language popularity is tiered. At the far right, some “super popular” languages lean more heavily toward the StackOverflow side (C#, Java, PHP, C++) and others toward Github (Perl, Ruby) but generally they all cluster together with JavaScript being the “most popular” by this metric.
 
-![rank_scatter1.png](../assets/rank_scatter1.png "rank\_scatter1.png")
+![rank_scatter1.jpg](../assets/rank_scatter1.jpg "rank\_scatter1.jpg")
 
 Fast forward to today and how this has changed. To find that, we look towards the fine people at [RedMonk](https://redmonk.com/) who have kept the project going. The below represents language rankings as they stood in January 2016.
 
-![lang-rank-944px-wm-1.png](../assets/lang-rank-944px-wm-1.png "lang-rank-944px-wm-1.png")
+![lang-rank-944px-wm-1.jpg](../assets/lang-rank-944px-wm-1.jpg "lang-rank-944px-wm-1.jpg")
 
 Notice anything interesting about the two charts made almost exactly five years apart? Well, it’s neat to see where some newer languages have landed (Julia is growing fast!), and it’s always amazing to see that someone out there is still using FORTRAN nearly 60 years after it was created. But to us as a full-stack JavaScript company, what’s most interesting is that JavaScript is still on top and, really, this makes a lot of sense as we'll soon see.
 

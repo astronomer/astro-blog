@@ -2,16 +2,16 @@
 title: Introducing Airflow 2.0
 slug: introducing-airflow-2-0
 description: 'A breakdown of the major features incorporated in Apache Airflow 2.0, including a refactored, highly-available Scheduler, over 30 UI/UX improvements, a new REST API and much more.'
-heroImagePath: ../assets/airflow-2.png
+heroImagePath: ../assets/airflow-2.jpg
 authors:
   - Paola Peraza Calderon
   - Vikram Koka
 date: 2020-10-29T00:00:00.000Z
 ---
 
-<meta property="og:image" content="../assets/airflow-2.png" class="next-head">
-<meta property="twitter:image:src" content="../assets/airflow-2.png" class="next-head">
-<meta property="twitter:image:src" content="../assets/airflow-2.png" class="next-head">
+<meta property="og:image" content="../assets/airflow-2.jpg" class="next-head">
+<meta property="twitter:image:src" content="../assets/airflow-2.jpg" class="next-head">
+<meta property="twitter:image:src" content="../assets/airflow-2.jpg" class="next-head">
 
 
 Apache Airflow was created by Airbnb’s Maxime Beauchemin as an open-source project in late 2014. It was brought into the Apache Software Foundation’s Incubator Program in March 2016 and saw growing success in the wake of Maxime’s well-known [“The Rise of the Data Engineer”](https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603) blog post. By January of 2019, Airflow was [announced as a Top-Level Apache Project](https://blogs.apache.org/foundation/entry/the-apache-software-foundation-announces44) by the Foundation and is now concretely considered the industry’s leading workflow orchestration solution.
@@ -29,7 +29,7 @@ Airflow boasts thousands of users and over 1,600 contributors who regularly subm
 
 As Apache Airflow grows in adoption, there’s no question that a major release to expand on the project’s core strengths has been long overdue. As users and members of the community, we at Astronomer are delighted to announce that Airflow 2.0 is in the alpha testing stage and is scheduled to be generally available in December of 2020.
 
-![Airflow 2.0 Home](../assets/Airflow-2.0-Home.png)
+![Airflow 2.0 Home](../assets/Airflow-2.0-Home.jpg)
 
 Over the last year, various organizations and leaders within the Airflow Community have been in close collaboration refining the scope of Airflow 2.0 and actively working towards enhancing existing functionality and introducing changes to make Airflow faster, more reliable and more performant at scale.
 

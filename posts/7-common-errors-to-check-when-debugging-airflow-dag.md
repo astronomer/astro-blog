@@ -2,7 +2,7 @@
 title: 7 Common Errors to Check when Debugging Airflow DAGs
 slug: 7-common-errors-to-check-when-debugging-airflow-dag
 description: Tasks not running? DAG stuck? Logs nowhere to be found? We’ve been there. Here’s a list of common snags and some corresponding fixes to consider when you’re debugging your Airflow deployment.
-heroImagePath: ../assets/1533578390-theairflowuipreview.png
+heroImagePath: ../assets/1533578390-theairflowuipreview.jpg
 authors:
   - Paola Peraza Calderon
   - Ben Gregory
