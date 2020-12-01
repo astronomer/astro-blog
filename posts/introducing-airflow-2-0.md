@@ -9,11 +9,6 @@ authors:
 date: 2020-10-29T00:00:00.000Z
 ---
 
-<meta property="og:image" content="../assets/airflow-2.jpg" class="next-head">
-<meta property="twitter:image:src" content="../assets/airflow-2.jpg" class="next-head">
-<meta property="twitter:image:src" content="../assets/airflow-2.jpg" class="next-head">
-
-
 Apache Airflow was created by Airbnb’s Maxime Beauchemin as an open-source project in late 2014. It was brought into the Apache Software Foundation’s Incubator Program in March 2016 and saw growing success in the wake of Maxime’s well-known [“The Rise of the Data Engineer”](https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603) blog post. By January of 2019, Airflow was [announced as a Top-Level Apache Project](https://blogs.apache.org/foundation/entry/the-apache-software-foundation-announces44) by the Foundation and is now concretely considered the industry’s leading workflow orchestration solution.
 
 Airflow’s strength as a tool for dataflow automation has grown for a few reasons:
