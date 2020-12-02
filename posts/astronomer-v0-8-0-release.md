@@ -22,11 +22,11 @@ We've completely reworked our API to be more efficient, allow for more features,
 
 We've implemented an Elasticsearch task handler in Airflow and added an EFK stack to our platform that will allow us to stream webserver, scheduler, and worker logs into our UI:
 
-![logging](logging.jpg)
+![logging](../assets/logging.jpg)
 
 If you are an Astronomer Enterprise customer, you'll also have access to a Kibana dashbord to search logs across all of your Airflow deployments and create your own dashboards:
 
-![logging](kibana.jpg)
+![logging](../assets/kibana.jpg)
  
 **3. Faster deploys.**
 
