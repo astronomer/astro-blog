@@ -20,7 +20,7 @@ Thanks for constantly doing dope shit driving forward unprecedented innovation i
 
 You just changed the game Perez! We appreciate your valued contribution towards this vital project, Dr. Perez. The best thing about some of the talks over these last few days is how much of what we learned can be directly ported into Astronomer’s data science stack and used for our own side-projects. I mean, Dr. Wang of [Continuum](https://www.continuum.io/) just casually dropped an interactive billion point geo-plot made with Bokeh and DataShader! ARE YOU KIDDING ME, PETER?!?
 
-![giphy.jpg](../assets/giphy.jpg)
+![giphy.gif](../assets/giphy.gif)
 
 Honestly, we have no idea what you’re saying half the time. We’re simply basking in the glory of your collective brilliance. There’s an almost unanimous decision to make everything as accessible as possible. The talks over the last few days ranged from basic data cleaning to topics as advanced as hyperparameter optimization. However, there was never a hint of arrogance in the speaker’s voice. Each speaker’s goal was to present something they found interesting, not to show off. This emphasis on teaching makes data analytics easy for anyone to get started and adds to the robustness of the community. Without it, we almost certainly would not have jobs.
 
