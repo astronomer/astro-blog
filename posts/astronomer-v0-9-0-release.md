@@ -24,18 +24,18 @@ From a customer's perspective, this will be a major win; now, not only do you no
 
 Airflow deployment metrics are now accessible via our API and dashboards in our UI. Now, you can keep an eye on your task status, quotas, scheduler performance, database connections, and resource utilization in one view.
 
-![metrics](../assets/metrics.gif)
+![metrics](../assets/metrics.jpg)
 
 **3. RBAC Integration**
 
 We now offer full integration with Airflow's native RBAC functionality. Users on Astronomer can be assigned `Admin`, `Editor`, and `Viewer` roles, each with increasingly strict permissions. These permissions carry over into your Airflow deployments, so you can now invite users to your Workspace and control the level of access they have to your Airflow instances.
 
-![rbac](../assets/rbac.gif)
+![rbac](../assets/rbac.jpg)
 
 **4. Logs Streaming to the CLI**
 
 You can now stream logs from your Airflow deployments directly to your terminal. This is useful if you ever need to view a live output of logs while deploying your DAGs.
-![cli_logs](../assets/logs_cli.gif)
+![cli_logs](../assets/logs_cli.jpg)
 
 
 **5. Custom error messages in our UI**
