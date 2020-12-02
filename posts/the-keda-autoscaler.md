@@ -15,13 +15,13 @@ As some of you may know, we've been busy for the past few years trying to find a
 
 When the KubernetesExecutor was first released, it was the first time that Airflow had a working scale-to-zero solution. The executor can launch a pod for each task, and shrink back down to a single instance when all tasks complete. While this system has huge benefits for users, it is not without its drawbacks.
 
-![1584137870-blog-keda-podcast-1.jpeg](../assets/1584137870-blog-keda-podcast-1.jpeg)
+![1584137870-blog-keda-podcast-1.jpg](../assets/1584137870-blog-keda-podcast-1.jpg)
 
 <br>
 
 Launching an entire Airflow virtual environment for each task leads to a fair amount of wasted resources, and running hundreds or thousands of tasks in parallel can place significant pressure on a Kubernetes cluster. So while the KubernetesExecutor is valuable for users who want per-task configurations and don't want to use Celery, it is not our ideal autoscaling solution.
 
-![1584137936-blog-keda-podcast-2.jpeg](../assets/1584137936-blog-keda-podcast-2.jpeg)
+![1584137936-blog-keda-podcast-2.jpg](../assets/1584137936-blog-keda-podcast-2.jpg)
 
 <br>
 
@@ -47,7 +47,7 @@ In the following example, we start with an Airflow cluster that has zero Celery 
 CEIL(0 RUNNING + 0 QUEUED/16) = 0 WORKERS
 ```
 
-![1584137990-blog-keda-podcast-3.jpeg](../assets/1584137990-blog-keda-podcast-3.jpeg)
+![1584137990-blog-keda-podcast-3.jpg](../assets/1584137990-blog-keda-podcast-3.jpg)
 
 <br>
 
@@ -57,7 +57,7 @@ Using the equation CEIL(RUNNING + QUEUED)/worker_concurrency, KEDA launches a si
 CEIL(0 RUNNING + 1 QUEUED/16) = 1 WORKERS
 ```
 
-![1584138020-blog-keda-podcast-4.jpeg](../assets/1584138020-blog-keda-podcast-4.jpeg)
+![1584138020-blog-keda-podcast-4.jpg](../assets/1584138020-blog-keda-podcast-4.jpg)
 
 <br>
 
@@ -67,7 +67,7 @@ If there is a period of high load, KEDA will be able to launch new Celery worker
 CEIL(32 RUNNING + 30 QUEUED/16)  = 4 WORKERS
 ```
 
-![1584138064-blog-keda-podcast-5.jpeg](../assets/1584138064-blog-keda-podcast-5.jpeg)
+![1584138064-blog-keda-podcast-5.jpg](../assets/1584138064-blog-keda-podcast-5.jpg)
 
 <br>
 

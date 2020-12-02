@@ -23,7 +23,7 @@ As a system agnostic task orchestrator, Airflow’s flexibility can make it hard
 Learning this on your own is definitely possible - but it takes time and resources that could delay your next data initiative.  
 
 
-![1519686931-wasting_time.gif](../assets/1519686931-wasting_time.gif)
+![1519686931-wasting_time.jpg](../assets/1519686931-wasting_time.jpg)
 
 SpaceCamp is designed to get your team up and running with Airflow as fast as possible. With the goal of giving anyone with basic knowledge of SQL and Python data engineering capabilities, SpaceCamp aims to fundamentally shift your org’s data culture towards [data democratization](https://channels.theinnovationenterprise.com/articles/beginners-guide-to-data-democratization). 
 

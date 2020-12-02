@@ -108,7 +108,7 @@ To learn more, refer to Airflow’s official [docs here](https://airflow.readthe
 
 Airflow 2.0 introduces Task Groups as a UI construct that doesn’t affect task execution behaviour but fulfills the primary purpose of SubDAGs. Task Groups give a DAG author the management benefits of “grouping” a logical set of tasks with one another without having to look at or process those tasks any differently.
 
-![Airflow 2.0 Task Groups](../assets/Airflow-2.0-Task-Group.gif)
+![Airflow 2.0 Task Groups](../assets/Airflow-2.0-Task-Group.jpg)
 
 While Airflow 2.0 will continue to support the SubDAG Operator, Task Groups are intended to replace it in the long-term.
 
@@ -141,7 +141,7 @@ Other highlights include:
 * A button to reset the DAGs view (home) after performing a search ([commit](https://github.com/apache/airflow/pull/11583))
 * Refactored loading of DAGs view (e.g. remove “spinning wheels) ([commit](https://github.com/apache/airflow/commit/6c3f4357f5c0a95d4a6772fdc45dce0acaf3ba7f))
 
-![Airflow 2.0 Graph View Refresh](../assets/Airflow-2.0-Graph-view-Refresh.gif)
+![Airflow 2.0 Graph View Refresh](../assets/Airflow-2.0-Graph-view-Refresh.jpg)
 
 Many more Airflow UI changes are expected beyond Airflow 2.0, but we’re certainly excited to have gotten a head start.
 ## Get Involved
