@@ -24,7 +24,7 @@ From a customer's perspective, this will be a major win; now, not only do you no
 
 Airflow deployment metrics are now accessible via our API and dashboards in our UI. Now, you can keep an eye on your task status, quotas, scheduler performance, database connections, and resource utilization in one view.
 
-![metrics](../assets/metrics.jpg)
+![metrics](../assets/metrics.gif)
 
 **3. RBAC Integration**
 
@@ -35,7 +35,7 @@ We now offer full integration with Airflow's native RBAC functionality. Users on
 **4. Logs Streaming to the CLI**
 
 You can now stream logs from your Airflow deployments directly to your terminal. This is useful if you ever need to view a live output of logs while deploying your DAGs.
-![cli_logs](../assets/logs_cli.jpg)
+![cli_logs](../assets/logs_cli.gif)
 
 
 **5. Custom error messages in our UI**
