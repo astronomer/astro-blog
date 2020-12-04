@@ -20,7 +20,7 @@ Maksim was also kind enough to give us a follow-up interview, where we further d
 
 ## Q&A with Maksim
 
-**1. What led you to your Code for America fellowship and how did that impact the trajectory of your career? **
+**1. What led you to your Code for America fellowship and how did that impact the trajectory of your career?**
 
 I’ve loved computers and technology ever since my Dad got me my first computer at 8 years old. I love to use technology to create things, to bring things to life. I spent most of my career as a software engineer at various startups, contracting for awesome people and working on some amazing projects.  However, there was always something missing. I loved doing these cool things, but I’ve always had the feeling that the skills I had could be applied in a more meaningful way than just building yet another website.  
 
@@ -33,12 +33,11 @@ Somehow I met Alan Palazollo, one of the original CfA fellows at a DrupalCon. He
 
 We worked with the government of Puerto Rico to develop PrimerPeso, a way for business owners to find incentives from the local, state and federal governments to help their businesses.  What really blew my mind at the time was that it was not a difficult technology problem. But execution depended on finding the right problem and the right way to solve it and getting the data in the right place.  
 
-When the 11-month fellowship was coming to an end, I really got hooked on working on government technology. What’s better than using my skills to help people? And then I saw the SD CDO opportunity come up.  There’s actually an interesting story there, as well
-https://www.youtube.com/watch?v=6BGw2Msv2Wg. 
+When the 11-month fellowship was coming to an end, I really got hooked on working on government technology. What’s better than using my skills to help people? And then I saw the SD CDO opportunity come up.  There’s actually an [interesting story](https://www.youtube.com/watch?v=6BGw2Msv2Wg) there, as well. 
 
 
 
-**2. How did you end up using Airflow? **
+**2. How did you end up using Airflow?**
 
 The city has 36 different departments using a variety of technologies and data sources.  From the beginning, we knew that for the data program to be successful, it could not rely on humans uploading and curating data by hand, as is the case in many other cities.  We also knew that a lot of people were already generating reports and curating them manually for a variety of other reasons.
 
@@ -78,7 +77,7 @@ We are also doing a lot of data enrichment work. Since we are a city, and a lot 
 As a result, we help city staff save time, access data faster, get answers faster, and make better decisions more quickly.  In addition, we save money in software development costs - our vendors charge quite a bit of money to create new reports.  
 
 
-**5. What’s it like staying current with technology in government? **
+**5. What’s it like staying current with technology in government?**
 
 
 I really do think it’s a function of the culture of the City, but it’s definitely not as hard as I thought it would be. You have to make an effort to learn new things and get out there, but I don’t feel like I’m being left behind in the 90s.  I’ve always been a full-stack / multi-stack developer, and working here lets me expand my expertise to crazier, bigger enterprise systems like SAP, Oracle and SQL Server. I’m also working on learning a lot more geospatial; it’s a fascinating field.  

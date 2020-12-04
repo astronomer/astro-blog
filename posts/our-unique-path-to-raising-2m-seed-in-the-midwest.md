@@ -34,7 +34,9 @@ Next came Kyle Wild, CEO of [Keen.io](https://keen.io/) and one of Morris’s to
 
 With Kyle and Morris in, Tim convinced several of his former Cladwell investors and some new folks to jump on the bandwagon, including [dunnhumby](https://www.dunnhumby.com/)’s managing director Andy Hill and [Modulus](https://modulus.io/) co-founder Charlie Key. Ask any founders: getting these early investors are the hardest, not just because the company is so early, but because you are putting your friends' and family’s money on the line! Locking those in gave us reason to clebrate.
 
-![giphy_12.gif](../assets/giphy_12.gif)_(Courtesy of "Trong Enterprises")_
+![giphy_12.gif](../assets/giphy_12.gif)
+
+_(Courtesy of "Trong Enterprises")_
 
 ### May '15: Pivot from Analytics
 

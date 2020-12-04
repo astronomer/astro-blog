@@ -34,7 +34,7 @@ All of the destinations are Louisville originals and have free parking within st
 
 ### Destination #1: [Please & Thank You](https://www.pleaseandthankyoulouisville.com/)
 
-_800 East Market Street, Louisville, KY 40206 • [Find it on Google Maps](https://www.google.com/maps/place/800+E+Market+St,+Louisville,+KY+40206/data=!4m2!3m1!1s0x886972c4fa664b73:0x51f20d40579a73ee?sa=X&ved=0ahUKEwjYk-_lrqbRAhVERSYKHT4xDP8Q8gEIGzAA)_
+_800 East Market Street, Louisville, KY 40206_
 
 #### ![PTY.jpg](../assets/PTY.jpg)  
   

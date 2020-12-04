@@ -62,7 +62,7 @@ We’re using the [simple-salesforce](https://github.com/simple-salesforce/simpl
 
 ![1505409191-screen-shot-2017-09-06-at-6-46-23-pm.jpg](../assets/1505409191-screen-shot-2017-09-06-at-6-46-23-pm.jpg)
 
-After that, the records are written as separate JSON files to S3 using the load_file() method from the [s3Hook](https://pythonhosted.org/airflow/_modules/S3_hook.html). As we’re using Astronomer (where all tasks run in isolated Docker containers that are destroyed after completion), we don’t care about the local persistence of the file so we’re just using the NamedTemporaryFile method from Python’s tempfile library.
+After that, the records are written as separate JSON files to S3 using the load_file() method from the [s3Hook](https://airflow.apache.org/docs/apache-airflow/stable/_modules/airflow/hooks/S3_hook.html). As we’re using Astronomer (where all tasks run in isolated Docker containers that are destroyed after completion), we don’t care about the local persistence of the file so we’re just using the NamedTemporaryFile method from Python’s tempfile library.
 
 ![1505409228-screen-shot-2017-09-06-at-7-00-30-pm.jpg](../assets/1505409228-screen-shot-2017-09-06-at-7-00-30-pm.jpg)
 
@@ -72,7 +72,7 @@ As an additional quality assurance measure, a simple row count is then performed
 
 ![1505409263-screen-shot-2017-09-06-at-7-34-39-pm.jpg](../assets/1505409263-screen-shot-2017-09-06-at-7-34-39-pm.jpg)
 
-From there, three additional tasks occur concurrently. The first task triggers the next DAG (“trigger_models”), which will process the data, and is instantiated through the [TriggerDagRunOperator](https://pythonhosted.org/airflow/_modules/dagrun_operator.html#TriggerDagRunOperator). This operator uses a python function to determine whether or not to trigger, activating the specified trigger_dag_id if the specified python_callable returns dag_run_obj. In our case, we always want the next DAG to run if this operator gets activated so we’ve hard-coded the params to ensure it resolves to true. We’ve set ourselves up, however, to easily alter this in the future to be receive a condition as an XCOM or the product of any custom logic.
+From there, three additional tasks occur concurrently. The first task triggers the next DAG (“trigger_models”), which will process the data, and is instantiated through the [TriggerDagRunOperator](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/operators/dagrun_operator/index.html). This operator uses a python function to determine whether or not to trigger, activating the specified trigger_dag_id if the specified python_callable returns dag_run_obj. In our case, we always want the next DAG to run if this operator gets activated so we’ve hard-coded the params to ensure it resolves to true. We’ve set ourselves up, however, to easily alter this in the future to be receive a condition as an XCOM or the product of any custom logic.
 
 ![1505409305-screen-shot-2017-09-06-at-7-47-19-pm.jpg](../assets/1505409305-screen-shot-2017-09-06-at-7-47-19-pm.jpg)
 

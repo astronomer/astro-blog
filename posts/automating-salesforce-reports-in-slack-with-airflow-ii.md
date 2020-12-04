@@ -60,25 +60,25 @@ When working with images that are added to Slack, it’s important to use a uniq
 
 Lastly, when using S3 as a file store, referencing the image solely by the URL will require them to live in a public folder. To enable this, you will need to add something like the following to your Bucket Policy:
 
-   {
+    {
+ 
+       "Version": "2008-10-17",
+ 
+       "Statement": [{
+ 
+          "Sid": "AllowPublicRead",
+ 
+          "Effect": "Allow",
+ 
+          "Principal": { "AWS": "*" },
 
-      "Version": "2008-10-17",
+          "Action": ["s3:GetObject"],
+ 
+          "Resource": ["arn:aws:s3:::bucket/file_path/*"]
 
-      "Statement": [{
+       }]
 
-         "Sid": "AllowPublicRead",
-
-         "Effect": "Allow",
-
-         "Principal": { "AWS": "*" },
-
-         "Action": ["s3:GetObject"],
-
-         "Resource": ["arn:aws:s3:::bucket/file_path/*"]
-
-      }]
-
-   }
+    }
 
 Now, that the path to the image is returned from the function, we can access it as an XCOM by the final operator in our workflow, the SlackAPIPostOperator.This operator is pretty straightforward to use and only requires a standard Slack Token for authentication as Slack takes care of all request routing from there. The details of the message itself are wrapped up in a standard Slack attachments object. In our case, we’re only passing in the path to the image as an XCOM but you could enrich your messages further by passing in specific stats or conditional alerts based on performance data.
 
