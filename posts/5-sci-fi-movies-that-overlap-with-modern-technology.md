@@ -33,7 +33,7 @@ In many organizations that rely on physical fabrication or production assembly l
 
 In&nbsp;_Back the Future 2_, Marty McFly&nbsp;takes a trip into his own future to put things right that ended up going wrong. With Marty, we explore the possibilities of the far-off year of&nbsp;2015.
 
-![image1.jpg](../assets/image1.jpg)
+![image1.gif](../assets/image1.gif)
 
 While the movie may have been a little ambitious in its expectations for technology (especially if you count time travel), we see some overlap here too. In one scene, Marty and another character, Doc, are getting out of the Delorean in the future Hill Valley. Doc looks at his watch and notes the weather and how long—_exactly_—it’s expected to rain. Accurate to the second, weather prediction of the future promised to be much better than it was when the movie was released in 1989. And while perhaps not to the point Marty's world depicted (yet), technology like&nbsp;[Accuweather's “Minutecast”](https://www.accuweather.com/en/us/new-york-ny/10007/minute-weather-forecast/349727) does offer us some of that knowledge.
 
@@ -57,7 +57,7 @@ But my favorite example of machine learning is self-driving cars. A number of di
 
 In fact, machine learning can be applied to any organization's data to create highly accurate predictive models, decision tree data discovery and even more advanced artificial neural networks. If you want to read more about some cutting edge machine learning applications, check out [DeepMind](https://deepmind.com/), [IBM Watson](https://www.ibm.com/watson/) and [artificial general intelligence](https://en.wikipedia.org/wiki/Artificial_general_intelligence) (AGI). Sound daunting? Collecting your organization’s data [is a simple first step](https://www.astronomer.io/solutions/complexetl) to building out a robust data science foundation for your business.&nbsp;
 
-![image5.jpg](../assets/image5.jpg)
+![image5.gif](../assets/image5.gif)
 
 ### _The Matrix_ and Need for Monitoring
 
@@ -65,7 +65,7 @@ In the 1999 hit _The Matrix_, we follow an anti-social office drone as he learns
 
 This wouldn’t have happened if the Matrix data had been well monitored, which is of the utmost importance when it comes to data. At the first sign of dissent or deviation from expected norms, you should know when something goes wrong. It could be that an active campaign has unexpectedly stopped, users are no longer engaging with a specific message or maybe your source of data is no longer functioning. A deviation in the expected normal operations of the Matrix allowed Mr. Smith to increase in power and ultimately take over the virtual world, replacing its populous with nefarious lookalikes. Don’t let your data control you by becoming Mr. Smith. Be the Neo of your data: learn\* to control it.&nbsp;
 
-![image4.jpg](../assets/image4.jpg)
+![image4.gif](../assets/image4.gif)
 
 _\*If you're curious about monitoring, you're invited to hear our engineers talk about how Astronomer handles monitoring via webinar on August 2. [It's not too late to register!](https://www.astronomer.io/fireside-chat-monitoring)_
 
@@ -79,7 +79,7 @@ This inability to communicate is comparable to what happens when companies opera
 
 When a company “powers up” (read: consolidates) their data, they see into their business, allowing them to not only answer critical questions, but also identify new ones. Like Snake Plissken gave humanity another shot by hitting reset, you can give your business a leg up by connecting all the data you need to get to deeper insights.
 
- ![image3.jpg](../assets/image3.jpg)
+ ![image3.gif](../assets/image3.gif)
 
 _\*Snake Plissken and Pipeline upon integrating all of their data sources_
 

@@ -8,7 +8,7 @@ authors:
 date: 2017-07-18T00:00:00.000Z
 ---
 
-The data scientist was deemed the “sexiest job of the 21st century.” [The Harvard Business Review] (https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century)reasons that this “hybrid of data hacker, analyst, communicator and trusted adviser” is a rare combination of skills, worth a high paycheck.
+The data scientist was deemed the “sexiest job of the 21st century.” [The Harvard Business Review](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century) reasons that this “hybrid of data hacker, analyst, communicator and trusted adviser” is a rare combination of skills, worth a high paycheck.
 
 Too good to be true? Yes, [according to Forbes](https://www.forbes.com/sites/gilpress/2016/03/23/data-preparation-most-time-consuming-least-enjoyable-data-science-task-survey-says/#2fe31d416f63). Turns out, data scientists spend most of their time (up to 79%!) on the part of their job they hate most.
 

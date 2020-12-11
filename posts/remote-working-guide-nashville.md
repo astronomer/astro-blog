@@ -32,7 +32,7 @@ From our pad in 12 South, we came up with some tips on where to be productive, s
 
 #### 1. Bongo Java, Belmont-Hillsboro
 
-_2007 Belmont Blvd, Nashville, TN 37212_ _•_ _[Find it on Google Maps](https://www.google.com/maps/place/Bongo+Java/@36.1321781,-86.7958277,15z/data=!4m2!3m1!1s0x0:0x7d883328f08511e?sa=X&ved=0ahUKEwiUn9SJ2pnRAhUo64MKHfkLBBYQ_BIIcDAN)_
+_2007 Belmont Blvd, Nashville, TN 37212_ _•_ _[Find it on Google Maps](https://www.google.com/maps/place/Bongo+Java/@36.1321781,-86.7958277,15z/data=!4m2!3m1!1s0x0:0x7d883328f08511e?sa=X&ved=0ahUKEwiUn9SJ2pnRAhUo64MKHfkLBBYQ)_
 
 “Nashville’s Original Coffee House” is a great choice for those who want the traditional coffee shop feel.
 
@@ -46,7 +46,7 @@ Becky, one of our account managers, put it like this: “I love the white noise 
 
 #### 2. Pinewood Social, Downtown Nashville
 
-_33 Peabody St Nashville, TN 37210 •_ _[Find it on Google Maps](https://www.google.com/maps/place/Pinewood+Social/@36.1583837,-86.76778,15z/data=!4m2!3m1!1s0x0:0x6225534e5374516e?sa=X&ved=0ahUKEwibk7Wj3ZnRAhUE0oMKHfAFCYcQ_BIIhAEwEA)_
+_33 Peabody St Nashville, TN 37210 •_ _[Find it on Google Maps](https://www.google.com/maps/place/Pinewood+Social/@36.1583837,-86.76778,15z/data=!4m2!3m1!1s0x0:0x6225534e5374516e?sa=X&ved=0ahUKEwibk7Wj3ZnRAhUE0oMKHfAFCYcQ)_
 
 If you want a one-stop shop for food, drinks, work and play—and maybe like to mix business with a little pleasure—you’ll love this.
 
@@ -73,7 +73,7 @@ _Photo cred: Becky_
 
 #### 3. Fido, Hillsboro West End
 
-_1812 21st Ave S, Nashville, TN 37212_ _•_ _[Find it on Google Maps](https://www.google.com/maps/place/Fido/@36.136344,-86.800786,15z/data=!4m2!3m1!1s0x0:0x50a2d27a32cbbd44?sa=X&ved=0ahUKEwiUytqA45nRAhUE2IMKHVdpBo4Q_BIIezAK)_
+_1812 21st Ave S, Nashville, TN 37212_ _•_ _[Find it on Google Maps](https://www.google.com/maps/place/Fido/@36.136344,-86.800786,15z/data=!4m2!3m1!1s0x0:0x50a2d27a32cbbd44?sa=X&ved=0ahUKEwiUytqA45nRAhUE2IMKHVdpBo4Q)_
 
 We’re not sure if Fido is a coffee shop or a restaurant, but [they’re okay with that](https://www.bongojava.com/fido-cafe/about/). If you want a little of both, this is your spot.
 
