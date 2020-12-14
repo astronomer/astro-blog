@@ -47,7 +47,7 @@ Please visit [our updated site](https://www.astronomer.io) and have a look aroun
 
 Thank you from all of us at Astronomer.
 
-<p><img src="../assets/1526943687-rysig.jpg" alt="drawing" style="width: 200px;"/></p>
+Ry Walker
 
 Co-Founder & CEO Astronomer
 
