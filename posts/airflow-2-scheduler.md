@@ -159,8 +159,4 @@ The Airflow Scheduler does more than just scheduling of tasks and is well on the
 
 By introducing horizontal scalability, low task latency and high predictability, the Airflow 2.0 Scheduler builds the foundation for an expanded set of data processing infrastructure, which is critical for reliable artificial intelligence analytic applications.
 
-<<<<<<< HEAD
 As members of the Airflow community, we are excited for a new frontier!
-=======
-As members of the Airflow community, we are excited for a new frontier!
->>>>>>> 1cfb06bacee30b19d87ca2ca1578b218be019cac
