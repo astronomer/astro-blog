@@ -125,7 +125,7 @@ Results for _task throughput_ (metric explained above) using Airflow 2.0 beta bu
 | 2                     | 12                 | 541                        | 492                   | 578                    |
 | 3                     | 12                 | 698                        | 632.5                 | 774                    |
 
-[INSERT TASK THROUGHPUT IMAGE]
+![Airflow Scheduler Task Throughput](..assets/airflow-2-scheduler/scheduler-task-throughput.png)
 
 As the results show, adding Schedulers consistently increases _task throughput_. This enables flexible scale up / scale down of Schedulers based on demand. 
 
@@ -133,7 +133,7 @@ As the results show, adding Schedulers consistently increases _task throughput_.
 
 A sample Airflow Scheduler HA deployment on a set of Virtual Machines is shown below. The Airflow 1.x deployment model is on the left, with the Airflow 2.0 scalable scheduler deployment model on the right.
 
-[INSERT SCHEDULER ARCHITECTURE IMAGE]
+![Airflow Scheduler Deployment Model](..assets/airflow-2-scheduler/scheduler-deployment-model.png)
 
 # New Possibilities
 
