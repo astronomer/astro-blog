@@ -86,9 +86,9 @@ Results for 1,000 tasks run, measured as _total task latency_ (referenced below 
 
 | Scenario                                         | DAG shape   | 1.10.10 Total Task Lag | 2.0 beta Total Task Lag | Speedup  |
 |--------------------------------------------------|-------------|---------------------------------|----------------------------------|----------|
-| 100 DAG files, 1 DAG per file, 10 Tasks per DAG  | Linear      | 200 seconds                     | 11.6 seconds                     | 17 times |
-| 10 DAG files, 1 DAG per file, 100 Tasks per DAG  | Linear      | 144 seconds                     | 14.3 seconds                     | 10 times |
-| 10 DAG files, 10 DAGs per file, 10 Tasks per DAG | Binary Tree | 200 seconds                     | 12 seconds                       | 16 times |
+| 100 DAG files, 1 DAG per file,<br> 10 Tasks per DAG  | Linear      | 200 seconds                     | 11.6 seconds                     | 17 times |
+| 10 DAG files, 1 DAG per file,<br> 100 Tasks per DAG  | Linear      | 144 seconds                     | 14.3 seconds                     | 10 times |
+| 10 DAG files, 10 DAGs per file,<br> 10 Tasks per DAG | Binary Tree | 200 seconds                     | 12 seconds                       | 16 times |
 
 As the above benchmark results show, even a _single_ Airflow 2.0 Scheduler has proven to schedule tasks at _much_ faster speeds.
 
