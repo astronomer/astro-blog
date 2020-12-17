@@ -5,7 +5,7 @@ description: A technical deep-dive into Apache Airflow's refactored Scheduler, n
 heroImagePath: ../assets/scheduler-hero.png
 authors:
   - Vikram Koka
-date: 2020-12-17T04:17:00.000Z
+date: 2020-12-17T16:17:00.000Z
 ---
 
 As part of [Apache Airflow 2.0](https://www.astronomer.io/blog/introducing-airflow-2-0), a key area of focus has been on the Airflow Scheduler. The Airflow Scheduler reads the data pipelines represented as Directed Acyclic Graphs (DAGs), schedules the contained tasks, monitors the task execution, and then triggers the downstream tasks once their dependencies are met. Historically, Airflow has had excellent support for task execution ranging from a single machine, to Celery-based distributed execution on a dedicated set of nodes, to Kubernetes-based distributed execution on a scalable set of nodes.
