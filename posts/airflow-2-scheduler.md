@@ -14,17 +14,11 @@ As part of [Airflow 2.0](https://www.astronomer.io/blog/introducing-airflow-2-0)
 
 Though Airflow task execution has always been scalable, the Airflow Scheduler itself was (until now) a single point of failure and not horizontally scalable. We at [Astronomer](https://astronomer.io) saw this scalability as crucial to Airflow's continued growth, and therefore attacked this issue with three main areas of focus:
 
-## 1. High Availability
+**1. High Availability:** Airflow should be able to continue running data pipelines without a hiccup, even in the situation of a node failure taking down a Scheduler. This has been a source of concern for many enterprises running Airflow in production, who have adopted mitigation strategies using “health checks”, but are looking for a better alternative.
 
-Airflow should be able to continue running data pipelines without a hiccup, even in the situation of a node failure taking down a Scheduler. This has been a source of concern for many enterprises running Airflow in production, who have adopted mitigation strategies using “health checks”, but are looking for a better alternative.
+**2.Scalability:** Airflow’s scheduling functionality should be horizontally scalable, able to handle running hundreds of thousands of tasks, without being limited by the computing capabilities of a single node. We have heard data teams want to stretch Airflow beyond its strength as an Extract, Transform, Load (ETL) tool for batch processing. An example of this has been in automated surge pricing where the price is recalculated every few minutes requiring data pipelines to be run at that frequency. We have long felt that a horizontally scalable and highly-available Scheduler was critical to moving the needle in Airflow's performance with predictable latency in order to meet such new demands and cement its place as the industry's leading data orchestration tool.
 
-## 2.Scalability
-
-Airflow’s scheduling functionality should be horizontally scalable, able to handle running hundreds of thousands of tasks, without being limited by the computing capabilities of a single node. We have heard data teams want to stretch Airflow beyond its strength as an Extract, Transform, Load (ETL) tool for batch processing. An example of this has been in automated surge pricing where the price is recalculated every few minutes requiring data pipelines to be run at that frequency. We have long felt that a horizontally scalable and highly-available Scheduler was critical to moving the needle in Airflow's performance with predictable latency in order to meet such new demands and cement its place as the industry's leading data orchestration tool.
-
-## 3. Performance
-
-Measured by task latency, the scheduler must schedule and start tasks far more quickly and efficiently. The performance capability of Apache Airflow's Scheduler has been a pain point for advanced users in the open-source community. In fact, "Scheduler Performance" was listed as the most asked for improvement in [Airflow's 2019 Community Survey](https://airflow.apache.org/blog/airflow-survey/), which garnered over 300 individual responses.
+**3. Performance:** Measured by task latency, the scheduler must schedule and start tasks far more quickly and efficiently. The performance capability of Apache Airflow's Scheduler has been a pain point for advanced users in the open-source community. In fact, "Scheduler Performance" was listed as the most asked for improvement in [Airflow's 2019 Community Survey](https://airflow.apache.org/blog/airflow-survey/), which garnered over 300 individual responses.
 
 A solution that addresses all three problem areas was originally proposed by the Astronomer team as part of [AIP-15](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=103092651) in February 2020. 
 
@@ -150,7 +144,9 @@ However, the most compelling takeaway from the Airflow 2.0 Scheduler is its impl
 ## Near Real-time Analytics
 
 Many business problems in domains such as the Internet of Things (IoT), Smart City, Medical telehealth, and Financials require near real-time analytics. This is typically done using micro-batch processing. Micro-batch processing is the practice of collecting and processing data in small groups (“batches”) at high frequency - typically in the order of minutes. 
+
 Preventive maintenance is a key IoT use case intended to detect problems in equipment before they occur. This requires analytics based on data being reported by sensors at frequent intervals, measuring values such as temperature. 
+
 Fraud detection and Stock market analysis in the Financials industry and patient vitals monitoring as part of telehealth follow similar patterns of needing multiple data points to process in near real-time while taking historical data into account.
 
 ## Machine Learning
