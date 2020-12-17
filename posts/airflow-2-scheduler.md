@@ -2,7 +2,7 @@
 title: The Airflow 2.0 Scheduler
 slug: airflow-2-scheduler
 description: 'A technical deep-dive into Apache Airflow's refactored Scheduler, now faster, more reliable, and infinitely scalable.'
-heroImagePath: ../assets/nps2560x1600a.jpg
+heroImagePath: ../assets/airflow-2-scheduler/scheduler-hero.png
 authors:
   - Vikram Koka
 date: 2020-12-17T00:00:00.000Z
@@ -20,15 +20,15 @@ Though Airflow task execution has always been scalable, the Airflow Scheduler it
 
 **3. Performance:** Measured by task latency, the scheduler must schedule and start tasks far more quickly and efficiently. The performance capability of Apache Airflow's Scheduler has been a pain point for advanced users in the open-source community. In fact, "Scheduler Performance" was listed as the most asked for improvement in [Airflow's 2019 Community Survey](https://airflow.apache.org/blog/airflow-survey/), which garnered over 300 individual responses.
 
-A solution that addresses all three problem areas was originally proposed by the Astronomer team as part of [AIP-15](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=103092651) in February 2020. 
+A solution that addresses all three problem areas was originally proposed by the Astronomer team as part of [AIP-15](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=103092651) in February 2020.
 
-With the imminent release for Airflow 2.0, we're delighted to officially announce Airflow's refactored Highly Available Scheduler, and formally share our work with the open-source community. 
+With the imminent release for Airflow 2.0, we're delighted to officially announce Airflow's refactored Highly Available Scheduler, and formally share our work with the open-source community.
 
 # High Availability
 
-There are several standard patterns to solving the High Availability problem in distributed systems. 
+There are several standard patterns to solving the High Availability problem in distributed systems.
 
-The standard and the simplest pattern is to use the “active / passive” model of running two instances of a service, where the active (primary) instance of a service is processing transactions and the backup (passive) instance is waiting to take over in case of a failure rendering the primary inactive. The biggest advantage here is that it is one of the simplest to implement. 
+The standard and the simplest pattern is to use the “active / passive” model of running two instances of a service, where the active (primary) instance of a service is processing transactions and the backup (passive) instance is waiting to take over in case of a failure rendering the primary inactive. The biggest advantage here is that it is one of the simplest to implement.
 
 However, one of the several disadvantages is that there is a “wastage” of resources in running a passive instance. There is also a defined “recovery interval” after the failure of the “active / primary” instance, for the “backup / passive” instance to detect that the primary has failed and for it to start processing transactions. Additionally, it does not solve the second problem of horizontal scalability.
 
@@ -78,7 +78,7 @@ Fast-follow workflow:
 
 We have been using _"task latency"_ as the key metric to benchmark scheduler performance and validate improvements. Often evident in the "Gantt" view of the Airflow UI, we define task latency as the time it takes for a task to begin executing once its dependencies have been met.
 
-Along with the above architectural changes, Airflow 2.0 also incorporates optimizations in the task startup process and in the scheduler loop, which reduces task latency. 
+Along with the above architectural changes, Airflow 2.0 also incorporates optimizations in the task startup process and in the scheduler loop, which reduces task latency.
 
 To sufficiently test this, without skewing numbers based on the actual task “work” time, we have chosen to benchmark using a simple BashOperator task with a trivial execution time. The benchmarking configuration was: 4 Celery Workers, PostgreSQL DB, 1 Web Server, 1 Scheduler.
 
@@ -94,11 +94,11 @@ As the above benchmark results show, even a _single_ Airflow 2.0 Scheduler has p
 
 # Horizontal Scalability
 
-Airflow 2.0 Scheduler’s support of an active / active model is also the foundation for horizontal scalability, since the number of Schedulers can be increased beyond two, to whatever is appropriate for the load. 
+Airflow 2.0 Scheduler’s support of an active / active model is also the foundation for horizontal scalability, since the number of Schedulers can be increased beyond two, to whatever is appropriate for the load.
 
 ## Increasing Number of Schedulers
 
-The key benefit of the active / active model is the ability to scale Airflow horizontally by provisioning multiple Schedulers across nodes, much like one maintains a [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) for some collection of Pods in Kubernetes. If the load on one Scheduler increases due to high task volume, a user can now launch additional "replicas" of the Scheduler to increase the throughput of their Airflow Deployment. 
+The key benefit of the active / active model is the ability to scale Airflow horizontally by provisioning multiple Schedulers across nodes, much like one maintains a [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) for some collection of Pods in Kubernetes. If the load on one Scheduler increases due to high task volume, a user can now launch additional "replicas" of the Scheduler to increase the throughput of their Airflow Deployment.
 
 Similarly, users can always reduce the number of schedulers to minimize resource usage as load lessens. Since each Scheduler is “fully active” and identical, there is no downside to scaling down based on the load.
 
@@ -106,7 +106,7 @@ Similarly, users can always reduce the number of schedulers to minimize resource
 
 One of the distributed systems principles followed in the Airflow 2.0 Scheduler is that of _Service Composition_ to enable external tooling to manage the number of Scheduler instances to be run. This was a conscious choice leading to the following architectural decisions:
 
-* Having each Scheduler be complete and _“fully active”_, rather than have a _“leader”_ and other _“followers”_, with differing sets of capabilities. 
+* Having each Scheduler be complete and _“fully active”_, rather than have a _“leader”_ and other _“followers”_, with differing sets of capabilities.
 * Not having internal monitoring of Scheduler instances by other Scheduler instances. This is generally, though not always, implemented by a _“leader election”_ model related to the above.
 * Expecting distributed system tooling to be _“layered”_ on top of Airflow to monitor elements such as task load and task latency, and to easily scale up / down Airflow Schedulers and Workers as needed.
 * Using the metadata database as the shared queue and synchronization mechanism. This has the added benefit of not requiring communication between Scheduler instances and therefore eliminates the need for additional system and network configuration.
@@ -127,7 +127,7 @@ Results for _task throughput_ (metric explained above) using Airflow 2.0 beta bu
 
 ![Airflow Scheduler Task Throughput](../assets/airflow-2-scheduler/scheduler-task-throughput.png)
 
-As the results show, adding Schedulers consistently increases _task throughput_. This enables flexible scale up / scale down of Schedulers based on demand. 
+As the results show, adding Schedulers consistently increases _task throughput_. This enables flexible scale up / scale down of Schedulers based on demand.
 
 ## Deployment Models
 
@@ -143,9 +143,9 @@ However, the most compelling takeaway from the Airflow 2.0 Scheduler is its impl
 
 ## Near Real-time Analytics
 
-Many business problems in domains such as the Internet of Things (IoT), Smart City, Medical telehealth, and Financials require near real-time analytics. This is typically done using micro-batch processing. Micro-batch processing is the practice of collecting and processing data in small groups (“batches”) at high frequency - typically in the order of minutes. 
+Many business problems in domains such as the Internet of Things (IoT), Smart City, Medical telehealth, and Financials require near real-time analytics. This is typically done using micro-batch processing. Micro-batch processing is the practice of collecting and processing data in small groups (“batches”) at high frequency - typically in the order of minutes.
 
-Preventive maintenance is a key IoT use case intended to detect problems in equipment before they occur. This requires analytics based on data being reported by sensors at frequent intervals, measuring values such as temperature. 
+Preventive maintenance is a key IoT use case intended to detect problems in equipment before they occur. This requires analytics based on data being reported by sensors at frequent intervals, measuring values such as temperature.
 
 Fraud detection and Stock market analysis in the Financials industry and patient vitals monitoring as part of telehealth follow similar patterns of needing multiple data points to process in near real-time while taking historical data into account.
 
@@ -160,45 +160,3 @@ The Airflow Scheduler does more than just scheduling of tasks and is well on the
 By introducing horizontal scalability, low task latency and high predictability, the Airflow 2.0 Scheduler builds the foundation for an expanded set of data processing infrastructure, which is critical for reliable artificial intelligence analytic applications.
 
 As members of the Airflow community, we are excited for a new frontier!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
