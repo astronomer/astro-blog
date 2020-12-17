@@ -1,7 +1,7 @@
 ---
 title: The Airflow 2.0 Scheduler
 slug: airflow-2-scheduler
-description: 'A technical deep-dive into Apache Airflow's refactored Scheduler, now faster, more reliable, and infinitely scalable.'
+description: 'A technical deep-dive into Apache Airflow's refactored Scheduler, now significantly faster and ready for scale.'
 heroImagePath: ../assets/nps2560x1600a.jpg
 authors:
   - Vikram Koka
