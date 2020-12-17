@@ -29,6 +29,7 @@ As Apache Airflow grows in adoption, there’s no question that a major release 
 Over the last year, various organizations and leaders within the Airflow Community have been in close collaboration refining the scope of Airflow 2.0 and actively working towards enhancing existing functionality and introducing changes to make Airflow faster, more reliable and more performant at scale.
 
 In preparation for the highly anticipated release, we’ve put together an overview of major Airflow 2.0 features below. We’ll publish a series of followup posts over the next few weeks that dive deeper into some of those changes.
+
 ## Major Features in Airflow 2.0
 
 Airflow 2.0 includes hundreds of features and bug fixes both large and small. Many of the significant improvements were influenced and inspired by feedback from [Airflow's 2019 Community Survey](https://airflow.apache.org/blog/airflow-survey/), which garnered over 300 responses.
