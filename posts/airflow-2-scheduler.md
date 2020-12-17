@@ -22,7 +22,7 @@ Though Airflow task execution has always been scalable, the Airflow Scheduler it
 
 A solution that addresses all three problem areas was originally proposed by the Astronomer team as part of [AIP-15](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=103092651) in February 2020.
 
-With the imminent release for Airflow 2.0, we're delighted to officially announce Airflow's refactored Highly Available Scheduler, and formally share our work with the open-source community.
+With the release of Airflow 2.0, we're delighted to officially announce Airflow's refactored Highly Available Scheduler, and formally share our work with the open-source community.
 
 ## High Availability
 
