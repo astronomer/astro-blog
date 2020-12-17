@@ -117,7 +117,7 @@ We have been using _task throughput_ as the key metric for measuring Airflow sca
 
 To sufficiently test this, without skewing numbers based on the actual task “work” time, we have chosen to benchmark using a simple PythonOperator task with a trivial execution time. The benchmarking configuration was: Celery Workers, PostgreSQL DB, 1 Web Server.
 
-Results for _task throughput_ (metric explained above) using Airflow 2.0 beta builds, run with 5,000 DAGs, each with 10 parallel tasks on a single Airflow deployment. The benchmark was performed on Google Cloud and each Scheduler was run on a [n1-standard-1 machine type](https://cloud.google.com/compute/docs/machine-types#n1_machine_types).
+Results for _task throughput_ (metric explained above) using Airflow 2.0 beta builds, run with 5,000 DAGs, each with 10 parallel tasks on a single Airflow deplosyment. The benchmark was performed on Google Cloud and each Scheduler was run on a [n1-standard-1 machine type](https://cloud.google.com/compute/docs/machine-types#n1\_machine\_types).
 
 | Number of Schedulers  | Number of Workers  | Task Throughput (average)  | Task Throughput (low) | Task Throughput (high) |
 |-----------------------|--------------------|----------------------------|-----------------------|------------------------|
@@ -133,7 +133,7 @@ As the results show, adding Schedulers consistently increases _task throughput_.
 
 A sample Airflow Scheduler HA deployment on a set of Virtual Machines is shown below. The Airflow 1.x deployment model is on the left, with the Airflow 2.0 scalable scheduler deployment model on the right.
 
-![Airflow Scheduler Deployment Model](../assets/airflow-2-scheduler/scheduler-deployment-model.png)s
+![Airflow Scheduler Deployment Model](../assets/airflow-2-scheduler/scheduler-deployment-model.png)
 
 # New Possibilities
 
@@ -160,45 +160,3 @@ The Airflow Scheduler does more than just scheduling of tasks and is well on the
 By introducing horizontal scalability, low task latency and high predictability, the Airflow 2.0 Scheduler builds the foundation for an expanded set of data processing infrastructure, which is critical for reliable artificial intelligence analytic applications.
 
 As members of the Airflow community, we are excited for a new frontier!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
