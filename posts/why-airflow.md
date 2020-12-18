@@ -5,8 +5,10 @@ description: 'Airflow continues to win due to an active and expanding community,
 heroImagePath: ../assets/1573246544-screen-shot-2019-11-08-at-3-55-29-pm.jpg
 authors:
   - Ry Walker
-date: 2020-12-18T12:00:00.000Z
+date: 2019-12-03T00:00:00.000Z
 ---
+
+> This guide was last updated December 2020
 
 Apache Airflow continues to win vs. other workflow orchestration tools due to two main factors:
 
