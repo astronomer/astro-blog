@@ -8,7 +8,7 @@ authors:
 date: 2019-12-03T00:00:00.000Z
 ---
 
-> This guide was last updated December 2020
+> Content updated December 2020
 
 Apache Airflow continues to win vs. other workflow orchestration tools due to two main factors:
 
