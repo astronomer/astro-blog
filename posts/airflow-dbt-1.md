@@ -1,7 +1,7 @@
 ---
 title: 'Building a Scalable Analytics Architecture with Airflow and dbt: Part 1'
 slug: airflow-dbt-1
-description: Implementing a ideal development experience at the intersection of two popular open-source tools, written in collaboration with our friends at Updater.'
+description: Implementing a ideal development experience at the intersection of two popular open-source tools, written in collaboration with our friends at Updater.
 heroImagePath: ../assets/airflow-dbt-1/airflow-dbt-hero.png
 authors:
   - Pete DeJoy
