@@ -30,7 +30,7 @@ To understand the challenges associated with running dbt in the context of Airfl
 
 1. Use a [community-contributed Airflow plugin](https://github.com/dwallace0723/dbt-cloud-plugin/) to farm out execution to dbt Cloud.
 2. Invoke dbt through a `BashOperator`.
-3. Use pre-existing dbt Airflow operators in the [community-contributed `airflow-dbt` python package](https://pypi.org/project/airflow-dbt/).
+3. Use pre-existing dbt Airflow operators in the [community-contributed airflow-dbt python package](https://pypi.org/project/airflow-dbt/).
 
 All of these are perfectly reasonable methods that essentially unlock the same output — the ability to have Airflow call dbt and have dbt run your models for you.
 
