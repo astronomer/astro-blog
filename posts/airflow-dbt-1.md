@@ -1,15 +1,15 @@
 ---
 title: 'Building a Scalable Analytics Architecture with Airflow and dbt: Part One'
-slug: building-a-scalable-analytics-architecture-with-airflow-and-dbt-part-one
-description: 'Building a Scalable Analytics Architecture with Airflow and dbt: Part One'
+slug: airflow-dbt-1
+description: 'Implementing a beautiful experience at the intersection of two popular open-source tools, written in collaboration with our friends at Updater.'
 heroImagePath: ../assets/blank.jpg
 authors:
-  - Pete Dejoy
+  - Pete DeJoy
   - John Lynch
 date: 2020-12-22T23:44:00.000Z
 ---
 
-- Note: All of the code in this post is available in [this Github repository]([https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo)) and can be run locally using the Astronomer CLI.
+> Note: All of the code in this post is available in [this Github repository]([https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo)) and can be run locally using the Astronomer CLI.
 
 ## Editor's Note
 
@@ -17,11 +17,11 @@ At Astronomer, we're often asked how to integrate Apache Airflow with specialize
 
 In chatting with a handful of Astronomer customers who have spent time exploring solutions at the intersection of Airflow and dbt, we discovered that our friends at [Updater](https://updater.com) have built a particularly great experience for authoring, scheduling, and deploying dbt models to their Airflow environment.
 
-The post below is written and contributed by [John Lynch](https://www.linkedin.com/in/john-lynch-31146579/), Senior Data Engineer, and [Flavien Bessede](https://www.linkedin.com/in/flavienbessede/), Data Engineering Manager at Updater. We hope you enjoy.
+With that, we collaborated with [John Lynch](https://www.linkedin.com/in/john-lynch-31146579/), Senior Data Engineer, and [Flavien Bessede](https://www.linkedin.com/in/flavienbessede/), Data Engineering Manager at Updater to turn the brilliant work they've done into this two-part series covering the various approaches, considered limitations, and final output of a team who has put endless thought into building a scalable data architecture at the intersection of dbt and Airflow. We hope you enjoy.
 
 ## Introduction
 
-Here at Updater, we are big fans of [Airflow](http://airflow.apache.org) (running on Astronomer of course) and [dbt](http://getdbt.com). Until recently, however, we've struggled to make them work nicely together. We don't just mean escaping Python dependency hell when trying to install dbt and Airflow in the same environment, but rather the more fundamental problem of figuring out the best way to have Airflow manage and schedule dbt runs at scale.
+At Updater, we are big fans of [Airflow](http://airflow.apache.org) (running on Astronomer of course) and [dbt](http://getdbt.com). Until recently, however, we've struggled to make them work nicely together. We don't just mean escaping Python dependency hell when trying to install dbt and Airflow in the same environment, but rather the more fundamental problem of figuring out the best way to have Airflow manage and schedule dbt runs at scale.
 
  To understand the challenges associated with running dbt in the context of Airflow, we'll start with the [dbt documentation](https://docs.getdbt.com/docs/running-a-dbt-project/running-dbt-in-production/). There, they have three primary suggestions outlining the ways to make dbt and Airflow play nicely together:
 
@@ -79,11 +79,11 @@ dbt_run >> dbt_test
 
 This Airflow DAG has two tasks: (1) a task that runs the `dbt run` command and (2) a subsequent task that runs `dbt test`. We end up with simple workflow that runs and tests a dbt model seamlessly.
 
-![dbt-basic-dag.png](../assets/dbt-airflow-1/dbt-basic-dag.png)
+![Beginner dbt DAG](../assets/dbt-airflow-1/dbt-basic-dag.png)
 
 **That is, until you scale your dbt footprint and your models start failing**.
 
-### The Problem with dbt Failures at Scale
+### The Problem with Model Failures at Scale
 
 When you're just getting started with a small dbt project, a model failure in Airflow isn't much of an issue. As you would debug any other task that isn't executed properly, you can take a peek at your Airflow logs, determine the expected dbt model output, identify the failing model, fix it, deploy your new code, and then rerun your Airflow task to rebuild your dbt models. As your dbt project grows and you want to invoke an increasing number of models, however, things start to get complicated.
 
@@ -95,9 +95,9 @@ As Airflow users may already know, the problem here is that Airflow doesn't know
 
 A natural first step is to try to break down your monolithic dbt Airflow DAG into a collection of smaller DAGs that each run a subset of your dbt models. If you have a `staging` folder and a `marts` folder in your dbt project (as suggested in this [wonderful article](https://discourse.getdbt.com/t/how-we-structure-our-dbt-projects/355) by the dbt folks) you could create two Airflow DAGs: one to run all of your `staging` models by calling `dbt run --models staging` via the `BashOperator` and another to run all of your `marts` models in the same way.
 
-Once you've split up your `dbt run` commands into two separate DAGs, you'll need a way to make sure that all of your `marts` models run *only* *after* all of your `staging` models finish running. To set up interdependency between DAGs in Airflow, you can invoke a `[Sensor](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#sensors)` that waits for your first DAG to finish before it triggers the second.
+Once you've split up your `dbt run` commands into two separate DAGs, you'll need a way to make sure that all of your `marts` models run *only* *after* all of your `staging` models finish running. To set up interdependency between DAGs in Airflow, you can invoke a [Sensor](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#sensors) that waits for your first DAG to finish before it triggers the second.
 
-This approach works decently well, but again — it quickly breaks down at scale. The more models and Airflow DAGs you have to run, the more complicated it becomes to monitor and validate interdependent sensors. Soon enough, your team will begin relying on mental gymnastics to track dependencies between groups of models in each DAG. Moreover, the approach we're outlining here greatly undermines one of dbt's greatest strengths — dependency management. Dbt amazingly allows you to naturally define dependencies between models in code via a `[ref()` function](https://docs.getdbt.com/reference/dbt-jinja-functions/ref/) and then takes care of running everything in the right order under the hood. If we leverage the setup described above with multiple Airflow DAGs running their own subgroups of models, we inadvertently waste cycles worrying about the order of our tasks without taking advantage of core dbt functionality to alleviate that very problem.
+This approach works decently well, but again — it quickly breaks down at scale. The more models and Airflow DAGs you have to run, the more complicated it becomes to monitor and validate interdependent sensors. Soon enough, your team will begin relying on mental gymnastics to track dependencies between groups of models in each DAG. Moreover, the approach we're outlining here greatly undermines one of dbt's greatest strengths — dependency management. Dbt amazingly allows you to naturally define dependencies between models in code via a [`ref()` function](https://docs.getdbt.com/reference/dbt-jinja-functions/ref/) and then takes care of running everything in the right order under the hood. If we leverage the setup described above with multiple Airflow DAGs running their own subgroups of models, we inadvertently waste cycles worrying about the order of our tasks without taking advantage of core dbt functionality to alleviate that very problem.
 
 ## A Better Better Way
 
@@ -202,19 +202,19 @@ for node in data["nodes"].keys():
                 dbt_tasks[upstream_node] >> dbt_tasks[node]
 ```
 
-- If you would like to try  this DAG with your own dbt project in a local Airflow setup, clone [the accompanying sample repo]([https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo)) and follow the steps listed there.
-    1. Clone [this repository]
-    2. Download the Astro CLI and run Docker
-    3. Replace the `manifest.json` file in the project with your own
-    4. Run `astro dev start`
+> If you would like to try  this DAG with your own dbt project in a local Airflow setup, clone [the accompanying sample repo]([https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo)) and follow the steps listed there.
+>    1. Clone [this repository]
+>    2. Download the Astro CLI and run Docker
+>    3. Replace the `manifest.json` file in the project with your own
+>    4. Run `astro dev start`
 
-    You then should see a local Airflow webserver at `[localhost:8080](http://localhost:8080)` with a rendering of your dbt DAG
+You then should see a local Airflow webserver at [`localhost:8080`](http://localhost:8080) with a rendering of your dbt DAG
 
 This DAG definition reads the `manifest.json` file from local storage via the `load_manifest()` function and then loops through the nodes of the manifest file to create an Airflow task that either runs or tests a single dbt model. The final bit then loops through each node again, reads the dependencies from the manifest file for each node, and then sets the correct dependencies between the Airflow tasks (e.g. `dbt_tasks[upstream_node] >> dbt_tasks[node]`). 
 
 When deployed, this DAG will look something like this, pending what's in your manfiest:
 
-![dbt-advance-dag.png](../assets/dbt-airflow-1/dbt-advance-dag.png)
+![Advanced dbt DAG](../assets/dbt-airflow-1/dbt-advance-dag.png)
 
 In short, this DAG file will read your `manifest.json` file, parse it, create the necessary `BashOperator` Airflow tasks, and then set the dependencies to match those of your dbt project. The end result is that each model in your dbt project maps to two tasks in your Airflow DAG — one task to run the model and another task to run the tests associated with that model. To top it all off, all of these models will run in the appropriate order thanks to the task dependencies we've set.
 
