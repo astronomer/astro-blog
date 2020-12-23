@@ -194,7 +194,7 @@ for node in data["nodes"].keys():
     if node.split(".")[0] == "model":
 
         # Set dependency to run tests on a model after model runs finishes
-        node_test = node.replace("model", "test")
+        node_test = node.**replace**("model", "test")
         dbt_tasks[node] >> dbt_tasks[node_test]
 
         # Set all model -> model dependencies
