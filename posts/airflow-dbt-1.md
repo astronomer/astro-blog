@@ -213,7 +213,7 @@ for node in data["nodes"].keys():
 > 
 > You then should see a local Airflow webserver at [`localhost:8080`](http://localhost:8080) with a rendering of your dbt DAG.
 
-This DAG definition reads the `manifest.json` file from local storage via the `load_manifest()` function and then loops through the nodes of the manifest file to create an Airflow task that either runs or tests a single dbt model. The final bit then loops through each node again, reads the dependencies from the manifest file for each node, and then sets the correct dependencies between the Airflow tasks (e.g. `dbt_tasks[upstream_node] >> dbt_tasks[node]`). 
+This DAG definition reads the `manifest.json` file from local storage via the `load_manifest()` function and then loops through the nodes of the manifest file to create an Airflow task that either runs or tests a single dbt model. The final bit then loops through each node again, reads the dependencies from the manifest file for each node, and then sets the correct dependencies between the Airflow tasks (e.g. `dbt_tasks[upstream_node] >> dbt_tasks[node]`).
 
 When deployed, this DAG will look something like this, pending what's in your manfiest:
 
@@ -229,4 +229,4 @@ At this point, we have identified and built a great DAG authoring experience at 
 - How do we handle models that need to have different schedule intervals?
 - How can we leverage our dbt transformation layer in the broader context of an ELT pipeline?
 
-In part 2 of this post, we'll explore answers to these questions and take this authoring experience into a production-ready setup that answers the above questions.
+In the next part of this series, we'll explore answers to these questions and dig into a few creative ways to take this authoring experience into a production-ready setup. Stay tuned...
