@@ -211,7 +211,7 @@ for node in data["nodes"].keys():
 >    3. Replace the `manifest.json` file in the project with your own
 >    4. Run `astro dev start`
 
-You then should see a local Airflow webserver at [`localhost:8080`](http://localhost:8080) with a rendering of your dbt DAG
+You then should see a local Airflow webserver at [`localhost:8080`](http://localhost:8080) with a rendering of your dbt DAG.
 
 This DAG definition reads the `manifest.json` file from local storage via the `load_manifest()` function and then loops through the nodes of the manifest file to create an Airflow task that either runs or tests a single dbt model. The final bit then loops through each node again, reads the dependencies from the manifest file for each node, and then sets the correct dependencies between the Airflow tasks (e.g. `dbt_tasks[upstream_node] >> dbt_tasks[node]`). 
 
