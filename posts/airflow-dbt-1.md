@@ -1,11 +1,12 @@
 ---
-title: 'Building a Scalable Analytics Architecture with Airflow and dbt: Part One'
+title: 'Building a Scalable Analytics Architecture with Airflow and dbt: Part 1'
 slug: airflow-dbt-1
 description: 'Implementing a beautiful experience at the intersection of two popular open-source tools, written in collaboration with our friends at Updater.'
 heroImagePath: ../assets/blank.jpg
 authors:
   - Pete DeJoy
   - John Lynch
+  - Flavien Bessede
 date: 2020-12-22T23:44:00.000Z
 ---
 
@@ -21,9 +22,9 @@ With that, we collaborated with [John Lynch](https://www.linkedin.com/in/john-ly
 
 ## Introduction
 
-At Updater, we are big fans of [Airflow](http://airflow.apache.org) (running on Astronomer of course) and [dbt](http://getdbt.com). Until recently, however, we've struggled to make them work nicely together. We don't just mean escaping Python dependency hell when trying to install dbt and Airflow in the same environment, but rather the more fundamental problem of figuring out the best way to have Airflow manage and schedule dbt runs at scale.
+At Updater, we're big fans of [Airflow](http://airflow.apache.org) (running on Astronomer of course) and [dbt](http://getdbt.com). Until recently, however, we've struggled to integrate the two in a way that accommodates all of our requirements; this doesn't just entail escaping Python dependency hell when trying to install dbt and Airflow in the same environment, but rather the more fundamental problem of figuring out the best way to have Airflow manage and schedule dbt runs at scale.
 
- To understand the challenges associated with running dbt in the context of Airflow, we'll start with the [dbt documentation](https://docs.getdbt.com/docs/running-a-dbt-project/running-dbt-in-production/). There, they have three primary suggestions outlining the ways to make dbt and Airflow play nicely together:
+To understand the challenges associated with running dbt in the context of Airflow, we'll start from first principles with the [dbt documentation](https://docs.getdbt.com/docs/running-a-dbt-project/running-dbt-in-production/). There, they have three primary suggestions outlining the ways to make dbt and Airflow play nicely together:
 
 1. Use a [community-contributed Airflow plugin](https://github.com/dwallace0723/dbt-cloud-plugin/) to farm out execution to dbt Cloud.
 2. Invoke dbt through a `BashOperator`.
@@ -218,7 +219,7 @@ When deployed, this DAG will look something like this, pending what's in your ma
 
 In short, this DAG file will read your `manifest.json` file, parse it, create the necessary `BashOperator` Airflow tasks, and then set the dependencies to match those of your dbt project. The end result is that each model in your dbt project maps to two tasks in your Airflow DAG — one task to run the model and another task to run the tests associated with that model. To top it all off, all of these models will run in the appropriate order thanks to the task dependencies we've set.
 
-## Next Steps
+## Looking Ahead
 
 At this point, we have identified and built a great DAG authoring experience at the intersection of dbt and Airflow, but there are still a few outstanding questions:
 
