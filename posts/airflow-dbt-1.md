@@ -32,9 +32,9 @@ To understand the challenges associated with running dbt in the context of Airfl
 2. Invoke dbt through a `BashOperator`.
 3. Use pre-existing dbt Airflow operators in the [community-contributed airflow-dbt python package](https://pypi.org/project/airflow-dbt/).
 
-All of these are perfectly reasonable methods that essentially unlock the same output — the ability to have Airflow call dbt and have dbt run your models for you.
+All of these are perfectly reasonable methods that essentially unlock the same output: the ability to have Airflow call dbt and have dbt run your models for you.
 
-Given that we weren't interested in adopting dbt Cloud and wanted full control over our fundamental logic, we ended up going for Option 2. If you are just getting started with dbt and Airflow, invoking dbt through a `BashOperator` may not be initially clear. Once you have a handle on the basics, however, it's refreshingly simple. In Airflow, a task that invokes the `BashOperator` simply executes a shell command. Because the primary dbt interface is the command line, the `BashOperator` proves to be a useful tool to interact with it. The familiar `dbt run` or `dbt test` commands can be executed directly in Airflow the same way they would be executed from any other localized environment.
+Given that we wanted full control over our fundamental logic, we ended up going for Option 2. If you are just getting started with dbt and Airflow, invoking dbt through a `BashOperator` may not be conceptually clear. Once you have a handle on the basics, however, it's refreshingly simple; in Airflow, a task that invokes the `BashOperator` simply executes a shell command. Because the primary dbt interface is the command line, the `BashOperator` proves to be a useful tool to interact with it. The familiar `dbt run` or `dbt test` commands can be executed directly in Airflow the same way they would be executed from any other localized environment.
 
 A simple DAG that invokes these baseline commands with the `BashOperator` would look something like the following:
 
@@ -88,11 +88,11 @@ We end up with simple workflow that runs and tests a dbt model seamlessly. **Tha
 
 ### Growing Pains
 
-When you're just getting started with a small dbt project, a model failure in Airflow isn't much of an issue. As you would debug any other task that isn't executed properly, you can take a peek at your Airflow logs, determine the expected dbt model output, identify the failing model, fix it, deploy your new code, and then rerun your Airflow task to rebuild your dbt models. As your dbt project grows and you want to invoke an increasing number of models, however, things start to get complicated.
+When you're just getting started with a small dbt project, a model failure in Airflow isn't much of an issue and you can debug it the same way you'd handle troubleshooting any other Airflow: by taking a peek at your Airflow logs, determining the expected dbt model output, identifying the failing model, fixing it, deploying your new code, and then re-running your Airflow task to rebuild your dbt models. As your dbt project grows and you want to invoke an increasing number of models, however, things start to get complicated.
 
 To contextualize this complication, let's explore a case in which you would like to execute and test 50 dbt models on a daily basis using the DAG we defined above. As you monitor the status of your daily DAG (which now takes 2 hours to run because it needs to execute these 50 models) and hope for success , you get a dreaded Airflow task failure slack notification *just* as the DAG is about to finish running. You jump through the usual hoops of looking through Airflow logs and you notice that the _final_ model in your workflow failed because you accidentally merged in some broken code. You fix the code and deploy it, but you soon realize that rerunning a single `BashOperator` Airflow task will not only rerun your broken model, but it will also rerun entire dbt project! And thus, you instead re-run your model and find yourself waiting for another two hours, praying for success once again.
 
-As Airflow users may already know, the problem here is that Airflow doesn't know anything about your dbt DAG. The `dbt run` task is just some arbitrary shell command that happens to take a very long time to run. Because Airflow only knows how to interact with dbt through huge monolithic tasks, it's challenging to actually take advantage of Airflow's great scheduling and retry features within the context of dbt modeling.
+As Airflow users may already know, the problem here is that Airflow doesn't know anything about your dbt DAG. As far as Airflow is concerned, the `dbt run` task is just some arbitrary shell command that happens to take a very long time to run. Because Airflow only knows how to interact with dbt through huge monolithic tasks in this model, it's challenging to actually take advantage of Airflow's great scheduling and retry features within the context of dbt modeling.
 
 ## A Better Way
 
