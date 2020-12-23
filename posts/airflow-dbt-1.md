@@ -1,7 +1,7 @@
 ---
 title: 'Building a Scalable Analytics Architecture with Airflow and dbt: Part 1'
 slug: airflow-dbt-1
-description: 'Implementing a beautiful experience at the intersection of two popular open-source tools, written in collaboration with our friends at Updater.'
+description: 'Implementing a ideal development experience at the intersection of two popular open-source tools, written in collaboration with our friends at Updater.'
 heroImagePath: ../assets/blank.jpg
 authors:
   - Pete DeJoy
@@ -44,8 +44,6 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.utils.dates import days_ago
 from airflow.utils.dates import timedelta
 
-# These args will get passed on to each operator
-# You can override them on a per-task basis during operator initialization
 default_args = {
     'owner': 'astronomer',
     'depends_on_past': False,
@@ -80,7 +78,7 @@ dbt_run >> dbt_test
 
 This Airflow DAG has two tasks: (1) a task that runs the `dbt run` command and (2) a subsequent task that runs `dbt test`. We end up with simple workflow that runs and tests a dbt model seamlessly.
 
-![Beginner dbt DAG](../assets/dbt-airflow-1/dbt-basic-dag.png)
+![Beginner dbt DAG](../assets/airflow-dbt-1/dbt-basic-dag.png)
 
 **That is, until you scale your dbt footprint and your models start failing**.
 
@@ -100,7 +98,7 @@ Once you've split up your `dbt run` commands into two separate DAGs, you'll need
 
 This approach works decently well, but again — it quickly breaks down at scale. The more models and Airflow DAGs you have to run, the more complicated it becomes to monitor and validate interdependent sensors. Soon enough, your team will begin relying on mental gymnastics to track dependencies between groups of models in each DAG. Moreover, the approach we're outlining here greatly undermines one of dbt's greatest strengths — dependency management. Dbt amazingly allows you to naturally define dependencies between models in code via a [`ref()` function](https://docs.getdbt.com/reference/dbt-jinja-functions/ref/) and then takes care of running everything in the right order under the hood. If we leverage the setup described above with multiple Airflow DAGs running their own subgroups of models, we inadvertently waste cycles worrying about the order of our tasks without taking advantage of core dbt functionality to alleviate that very problem.
 
-## A Better Better Way
+## A Better, Better Way
 
 Given the barriers we encountered running dbt with Airflow at scale, we at Updater went back to the drawing board to consider more robust alternative solutions. After watching and participating in [a few dbt talks](https://www.youtube.com/watch?v=2xVjlOMMZFY), we determined that recreating the dbt DAG in Airflow might be a solution to all of our problems. If we create an *individual Airflow task* to run each and every dbt model, we would get the scheduling, retry logic, and dependency graph of an Airflow DAG with the transformative power of dbt.
 
@@ -215,7 +213,7 @@ This DAG definition reads the `manifest.json` file from local storage via the `l
 
 When deployed, this DAG will look something like this, pending what's in your manfiest:
 
-![Advanced dbt DAG](../assets/dbt-airflow-1/dbt-advanced-dag.png)
+![Advanced dbt DAG](../assets/airflow-dbt-1/dbt-advanced-dag.png)
 
 In short, this DAG file will read your `manifest.json` file, parse it, create the necessary `BashOperator` Airflow tasks, and then set the dependencies to match those of your dbt project. The end result is that each model in your dbt project maps to two tasks in your Airflow DAG — one task to run the model and another task to run the tests associated with that model. To top it all off, all of these models will run in the appropriate order thanks to the task dependencies we've set.
 
