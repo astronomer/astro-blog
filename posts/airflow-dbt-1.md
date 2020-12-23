@@ -20,6 +20,8 @@ In chatting with a handful of Astronomer customers who have spent time exploring
 
 With that, we collaborated with [John Lynch](https://www.linkedin.com/in/john-lynch-31146579/), Senior Data Engineer, and [Flavien Bessede](https://www.linkedin.com/in/flavienbessede/), Data Engineering Manager at Updater to turn the brilliant work they've done into this two-part series covering the various approaches, considered limitations, and final output of a team who has put endless thought into building a scalable data architecture at the intersection of dbt and Airflow. We hope you enjoy.
 
+<hr/>
+
 ## Introduction
 
 At Updater, we're big fans of [Airflow](http://airflow.apache.org) (running on Astronomer of course) and [dbt](http://getdbt.com). Until recently, however, we've struggled to integrate the two in a way that accommodates all of our requirements; this doesn't just entail escaping Python dependency hell when trying to install dbt and Airflow in the same environment, but rather the more fundamental problem of figuring out the best way to have Airflow manage and schedule dbt runs at scale.
@@ -57,7 +59,7 @@ default_args = {
 dag = DAG(
     'dbt_dag',
     default_args=default_args,
-    description='An Airflow DAG to invoke D',
+    description='An Airflow DAG to invoke simple dbt commands',
     schedule_interval=timedelta(days=1),
 )
 
@@ -76,17 +78,19 @@ dbt_test = BashOperator(
 dbt_run >> dbt_test
 ```
 
-This Airflow DAG has two tasks: (1) a task that runs the `dbt run` command and (2) a subsequent task that runs `dbt test`. We end up with simple workflow that runs and tests a dbt model seamlessly.
+This Airflow DAG has two tasks:
+1. A task that runs the `dbt run` command.
+2. A subsequent task that runs `dbt test`. 
 
 ![Beginner dbt DAG](../assets/airflow-dbt-1/dbt-basic-dag.png)
 
-**That is, until you scale your dbt footprint and your models start failing**.
+We end up with simple workflow that runs and tests a dbt model seamlessly. **That is, until you scale your dbt footprint and your models start failing**.
 
-### The Problem with Model Failures at Scale
+### Growing Pains
 
 When you're just getting started with a small dbt project, a model failure in Airflow isn't much of an issue. As you would debug any other task that isn't executed properly, you can take a peek at your Airflow logs, determine the expected dbt model output, identify the failing model, fix it, deploy your new code, and then rerun your Airflow task to rebuild your dbt models. As your dbt project grows and you want to invoke an increasing number of models, however, things start to get complicated.
 
-To contextualize this complication, let's explore a case in which you would like to execute and test 50 dbt models on a daily basis using the DAG we defined above. As you monitor the status of your daily DAG (which now takes 2 hours to run because it needs to execute these 50 models) and hope for success , you get a dreaded Airflow task failure slack notification *just* as the DAG is about to finish running. You jump through the usual hoops of looking through Airflow logs and you notice it was your final model that failed because you accidentally merged in some broken code. You fix the code and deploy it, but you soon realize that rerunning a single `BashOperator` Airflow task will not only rerun your broken model, but it will also rerun entire dbt project! And thus, you instead re-run your model and find yourself waiting for another two hours, praying for success once again.
+To contextualize this complication, let's explore a case in which you would like to execute and test 50 dbt models on a daily basis using the DAG we defined above. As you monitor the status of your daily DAG (which now takes 2 hours to run because it needs to execute these 50 models) and hope for success , you get a dreaded Airflow task failure slack notification *just* as the DAG is about to finish running. You jump through the usual hoops of looking through Airflow logs and you notice that the _final_ model in your workflow failed because you accidentally merged in some broken code. You fix the code and deploy it, but you soon realize that rerunning a single `BashOperator` Airflow task will not only rerun your broken model, but it will also rerun entire dbt project! And thus, you instead re-run your model and find yourself waiting for another two hours, praying for success once again.
 
 As Airflow users may already know, the problem here is that Airflow doesn't know anything about your dbt DAG. The `dbt run` task is just some arbitrary shell command that happens to take a very long time to run. Because Airflow only knows how to interact with dbt through huge monolithic tasks, it's challenging to actually take advantage of Airflow's great scheduling and retry features within the context of dbt modeling.
 
@@ -123,10 +127,10 @@ from airflow.utils.dates import days_ago
 from airflow.utils.dates import timedelta
 
 default_args = {
-    'owner': 'pete',
+    'owner': 'astronomer',
     'depends_on_past': False,
     'start_date': days_ago(2),
-    'email': ['[pete@astronomer.io'],
+    'email': ['noreply@astronomer.io'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
