@@ -100,7 +100,7 @@ A natural first step is to try to break down your monolithic dbt Airflow DAG int
 
 Once you've split up your `dbt run` commands into two separate DAGs, you'll need a way to make sure that all of your `marts` models run *only* *after* all of your `staging` models finish running. To set up interdependency between DAGs in Airflow, you can invoke a [Sensor](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#sensors) that waits for your first DAG to finish before it triggers the second.
 
-This approach works decently well, but again — it quickly breaks down at scale. The more models and Airflow DAGs you have to run, the more complicated it becomes to monitor and validate interdependent sensors. Soon enough, your team will begin relying on mental gymnastics to track dependencies between groups of models in each DAG. Moreover, the approach we're outlining here greatly undermines one of dbt's greatest strengths — dependency management. Dbt amazingly allows you to naturally define dependencies between models in code via a [`ref()` function](https://docs.getdbt.com/reference/dbt-jinja-functions/ref/) and then takes care of running everything in the right order under the hood. If we leverage the setup described above with multiple Airflow DAGs running their own subgroups of models, we inadvertently waste cycles worrying about the order of our tasks without taking advantage of core dbt functionality to alleviate that very problem.
+This approach works decently well, but again it quickly breaks down at scale. The more models and Airflow DAGs you have to run, the more complicated it becomes to monitor and validate interdependent sensors. Soon enough, your team will begin relying on mental gymnastics to track dependencies between groups of models in each DAG. Moreover, the approach we're outlining here greatly undermines one of dbt's greatest strengths: model dependency management. Dbt amazingly allows you to naturally define dependencies between models in code via a [`ref()` function](https://docs.getdbt.com/reference/dbt-jinja-functions/ref/) and then takes care of running everything in the right order under the hood. If we leverage the setup described above with multiple Airflow DAGs running their own subgroups of models, we inadvertently waste cycles worrying about the order of our tasks without taking advantage of core dbt functionality to alleviate that very problem.
 
 ## A Better, Better Way
 
@@ -112,8 +112,8 @@ In order to make this approach work, however, we had to dig into how dbt works u
 
 With this file in hand, the path to our desired experience becomes more clear:
 
-1. Define a dbt DAG that reads and parses `manifest.json` 
-2. Create a series of Airflow  `BashOperator`  tasks that run the appropriate `run` and `test` commands for a dbt model and use the information contained in `manifest.json` to set the correct dependencies between tasks
+1. Define a dbt DAG that reads and parses `manifest.json` .
+2. Create a series of Airflow  `BashOperator`  tasks that run the appropriate `run` and `test` commands for a dbt model and use the information contained in `manifest.json` to set the correct dependencies between tasks.
 
 Assuming that your `manifest.json` is available at `dags/dbt/target/manifest.json` in your Airflow project, the following DAG file will generate the dbt DAG on your behalf.
 
@@ -205,17 +205,12 @@ for node in data["nodes"].keys():
                 dbt_tasks[upstream_node] >> dbt_tasks[node]
 ```
 
-> If you would like to try  this DAG with your own dbt project in a local Airflow setup, clone [the accompanying sample repo]([https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo)) and follow the steps listed there.
->    1. Clone [this repository]
->    2. Download the Astro CLI and run Docker
->    3. Replace the `manifest.json` file in the project with your own
->    4. Run `astro dev start`
-> 
-> You then should see a local Airflow webserver at [`localhost:8080`](http://localhost:8080) with a rendering of your dbt DAG.
+> If you would like to try  this DAG with your own dbt project in a local Airflow setup, clone [the accompanying sample repo]([https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo), add your own manifest file, and follow the steps in that repo to spin up a local Airflow environment with the Astro CLI.
+
 
 This DAG definition reads the `manifest.json` file from local storage via the `load_manifest()` function and then loops through the nodes of the manifest file to create an Airflow task that either runs or tests a single dbt model. The final bit then loops through each node again, reads the dependencies from the manifest file for each node, and then sets the correct dependencies between the Airflow tasks (e.g. `dbt_tasks[upstream_node] >> dbt_tasks[node]`).
 
-When deployed, this DAG will look something like this, pending what's in your manfiest:
+When running, this DAG will look something like this, pending what's in your manfiest:
 
 ![Advanced dbt DAG](../assets/airflow-dbt-1/dbt-advanced-dag.png)
 
