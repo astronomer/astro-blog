@@ -215,7 +215,7 @@ This DAG definition reads the `manifest.json` file from local storage via the `l
 
 When deployed, this DAG will look something like this, pending what's in your manfiest:
 
-![Advanced dbt DAG](../assets/dbt-airflow-1/dbt-advance-dag.png)
+![Advanced dbt DAG](../assets/dbt-airflow-1/dbt-advanced-dag.png)
 
 In short, this DAG file will read your `manifest.json` file, parse it, create the necessary `BashOperator` Airflow tasks, and then set the dependencies to match those of your dbt project. The end result is that each model in your dbt project maps to two tasks in your Airflow DAG — one task to run the model and another task to run the tests associated with that model. To top it all off, all of these models will run in the appropriate order thanks to the task dependencies we've set.
 
