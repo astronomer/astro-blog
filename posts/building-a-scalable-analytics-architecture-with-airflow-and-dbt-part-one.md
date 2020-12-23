@@ -79,7 +79,7 @@ dbt_run >> dbt_test
 
 This Airflow DAG has two tasks: (1) a task that runs the `dbt run` command and (2) a subsequent task that runs `dbt test`. We end up with simple workflow that runs and tests a dbt model seamlessly.
 
-![dbt-advance-dag.png](../assets/dbt-airflow-1/dbt-advance-dag.png)
+![dbt-basic-dag.png](../assets/dbt-airflow-1/dbt-basic-dag.png)
 
 **That is, until you scale your dbt footprint and your models start failing**.
 
@@ -214,7 +214,7 @@ This DAG definition reads the `manifest.json` file from local storage via the `l
 
 When deployed, this DAG will look something like this, pending what's in your manfiest:
 
-![dbt-basic-dag.png](../assets/dbt-airflow-1/dbt-basic-dag.png)
+![dbt-advance-dag.png](../assets/dbt-airflow-1/dbt-advance-dag.png)
 
 In short, this DAG file will read your `manifest.json` file, parse it, create the necessary `BashOperator` Airflow tasks, and then set the dependencies to match those of your dbt project. The end result is that each model in your dbt project maps to two tasks in your Airflow DAG — one task to run the model and another task to run the tests associated with that model. To top it all off, all of these models will run in the appropriate order thanks to the task dependencies we've set.
 
