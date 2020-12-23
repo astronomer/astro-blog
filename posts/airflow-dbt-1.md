@@ -205,7 +205,7 @@ for node in data["nodes"].keys():
                 dbt_tasks[upstream_node] >> dbt_tasks[node]
 ```
 
-> If you would like to try  this DAG with your own dbt project in a local Airflow setup, clone [the accompanying sample repo]([https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo), add your own manifest file, and follow the steps in that repo to spin up a local Airflow environment with the Astro CLI.
+> If you would like to try  this DAG with your own dbt project in a local Airflow setup, clone [the accompanying sample repo](https://github.com/astronomer/airflow-dbt-demo), add your own manifest file, and follow the steps in that repo to spin up a local Airflow environment with the Astro CLI.
 
 
 This DAG definition reads the `manifest.json` file from local storage via the `load_manifest()` function and then loops through the nodes of the manifest file to create an Airflow task that either runs or tests a single dbt model. The final bit then loops through each node again, reads the dependencies from the manifest file for each node, and then sets the correct dependencies between the Airflow tasks (e.g. `dbt_tasks[upstream_node] >> dbt_tasks[node]`).
