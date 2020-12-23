@@ -10,7 +10,7 @@ authors:
 date: 2020-12-22T23:44:00.000Z
 ---
 
-> **Note:** All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
+> **Note:** All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
 
 ## Editor's Note
 
