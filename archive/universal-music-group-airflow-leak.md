@@ -7,7 +7,7 @@ authors:
   - Ben Gregory
 date: 2018-05-31T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Yesterday, BleepingComputer [published an article](https://www.bleepingcomputer.com/news/security/contractor-exposes-credentials-for-universal-music-groups-it-infrastructure/) on Universal Music Group's implementation of Airflow and subsequent credential leak. We wanted to take a second to talk about some Airflow best practices that could have avoided this situation and provide some commentary on how Airflow is described. 
 
 ## Exposing Credentials in the DAG File

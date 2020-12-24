@@ -7,7 +7,7 @@ authors:
   - Kevin Mackey
 date: 2017-05-23T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Remember Allen Iverson’s, “We talking ‘bout practice” rant? Iverson, irate at the gall of a reporter to question how his in-game performance may have resulted from lackluster effort in practice, sounded off, the jarring undercurrent asking, “Who cares about preparation so long as you execute when it counts?”
 
   

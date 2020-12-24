@@ -7,7 +7,7 @@ authors:
   - R. Brad Kirn
 date: 2016-03-02T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->s
  **_“It’s really about the basics; understanding your customer, taking care of your customer, practicing blocking and tackling…” -_ Warren Buffett**
 
 In the startup world, it's said that the best way to get started is to **just start**. I could not agree more. Just start running, get a stride, and...well, smash into&nbsp;a million obstacles, earn&nbsp;a million small wins, climb&nbsp;peaks, descend into valleys and, ultimately, you realize that building a company is much more difficult than you once thought :)
@@ -26,7 +26,7 @@ On the surface, it seems like the initial target&nbsp;customer (beachhead) just 
 
 _ **"Who has a real enough problem that they would pay you to solve it?"** _
 
-Even though we've existed for less than a year, we've already had quite the journey to identify and learn from (and eventually sell to) our target customers. Our initial target customer was the developer. Astronomer is built by developers, for developers, so we assumed devs must be the target, customer, and the buyer. Why?&nbsp;Astronomer makes it easy to connect to any data source, which is a task that generally resides in IT. It's also completely configurable, which is somethign devs greatly desire when working with platforms.
+Even though we've existed for less than a year, we've already had quite the journey to identify and learn from (and eventually sell to) our target customers. Our initial target customer was the developer. Astronomer is built by developers, for developers, so we assumed devs must be the target, customer, and the buyer. Why?&nbsp;Astronomer makes it easy to connect to any data source, which is a task that generally resides in IT. It's also completely configurable, which is something devs greatly desire when working with platforms.
 
 It made sense that devs were our target so, practicing what I preach, I started talking to people - developers, VPs of IT, CTOs - in an attempt to learn as much as I can about their day-to-day and problems they face. Most of the time, they would divulge their experience with the problem we're solving, which was great because, not only were we learning from our target, we were also filling the pipeline with qualified leads.
 

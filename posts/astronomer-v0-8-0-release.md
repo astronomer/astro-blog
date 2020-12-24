@@ -24,7 +24,7 @@ We've implemented an Elasticsearch task handler in Airflow and added an EFK stac
 
 ![logging](../assets/logging.jpg)
 
-If you are an Astronomer Enterprise customer, you'll also have access to a Kibana dashbord to search logs across all of your Airflow deployments and create your own dashboards:
+If you are an Astronomer Enterprise customer, you'll also have access to a Kibana dashboard to search logs across all of your Airflow deployments and create your own dashboards:
 
 ![logging](../assets/kibana.jpg)
  

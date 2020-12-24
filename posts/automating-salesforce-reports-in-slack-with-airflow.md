@@ -7,12 +7,12 @@ authors:
   - Ben Gregory
 date: 2017-09-07T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 At Astronomer, we compile and share a daily sales/marketing report (the names and data here have been changed). This requires looking at seven custom reports in Salesforce, pasting that data into a Google Sheet and taking a screenshot dropping it into a Slack channel. If the person who does that work is out on any given day, the report just doesn’t get built. Most companies have hundreds of processes like this that affect every aspect of their business. 
 
 ![1505408880-screen-shot-2017-09-06-at-4-26-53-pm-copy-2.jpg](../assets/1505408880-screen-shot-2017-09-06-at-4-26-53-pm-copy-2.jpg)
 
-Given how manual and error-prone this process could become, we decided to automate it (that’s what we do: streamline data engineering!) using a combination of the Salesforce API, Amazon Redshift, Airflow and Slack. In this tutorial, we’ll walk you through the steps and considerations we took to generate this report. [To follow along for yourself, view all the code in GitHub.](http://github.com/astronomerio/example-dags/blob/master/salesforce_to_slack/salesforce_to_redshift.py)
+Given how manual and error-prone this process could become, we decided to automate it (that’s what we do: streamline data engineering!) using a combination of the Salesforce API, Amazon Redshift, Airflow and Slack. In this tutorial, we’ll walk you through the steps and considerations we took to generate this report.
 
 *Note: this is not the most concise or advanced way of showing this process, but was done to illustrate a basic introduction to Airflow.
 
@@ -42,7 +42,7 @@ But to get the full picture, let’s walk through what’s happening in this DAG
 
 ![1505408991-screen-shot-2017-09-06-at-6-11-32-pm.jpg](../assets/1505408991-screen-shot-2017-09-06-at-6-11-32-pm.jpg)
 
-Our “kick_off_dag” operator is just a Dummy Operator.As the Airflow [documentation](https://pythonhosted.org/airflow/code.html#airflow.operators.DummyOperator) says, it “does literally nothing.” But it is useful for grouping tasks and when starting a new project, setting the schedule to “@once” and restarting your DAG by clearing all downstream of this Dummy Operator in a single click rather than individually restarting 10 or 20 separate tasks can be very helpful. Dummy Operators are also useful when needing to provide a stoppage point to block downstream tasks. The downside to using a Dummy Operator in this way is that if all the operators upstream of it (the ones with a “get_” prefix) don’t end successfully, then this task and all downstream of it will fail. A slightly more advanced alternative is to use the [Short Circuit Operator](https://pythonhosted.org/airflow/code.html#airflow.operators.ShortCircuitOperator), which will set all downstream tasks to “skipped” instead of “failed” if certain criteria are not met.
+Our “kick_off_dag” operator is just a Dummy Operator. As the Airflow [documentation](https://airflow.apache.org/docs/apache-airflow/1.10.11/_modules/airflow/operators/dummy_operator.html) says, it “does literally nothing.” But it is useful for grouping tasks and when starting a new project, setting the schedule to “@once” and restarting your DAG by clearing all downstream of this Dummy Operator in a single click rather than individually restarting 10 or 20 separate tasks can be very helpful. Dummy Operators are also useful when needing to provide a stoppage point to block downstream tasks. The downside to using a Dummy Operator in this way is that if all the operators upstream of it (the ones with a “get_” prefix) don’t end successfully, then this task and all downstream of it will fail. A slightly more advanced alternative is to use the [Short Circuit Operator](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/operators/python_operator/index.html), which will set all downstream tasks to “skipped” instead of “failed” if certain criteria are not met.
 
 Once the DAG is built, it’s time to kick it off.
 
@@ -62,11 +62,11 @@ We’re using the [simple-salesforce](https://github.com/simple-salesforce/simpl
 
 ![1505409191-screen-shot-2017-09-06-at-6-46-23-pm.jpg](../assets/1505409191-screen-shot-2017-09-06-at-6-46-23-pm.jpg)
 
-After that, the records are written as separate JSON files to S3 using the load_file() method from the [s3Hook](https://airflow.apache.org/docs/apache-airflow/stable/_modules/airflow/hooks/S3_hook.html). As we’re using Astronomer (where all tasks run in isolated Docker containers that are destroyed after completion), we don’t care about the local persistence of the file so we’re just using the NamedTemporaryFile method from Python’s tempfile library.
+After that, the records are written as separate JSON files to S3 using the load_file() method from the [s3Hook](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/operators/s3_file_transform_operator/index.html). As we’re using Astronomer (where all tasks run in isolated Docker containers that are destroyed after completion), we don’t care about the local persistence of the file so we’re just using the NamedTemporaryFile method from Python’s tempfile library.
 
 ![1505409228-screen-shot-2017-09-06-at-7-00-30-pm.jpg](../assets/1505409228-screen-shot-2017-09-06-at-7-00-30-pm.jpg)
 
-From S3, they are then COPIED into our Redshift using the [PostgresOperator](https://pythonhosted.org/airflow/_modules/postgres_operator.html#PostgresOperator). Similar to before, we use Dummy Operators as break points between tasks to ensure that individual tables aren’t being updated while others are failing. We would rather have all records complete up to a given point than be out of sync. 
+From S3, they are then COPIED into our Redshift using the [PostgresOperator](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/operators/postgres_operator/index.html). Similar to before, we use Dummy Operators as break points between tasks to ensure that individual tables aren’t being updated while others are failing. We would rather have all records complete up to a given point than be out of sync. 
 
 As an additional quality assurance measure, a simple row count is then performed on each of the tables and put in an “insertion_records” table in our “salesforce_stats” schema. After that, the bulk of the work is complete.
 
@@ -76,7 +76,7 @@ From there, three additional tasks occur concurrently. The first task triggers t
 
 ![1505409305-screen-shot-2017-09-06-at-7-47-19-pm.jpg](../assets/1505409305-screen-shot-2017-09-06-at-7-47-19-pm.jpg)
 
-While this second DAG triggers, a Slack notification is sent confirming the workflow has finished (using the [SlackAPIPostOperator](https://pythonhosted.org/airflow/_modules/slack_operator.html#SlackAPIOperator), which we’ll talk about in the next post) and a Python Operator runs a script to remove the files stored in S3. Funny enough, even though the S3hook uses Boto under the hood, it doesn’t have native support for removing files. For that we actually have to import Boto3 (as our containers use Python 3.6) and use the delete_objects() method.
+While this second DAG triggers, a Slack notification is sent confirming the workflow has finished (using the [SlackAPIPostOperator](https://airflow.apache.org/docs/apache-airflow/stable/_api/airflow/operators/slack_operator/index.html), which we’ll talk about in the next post) and a Python Operator runs a script to remove the files stored in S3. Funny enough, even though the S3hook uses Boto under the hood, it doesn’t have native support for removing files. For that we actually have to import Boto3 (as our containers use Python 3.6) and use the delete_objects() method.
 
 ![1505499966-screen-shot-2017-09-06-at-7-25-07-pm-1.jpg](../assets/1505499966-screen-shot-2017-09-06-at-7-25-07-pm-1.jpg)
 

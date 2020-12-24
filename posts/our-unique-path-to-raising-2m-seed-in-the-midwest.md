@@ -7,7 +7,7 @@ authors:
   - Ry Walker
 date: 2016-10-11T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _The story of our path to raising $2M is a series of short stories with some amazing protagonists. A huge thanks to everyone! Let’s dig in._
 
 ### Driving on “E”
@@ -32,7 +32,7 @@ The product looked good, and early signs were promising! Promising&nbsp;enough t
 
 Next came Kyle Wild, CEO of [Keen.io](https://keen.io/) and one of Morris’s top portfolio companies. Kyle was a huge win for us as we were building the new version of USERcycle to sit directly on top of Keen. He also brought some coastal validation to our vision and fledgling team.
 
-With Kyle and Morris in, Tim convinced several of his former Cladwell investors and some new folks to jump on the bandwagon, including [dunnhumby](https://www.dunnhumby.com/)’s managing director Andy Hill and [Modulus](https://modulus.io/) co-founder Charlie Key. Ask any founders: getting these early investors are the hardest, not just because the company is so early, but because you are putting your friends' and family’s money on the line! Locking those in gave us reason to clebrate.
+With Kyle and Morris in, Tim convinced several of his former Cladwell investors and some new folks to jump on the bandwagon, including [dunnhumby](https://www.dunnhumby.com/)’s managing director Andy Hill and [Modulus](https://modulus.io/) co-founder Charlie Key. Ask any founders: getting these early investors are the hardest, not just because the company is so early, but because you are putting your friends' and family’s money on the line! Locking those in gave us reason to celebrate.
 
 ![giphy_12.gif](../assets/giphy_12.gif)
 
@@ -95,7 +95,7 @@ The new year began, and we hadn’t gotten our round closed. It was becoming cle
 
 I can’t believe I haven’t mentioned [Cintrifuse](https://www.cintrifuse.com/) yet. In true startup fashion, they’ve grown from a three-person team to a dominant force driving [StartupCincy](https://www.startupcincy.com/). At this point in the&nbsp;story, Cintrifuse’s Tim Schigel played matchmaker with a startup who could potentially acquire us.&nbsp;At the same time, we got into serious talks with a potential Series A investor.&nbsp;[For various reasons, both fell through](https://www.astronomer.io/blog/an-almost-acquisition-story).
 
-Once again, we had very little money. This time, however, revenue (and delivery obligations) was growing. Time to hire three more people: Alois, Trong and Becky. Damn the torpedos.
+Once again, we had very little money. This time, however, revenue (and delivery obligations) was growing. Time to hire three more people: Alois, Trong and Becky. Damn the torpedoes.
 
 ### Summer '16: More of the Same
 
@@ -107,7 +107,7 @@ But our high burn rate threatened our solvency, and big checks didn’t last lon
 
 ### Aug '16: $1M seed round
 
-Somehow, we survived until August, which turned out to be just what we needed. August was a great month. We more than doubled our MRR. We closed the $1M round that we had been&nbsp;working on for a few months with [CincyTech](https://cincytechusa.com/) (thanks, Mike, John, Doug, Bob), [Connectic](https://connetic.ventures/) (thanks, Brad and Kyle), [Core Network Fund](https://corenetworkfund.com/) (thanks, Bob and Eric), and [Router Ventures](https://www.routerventures.com/) (thanks, Jeff).
+Somehow, we survived until August, which turned out to be just what we needed. August was a great month. We more than doubled our MRR. We closed the $1M round that we had been&nbsp;working on for a few months with CincyTech (thanks, Mike, John, Doug, Bob), [Connectic](https://connetic.ventures/) (thanks, Brad and Kyle), [Core Network Fund](https://corenetworkfund.com/) (thanks, Bob and Eric), and [Router Ventures](https://www.routerventures.com/) (thanks, Jeff).
 
 ### Fall '16: MRR Growth + Quest for Differentiation
 

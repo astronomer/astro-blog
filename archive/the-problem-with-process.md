@@ -7,7 +7,7 @@ authors:
   - Tim Brunk
 date: 2016-04-13T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 [Process?! We talking ‘bout process?!](https://youtu.be/tknXRyUEJtU?t=8s) Yes, Allen. I want to talk about process. Everyone loves to talk about process…especially in startups. And I get it. In theory, process is a way to keep an organization running smoothly. To keep all the balls in the air and make room for more. But there’s a sinister side to process…
 
 As you launch and grow a startup, a tension emerges between two critical paths: “order” and “experimentation.” By nature, we humans constantly strive for and crave order. But a startup, by nature, craves experimentation. Its lifeblood is searching for creative solutions to poorly understood problems. To do this well, a company needs to shift directions and strategy aggressively as it uncovers new information about the problems it’s solving. The early days of a startup are filled with this discovery process. And the business strategy, team, approach and product must evolve accordingly.

@@ -7,7 +7,7 @@ authors:
   - Andy Ruberg
 date: 2017-03-14T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Anyone who studies leadership and how to create a high-performing team has heard truisms like: empower and enable your team for success, support your team, accept blame, give credit, etc. … it’s all true, but, as with many things in life, it’s the execution that proves significantly more difficult.
 
 Leading well&nbsp;requires hard work, attention to detail, experience, failures and lessons learned (lots of lessons learned) to continually refine your skills to build a great team. And frankly, it’s hard to do it right. I’ve had the opportunity to lead [in a lot of different ways](https://www.astronomer.io/blog/why-i-left-big-consulting-for-a-startup), but I’m on the cusp of a new one: building a sales team for Astronomer after a [brand new organizational restructuring](https://www.astronomer.io/blog/building-an-org-chart-that-scales). As I consider how I want to lead my team, I’m considering the same old truisms—but more importantly, I'm finding examples of how other leaders have exemplified them. &nbsp;
@@ -16,7 +16,7 @@ Leading well&nbsp;requires hard work, attention to detail, experience, failures 
 
 As a leader, you need relentless commitment to accomplish the mission. However, to do so, you must deeply understand your&nbsp;objective(s) and build a team to accomplish the mission as quickly and thoroughly as possible.
 
-When Elon Musk created SpaceX, he started with [a very clear mission](https://www.spacex.com/about).
+When Elon Musk created SpaceX, he started with [a very clear mission](https://www.spacex.com).
 
 > “SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.”
 

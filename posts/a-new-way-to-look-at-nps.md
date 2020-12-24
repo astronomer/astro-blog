@@ -7,7 +7,7 @@ authors:
   - Ben Gregory
 date: 2016-08-31T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _\*\*\*POST UPDATED: May 24, 2017_
 
 If we’ve learned one thing in the past year, it’s that the market for ETL (extracting, transforming and loading data) is incredibly large. But the market for outsourcing all the headaches, anxiety and frustrations of data projects is orders of magnitudes larger… and very few are taking it on. To do so requires trust, a core value of ours, which, once gained, is an invaluable retention asset.

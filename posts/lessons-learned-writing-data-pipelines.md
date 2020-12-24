@@ -7,7 +7,7 @@ authors:
   - Alois Barreras
 date: 2016-08-23T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _TL;DR It’s hard._
 
 We are in the midst of a [data revolution](https://www.astronomer.io/blog/how-to-succeed-in-the-data-revolution). The sheer volume of data being generated daily is [staggering](https://www-01.ibm.com/software/data/bigdata/what-is-big-data.html) and organizations are trying desperately to take advantage of it. However, there are a number of barriers stopping them from being able to successfully gain insights from their data.
@@ -30,7 +30,7 @@ I have been working at Astronomer as an integration engineer for a few months no
 
 ### 1. We break up data pipelines into distinct tasks.
 
-A&nbsp;common data pipeline used by our clients is [Mongo to Redshift](https://www.astronomer.io/blog/syncing-mongodb-collections-with-redshift). Writing one giant pipeline—one that pulls in data from Mongo, transforms it and sends it to Redshift—restricts that pipeline to only being useful to someone who wants to send data from Mongo to Redshift. At Astronomer, we identify the individual parts of a data pipeline and break them up into distinct tasks (check out our [GitHub repo](https://github.com/aries-data) for the list and source code for all of our integrations).
+A&nbsp;common data pipeline used by our clients is [Mongo to Redshift](https://www.astronomer.io/blog/syncing-mongodb-collections-with-redshift). Writing one giant pipeline—one that pulls in data from Mongo, transforms it and sends it to Redshift—restricts that pipeline to only being useful to someone who wants to send data from Mongo to Redshift. At Astronomer, we identify the individual parts of a data pipeline and break them up into distinct tasks.
 
 With each task being distinct, we can string together any number of tasks&nbsp;to create workflows from any source to any destination. If a customer wants to move data from Mongo to SQL Server, for example, we don’t have to create a new data pipeline from the ground up. We already have the Mongo and transform tasks ready; we just string them together with the SQL Server destination task and the new pipeline is ready to go, saving time and code duplication.
 
@@ -40,7 +40,7 @@ The challenge with this structure is finding the right workflow management syste
 
 ### 3. We use streams.
 
-As mentioned earlier, a data pipeline that works for 10,000 rows of data will not always work for 50 million rows. The solution is to stream data in from a database and pipe it into the next task in the pipeline, transforming it along the way. Our current data pipelines are written in Node.js, so we use [Highland.js](https://highlandjs.org/), a fantastic library that adds a lot of useful functionality to Node Streams.
+As mentioned earlier, a data pipeline that works for 10,000 rows of data will not always work for 50 million rows. The solution is to stream data in from a database and pipe it into the next task in the pipeline, transforming it along the way. Our current data pipelines are written in Node.js, so we use Highland.js, a fantastic library that adds a lot of useful functionality to Node Streams.
 
 Using Highland, we don’t load anything into memory. We stream data into the first task in the data pipeline, use Highland to transform anything we need and format it correctly for the next task and pipe it directly out to the next task, which in turn uses Highland to read the stream, transform it, pipe it out, and so on.
 

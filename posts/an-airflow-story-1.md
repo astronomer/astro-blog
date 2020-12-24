@@ -7,7 +7,7 @@ authors:
   - Viraj Parekh
 date: 2018-01-29T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Throughout Astronomer’s short but exciting life so far, we’ve changed our stack, product direction, and target market more times than we can count. The flux has definitely caused some stress, but it has ultimately been a major source of growth both for me individually and for our company as a whole.
 
 However, all this pivoting has been unequivocally unkind to two things: our Github org and our cofounder’s hair.
@@ -18,6 +18,7 @@ However, all this pivoting has been unequivocally unkind to two things: our Gith
 The last few years have left us with a mess of Github repos and orgs. As you can imagine, this made it difficult to do any internal github reporting on who was closing out issues, what type of issues stay open, and track milestone progress.
 
 ## Apache Airflow
+
 Lucky for us, we’re a data engineering company with a module designed to solve exactly that type of problem.
 
 Apache Airflow is a data workflow management system that allows engineers to schedule, deploy and monitor their own data pipes as DAGs (directed acyclic graphs). Built by developers, for developers, it’s based on the principle that ETL is best expressed in code.
@@ -27,6 +28,7 @@ Running Airflow on Astronomer lets you leverage all of its features without gett
 From a developer's perspective, it lets you focus on using a tool to solve a problem instead of solving a tool's problems. In the next section, we'll give you a hands-on walkthrough of Astronomer Airflow so that you can download it and play around yourself!
 
 ## Spinning up Open
+
 Clone [Astronomer Open](https://github.com/astronomerio/astronomer) for a local, hackable, version of the entire Astronomer Platform - Airflow, [Grafana](https://grafana.com/), [Prometheus](https://prometheus.io/), and so much more.
 
 Jump into the airflows directory and run the start script pointing to the DAG directory.
@@ -43,9 +45,10 @@ All custom requirements can be stored in a requirements.txt file in the director
 Any custom packages you want (CLIs, SDKs, etc.) can be added to packages.txt.
 
 ## Getting Github Data
+
 You can follow along by cloning [this repo](https://github.com/astronomerio/open-example-dags) of example DAGs and pointing to it when starting Open.
 
-All the heavy lifting in Airflow is done with hooks and operators. Hooks are an interface to external systems (APIs, DBs, etc) and operators are units of logc.
+All the heavy lifting in Airflow is done with hooks and operators. Hooks are an interface to external systems (APIs, DBs, etc) and operators are units of logic.
 
 Since the Github API takes HTTP requests, writing the hook is simply going to be wrapping around the code you'd usually write to hit the Github API.
 ```
@@ -57,7 +60,7 @@ In an Airflow Hook, we take a regular request and wrap around some additional lo
 
 The request itself and all the heavy lifting is done by the HttpHook.
 
-``` 
+```python 
 from airflow.hooks.http_hook import HttpHook
 
 # Inherit from the Airflow HttpHook.
@@ -97,12 +100,14 @@ When converting this to an Airflow hook, all the credentials can be stored in th
 
 
 ## Moving Data
+
 Now that there's an interface to interact with the external system, we need to define what actually needs to be done.
 
 We like using Amazon S3 as an intermediary system when working with Redshift - the COPY command makes inserts easy and if a task fails during a data pipeline, the pipeline can restart and pick up where it left off using the data in S3.
 
 So the workflow is going to go from Github to S3 to Redshift.
-```
+
+```python
 from airflow.utils.decorators import apply_defaults
 from airflow.models import BaseOperator
 from ..hooks.github_hook import GithubHook # Import the GithubHook from before
@@ -223,13 +228,15 @@ class GithubToS3Operator(BaseOperator):
         s3.connection.close()
 ```
 
-View the rest of the Github code [here](https://github.com/airflow-plugins/github_plugin/blob/master/operators/github_to_s3_operator.py). Once the data is in S3, we use a standard [S3 to Redshift Operator](https://github.com/airflow-plugins/s3_to_redshift_operator/blob/master/operators/s3_to_redshift.py).
+View the rest of the Github code [here](https://github.com/airflow-plugins/github_plugin). Once the data is in S3, we use a standard [S3 to Redshift Operator](https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/operators/s3_to_redshift.html).
 
 ## Writing the DAG
+
 Now the DAG itself can be written to leverage how the hook and operator handle all of the logic. If you're following along, make sure you change the connection variables (aws_conn_id, s3_conn_id, s3_bucket) to what you named your connections.
 
 You can also switch enter an email to send failure or success notifications to.
-```
+
+```python
 from airflow import DAG
 from datetime import datetime
 from airflow.operators.dummy_operator import DummyOperator
@@ -382,6 +389,7 @@ class GithubPlugin(AirflowPlugin):
 ```
 
 ## Running Locally with Open
+
 Now that the workflow has been defined, pop over to [https://localport:8080](https://localport:8080) to see the workflow run.
 
 ![1517249942-airflow_ui.jpg](../assets/1517249942-airflow_ui.jpg)
@@ -394,6 +402,7 @@ With Prometheus and Grafana bundled with Open, you get all this and more.
 
 
 ## Visualizing and Dashboarding
+
 Now that all the data is in Redshift, it's ready for visualization and dashboarding. The SQL in the DAG is what we started with, but our dashboard ended up showing a lot more.
 
 There are a ton of [great dashboarding tools](http://astronomer.io/blog/six-open-source-dashboards/) out there, but for this use case, [Apache Superset](https://superset.incubator.apache.org/) was the best option.

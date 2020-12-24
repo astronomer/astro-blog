@@ -7,7 +7,7 @@ authors:
   - Greg Neiheisel
 date: 2017-06-26T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Astronomer is a data engineering platform that collects, processes and unifies users' enterprise data, so they can get straight to analytics, data science and—more importantly—insights. We make it easy to capture data from any source and send it to any location, from a custom dashboard for visualization to a database for analysis.
 
 Data is becoming the most valuable resource a company owns, and building pipelines that can accommodate all of a company's use-cases while easily scaling is a challenging problem. We’re lowering the barrier to entry for anyone who wants to put their data to work.

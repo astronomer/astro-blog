@@ -7,7 +7,7 @@ authors:
   - Greg Brunk
 date: 2016-11-30T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _\*Thanks to [Nick Kumbari](https://dribbble.com/kumbari) for this awesome space pirate illustration.__&nbsp;_
 
 My friend Luke once told me a story about a time from early childhood when his father took him on an unforgettable adventure. Now a designer, he has been peeling back the layers of this adventure, uncovering valuable lessons scattered amidst the glow of nostalgia. These lessons have shaped his career and sent him down a path of pursuing the art of building great products and great brands.

@@ -12,11 +12,11 @@ date: 2020-11-23T00:00:00.000Z
 
 At Astronomer, we see Apache Airflow used in a variety of contexts. Whether it’s for ETL, machine learning (ML), CI, or analytics, we often work with folks extending Airflow to remove complexity from their end-to-end solution. An important driver of Airflow’s trusted adoption in the data orchestration space is the extensibility it brings both to teams at the start of their data journey as well as those operating at massive scale.  That extensibility is in large part due to the rich open-source integration ecosystem that surrounds Airflow and allows users to easily interact with third-party APIs and data systems. These integrations have always existed as a core part of the Airflow codebase and can be categorized into three major buckets:
 
-- **Hooks:** Modules that establish a connection to third-party data stores, ie. establishing a connection to a remote PostgresA  instance.
-- **Operators:** Modules that perform pre-defined logic or are tailored to a use case, ie. taking a csv file from an s3 bucket and copying it over to a snowflake table.
+- **Hooks:** Modules that establish a connection to third-party data stores, ie. establishing a connection to a remote Postgres  instance.
+- **Operators:** Modules that perform predefined logic or are tailored to a use case, ie. taking a csv file from an s3 bucket and copying it over to a snowflake table.
 - **Sensors:**  Modules that wait for an external trigger before executing, ie. to trigger a job when a file hits an s3 bucket.
 
-All three of these fundamental integration points are fully Pythonic and thus can be extended to fit virtually any use case. In fact, it’s common for Airflow users to build custom operators on top of pre-existing operators.
+All three of these fundamental integration points are fully Pythonic and thus can be extended to fit virtually any use case. In fact, it’s common for Airflow users to build custom operators on top of preexisting operators.
 
 In terms of how these integrations are released, distributed and leverage by DAG authors, [Airflow 2.0](https://www.astronomer.io/blog/introducing-airflow-2-0/) introduces an important paradigm shift. Now, the above modules are packaged and released independently of the core Airflow codebase as Providers, so that maintainers can release them independently of Airflow releases. The Provider is a new fundamental abstraction layer that sits over Hooks, Operators, and Sensors, and even goes a little further to package in other nice-to-haves. To give a more concrete example of what this looks like in practice, the [Snowflake provider package](https://github.com/apache/airflow/tree/master/airflow/providers/snowflake) contains all Hooks, Operators, and Sensors that interface with [Snowflake](http://snowflake.com/) APIs, allowing Snowflake users to easily install and access all existing Snowflake integration modules in one fell swoop.
 
@@ -43,10 +43,11 @@ With that, we’re pleased to announce the [Great Expectations Provider for Apac
 
 
 ## What’s in the Provider?
+
 The Provider includes a `GreatExpectationsOperator`, which is a convenient way to run data validation with Great Expectations in your Airflow DAG. It can be imported from the Provider package for use in your DAG file. To use it, all you need to do is `pip install airflow-provider-great-expectations` in your Airflow project and call  the Operator in your DAG by importing from the package:
 
 
-```
+```python
 from great_expectations_provider.operators.great_expectations import GreatExpectationsOperator
 ```
 

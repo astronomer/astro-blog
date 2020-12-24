@@ -7,7 +7,7 @@ authors:
   - Laurel Brunk
 date: 2017-01-17T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _Estimated reading time: 9 minutes, 50 seconds_
 
 Our team hit the road in November for our first-ever Astronomer remote-working week. Or, as we like to say, we “orbited.” (The metaphor breaks down pretty quickly, but we can’t help ourselves with the space analogies.)
@@ -16,7 +16,7 @@ Anyway, we’ve written remote working guides for [Denver](https://www.astronome
 
 The “rules” were simple: (1) figure out how to get there, (2) stay for as little (none) or as long (whole week) as you like, (3) feel free to stay in a more private setting on your own dime and (4) it’s not a vacation, so do work.
 
-_Sidenote: Why Nashville? Sure, a week together meant spending a night out at the_ [_honky tonk bars_](https://www.greatamericancountry.com/places/travel/nashville-guide--top-10-honky-tonks-and-dive-bars) _one envisions in “Music City U.S.A.”—and sharing_ [_Spotify_](https://open.spotify.com/user/benjamingregory/playlist/2puHDq5aDGcbrxwhr69Qhf) _playlists, for better and for worse. But what really cinched it were these three factors: the easy driving distance from Cincinnati, the plethora of large yet affordable Airbnb options (probably thanks to its growing popularity as a_ [_bachelor/bachelorette party destination_](https://www.tennessean.com/story/news/2015/07/25/bachelor-bachelorette-parties-mean-big-business-nashville/30653483/)_) and the fact that it’s_ [_a mid-sized city_](https://en.wikipedia.org/wiki/Nashville,_Tennessee) _with excellent biz dev options._
+_Sidenote: Why Nashville? Sure, a week together meant spending a night out at the_ [_honky tonk bars_](https://www.greatamericancountry.com/places/travel/nashville-guide--top-10-honky-tonks-and-dive-bars) _one envisions in “Music City U.S.A.”—and sharing_ [_Spotify_](https://open.spotify.com/user/benjamingregory/playlist/2puHDq5aDGcbrxwhr69Qhf) _playlists, for better and for worse. But what really cinched it were these three factors: the easy driving distance from Cincinnati, the plethora of large yet affordable Airbnb options (probably thanks to its growing popularity as a_ [_bachelor/bachelorette party destination_](https://www.tennessean.com)_) and the fact that it’s_ [_a mid-sized city_](https://en.wikipedia.org/wiki/Nashville,_Tennessee) _with excellent biz dev options._
 
 ### A Quick Note on Transportation and Lodging
 
@@ -38,9 +38,7 @@ _2007 Belmont Blvd, Nashville, TN 37212_ _•_ _[Find it on Google Maps](https:/
 
  ![fullsizerender-52.jpg](../assets/fullsizerender-52.jpg)
 
-_Photo cred: [In the Middle&nbsp;](https://inthemiddlenashville.com/2016/08/23/bongo-java/)_
-
-Becky, one of our account managers, put it like this: “I love the white noise effect of a busy coffee shop, and this one fit the bill. Plus, it won me over with the good wifi and great food. Finding a seat was relatively easy, especially since you could almost always find a fellow Astronomer to sit with! The clientele were largely headphone-wearing coffee enthusiasts cranking out what seemed to be [deep work](https://www.amazon.com/dp/B00X47ZVXM/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1). Worth noting: there were not enough outlets.”
+Becky, one of our account managers, put it like this: “I love the white noise effect of a busy coffee shop, and this one fit the bill. Plus, it won me over with the good wifi and great food. Finding a seat was relatively easy, especially since you could almost always find a fellow Astronomer to sit with! The clientele were largely headphone-wearing coffee enthusiasts cranking out what seemed to be [deep work](https://www.amazon.com/Deep-Work-Focused-Success-Distracted-ebook/dp/B00X47ZVXM). Worth noting: there were not enough outlets.”
 
 **Bonus tip(s) from Becky**: Favorite drink: Mochahontas (vanilla mocha with almond milk). Favorite food: grilled pineapple and black bean salad.
 
@@ -89,7 +87,7 @@ _2509 12th Ave S, Nashville, TN 37204_ _•_ _[Find it on Google Maps](https://w
 
 Here’s another traditional coffee shop option. It’s a 15-minute walk from Bongo Java if you want to clear your head and settle into some deep work again.
 
-![frothy-outside.jpg](../assets/frothy-outside.jpg)_Photo cred: [Tails of the Trail](https://www.tailsofthetrail.com/product/frothy-monkey-30-gift-card/)_
+![frothy-outside.jpg](../assets/frothy-outside.jpg)
 
 “Lots and lots of white noise, decent wifi and a table large enough to seat a handful of us made Frothy Monkey my go-to,” says Trent, a support analyst. This is a true coffee_house_ with a big porch and side deck that have&nbsp;outdoor seating. The selection of table sizes, including a large community table, made it a great spot for team meetings or individual work.
 
@@ -99,7 +97,7 @@ _Photo cred: Brad_
 
 \*Important to note: This place fills up quickly, so the earlier you can get there, the better. A lot of people like to camp out and work, which can be irritating when looking for a seat, but ideal once you’ve found one. With plenty of outlets and healthy food options, it’s worth the wait.
 
-**Bonus tip from Max** (General Counsel/Business Analyst): Treat yourself and get a&nbsp;haircut at [Brave Barber and Beauty](https://www.bravebarber.com/),&nbsp;just off the 12 South drag. Master barbers, sci-fi-inspired deco, great conversation and a slick cut. Felt and looked fresh.
+**Bonus tip from Max** (General Counsel/Business Analyst): Treat yourself and get a&nbsp;haircut at Brave Barber and Beauty,&nbsp;just off the 12 South drag. Master barbers, sci-fi-inspired deco, great conversation and a slick cut. Felt and looked fresh.
 
 #### 5. Walk the streets of Nashville
 
@@ -151,7 +149,7 @@ _\*The best part is, you can find_ [_locations_](https://www.martinsbbqjoint.com
 
 _1711 Division St, Nashville, TN 37203 •_ _[Find it on Google Maps](https://www.google.com/maps/place/The+Catbird+Seat/@36.1512805,-86.7941007,15z/data=!4m5!3m4!1s0x0:0x44c610fe5e04492e!8m2!3d36.1512805!4d-86.7941007)_
 
-**![catbird-menu.jpg](../assets/catbird-menu.jpg)**_Photo cred: [In the Middle](https://inthemiddlenashville.com/2015/03/31/the-catbird-seat/)_
+**![catbird-menu.jpg](../assets/catbird-menu.jpg)**
 
 If you’re a foodie and can plan ahead (exactly a month in advance, in fact), reserve your coveted spot at this elite establishment. For $115 per person, you’ll get the chef’s tasting menu for that evening. Three Astronomers opted to invest in this experience, and here’s what they said, “Catbird Seat was legendary. Best meal I have had in recent memory (freaking sunflower seed risotto).” And, “It was absolutely unreal, without a doubt the best meal I’ve had this year, and likely on my top 5 best restaurants. Not only was the food absolutely amazing, but the dining experience was something the likes of which I’ve never experienced. An absolutely must-see for foodies in Nashville.” &nbsp;
 

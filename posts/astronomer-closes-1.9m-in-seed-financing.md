@@ -7,7 +7,7 @@ authors:
   - Laurel Brunk
 date: 2016-10-11T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 # **Astronomer Closes $1.9M in Seed Financing**
 
 _ **As enterprises become more data driven, Astronomer’s tools make capturing and managing data from multiple sources easy** _

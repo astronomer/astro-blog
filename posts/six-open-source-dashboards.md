@@ -54,7 +54,7 @@ Although IoT can be accomplished by and is even an area of strength for Keen IO 
 
 ![5_Mozaik.jpg](../assets/5_Mozaik.jpg)
 
-A relatively new entry (first commit in Dec ‘14) into the open-source dashboard space that we’re pretty excited about is the modularly designed Mozaik. Mozaik was built using our favorite JS trifecta (Node, React, d3) and while it still has room to grow, its extendable and customizable modules make it both a powerful and flexible choice. Need to add a new widget type to your dashboard? Just `npm install mozaik-ext-{widget-name}` and there you have it. There are already widgets built to access Github, Travis, Google Analytics, Twitter, AWS, and ElasticSearch, among many others. And if they don’t have what you’re looking for? Build it yourself with React and d3! Simple as that.
+A relatively new entry (first commit in Dec ‘14) into the open-source dashboard space that we’re pretty excited about is the modularity designed Mozaik. Mozaik was built using our favorite JS trifecta (Node, React, d3) and while it still has room to grow, its extendable and customizable modules make it both a powerful and flexible choice. Need to add a new widget type to your dashboard? Just `npm install mozaik-ext-{widget-name}` and there you have it. There are already widgets built to access Github, Travis, Google Analytics, Twitter, AWS, and ElasticSearch, among many others. And if they don’t have what you’re looking for? Build it yourself with React and d3! Simple as that.
 
 For more information on when to choose Mozaik, the Cloud Data Services team at IBM has a [great write-up](https://developer.ibm.com/clouddataservices/2015/12/01/humans-vs-apache-spark-building-our-rock-paper-scissors-game/) about why they chose Mozaik over alternatives like Dashing (see above) and others.
 
@@ -79,4 +79,4 @@ We at Astronomer are committed to making data more readily available because we 
 No matter what dashboard you end up going with, bear in mind that 1) if you have a small number of metrics to track (i.e. no need for reports) and 2) no full-time analyst (i.e. no resources for reports), you will not reap the benefits of an extensive and expensive tool like Tableau. Those tools are appropriate when the questions you ask are always changing and you have the people on your team who can answer them. If you know the 10 metrics you’ll always need to monitor and are comfortable these will be relevant for some time, consider using an open-source dashboard that is both free\* and more customizable to your needs.
 
 &nbsp;
-
+<!-- markdownlint-disable-file -->

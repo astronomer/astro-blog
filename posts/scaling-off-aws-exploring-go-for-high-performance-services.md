@@ -16,7 +16,7 @@ Astronomer's ingestion API is currently built on AWS services. We rely on API Ga
 
 However, we're moving fast towards making sure our entire platform isn't tied to any one cloud provider, so we're looking into alternative solutions. Our goal is to allow for a "one-click" Astronomer install anywhere, whether that's on your own cloud provider (AWS, Google App Engine, Azure) or ours.
 
-So, since we’ve decided that it’s time to move away from AWS specific technologies, what are our options for this component of our platform? Astronomer is heavily invested in Node.js to power our ETL jobs and data processing and streaming. We love Node.js for [all the reasons](https://blog.xervo.io/top-10-reasons-to-use-node) countless others have discussed: It allows us to reuse existing JavaScript knowledge on the front-end and the back-end, and for what we're using it for the performance is great. But our API needs to be able to eke out every bit of performance it can muster, and scale to handle an arbitrarily large number of requests. There are certainly optimizations one can make to tune Node.js for maximum performance, but we think we can get there a bit easier if we use a language built for maximum concurrency and performance. We think that language could be [Go](https://golang.org/).&nbsp;
+So, since we’ve decided that it’s time to move away from AWS specific technologies, what are our options for this component of our platform? Astronomer is heavily invested in Node.js to power our ETL jobs and data processing and streaming. We love Node.js for all the reasons countless others have discussed: It allows us to reuse existing JavaScript knowledge on the front-end and the back-end, and for what we're using it for the performance is great. But our API needs to be able to eke out every bit of performance it can muster, and scale to handle an arbitrarily large number of requests. There are certainly optimizations one can make to tune Node.js for maximum performance, but we think we can get there a bit easier if we use a language built for maximum concurrency and performance. We think that language could be [Go](https://golang.org/).&nbsp;
 
 ### Why Go
 
@@ -154,7 +154,4 @@ What can we infer about these results? Again, this alone is not a definitive eno
 
 We’re feeling pretty good about introducing Go as another language in our stack. We’ll continue using Node.js in a lot of places (most of them actually), but for areas where performance is the #1 concern, we’ll do another analysis (maybe not quite so involved) to see if Go is a better fit. As a developer, it’s exciting to work at a company where language wars aren’t really a thing. Instead, we’re all constantly learning and seeing what’s out there, and when there’s a use case that makes sense for us, we don’t hesitate to bring that language in to do the job. But for now, we’ll get back to work on the Go version we’ve discussed. Once we get that production ready, we’ll report back in a few months with our results.
 
-_Go Implementation: [https://github.com/astronomerio/go-ingestion-api](https://github.com/astronomerio/go-ingestion-api)_
-
-_Node.js Implementation:_ [_https://github.com/astronomerio/node-ingestion-api_](https://github.com/astronomerio/node-ingestion-api)
-
+<!-- markdownlint-disable-file -->

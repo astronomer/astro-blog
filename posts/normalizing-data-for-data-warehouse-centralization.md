@@ -7,7 +7,7 @@ authors:
   - Ben Gregory
 date: 2017-06-20T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 A very common initiative these days is data warehouse centralization across an organization. [DWaaS](https://searchdatamanagement.techtarget.com/definition/data-warehouse-as-a-service-DWaaS) (data warehouse as a service) has become commoditized to the point that organizations of every size can begin setting up a reporting infrastructure starting at only a couple hundred dollars a month. This is really exciting and, when copying data from other structured databases, a relatively simple process.
 
 Like anything, though, there are a number of ways to centralize data—and every solution has tradeoffs. Even between SQL databases ([relational structures](https://en.wikipedia.org/wiki/SQL)), subtle differences exist and some data types supported in one will require data to be converted from another. But generally, the conceptual relationship of rows and columns carries over to any structured database. It gets trickier, however, when we want to translate [document-oriented](https://en.wikipedia.org/wiki/Document-oriented_database) (e.g. MongoDB) or [object-oriented](https://en.wikipedia.org/wiki/Object_database) structures (e.g. REST APIs) into the 2-dimensional SQL space.

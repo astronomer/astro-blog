@@ -8,7 +8,7 @@ authors:
 date: 2015-07-28T00:00:00.000Z
 ---
 
-The [last post I wrote](/blog/a-hero-a-priest-and-a-drunk/)&nbsp;re: email personalities/archetypes/whatever you want to call them got a fair amount of attention so I thought I’d do a follow up post to go a bit deeper on how we came up with the marketing archetypes and why we're confident they're universally true and will absolutely never be contradicted or changed (_until they inevitably are..._)  
+The last post I wrote&nbsp;re: email personalities/archetypes/whatever you want to call them got a fair amount of attention so I thought I’d do a follow up post to go a bit deeper on how we came up with the marketing archetypes and why we're confident they're universally true and will absolutely never be contradicted or changed (_until they inevitably are..._)  
   
 Say hello to the Email Wall.
 

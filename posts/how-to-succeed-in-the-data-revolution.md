@@ -7,7 +7,7 @@ authors:
   - Ry Walker
 date: 2016-06-22T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _The target for this article is business leaders of medium/large organizations who are waking up to the potential of the data revolution and want to get into the game—and help their company win._
 
 #### What is the Data Revolution?&nbsp;

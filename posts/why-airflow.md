@@ -47,7 +47,7 @@ While all Airflow functionality isn’t evenly polished, work is now in motion t
 - [Speeding up the scheduler](https://www.astronomer.io/blog/airflow-2-scheduler)
 - [Speeding up the web server](https://cwiki.apache.org/confluence/display/AIRFLOW/AIP-24+DAG+Persistence+in+DB+using+JSON+for+Airflow+Webserver+and+%28optional%29+Scheduler)
 - [Integrating with Knative](https://github.com/astronomer/airflow/pull/72)
-- [An official production Docker image](https://cwiki.apache.org/confluence/display/AIRFLOW/AIP-26+Production-ready+Airflow+Docker+Image+and+helm+chart)
+- [An official production Docker image](https://cwiki.apache.org/confluence/display/AIRFLOW/AIP-26+Production-ready+Airflow+Docker+Image)
 - [A full REST API](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html)
 - [A refreshed UI](https://github.com/apache/airflow/pull/11195)
 - Building a new UI

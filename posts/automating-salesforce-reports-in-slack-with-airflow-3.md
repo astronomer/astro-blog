@@ -7,8 +7,8 @@ authors:
   - Ben Gregory
 date: 2017-09-22T00:00:00.000Z
 ---
-
-In our past two posts ([here](http://www.astronomer.io/blog/automating-salesforce-reports-in-slack-with-airflow/) and [here](http://www.astronomer.io/blog/automating-salesforce-reports-in-slack-with-airflow-ii/)), we covered pulling data from Salesforce and using the Python, Postgres and Slack operators to build out some standard reports that were previously being done manually. While working on replicating these reports, we realized we could replicate a second reporting mechanism that is also fairly manual but covers essentially the same data.To follow along more closely, feel free to [view the code on GitHub](http://github.com/astronomerio/example-dags/tree/master/salesforce_to_slack).
+<!-- markdownlint-disable-file -->
+In our past two posts ([here](http://www.astronomer.io/blog/automating-salesforce-reports-in-slack-with-airflow/) and [here](http://www.astronomer.io/blog/automating-salesforce-reports-in-slack-with-airflow-ii/)), we covered pulling data from Salesforce and using the Python, Postgres and Slack operators to build out some standard reports that were previously being done manually. While working on replicating these reports, we realized we could replicate a second reporting mechanism that is also fairly manual but covers essentially the same data.
 
 ![1506091230-image-1.jpg](../assets/1506091230-image-1.jpg)
 
@@ -21,7 +21,7 @@ To solve this, we’re working on a new process to have the Growth team log thei
 
 ![1506091397-image-3.jpg](../assets/1506091397-image-3.jpg)
 
-After that, a Python operator kicks off using the get_records() function within the Postgres hook to read the new records into a list. The get_records() function only requires a SQL command and because we've pre-processed our data already, it’s as simple as the following to pull the relevant records.
+After that, a Python operator kicks off using the get_records() function within the Postgres hook to read the new records into a list. The get_records() function only requires a SQL command and because we've preprocessed our data already, it’s as simple as the following to pull the relevant records.
 
     SELECT name, description
 

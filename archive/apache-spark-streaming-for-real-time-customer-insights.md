@@ -8,7 +8,7 @@ authors:
   - Ryan Palmer
 date: 2017-08-02T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Our clickstream product emerged into the world naturally.
 
 More and more companies are enabling their sites and apps to capture analytics events to better understand how their users interact with them and draw insights from that "[clickstream](https://searchcrm.techtarget.com/definition/clickstream-analysis)" data. We found an unexpected space in the market for companies—from mid-size businesses to enterprises—that wanted these insights. And to get them, they needed a custom clickstream solution that would still allow them to own their data warehouse as a [Redshift](https://aws.amazon.com/redshift/) instance.

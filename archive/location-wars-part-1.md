@@ -7,7 +7,7 @@ authors:
   - Tim Brunk
 date: 2016-02-22T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _“We’ll only invest in you if you move to SF.”_
 
 We were wrapping up a great pitch in the super cool office of one of those VCs you frequently see referenced in TechCrunch when this little grenade went off. Of course we’d considered relocation before—the access to funding and talent alone are hard to ignore—but this statement seemed so final. It trumped everything else. It had become “fund policy,” regardless of business type, customer location, industry, or anything else.&nbsp;

@@ -7,7 +7,7 @@ authors:
   - Dave Paprocki
 date: 2016-11-23T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Time to break out the elastic-band sweatpants and kick off the holiday season with some good old fashioned family, friends, food and festivity. In light of this national celebration and one of our favorite holidays, we thought we’d offer you our warm wishes, Astronomer-style. That is, we’d extract some interesting and perhaps rather insightful Thanksgiving data and transport it, from us to you.
 
 Without further adieu, here are ten intriguing tidbits&nbsp;of Thanksgiving data:

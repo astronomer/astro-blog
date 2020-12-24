@@ -25,7 +25,7 @@ Also worth mentioning: public sector projects cost tax dollars. So while cities 
 ### Technology that Works, Period
 Equally important, however, are Apache Airflow’s technical chops. ARGO co-founder Varun Adibhatla puts it like this: “At the end of day, we're plumbers. We only work when data flows.” So we sat down with Varun to find out what that looks like for ARGO. 
 
-To kick off their first initiative, [powering a coalition of water managers in California](http://californiadatacollaborative.org//), Team ARGO  headed west in the throes of a drought of historic proportions. They quickly realized that a trove of water data existed but, when it came to connecting the dots on how to respond to the drought through proactive conservation methods, went largely unused. Artisanal data projects were happening ad-hoc, but little was integrated into a common operating system. Worse, the inherent fragmentation of  how water is managed in California was magnified in its data. Such asymmetry has disproportionate effects on millions of Californians.
+To kick off their first initiative, [powering a coalition of water managers in California](http://californiadatacollaborative.org), Team ARGO  headed west in the throes of a drought of historic proportions. They quickly realized that a trove of water data existed but, when it came to connecting the dots on how to respond to the drought through proactive conservation methods, went largely unused. Artisanal data projects were happening ad-hoc, but little was integrated into a common operating system. Worse, the inherent fragmentation of  how water is managed in California was magnified in its data. Such asymmetry has disproportionate effects on millions of Californians.
 
 So ARGO organized a group of local water utilities willing to pioneer a bold new approach to use data in a shared manner. The work included ingesting, standardizing and refining the fragmented water use data, which came in all forms. This disparate data need to be refined into a stable and well-maintained structure. ARGO, using Apache Airflow, created a data parsing workflow to clean and refine water use data across 14 Californian water utilities and load it into a secure database to power analytics. But we’ll let Varun tell us about it in his own words:
 #### Let’s back up a minute and talk about the inspiration for ARGO. What sparked your desire to put data to use in the public sector? 
@@ -80,7 +80,7 @@ If you want to dig into some details, check out the latest screenshots from our 
 
 #### Anything else? 
 
-Last summer, we implemented Apache Airflow with another open source data collection app called [Open Street Cam](http://www.openstreetcam.org/map/) to manage our Street Quality Identification-Bike (SQUID-Bike) project (a key analytics ability towards establishing the [Streets Data Collaborative](http://www.streetsdatacollaborative.org/)) and co-create, with public works and transit agencies, a shared streets data infrastructure!
+Last summer, we implemented Apache Airflow with another open source data collection app called [Open Street Cam](http://www.openstreetcam.org/map/) to manage our Street Quality Identification-Bike (SQUID-Bike) project (a key analytics ability towards establishing the Streets Data Collaborative) and co-create, with public works and transit agencies, a shared streets data infrastructure!
 
 The SQUID project was conceived in Fall 2015 and involves collecting and integrating street surface imagery and ride quality data, applying computer vision and image processing techniques towards rapidly measuring the overall quality of a city’s streets and bike lane infrastructure.
 
@@ -103,3 +103,4 @@ Answering this question, we believe, is key to prepare cities for a future that 
 ![1507586658-algorithm.jpg](../assets/1507586658-algorithm.jpg)
 
 Stay tuned to see how ARGO's city streets initiative proceeds—and find out what they do next—[by following them on Medium](http://medium.com/a-r-g-o).   
+<!-- markdownlint-disable-file -->

@@ -8,7 +8,7 @@ authors:
 date: 2016-06-15T00:00:00.000Z
 ---
 
-  
+<!-- markdownlint-disable-file -->
 
 Astronomer is a customer-first organization. But what does that mean, really? And how do we ensure that no matter how busy – or how big – we get, we stay that way? Well, now that we’ve figured out [who our target customer is](https://www.astronomer.io/blog/how-astronomer-found-its-target-customer) and [how to effectively communicate with them](https://www.astronomer.io/blog/what-we-learned-after-we-discovered-our-target), we can continue this journey and start to build processes to enhance our customers’ experience with us.
 
@@ -48,7 +48,7 @@ In our model, we address the responsibilities of each role, including tasks and 
 
 If this is truly going to be a conversation, it’s important to keep everyone accountable and connected. We accomplish this through a living document we call the Mutual Action Plan, a customer-friendly document that includes full visibility (no excerpts though; it's just for our customers). This positions our process as a professional project plan designed to help customers achieve their goals.
 
-In this document, we outline the four specific phases (Initial Meeting, Needs Analysis, Solution, Implementation) and provide project scope, timelines and any other pertinent information and to-dos for the prospective customer’s team to reference. They&nbsp;can even&nbsp;interact with us directly through this document using a sweet new tool called [Canvas](https://usecanvas.com/).
+In this document, we outline the four specific phases (Initial Meeting, Needs Analysis, Solution, Implementation) and provide project scope, timelines and any other pertinent information and to-dos for the prospective customer’s team to reference. They&nbsp;can even&nbsp;interact with us directly through this document using a sweet new tool called Canvas.
 
 **Meetings With A Side&nbsp;of Strategy**
 
@@ -65,7 +65,7 @@ Taking a page from that book, we developed "Deals Week":
 
 ![EXCERPT5_blogpost.jpg](../assets/EXCERPT5_blogpost.jpg)
 
-Deals Week has already proven successful. During our most recent Deals Week, we reprioritized our prospective deals. The ones that seemed serious about closing rose to the top, and the ones that needed more time sunk to the bottom – or got placed in a separate category to receive some further nurturing. Not long afterwards, one of our newly prioritized deals got closed and another is currently working through an agreement.
+Deals Week has already proven successful. During our most recent Deals Week, we prioritized our prospective deals. The ones that seemed serious about closing rose to the top, and the ones that needed more time sunk to the bottom – or got placed in a separate category to receive some further nurturing. Not long afterwards, one of our newly prioritized deals got closed and another is currently working through an agreement.
 
 In conclusion, for Astronomer to be a customer-first organization, our number one metric, in any department, must have&nbsp;to do with customers and their happiness with our product and our team (similar to [Net Promoter Score](https://www.netpromoter.com/know/)). From the top down, we are building processes and teams focused solely on being an incredible experience, a robust and scalable product and a resource for our customers as they (and we) progress.
 

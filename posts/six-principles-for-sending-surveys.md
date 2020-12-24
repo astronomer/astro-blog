@@ -70,7 +70,8 @@ Unless you are intentionally trying to keep your surveys anonymous, you are like
 
 ### 6. Require Your Identification Questions
 
-This is perhaps the most important principle, but one that is incredibly easy to overlook. All it takes is forgetting to set those fields to “Required” to make your survey inusable, so it’s critical make sure that anything impacting how you interact with the respondent down the line or combine their multiple surveys together is without a doubt submitted.
+This is perhaps the most important principle, but one that is incredibly easy to overlook. All it takes is forgetting to set those fields to “Required” to make your survey unusable, so it’s critical make sure that anything impacting how you interact with the respondent down the line or combine their multiple surveys together is without a doubt submitted.
 
 _Keeping all these things in mind when constructing a survey can result in a rich, clean data store that your company can rely on. And if you’ve got any other principles you couldn’t live without when it comes to data collection or other survey tools, drop us a line in the comments.&nbsp;_
 
+<!-- markdownlint-disable-file -->

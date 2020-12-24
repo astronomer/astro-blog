@@ -7,7 +7,7 @@ authors:
   - Ry Walker
 date: 2017-03-21T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Traditional astronomers know that you can look up at the sky with a naked eye and appreciate the stars. But you can look with a telescope and understand them and what they mean. Even among telescopes, though, [vast differences exist](https://www.amazingtelescopes.com/types-of-telescopes-compared/) for astronomers across a spectrum of&nbsp;beginners to amateurs to professionals.
 
 Same thing with data. Most companies now collect data and use it in varying ways, whether that’s downloading CSV reports and manually combining them with other data sets or hiring a Chief Data Officer and team of data scientists. We like to think of that as a company’s data maturity across a spectrum, from “flying blind” to “insanity mode.”
@@ -16,7 +16,7 @@ Same thing with data. Most companies now collect data and use it in varying ways
 
 ### Understanding Where You Rank
 
-The first step to advancing your rank in the world of data is knowing where to start. Consider the model and ask yourself, truly, where you stand. If you need some help with understanding where you and your organization ranks, we’ve put together a [60-second data maturity self-assessment](https://smartforms.wyzerr.com/#/surveys/249/28id90mYZ44WHeAHZYqXLj).&nbsp;
+The first step to advancing your rank in the world of data is knowing where to start. Consider the model and ask yourself, truly, where you stand. If you need some help with understanding where you and your organization ranks, we’ve put together a 60-second data maturity self-assessment.&nbsp;
 
 Basically, are you...
 

@@ -9,7 +9,7 @@ authors:
   - Dave Paprocki
 date: 2017-02-21T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 The [internationally-renowned data analytics unconference](https://measurecamp.org/), MeasureCamp, is coming to Cincinnati on May 13, 2017!&nbsp;
 
 MeasureCamp is a free event run by the digital analytics community, for the digital analytics community. The “unconference” format has no scheduled presentations. Instead, attendees exchange ideas and ask each other to create “sessions” on the spot, whether it’s leading a technical conversation or a creative brainstorm. Anyone who wants to join the analytics conversation is welcome to attend.

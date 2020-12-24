@@ -7,7 +7,7 @@ authors:
   - R. Brad Kirn
 date: 2019-03-18T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 ## Understanding Our Customers
 
 The way open-core software is built and delivered is changing the way enterprises bring it into their environments. Sales organizations are likewise adapting to this new buying behavior. 

@@ -8,7 +8,7 @@ authors:
   - Lauren Feiner
 date: 2017-10-31T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 If customers make or break a business, it comes as no surprise that the best businesses know their customers more intimately than most of us realize; sometimes, more intimately than customers know themselves. 
 
 Consider the Netflix hit show *House of Cards*. Netflix created it, at a $100M budget, [without ever seeing a pilot](http://www.quicktapsurvey.com/blog/house-of-cards-one-big-successful-marketing-experiment/). Yet the streaming service insists the move wasn’t a gamble. Why? Because Netflix knows their [100M+ worldwide streaming customers](http://blog.kissmetrics.com/how-netflix-uses-analytics/). From the types of shows and actors their customers tend to watch to the [title colors](http://www.wired.com/insights/2014/03/big-data-lessons-netflix/) that appeal to them. Netflix’s success inspires all businesses to take behavioral analytics seriously.

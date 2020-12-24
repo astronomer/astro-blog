@@ -8,7 +8,7 @@ authors:
   - Ry Walker
 date: 2016-05-04T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 At Astronomer, we're creating a platform to make it radically easier for both novice and expert data engineers to create and deploy data pipelines.&nbsp;Sometimes a step in a data pipeline is exceptionally long-running.
 
 Would&nbsp;those steps benefit from [Apache Spark](https://spark.apache.org/) to speed up the processing?&nbsp;Should we delegate all steps&nbsp;to Spark, or only the long-running ones?&nbsp;How would Spark affect the cost to execute the work?&nbsp;

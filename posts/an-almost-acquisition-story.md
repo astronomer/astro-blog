@@ -7,7 +7,7 @@ authors:
   - Tim Brunk
 date: 2016-07-13T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 **TL;DR** : Coming out of AngelPad’s 2015 Demo Day, we suddenly found ourselves vacillating between an acquisition and Series A funding, though we were arguably too early for either.
 
 ### **PART 1: MOMENTUM**

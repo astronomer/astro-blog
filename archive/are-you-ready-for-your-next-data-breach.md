@@ -7,7 +7,7 @@ authors:
   - Max Berg
 date: 2016-09-07T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _\*\*\*Disclaimer: The content, data, and claims in this article are for_ _informational purposes only and not for the purpose of providing legal advice. You should contact your attorney to obtain advice with respect to any particular issue or problem you may be facing.\*\*\*_
 
 We at Astronomer have an optimistic—even idealistic—view about the future of data, its handling, and the role it will play in both technological advancement and our personal lives for years to come. We believe that data will aid in everything from revolutionizing the healthcare system to automating toilet paper orders based on your wiping habits (in fairness, Amazon already did this with data!). We even think it could save us from unwittingly becoming a society where a [Kimye](https://www.urbandictionary.com/define.php?term=Kimye&defid=6833850) robot is president, Pokemon never fades back into obscurity, Nickelback and Creed are considered classic rock, and gaining access to everyone’s data is as easy as trolling on Twitter. (Here’s hoping!)

@@ -7,7 +7,7 @@ authors:
   - Ben Gregory
 date: 2017-08-03T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Think of a hacker in almost any B-Level action movie: Swordfish, The Core, Fast + Furious 2-8 ... there’s always that skinny, nervous (or needlessly trendy) guy watching 0111001101100001 scroll past him endlessly. You wouldn’t be faulted for thinking that this is the world data engineers live in, but in reality, it’s far less exciting.
 
 Hackers (or in the business world, analysts) generally encounter four main formats of data: JSON, XML, CSV and TSV. Chances are, you’ve had to deal with data in one of these forms. So what are these types, why would you favor them and what do their nifty acronyms mean?
