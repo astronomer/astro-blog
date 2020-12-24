@@ -7,8 +7,8 @@ authors:
   - Viraj Parekh
 date: 2016-11-15T00:00:00.000Z
 ---
-
-_I’m in NYC with Ben, our Head of Delivery, to attend [PLOTCON](https://plotcon.plot.ly/) 2016, a 4-day conference for data visualization hosted by the makers of [Plotly](https://plot.ly/)&nbsp;(and [RStudio](https://www.rstudio.com/) and [Domino](https://www.dominodatalab.com/)), which is an open source visualization library. Plotly is one of Astronomer’s favorite open source tools and always gets great reactions from our clients. We plan to document our time here, so look for daily updates! But first, a bit about why we love Plotly:_
+<!-- markdownlint-disable-file -->
+_I’m in NYC with Ben, our Head of Delivery, to attend PLOTCON 2016, a 4-day conference for data visualization hosted by the makers of [Plotly](https://plot.ly/)&nbsp;(and [RStudio](https://www.rstudio.com/) and [Domino](https://www.dominodatalab.com/)), which is an open source visualization library. Plotly is one of Astronomer’s favorite open source tools and always gets great reactions from our clients. We plan to document our time here, so look for daily updates! But first, a bit about why we love Plotly:_
 
 In the world of data analysis, visualization is everything. At its very core, data is a story. No matter the format, type or topic, every dataset from the classical iris flower data set to a website’s clickstream logs has its own story to tell. Data visualization is the book that binds the story together. Effective visualizations communicate the message hidden in the data in a way that’s easy to digest, aesthetically pleasing and doesn’t leave anything out.
 
@@ -42,7 +42,7 @@ Here's the code and output with&nbsp;Matplotlib:
 
 ![Screen Shot 2016-11-15 at 10.40.12 AM.jpg](../assets/ScreenShot2016-11-15at10.40.12AM.jpg)
 
-[![Sine Curve vs Cosine Curve](https://plot.ly/~virajparekh94/64.jpg)](https://plot.ly/~virajparekh94/64/)
+![Sine Curve vs Cosine Curve](https://plot.ly/~virajparekh94/64.jpg)
 
 Matplotlib is definitely an incredibly powerful open source tool that can be fine-tuned to make exactly what you want. However, things like hover-text, an interactive axis and dynamic dashboards take a great deal of effort and have a pretty steep learning curve.
 

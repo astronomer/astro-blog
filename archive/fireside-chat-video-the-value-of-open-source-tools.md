@@ -8,7 +8,7 @@ authors:
   - Andy Cooper
 date: 2017-09-26T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Astronomer's platform relies on open source components, and we especially love the innovation made possible by Apache Airflow's code-based ETL. This video is the recording of a webinar all about how we use Apache Airflow, our approach to building a data engineering platform, what's next on our development roadmap and some Q&A. Check it out:
 
 

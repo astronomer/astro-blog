@@ -20,9 +20,9 @@ From there, it was an easy six-hour&nbsp;flight to Keflavik airport (bonus: we s
 
 ### Then, Settle In
 
-My favorite part of Reykjavik is that it feels lively and European, yet it’s small enough to walk to tons of cute restaurants and shops as long as you stay on the west side, or downtown. For reference, find a location close to [Hallgrimskirkja](https://www.visitreykjavik.is/hallgrimskirkja-church), the iconic Reykjavik church.
+My favorite part of Reykjavik is that it feels lively and European, yet it’s small enough to walk to tons of cute restaurants and shops as long as you stay on the west side, or downtown. For reference, find a location close to Hallgrimskirkja, the iconic Reykjavik church.
 
-We opted for an Airbnb and stayed at [Sigga’s "Fabulous Studio”](https://www.airbnb.com/rooms/3263774) which was clean, well-located and not a bad place to work for a few hours a day if you need to take calls or recharge your computer. Turns out, it was nice to have a kitchen too. The price of food surprised me: ~$25-30 for a single breakfast or lunch entrée, ~$45-65 for a single dinner entree, ~$15 for a libation, even plain old beer.&nbsp;
+We opted for an Airbnb and stayed at Sigga’s "Fabulous Studio” which was clean, well-located and not a bad place to work for a few hours a day if you need to take calls or recharge your computer. Turns out, it was nice to have a kitchen too. The price of food surprised me: ~$25-30 for a single breakfast or lunch entrée, ~$45-65 for a single dinner entree, ~$15 for a libation, even plain old beer.&nbsp;
 
 The good news is, if you don't want to pay up, grocery shopping at the local Bonus is pretty fun. You get to test drive with unknown ingredients (unknown to anyone who doesn't speak Icelandic, that is), not to mention feel like a local. Oh, and if you want a bottle of wine or some other alcoholic beverage, make a&nbsp;trip to the only stores that sell alcohol, called vínbúðins. Most (if not all) close early, though. So plan ahead.&nbsp;
 
@@ -40,11 +40,11 @@ Now, on to our&nbsp;five favorites:
 
 Skólavörðustígur 22, 101 Reykjavík, Iceland • [Hours: 11am-11pm](https://sites.google.com/a/babalu.is/babalu/)
 
-[![CafeBabalu.jpg](../assets/CafeBabalu.jpg)](https://www.iceland-travel.info/restaurant/best-of-reykjavik-2014-cafe/)
+![CafeBabalu.jpg](../assets/CafeBabalu.jpg)
 
 Day one, this became our go-to. It’s got an old, eclectic, almost-hippie feel. The ground level is cozy but tight – so if you really plan to settle in, head upstairs. Don’t take up more space than you need (they’ll ask you to move). But if you’re quiet, respectful and keep buying coffee, you’re set for the day. This place always had a smattering of guests, but never got so full that we&nbsp;couldn’t find a table. Don’t miss: the Star Wars-themed bathroom with life-size cutouts of Hans, Leia and 3CPO pasted on the walls under soft pink lights.
 
-**Bonus tip:** Since it doesn’t open until 11am anyway, start the work day at your Airbnb/hotel, then pause for breakfast at [The Laundromat Cafe](https://www.thelaundromatcafe.com/en/home), whose shelves of color-coded books and friendly menu make you fall in love with the city instantly.
+**Bonus tip:** Since it doesn’t open until 11am anyway, start the work day at your Airbnb/hotel, then pause for breakfast at The Laundromat Cafe, whose shelves of color-coded books and friendly menu make you fall in love with the city instantly.
 
 ![Laundromat Cafe.jpg](../assets/LaundromatCafe.jpg "Laundromat Cafe.jpg")
 
@@ -60,7 +60,7 @@ This one doesn’t have quite the flair Café Babalu does, but it’s still pret
 
 ![IMG_0592.jpg](../assets/IMG_0592.jpg)
 
-**Bonus tip:** After a full day, walk three minutes north toward the coast and stroll along the walkway. If you’re up for it, stop for dinner at [Geysir](https://www.geysirbistro.is/), which offers an unforgettable Icelandic tasting plate. You’ll get herring three ways, salmon, dried fish that looks like bread but is literally unchewable (that’s ok: it dissolves …). The grand finale? Rotten shark. Served in covered jar so the smell doesn’t overwhelm you and chased with a shot of vodka.&nbsp;
+**Bonus tip:** After a full day, walk three minutes north toward the coast and stroll along the walkway. If you’re up for it, stop for dinner at Geysir, which offers an unforgettable Icelandic tasting plate. You’ll get herring three ways, salmon, dried fish that looks like bread but is literally unchewable (that’s ok: it dissolves …). The grand finale? Rotten shark. Served in covered jar so the smell doesn’t overwhelm you and chased with a shot of vodka.&nbsp;
 
 #### 3. Stofan Cafe
 
@@ -76,7 +76,7 @@ This gem is in the heart of downtown and has the luxury of _space_. Upstairs, or
 
 Bankastræti 8, 101 Reykjavík, Iceland • [Hours: 7:30am – 6pm](https://kaffitar.is/)
 
-[![Kaffitar.jpg](../assets/Kaffitar.jpg)](https://www.restaurantguide.is/listing/kaffitar-safnahusid-hverfisgata/)
+![Kaffitar.jpg](../assets/Kaffitar.jpg)
 
 Most notable&nbsp;to me about this place is its color. Walls of uneven wooden poles painted brightly lined several walls and gave the illusion of waving. Honestly, it made it feel darker than it needed to be, which brought the ambiance down a notch (as did the American-sized paper coffee cups) but the constant stream of people brought a great energy and we stayed for hours without feeling any pressure to leave. Don’t miss: the Swiss mokka. Really, you can get one anywhere or everywhere, but I got one here. Hot chocolate + espresso + whipped cream + chocolate shavings gives you just the rush you need to wrap up a productive work day.
 
@@ -104,3 +104,4 @@ _\* [Snæfellsnes Peninsula road trip](https://bit.ly/2o1M2Sm)_
 
 And some good-to-knows for your days off: Check the weather before you hit the road; it gets intense. At the same time, don’t be afraid to [power through a snowstorm](https://www.weathergamut.com/2016/06/10/if-you-dont-like-the-weather-in-iceland-just-wait-five-minutes/). Skip the man-made [Blue Lagoon](https://www.bluelagoon.com/) for the [Secret Lagoon](https://secretlagoon.is/) on a cloudy, snowy day (magic!). With the third lowest crime rate on the planet and no threatening wildlife except a few polar bears who made it here via glacier from Greenland (seriously), explore freely! Really,&nbsp;Iceland is otherworldly; go see it for yourself.
 
+<!-- markdownlint-disable-file -->

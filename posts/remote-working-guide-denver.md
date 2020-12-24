@@ -7,12 +7,12 @@ authors:
   - Chris Hendrixson
 date: 2016-10-19T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 **_TL;DR:_** _We value and encourage remote working at Astronomer. This is the first of a series of Remote Working Guides in our favorite cities to work in, outside of Astronomer’s home town_ _of Cincinnati._
 
 ### Introduction: The Rise of Remote Working
 
-At the Global Leadership Summit in London recently, 1 in 3 business leaders predicted that a majority of their full-time workforce will be [working remotely by 2020](https://www.fastcompany.com/3034286/the-future-of-work/will-half-of-people-be-working-remotely-by-2020). We’re living in an increasingly mobile world, aren’t we? Aside from the fact that we have supercomputers in our pockets, laptops are thinner, lighter and more powerful than ever. My entire hard drive is in the cloud, to boot. As a graphic designer, I used to dream of the Apple G5 tower with multiple monitors and stacks of hard drives to store all my stuff. Now, I’m happier than ever with nothing but my Macbook and [Topo](https://topodesigns.com/collections/bags/products/trip-pack) backpack.
+At the Global Leadership Summit in London recently, 1 in 3 business leaders predicted that a majority of their full-time workforce will be [working remotely by 2020](https://www.fastcompany.com/3034286/the-future-of-work/will-half-of-people-be-working-remotely-by-2020). We’re living in an increasingly mobile world, aren’t we? Aside from the fact that we have supercomputers in our pockets, laptops are thinner, lighter and more powerful than ever. My entire hard drive is in the cloud, to boot. As a graphic designer, I used to dream of the Apple G5 tower with multiple monitors and stacks of hard drives to store all my stuff. Now, I’m happier than ever with nothing but my Macbook and [Topo]() backpack.
 
  _![digital-nomad-gear-by-dan-dragomir2x.jpg](../assets/digital-nomad-gear-by-dan-dragomir2x.jpg)_
 
@@ -56,13 +56,13 @@ My advice? Ride the light rail as much as possible! It’s convenient, [cheap](h
 
 #### Denver B-Cycle
 
-B-cycle is a public bicycle sharing company formed in partnership with [Trek Bicycle Corporation](https://en.wikipedia.org/wiki/Trek_Bicycle_Corporation), [Humana](https://en.wikipedia.org/wiki/Humana) and the advertising agency [Crispin Porter + Bogusky](https://en.wikipedia.org/wiki/Crispin_Porter_%2B_Bogusky). The mission: develop a technologically and visually appealing bike share system. B-cycle launched in 2010 in Denver on Earth Day and is now in 29 US cities.
+B-cycle is a public bicycle sharing company formed in partnership with [Trek Bicycle Corporation](https://en.wikipedia.org/wiki/Trek_Bicycle_Corporation), [Humana](https://en.wikipedia.org/wiki/Humana) and the advertising agency Crispin Porter + Bogusky. The mission: develop a technologically and visually appealing bike share system. B-cycle launched in 2010 in Denver on Earth Day and is now in 29 US cities.
 
-_![larimer-b-cycle2x.jpg](../assets/larimer-b-cycle2x.jpg)A Denver B-cycle station at 28th & Larimer in the colorful RiNo neighborhood._ [_Photo source._](https://www.r4bb1t.com/2014/01/photos-of-larimer-businesses-rino.html)
+_![larimer-b-cycle2x.jpg](../assets/larimer-b-cycle2x.jpg)A Denver B-cycle station at 28th & Larimer in the colorful RiNo neighborhood._ 
 
 Today, Denver B-cycle has 88 stations and 700 bikes throughout ten central Denver neighborhoods. You can check out and return a B-cycle bike at any station, 5am to midnight, 365 days a year.
 
-Denver B-cycle is a _fantastic_ way to get around Denver! There are a ton of stations, and many streets in downtown Denver have dedicated bike lanes, which make driving in the city at rush hour much less daunting. Also, the [Cherry Creek Trail](https://www.walkridecolorado.com/denver-metro-single-trails/cherry-creek-trail-downtown-denver-to-parker) is an awesome bike-and-pedestrian-only path that cuts through the heart of downtown along Cherry Creek.
+Denver B-cycle is a _fantastic_ way to get around Denver! There are a ton of stations, and many streets in downtown Denver have dedicated bike lanes, which make driving in the city at rush hour much less daunting. Also, the [Cherry Creek Trail](https://www.traillink.com/trail/cherry-creek-regional-trail/) is an awesome bike-and-pedestrian-only path that cuts through the heart of downtown along Cherry Creek.
 
 _![RidingCherryCreekTrail2x.jpg](../assets/RidingCherryCreekTrail2x.jpg)Denver’s Cherry Creek Trail alongside some downtown condos. Photo via_ [_www.denverphotoblog.com_](https://www.denverphotoblog.com/wp-content/uploads/2011/09/RidingCherryCreekTrail.jpg)_._
 
@@ -98,7 +98,7 @@ _1553 Platte St, Denver, CO 80202 •_ [_Find it on Google Maps_](https://www.go
 
 _Photo by_ [_Colorado Beer Girl_](https://coloradobeergirl.com/2015/12/22/where-to-brunch-on-new-years-day-2016/carbon/)_._
 
-If there’s no place to post up at Black Eye in LoHi, walk 15 minutes southwest to [Carbon Beverage Cafe](https://www.carbondenver.com/space.html) in the same neighborhood, where you’ll have no problem finding a seat. This place is huge but still feels quite cozy. Though it opened only a year ago, Carbon is one of those places that feels lived-in&nbsp;and comfortable.
+If there’s no place to post up at Black Eye in LoHi, walk 15 minutes southwest to Carbon Beverage Cafe in the same neighborhood, where you’ll have no problem finding a seat. This place is huge but still feels quite cozy. Though it opened only a year ago, Carbon is one of those places that feels lived-in&nbsp;and comfortable.
 
 Grab a coffee and make your way to the back rooms where you can linger for hours and hours, working and listening to Tame Impala at full volume in your headphones while sitting in one of a couple dozen chairs of various shapes and sizes. Carbon is a great place to lock in for a few hours in the late afternoon or evening. They’re open until 11pm and also sell beer, wine and cocktails if you need a little creativity bump.
 
@@ -146,7 +146,7 @@ _1201 E 13th Ave, Denver, CO 8021 •_ [_Find it on Google Maps_](https://www.go
 
 _Photo by_ [_The Meandering Mates_](https://themeanderingmates.wordpress.com/2016/07/13/thump-coffee-all-the-way-from-bend-or/)_._
 
-If you’re looking for a place to work (just slightly) outside of the city core, [Thump Cafe](https://thumpcoffee.com/denver-cafe/) is your spot. Thump is right in the heart of Capitol Hill, one of the city’s most cosmopolitan neighborhoods, well known as a [haven for artists and bohemians](https://en.wikipedia.org/wiki/Capitol_Hill_(Denver)).
+If you’re looking for a place to work (just slightly) outside of the city core, Thump Cafe is your spot. Thump is right in the heart of Capitol Hill, one of the city’s most cosmopolitan neighborhoods, well known as a [haven for artists and bohemians](https://en.wikipedia.org/wiki/Capitol_Hill_(Denver)).
 
 The space is minimalist and modern and has lots of places to sit. Still, I was there in the early afternoon and could only find a seat at the bar in the front window, so the Denver sunshine\* made it especially difficult to see what I was working on in Photoshop. Like most coffee shops in a city full of young people working remotely, the best seats are hard to come by no matter what time it is. Thump also has some good food options along with beer and kombucha on tap.
 
@@ -182,7 +182,7 @@ _2030 W 30th Ave, Denver, CO 80211 •_ [_Find it on Google Maps_](https://www.g
 
 One night in Denver, I met some friends at [Linger](https://lingerdenver.com/) just before sunset. We sat on the tightly-packed but good-sized rooftop lounge and shared a few satisfactory small plates. You know those tall, metal card-holders—often bearing a square card with a big number—restaurants sometimes give you to put on your table so the server can find you? At Linger, it was a card-holder with a photo inserted. Each photo was a celebrity no longer living, like Chris Farley. Ours was Whitney Houston, RIP. I ordered a gin and juice from a VW bus … on the roof. This place was whimsical if not slightly off kilter, and I found it amusing. The views of downtown directly south and the Rocky Mountains to the west were remarkable. We sat underneath a large, old neon sign that surely once served as the tenant’s only form of marketing. “Olinger Mortuaries.” As the sun went down and the stars came out, I noticed something different about the old neon sign towering above us. “Linger Eatuaries.”
 
-_![denver-olinger-restaurrant-rooftop-view2x.jpg](../assets/denver-olinger-restaurrant-rooftop-view2x.jpg)Photo by_ [_Voices of Insanity_](https://voicesofinsanity.com/2013/06/25/olinger-mortuaries-denver/)_._
+_![denver-olinger-restaurrant-rooftop-view2x.jpg](../assets/denver-olinger-restaurrant-rooftop-view2x.jpg)_
 
 ### OK, One More Bonus: Where to Get a Fresh Haircut
 

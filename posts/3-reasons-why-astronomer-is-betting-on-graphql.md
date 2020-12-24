@@ -7,7 +7,7 @@ authors:
   - Andrew Murray
 date: 2017-08-23T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Introduced to the public in 2015, [GraphQL](https://graphql.org/) came out of Facebook as the query language to power their transitioning of the mobile interfaces from web-based to native applications. Since then, it's been adopted by [GitHub](https://github.com/), [Pinterest](https://www.pinterest.com/), [Shopify](https://www.shopify.com/) and others to power their APIs.
 
 The reason? There are many things that set GraphQL apart from RESTful APIs, but the main difference is that the requester has more control over exactly which parts of the response they want.   

@@ -7,7 +7,7 @@ authors:
   - R. Brad Kirn
 date: 2016-11-08T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _When the content folks pitched me the idea of becoming Astronomer’s version of “Dear Abby” to answer our MOST frequently asked questions, I couldn’t pass it up. I’ll give all the relationship advice you want! But for now, let's&nbsp;stick to machines + humans. I'll start with the question I’ve been asked most frequently over the past few years:_
 
 > **Dear RBK,**
@@ -53,7 +53,7 @@ By bringing in Astronomer, the time to “first value” is almost _immediate_, 
 
 In a nutshell: Our platform and processes make it simple for organizations to use data to power BI, analytics, marketing, data science and machine learning, at a cost we’ll agree upon ahead of time. This saves you time, money and serious headaches—from now until forever.&nbsp;
 
-_On our FAQ page, we spell out a lot of great benefits, like visibility, agility adaptability … don’t get me started (I’m a sales guy, after all). You can_ [_check it out here_](https://phabricator.astronomer.io/w/public/faq/) _if you’re interested. And if you still have unanswered questions, email me at_ [_brad@astronomer.io_](mailto:brad@astronomer.io)_. Make your subject “Ask RBK.”_
+_On our FAQ page, we spell out a lot of great benefits, like visibility, agility adaptability … don’t get me started (I’m a sales guy, after all). You can_ [_check it out here_](https://astronomer.io) _if you’re interested. And if you still have unanswered questions, email me at_ [_brad@astronomer.io_](mailto:brad@astronomer.io)_. Make your subject “Ask RBK.”_
 
 _Don't miss "[Ask RBK: Tell Me About Google Analytics](https://www.astronomer.io/blog/ask-brad-google-analytics)," our very first video post!_
 

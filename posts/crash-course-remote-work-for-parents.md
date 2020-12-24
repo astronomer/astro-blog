@@ -48,7 +48,7 @@ But also, bribing with ice cream is a good alternative. Depends on the day.
 
 Speaking of ice cream, readily available snacks are a gift. Reinvent the snack drawer and let them bottomless pits know they can get whatever they want, when they want it. 
 
-To meet the between-meal nurishment needs of my forever hungry kids, I dedicated a few spots in our kitchen to healthy snacks. They know they don’t have to ask me to grab something from the dedicated snack options.
+To meet the between-meal nourishment needs of my forever hungry kids, I dedicated a few spots in our kitchen to healthy snacks. They know they don’t have to ask me to grab something from the dedicated snack options.
 
 Take it up a notch and dedicate one of your refrigerator drawers (or the bottom row) to juice boxes, cold snacks, and other goodies. 
 
@@ -59,9 +59,9 @@ Life is good and you’ll be interrupted less with: “Can I have a snack?!” o
 This is a big topic amongst parents. How much time is too much time? Netflix, Kids YouTube, Disney+; options are endless. To be frank, I don’t limit my kid’s screen time during working hours unless they’ve done something to revoke the privilege. But that doesn’t mean they’re surfing videos all day.
 
 Pack their tablets (or a folder on your phone) with educational apps. Let them learn virtually while you tackle rebuilding an entire user interface (I see you, Astronomer). Right now really isn’t the time to be limiting screens. Let them have it if it makes your life easier. 
-
+<!-- markdownlint-disable -->
 ## Repeat: Choose. Your. Battles.
-
+<!-- markdownlint-restore -->
 As a tried and true veteran of remote working (as a parent) - this is probably some of the ~~best~~ realest advice you’ll be getting. My empathy knows no bounds; working under these conditions is tough. You’ll prevail. It’s not forever. Give yourself grace (and maybe some [wine](https://www.winc.com/).)
 
 Best of luck!

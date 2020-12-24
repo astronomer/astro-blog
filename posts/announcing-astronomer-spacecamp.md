@@ -49,9 +49,11 @@ __Support:__
 Premium.
 
 __Output:__
+
 * Team equipped with industry best-practices around building custom Airflow plugins
 * Production ready workflows for your organization
 * Strong recommendations of what infrastructure and platform are needed to fulfill data goals
+
 ### Falcon Heavy
 
 Falcon Heavy is designed for large organizations seeking a drastic shift in their data culture. In addition to everything in Falcon 9, you get:
@@ -62,6 +64,7 @@ Falcon Heavy is designed for large organizations seeking a drastic shift in thei
 * Unlimited use of the Astronomer Platform
 
 For larger teams who have a variety of different projects and initiatives, Falcon Heavy is the fastest way up the Data Maturity Mountain.
+
 ## Climb the Data Maturity Mountain
 
 The goal of Falcon 9 and Falcon Heavy is to help your team up the "data maturity mountain" and on your way to the moon!
@@ -80,6 +83,6 @@ Robust ETL powering your analytics and reporting.
 
 We're confident that SpaceCamp is the fastest way to kickstart your next data initiative and give your team the tools and expertise it needs to shoot up the Data Maturity Mountain.
 
-![](https://astronomer.imgix.net/website/img/blog/2591/1519686660-data_maturity.jpg)
+![data maturity](https://astronomer.imgix.net/website/img/blog/2591/1519686660-data_maturity.jpg)
 
 Interested? [Learn more](https://www.astronomer.io/spacecamp) about SpaceCamp or [request SpaceCamp](https://www.astronomer.io/spacecamp#request-spacecamp) for your team.

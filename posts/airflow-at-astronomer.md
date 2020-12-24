@@ -7,8 +7,8 @@ authors:
   - Greg Neiheisel
 date: 2016-11-02T00:00:00.000Z
 ---
-
-**Update**: Since this blog post was published, we've made some huge developments on our managed Airflow service, which we call Astronomer Cloud. [Check out the product page here](https://astronomer.io/cloud) and [start a free trial here](https://trial.astronomer.io) if you'd like.
+<!-- markdownlint-disable-file -->
+**Update**: Since this blog post was published, we've made some huge developments on our managed Airflow service, which we call Astronomer Cloud. [Check out the product page here](https://astronomer.io/cloud).
 
 At Astronomer, we're&nbsp;creating&nbsp;a modern platform for organizations to build data pipelines to power their analytical and machine learning workloads. Our goal is to make it extremely simple for anyone to set up a data pipeline without having to worry about everything involved with keeping that pipeline running. We pride ourselves on being adaptable enough to extract data from _anywhere_ and get it into your data lake or data warehouse.
 

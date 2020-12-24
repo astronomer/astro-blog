@@ -7,20 +7,20 @@ authors:
   - Chris Hendrixson
 date: 2017-04-27T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 There’s a major trend happening in tech companies today: design teams are growing like mad. Whether you are in design, engineering or business development, this trend will likely affect you. At the very least, get used to seeing a lot more designers around the office. You’ll know us by our [Adidas triple white NMDs](https://www.google.com/search?q=adidas+nmd+white&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiR9ZaSqMPTAhUm4IMKHbLGAPkQ_AUICygC&biw=1280&bih=700&dpr=2#tbm=isch&q=adidas+triple+white+nmd) or tiny Moleskine notebooks or lengthy conversations about fonts.
 
 As we often say at Astronomer, the data doesn’t lie. According to LinkedIn, design teams at the biggest tech companies — Facebook, Google and Amazon — grew by an astronomical [65%](https://designintechreport.wordpress.com/) in 2016.
 
 Designers are also making their way into tech companies through acquisitions, a trend that began when tech companies started [acquiring design agencies](https://designintechreport.wordpress.com/) in the mid 2000s. Thirteen design agencies were acquired between 2004–2012 by companies like Facebook, Google, Square and Adobe. Since 2012, that number has skyrocketed. In the last five years, 59 design agencies were acquired by tech companies. There were 21 acquisitions in 2016 alone. IBM bought three.
 
-It’s a great time to be a freelancer, too. According to NEA’s [Future of Design in Startups&nbsp;2016 Survey](https://www.futureof.design/), venture-backed tech companies across the board plan to double their freelance design spend in the next 12 months, mostly on branding.
+It’s a great time to be a freelancer, too. According to NEA’s Future of Design in Startups&nbsp;2016 Survey, venture-backed tech companies across the board plan to double their freelance design spend in the next 12 months, mostly on branding.
 
 ### Who Cares About Design?&nbsp;
 
 The same survey, which gathered information from hundreds of tech companies around the world, found that 87% of startups believe design is important to their business. There is one group, however, that values design significantly more than the rest: _unicorns_.
 
-A [unicorn](https://en.wikipedia.org/wiki/Unicorn_(finance)) is a startup valued at over $1 billion. According to [TechCrunch](https://techcrunch.com/unicorn-leaderboard/), as of April 2017, there are 224 unicorns in the world. The largest include Uber, Airbnb, Xiaomi, Palantir, Dropbox and Pinterest. The most recent unicorn to become a public company was Snap, Inc. in March 2017.
+A [unicorn](https://en.wikipedia.org/wiki/Unicorn_(finance)) is a startup valued at over $1 billion. According to [TechCrunch](https://techcrunch.com), as of April 2017, there are 224 unicorns in the world. The largest include Uber, Airbnb, Xiaomi, Palantir, Dropbox and Pinterest. The most recent unicorn to become a public company was Snap, Inc. in March 2017.
 
 When it comes to companies who aren't valued over $1 billion, the sentiment around design is different. A lot fewer believe in the importance. Nearly all unicorns (88%) believe it is important to have a dedicated design team. Among non-unicorns, just&nbsp;56% agree.
 

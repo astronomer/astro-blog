@@ -22,10 +22,11 @@ Installing and deploying is easy, just follow [these docs](https://enterprise.as
 
 ### Try it Out
 
-If you want to give it a test drive without deploying it to your infrastructure, you can try out [Astronomer Open](https://open.astronomer.io/), which provides a local version of the platform that runs on your computer via Docker Compose.
+If you want to give it a test drive without deploying it to your infrastructure, you can try out [Astronomer Open](https://astronomer.io/), which provides a local version of the platform that runs on your computer via Docker Compose.
 
 
 ### What's Next
+
 In addition to improvements to our Airflow module, we’re working on including a Clickstream module into Enterprise Edition very soon.
 
 

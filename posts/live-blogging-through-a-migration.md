@@ -7,7 +7,7 @@ authors:
   - Taylor Edmiston
 date: 2018-02-16T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 
 One of the core modules is our clickstream module. It empowers marketers and product mangers to know their target audience and how they're interacting with a site or app.
 
@@ -52,7 +52,7 @@ Bah followed by a prayer emoji...oh boy.
 
 ![1518736879-bah_elaborate.jpg](../assets/1518736879-bah_elaborate.jpg)
 
-##### First obstacle (and amibigious bah) averted!
+##### First obstacle (and ambiguous bah) averted!
 
 Houston is our GraphQL API - it acts as ground control between all the different services that run our platform.
 You can read more about why we chose to write it in GraphQL [here](https://www.astronomer.io/blog/3-reasons-why-astronomer-is-betting-on-graphql/).

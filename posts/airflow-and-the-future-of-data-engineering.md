@@ -7,7 +7,7 @@ authors:
   - Taylor Edmiston
 date: 2017-02-28T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Every once in a while I read a post about the future of tech that resonates with clarity.
 
 A few weeks ago it was [The Rise of the Data Engineer](https://medium.freecodecamp.com/the-rise-of-the-data-engineer-91be18f1e603#.95a26363n) by [Maxime Beauchemin](https://medium.com/@maximebeauchemin), a data engineer at Airbnb and creator of their data pipeline framework, [Airflow](https://airbnb.io/projects/airflow/). At Astronomer, [Airflow is at the very core of our tech stack](https://www.astronomer.io/blog/airflow-at-astronomer): our integration workflows are defined by data pipelines built in Airflow as directed acyclic graphs (DAGs). A post like that gives validation as to why right now is the best time for a company like Astronomer to exist.
@@ -80,7 +80,7 @@ I firmly believe in configuration as code as a way to author workflows, and I se
 
 Modern startups don't treat analytics and data as an afterthought anymore. They typically onboard their first data scientist early on, and the first wave of engineers will instrument some vital analytics in early versions of their product. VCs demand accountability and may provide the services of a "growth hacker" early on to provide guidance to startup and to measure their potential return on investment and see where to double down.
 
-I think future startups will be catapulted up the data maturity curve with access to better, cheaper, more accessible analytics software and services. A lot of the work is already getting comoditized through open source packages, but there's also a growing array of integrated vendor solutions like MixPanel, Interana, Optimizely, and a growing offering on cloud providers like AWS, GCS and Microsoft.
+I think future startups will be catapulted up the data maturity curve with access to better, cheaper, more accessible analytics software and services. A lot of the work is already getting commoditized through open source packages, but there's also a growing array of integrated vendor solutions like MixPanel, Interana, Optimizely, and a growing offering on cloud providers like AWS, GCS and Microsoft.
 
 Things that used to be bleeding edge like real-time Olap analysis, anomaly detection, A/B testing at scale and user segmentation an cohort analysis are now at reach of any startup with a minimum of talent and proper founding.
 

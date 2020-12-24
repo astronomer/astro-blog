@@ -97,3 +97,4 @@ It definitely takes some grit and resilience to get to the deeper understanding 
 
 I will continue to chronicle our journey as we build our business and understand our customers, so stay tuned. If you’d like to contact me to talk about my journey, Astronomer’s journey or help with data transportation, accessing hard-to-reach data sources and/or automating the analysis of data, reach out to [brad@astronomer.io](mailto:brad@astronomer.io). I’d love to chat!
 
+<!-- markdownlint-disable-file -->

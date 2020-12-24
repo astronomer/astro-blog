@@ -7,7 +7,7 @@ authors:
   - Andy Ruberg
 date: 2017-06-15T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Among Fortune 500 and startups alike, the proliferation of data silos and use of external data sources is posing a significant challenge. Why? Because organizations know to remain competitive, drive faster growth and reduce costs, they need to be data-driven. And they can’t be driven by just hindsight (traditional reporting) or observation (basic business intelligence)—they need to be driven by _foresight_ (predictive analytics).
 
 To advance the organization to predictive analytics, however, requires sophistication or what we call “[data maturity](https://www.astronomer.io/data-assessment).” Companies need to join data across the enterprise and add external sources. They need to process, enrich and clean data to ensure reliability. They need to make data available to every decision-maker. It's worth it, because the result is leading the industry. According to Gartner, by 2019, organizations that provide agile, curated internal and external datasets will realize **twice** the business benefits of those that don’t (Gartner, 2016).

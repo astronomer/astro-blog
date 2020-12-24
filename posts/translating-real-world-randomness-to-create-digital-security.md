@@ -32,7 +32,7 @@ The red candy was created by me trying to be as random as possible and the green
 
 ![Candy.jpg](../assets/Candy.jpg)
 
-While 25 flips is not enough to truly tell if something is random, it can still illustrate the differences between the two methods. When we attempt to emulate randomness, [we tend to avoid repetition and tend to repeat groups of characters](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.211.9085). This is noticeable within the red candy where there is a heavy amount of single runs that are back-to-back and never longer than 4 candies. Comparing this to the green candy, where there is a run of 8 candies and only an occurrence of 1 run back-to-back with another.
+While 25 flips is not enough to truly tell if something is random, it can still illustrate the differences between the two methods. When we attempt to emulate randomness, we tend to avoid repetition and tend to repeat groups of characters. This is noticeable within the red candy where there is a heavy amount of single runs that are back-to-back and never longer than 4 candies. Comparing this to the green candy, where there is a run of 8 candies and only an occurrence of 1 run back-to-back with another.
 
 This self-sabotage is more apparent for the longer strings you create. If we were, for example, going to guess the flip of an M&M™ 250,000 times (I’m not typing that), we would likely see the totals of heads to tails would be disproportionate from each other.&nbsp;
 
@@ -58,13 +58,13 @@ For cards, the best thing you can do is use an old deck. We are looking for card
 
 If your deck is new, you can get unpredictability into it by using the [Corgi Shuffle](https://en.wikipedia.org/wiki/Shuffling#Corgi_shuffle) method.&nbsp;
 
-![giphy-2.gif](../assets/giphy-2.gif)_\*Corgi Shuffle illustrated. Source: [https://giphy.com/gifs/corgi-rDRZc3VRmiKGI](https://medium.com/r/?url=http%3A%2F%2Fgiphy.com%2Fgifs%2Fcorgi-rDRZc3VRmiKGI)&nbsp;_
+![giphy-2.gif](../assets/giphy-2.gif)_\*Corgi Shuffle illustrated. Source: [https://giphy.com/gifs/corgi-rDRZc3VRmiKGI](https://giphy.com/gifs/corgi-rDRZc3VRmiKGI)&nbsp;_
 
 The Corgi Shuffle is simply spread all the cards out, face down, on a table and move them over each other repeatedly. You will want to do this several times, making sure to move all the cards around and that you are moving cards under each other as well. By doing this several times, we force any patterns that existed from when the deck was packaged. This will limit sequential runs of cards, such as 3, 4, 5, 6, 7 of the same suit, and will get us the randomness we need.&nbsp;
 
 #### **Establish Your Rules**
 
-Next, make sure the same amount of data within the cards is reflected within the password. This can be accomplished by making a [cipher](https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCipher) that will translate the card’s suit and value into characters a computer will recognize.
+Next, make sure the same amount of data within the cards is reflected within the password. This can be accomplished by making a cipher that will translate the card’s suit and value into characters a computer will recognize.
 
 Since we are using 52 playing cards, we can use the 26-letter alphabet to encode our passphrase. By using lower and uppercase letters, we get exactly 52 possible results, which allows us to keep the full amount of randomness.
 
@@ -130,3 +130,4 @@ Prevent yourself from keeping your password somewhere, either written or digital
 
 It may seem like a lot of work, but your online data is only becoming more valuable as time goes on ... and passwords only become easier to crack. It’s time to rely on a good lock—not just the door itself—to keep people out.
 
+<!-- markdownlint-disable-file -->

@@ -7,7 +7,7 @@ authors:
   - Tina Nguyen
 date: 2017-06-06T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _\*Image thanks to Matthew Juzenas and article thanks to Tina Nguyen, Content Marketing and Strategy Manager at [Chartio](https://www.chartio.com/),&nbsp;a cloud-based business analytics solution that allows everyone to explore their data and create business dashboards.&nbsp;_
 
 Every Marketing team, B2C or B2B, faces similar challenges. They want quality leads, exponential growth at the top of the funnel and a high conversion rate from lead to sales opportunities. Sometimes marketing feels like a rollercoaster ride. These challenges are what drive Marketing teams to think creatively and analytically.
@@ -18,7 +18,7 @@ This process may seem arduous, but it doesn’t have to be complicated. At [Char
 
 ### Why Visualize?
 
-According to [Business to Community](https://www.business2community.com/digital-marketing/visual-marketing-pictures-worth-60000-words-01126256#zH8TkrtJuguxgDDh.97), the human brain is more accustomed to processing images, often processing visuals 60,000 times faster than text. Which could [explain the ever-growing popularity](https://www.scribblelive.com/blog/2012/02/23/why-is-data-visualization-so-hot/) of data visualization. With that, we believe the best way to overcome your marketing challenges is to use your data and create dashboard visualizations.
+According to [Business to Community](https://www.business2community.com/digital-marketing/visual-marketing-pictures-worth-60000-words-01126256#zH8TkrtJuguxgDDh.97), the human brain is more accustomed to processing images, often processing visuals 60,000 times faster than text. Which could [explain the ever-growing popularity](https://en.rockcontent.com/blog) of data visualization. With that, we believe the best way to overcome your marketing challenges is to use your data and create dashboard visualizations.
 
 Start by asking questions: what are you doing and why are you doing it? If you’re launching a paid campaign, what goals do you want to attain?, What are the specific numbers that you want to hit? The list goes on.
 
@@ -64,7 +64,7 @@ To create an optimal Paid Search dashboard, you’ll need to combine data from y
 
 ### Social Media Dashboard
 
-According to a 2015 report by [Social Media Examiner](https://www.socialmediaexaminer.com/SocialMediaMarketingIndustryReport2015.pdf), “88% of marketers want to know how to measure their return on investment (ROI) for social media activities." With the continued emphasis on social, that number has more than likely grown. A Social Media dashboard contains all the metrics from your social channels, shares, engagements, followers, etc.
+According to a 2015 report by [Social Media Examiner](https://www.socialmediaexaminer.com/), “88% of marketers want to know how to measure their return on investment (ROI) for social media activities." With the continued emphasis on social, that number has more than likely grown. A Social Media dashboard contains all the metrics from your social channels, shares, engagements, followers, etc.
 
  ![social.jpg](../assets/social.jpg)  
 
@@ -103,7 +103,6 @@ Since Marketing encompasses a spectrum of disciplines, nearly every Marketing in
 - **Conversion funnel** : Tracks a prospect’s progressions as they move through the funnel and towards the desired outcome such as a conversion to a sales opportunity
 - **Customer Acquisition funnel** : This funnel stems from digital marketing data and tracks campaign efforts
 - **Content Marketing funnel** : Showcasing when a new contact downloads a piece of content and monitors their journey throughout the buyer’s journey
- ![](https://cdn-images-1.medium.com/max/1600/1*sn1UC4_pV2FfqkHTU-f36g.jpg)
 
 &nbsp;
 

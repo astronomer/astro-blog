@@ -9,7 +9,7 @@ authors:
 date: 2019-03-11T00:00:00.000Z
 ---
 
-You learn a few things after Airflowing day in and day out for 2+ years. From initial DAG troubleshooting gotchas to more advanced lessons in architectural design, we've jumped down just about every rabbit hole there is with Airflow. Today, we're here to discuss one of the more significant design choices folks are forced to make when architecting their Airflow infrastructure: Is it better to run one monolitic Airflow instance to power all of your org's DAGs, or is splitting things out into multiple Airflow instances based on business function the way to go?
+You learn a few things after Airflowing day in and day out for 2+ years. From initial DAG troubleshooting gotchas to more advanced lessons in architectural design, we've jumped down just about every rabbit hole there is with Airflow. Today, we're here to discuss one of the more significant design choices folks are forced to make when architecting their Airflow infrastructure: Is it better to run one monolithic Airflow instance to power all of your org's DAGs, or is splitting things out into multiple Airflow instances based on business function the way to go?
 
 ## A Quick History of Astronomer
 
@@ -27,11 +27,11 @@ Since the scheduler is responsible for updating job state, it's typically regard
 
 The scheduler loops through DAG files every heartbeat to see if any tasks need execution. This means that a file that generates a DAG with tasks  that runs every 24 hours will be pinged the same number of times as something that runs every 5 minutes. When one scheduler process is parsing a large number of DAG files (or [one file that dynamically generates tasks](https://www.astronomer.io/guides/dynamically-generating-dags/)) with several tasks it can become a pretty CPU-greedy process.
 
-Furthermore, unlike the other Airflow components or traditional microservices, the scheduler can't be horizontally scaled. We were able to scale up workers via [Celery](http://www.celeryproject.org/) and [Mesos](http://mesos.apache.org/), the webserver via [loadbalancers](https://www.citrix.com/glossary/load-balancing.html), and the DB via managed services ([AWS RDS](https://aws.amazon.com/rds/) in this case) relatively easily, but there's no easy way to run "multiple schedulers." 
+Furthermore, unlike the other Airflow components or traditional microservices, the scheduler can't be horizontally scaled. We were able to scale up workers via [Celery](https://docs.celeryproject.org/en/stable/) and [Mesos](http://mesos.apache.org/), the webserver via [loadbalancers](https://www.citrix.com/glossary/load-balancing.html), and the DB via managed services ([AWS RDS](https://aws.amazon.com/rds/) in this case) relatively easily, but there's no easy way to run "multiple schedulers." 
 
 As a quick aside, the team at Clairvoyant came up with [a really interesting high avaliably solution](http://site.clairvoyantsoft.com/making-apache-airflow-highly-available/), but it didn't really fit our specific use case.
 
-So therein lay our initial issue: our scheudler couldn't be scaled up in the way that we needed it to be. At one point, we even ended up throwing 4+ cores at the it and still experienced problems problems (we were running hundreds of tasks every hour).
+So therein lay our initial issue: our scheduler couldn't be scaled up in the way that we needed it to be. At one point, we even ended up throwing 4+ cores at the it and still experienced problems problems (we were running hundreds of tasks every hour).
 
 Apart from scaling, dealing with silent scheduler failures can also be challenging (especially because you can't always tell just from looking at the UI). This can be alleviated in Kubernetes-land with different (albeit, imperfect) healthchecks, but you can imagine how much of a DevOps nightmare it is to have that magical "what's on fire" view says everything is fine, but Slack/email is blowing up with missed SLAs and angry customers.
 

@@ -12,7 +12,7 @@ _TL;DR: At Astronomer, one of our core values is "fun." It could be one of the m
 
 From the outside, startups can seem like a lot of fun. The reality, though, is that an early-stage startup is mostly grueling work. Startups have monumental dreams and measly resources. Everything is ambiguous. Because you’re in a fight for survival, you rarely find time to exercise, eat right or get enough sleep, especially in a culture where working around the clock has become a [status symbol](https://www.businessinsider.com/working-all-the-time-is-a-status-symbol-2015-6). As a founder or early employee in a startup, your most common mental state is stressed out.
 
-A 2015 [study](https://www.michaelafreemanmd.com/Research_files/AreEntrepreneursTouchedwithFire(pre-pubn)4-17-15.pdf) by Dr. Michael Freeman, a clinical professor at UCSF and an entrepreneur himself, shed light on the mental state of those working in startups compared to those who aren’t. Of the hundreds of entrepreneurs surveyed, 30% reported suffering from depression. That’s strikingly higher than the US population as a whole, where just 7% identify themselves as depressed.
+A 2015 [study](https://michaelafreemanmd.com/Research_files/Are%20Entrepreneurs%20Touched%20with%20Fire%20(pre-pub%20n)%204-17-15.pdf) by Dr. Michael Freeman, a clinical professor at UCSF and an entrepreneur himself, shed light on the mental state of those working in startups compared to those who aren’t. Of the hundreds of entrepreneurs surveyed, 30% reported suffering from depression. That’s strikingly higher than the US population as a whole, where just 7% identify themselves as depressed.
 
 The conundrum is that startups do require a level of commitment above and beyond that of most other companies. Startups have extraordinary potential, and reaching that potential requires an extraordinary effort. Anyone who’s worked in a startup will you tell that it is an emotional roller coaster. The highs are incredibly meaningful but the lows can be equally as devastating.
 
@@ -50,7 +50,7 @@ A family that stays together plays together, after all. Sounds simple, right? Wi
 
 Will having more fun at work actually make us more productive? We are betting on it.
 
-We're always looking for rising stars. Check out our latest openings [here](https://spacemanship.com).
+We're always looking for rising stars. Check out our latest openings [here](https://careers.astronomer.io/).
 
 **Bonus:** &nbsp;_Wallpapers are fun aren't they? Here are a few freebies..._
 

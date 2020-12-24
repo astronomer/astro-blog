@@ -7,7 +7,7 @@ authors:
   - Mike Asem
 date: 2017-04-11T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 ***Quick editor's note** : Mike Asem is a director at M25, one of Astronomer's investors. This post and all accompanying images were&nbsp;[originally published by M25](https://medium.com/@M25Group/to-tackle-big-data-we-got-together-with-astronomer-53a4315a64a9) on 04.04.17 and__&nbsp;[by Tech.Co](https://tech.co/astronomer-bridge-big-data-gap-2017-04?utm_content=52106448&utm_medium=social&utm_source=twitter) on 04.05.17._
 
 Data science is here, and it’s growing fast. No one’s questioning that. Which is core to our thesis behind one of our most recent investments, [Astronomer](https://www.astronomer.io/). But it wasn’t too long ago that explaining the value of data science to folks wasn’t that easy.

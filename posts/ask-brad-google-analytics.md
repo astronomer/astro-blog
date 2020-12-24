@@ -9,7 +9,7 @@ authors:
   - R. Brad Kirn
 date: 2017-01-11T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 > _ **Dear RBK,** _  
 >   
 > **Tell me a bit about Google Analytics. What is Google Analytics&nbsp;best at? What can't it do? What other tools can I use to expand on the data that GA provides me?  
@@ -25,8 +25,6 @@ The fact is, there are no bad questions! I understand these questions may seem b
 Feel free to ask your questions about Google Analytics in the comments section below.
 
 \*Names may or may not have been changed to protect Jessica. :-)
-
-[videoEmbed](//www.youtube.com/embed/_dcwHs5y7oo)
 
 **Time to Topics:**  
 [:59](https://youtu.be/_dcwHs5y7oo?t=58) What is Google Analytics good for?  

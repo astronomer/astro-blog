@@ -7,7 +7,7 @@ authors:
   - Ben Gregory
 date: 2015-07-06T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 If you work at one of our integrations partners, you might have noticed by now the copious amount of test accounts I've created with you. 'Ben@astronomer.io,' 'Ben+1@astronomer.io,' 'fake@fake.fake,' test@test.test.' All of these have at one point or another been mechanisms for me to test that our architecture is working properly. But creating all of these accounts has created an unexpected consequence.  
   
 Drip emails. You know the ones I'm talking about. Most have the common theme of 'Just Checking in...' or 'Wanted to Introduce Myself' and are, for the most part, entirely ignored. But because I’ve been creating a ton of test accounts, these emails have really started to pile up. And I’ve started to notice some patterns.

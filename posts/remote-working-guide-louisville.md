@@ -7,7 +7,7 @@ authors:
   - Becky Steele
 date: 2017-01-03T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _Disclaimer: Astronomer account manager and author of this blog post, Becky Steele, lives in Louisville and shamelessly—no, fiercely—loves her fair city. Although she wasn’t born there, she would tell you that she got there as quickly as she could and plans to stay for life. She is one of a few Astronomers who works remotely full-time and makes a day trip once per week to the Astronomer homebase in Cincinnati, Ohio._
 
 This edition of Astronomer’s Remote Working Guide takes you to Louisville, Kentucky. Or Loo-a-vul. Or Loo-ee-ville? You choose your pronunciation—we accept them all!
@@ -32,7 +32,7 @@ The remote working destinations in this guide are rated on a scale of 1 to 5 sta
 
 All of the destinations are Louisville originals and have free parking within steps of their entrances. Okay, let’s go!
 
-### Destination #1: [Please & Thank You](https://www.pleaseandthankyoulouisville.com/)
+### Destination #1: Please & Thank You
 
 _800 East Market Street, Louisville, KY 40206 • [Find it on Google Maps](https://www.google.com/maps/place/800+E+Market+St,+Louisville,+KY+40206/@38.2529581,-85.7400891,17z/data=!3m1!4b1!4m5!3m4!1s0x886972c4fa664b73:0x51f20d40579a73ee!8m2!3d38.2529581!4d-85.7379004)_
 
@@ -60,7 +60,7 @@ The open wifi is solid, and I have never had an issue holding a strong connectio
 
 #### Productivity Pairings:
 
-They make a _mean_ soy latte, and their coffee is excellent! I’d be remiss if I didn’t mention their chocolate chip cookie, and if you just can’t get enough of it, you can take one of their [bake-it-yourself mixes](https://www.pleaseandthankyoulouisville.com/biy/) home with you.
+They make a _mean_ soy latte, and their coffee is excellent! I’d be remiss if I didn’t mention their chocolate chip cookie, and if you just can’t get enough of it, you can take one of their bake-it-yourself mixes home with you.
 
 ### Destination #2: [Quills Coffee](https://quillscoffee.com/)
 
@@ -115,9 +115,9 @@ Ambience: This is the quietest coffee bar on the list! The coffee bar itself is 
 
 #### The Deets:
 
-Gallery K Art & Coffee Bar relocated to its Barret Avenue location in 2016, and the neighborhood is better for it! [Thrillist happens to agree](https://www.thrillist.com/DRINK/LOUISVILLE/BEST-LOCAL-COFFEE-SHOPS-IN-LOUISVILLE).
+Gallery K Art & Coffee Bar relocated to its Barret Avenue location in 2016, and the neighborhood is better for it! [Thrillist happens to agree](https://www.thrillist.com).
 
-In addition to serving up delicious [Red Hot Roasters Organic coffee](https://www.redhotroasters.com/wordpress/), loose-leaf teas by [The Metropolitan Tea Company](https://www.metrotea.com/)&nbsp;and [Kentucky Kombucha](https://www.kentuckykombucha.com/), Gallery K is a combination art gallery and performance venue. You’ll find yourself looking forward to your next visit, as the rotating art exhibit keeps regular remote working sessions interesting. Plan your visit on&nbsp;a Thursday if you want to&nbsp;wrap up your work day with their open mic comedy night (6:30pm sign-up if you’re feeling adventurous; 7:00pm start if you’re in the audience).
+In addition to serving up delicious Red Hot Roasters Organic coffee, loose-leaf teas by [The Metropolitan Tea Company](https://www.metrotea.com/)&nbsp;and [Kentucky Kombucha](https://www.kentuckykombucha.com/), Gallery K is a combination art gallery and performance venue. You’ll find yourself looking forward to your next visit, as the rotating art exhibit keeps regular remote working sessions interesting. Plan your visit on&nbsp;a Thursday if you want to&nbsp;wrap up your work day with their open mic comedy night (6:30pm sign-up if you’re feeling adventurous; 7:00pm start if you’re in the audience).
 
 Because Barret Avenue lines the edge of Germantown ([read about this cool neighborhood here](https://www.gotolouisville.com/neighborhoods/germantown/)), Gallery K fills a historic shotgun house with tons of charm. You can enter through the front door or the side door.
 
@@ -169,7 +169,7 @@ No buddies to crash with in Louisville? Want a unique Louisville multi-day stay?
 
 [Gralehaus Bed & Beverage](https://gralehaus.com/sleepytime/), my top recommendation for overnight accommodations, delivers an unforgettable bed and “beverage” (and breakfast) experience with a Louisville twist. The guestrooms are the upstairs portion of a beautiful, century-old Victorian house.
 
-The best part is, they will stock your room with beer (specify at check-in) from the downstairs [Gralehaus](https://gralehaus.com/good-beer-and-cider/) and sister alehouse, [Holy Grale](https://holygralelouisville.com/) (a Louisville original). Holy Grale is one of the [best bars for craft beer in America](https://www.businessinsider.com/the-best-bars-for-craft-beer-in-america-2016-7/#holy-grale--louisville-ky-9), with 26 taps of “ever-changing beers from all over the world.” Just sayin’.
+The best part is, they will stock your room with beer (specify at check-in) from the downstairs Gralehaus and sister alehouse, [Holy Grale](https://holygralelouisville.com/) (a Louisville original). Holy Grale is one of the [best bars for craft beer in America](https://www.businessinsider.com/the-best-bars-for-craft-beer-in-america-2016-7/#holy-grale--louisville-ky-9), with 26 taps of “ever-changing beers from all over the world.” Just sayin’.
 
 Order [Gralehaus breakfast](https://gralehaus.com/good-food/) to your room, or show up in person for one of the best brunches in Louisville.
 
