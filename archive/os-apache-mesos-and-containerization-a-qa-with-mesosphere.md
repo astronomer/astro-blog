@@ -7,7 +7,7 @@ authors:
   - Amr Abdelrazik
 date: 2017-07-06T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 _\*When it comes to some of our core needs—speed, ability to manage big data, capacity to scale—Apache Mesos is a no-brainer for us. In fact, last week, Greg Neiheisel wrote a blog post about [how we're building our platform with Apache Mesos and DC/OS](https://www.astronomer.io/blog/building-next-generation-data-infrastructure-with-apache-mesos-and-dc/os). And since we're such fans of both, we asked our friends at [Mesosphere](https://mesosphere.com/) some questions about their tech and what they're most excited about down the road. Here's what Product Marketing Manager Amr Abdelrazik said:&nbsp;_
 
 ### Help us understand how DC/OS relates to Apache Mesos.

@@ -7,7 +7,7 @@ authors:
   - Dave Paprocki
 date: 2016-10-18T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 # **CVG Partners with Astronomer**  
 
 _Airport samples innovative data science with local startup_

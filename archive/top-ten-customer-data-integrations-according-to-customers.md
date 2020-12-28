@@ -7,7 +7,7 @@ authors:
   - Trent Baer
 date: 2017-02-23T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 &nbsp;
 
 There’s a good chance, if you’re reading this, that a hodgepodge of data sets are currently accumulating in your organization—collecting social media, blogging, email marketing, SEO, CRM, web analytics and more. Maybe you’re already gathering&nbsp;customer&nbsp;data from favorite tools. Maybe every step of a user's journey across your website or app, every "click," is tracked. (If you&nbsp;don't feel like you have enough data flowing,&nbsp;[check out this post](https://www.astronomer.io/blog/five-steps-to-take-before-kicking-off-a-customer-data-integration-initiative)&nbsp;and kick off something new.)&nbsp;

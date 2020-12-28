@@ -7,7 +7,7 @@ authors:
   - Becky Steele
 date: 2016-10-07T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 Last week, we participated in (and won!) our first official hackathon, Data Jam, sponsored by [Humana](https://www.humana.com/) and [Spry Labs](https://www.sprylabs.co/). Trong (center), an integration engineer, Viraj (right), a data analyst, and I joined forces with the [Differential](https://differential.com/) team from noon last Thursday through 3pm on Friday. Our task? Create an accurate and user-friendly directory for Humana’s dental customers to find a dentist.
 
 ### Addressing&nbsp;the Problem

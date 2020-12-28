@@ -7,7 +7,7 @@ authors:
   - Tim Brunk
 date: 2016-05-18T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 Over the last ten years as a founder and analyst, I’ve spent countless hours probing the depths of nerdom with my trusty companion, Microsoft Excel. Together we’ve built complex stock trading algorithms, analyzed large companies through sum-of-parts valuation models and even built a quite ugly, dynamic progress tracker to make sure I was ready for a CFA exam (time that probably would’ve been better spent studying…)
 
 Truth be told, I’ve spent so much time in Excel that I’ve started to think in terms of spreadsheets, and occasionally, even dream in rows and columns...

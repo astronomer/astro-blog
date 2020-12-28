@@ -7,7 +7,7 @@ authors:
   - Tim Brunk
 date: 2017-03-07T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 &nbsp;
 
 At the beginning of February, my co-founder and I attended the [SaaStr](https://www.saastrannual.com/) conference in San Francisco. (We’re huge fans of investor and co-founder of SaaStr Fund Jason Lemkin, btw, and [highly recommend his blog](https://medium.com/@jasonlk)). Historically, Ry and I have been heavily influenced at conferences … in a roundabout sort of way. In fact, two years ago, we attended the Collision conference in Vegas. After day 1, we devised a completely new business model—really, a new company (Astronomer!)—and spent the rest of our time there pitching it to anyone who would listen. SaaStr proved to be no exception and by the beginning of day 2, we were camped out in the hallway hammering out a new org chart.

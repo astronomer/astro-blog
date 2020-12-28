@@ -7,7 +7,7 @@ authors:
   - Ry Walker
 date: 2017-01-25T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 With the ability to track every step of a user's journey&nbsp;across a website or app,&nbsp;we can truly get a 360° view&nbsp;of a&nbsp;customer. Often, organizations gather this information via multiple analytics tools, each representing a different aspect of user behavior. Many of these rely on data generated from when a user does (or doesn't) "click." We call that&nbsp;clickstream data.
 
 Clickstream is the&nbsp;tracking of&nbsp;_all_ the events you want, which can then be broadcast to your data warehouse, CRM, marketing/sales analytics tool or any other destination in real-time.&nbsp;But if you’re interested in tracking new events (ie. beginning&nbsp;a clickstream initiative), here are the top 5 things to keep in mind before kicking it off:

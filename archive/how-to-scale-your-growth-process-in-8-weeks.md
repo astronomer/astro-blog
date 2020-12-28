@@ -9,7 +9,7 @@ authors:
   - Kevin Mackey
 date: 2017-04-18T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 ![beaconB@2x.jpg](../assets/beaconB@2x.jpg)  
 
 I had an epiphany during my morning commute last week (don’t you love it when that happens?): Our growth team should be a _beacon_, an intentionally inconspicuous device designed to attract attention to a specific location.

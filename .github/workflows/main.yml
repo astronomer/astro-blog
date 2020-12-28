@@ -26,8 +26,8 @@ jobs:
       - uses: actions/setup-node@main
       - name: lint all mardownfiles
         run: |
-          npm install
-          node_modules/.bin/markdownlint ./posts/ --ignore node_modules --ignore v5
+          yarn install
+          yarn lint
   link-check:
     runs-on: ubuntu-latest
     steps:
@@ -45,5 +45,5 @@ jobs:
       - uses: actions/setup-node@main
       - name: Check spelling
         run: |
-          npm install
-          node_modules/.bin/mdspell "posts/*.md" -n -a --en-us -r
+          yarn install
+          yarn spellcheck
