@@ -34,7 +34,9 @@ Please follow standard markdown formatting rules that are outlined [here](https:
 
 ### Netlify CMS
 
-You can also use Netlify's content management system to create blog posts too. The CMS tool for our blog is located at [https://astro-blog.netlify.app](https://astro-blog.netlify.app/). When creating a post you will be prompted to provide the `frontmatter` information described above. The CMS tool will create a PR to this repo.
+You can also use Netlify's content management system to create blog posts. The CMS tool for our blog is located at [https://astro-blog.netlify.app/admin](https://astro-blog.netlify.app/admin). When creating a post you will be prompted to provide the `frontmatter` information described above. The CMS tool will create a PR to this repo.
+
+To log into the CMS go to `/admin` and login with your github account. You will need to have access to the `astronomer/astro-blog` repo to login to the CMS. 
 
 ## CI/CD Pipeline
 
@@ -50,7 +52,7 @@ The pipeline uses [markdownlint](https://github.com/DavidAnson/markdownlint) to 
 node_modules/.bin/markdownlint ./posts/<your-blog-post> --ignore node_modules --ignore v5
 ```
 
-To include line of code that break certain markdown rules follow the code example below.
+To include lines of code that break certain markdown rules follow the code example below.
 
 ```markdown
 <!-- markdownlint-disable MD033 -->
@@ -65,7 +67,7 @@ The pipeline features a [spell checker](https://github.com/lukeapage/node-markdo
 node_modules/.bin/mdspell "posts/<your-blog-post>.md" -n -a --en-us
 ```
 
-Out put should be similar too
+Output should be similar too
 
 ```shell
 Spelling - <your-blog-post>.md
@@ -84,7 +86,7 @@ Spelling - <your-blog-post>.md
 
 You can run locally in "report" mode too running the command with a `-r` flag.
 
-You can also add words directly to dictionary by adding the word to the `.spelling` file located in this repo.
+You can also add words directly to dictionary by adding the word to the [.spelling](https://github.com/astronomer/astro-blog/blob/main/.spelling) file located in this repo.
 
 ### Link Check
 

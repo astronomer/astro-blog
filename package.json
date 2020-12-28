@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/astronomer/astro-blog#readme",
   "devDependencies": {
-    "markdown-link-check": "^3.8.5",
     "markdownlint": "^0.22.0"
   },
   "dependencies": {
