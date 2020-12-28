@@ -7,7 +7,7 @@ authors:
   - Ry Walker
 date: 2018-01-18T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 We’ve long had a vision at Astronomer to open source our core modules, and we’re excited to announce that [we’ve begun that process](https://github.com/astronomerio/astronomer). These Docker images will be directly utilized in core Astronomer Enterprise Edition and the next generation of Astronomer Cloud, and will be well-maintained.
 
 ## Airflow

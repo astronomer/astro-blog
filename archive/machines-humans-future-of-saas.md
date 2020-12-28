@@ -9,7 +9,7 @@ authors:
   - Ry Walker
 date: 2016-08-18T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
  **TL;DR: By packaging our platform and our people into our product, we’re building a company that has high customer satisfaction, fast growth, capital efficiency and a self-service platform that’s growing stronger every day.**
 
 ## Setting the Stage

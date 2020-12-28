@@ -7,7 +7,7 @@ authors:
   - Laurel Brunk
 date: 2017-08-29T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 _\*Most organizations are all in when it comes to big data. But the number of tools available (and necessary!) to deal with it is staggering. Check out our updated infogrpahic based on [this study](http://www.kpcb.com/internet-trends) below:
 
 https://support.astronomer.io/general/infographics/too-many-big-data-tools

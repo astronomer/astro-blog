@@ -49,7 +49,7 @@ Fix pipeline errors from all posts as old links may break and need to be replace
 The pipeline uses [markdownlint](https://github.com/DavidAnson/markdownlint) to ensure proper markdown formatting to ensure consistency. The rules followed by the linter can be found [here](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md). To run the linter locally run the following.
 
 ```shell
-node_modules/.bin/markdownlint ./posts/<your-blog-post> --ignore node_modules --ignore v5
+yarn lint
 ```
 
 To include lines of code that break certain markdown rules follow the code example below.

@@ -7,7 +7,7 @@ authors:
   - Kevin Mackey
 date: 2017-05-02T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 For those new to this blog series, I’m chronicling my first eight weeks at Astronomer as I build the growth model that will position us for Series A funding and beyond. I’m calling it The Beacon Project, because that’s my inspiration—to be an intentionally inconspicuous device that attracts Astronomer to the right customers, and vice versa. I believe we can do that by becoming a growth team that's focused on&nbsp;the right opportunities.&nbsp;
 
 ### In Case You Missed It...

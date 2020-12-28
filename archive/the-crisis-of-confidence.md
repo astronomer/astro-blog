@@ -7,7 +7,7 @@ authors:
   - Tim Brunk
 date: 2016-09-14T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 For the last nine years, I’ve observed a serious challenge in the startup world. I’ve experienced it firsthand in my own ventures, discussed it at length with my entrepreneur friends and even co-launched a couple of organizations with the goal of addressing it head on. It’s a challenge faced more intensely in startups than almost anywhere else, one that far too often leads to serious depression, burnout and even suicide. It’s the challenge of confidence—a challenge so serious, we're calling it a crisis.
 
 Much has been written about the high rates of depression in Silicon Valley. Brad Feld, a thought leader in the tech and startup world, has some [powerful stuff](https://www.inc.com/magazine/201307/brad-feld/many-entrepreneurs-deal-with-depression.html) on this topic, and many others have analyzed the correlation between working in a startup and emotional and mental strain.&nbsp;[Business Insider](https://www.businessinsider.com/austen-heinzs-suicide-and-depression-in-startups-2015-7) cites a study&nbsp;by Dr. Michael Freeman (entrepreneur and clinical professor at USCF):

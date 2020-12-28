@@ -7,7 +7,7 @@ authors:
   - Max Berg
 date: 2017-02-01T00:00:00.000Z
 ---
-<!-- markdownlint-disable-file -->
+
 _“In any moment of decision, the best thing you can do is the right thing. The worst thing you can do is nothing.” - Teddy Roosevelt_
 
 In business, decisiveness is of critical importance. Yet decisiveness does not operate in a vacuum. The power to make decisions should not be measured by the results it produces, but by the information fueling the process. Why? Because the information driving a decision _causes_ a result, whereas looking at the result alone only suggests a correlation between the information powering the decision and the subsequent outcome. This begs the question: how does one go about getting the best information in order to make a decision, leading to what Ol’ Teddy calls “the right thing?”
