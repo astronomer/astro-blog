@@ -22,13 +22,13 @@ Airflow was designed to make data integration between systems easy. Today it sup
 **3. A large, vibrant community.**
 Airflow boasts thousands of users and over 1,600 contributors who regularly submit features, plugins, content and bug fixes to ensure continuous momentum and improvement. In 2020, Airflow reached 10,000 commits and 18,000 GitHub stars.
 
-As Apache Airflow grows in adoption, there’s no question that a major release to expand on the project’s core strengths has been long overdue. As users and members of the community, we at Astronomer are delighted to announce that Airflow 2.0 is in the alpha testing stage and is scheduled to be generally available in December of 2020.
+As Apache Airflow grows in adoption, there’s no question that a major release to expand on the project’s core strengths was long overdue. As users and members of the community, we at Astronomer are delighted to announce that Airflow 2.0 was released on December 17th, 2020, and is generally available today.
 
 ![Airflow 2.0 Home](../assets/Airflow-2.0-Home.jpg)
 
 Over the last year, various organizations and leaders within the Airflow Community have been in close collaboration refining the scope of Airflow 2.0 and actively working towards enhancing existing functionality and introducing changes to make Airflow faster, more reliable and more performant at scale.
 
-In preparation for the highly anticipated release, we’ve put together an overview of major Airflow 2.0 features below. We’ll publish a series of followup posts over the next few weeks that dive deeper into some of those changes.
+In celebration of the highly anticipated release, we’ve put together an overview of major Airflow 2.0 features below. We’ll publish a series of followup posts over the next few weeks that dive deeper into some of those changes.
 
 ## Major Features in Airflow 2.0
 
@@ -54,7 +54,10 @@ Users running 2+ Schedulers will see zero downtime and no recovery time in the c
 **4. Easier Maintenance.**
 The Airflow 2.0 model allows users to make changes to individual schedulers without impacting the rest and inducing downtime.
 
-The Scheduler's now-zero recovery time and readiness for scale eliminates it as a single point of failure within Apache Airflow. Given the importance of this change, we'll be putting out a series of followup blog posts that dive deeper into the story behind these improvements alongside an architecture overview and benchmark metrics.
+The Scheduler's now-zero recovery time and readiness for scale eliminates it as a single point of failure within Apache Airflow. Given the significance of this change, our team recently published ["The Airflow 2.0 Scheduler"](https://www.astronomer.io/blog/airflow-2-scheduler), a blog post that dives deeper into the story behind Scheduler improvements alongside an architecture overview and benchmark metrics.
+
+For more information on how to run more than 1 Scheduler concurrently, refer to [official documentation on the Airflow Scheduler](https://airflow.apache.org/docs/apache-airflow/stable/scheduler.html?highlight=multiple%20schedulers#running-more-than-one-scheduler).
+
 ### Full REST API
 
 Data engineers have been using Airflow’s “Experimental API” for years, most often for [triggering DAG runs programmatically](https://www.astronomer.io/docs/cloud/stable/customize-airflow/airflow_api/). With that said, the API has historically remained narrow in scope and lacked critical elements of functionality, including a robust authorization and permissions framework.
@@ -68,7 +71,8 @@ Airflow 2.0 introduces a new, comprehensive REST API that sets a strong foundati
 
 These capabilities enable a variety of use cases and create new opportunities for automation. For example, users now have the ability to programmatically set Connections and Variables, show import errors, create Pools, and monitor the status of the Metadata Database and Scheduler.
 
-For more information, you can reference REST API documentation [here](https://airflow.readthedocs.io/en/latest/stable-rest-api-ref.html).
+For more information, reference [Airflow's REST API documentation](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html).
+
 ### Smart Sensors
 
 In the context of dependency management in Airflow, it’s been common for data engineers to design data pipelines that employ [*Sensors*](https://www.astronomer.io/guides/what-is-a-sensor/). Sensors are a special kind of Airflow Operator whose purpose is to wait on a particular trigger, such as a file landing at an expected location or an external task completing successfully. Although Sensors are idle for most of their execution time, they nonetheless hold a “worker slot” that can cost significant CPU and memory.
@@ -81,12 +85,13 @@ The “Smart Sensor” introduced in Airflow 2.0 is an “early access” (subje
 
 This feature was proposed and contributed by Airbnb based on their experience running an impressively large Airflow Deployment with tens of thousands of DAGs. For them, Smart Sensors reduced the number of occupied worker slots by over 50% for concurrent loads in peak traffic.
 
-To learn more, refer to the Airflow docs on Smart Sensors [here](https://airflow.readthedocs.io/en/latest/smart-sensor.html).
+To learn more, refer to [Airflow documentation on Smart Sensors](https://airflow.apache.org/docs/apache-airflow/stable/smart-sensor.html).
+
 ### TaskFlow API
 
 While Airflow has historically shined in scheduling and running idempotent tasks, it has historically lacked a simple way to pass information *between* tasks. Let's say you are writing a DAG to train some set of Machine Learning models. A first set of tasks in that DAG generates an identifier for each model and a second set of tasks outputs the results generated by each of those models. In this scenario, what's the best way to pass output from those first set of tasks to the latter?
 
-Historically, [XComs](https://airflow.readthedocs.io/en/latest/concepts.html?highlight=Xcoms#xcoms) have been the standard way to pass information between tasks and would be the most appropriate method to tackle the use case above. As most users know, however, XComs are often cumbersome to use and require redundant boilerplate code to set return variables at the end of a task and retrieve them in downstream tasks.
+Historically, [XComs](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcoms#xcoms) have been the standard way to pass information between tasks and would be the most appropriate method to tackle the use case above. As most users know, however, XComs are often cumbersome to use and require redundant boilerplate code to set return variables at the end of a task and retrieve them in downstream tasks.
 
 With Airflow 2.0, we're excited to introduce the TaskFlow API and Task Decorator to address this challenge. The TaskFlow API  implemented in 2.0 makes DAGs significantly easier to write by abstracting the task and dependency management layer from users. Here's a breakdown of incoming functionality:
 
@@ -101,7 +106,7 @@ Airflow 2.0 includes support for a new [`xcom_backend` parameter](https://airflo
 
 It's worth noting that the underlying mechanism here is still XCom and data is still stored in Airflow’s Metadata Database, but the XCom operation itself is hidden inside the PythonOperator and is completely abstracted from the DAG developer. Now, Airflow users can pass information and manage dependencies between tasks in a standardized Pythonic manner for cleaner and more efficient code.
 
-To learn more, refer to Airflow’s official [docs here](https://airflow.readthedocs.io/en/latest/concepts.html#taskflow-api) and the [accompanying tutorial](https://airflow.readthedocs.io/en/latest/tutorial_taskflow_api.html).
+To learn more, refer to [Airflow documentation on the TaskFlow API](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#taskflow-api) and the [accompanying tutorial](https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html).
 
 ### Task Groups
 
@@ -120,6 +125,9 @@ One of Airflow’s signature strengths is its sizable collection of community-bu
 Providers have historically been bundled into the core Airflow distribution and versioned alongside every Apache Airflow release. As of Airflow 2.0, they are now split into its own [airflow/providers](https://github.com/apache/airflow/tree/master/airflow/providers) directory such that they can be released and versioned independently from the core Apache Airflow distribution. Cloud service release schedules often don’t align with the Airflow release schedule and either result in incompatibility errors or prohibit users from being able to run the latest versions of certain providers. The separation in Airflow 2.0 allows the most up-to-date versions of Provider packages to be made generally available and removes their dependency on core Airflow releases.
 
 It’s worth noting that some operators, including the Bash and Python Operators, remain in the core distribution given their widespread usage.
+
+To learn more, refer to [Airflow documentation on Provider Packages](https://airflow.apache.org/docs/apache-airflow-providers/index.html).
+
 ### Simplified Kubernetes Executor
 
 Airflow 2.0 includes a re-architecture of the [Kubernetes Executor](https://airflow.apache.org/docs/stable/executor/kubernetes.html) and [KubernetesPodOperator](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/), both of which allow users to dynamically launch tasks as individual Kubernetes Pods to optimize overall resource consumption.  
@@ -127,7 +135,8 @@ Given the known complexity users previously had to overcome to successfully leve
 
 Data Engineers will now have access to the full Kubernetes API to create a yaml ‘pod_template_file’ instead of being restricted to a partial set of configurations through parameters defined in the airflow.cfg file. We’ve also replaced the `executor_config` dictionary with the `pod_override` parameter, which takes a Kubernetes V1Pod object for a clear 1:1 override setting.
 
-For more information, we encourage you to follow documentation on the new [pod_template file](https://airflow.readthedocs.io/en/latest/executor/kubernetes.html?highlight=pod_override#pod-template-file) and [pod_override](https://airflow.readthedocs.io/en/latest/executor/kubernetes.html?highlight=pod_override#pod-override) functionality.
+For more information, we encourage you to follow documentation on the new [pod_template file](https://airflow.apache.org/docs/apache-airflow/stable/executor/kubernetes.html?highlight=pod_override#pod-template-file) and [pod_override](https://airflow.apache.org/docs/apache-airflow/stable/executor/kubernetes.html?highlight=pod_override#pod-override) functionality.
+
 ### UI/UX Improvements
 
 Perhaps one of the most welcomed sets of changes brought by Airflow 2.0 will be the visual refresh of the Airflow UI.
@@ -145,13 +154,22 @@ Other highlights include:
 ![Airflow 2.0 Graph View Refresh](../assets/Airflow-2.0-Graph-view-Refresh.gif)
 
 Many more Airflow UI changes are expected beyond Airflow 2.0, but we’re certainly excited to have gotten a head start.
-### Get Involved
 
-We’re thrilled to finally be sharing the Airflow 2.0 alpha release with the community. The scope of the features outlined above sets an incredibly exciting foundation on top of which developers all over the world will undoubtedly build.
+To learn more, refer to [Airflow documentation on the Airflow UI](https://airflow.apache.org/docs/apache-airflow/stable/ui.html).
 
-The Airflow 2.0 beta release is imminent and will be followed by an official release candidate for the community to test and vote on. If you're interested in following the release cycle more closely, we encourage you to track the [Airflow 2.0 Planning page](https://cwiki.apache.org/confluence/display/AIRFLOW/Airflow+2.0+-+Planning) or sign up for the [Dev Mailing List](https://airflow.apache.org/community/). As always, you can also join the [Apache Airflow Community in Slack](https://apache-airflow-slack.herokuapp.com/) or follow [Astronomer](https://twitter.com/astronomerio) and [ApacheAirflow](https://twitter.com/ApacheAirflow) on Twitter.
+## Get Started with Airflow 2.0
 
-If you're interested in testing an Airflow 2.0 pre-release, make sure to follow at least one of the avenues above. We'll be sharing migration guidelines, testing instructions and more over the coming weeks.
+The upgrade path to Airflow 2.0 will largely depend on your Airflow project and the version of Airflow you're currently running. As expected with major releases, Airflow 2.0 has breaking changes and requires both code and configuration-level adjustments for your DAGs to be compatible.
+
+Astronomer's [open-source CLI](https://github.com/astronomer/astro-cli) is the best way to test Airflow 2.0 on your local machine as you prepare to migrate. For guidelines, refer to [Get Started with Airflow 2.0](https://www.astronomer.io/guides/get-started-airflow-2).
+
+For detailed instructions on the upgrade process, refer to [Upgrading to Airflow 2.0+](https://airflow.apache.org/docs/apache-airflow/stable/upgrading-to-2.html) from the Apache Airflow Project and [Upgrade to Airflow 2.0 on Astronomer](https://www.astronomer.io/docs/cloud/stable/customize-airflow/upgrade-to-airflow-2) if you're running on our platform.
+
+## Get Involved
+
+We’re thrilled to finally be sharing Airflow 2.0 with the community. The scope of the features outlined above sets an incredibly exciting foundation on top of which developers all over the world will undoubtedly build.
+
+If you're interested in getting involved with the wider community, we encourage you to sign up for the [Dev Mailing List](https://airflow.apache.org/community/) or join the [Apache Airflow Community in Slack](https://apache-airflow-slack.herokuapp.com/). For real-time announcements and updates, follow [Astronomer](https://twitter.com/astronomerio) and [ApacheAirflow](https://twitter.com/ApacheAirflow) on Twitter.
 
 Finally, please join us in sincerely thanking the many Airflow contributors who worked tirelessly to reach this milestone. In no particular order, a huge thank you goes out to: [Ash Berlin-Taylor](https://github.com/ashb), [Kaxil Naik](https://github.com/kaxil), [Jarek Potiuk](https://github.com/potiuk), [Daniel Imberman](https://github.com/dimberman), [Tomek Urbaszek](https://github.com/turbaszek), [Kamil Breguła](https://github.com/mik-laj), [Gerard Casas Saez](https://github.com/casassg), [Kevin Yang](https://github.com/KevinYang21), [James Timmins](https://github.com/jhtimmins), [Yingbo Wang](https://github.com/YingboWang), [Qian Yu](https://github.com/yuqian90), [Ryan Hamilton](https://github.com/ryanahamilton) and the hundreds of others for their time and effort into making Airflow what it is today.
 
