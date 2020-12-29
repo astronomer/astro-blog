@@ -54,9 +54,13 @@ Users running 2+ Schedulers will see zero downtime and no recovery time in the c
 **4. Easier Maintenance.**
 The Airflow 2.0 model allows users to make changes to individual schedulers without impacting the rest and inducing downtime.
 
+<<<<<<< HEAD
 The Scheduler's now-zero recovery time and readiness for scale eliminates it as a single point of failure within Apache Airflow. Given the significance of this change, our team recently published ["The Airflow 2.0 Scheduler"](https://www.astronomer.io/blog/airflow-2-scheduler), a blog post that dives deeper into the story behind Scheduler improvements alongside an architecture overview and benchmark metrics.
 
 For more information on how to run more than 1 Scheduler concurrently, refer to [official documentation on the Airflow Scheduler](https://airflow.apache.org/docs/apache-airflow/stable/scheduler.html?highlight=multiple%20schedulers#running-more-than-one-scheduler).
+=======
+The Scheduler's now-zero recovery time and readiness for scale eliminates it as a single point of failure within Apache Airflow. Given the importance of this change, we'll be putting out a series of followup blog posts that dive deeper into the story behind these improvements alongside an architecture overview and benchmark metrics.
+>>>>>>> 4716b73001cbdbf2b1d174fa39d8bf3f4969c82e
 
 ### Full REST API
 
@@ -71,7 +75,11 @@ Airflow 2.0 introduces a new, comprehensive REST API that sets a strong foundati
 
 These capabilities enable a variety of use cases and create new opportunities for automation. For example, users now have the ability to programmatically set Connections and Variables, show import errors, create Pools, and monitor the status of the Metadata Database and Scheduler.
 
+<<<<<<< HEAD
 For more information, reference [Airflow's REST API documentation](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html).
+=======
+For more information, you can reference REST API documentation [here](https://airflow.readthedocs.io/en/latest/stable-rest-api-ref.html).
+>>>>>>> 4716b73001cbdbf2b1d174fa39d8bf3f4969c82e
 
 ### Smart Sensors
 
@@ -85,7 +93,11 @@ The “Smart Sensor” introduced in Airflow 2.0 is an “early access” (subje
 
 This feature was proposed and contributed by Airbnb based on their experience running an impressively large Airflow Deployment with tens of thousands of DAGs. For them, Smart Sensors reduced the number of occupied worker slots by over 50% for concurrent loads in peak traffic.
 
+<<<<<<< HEAD
 To learn more, refer to [Airflow documentation on Smart Sensors](https://airflow.apache.org/docs/apache-airflow/stable/smart-sensor.html).
+=======
+To learn more, refer to the Airflow docs on Smart Sensors [here](https://airflow.readthedocs.io/en/latest/smart-sensor.html).
+>>>>>>> 4716b73001cbdbf2b1d174fa39d8bf3f4969c82e
 
 ### TaskFlow API
 
@@ -126,8 +138,11 @@ Providers have historically been bundled into the core Airflow distribution and 
 
 It’s worth noting that some operators, including the Bash and Python Operators, remain in the core distribution given their widespread usage.
 
+<<<<<<< HEAD
 To learn more, refer to [Airflow documentation on Provider Packages](https://airflow.apache.org/docs/apache-airflow-providers/index.html).
 
+=======
+>>>>>>> 4716b73001cbdbf2b1d174fa39d8bf3f4969c82e
 ### Simplified Kubernetes Executor
 
 Airflow 2.0 includes a re-architecture of the [Kubernetes Executor](https://airflow.apache.org/docs/stable/executor/kubernetes.html) and [KubernetesPodOperator](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/), both of which allow users to dynamically launch tasks as individual Kubernetes Pods to optimize overall resource consumption.  
@@ -135,7 +150,11 @@ Given the known complexity users previously had to overcome to successfully leve
 
 Data Engineers will now have access to the full Kubernetes API to create a yaml ‘pod_template_file’ instead of being restricted to a partial set of configurations through parameters defined in the airflow.cfg file. We’ve also replaced the `executor_config` dictionary with the `pod_override` parameter, which takes a Kubernetes V1Pod object for a clear 1:1 override setting.
 
+<<<<<<< HEAD
 For more information, we encourage you to follow documentation on the new [pod_template file](https://airflow.apache.org/docs/apache-airflow/stable/executor/kubernetes.html?highlight=pod_override#pod-template-file) and [pod_override](https://airflow.apache.org/docs/apache-airflow/stable/executor/kubernetes.html?highlight=pod_override#pod-override) functionality.
+=======
+For more information, we encourage you to follow documentation on the new [pod_template file](https://airflow.readthedocs.io/en/latest/executor/kubernetes.html?highlight=pod_override#pod-template-file) and [pod_override](https://airflow.readthedocs.io/en/latest/executor/kubernetes.html?highlight=pod_override#pod-override) functionality.
+>>>>>>> 4716b73001cbdbf2b1d174fa39d8bf3f4969c82e
 
 ### UI/UX Improvements
 
@@ -154,6 +173,11 @@ Other highlights include:
 ![Airflow 2.0 Graph View Refresh](../assets/Airflow-2.0-Graph-view-Refresh.gif)
 
 Many more Airflow UI changes are expected beyond Airflow 2.0, but we’re certainly excited to have gotten a head start.
+<<<<<<< HEAD
+=======
+
+### Get Involved
+>>>>>>> 4716b73001cbdbf2b1d174fa39d8bf3f4969c82e
 
 To learn more, refer to [Airflow documentation on the Airflow UI](https://airflow.apache.org/docs/apache-airflow/stable/ui.html).
 
