@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "node_modules/.bin/markdownlint ./posts/",
-    "spellcheck": "node_modules/.bin/mdspell \"posts/*.md\" -n -a --en-us -r"
+    "spellcheck": "node_modules/.bin/mdspell \"posts/*.md\" -n -a --en-us -r",
+    "spellcheck-interactive": "node_modules/.bin/mdspell \"posts/*.md\" -n -a --en-us"
   },
   "repository": {
     "type": "git",

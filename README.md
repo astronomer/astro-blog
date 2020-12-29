@@ -64,7 +64,7 @@ To include lines of code that break certain markdown rules follow the code examp
 The pipeline features a [spell checker](https://github.com/lukeapage/node-markdown-spellcheck) to ensure that there are no misspelled words in our blog posts. You may want to run the spell checker locally in "interactive" mode to add proper nouns to the dictionary.
 
 ```shell
-node_modules/.bin/mdspell "posts/<your-blog-post>.md" -n -a --en-us
+yarn spellcheck-interactive
 ```
 
 Output should be similar too
@@ -84,7 +84,7 @@ Spelling - <your-blog-post>.md
   peeling
 ```
 
-You can run locally in "report" mode too running the command with a `-r` flag.
+You can run locally in "report" mode too by running `yarn spellcheck`.
 
 You can also add words directly to dictionary by adding the word to the [.spelling](https://github.com/astronomer/astro-blog/blob/main/.spelling) file located in this repo.
 
