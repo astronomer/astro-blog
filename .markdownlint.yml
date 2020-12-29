@@ -1,8 +1,8 @@
 {
   "default": true,
-  "MD003": { "style": "atx" },
-  "MD007": { "indent": 4 },
-  "MD013": false,
-  "no-hard-tabs": false,
-  "whitespace": false
+  "MD003": { "style": "atx" }, # default header style 
+  "MD007": { "indent": 4 }, # unorded list indention 4 spaces
+  "MD013": false, # line length
+  "no-hard-tabs": false, # enables tabs
+  "whitespace": false # enables white space
 }
