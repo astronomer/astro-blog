@@ -157,15 +157,15 @@ Many more Airflow UI changes are expected beyond Airflow 2.0, but we’re certai
 
 To learn more, refer to [Airflow documentation on the Airflow UI](https://airflow.apache.org/docs/apache-airflow/stable/ui.html).
 
-### Get Started with Airflow 2.0
+## Get Started with Airflow 2.0
 
 The upgrade path to Airflow 2.0 will largely depend on your Airflow project and the version of Airflow you're currently running. As expected with major releases, Airflow 2.0 has breaking changes and requires both code and configuration-level adjustments for your DAGs to be compatible.
 
 Astronomer's [open-source CLI](https://github.com/astronomer/astro-cli) is the best way to test Airflow 2.0 on your local machine as you prepare to migrate. For guidelines, refer to [Get Started with Airflow 2.0](https://www.astronomer.io/guides/get-started-airflow-2).
 
-For detailed instructions on the migration process, refer to [Upgrading to Airflow 2.0+](https://airflow.apache.org/docs/apache-airflow/stable/upgrading-to-2.html) from the Apache Airflow Project and [Upgrade to Airflow 2.0 on Astronomer](https://www.astronomer.io/docs/cloud/stable/customize-airflow/upgrade-to-airflow-2) if you're running Airflow on Astronomer.
+For detailed instructions on the upgrade process, refer to [Upgrading to Airflow 2.0+](https://airflow.apache.org/docs/apache-airflow/stable/upgrading-to-2.html) from the Apache Airflow Project and [Upgrade to Airflow 2.0 on Astronomer](https://www.astronomer.io/docs/cloud/stable/customize-airflow/upgrade-to-airflow-2) if you're running on our platform.
 
-### Get Involved
+## Get Involved
 
 We’re thrilled to finally be sharing Airflow 2.0 with the community. The scope of the features outlined above sets an incredibly exciting foundation on top of which developers all over the world will undoubtedly build.
 
