@@ -1,0 +1,29 @@
+{
+  "name": "astro-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/.bin/markdownlint ./posts/",
+    "spellcheck": "node_modules/.bin/mdspell \"posts/*.md\" -n -a --en-us -r",
+    "spellcheck-interactive": "node_modules/.bin/mdspell \"posts/*.md\" -n -a --en-us"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astronomer/astro-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astronomer/astro-blog/issues"
+  },
+  "homepage": "https://github.com/astronomer/astro-blog#readme",
+  "devDependencies": {
+    "markdownlint": "^0.22.0"
+  },
+  "dependencies": {
+    "markdown-spellcheck": "^1.3.1",
+    "markdownlint-cli": "^0.26.0"
+  }
+}

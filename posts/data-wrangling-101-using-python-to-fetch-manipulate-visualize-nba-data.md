@@ -7,10 +7,10 @@ authors:
   - Viraj Parekh
 date: 2017-04-13T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 &nbsp;
 
-_Last week, Viraj's article by this name was featured on [the Yhat blog](https://blog.yhat.com/posts/visualize-nba-pipelines.html)... Yhat makes data science applicable for developers by allowing data scientists to programmatically employ R and Python models into production applications via REST API endpoints. The Yhat blog focuses on data science, machine learning and engineering. Check out the intro, which links to the full post on Yhat!_
+_Last week, Viraj's article by this name was featured on the Yhat blog... Yhat makes data science applicable for developers by allowing data scientists to programmatically employ R and Python models into production applications via REST API endpoints. The Yhat blog focuses on data science, machine learning and engineering. Check out the intro, which links to the full post on Yhat!_
 
 This is a basic tutorial using pandas and a few other packages to build a simple datapipe for getting NBA data. Even though this tutorial is done using NBA data, you don't need to be an NBA fan to follow along. The same concepts and techniques can be applied to any project of your choosing.
 
@@ -26,7 +26,7 @@ On a high level, this might look something like:
 
 Game | Days Rest | Total Passes | Total Assists | Passes/Assist | EFG | Outcome
 
-_Continue digging into where the data is coming from and the packages you need to get it by [following Viraj's step-by-step tutorial at the Yhat blog](https://blog.yhat.com/posts/visualize-nba-pipelines.html), complete with numerous visualizations and links to resources. 
+_Continue digging into where the data is coming from and the packages you need to get it by following Viraj's step-by-step tutorial at the Yhat blog, complete with numerous visualizations and links to resources. 
 
 **Worth noting:** This is Viraj's second detailed piece that combines data science and basketball. If you're interested, [read his piece about the data-driven nature of&nbsp;the NBA](https://www.astronomer.io/blog/data-in-basketball)._
 

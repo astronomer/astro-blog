@@ -7,7 +7,7 @@ authors:
   - Ry Walker
 date: 2017-10-24T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Great companies create great products. We admire Apple, Tesla, Nike and Netflix because of their great products. They are winning because they make sure that product innovation isn’t reactive, but predictive.
 
 The good news is, it can be. Tech exists to understand what users do (or don’t do), before, during and after they experience your product.
@@ -31,7 +31,7 @@ Currently, our organic growth involves making Clickstream deployable in a virtua
 We’ll innovate however we have to, so that others can do the same. 
 
 ### Our First Product, A Good First Step
-Clickstream is now relatively simple. You might need a few minutes of dev time, but the setup is fast. It’s a perfect first step for any company ([and an initiative is fairly painless to kick off](https://preview.astronomer.io/blog/five-steps-to-take-before-kicking-off-a-clickstream-data-initiative/)). Clickstream’s sole focus is ingestion—no transformation, processing or manipulating. Ingestion is the first thing to tackle because if you get down the road with logic too early, you won’t have the right data, and the whole process will need to be re-worked once you do. 
+Clickstream is now relatively simple. You might need a few minutes of dev time, but the setup is fast. It’s a perfect first step for any company ([and an initiative is fairly painless to kick off](https://astronomer.io/blog/)). Clickstream’s sole focus is ingestion—no transformation, processing or manipulating. Ingestion is the first thing to tackle because if you get down the road with logic too early, you won’t have the right data, and the whole process will need to be re-worked once you do. 
 
 *Here's a peek at our current clickstream interface: *
 
@@ -64,4 +64,4 @@ Companies that are aligned and operate (or want to operate) with agility to do b
 
 Another way to look at it is like this: If you’re dissatisfied with how you’re doing analytics today or feeling pressured by a competitor and can’t afford to wait three years, Astronomer can help. Quick innovation is something that many companies aren’t equipped to do, especially in certain industries. Big consulting firms aren’t equipped either. It requires thinking outside the box and solving a very real problem at a striking velocity. 
 
-If your mentality is “innovate or die,” start now. [Sign up for free today](https://app.astronomer.io/) and start ingesting clickstream data from your website or app. Build something, measure it, learn from it, make changes. And as you grow (which you inevitably will), we’ll be there.
+If your mentality is “innovate or die,” start now. [Sign up for free today](https://astronomer.io/) and start ingesting clickstream data from your website or app. Build something, measure it, learn from it, make changes. And as you grow (which you inevitably will), we’ll be there.

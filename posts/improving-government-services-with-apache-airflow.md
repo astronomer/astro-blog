@@ -9,10 +9,10 @@ authors:
   - Maksim Pecherskiy
 date: 2018-01-25T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 ## Introduction
 
-When we set out to create a [podcast about Apache Airflow](https://soundcloud.com/the-airflow-podcast), we didn’t quite know what to expect; we had a strong conviction that Airflow would be a major player in the future of data engineering, but the field is still very green and we hadn’t yet spoken to people that were running native Airflow rather than Airflow on Astronomer. To our delight, we ended up meeting some really brilliant and articulate people, all of whom were using airflow in unique ways to solve specific problems. One of the most interesting interviews we had was with [Maksim Pecherskiy](mrmaksimize.com), the Chief Data Officer of the City of San Diego. While we had spoken to many interesting folks running Airflow to solve their company’s data problems, we had not explored the use of Airflow in the public sector.
+When we set out to create a [podcast about Apache Airflow](https://soundcloud.com/the-airflow-podcast), we didn’t quite know what to expect; we had a strong conviction that Airflow would be a major player in the future of data engineering, but the field is still very green and we hadn’t yet spoken to people that were running native Airflow rather than Airflow on Astronomer. To our delight, we ended up meeting some really brilliant and articulate people, all of whom were using airflow in unique ways to solve specific problems. One of the most interesting interviews we had was with Maksim Pecherskiy, the Chief Data Officer of the City of San Diego. While we had spoken to many interesting folks running Airflow to solve their company’s data problems, we had not explored the use of Airflow in the public sector.
 
 Maksim has a background in software engineering and landed a fellowship with Code for America in 2014. The fellowship sent him to Puerto Rico, where saw how much of a tangible impact that technology can have on people’s lives when applied correctly. After his fellowship, he landed his current job as the CDO of San Diego, where he runs the entire data and analytics team for the city, helping to operationalize public data so that both government employees and citizens can use it to ask intelligent questions about their infrastructure.
 
@@ -24,7 +24,7 @@ Maksim was also kind enough to give us a follow-up interview, where we further d
 
 I’ve loved computers and technology ever since my Dad got me my first computer at 8 years old. I love to use technology to create things, to bring things to life. I spent most of my career as a software engineer at various startups, contracting for awesome people and working on some amazing projects.  However, there was always something missing. I loved doing these cool things, but I’ve always had the feeling that the skills I had could be applied in a more meaningful way than just building yet another website.  
 
-Somehow I met Alan Palazollo, one of the original CfA fellows at a DrupalCon. He told me about Code for America, and I decided to apply. Somehow, I got in and convinced my wife to support my crazy idea of moving to California … to take a paycut.  But hey - we lived in Chicago at the time, and there’s only so many Snowmaggeddons you can take. 
+Somehow I met Alan Palazollo, one of the original CfA fellows at a DrupalCon. He told me about Code for America, and I decided to apply. Somehow, I got in and convinced my wife to support my crazy idea of moving to California … to take a paycut.  But hey - we lived in Chicago at the time, and there’s only so many Snowmageddons you can take. 
 
 
 
@@ -65,7 +65,7 @@ We also never wanted to run into the “well, this works on my computer” situa
 
 Lastly, security has and always will be a major factor in what we do in Airflow.  That’s the reason we run on-premises, why we encrypt env files, why we separate dev/stage prod and yet another reason that we use docker.  
 
-Learning and understanding Airflow wasn’t that hard for me, and I barely knew any Python before I dove in.  Airflow documentation and AirBnB blog posts were the main sources I learned from. And there’s never any substitute for digging into the source code itself.The nice thing about Python is that it’s so readable, and you can tell what’s happening under the hood.  
+Learning and understanding Airflow wasn’t that hard for me, and I barely knew any Python before I dove in.  Airflow documentation and AirBnB blog posts were the main sources I learned from. And there’s never any substitute for digging into the source code itself. The nice thing about Python is that it’s so readable, and you can tell what’s happening under the hood.  
 
 
 **4. What are you using Airflow for now and how has it helped the city?**

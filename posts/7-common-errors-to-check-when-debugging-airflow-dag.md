@@ -27,7 +27,7 @@ Before you jump into fixer upper mode (you wouldn't be the first), rest assured 
 
 That means one `schedule_interval` [AFTER the start date](https://airflow.apache.org/scheduler.html). An hourly DAG, for example, will execute its 2pm run when the clock strikes 3pm. The reasoning here is that Airflow can't ensure that all data corresponding to the 2pm interval is present until the _end_ of that hourly interval.
 
-This is a peculiar aspect to Airflow, but an important one to remember - especially if you're using [default variables and macros](https://airflow.apache.org/macros).
+This is a peculiar aspect to Airflow, but an important one to remember - especially if you're using [default variables and macros](https://airflow.apache.org/docs/apache-airflow/stable/macros-ref.html).
 
 
 **2. Time in Airflow is in UTC by default**
@@ -220,3 +220,4 @@ Log files should be in `~/logs`. From there, they'll be split up by DAG/TASK/RUN
 This list is based on our experience helping Astronomer customers with core Airflow issues, but we want to hear from you. Don't hesitate to reach out to us at humans@astronomer.io if we missed something that you think would be valuable to include.
 
 If you have follow up questions or are looking for Airflow support from our team, reach out to us [here](https://www.astronomer.io/contact/?from=/).
+<!-- markdownlint-disable-file -->

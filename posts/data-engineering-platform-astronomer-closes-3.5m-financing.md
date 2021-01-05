@@ -7,7 +7,7 @@ authors:
   - Dave Paprocki
 date: 2017-06-28T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _The Astronomer platform collects, processes and unifies data, allowing organizations to scale analytics, data science and insights._
 
 (Cincinnati, OH—JUNE 28, 2017) &nbsp;Astronomer, a data engineering platform, closed $3.5M in new financing, led by Wireframe Ventures in San Francisco and CincyTech in Cincinnati. Other investors include Frontline Ventures (UK), Grand Ventures, Drummond Road, Core Network, M25 Group, with debt financing participation from Silicon Valley Bank.

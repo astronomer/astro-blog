@@ -7,8 +7,8 @@ authors:
   - David Fauchier
 date: 2017-09-12T00:00:00.000Z
 ---
-
-*Note: David Fauchier works for [Mr Wolf](http://https://fantasticmrwolf.com/), a London-based, data-driven SWAT team for venture-backed companies. They help companies upgrade their data infrastructure, become more data-driven and translate all of that into faster growth and higher revenue. Through their collection of war stories and experiences, they have gained insider insight to the deliberate preparation it takes to do analytics in a way that is meaningful. According to Mr. Wolf, here are the five steps every company should take to make their product and marketing analytics worthwhile:*
+<!-- markdownlint-disable-file -->
+*Note: David Fauchier works for Mr Wolf, a London-based, data-driven SWAT team for venture-backed companies. They help companies upgrade their data infrastructure, become more data-driven and translate all of that into faster growth and higher revenue. Through their collection of war stories and experiences, they have gained insider insight to the deliberate preparation it takes to do analytics in a way that is meaningful. According to Mr. Wolf, here are the five steps every company should take to make their product and marketing analytics worthwhile:*
 
 # 1. Set the right KPIs
 
@@ -38,9 +38,9 @@ In actuality, data is the easy part. The most important thing you can do is ask 
 
 ![1505694106-stages.jpg](../assets/1505694106-stages.jpg)
 
-The first stage of any product is "Discovery"—you’re identifying a customer problem you think you can solve. "Iteration" is all about finding product / market fit and building a solution that users want to use to solve the problem you discovered. "Scaling" is about growing the product usage once you know your solution works and can scale. "Optimisation" is the last stage of a product lifecycle. It’s about taking something that’s relatively mature and tweaking it to perfection: a few basis points of extra conversion here, and a percentage or two’s increase in lifetime value (LTV) over a six month period there.
+The first stage of any product is "Discovery"—you’re identifying a customer problem you think you can solve. "Iteration" is all about finding product / market fit and building a solution that users want to use to solve the problem you discovered. "Scaling" is about growing the product usage once you know your solution works and can scale. "Optimization" is the last stage of a product lifecycle. It’s about taking something that’s relatively mature and tweaking it to perfection: a few basis points of extra conversion here, and a percentage or two’s increase in lifetime value (LTV) over a six month period there.
 
-Each of these stages also has a corresponding set of metrics to focus on. "Understand" metrics over-index for qualitative data points like customer conversations, and under-index for multi-variate testing and data exploration. The goal is to gain context around a problem. Conversely, "Growth" metrics are all about optimising the top of the conversion funnel. They’re about acquiring more users for less money, getting them to that first "[aha moment](http://medium.com/parsa-vc/how-to-discover-your-apps-aha-moment-5f75dd7b6536)," and letting the product do the work from there. Growth metrics are 90% of the reading you’ll find on "data" on the internet.
+Each of these stages also has a corresponding set of metrics to focus on. "Understand" metrics over-index for qualitative data points like customer conversations, and under-index for multi-variate testing and data exploration. The goal is to gain context around a problem. Conversely, "Growth" metrics are all about optimizing the top of the conversion funnel. They’re about acquiring more users for less money, getting them to that first "[aha moment](http://medium.com/parsa-vc/how-to-discover-your-apps-aha-moment-5f75dd7b6536)," and letting the product do the work from there. Growth metrics are 90% of the reading you’ll find on "data" on the internet.
 
 Make sure you know which stage your business is in, and focus on those metrics. Anything else is a distraction.
 
@@ -57,7 +57,7 @@ It turned out that 100% of the time on site drop could be attributed to people s
 
 We continued full steam ahead with the UX fixes.
 
-We also learned firsthand that data without context is dangerous. As humans, we’re hardwired to immediately infer explanations from numbers. Subconsciously, we want to explain a movement, and we’ll reach for the first plausible thing we can think of. It’s important to constantly remind yourself that numbers are only the start: you should use quantitative data (i.e. numbers) to unearth oddities and quirks to investigate. Numbers should be curiosity sparks; they are red flags—nothing more. It’s then up to you to establish as many hypotheses as to why, and then go and [disprove or confirm those qualitatively](http://blog.fantasticmrwolf.com/how-to-run-a-tight-product-ship-a7815b8c4502) (i.e. in customer conversations, surveys or the like).
+We also learned firsthand that data without context is dangerous. As humans, we’re hardwired to immediately infer explanations from numbers. Subconsciously, we want to explain a movement, and we’ll reach for the first plausible thing we can think of. It’s important to constantly remind yourself that numbers are only the start: you should use quantitative data (i.e. numbers) to unearth oddities and quirks to investigate. Numbers should be curiosity sparks; they are red flags—nothing more. It’s then up to you to establish as many hypotheses as to why, and then go and disprove or confirm those qualitatively (i.e. in customer conversations, surveys or the like).
 
 Your process should look something like this:
 
@@ -139,4 +139,4 @@ Here’s a flowchart to help you make the decision:
 
 Nobody ever complained that they over-invested in knowing their customers too well. Understanding your customers, understanding how they’re using your products and using that knowledge to better serve them is the only formula for long-term sustainable growth.
 
-If you want to build a world-changing product, you can’t do it flying blind. Invest early and aggressively in data, analytics and instrumentation, and do it right. You can even [try out using Astronomer](http://app.astronomer.io/login) (up to 50K events free per month) as your event dispatcher to keep it all tidy! It’ll be the best investment you can make. 
+If you want to build a world-changing product, you can’t do it flying blind. Invest early and aggressively in data, analytics and instrumentation, and do it right. You can even [try out using Astronomer](http://astronomer.io) (up to 50K events free per month) as your event dispatcher to keep it all tidy! It’ll be the best investment you can make. 

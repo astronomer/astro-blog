@@ -56,7 +56,4 @@ In other words, data engineering alone doesn’t reveal insights; it readies you
 1. Create a new role, the data engineer, and establish [a culture of data engineering and democratization](https://medium.com/airbnb-engineering/democratizing-data-at-airbnb-852d76c51770) within their organization. 
 2. Adopt amazing new data processing technology (Airflow, Kafka, Spark and Mesos, to name a few) that can handle both big data and fast data.
 
-Those who do this will inevitably attract the best data scientists. And as a result, get th .e most value from their data.
-
-*Astronomer exists to help companies accelerate these steps. We’re a data engineering platform that collects and routes your data—right into the hands of your data scientists. [Download and share our Data Engineers vs. Data Scientists infographic](http://resources.astronomer.io/infographics-and-visuals/why-every-data-scientist-needs-a-data-engineer).*
-
+Those who do this will inevitably attract the best data scientists. And as a result, get the most value from their data.

@@ -8,7 +8,7 @@ authors:
   - Laurel Brunk
 date: 2016-06-08T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 ![](../assets/quadrupleblogpostx2.jpg?noresize)
 
 > Either write something worth reading or do something worth writing. –Benjamin Franklin

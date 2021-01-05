@@ -7,7 +7,7 @@ authors:
   - Dave Paprocki
 date: 2016-11-17T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _Day 2 of PLOTCON&nbsp;has wrapped, so it’s time for the Astronomer team to debrief from the day. If you missed it, first check out [why we’re here](https://www.astronomer.io/blog/astronomer-takes-plotcon) and [what we learned on Day 1](https://www.astronomer.io/blog/astronomer-takes-plotcon-2016-day-1). &nbsp;_
 
 BG: So many good talks today—I was just going over my notes, and it’s hard to pick a favorite.

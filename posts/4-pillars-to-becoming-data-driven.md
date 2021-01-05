@@ -7,7 +7,7 @@ authors:
   - R. Brad Kirn
 date: 2016-08-11T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 When I was a part of my first startup, I came to a realization about data pretty early on. At first, every new deal was exciting. Our metrics grow one by one, from new customers and use cases to new industries and partnerships. Studying industry trends and making gut decisions as fast as we could was exhilarating and, for a while, seemed to work just fine.
 
 But you can probably guess what came next: potential investors wanted deeper&nbsp;insight into the business performance and growth projections.&nbsp;Suddenly, gut wasn’t good enough.
@@ -30,7 +30,7 @@ I now believe in these steps so deeply that I came to Astronomer, which is all a
 
 You can always collect more data. First though, make your existing data&nbsp;as valuable for the company as possible by leveraging&nbsp;analytics. Many great tools&nbsp;exist for this, like:
 
-- [Leftronic](https://www.leftronic.com/) - BI dashboard
+- Leftronic - BI dashboard
 - [Periscope](https://www.periscopedata.com/) - BI dashboard 
 - [Keen.io](https://keen.io/) - app data analytics
 - [Hubspot](https://www.hubspot.com/) - customer relationship management (CRM) and website analytics

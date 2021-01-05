@@ -7,8 +7,8 @@ authors:
   - Chris Hendrixson
 date: 2016-03-17T00:00:00.000Z
 ---
-
-In August 2015, I had a conversation with Ry Walker and agreed to start working full-time on an enterprise data startup he was co-founding, called Astronomer. I’d known Ry for a few years and he was an advisor for my own startup, a great friend and someone I admire. I joined the Astronomer team with a decade of graphic and product [design experience](https://www.inkdryercreative.com). I’ve worked on everything from album covers to Android apps and designed logos for companies large and small. My first task? Redesign the Astronomer logo.
+<!-- markdownlint-disable-file -->
+In August 2015, I had a conversation with Ry Walker and agreed to start working full-time on an enterprise data startup he was co-founding, called Astronomer. I’d known Ry for a few years and he was an advisor for my own startup, a great friend and someone I admire. I joined the Astronomer team with a decade of graphic and product design experience. I’ve worked on everything from album covers to Android apps and designed logos for companies large and small. My first task? Redesign the Astronomer logo.
 
 **August 18, 2015**
 
@@ -20,13 +20,13 @@ First, I created a new directory in Dropbox called “Astronomer” and added on
 
 **10:37 AM**
 
-It was a Tuesday, my first day at Astronomer. I was supposed to start the day before but I was wrapping up a logo and visuals contract with [Crossroads Church](https://medium.com/r/?url=http%3A%2F%2Fwww.crossroads.net) (who later became one of Astronomer’s first customers).
+It was a Tuesday, my first day at Astronomer. I was supposed to start the day before but I was wrapping up a logo and visuals contract with Crossroads Church (who later became one of Astronomer’s first customers).
 
 **10:41 AM**
 
 I saved my first found image\* into a new folder titled _inspiration_.&nbsp;
 
-> _\*This is typically the first thing I do when starting a new logo project: pore over the internet for inspiration. I spent the next two hours completely locked in, listening to music very loudly, zipping through [www.designspiration.net](https://www.designspiration.net) and&nbsp;[www.dribbble.com](https://www.dribbble.com) and collecting visual inspiration. I searched for keywords “stars,” “space,” “galaxy” and so on and saved anything I found interesting—a font, a color, an illustration, a vibe, a tiny rounded corner, a building, a combination of colors, a photograph, etc.&nbsp;_> _But before any of that I searched good ol’ fashioned Google&nbsp;for “astronomer.” I found one image worth saving: a painting from 1668 by Dutch artist Johannes Vermeer, titled The Astronomer ([Wikipedia](https://en.wikipedia.org%2Fwiki%2FThe_Astronomer_%28Vermeer%29))._
+> _\*This is typically the first thing I do when starting a new logo project: pore over the internet for inspiration. I spent the next two hours completely locked in, listening to music very loudly, zipping through [www.designspiration.net](https://www.designspiration.net) and&nbsp;[www.dribbble.com](https://www.dribbble.com) and collecting visual inspiration. I searched for keywords “stars,” “space,” “galaxy” and so on and saved anything I found interesting—a font, a color, an illustration, a vibe, a tiny rounded corner, a building, a combination of colors, a photograph, etc.&nbsp;_> _But before any of that I searched good ol’ fashioned Google&nbsp;for “astronomer.” I found one image worth saving: a painting from 1668 by Dutch artist Johannes Vermeer, titled The Astronomer ([Wikipedia](https://en.wikipedia.org/wiki/The_Astronomer_(Vermeer)))._
 
 The following images are in order of when I saved them, starting with Vermeer’s 17th century painting:&nbsp;
 
@@ -77,17 +77,15 @@ After a few hours of sketching in Illustrator, about half-a-day into my first da
 
 Well, I did break my first rule about using a telescope, sort of. The gray circle and stars are a simplified illustration of what you might see peering_through_ a telescope into a galaxy of stars.
 
-I figured that some, most even, would not immediately interpret the logo as_a view through a telescope_ but that was ok by me. The logo felt tidy as-is and the stars were easily recognizable. The circle holds the elements together with the word and I had a feeling that viewers would appreciate later that it was intended to represent a telescope (a sort of [easter egg](https://en.wikipedia.org%2Fwiki%2FEaster_egg_%28media%29)). A friend and amazing [designer](https://www.heckhouse.com) once told me that a good logo should roll down a hill.\*
+I figured that some, most even, would not immediately interpret the logo as_a view through a telescope_ but that was ok by me. The logo felt tidy as-is and the stars were easily recognizable. The circle holds the elements together with the word and I had a feeling that viewers would appreciate later that it was intended to represent a telescope (a sort of easter egg). A friend and amazing [designer](https://www.heckhouse.com) once told me that a good logo should roll down a hill.\*
 
-> _\*Spoiler alert: the logo that would become our primary logo would surely not roll down a hill nicely. Sometimes design rules should be broken, as outlined in Scott Dadich’s delightful [DesignWrong](https://www.wired.com%2F2014%2F09%2Fwrong-theory%2F) theory._
+> _\*Spoiler alert: the logo that would become our primary logo would surely not roll down a hill nicely. Sometimes design rules should be broken, as outlined in Scott Dadich’s delightful [DesignWrong](https://www.wired.com) theory._
 
 **The Font**
 
-I chose a font that I’d been using with vigor recently, called [Filmotype Fashion](https://www.myfonts.com%2Ffonts%2Ffilmotype%2Ffashion%2F). Its wide letters seemed the right choice for a word wrapping around a circle. It is a beautiful font, from a collection of outstanding display fonts from the 1950s, called [Filmotype](https://www.myfonts.com%2Ffoundry%2FFilmotype%2F).&nbsp;
+I chose a font that I’d been using with vigor recently, called [Filmotype Fashion](https://www.myfonts.com). Its wide letters seemed the right choice for a word wrapping around a circle. It is a beautiful font, from a collection of outstanding display fonts from the 1950s, called [Filmotype](https://www.myfonts.com).&nbsp;
 
-![](https://cdn-images-1.medium.com/max/800/1*g68boGDBi4DRvpVrfYb9RQ.jpg)
-
-While one of my rules was to not focus too much on astronauts or space travel, [NASA’s Brand Guidelines Manual](https://www.flickr.com%2Fphotos%2Ftimgeorge%2Fsets%2F72157627210540947%2F), published in 1976, was a huge inspiration for the logo and visuals. With its retro look, Filmotype Fashion feels like it was plucked right from those pages.
+While one of my rules was to not focus too much on astronauts or space travel, [NASA’s Brand Guidelines Manual](https://www.flickr.com), published in 1976, was a huge inspiration for the logo and visuals. With its retro look, Filmotype Fashion feels like it was plucked right from those pages.
 
 **The Colors**
 
@@ -101,7 +99,7 @@ I chose the secondary colors (orange, blue, gray and white) without profound for
 
 **3:23 AM (later that night)**
 
-By the middle of the night I was still awake noodling around in Illustrator, an all-hours-of-the-night activity I do too often. Earlier in the evening I had mocked up the newly created logo for Astronomer’s Twitter page wherein I broke apart the word and telescope graphic to better fit horizontally inside the Twitter header image. I got rid of the “telescope” circle and sprinkled the stars (carefully, randomly) on either side of the word. I initially thought of this variation onlyas a secondary logo but soon it would become Astronomer’s primary logo. This was the first iteration that nearly resembles what we use today at Astronomer:
+By the middle of the night I was still awake noodling around in Illustrator, an all-hours-of-the-night activity I do too often. Earlier in the evening I had mocked up the newly created logo for Astronomer’s Twitter page wherein I broke apart the word and telescope graphic to better fit horizontally inside the Twitter header image. I got rid of the “telescope” circle and sprinkled the stars (carefully, randomly) on either side of the word. I initially thought of this variation only as a secondary logo but soon it would become Astronomer’s primary logo. This was the first iteration that nearly resembles what we use today at Astronomer:
 
 ![secondlogo.jpg](../assets/secondlogo.jpg "secondlogo.jpg")
 
@@ -145,7 +143,7 @@ To be sure I did not miss a single bit of inspiration on the internet, I went ba
 
 **2:14 PM**
 
-I started searching through some incredible Hubble space telescope photos and I found an image of deep space that simply blew my mind. The Hubble Deep Field (HDF) image below is of a small region in the constellation Ursa Major, a minuscule corner of the night sky about as big as your thumbnail. **&nbsp;_Let that sink in._** Everything you see in the image below fits inside of a tiny region that, from here on Earth, looks like nothing more than empty space between a couple of faint stars. The HDF was built from 342 separate images observed by Hubble over a ten day period in 1995. Read more about the HDF&nbsp;[here](https://en.wikipedia.org%2Fwiki%2FHubble_Deep_Field).
+I started searching through some incredible Hubble space telescope photos and I found an image of deep space that simply blew my mind. The Hubble Deep Field (HDF) image below is of a small region in the constellation Ursa Major, a minuscule corner of the night sky about as big as your thumbnail. **&nbsp;_Let that sink in._** Everything you see in the image below fits inside of a tiny region that, from here on Earth, looks like nothing more than empty space between a couple of faint stars. The HDF was built from 342 separate images observed by Hubble over a ten day period in 1995. Read more about the HDF&nbsp;[here](https://en.wikipedia.org/wiki/Hubble_Deep_Field).
 
 ![hubbledeepspace.jpg](../assets/hubbledeepspace.jpg "hubbledeepspace.jpg")
 

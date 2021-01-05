@@ -7,14 +7,14 @@ authors:
   - Dave Paprocki
 date: 2016-11-18T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 _Day 3 of PLOTCON&nbsp;rolled out the red carpet for some data analytics superstars including the creators of Jupyter and Anaconda. Viraj and Ben started to write their daily wrap-up (check out&nbsp;[Day 1](https://www.astronomer.io/blog/astronomer-takes-plotcon-2016-day-1), [Day 2](https://www.astronomer.io/blog/astronomer-takes-plotcon-day-2) and [why we're even here](https://www.astronomer.io/blog/astronomer-takes-plotcon), if you missed it), but it quickly turned from a wrap-up to an open fanboy letter to the analytics community. We had to edit it a bit, but enjoy!_
 
 **Analytics Community:**
 
 Thanks for constantly doing dope shit driving forward unprecedented innovation in the power of open tools needed for cutting edge data analysis. Hearing the enthusiasm in the voice of all of these insanely smart and hard-working people when they talk about the direction of their project makes us swoon face first into the coffee bar is nothing less than invigorating.
 
-[Fernando Perez](https://fperez.org/)'s talk about the factors that inspired him to write IPython was almost a crash course in the history of data analytics in Python. Furthermore, to see the roadmap going from Jupyter Notebooks to Jupyter Binders and hear about all of miniscule architectural decisions involved blows our literal mind out of our literal skull in the most literal sense makes us&nbsp;excited for the future of the project. I mean, we used it for Python ... but Node?!
+[Fernando Perez](https://fperez.org/)'s talk about the factors that inspired him to write IPython was almost a crash course in the history of data analytics in Python. Furthermore, to see the roadmap going from Jupyter Notebooks to Jupyter Binders and hear about all of minuscule architectural decisions involved blows our literal mind out of our literal skull in the most literal sense makes us&nbsp;excited for the future of the project. I mean, we used it for Python ... but Node?!
 
 ![tenor.jpg](../assets/tenor.jpg)
 

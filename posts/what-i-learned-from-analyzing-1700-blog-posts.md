@@ -100,7 +100,7 @@ _\*We don’t consider KISSmetrics to be a competitor of ours but knew they were
 
 A normal distribution occurs when the majority of the data (68%) falls within 1 standard deviation from the mean (95% two standard deviations; 98% three deviations.) Importantly, it’s symmetrical in its distribution which means, in practice, your data should look like this.
 
- &nbsp; ![](https://cdn-images-1.medium.com/max/800/1*BK4XtpZ7UiZ_nCrfvCm0gA.gif)
+ &nbsp; ![](v)
 
 &nbsp;
 
@@ -158,9 +158,9 @@ This is a rather weak correlation but it’s likely understated by two factors: 
 
 **And...what's next?**
 
-Well, I want to explore more about the content of the blog posts themselves. It’s useful to look at some descriptive qualities (post-length, title length, post-date) but predictive modeling is really difficult by just looking at variables that don’t really speak to the structure, theme, or quality of the post. The really fun stuff begins when you start digging into sentence structures, keyword frequencies, sentiment, and readibility ( **nerdy extra credit:** _check out the_ [_Flesch-Kincaid index_](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)_._) With this we’ll be able to see what themes people respond to as well as essentially reverse engineer the directions companies in our space are moving towards. Stay tuned!&nbsp;
+Well, I want to explore more about the content of the blog posts themselves. It’s useful to look at some descriptive qualities (post-length, title length, post-date) but predictive modeling is really difficult by just looking at variables that don’t really speak to the structure, theme, or quality of the post. The really fun stuff begins when you start digging into sentence structures, keyword frequencies, sentiment, and readability ( **nerdy extra credit:** _check out the_ [_Flesch-Kincaid index_](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)_._) With this we’ll be able to see what themes people respond to as well as essentially reverse engineer the directions companies in our space are moving towards. Stay tuned!&nbsp;
 
 And in the meantime, what business questions do you have that require a new kind of data to analyze? Tweets, emails, employee notes, etc.? Get creative about where and how you get your data; it can make a big difference.&nbsp;
 
-_EDIT: Updated Tuesday, May 30, 2017. And also, Part II is published! Check out what we did next [here](/blog/what-i-learned-from-analyzing-1700-blog-posts-part-ii)._
-
+_EDIT: Updated Tuesday, May 30, 2017. And also, Part II is published! Check out what we did next [here](https://astronomer.io/blog/what-i-learned-from-analyzing-1700-blog-posts-part-ii)._
+<!-- markdownlint-disable-file -->

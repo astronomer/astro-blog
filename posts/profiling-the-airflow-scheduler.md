@@ -7,7 +7,7 @@ authors:
   - Ash Berlin-Taylor
 date: 2019-12-05T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 <style>
 table {
   font-family: Sofia Light, 'Open Sans', Helvetica, Arial, sans-serif;
@@ -32,7 +32,7 @@ A good chunk of my role at Astronomer is working on making Airflow better for ev
 
 One of the big items on the [roadmap for Airflow 2.0][roadmap] is to “Improve Scheduler performance and reliability”. I’ve certainly seen cases where the scheduler just takes longer than it should to run tasks to completion. 
 
-[roadmap]: https://cwiki.apache.org/confluence/display/AIRFLOW/Airflow+2.0
+[roadmap](https://www.astronomer.io/airflow)
 
 ### Measure Twice, Cut Once
 
@@ -202,7 +202,7 @@ This is looking more promising and interesting:
 
 It isn’t immediately obvious just from looking, but by using the interactive search function, something pops out. If I highlight the search term “compiler,” it becomes much clearer:
 
-[![Flamegraph of SchedulerJob.process_file with 23% of time speant in "compiler"](https://astronomer.imgix.net/website/img/blog/2591/1573845258-flame-airflow-schedulerjob-processfile-hlcompiler.jpg)](https://astronomer.imgix.net/website/img/blog/2591/1573845245-flame-airflow-schedulerjob-processfile.svg?compiler)
+![Flamegraph of SchedulerJob.process_file with 23% of time speant in "compiler"](https://astronomer.imgix.net/website/img/blog/2591/1573845245-flame-airflow-schedulerjob-processfile.svg?compiler)
 
 All of that time is spent building SQL strings, not running the queries and not sending network requires.
 

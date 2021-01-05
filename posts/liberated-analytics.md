@@ -7,7 +7,7 @@ authors:
   - Ry Walker
 date: 2016-02-18T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 If you hadn’t noticed the trend before, you will now. The world has gone analytics crazy. And for good reason, the amount of data available to businesses about their business has reached a tipping point where the problem has shifted from lack of data to too much data.
 
 - **Old big guys** — Did you notice all the [IBM Analytics](https://www.ibm.com/analytics/us/en/)&nbsp;advertisements during the TV broadcast of Masters golf tournament a few weekends ago?

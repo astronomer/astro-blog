@@ -7,7 +7,7 @@ authors:
   - Sam McFarland
 date: 2016-12-07T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 As a data analyst, I’ve been fortunate enough to have been a part of numerous big data initiatives with several organizations. Some of those projects were big successes, but others were epic failures (big data can be a big challenge). From those failures, I’ve developed a few guiding principles that I use when tackling any new data project, in any industry. So, in an effort to prevent others from repeating my past mistakes, here are my three main tips to a successful foray into big data …
 
 ### Start Smaller Than You Expect
@@ -32,7 +32,7 @@ Better yet, we realized that we were piloting big data integration for an entire
 
 ### Know More Than Your Data
 
-As you assemble your crack team of data whizzes, you’ll need more than standard project roles (like project manager and project sponsor). Early on, I worked at Facebook, who did this well. Every internal project was comprised of three major skillsets:
+As you assemble your crack team of data whizzes, you’ll need more than standard project roles (like project manager and project sponsor). Early on, I worked at Facebook, who did this well. Every internal project was comprised of three major skill sets:
 
 - **Data Developer/Engineer** - This person gets the data from all those disparate locations into a central location and a format that is conducive to analysis. 
 - **Data Analyst/Scientist** - Somebody has to dig in and find meaning in the madness. If you’re starting to build out basic reporting and dashboards, you can probably get by with a good data analyst. If you’re looking to work with unstructured data or do more advanced analysis (like machine learning), you’re going to want to invest in a data scientist.
@@ -50,5 +50,5 @@ The third thing to keep in mind is to be practical when choosing technology. All
 - **Data Analytics** : Right out of college, I worked at a bank. There, nobody had access to data except the IT department. Getting information literally took weeks. Then, on my first day at Facebook, I was given access to _all_ of their data. Even non-tech roles were encouraged to learn SQL, so they could write their own reports and conduct their own analysis. This cemented for me that data and insights are only valuable if they’re easily accessible by those who can&nbsp;benefit from them. Consider [interactive dashboards](https://www.astronomer.io/blog/six-open-source-dashboards) and query editors that allow decision-makers to do lightweight, self-service analytics.
 - **Data Storage** : Since real-time data is only valuable when you can weigh it against an accumulation of patterns and trends, find a storage solution that can scale with you. Many cloud-based services allow a quick time to first value and proof of concept. I used to have clients who required internal hosting, but I found almost all these solutions more expensive and less intuitive. If a client doesn’t require staying off the cloud, don’t. Services like [Amazon Redshift](https://aws.amazon.com/redshift/) or [Google BigQuery](https://cloud.google.com/bigquery/) reduce the need to deal with setting up a complicated data warehouse, freeing up resources to focus on solving the data issues at hand.
 
-Data initiatives can be overwhelming, but they don’t have to be. Want to begin tracking every step of your customers’ or users’ behavior on your web or mobile app? Need to collect data from a new, hard-to-reach or third party source? Notice that you’ve got data in your organization that hasn’t been included in analysis? With the right tools, you can do almost anything with data these days. Just start small (you can always go bigger), get a variety of skillsets on your team (especially a subject matter expert) and choose the technology that’s most practical (even if it’s not the most sexy). Successfully implementing one big data initiative will make the next, bigger one even simpler.
+Data initiatives can be overwhelming, but they don’t have to be. Want to begin tracking every step of your customers’ or users’ behavior on your web or mobile app? Need to collect data from a new, hard-to-reach or third party source? Notice that you’ve got data in your organization that hasn’t been included in analysis? With the right tools, you can do almost anything with data these days. Just start small (you can always go bigger), get a variety of skill sets on your team (especially a subject matter expert) and choose the technology that’s most practical (even if it’s not the most sexy). Successfully implementing one big data initiative will make the next, bigger one even simpler.
 

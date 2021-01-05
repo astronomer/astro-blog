@@ -7,7 +7,7 @@ authors:
   - Josh Bonomini
 date: 2017-07-25T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 As is perhaps the case at many tech companies, you’ll find a lot of space and sci-fi buffs at Astronomer. In honor of data, space and [the Star Wars movie coming out late 2017](https://www.youtube.com/watch?v=VZSKN312BXw), we want to explore some of the ways science fiction and real life overlap (as far as we can tell). Better yet, how some of pop-culture’s most “fantastic” ideas could actually play out in business.
 
 Here are my top 5 picks:
@@ -35,7 +35,7 @@ In&nbsp;_Back the Future 2_, Marty McFly&nbsp;takes a trip into his own future t
 
 ![image1.gif](../assets/image1.gif)
 
-While the movie may have been a little ambitious in its expectations for technology (especially if you count time travel), we see some overlap here too. In one scene, Marty and another character, Doc, are getting out of the Delorean in the future Hill Valley. Doc looks at his watch and notes the weather and how long—_exactly_—it’s expected to rain. Accurate to the second, weather prediction of the future promised to be much better than it was when the movie was released in 1989. And while perhaps not to the point Marty's world depicted (yet), technology like&nbsp;[Accuweather's “Minutecast”](https://www.accuweather.com/en/us/new-york-ny/10007/minute-weather-forecast/349727) does offer us some of that knowledge.
+While the movie may have been a little ambitious in its expectations for technology (especially if you count time travel), we see some overlap here too. In one scene, Marty and another character, Doc, are getting out of the Delorean in the future Hill Valley. Doc looks at his watch and notes the weather and how long—_exactly_—it’s expected to rain. Accurate to the second, weather prediction of the future promised to be much better than it was when the movie was released in 1989. And while perhaps not to the point Marty's world depicted (yet), technology like&nbsp;Accuweather's “Minutecast” does offer us some of that knowledge.
 
 But what was required to reach such a point—and what will it take to develop it further? To start, real-time access to weather data and the ability to run complex predictive models against that data. Astronomer provides real-time weather data to customers who want to add it to their analysis, like insurance companies who want to add to improve their pricing models, retailers and e-commerce companies who want to [predict sales](https://business.weather.com/blog/attention-all-shoppers-understanding-weathers-big-impact-on-retail-sale)&nbsp;or airports who want to create great customer experiences, to name a few.
 

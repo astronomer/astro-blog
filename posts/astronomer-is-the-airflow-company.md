@@ -7,11 +7,11 @@ authors:
   - Ry Walker
 date: 2018-05-22T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 Today is Astronomer’s third birthday. We have a lot to celebrate, and an exciting announcement. But first, let's set the stage on how we got here.
 
 * Astronomer was founded back in 2015 as a clickstream data routing tool, initially for [Meteor](https://www.meteor.com/) Javascript apps (which is the origin of our space-related name in case you never knew that). 
-* In 2016 we launched [Aries Data](https://github.com/aries-data) — a data pipeline workflow library in Javascript. Big data people thought we were weird (we were), and we subsequently shut that effort down in favor of Python and Airflow.
+* In 2016 we launched Aries Data — a data pipeline workflow library in Javascript. Big data people thought we were weird (we were), and we subsequently shut that effort down in favor of Python and Airflow.
 * In 2017 we launched a [hosted Airflow service](https://www.astronomer.io/airflow/).
 * And now in 2018 we’ve launched [Astronomer Enterprise Edition](https://www.astronomer.io/enterprise/), Airflow on Kubernetes.
 

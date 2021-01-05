@@ -7,8 +7,8 @@ authors:
   - Ben Gregory
 date: 2017-09-20T00:00:00.000Z
 ---
-
-In [our last post](http://www.astronomer.io/blog/automating-salesforce-reports-in-slack-with-airflow/), we covered getting the raw data out of Salesforce, into S3, and then finally into Redshift, with notifications and clean up along the way. In this post, we'll cover how we process that data and what tools we use to build and publish the reports the Slack. To follow along more closely, you can view the [code on Github](http://github.com/astronomerio/example-dags/blob/master/salesforce_to_slack/salesforce_data_processing.py).
+<!-- markdownlint-disable-file -->
+In [our last post](http://www.astronomer.io/blog/automating-salesforce-reports-in-slack-with-airflow/), we covered getting the raw data out of Salesforce, into S3, and then finally into Redshift, with notifications and clean up along the way. In this post, we'll cover how we process that data and what tools we use to build and publish the reports the Slack.
 
 ![1505913555-dag-1.jpg](../assets/1505913555-dag-1.jpg)
 
@@ -56,7 +56,7 @@ Like we did in the previous DAG, we use the S3 hook to load this image into a bu
 
 ![1505914185-code-3.jpg](../assets/1505914185-code-3.jpg)
 
-When working with images that are added to Slack, it’s important to use a unique name because Slack will cache previous versions based on the URL. So if your image resides at [https://s3.amazonaws.com/example-bucket/lead_source_performance.jpg](http://s3.amazonaws.com/example-bucket/lead_source_performance.jpg), changes will not be evident between Slack messages even if the image has changed. To address this, we add the current_time as a suffix to all messages to ensure it is always unique.
+When working with images that are added to Slack, it’s important to use a unique name because Slack will cache previous versions based on the URL. So if your image resides at [https://aws.amazon.com/s3/](https://aws.amazon.com/s3/), changes will not be evident between Slack messages even if the image has changed. To address this, we add the current_time as a suffix to all messages to ensure it is always unique.
 
 Lastly, when using S3 as a file store, referencing the image solely by the URL will require them to live in a public folder. To enable this, you will need to add something like the following to your Bucket Policy:
 

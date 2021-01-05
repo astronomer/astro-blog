@@ -8,11 +8,11 @@ authors:
 date: 2016-04-04T00:00:00.000Z
 ---
 
-_The following is a continuation of a series where we use common data extraction, analysis, and machine learning techniques to make our business smarter (updated June 1, 2017). You can_ [_read Part I here_](/blog/what-i-learned-from-analyzing-1700-blog-posts)_._
+_The following is a continuation of a series where we use common data extraction, analysis, and machine learning techniques to make our business smarter (updated June 1, 2017). You can_ [_read Part I here_](https://www.astronomer.io/blog/what-i-learned-from-analyzing-1700-blog-posts)_._
 
 The first post in this series kicked off the new blog and got a really incredible response (frankly, we were a little surprised.) Since then, we’ve decided to ramp up content and make sure everyone on the team can contribute. What we’ve learned from reading a lot of posts is that good content draws from personal experience to become insightful and relatable.
 
-Our CTO wrote about [syncing MongoDB collections with Redshift](/blog/syncing-mongodb-collections-with-redshift), our Head of Sales wrote about [finding our target customer,](/blog/how-astronomer-found-its-target-customer) and our Head of Design wrote about [creating Astronomer’s brand aesthetic](/blog/a-logo-story). Ultimately, we believe this range of topics helps us provide a truly three-dimensional portrait of who we are, what we believe, and what we’re building.
+Our CTO wrote about [syncing MongoDB collections with Redshift](https://www.astronomer.io/blog/syncing-mongodb-collections-with-redshift), our Head of Sales wrote about [finding our target customer,](https://www.astronomer.io/blog/how-astronomer-found-its-target-customer) and our Head of Design wrote about [creating Astronomer’s brand aesthetic](https://www.astronomer.io/blog/a-logo-story). Ultimately, we believe this range of topics helps us provide a truly three-dimensional portrait of who we are, what we believe, and what we’re building.
 
 But now it’s time for another nerdy data science post. Thank goodness. 😃 &nbsp;Here’s a preview of what’s at the end of the rainbow if you keep reading:
 
@@ -26,9 +26,9 @@ This was close to the exact definition of hubris — an Icarian level pronou
 
 #### So I got to work —
 
-I began with the basics. I found a useful guide titled ‘[Getting Started with Natural Language Processing with Python](https://desilinguist.org/pdf/crossroads.pdf)’ to walk me through [NLTK](https://www.nltk.org/)&nbsp;(Natural Language Toolkit — a popular python package) and a nice accompanying cheat sheet titled, [Text Analysis with NLTK Cheatsheet](https://blogs.princeton.edu/etc/files/2014/03/Text-Analysis-with-NLTK-Cheatsheet.pdf). Not too creative but hey, it works.
+I began with the basics. I found a useful guide titled ‘[Getting Started with Natural Language Processing with Python](https://desilinguist.org/pdf/crossroads.pdf)’ to walk me through [NLTK](https://www.nltk.org/)&nbsp;(Natural Language Toolkit — a popular python package) and a nice accompanying cheat sheet titled, [Text Analysis with NLTK Cheatsheet](https://computingeverywhere.soc.northwestern.edu/wp-content/uploads/2017/07/Text-Analysis-with-NLTK-Cheatsheet.pdf). Not too creative but hey, it works.
 
-I read about [Bag-of-words](https://en.wikipedia.org/wiki/Bag-of-words_model), [TF-IDF](https://michaelerasm.us/tf-idf-in-10-minutes), NLTK vs. [OpenNLP](https://opennlp.apache.org/), the [Stanford](https://nlp.stanford.edu/software/lex-parser.shtml) vs.[Berkeley](https://nlp.cs.berkeley.edu/software.shtml) Parser…the list continues. It soon became clear that I wasn’t going to be able to create any algorithm I’d be confident in using in a timeframe that mattered.
+I read about [Bag-of-words](https://en.wikipedia.org/wiki/Bag-of-words_model), [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf), NLTK vs. [OpenNLP](https://opennlp.apache.org/), the [Stanford](https://nlp.stanford.edu/software/lex-parser.shtml) vs.[Berkeley](https://www.berkeley.edu/) Parser…the list continues. It soon became clear that I wasn’t going to be able to create any algorithm I’d be confident in using in a timeframe that mattered.
 
 ![Accuracy.gif](../assets/Accuracy.gif "Accuracy.gif")
 
@@ -56,7 +56,7 @@ After our last post, a few people reached out to learn more about our process/to
 
 - Given URLs I collected in Part I of this project (remember, all the scraped blog posts?), I gave AlchemyAPI a list of all the URLs I wanted it to interpret and return the response for each into a single list.
 - For the readability index, I used the open-source [Textstat](https://pypi.python.org/pypi/textstat/) Python package and wrote a quick script to iterate through the files containing the post text.
-- Now that I had returned a list of all the values I needed, I built an [Aries workflow](https://github.com/aries-data) to automatically upload this to S3, flatten it into a single file, and COPY to Redshift. We’re not using this project to actively inform any of our dashboards or alerts (at least not yet) so Redshift was the only destination I cared about at the time. I could’ve easily sent it to a few other destinations. Say, if we built an app to send a weekly email with a summary of all new keywords that have shown up in our competitors’ posts…
+- Now that I had returned a list of all the values I needed, I built an Aries workflow to automatically upload this to S3, flatten it into a single file, and COPY to Redshift. We’re not using this project to actively inform any of our dashboards or alerts (at least not yet) so Redshift was the only destination I cared about at the time. I could’ve easily sent it to a few other destinations. Say, if we built an app to send a weekly email with a summary of all new keywords that have shown up in our competitors’ posts…
 
 #### Doing the analysis
 
@@ -121,7 +121,7 @@ Tying this all back into total shares (the end goal of all this analysis), we ne
 
 Data visualization isn’t just a “nice-to-have”; it’s a measurably faster medium to convey system complexity\*. I promise I’m not making this up. In the early 20th Century, the Gestalt School of Psychology established seven “[Principles of Perception](https://en.wikipedia.org/wiki/Gestalt_psychology#Gestalt_laws_of_grouping)” (aka the Laws of Grouping) that encompass the cognitive interpretation of visual stimuli. They found that using these seven patterns could actually increase the speed at which subjects made connections and conclusions.
 
-_\*If you’re interested in learning more and having your team work faster through well thought out data viz, I recommend reading_ [_The Functional Art_](https://www.amazon.com/The-Functional-Art-introduction-visualization/dp/0321834739) _by Alberto Cairo as a starting point._
+_\*If you’re interested in learning more and having your team work faster through well thought out data viz, I recommend reading_ [_The Functional Art_](https://www.amazon.com/Functional-Art-introduction-information-visualization/dp/0321834739) _by Alberto Cairo as a starting point._
 
 What I’m trying to say is that good viz can help make insights much more pronounced. Case in point- what if I gave you a chart mapping the distribution of total shares by sentiment?
 
@@ -156,7 +156,7 @@ Because there are many more less-frequently shared posts, it’s a bit difficult
 So What Did We Learn (Part II)
 
 - When you don’t have the time to build your own algorithm, stand on the shoulders of giants. Let a platform like Bluemix do the heavy lifting.
-- [Aries workflows](https://github.com/aries-data) have way more use cases than just transferring data between DBs and SaaS products. It’s really fun to see how fast they can speed up our internal projects.
+- Aries workflows have way more use cases than just transferring data between DBs and SaaS products. It’s really fun to see how fast they can speed up our internal projects.
 - Keywords are going to be critical to monitor moving forward. They’re already proving interesting but how they change over time by competitor will be where the real value lies.
 - Keep it in the Optimal Social Zone (sentiment 0.2–0.6 and readability 35–75, preferably on the higher/easier end) and you’re golden. Get away from long, technical jargon and run-on sentences as much as you can. 7/8th grade reading level scores highest. The highest posts had a sentiment range of 0.2–0.6; positive but not overly positive for its own sake.
 - Data viz isn’t voodoo. There are [seven guiding cognitive principles](https://en.wikipedia.org/wiki/Gestalt_psychology#Gestalt_laws_of_grouping) that govern our ability to visually process complexity. Follow these principles.

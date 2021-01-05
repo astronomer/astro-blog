@@ -13,30 +13,31 @@ This week, we launched v0.7.0 of our platform. The highlights of this release in
 
 ## What's new in 0.7.0
 
-**1. Support for platform and Airflow deployment alerts on prometheus data in our Enterprise Edition.** 
+### 1. Support for platform and Airflow deployment alerts on prometheus data in our Enterprise Edition 
 
 You can now send alerts on platform and Airflow deployment data that's stored in the underlying prometheus database.
 
-**2. Support for injecting Airflow environment variables at runtime through the UI.**
+### 2. Support for injecting Airflow environment variables at runtime through the UI
  
-**3. Added support for different Airflow executors.**
+### 3. Added support for different Airflow executors
 
 You can now choose to use either the local or celery executor directly from the UI. Soon, we'll have the ability to choose the Kubernetes executor directly as well.
 
-**4. Added user controls for dynamically adjusting resource allocation and constraints.**
+### 4. Added user controls for dynamically adjusting resource allocation and constraints
 
-Need to scale up your clusters? No problem. Just drag a silder in the UI and add more horsepower to your workers, webserver, and scheduler. 
+Need to scale up your clusters? No problem. Just drag a slider in the UI and add more horsepower to your workers, webserver, and scheduler. 
 
-**5. Added Airflow chart upgrade functionality.**
+### 5. Added Airflow chart upgrade functionality
 
-**6. Added new Grafana dashboards for:**
+### 6. Added new Grafana dashboards for
+
 * Persistent storage
 * Prometheus
 * Registry
 * Fluentd
 * Airflow container state
 
-**7. Initial airflow 1.10.1 support.**
+### 7. Initial airflow 1.10.1 support
 
 ## Up Next
 

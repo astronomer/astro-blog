@@ -35,7 +35,7 @@ Proliferation of SaaS silos and internal straddling of cloud/on-premise data env
 ### We’ve made getting started with Airflow dead-simple
 
 1. [Sign up](https://www.astronomer.io/trial/) for a free trial.
-1. Determine what [plan] (https://www.astronomer.io/pricing/) is appropriate for your needs.
+1. Determine what [plan](https://www.astronomer.io/pricing/) is appropriate for your needs.
 Provision your instance of Airflow on Astronomer
 1. Start writing Airflow data workflows in Python.
 

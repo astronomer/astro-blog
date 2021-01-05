@@ -56,3 +56,4 @@ Bootstrap with early-stage cloud tools (like [Mixpanel](https://www.mixpanel.com
   
 Then jump into cloud-based data warehouses (like [Amazon Redshift](https://aws.amazon.com/redshift/), [[Google BigQuery](https://cloud.google.com/bigquery/what-is-bigquery), etc) when you start to gain traction.
 
+<!-- markdownlint-disable-file -->

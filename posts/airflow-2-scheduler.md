@@ -106,10 +106,10 @@ Similarly, users can always reduce the number of schedulers to minimize resource
 
 One of the distributed systems principles followed in the Airflow 2.0 Scheduler is that of _Service Composition_ to enable external tooling to manage the number of Scheduler instances to be run. This was a conscious choice leading to the following architectural decisions:
 
-* Having each Scheduler be complete and _“fully active”_, rather than have a _“leader”_ and other _“followers”_, with differing sets of capabilities.
-* Not having internal monitoring of Scheduler instances by other Scheduler instances. This is generally, though not always, implemented by a _“leader election”_ model related to the above.
-* Expecting distributed system tooling to be _“layered”_ on top of Airflow to monitor elements such as task load and task latency, and to easily scale up / down Airflow Schedulers and Workers as needed.
-* Using the metadata database as the shared queue and synchronization mechanism. This has the added benefit of not requiring communication between Scheduler instances and therefore eliminates the need for additional system and network configuration.
+- Having each Scheduler be complete and _“fully active”_, rather than have a _“leader”_ and other _“followers”_, with differing sets of capabilities.
+- Not having internal monitoring of Scheduler instances by other Scheduler instances. This is generally, though not always, implemented by a _“leader election”_ model related to the above.
+- Expecting distributed system tooling to be _“layered”_ on top of Airflow to monitor elements such as task load and task latency, and to easily scale up / down Airflow Schedulers and Workers as needed.
+- Using the metadata database as the shared queue and synchronization mechanism. This has the added benefit of not requiring communication between Scheduler instances and therefore eliminates the need for additional system and network configuration.
 
 ### Scalability Benchmarks
 
@@ -117,7 +117,7 @@ We have been using _task throughput_ as the key metric for measuring Airflow sca
 
 To sufficiently test this, without skewing numbers based on the actual task “work” time, we have chosen to benchmark using a simple PythonOperator task with a trivial execution time. The benchmarking configuration was: Celery Workers, PostgreSQL DB, 1 Web Server.
 
-Results for _task throughput_ (metric explained above) using Airflow 2.0 beta builds, run with 5,000 DAGs, each with 10 parallel tasks on a single Airflow deplosyment. The benchmark was performed on Google Cloud and each Scheduler was run on a [n1-standard-1 machine type](https://cloud.google.com/compute/docs/machine-types#n1\_machine\_types).
+Results for _task throughput_ (metric explained above) using Airflow 2.0 beta builds, run with 5,000 DAGs, each with 10 parallel tasks on a single Airflow deployment. The benchmark was performed on Google Cloud and each Scheduler was run on a [n1-standard-1 machine type](https://cloud.google.com/compute/docs/machine-types#n1\_machine\_types).
 
 | Schedulers | Workers | Task Throughput (average) | Task Throughput (low) | Task Throughput (high) |
 |-----------------------|--------------------|----------------------------|-----------------------|------------------------|
@@ -160,3 +160,4 @@ The Airflow Scheduler does more than just scheduling of tasks and is well on the
 By introducing horizontal scalability, low task latency and high predictability, the Airflow 2.0 Scheduler builds the foundation for an expanded set of data processing infrastructure, which is critical for reliable artificial intelligence analytic applications.
 
 As members of the Airflow community, we are excited for a new frontier!
+<!-- markdownlint-disable-file -->

@@ -7,7 +7,7 @@ authors:
   - Greg Neiheisel
 date: 2016-12-20T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->s
 Last year, I wrote a blog post about [why we built our platform on AWS and rebuilt it with open source](https://www.astronomer.io/blog/why-we-built-our-data-platform-on-aws-and-why-we-rebuilt-it-with-open-source). It chronicles our journey to build our _ideal_ unified system, one that checks all our boxes (like cross-infrastructure, secure, efficient, highly available, self-healing and able to execute long running processes as well as spin up one-off processes and specialized clusters of machines on the side).&nbsp;  
   
 But this post is different.

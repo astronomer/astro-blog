@@ -43,6 +43,7 @@ Because Redshift is unlikely to be the sole place that we or anyone else is goin
 ### So how does it work?** 
 
 #### Step 1 - Export from Mongo
+
 The system currently takes in an arbitrary Mongo query as its input and executes it on the schedule and collection you specify. We load the result into memory (NOT a good solution if you’re looking to replicate at scale but for our MVP, it would work just fine) and write it to a JSON&nbsp;file in S3. It wraps up by returning the location of the file. 
 
 #### Step 2 - JSON to CSV
@@ -50,6 +51,7 @@ The system currently takes in an arbitrary Mongo query as its input and executes
 This step isn’t really too exciting; it takes in the returned value of the last step (reminder: the location of the JSON file; in this case, within S3) as its input, reads that file into memory and flattens it into a CSV. This new file gets dumped back into S3 with the end location again being returned. All artifacts from previous steps (i.e. the JSON&nbsp;file) are subsequently removed and discarded. 
 
 #### Step 3 
+
 Setting the stage for the COPY command (oh, and actually doing it) This step is fun. First, the system takes in the location of the previously created CSV and infers the appropriate schema by scanning the document and calculating the probability that each field is a certain type. On top of this, we have a number of safeguards that can be set to override these probabilities in cases where multiple types are equally probable. (i.e. if a column is all 1s, is it a boolean or an integer?…depends on who you ask…) 
 
 Now that we have the location of the CSV locked and a table ready to be created in our Redshift with a conforming schema, we have to make some hard choices. If a similar table doesn’t already exist, awesome. No problem at all. But if it does, we must choose from two strategies: 
@@ -66,10 +68,11 @@ Fine, you caught us. What we described is nowhere close to being an efficient me
 
 First of all, the method described reads everything into memory when transforming the data. Unless you have a machine with a few terabytes of memory (if you do, call us), this ends up being an extremely limiting design constraint.&nbsp;It'd be much better to, say, stream the data from Mongo, transform the data mid-stream, and then write directly to the end destination. Generally, anything coming to/from S3 or Mongo should really be done via streams. 
 
-Secondly, the above would need to happen either ad-hoc (not great) or via a scheduled cron job (better; still not great.) When you're dealing with your application database (whether MongoDB, SQL, whatever), you want as realtime as possible.&nbsp;We accomplish this in production&nbsp;by watching for changes in [MongoDB's Oplog](https://docs.mongodb.org/manual/core/replica-set-oplog/) and resolving the differences with the target databse (Redshift) in near real-time.  
+Secondly, the above would need to happen either ad-hoc (not great) or via a scheduled cron job (better; still not great.) When you're dealing with your application database (whether MongoDB, SQL, whatever), you want as realtime as possible.&nbsp;We accomplish this in production&nbsp;by watching for changes in [MongoDB's Oplog](https://docs.mongodb.org/manual/core/replica-set-oplog/) and resolving the differences with the target database (Redshift) in near real-time.  
 
 Again, what we described purely meant to describe&nbsp;MVP of what's possible. Our production-ready version is designed to avoid these memory and scheduling constraints. 
 
 ### Building a Modular DataHub
 
-MongoDB to Redshift is a crucial pipeline but it's just the beginning of ARIES. Each component of this pipeline is designed to be compatible&nbsp;with as wide a toolset as possible as well as be modified without issue by any user to fit their specifications. Do you disagree with everything we've described above? Do you think our inferred schema probabilities are ridculous? Fork the repo, change it how you want, and plug it back in. Aries is as simple as that.
+MongoDB to Redshift is a crucial pipeline but it's just the beginning of ARIES. Each component of this pipeline is designed to be compatible&nbsp;with as wide a toolset as possible as well as be modified without issue by any user to fit their specifications. Do you disagree with everything we've described above? Do you think our inferred schema probabilities are ridiculous? Fork the repo, change it how you want, and plug it back in. Aries is as simple as that.
+<!-- markdownlint-disable-file -->

@@ -7,7 +7,7 @@ authors:
   - Chris Hendrixson
 date: 2016-04-27T00:00:00.000Z
 ---
-
+<!-- markdownlint-disable-file -->
 I work for a startup. If there’s one consistent thing about a startup, it’s change. Roles pivot as often as the product does. Since I started eight months ago I’ve worked on everything from [redesigning our logo](https://www.astronomer.io/blog/a-logo-story) to sales to product development. As our young company grows, the need to refine and clarify roles and responsibilities becomes more important every day (though as a startup we must be careful not to embolden ourselves to [processes](https://www.astronomer.io/blog/the-problem-with-process)).
 
 Recently, I’ve started to work on Astronomer’s branding and marketing. As I considered this new charge, I wondered what the differences really are between branding, marketing and design. Is Astronomer’s logo and colors its brand? Is the Astronomer brand something different? Something more inclusive, perhaps? Are marketing and branding the same thing?
@@ -22,7 +22,7 @@ What is a brand, anyway?
 
 Brand is one of those words thrown around loosely in business meetings but the definitions are often vague and abstract. Brand is commonly defined as a promise, a trademark, your positioning, your logo, your company’s personality, a gut feeling and so on.
 
-Little did I know that a conversation I had with San Diego-based author [Jeremiah Gardner](https://jeremiahgardner.com/) more than two years ago would form the basis for how I think about branding at Astronomer today.
+Little did I know that a conversation I had with San Diego-based author Jeremiah Gardner more than two years ago would form the basis for how I think about branding at Astronomer today.
 
 Gardner came to speak to a small group of entrepreneurs in Cincinnati in 2014 and shared a definition of brand so simple and obvious, yet so complete:
 
@@ -50,7 +50,7 @@ OK, what about marketing?
 
 ![shanghai-nike-line.jpg](../assets/shanghai-nike-line.jpg "shanghai-nike-line.jpg")
 
-On a rainy day in Shanghai in 2014, hundreds of people lined up outside a Nike store for the chance to buy a limited edition rerelease of Nike’s [Air Jordan 6](https://www.flightclub.com/air-jordans/air-jordan-6) sneakers, originally worn by Michael Jordan during the 1991 season with the Chicago Bulls, the year of his first NBA Championship with the team.
+On a rainy day in Shanghai in 2014, hundreds of people lined up outside a Nike store for the chance to buy a limited edition rerelease of Nike’s Air Jordan 6 sneakers, originally worn by Michael Jordan during the 1991 season with the Chicago Bulls, the year of his first NBA Championship with the team.
 
 This is an example of Nike’s marketing. Marketing is the act of promoting a company or its products. Marketing is an intentional effort to remind customers of, and strengthen, the brand relationship.
 
@@ -76,7 +76,7 @@ I’ll be sure to wear an Astronomer t-shirt though, with a big logo on it. Just
 
 ☺️
 
-_\* Jeremiah Gardner expounds on his definition of branding as a relationship in his phenomenal book, [The Lean Brand](https://leanbrandbook.com/). I highly recommend it for anyone doing branding work._
+_\* Jeremiah Gardner expounds on his definition of branding as a relationship in his phenomenal book, The Lean Brand. I highly recommend it for anyone doing branding work._
 
 _\*\* In 1983, Phil Knight ceremoniously gave Carolyn a diamond ring and an undisclosed amount of Nike stock for her iconic design—today, “[she’s not quite a millionaire](https://www.npr.org/2011/06/23/137376121/nike-swoosh-designer-discusses-her-iconic-creation).” She remains very proud of her design._
 

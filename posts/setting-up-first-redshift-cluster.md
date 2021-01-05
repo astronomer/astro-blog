@@ -91,5 +91,6 @@ Clicking into our newly created first cluster, we can see both our cluster prope
 
 &nbsp;
 
-Well, that's all the time we have for this session! For more info about working with Redshift and managing a data warehouse, check out our [other posts](/blog/) or feel free to reach out to ben@astronomer.io!
+Well, that's all the time we have for this session! For more info about working with Redshift and managing a data warehouse, check out our [other posts](https://www.astronomer.io/blog/) or feel free to reach out to ben@astronomer.io!
 
+<!-- markdownlint-disable-file -->

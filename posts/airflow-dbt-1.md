@@ -19,7 +19,7 @@ At Astronomer, we're often asked how to integrate Apache Airflow with specialize
 In chatting with a handful of Astronomer customers who have spent time exploring solutions at the intersection of Airflow and dbt, we discovered that our friends at [Updater](https://updater.com) have built a particularly great experience for authoring, scheduling, and deploying dbt models to their Airflow environment.
 
 With that, we collaborated with [John Lynch](https://www.linkedin.com/in/john-lynch-31146579/), Senior Data Engineer, and [Flavien Bessede](https://www.linkedin.com/in/flavienbessede/), Data Engineering Manager at Updater to turn the brilliant work they've done into this two-part series covering the various approaches, considered limitations, and final output of a team who has put endless thought into building a scalable data architecture at the intersection of dbt and Airflow. We hope you enjoy.
-
+<!-- markdownlint-disable MD033 -->
 <hr/>
 
 ## Introduction
@@ -79,6 +79,7 @@ dbt_run >> dbt_test
 ```
 
 This Airflow DAG has two tasks:
+
 1. A task that runs the `dbt run` command.
 2. A subsequent task that runs `dbt test`. 
 
@@ -210,7 +211,7 @@ for node in data["nodes"].keys():
 
 This DAG definition reads the `manifest.json` file from local storage via the `load_manifest()` function and then loops through the nodes of the manifest file to create an Airflow task that either runs or tests a single dbt model. The final bit then loops through each node again, reads the dependencies from the manifest file for each node, and then sets the correct dependencies between the Airflow tasks (e.g. `dbt_tasks[upstream_node] >> dbt_tasks[node]`).
 
-When running, this DAG will look something like this, pending what's in your manfiest:
+When running, this DAG will look something like this, pending what's in your manifest:
 
 ![Advanced dbt DAG](../assets/airflow-dbt-1/dbt-advanced-dag.png)
 
