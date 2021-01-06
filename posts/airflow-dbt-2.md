@@ -78,64 +78,47 @@ Because all of our dbt models are still running on the schedule of a single Airf
         return selected_models
 
     def parse_model_selector(selector_def):
-        """Run the dbt ls command which returns all dbt models associated with a particular
-        selection syntax"""
+        """Run the dbt ls command which returns all dbt models associated with a particular selection syntax"""
         models = os.popen(f"cd {DBT_DIR} && dbt ls --models {selector_def}").read()
         models = models.splitlines()
         return models
 
-    def filter_nodes(node):
-        """Make sure we only use model nodes, which we can use to create all nodes
-        we eventually turn into Airflow tasks (including running test on these models)
-        """
-        if node.startswith("updater_data_mode.data_test"):
-            return False
-        elif node.startswith("updater_data_mode.schema_test"):
-            return False
-        elif node.startswith("source:"):
-            return False
-        else:
-            return True
-
     def generate_all_model_dependencies(all_models, manifest_data):
-        """Generate dependencies for entire project by creating a list of tuples that
-        represent the edges of the DAG"""
+        """Generate dependencies for entire project by creating a list of tuples that represent the edges of the DAG"""
         dependency_list = []
         for node in all_models:
-            if filter_nodes(node):
-                # Cleaning things up to match node format in manifest.json
-                split_node = node.split(".")
-                length_split_node = len(split_node)
-                node = split_node[0] + "." + split_node[length_split_node - 1]
-                node = "model." + node
-                node_test = node.replace("model", "test")
-                # Set dependency to run tests on a model after model runs finishes
+            # Cleaning things up to match node format in manifest.json
+            split_node = node.split(".")
+            length_split_node = len(split_node)
+            node = split_node[0] + "." + split_node[length_split_node - 1]
+            node = "model." + node
+            node_test = node.replace("model", "test")
+            # Set dependency to run tests on a model after model runs finishes
+            if not node.split(".")[2].startswith("raw_"):
                 dependency_list.append((node, node_test))
-                # Set all model -> model dependencies
-                for upstream_node in manifest_data["nodes"][node]["depends_on"]["nodes"]:
-                    upstream_node_type = upstream_node.split(".")[0]
-                    if upstream_node_type == "model":
-                        dependency_list.append((upstream_node, node))
+            # Set all model -> model dependencies
+            for upstream_node in manifest_data["nodes"][node]["depends_on"]["nodes"]:
+                upstream_node_type = upstream_node.split(".")[0]
+                upstream_node_name = upstream_node.split(".")[2]
+                dependency_list.append((upstream_node, node))
         return dependency_list
 
     def clean_selected_task_nodes(selected_models):
-        """Clean up the naming of the "selected" nodes so they match the structure what
-        is coming out generate_all_model_dependencies function. This function doesn't create
-        a list of dependencies between selected nodes (that happens in generate_dag_dependencies)
-        it's just cleaning up the naming of the nodes and outputting them as a list"""
+
+        """Clean up the naming of the "selected" nodes so they match the structure what is coming out generate_all_model_dependencies function. This function doesn't create a list of dependencies between selected nodes (that happens in generate_dag_dependencies) it's just cleaning up the naming of the nodes and outputting them as a list"""
+
         selected_nodes = []
         for node in selected_models:
-            if filter_nodes(node):
-                # Cleaning things up to match node format in manifest.json
-                split_node = node.split(".")
-                length_split_node = len(split_node)
-                node = split_node[0] + "." + split_node[length_split_node - 1]
-                # Adding run model nodes
-                node = "model." + node
-                selected_nodes.append(node)
-                # Set test model nodes
-                node_test = node.replace("model", "test")
-                selected_nodes.append(node_test)
+            # Cleaning things up to match node format in manifest.json
+            split_node = node.split(".")
+            length_split_node = len(split_node)
+            node = split_node[0] + "." + split_node[length_split_node - 1]
+            # Adding run model nodes
+            node = "model." + node
+            selected_nodes.append(node)
+            # Set test model nodes
+            node_test = node.replace("model", "test")
+            selected_nodes.append(node_test)
         return selected_nodes
 
     def generate_dag_dependencies(selected_nodes, all_model_dependencies):
@@ -143,8 +126,6 @@ Because all of our dbt models are still running on the schedule of a single Airf
         G = nx.DiGraph()
         G.add_edges_from(all_model_dependencies)
         G_subset = G.copy()
-        # The networkx graph object is smart enough that if you remove nodes with remove_node
-        # method that the dependencies of the remaining nodes are what you would expect.
         for node in G:
             if node not in selected_nodes:
                 G_subset.remove_node(node)
@@ -157,8 +138,11 @@ Because all of our dbt models are still running on the schedule of a single Airf
         # We want to load all the models first because the logic to properly set
         # dependencies between subsets of models is basically the process of
         # removing nodes from the complete DAG. This logic can be found in the
-        # generate_dag_dependencies function.
-        all_models = parse_model_selector("[your_dbt_project_name]")
+        # generate_dag_dependencies function. The networkx graph object is smart
+        # enough that if you remove nodes with remove_node method that the dependencies
+        # of the remaining nodes are what you would expect.
+        # Pass dbt project name to return all models
+        all_models = parse_model_selector("updater_data_model")
         all_model_dependencies = generate_all_model_dependencies(all_models, manifest_data)
         # Load model selectors
         dag_model_selectors = load_model_selectors()
@@ -166,8 +150,10 @@ Because all of our dbt models are still running on the schedule of a single Airf
             selected_models = parse_model_selector(selector)
             selected_nodes = clean_selected_task_nodes(selected_models)
             dag_dependencies = generate_dag_dependencies(selected_nodes, all_model_dependencies)
+            print(dag_dependencies)
             with open(f"{DBT_DIR}/dbt_dags/data/{dag_name}.pickle", "wb") as f:
                 pickle.dump(dag_dependencies, f)
+
     # RUN IT
     DBT_DIR = "./dags/dbt"
     run()
