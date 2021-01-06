@@ -33,19 +33,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@main
-      - name: Get file changes
-        id: get_file_changes
-        uses: trilom/file-changes-action@v1.2.3
-        with:
-          output: ' '
-      - name: Echo file changes
-        run: |
-          echo Changed files: ${{ steps.get_file_changes.outputs.files }}
       - name: markdown-link-check
         uses: gaurav-nelson/github-action-markdown-link-check@1.0.8
         with:
           config-file: './mlc_config.json'
-          file-path: '${{ steps.get_file_changes.outputs.files}}'
+          check-modified-files-only: 'yes'
+          folder-path: './posts'
   spell-check:
     runs-on: ubuntu-latest
     steps:
