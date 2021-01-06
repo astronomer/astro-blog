@@ -6,7 +6,6 @@ heroImagePath: ../assets/airflow-dbt-2/airflow-dbt-2.png
 authors:
   - Pete DeJoy
   - John Lynch
-  - Flavien Bessede
 date: 2021-01-05T23:44:00.000Z
 ---
 
@@ -202,10 +201,11 @@ Ultimately, this gives us a fully robust, end-to-end solution that captures the 
 
 As with anything, there are a few potential limitations associated with this approach that users should be aware of. We look forward to building upon this integration going forward and welcome additional feedback from the community.
 
-1. The biggest trade off is that dbt really expects to be executing a DAG of models, and so some features don't make as much sense when dbt is only running a single model at a time. For example, dbt has the concept of `on-run-start` and `on-run-end` hooks which execute SQL at the beginning or end of a dbt run. With this approach, these hooks would run in every Airflow task.
-2. This approach relies heavily on dbt artifacts like `manifest.json` that were up until recently not explicitly documented/supported by dbt. Fortunately, the upcoming `0.19` [dbt release](https://next.docs.getdbt.com/reference/artifacts/dbt-artifacts) will officially start versioning (as well as better documenting) dbt artifacts like `manifest.json`. 
-3. Because dbt only runs a single model at a time, we are unable to take advantage of dbt's built-in support for concurrency [via threads](https://blog.getdbt.com/how-we-made-dbt-runs-30--faster/). However, Airflow supports task-level concurrency and, because Airflow is aware of the full dbt DAG, it is able to concurrently execute dbt models with the same results as native dbt threading.
-4. There is some infrastructure overhead associated with provisioning a high volume of lightweight tasks with Airflow's Kubernetes Executor. However, the new [KEDA executor](https://www.astronomer.io/blog/the-keda-autoscaler) offers the best of both worlds: the autoscaling capabilities of Kubernetes without the overhead of spinning up a new Airflow image in each task pod.
+1. The biggest trade off is that dbt really expects to be executing a DAG of models, and so some features don't make as much sense when dbt is only running a single model at a time. For example, dbt has the concept of `on-run-start` and `on-run-end` hooks which execute SQL at the beginning or end of a dbt run. With this approach, these hooks would run in every Airflow task.'
+2. Because dbt parses and compiles the entire project whenever any dbt command is run, there is some overhead associated with separating by task. We have about 250 models running in our dbt project and this hasn't been an issue for us, but it could cause latency problems at high scale.
+3. This approach relies heavily on dbt artifacts like `manifest.json` that were up until recently not explicitly documented/supported by dbt. Fortunately, the upcoming `0.19` [dbt release](https://next.docs.getdbt.com/reference/artifacts/dbt-artifacts) will officially start versioning (as well as better documenting) dbt artifacts like `manifest.json`. 
+4. Because dbt only runs a single model at a time, we are unable to take advantage of dbt's built-in support for concurrency [via threads](https://blog.getdbt.com/how-we-made-dbt-runs-30--faster/). However, Airflow supports task-level concurrency and, because Airflow is aware of the full dbt DAG, it is able to concurrently execute dbt models with the same results as native dbt threading.
+5. There is some infrastructure overhead associated with provisioning a high volume of lightweight tasks with Airflow's Kubernetes Executor. However, the new [KEDA executor](https://www.astronomer.io/blog/the-keda-autoscaler) offers the best of both worlds: the autoscaling capabilities of Kubernetes without the overhead of spinning up a new Airflow image in each task pod.
 
 ## dbt in ELT
 
