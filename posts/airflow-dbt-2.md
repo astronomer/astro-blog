@@ -9,9 +9,6 @@ authors:
 date: 2021-01-05T23:44:00.000Z
 ---
 
-
-> **Note**: All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
-
 In our [previous post](https://astronomer.io/blog/airflow-dbt-1), we walked through how to build a great experience around authoring DAGs that execute dbt models with granular retry, success, failure, and scheduling capability. Now that we have these DAGs running locally and built from our dbt `manifest.json` file, the natural next step is to evaluate how these should look in a production context. 
 
 To revisit where we left off, the workflow we've outlined thus far is great for generating a single DAG with all of our interdependent dbt models, but there are still a few outstanding questions, including:
@@ -153,7 +150,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
                 G_subset.remove_node(node)
         selected_dependencies = list(G_subset.edges())
         return selected_dependencies
-        
+
     def run():
         manifest_data = load_manifest()
         # Get list of all models in project and create dependencies.
@@ -225,6 +222,8 @@ Airflow serves as a great tool for end-to-end scheduling, visibility, and execut
 - Note: In real-world cases, particularly in the enterprise, the extract and load portions of the data lifecycle usually end up being handled by mix of third-party tools and custom scripts that are pulling from internal datastores, applications, APIs, etc. There are *a lot* of systems that need to have their data loaded into the warehouse for transformation.
 
 ### An Example: Singer + dbt for ELT
+
+> **Note**: All of the code we're using in this example is available [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
 
 Let's take a look at a common use case: building an ELT pipeline with [Singer Taps](https://www.singer.io/#taps), [Singer Targets](https://www.singer.io/#targets), and dbt. It's quite easy to mock this up using some basic singer libraries.
 
