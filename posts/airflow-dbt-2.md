@@ -10,7 +10,7 @@ date: 2021-01-05T23:44:00.000Z
 ---
 
 
-> *Note*: All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
+> **Note**: All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
 
 In our [previous post](https://astronomer.io/blog/airflow-dbt-1), we walked through how to build a great experience around authoring DAGs that execute dbt models with granular retry, success, failure, and scheduling capability. Now that we have these DAGs running locally and built from our dbt `manifest.json` file, the natural next step is to evaluate how these should look in a production context. 
 
