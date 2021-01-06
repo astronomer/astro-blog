@@ -89,3 +89,4 @@ The best way to get to know our platform is by [starting a trial](https://www.as
 Otherwise, feel free to check out our [updated docs](https://www.astronomer.io/docs/), [post on our community forum](https://forum.astronomer.io/), or reach out to [Astronomer Support](https://support.astronomer.io/) with any and all feedback or questions.
 
 That’s what we’re here for. Onwards and upwards!
+
