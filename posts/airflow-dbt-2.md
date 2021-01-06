@@ -10,7 +10,7 @@ date: 2021-01-05T23:44:00.000Z
 ---
 
 
-- Note: All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
+> *Note*: All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
 
 In our [previous post](https://astronomer.io/blog/airflow-dbt-1), we walked through how to build a great experience around authoring DAGs that execute dbt models with granular retry, success, failure, and scheduling capability. Now that we have these DAGs running locally and built from our dbt `manifest.json` file, the natural next step is to evaluate how these should look in a production context. 
 
@@ -219,7 +219,7 @@ Airflow serves as a great tool for end-to-end scheduling, visibility, and execut
 
 Let's take a look at a common use case: building an ELT pipeline with [Singer Taps](https://www.singer.io/#taps), [Singer Targets](https://www.singer.io/#targets), and dbt. It's quite easy to mock this up using some basic singer libraries.
 
-- Note: This code is not intended to be functionally complete (ie. the singer tap and target commands are just listing out library help feedback and aren't hooked up to live sources or destinations), but you can [check out the `elt.py` file of our demo repository](https://github.com/astronomer/airflow-dbt-demo/blob/master/dags/elt.py) if you would like to peruse the code powering this mock.
+- Note: This code is not intended to be functionally complete (ie. the singer tap and target commands are just listing out library help feedback and aren't hooked up to live sources or destinations), but you can check out the [elt.py file of our demo repository](https://github.com/astronomer/airflow-dbt-demo/blob/master/dags/elt.py) if you would like to peruse the code powering this mock.
 
 This approach is functionally correct, but there is an aesthetic limitation: because we have so many dbt models being run and tested, and conceivably would extract from multiple sources and load to many different tables in a production use case, it is quite challenging to sort out what's going on with this DAG at a first pass:
 
