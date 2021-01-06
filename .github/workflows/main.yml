@@ -45,7 +45,7 @@ jobs:
         uses: gaurav-nelson/github-action-markdown-link-check@1.0.8
         with:
           config-file: './mlc_config.json'
-          folder-path: '${{ steps.get_file_changes.outputs.files}}'
+          file-path: '${{ steps.get_file_changes.outputs.files}}'
   spell-check:
     runs-on: ubuntu-latest
     steps:
