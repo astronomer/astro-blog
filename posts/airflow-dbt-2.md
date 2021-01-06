@@ -11,7 +11,7 @@ date: 2021-01-05T23:44:00.000Z
 ---
 
 
-- Note: All of the code in this post is available in [this Github repository]([https://github.com/astronomer/airflow-dbt-demo](https://github.com/astronomer/airflow-dbt-demo)) and can be run locally using the Astronomer CLI.
+- Note: All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
 
 In our [previous post](https://astronomer.io/blog/airflow-dbt-1), we walked through how to build a great experience around authoring DAGs that execute dbt models with granular retry, success, failure, and scheduling capability. Now that we have these DAGs running locally and built from our dbt `manifest.json` file, the natural next step is to evaluate how these should look in a production context. 
 
@@ -27,7 +27,7 @@ Let's dive in.
 
 Because all of our dbt models are still running on the schedule of a single Airflow DAG, there exist some inherent limitations in the extensibility of our approach. For our use case at Updater, we need to be able to run different groups of dbt models on different schedules. After thinking through the desired approach, we decided that the ideal scenario would take a group of models defined by some selector, e.g. `dbt run --models tag:hourly`, and deploy that set of models as their own Airflow DAG with its own defined schedule. Leveraging the `manifest.json` file to correctly set these dependencies between an arbitrary **set of models proved to be a bit tricky, but we were able to build out a robust CI process that got everything working as expected:
 
-1. We start with a YAML file that defines a set of model selectors for each Airflow DAG schedule we want to create. We are still running on version `0.17` so this is not the new `[selectors.yml` introduced in `0.18`](https://docs.getdbt.com/reference/node-selection/yaml-selectors/), but we copied its structure. We plan to leverage `selectors.yml` for this purpose when we upgrade. We then use dbt's tagging feature to tag every one of our models with a desired schedule interval.
+1. We start with a YAML file that defines a set of model selectors for each Airflow DAG schedule we want to create. We are still running on version `0.17` so this is not the new [`selectors.yml` introduced in `0.18`](https://docs.getdbt.com/reference/node-selection/yaml-selectors/), but we copied its structure. We plan to leverage `selectors.yml` for this purpose when we upgrade. We then use dbt's tagging feature to tag every one of our models with a desired schedule interval.
 
     ```python
     selectors:
@@ -202,16 +202,16 @@ Ultimately, this gives us a fully robust, end-to-end solution that captures the 
 
 As with anything, there are a few potential limitations associated with this approach that users should be aware of. We look forward to building upon this integration going forward and welcome additional feedback from the community.
 
-1. The biggest tradeoff is that dbt really expects to be executing a DAG of models, and so some features don't make as much sense when dbt is only running a single model at a time. For example, dbt has the concept of `on-run-start` and `on-run-end` hooks which execute SQL at the beginning or end of a dbt run. With this approach, these hooks would run in every Airflow task.
+1. The biggest trade off is that dbt really expects to be executing a DAG of models, and so some features don't make as much sense when dbt is only running a single model at a time. For example, dbt has the concept of `on-run-start` and `on-run-end` hooks which execute SQL at the beginning or end of a dbt run. With this approach, these hooks would run in every Airflow task.
 2. This approach relies heavily on dbt artifacts like `manifest.json` that were up until recently not explicitly documented/supported by dbt. Fortunately, the upcoming `0.19` [dbt release](https://next.docs.getdbt.com/reference/artifacts/dbt-artifacts) will officially start versioning (as well as better documenting) dbt artifacts like `manifest.json`. 
 3. Because dbt only runs a single model at a time, we are unable to take advantage of dbt's built-in support for concurrency [via threads](https://blog.getdbt.com/how-we-made-dbt-runs-30--faster/). However, Airflow supports task-level concurrency and, because Airflow is aware of the full dbt DAG, it is able to concurrently execute dbt models with the same results as native dbt threading.
-4. There is some infrastructure overhead associated with provisioning a high volume of lightweight tasks with Airflow's Kubernetes Executor. However, the new [KEDA executor]([https://www.astronomer.io/blog/the-keda-autoscaler](https://www.astronomer.io/blog/the-keda-autoscaler)) offers the best of both worlds: the autoscaling capabilities of Kubernetes without the overhead of spinning up a new Airflow image in each task pod.
+4. There is some infrastructure overhead associated with provisioning a high volume of lightweight tasks with Airflow's Kubernetes Executor. However, the new [KEDA executor](https://www.astronomer.io/blog/the-keda-autoscaler) offers the best of both worlds: the autoscaling capabilities of Kubernetes without the overhead of spinning up a new Airflow image in each task pod.
 
 ## dbt in ELT
 
 While having the visual representation of your dbt workflow in Airflow is a great way to drill down into your data *transformation* layer, it is very common to use dbt in the context of a broader ETL or ELT workflow; all of the data that dbt is working its magic on has to make its way into the warehouse *somehow.*
 
-Airflow serves as a great tool for end-to-end scheduling, visibility, and execution of the broader ELT pipeline; this is a common usage pattern we at Astronomer see in customer contexts. In these cases, it is common for users to implement a third-party tool such as [Singer]([https://www.singer.io/](https://www.singer.io/)) or [Fivetran](https://fivetran.com) for out-of-the-box data extraction and loading. 
+Airflow serves as a great tool for end-to-end scheduling, visibility, and execution of the broader ELT pipeline; this is a common usage pattern we at Astronomer see in customer contexts. In these cases, it is common for users to implement a third-party tool such as [Singer](https://www.singer.io/) or [Fivetran](https://fivetran.com) for out-of-the-box data extraction and loading. 
 
 - Note: In real-world cases, particularly in the enterprise, the extract and load portions of the data lifecycle usually end up being handled by mix of third-party tools and custom scripts that are pulling from internal datastores, applications, APIs, etc. There are *a lot* of systems that need to have their data loaded into the warehouse for transformation.
 
@@ -219,7 +219,7 @@ Airflow serves as a great tool for end-to-end scheduling, visibility, and execut
 
 Let's take a look at a common use case: building an ELT pipeline with [Singer Taps](https://www.singer.io/#taps), [Singer Targets](https://www.singer.io/#targets), and dbt. It's quite easy to mock this up using some basic singer libraries.
 
-- Note: This code is not intended to be functionally complete (ie. the singer tap and target commands are just listing out library help feedback and aren't hooked up to live sources or destinations), but you can [check out the `[elt.py](http://elt.py)` file of our demo repository]([https://github.com/astronomer/airflow-dbt-demo/blob/master/dags/elt.py](https://github.com/astronomer/airflow-dbt-demo/blob/master/dags/elt.py)) if you would like to peruse the code powering this mock.
+- Note: This code is not intended to be functionally complete (ie. the singer tap and target commands are just listing out library help feedback and aren't hooked up to live sources or destinations), but you can [check out the `elt.py` file of our demo repository](https://github.com/astronomer/airflow-dbt-demo/blob/master/dags/elt.py) if you would like to peruse the code powering this mock.
 
 This approach is functionally correct, but there is an aesthetic limitation: because we have so many dbt models being run and tested, and conceivably would extract from multiple sources and load to many different tables in a production use case, it is quite challenging to sort out what's going on with this DAG at a first pass:
 
@@ -229,7 +229,7 @@ You can imagine the increasing amount of visual complexity introduced as you sca
 
 ### Enter TaskGroups
 
-As of [Airflow 2.0](https://astronomer.io/airflow), users can leverage the [TaskGroup]([https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#taskgroup](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#taskgroup)) feature to visually organize their DAGs into logical chunks of work that map to dedicated portions of their data pipelines. While using TaskGroups doesn't change execution order or priority under the hood, it provides us with a nice way to build beautifully-organized ETL pipelines:
+As of [Airflow 2.0](https://astronomer.io/airflow), users can leverage the [TaskGroup](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#taskgroup) feature to visually organize their DAGs into logical chunks of work that map to dedicated portions of their data pipelines. While using TaskGroups doesn't change execution order or priority under the hood, it provides us with a nice way to build beautifully-organized ETL pipelines:
 
 ![Airflow dbt TaskGroups](../assets/airflow-dbt-2/taskgroup.gif)
 
