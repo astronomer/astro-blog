@@ -24,7 +24,7 @@ Let's dive in.
 
 ## Productionizing our Workflow
 
-Because all of our dbt models are still running on the schedule of a single Airflow DAG, there exist some inherent limitations in the extensibility of our approach. For our use case at Updater, we need to be able to run different groups of dbt models on different schedules. After thinking through the desired approach, we decided that the ideal scenario would take a group of models defined by some selector, e.g. `dbt run --models tag:hourly`, and deploy that set of models as their own Airflow DAG with its own defined schedule. Leveraging the `manifest.json` file to correctly set these dependencies between an arbitrary **set of models proved to be a bit tricky, but we were able to build out a robust CI process that got everything working as expected:
+Because all of our dbt models are still running on the schedule of a single Airflow DAG, there exist some inherent limitations in the extensibility of our approach. For our use case at Updater, we need to be able to run different groups of dbt models on different schedules. After thinking through the desired approach, we decided that the ideal scenario would take a group of models defined by some selector, e.g. `dbt run --models tag:hourly`, and deploy that set of models as their own Airflow DAG with its own defined schedule. Leveraging the `manifest.json` file to correctly set these dependencies between an arbitrary set of models proved to be a bit tricky, but we were able to build out a robust CI process that got everything working as expected:
 
 1. We start with a YAML file that defines a set of model selectors for each Airflow DAG schedule we want to create. We are still running on version `0.17` so this is not the new [`selectors.yml` introduced in `0.18`](https://docs.getdbt.com/reference/node-selection/yaml-selectors/), but we copied its structure. We plan to leverage `selectors.yml` for this purpose when we upgrade. We then use dbt's tagging feature to tag every one of our models with a desired schedule interval.
 
@@ -54,18 +54,21 @@ Because all of our dbt models are still running on the schedule of a single Airf
     import json
     import networkx as nx
     import pickle
+
     # README
     # This file is a utility script that is run via CircleCI in the deploy
     # step. It is not run via Airflow in any way. The point of this script is
     # to generate a pickle file that contains all of the dependencies between dbt models
     # for each dag (usually corresponding to a different schedule) that we want
     # to run.
+
     def load_manifest():
         """Load manifest.json """
         local_filepath = f"{DBT_DIR}/target/manifest.json"
         with open(local_filepath) as f:
             data = json.load(f)
         return data
+
     def load_model_selectors():
         """Load the dbt selectors from YAML file to be used with dbt ls command"""
         with open(f"{DBT_DIR}/dbt_dags/dag_model_selectors.yml") as f:
@@ -76,12 +79,14 @@ Because all of our dbt models are still running on the schedule of a single Airf
             selector_def = selector["definition"]
             selected_models[selector_name] = selector_def
         return selected_models
+
     def parse_model_selector(selector_def):
         """Run the dbt ls command which returns all dbt models associated with a particular
         selection syntax"""
         models = os.popen(f"cd {DBT_DIR} && dbt ls --models {selector_def}").read()
         models = models.splitlines()
         return models
+
     def filter_nodes(node):
         """Make sure we only use model nodes, which we can use to create all nodes
         we eventually turn into Airflow tasks (including running test on these models)
@@ -94,6 +99,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
             return False
         else:
             return True
+
     def generate_all_model_dependencies(all_models, manifest_data):
         """Generate dependencies for entire project by creating a list of tuples that
         represent the edges of the DAG"""
@@ -114,6 +120,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
                     if upstream_node_type == "model":
                         dependency_list.append((upstream_node, node))
         return dependency_list
+
     def clean_selected_task_nodes(selected_models):
         """Clean up the naming of the "selected" nodes so they match the structure what
         is coming out generate_all_model_dependencies function. This function doesn't create
@@ -133,6 +140,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
                 node_test = node.replace("model", "test")
                 selected_nodes.append(node_test)
         return selected_nodes
+
     def generate_dag_dependencies(selected_nodes, all_model_dependencies):
         """Return dependencies as list of tuples for a given DAG (set of models)"""
         G = nx.DiGraph()
@@ -145,6 +153,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
                 G_subset.remove_node(node)
         selected_dependencies = list(G_subset.edges())
         return selected_dependencies
+        
     def run():
         manifest_data = load_manifest()
         # Get list of all models in project and create dependencies.
