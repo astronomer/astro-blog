@@ -746,6 +746,7 @@ configurability
 AppBuilder
 Bloomberg
 ec2
+elt.py
 dockerized
 auto-rebalancing
 datastore
@@ -821,6 +822,7 @@ fivetran
 datastores
 TaskGroups
 TaskGroup
+selectors.yml
  - posts/4-pillars-to-becoming-data-driven.md
 astronomer.io
 _
