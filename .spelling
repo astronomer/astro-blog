@@ -815,7 +815,6 @@ h1
 h1s
 markdownlint
 md
-<<<<<<< HEAD
 monodag
 tradeoff
 versioning
@@ -823,8 +822,6 @@ fivetran
 datastores
 TaskGroups
 TaskGroup
-=======
->>>>>>> cac3145700e38d085de16cd4ab8945f71778cd7e
 selectors.yml
  - posts/4-pillars-to-becoming-data-driven.md
 astronomer.io
