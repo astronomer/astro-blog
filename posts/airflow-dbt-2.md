@@ -23,7 +23,7 @@ Let's dive in.
 
 Because all of our dbt models are still running on the schedule of a single Airflow DAG, there exist some inherent limitations in the extensibility of our approach. For our use case at Updater, we need to be able to run different groups of dbt models on different schedules. After thinking through the desired approach, we decided that the ideal scenario would take a group of models defined by some selector, e.g. `dbt run --models tag:hourly`, and deploy that set of models as their own Airflow DAG with its own defined schedule. Leveraging the `manifest.json` file to correctly set these dependencies between an arbitrary set of models proved to be a bit tricky, but we were able to build out a robust CI process that got everything working as expected:
 
-1. We start with a YAML file that defines a set of model selectors for each Airflow DAG schedule we want to create. We are still running on version 0.17 so this is not the [new selectors.yml feature](https://docs.getdbt.com/reference/node-selection/yaml-selectors/) introduced in 0.18, but we copied its structure. We plan to leverage selectors.yml for this purpose when we upgrade. We then use dbt's tagging feature to tag every one of our models with a desired schedule interval.
+1. We leverage the selectors.yml file ([introduced in dbt 0.18](https://docs.getdbt.com/reference/node-selection/yaml-selectors/)) in order to define a set of model selectors for each Airflow DAG schedule we want to create. We then use dbt's tagging feature to tag every one of our models with a desired schedule interval.
 
     ```python
     selectors:
@@ -155,7 +155,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
             dag_dependencies = generate_dag_dependencies(selected_nodes, all_model_dependencies)
             with open(f"{DBT_DIR}/dbt_dags/data/{dag_name}.pickle", "wb") as f:
                 pickle.dump(dag_dependencies, f)
-                
+
     # RUN IT
     DBT_DIR = "./dags/dbt"
     run()
@@ -171,7 +171,7 @@ Ultimately, this gives us a fully robust, end-to-end solution that captures the 
 
 As with anything, there are a few potential limitations associated with this approach that users should be aware of. We look forward to building upon this integration going forward and welcome additional feedback from the community.
 
-1. The biggest trade off is that dbt really expects to be executing a DAG of models, and so some features don't make as much sense when dbt is only running a single model at a time. For example, dbt has the concept of `on-run-start` and `on-run-end` hooks which execute SQL at the beginning or end of a dbt run. With this approach, these hooks would run in every Airflow task.'
+1. The biggest trade off is that dbt really expects to be executing a DAG of models, and so some features don't make as much sense when dbt is only running a single model at a time. For example, dbt has the concept of `on-run-start` and `on-run-end` hooks which execute SQL at the beginning or end of a dbt run. With this approach, these hooks would run in every Airflow task.
 2. Because dbt parses and compiles the entire project whenever any dbt command is run, there is some overhead associated with separating by task. We have about 250 models running in our dbt project and this hasn't been an issue for us, but it could cause latency problems at high scale.
 3. This approach relies heavily on dbt artifacts like `manifest.json` that were up until recently not explicitly documented/supported by dbt. Fortunately, the upcoming `0.19` [dbt release](https://next.docs.getdbt.com/reference/artifacts/dbt-artifacts) will officially start versioning (as well as better documenting) dbt artifacts like `manifest.json`. 
 4. Because dbt only runs a single model at a time, we are unable to take advantage of dbt's built-in support for concurrency [via threads](https://blog.getdbt.com/how-we-made-dbt-runs-30--faster/). However, Airflow supports task-level concurrency and, because Airflow is aware of the full dbt DAG, it is able to concurrently execute dbt models with the same results as native dbt threading.
