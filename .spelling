@@ -815,6 +815,7 @@ h1
 h1s
 markdownlint
 md
+selectors.yml
  - posts/4-pillars-to-becoming-data-driven.md
 astronomer.io
 _
