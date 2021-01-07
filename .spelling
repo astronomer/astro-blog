@@ -746,6 +746,7 @@ configurability
 AppBuilder
 Bloomberg
 ec2
+elt.py
 dockerized
 auto-rebalancing
 datastore
