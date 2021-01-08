@@ -161,6 +161,34 @@ Because all of our dbt models are still running on the schedule of a single Airf
     run()
     ```
 
+3. Finally, we create an Airflow DAG file for each group of models that reads the associated pickle file, creates the required dbt model run/test tasks, and then sets dependencies between them as specified in the pickle file.
+    ```python
+    default_dag_args = {
+    "start_date": datetime.datetime(2020, 11, 24),
+    "retry_delay": datetime.timedelta(minutes=10),
+    "on_failure_callback": notify_all_of_failure,
+    "depends_on_past": True,
+    "wait_for_downstream": True,
+    "retries": 0,
+    }
+
+    DAG_NAME = "standard_schedule"
+
+    dag = DAG(
+        f"dbt_{DAG_NAME}", schedule_interval="@daily", max_active_runs=1, catchup=False, default_args=default_dag_args,
+    )
+
+    # Load dependencies from configuration file
+    dag_def = load_dag_def_pickle(f"{DAG_NAME}.pickle")
+
+    # Returns a dictionary of bash operators corresponding to dbt models/tests
+    dbt_tasks = create_task_dict(dag_def, dag)
+    
+    # Set dependencies between tasks according to config file
+    for edge in dag_def:
+        dbt_tasks[edge[0]] >> dbt_tasks[edge[1]]
+    ```
+
 Note that the functions in the DAG file above have been split out for simplicity, but the logic implemented is the same as described in [part 1 of this series](https://astronomer.io/blog/airflow-dbt-1).
 
 Putting all of this together, we end up with multiple Airflow DAGs, each running on its own defined schedule, with a specified group of interdependent dbt models running as individual  tasks within each DAG. With this system, running a production dbt model in Airflow is dead-simple: all we need to do is tag a model with the appropriate schedule interval and it will automatically get picked up and executed by the corresponding Airflow DAG. 
