@@ -1,7 +1,7 @@
 ---
 title: Change Data Capture with Apache Airflow: Part 1
 slug: change-data-capture-with-apache-airflow
-description: Implementing production-grade change data capture in near real-time on CloudSQL with Apache Airflow
+description: Implementing production-grade change data capture in near real-time on Goolge CloudSQL with Apache Airflow.
 heroImagePath: ../assets/cdc-cloudsql-1/cdc-cloudsql-airflow-hero-1.png
 authors:
   - Rob Deeb
@@ -17,7 +17,7 @@ The scheduled approach outlined in this post - enabling change data to be update
 
 Those capturing data in the format of time-series or events will benefit the most with this approach, but it can be used for any data by adding soft deletes to your transactions and defining the time scope to which changes must be recorded. Eventual consistency is achieved in a robust manner by creating an idempotent approach to how the data is extracted and moved. 
 
-We'll outline all steps in the process from end to end, from setup to extract. In totality, this includes topics of:
+In this series, we'll outline all steps in the process from end to end, from setup to extract. In totality, this will include topics of:
 
 - Setting up security and IAM in GCP
 - Calling the CloudSQL Export API
@@ -35,9 +35,9 @@ In a later post, I will show you how to transform or clean the data then add it 
 
 The base method for extract uses the [CloudSQL Export API](https://cloud.google.com/sql/docs/postgres/import-export/exporting#rest-v1beta4). This runs an operation with a SQL query, sending the results to a Google Cloud Storage (GCS) bucket as declared by you. You could just as easily extract directly from your database if your system and workload allows for such. 
 
-Using the extract API provides a robust and easily configurable security layer controlled by a service account, such that no system outside of CloudSQL is touching your production database. It also provides an option for a "serverless offload" option in the case that you need to guarantee zero load on your database from the extract. 
+Using the extract API provides a robust and easily configurable security layer controlled by a service account, such that no system outside of CloudSQL is touching your production database. It also provides a "serverless offload" option in the case that you need to guarantee zero load on your database from the extract. 
 
-The caveat for the export API in general is you [cannot run concurrent CloudSQL Operations](https://cloud.google.com/sql/docs/postgres/import-export/exporting#too-long-rca), so you want to run each query in serial, a scenario perfectly handled by using pools in Airflow.
+The caveat for the export API in general is that you [cannot run concurrent CloudSQL Operations](https://cloud.google.com/sql/docs/postgres/import-export/exporting#too-long-rca), so you will need to run each query in serial, a scenario perfectly handled by using pools in Airflow.
 
 In general, the API call looks like this:
 
@@ -60,9 +60,11 @@ POST https://www.googleapis.com/sql/v1beta4/projects/<project-id>/instances/<ins
 
 This will query `database_name` (only one allowed at a time) using the enclosed `selectQuery` and format the results to a CSV at the GCS bucket and keypath set in `uri`. 
 
-  > *Note: This CSV will not have headers, and in turn, you will also run a second operation to obtain the table schema, which will be described below*
+  > *Note: This CSV will not have headers, so you will need to run a second operation to obtain the table schema, which will be described below*
 
 ## Step 1: Set Up Airflow
+
+> *If you already have the Astronomer CLI installed you can skip to Step 2*
 
 The [Astronomer CLI](https://github.com/astronomer/astro-cli) is the easiest way to run Apache Airflow on your machine. From the CLI, you can establish a local testing environment regardless of where you'll be deploying to from there.
 
@@ -71,11 +73,11 @@ There are two ways to install any version of the Astronomer CLI:
 - cURL
 - [Homebrew](https://brew.sh/)
 
-### **Prerequisites**
+### Prerequisites
 
 The Astronomer CLI installation process requires [Docker](https://www.docker.com/) (v18.09 or higher).
 
-### **Install with Homebrew**
+### Install with Homebrew
 
 If you have Homebrew installed, from your terminal run:
 
@@ -89,7 +91,7 @@ To install a specific version of the Astro CLI, you'll have to specify `@major.m
 brew install astronomer/tap/astro@0.16.1
 ```
 
-### **Install with cURL**
+### Install with cURL
 
 To install the latest version of the Astronomer CLI, run:
 
@@ -103,7 +105,7 @@ To install a specific version of the Astronomer CLI, specify `-s -- major.minor.
 curl -sSL https://install.astronomer.io | sudo bash -s -- v0.16.1
 ```
 
-### **Confirm the Install**
+### Confirm the Install
 
 To make sure that you have the Astronomer CLI installed on your machine, run:
 
@@ -124,7 +126,7 @@ For a breakdown of subcommands and corresponding descriptions, you can always ru
 
 ## Step 2: GCP Access - CloudSQL to GCS
 
-To provide access between Airflow, CloudSQL, and a GCS bucket, you first need to give your CloudSQL instance the necessary permissions to make the export to a GCS Bucket, followed by providing Airflow the access to make API calls. 
+To allow for access between Airflow, CloudSQL, and your GCS bucket, you'll need to both give your CloudSQL instance the necessary permissions to export to the GCS bucket and give Airflow access to make API calls to both services.
 
 Starting with CloudSQL and GCS:
 
@@ -153,7 +155,7 @@ Starting with CloudSQL and GCS:
 
 ## Step 3: GCP Access - CloudSQL Export API Service Account
 
-Next, you need to facilitate CloudSQL API access for your Airflow Instance by creating a service account to be used in Airflow. To do so: 
+Next, you'll need to facilitate CloudSQL API access for your Airflow Instance by creating a service account to be used in Airflow. To do so: 
 
 1. Create a service account in your source GCP project and grant it the role of `Cloud SQL Admin`.
 <span style="display:block;text-align:center;">
@@ -171,8 +173,7 @@ Next, you need to facilitate CloudSQL API access for your Airflow Instance by cr
     - `34.86.203.139`
     - `35.199.31.94`
 
-    > 
-    *For more information on VPC access, [you can visit the Astronomer page on VPC Access here.](https://www.astronomer.io/docs/cloud/stable/manage-astronomer/vpc-access)*
+    > *For more information on VPC access, [you can visit the Astronomer page on VPC Access here.](https://www.astronomer.io/docs/cloud/stable/manage-astronomer/vpc-access)*
 
 ## Step 4: Initialize Your Airflow Project
 
@@ -235,9 +236,9 @@ Keep the `Conn Id` handy. You will use that in your Airflow DAG to reference thi
 
 ## Step 6: Configure Pooling
 
-The next configuration you'll set is a pool. From the [Airflow docs](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=pool#pools), `Airflow pools can be used to limit the execution parallelism on arbitrary sets of tasks`, and therefore, using them will enable you to create other parallel jobs while still requiring the export API tasks to be guaranteed to be run in serial. 
+The next configuration you'll set is a pool. From the [Airflow docs](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=pool#pools), `Airflow pools can be used to limit the execution parallelism on arbitrary sets of tasks`, and therefore, using them will enable you to create other parallel jobs while still guaranteeing that your export API tasks will run in serial. 
 
-To create this is simple. Just navigate in the top bar to `Admin -> Pools`, then hit the `+` sign to add a new record. Choose a pool name and description to your liking, but choose the number of slots as `1`.
+To create this pool is simple. Just navigate in the top bar to `Admin -> Pools`, then hit the `+` sign to add a new record. Choose a pool name and description to your liking, but choose the number of slots as `1`.
 
 ![Pools](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-14_at_11.05.02_AM.png)
 
@@ -245,9 +246,9 @@ Will add the name of the pool to your task definition below and that's it.
 
 ## Step 7: Build Your Pipeline in Airflow
 
-  > *If you are familiar with the foundational concepts of Airflow, you can skip to the next subsection for the `DAG Workflow`*
+  > *If you are familiar with the foundational concepts of Airflow, you can skip to the next subsection for the `DAG Workflow`.*
 
-Airflow pipeline design rests on the foundational structures of `Hooks` and `Operators`. Hooks facilitate connections and repository-type actions, whereas Operators use hooks in combinations with domain-specific logic and error handling in order to accomplish a task. Airflow comes pre-packaged with many of these hooks and operators, all built to work with services we use regularly. For example, `BashOperator` allows you to run a bash command directly in-line. A simple task using a this operator might look like:
+Airflow pipeline design rests on the foundational structures of `hooks` and `operators`. Hooks facilitate connections and repository-type actions, whereas operators use hooks in combinations with domain-specific logic and error handling in order to accomplish a task. Airflow comes pre-packaged with many of these hooks and operators, all built to work with services we use regularly. For example, `BashOperator` allows you to run a bash command directly in-line. A simple task using a this operator might look like:
 
 ```python
 hello_world = BashOperator(
@@ -269,7 +270,7 @@ insert_row = PostgresOperator(
 
 ### DAG Workflow
 
-Because of the great flexibility of Airflow, you can also use Hooks to create custom Operators, just as well as you can create custom hooks. In this post, we will create a custom `CloudSqlCsvExportOperator` using an existing `CloudSqlHook`, a hook designed to facilitate several types of operations on CloudSQL instances. First, we will use the `BashOperator` to simulate our workflow and check dependencies.
+Because of the great flexibility of Airflow, you can also use hooks to create custom operators, just as well as you can create custom hooks. In this post, we will create a custom `CloudSqlCsvExportOperator` using an existing `CloudSqlHook`, a hook designed to facilitate several types of operations on CloudSQL instances. First, we will use the `BashOperator` to simulate our workflow and check dependencies.
 
 In the DAG workflow, it is extremely advantageous to also create generic tasks that serve only as checkpoints in the workflow. This facilitates best practices like idempotency, task grouping, workflow readability, and traceability. This is accomplished by a stand-in operator called the `DummyOperator`. In the same effort, the `DummyOperator` is an excellent way to first build your workflow and visualize task dependencies. Combining this with a `BashOperator` allows us to add a "Hello, world" level of functionality to this. This is what we will do first.
 
@@ -468,7 +469,7 @@ As long as you add this in the plugins directory, the path can be arbitrary, but
 
 In data synchronization, a [watermark can be defined as](https://en.wikipedia.org/wiki/Watermark_(data_synchronization)):
 
-an object of a predefined format which provides a point of reference for two systems/datasets attempting to establish delta/incremental synchronization; any object in the queried data source which was created, modified/changed, and/or deleted after the watermark value was established will be qualified as "above watermark" and could/should be returned to a delta-querying partner
+> An object of a predefined format which provides a point of reference for two systems/datasets attempting to establish delta/incremental synchronization; any object in the queried data source which was created, modified/changed, and/or deleted after the watermark value was established will be qualified as "above watermark" and could/should be returned to a delta-querying partner.
 
 Change data in the concept of time-series or events can be looked at by the associated events and their `event_timestamp`. Therefore, we can use event timestamps in increments as high and low watermarks to establish delta synchronizations.
 
@@ -476,7 +477,7 @@ Change data in the concept of time-series or events can be looked at by the asso
 
 Airflow has out of the box event timestamps to help with this. When used in combination with the aforementioned source `event_timestamps`, they become extremely helpful in watermarking and partitioning the extracted data. In other words: For all of our task runs, Airflow hands us a value that we can dynamically assign watermarks with and use in our queries. In particular, the `execution_date` is discussed and used here. 
 
-The `execution_date` is a `pendulum.Pendulum` object available via a jinja templated macro as `{{ execution_date }}`. It's defined as a standard time relative to that which the DAG was scheduled to run at, independent of when it started or was re-ran.
+The `execution_date` is a `pendulum.Pendulum` object available via a jinja templated macro as `{{ execution_date }}`. It's defined as a standard time relative to that which the DAG was scheduled to run at, independent of when it started or was re-run.
 
 All Airflow macros, including `execution_date`, can be used to template our SQL command. With that, we can begin by letting the DAG `execution_date` be the `high_watermark` and subtract an hour for the `low_watermark`.
 
@@ -609,7 +610,7 @@ We now need to import our operator, import the `os` package, and tell Airflow wh
     )
     ```
 
-    > *Notice here how we also used `execution_date` to construct the GCS keypath. You'll see another macro there as well `{{ts_nodash}}`, which is `execution_date.isoformat()` with special characters and spaces removed, useful for time-based object keys.*
+    > *Notice here how we also used `execution_date` to construct the GCS keypath. You'll see another macro there as well `{{ts_nodash}}`, which is the equivalent to `execution_date.isoformat()` with special characters and spaces removed, useful for time-based object keys.*
 
 4. Change the  `export_table` tasks to show the following:
 
@@ -695,7 +696,7 @@ For a visual example, the image below shows the task tree of a particular DAG in
   <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-19_at_2.48.37_PM.png" width=400> 
 </span>
 
-The `start_date` you set in the DAG definition follows this logic. If you choose:
+The `start_date` you set in the DAG definition also follows this logic. If you choose:
 
 ```python
 start_date = DateTime(2021, 1, 14, 13, 0, 0),
@@ -703,7 +704,7 @@ schedule_interval = '@hourly',
 catchup = False
 ```
 
-you would see the first run at `2021-01-14T14:00:00+00:00` if the current date were before that and before the `start_date`. If the current calendar date was after the `start_date`, you would see the first run start at the beginning of the most recent hour. 
+You would see the first run at `2021-01-14T14:00:00+00:00` if the current date were before that and before the `start_date`. If the current calendar date was after the `start_date`, you would see the first run start at the beginning of the most recent hour. 
 
 > This is powerful because you can use that hard interval to further refine your watermarks and obtain data created **right up until the DAG starts running**. With that, you now have near-real time change data capture capabilities. Furthermore, the consistency and high-availability allows for SLAs to be set on this data (and in Airflow), something extremely difficult in a streaming solution.
 
@@ -744,7 +745,7 @@ To do this:
     AND event_timestamp AT TIME ZONE 'UTC' < '{{ high_watermark }}'
     ```
 
-    In a future post, I will show you how to set these dynamically, through the UI, as to allow interval changes and full scans when needed.
+    In a future post, I will show you how to set these dynamically through the UI as to allow interval changes and full scans when needed.
 
 ### Step 13: Intro to Dynamic Configs with Airflow Variables
 
@@ -924,13 +925,13 @@ Airflow Variables are simple key-value fields that can be added through the Airf
 
 Once you commit your changes to git and merge to branches as needed, you are ready to deploy this to production.
 
-### **Create an Airflow Deployment**
+### Create an Airflow Deployment
 
 To create an Airflow Deployment on Astronomer, log into [Astronomer Cloud](https://app.gcp0001.us-east4.astronomer.io/), open your Workspace, and click **New Deployment**.
 
 ![New Deployments](https://assets2.astronomer.io/main/docs/deploying-code/v0.23-deployments.png)
 
-## **Configure Your Airflow Deployment**
+## Configure Your Airflow Deployment
 
 Use the **New Deployment** menu to configure the following:
 
@@ -958,57 +959,57 @@ From this dashboard, you can:
 
 For more information on deployment configuration, read [Configure an Airflow Deployment on Astronomer](https://www.astronomer.io/docs/cloud/stable/deploy/configure-deployment/).
 
-## **Deploy Code from the CLI**
+## Deploy Code from the CLI
 
-### **a. Authenticate via the Astronomer CLI**
+1. Authenticate via the Astronomer CLI
 
-To authenticate via the Astronomer CLI, run:
+    To authenticate via the Astronomer CLI, run:
 
-```bash
-astro auth login gcp0001.us-east4.astronomer.io
-```
+    ```bash
+    astro auth login gcp0001.us-east4.astronomer.io
+    ```
 
-### **b. Confirm Your Workspace and Deployment**
+2. Confirm Your Workspace and Deployment
 
-From the Astronomer CLI, you're free to push code to any Airflow Deployment you have access to as long as you have the appropriate deployment-level permissions to do so.
+    From the Astronomer CLI, you're free to push code to any Airflow Deployment you have access to as long as you have the appropriate deployment-level permissions to do so.
 
-Before you deploy to Astronomer, make sure that the Airflow Deployment you'd like to push code to is within the Workspace you're operating in.
+    Before you deploy to Astronomer, make sure that the Airflow Deployment you'd like to push code to is within the Workspace you're operating in.
 
-To see the list of Workspaces you have access to, run:
+    To see the list of Workspaces you have access to, run:
 
-```bash
-astro workspace list
-```
+    ```bash
+    astro workspace list
+    ```
 
-To switch between Workspaces, run:
+    To switch between Workspaces, run:
 
-```bash
-astro workspace switch
-```
+    ```bash
+    astro workspace switch
+    ```
 
-To see the list of Deployments within a particular Workspace, run:
+    To see the list of Deployments within a particular Workspace, run:
 
-```bash
-astro deployment list
-```
+    ```bash
+    astro deployment list
+    ```
 
-For more specific CLI guidelines and commands, read [CLI Quickstart](https://www.astronomer.io/docs/cloud/stable/develop/cli-quickstart/).
+    For more specific CLI guidelines and commands, read [CLI Quickstart](https://www.astronomer.io/docs/cloud/stable/develop/cli-quickstart/).
 
-### **c. Deploy to Astronomer**
+3. Deploy to Astronomer
 
-Finally, make sure you're in the correct Airflow project directory.
+    Finally, make sure you're in the correct Airflow project directory.
 
-When you're ready to deploy your DAGs, run:
+    When you're ready to deploy your DAGs, run:
 
-```bash
-astro deploy
-```
+    ```bash
+    astro deploy
+    ```
 
-This command returns a list of Airflow Deployments available in your Workspace and prompts you to pick one.
+    This command returns a list of Airflow Deployments available in your Workspace and prompts you to pick one.
 
-### d**. Start the DAG**
+4. Start the DAG
 
-To start running this on a schedule, in the `DAG` page of the airflow UI, flip the `OFF` switch to `ON`. This will find the last completed hour on the clock and set that as the `execution_date` to begin running.
+    To start running this on a schedule, in the `DAG` page of the airflow UI, flip the `OFF` switch to `ON`. This will find the last completed hour on the clock and set that as the `execution_date` to begin running.
 
 ## Looking Ahead
 
