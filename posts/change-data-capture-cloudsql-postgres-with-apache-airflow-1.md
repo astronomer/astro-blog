@@ -1,5 +1,5 @@
 ---
-title: Change Data Capture with Apache Airflow: Part 1
+title: "Change Data Capture with Apache Airflow: Part 1"
 slug: change-data-capture-with-apache-airflow
 description: Implementing production-grade change data capture in near real-time on Google CloudSQL with Apache Airflow.
 heroImagePath: ../assets/cdc-cloudsql-1/cdc-cloudsql-airflow-hero-1.png
