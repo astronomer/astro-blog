@@ -165,12 +165,14 @@ Next, you need to facilitate CloudSQL API access for your Airflow Instance by cr
 
     > *Note: If you are running airflow on astronomer Cloud and your GCP is running in VPC, you will need to give access to the following IP addresses:*
 
-    > - `35.245.140.149`
+    > 
+    - `35.245.140.149`
     - `35.245.44.221`
     - `34.86.203.139`
     - `35.199.31.94`
 
-    > *For more information on VPC access, [you can visit the Astronomer page on VPC Access here.](https://www.astronomer.io/docs/cloud/stable/manage-astronomer/vpc-access)*
+    > 
+    *For more information on VPC access, [you can visit the Astronomer page on VPC Access here.](https://www.astronomer.io/docs/cloud/stable/manage-astronomer/vpc-access)*
 
 ## Step 4: Initialize Your Airflow Project
 
@@ -179,8 +181,11 @@ If you are already familiar with creating a new Airflow project, you can skip to
 1. To create a new project with the Astronomer CLI, in your terminal, simply create a new directory for your project and then use the Astronomer CLI to scaffold out your project.
 
     ```bash
-    $ mkdir <directory-name> && cd <directory-name>
-    $ astro dev init
+    mkdir <directory-name> && cd <directory-name>
+    ```
+
+    ```bash
+    astro dev init
     ```
 
     This will generate the following files in that directory:
@@ -224,7 +229,7 @@ Now we need to add the service account JSON from GCP to Airflow to create a conn
 
 3. In the `Keyfile JSON` field, paste the Keyfile JSON you copied from Step 2. 
 
-    ![](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.25.24_PM.png)
+    ![Connections](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.25.24_PM.png)
 
 Keep the `Conn Id` handy. You will use that in your Airflow DAG to reference this connection. When you're ready, save this connection to finalize your access management. 
 
@@ -234,15 +239,15 @@ The next configuration you'll set is a pool. From the [Airflow docs](https://air
 
 To create this is simple. Just navigate in the top bar to `Admin -> Pools`, then hit the `+` sign to add a new record. Choose a pool name and description to your liking, but choose the number of slots as `1`.
 
-![](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-14_at_11.05.02_AM.png)
+![Pools](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-14_at_11.05.02_AM.png)
 
 Will add the name of the pool to your task definition below and that's it.
 
 ## Step 7: Build Your Pipeline in Airflow
 
-  > *If you are familiar with the foundational concepts of Airlfow, you can skip to the next subsection for the `DAG Workflow`*
+  > *If you are familiar with the foundational concepts of Airflow, you can skip to the next subsection for the `DAG Workflow`*
 
-Airflow pipeline design rests on the foundational structures of `Hooks` and `Operators`. Hooks facilitate connections and repository-type actions, whereas Operators use hooks in combinations with domain-specific logic and error handling in order to accomplish a task. Airflow comes pre-packaged with many of these hooks and operators, all built to work with services we use regularly. For example, `BashOperator` allows you to run a bash command directly inline. A simple task using a this operator might look like:
+Airflow pipeline design rests on the foundational structures of `Hooks` and `Operators`. Hooks facilitate connections and repository-type actions, whereas Operators use hooks in combinations with domain-specific logic and error handling in order to accomplish a task. Airflow comes pre-packaged with many of these hooks and operators, all built to work with services we use regularly. For example, `BashOperator` allows you to run a bash command directly in-line. A simple task using a this operator might look like:
 
 ```python
 hello_world = BashOperator(
@@ -339,7 +344,7 @@ In the DAG workflow, it is extremely advantageous to also create generic tasks t
 
 2. Now, open the Airflow UI, click on your DAG in the list, then navigate to the `Graph View` . It should look something this:
 
-    ![](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-20_at_10.57.19_AM.png)
+    ![Graph View](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-20_at_10.57.19_AM.png)
 
 3. You can now switch `Off` to `On`  and choose `Trigger DAG` to see this workflow run then verify each export task runs one at a time by looking at the `started` time for each. 
 
@@ -500,7 +505,8 @@ If you have done this before, you might be thinking we will need to adjust for h
     │       │       ├── get_schema.sql
     ```
 
- 2. Add the following to each `table_{num}.sql` file you created, changing the table name to your own, accordingly:
+2. Add the following to each `table_{num}.sql` file you created, changing the table name to your own, accordingly:
+    
     ```sql
     {%- set low_watermark =  execution_date.subtract(hours=1) -%}
     SELECT * FROM some_schema.table_1
@@ -509,6 +515,7 @@ If you have done this before, you might be thinking we will need to adjust for h
     ```
 
 3. Combine all tables into a single schema CSV by adding the following to the  `get_schema.sql` (and changing `some_schema`):
+    
     ```sql
     {% set tables = params.tables %}
     SELECT 
@@ -556,7 +563,7 @@ We now need to import our operator, import the `os` package, and tell Airflow wh
 
     >*Note: All of these strings will be added later as a JSON-serialized airflow variable, which can be configured through the Airflow UI.*
 
- 2. Add the `template_searchpath` parameter to your `DAG` definition like so:
+2. Add the `template_searchpath` parameter to your `DAG` definition like so:
 
     ```python
     with DAG('change_data_capture_cloud_sql',
@@ -703,6 +710,7 @@ you would see the first run at `2021-01-14T14:00:00+00:00` if the current date w
 To do this:
 
 1. If your interval is always going to be the same, in `table_1.sql`, you could hardcode your `low_watermark` adjustment to be:
+    
     ```python
     {%- set low_watermark =  execution_date -%}
     {%- set high_watermark =  execution_date.add(hours=1) -%}
@@ -743,6 +751,7 @@ To do this:
 Airflow Variables are simple key-value fields that can be added through the Airflow UI and parsed in your DAG. They are useful for adding dynamic configuration values to your DAG file. With this, it's extremely important to realize every loop of the scheduler will parse it, making a connection to the database each time. To make this efficient, it's recommended to add a single JSON-serialized variable, then access individual values as items in a dictionary. To convert our hard-coded strings:
 
 1. Navigate to the DAG python file `change_data_capture.py` and locate the string configs.
+    
     ```python
     gcp_conn_id = 'cloud_sql_api_connection'
     db_instance_id = 'your_db_instance_id'
@@ -753,6 +762,7 @@ Airflow Variables are simple key-value fields that can be added through the Airf
     ```
 
 2. Converting them to JSON
+    
     ```json
     {
       "gcp_conn_id": "cloud_sql_api_connection",
@@ -766,9 +776,10 @@ Airflow Variables are simple key-value fields that can be added through the Airf
 
 3. Open the Airflow UI and navigate `Admin -> Variables`, add the JSON as the Val.
 
-    ![](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-14_at_3.55.33_PM.png)
+    ![Add Variables](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-14_at_3.55.33_PM.png)
 
 4. Back to your DAG python file, change the strings config to access the Variable:
+    
     ```python
     from airflow.models import Variable
 
@@ -786,6 +797,7 @@ Airflow Variables are simple key-value fields that can be added through the Airf
     ```
 
     The final DAG file would look like:
+    
     ```python
     #change_data_capture.py
     import os
@@ -905,6 +917,7 @@ Airflow Variables are simple key-value fields that can be added through the Airf
         kickoff_dag >> start_export >> get_schema
         complete_export >> complete_dag
     ```
+    
     Now, we have a DAG that extracts change data from our tables at an hourly interval as soon as that interval completes. We can now deploy this to production.
 
 ## Step 14: Deploy to Production
@@ -915,7 +928,7 @@ Once you commit your changes to git and merge to branches as needed, you are rea
 
 To create an Airflow Deployment on Astronomer, log into [Astronomer Cloud](https://app.gcp0001.us-east4.astronomer.io/), open your Workspace, and click **New Deployment**.
 
-![https://assets2.astronomer.io/main/docs/deploying-code/v0.23-deployments.png](https://assets2.astronomer.io/main/docs/deploying-code/v0.23-deployments.png)
+![New Deployments](https://assets2.astronomer.io/main/docs/deploying-code/v0.23-deployments.png)
 
 ## **Configure Your Airflow Deployment**
 
@@ -926,13 +939,13 @@ Use the **New Deployment** menu to configure the following:
 - **Airflow Version**: We recommend using the latest version.
 - **Executor**: We recommend starting with Local.
 
-![https://assets2.astronomer.io/main/docs/deploying-code/v0.23-new_deployment-config.png](https://assets2.astronomer.io/main/docs/deploying-code/v0.23-new_deployment-config.png)
+![Deployment Config](https://assets2.astronomer.io/main/docs/deploying-code/v0.23-new_deployment-config.png)
 
 When you've finished, click **Create Deployment**.
 
 Once you've initialized your Deployment, give it a few moments to spin up. Afterwards, you'll have access to your Deployment dashboard:
 
-![https://assets2.astronomer.io/main/docs/deploying-code/v0.23-new_deployment-dashboard.png](https://assets2.astronomer.io/main/docs/deploying-code/v0.23-new_deployment-dashboard.png)
+![Deployment Dashboard](https://assets2.astronomer.io/main/docs/deploying-code/v0.23-new_deployment-dashboard.png)
 
 From this dashboard, you can:
 
@@ -995,7 +1008,7 @@ This command returns a list of Airflow Deployments available in your Workspace a
 
 ### d**. Start the DAG**
 
- 2. To start running this on a schedule, in the `DAG` page of the airflow UI, flip the `OFF` switch to `ON`. This will find the last completed hour on the clock and set that as the `execution_date` to begin running.
+To start running this on a schedule, in the `DAG` page of the airflow UI, flip the `OFF` switch to `ON`. This will find the last completed hour on the clock and set that as the `execution_date` to begin running.
 
 ## Looking Ahead
 
