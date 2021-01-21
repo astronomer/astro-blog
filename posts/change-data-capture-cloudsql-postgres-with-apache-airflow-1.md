@@ -17,7 +17,7 @@ The scheduled approach outlined in this post - enabling change data to be update
 
 Those capturing data in the format of time-series or events will benefit the most with this approach, but it can be used for any data by adding soft deletes to your transactions and defining the time scope to which changes must be recorded. Eventual consistency is achieved in a robust manner by creating an idempotent approach to how the data is extracted and moved. 
 
-In this series, we'll outline all steps in the process from end to end, from setup to extract. In totality, this will include topics of:
+In this series, we'll outline all steps in the process from end to end, from setup to extract. Specifically, this entails:
 
 - Setting up security and IAM in GCP
 - Calling the CloudSQL Export API
@@ -60,7 +60,7 @@ POST https://www.googleapis.com/sql/v1beta4/projects/<project-id>/instances/<ins
 
 This will query `database_name` (only one allowed at a time) using the enclosed `selectQuery` and format the results to a CSV at the GCS bucket and keypath set in `uri`. 
 
-  > *Note: This CSV will not have headers, so you will need to run a second operation to obtain the table schema, which will be described below*
+  > **Note:** This CSV will not have headers, so you will need to run a second operation to obtain the table schema, which will be described below
 
 ## Step 1: Set Up Airflow
 
@@ -165,7 +165,7 @@ Next, you'll need to facilitate CloudSQL API access for your Airflow Instance by
 
 2. In the menu for the service account, select `Actions -> Create Key`. This will provide you the necessary keyfile JSON for your airflow instance. Grab the JSON (save it somewhere important and safe), and bring it to your Airflow Deployment. 
 
-    > *Note: If you are running airflow on astronomer Cloud and your GCP is running in VPC, you will need to give access to the following IP addresses:*
+    > **Note:** If you are running airflow on astronomer Cloud and your GCP is running in VPC, you will need to give access to the following IP addresses:
 
     > 
     - `35.245.140.149`
@@ -203,13 +203,13 @@ If you are already familiar with creating a new Airflow project, you can skip to
     └── requirements.txt # For any Python packages
     ```
 
-2. For version consistency at the time of writing, let's manually set the image our `Dockerfile` uses. Open the `Dockerfile`, change the contents to read:
+2. For version consistency at the time of writing, let's manually set the image our `Dockerfile` uses. Open the `Dockerfile` and change the contents to read:
 
     ```docker
     FROM quay.io/astronomer/ap-airflow:1.10.14-1-buster-onbuild
     ```
 
-3. Next, In the `dags` directory create a new python file with appropriate naming of your choice, such as `change_data_capture.py`. Now (with docker running) start up airflow from the CLI by running:
+3. Next, In the `dags` directory create a new python file with appropriate naming of your choice, such as `change_data_capture.py`. Now (with docker running) start up Airflow from the CLI by running:
 
     ```bash
     astro dev start
@@ -236,19 +236,19 @@ Keep the `Conn Id` handy. You will use that in your Airflow DAG to reference thi
 
 ## Step 6: Configure Pooling
 
-The next configuration you'll set is a pool. From the [Airflow docs](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=pool#pools), `Airflow pools can be used to limit the execution parallelism on arbitrary sets of tasks`, and therefore, using them will enable you to create other parallel jobs while still guaranteeing that your export API tasks will run in serial. 
+The next configuration you'll set is a pool. From the [Airflow docs](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=pool#pools), "Airflow pools can be used to limit the execution parallelism on arbitrary sets of tasks". Therefore, using them will enable you to create other parallel jobs while still guaranteeing that your export API tasks will run in serial. 
 
-To create this pool is simple. Just navigate in the top bar to `Admin -> Pools`, then hit the `+` sign to add a new record. Choose a pool name and description to your liking, but choose the number of slots as `1`.
+To create this pool, simply navigate in the top bar to `Admin -> Pools`, then hit the `+` sign to add a new record. Choose a pool name and description to your liking, but choose the number of slots as `1`.
 
 ![Pools](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-14_at_11.05.02_AM.png)
 
-Will add the name of the pool to your task definition below and that's it.
+Now all we have to do is add the name of the pool to our task definitions, which we'll build in the next step.
 
 ## Step 7: Build Your Pipeline in Airflow
 
   > *If you are familiar with the foundational concepts of Airflow, you can skip to the next subsection for the `DAG Workflow`.*
 
-Airflow pipeline design rests on the foundational structures of `hooks` and `operators`. Hooks facilitate connections and repository-type actions, whereas operators use hooks in combinations with domain-specific logic and error handling in order to accomplish a task. Airflow comes pre-packaged with many of these hooks and operators, all built to work with services we use regularly. For example, `BashOperator` allows you to run a bash command directly in-line. A simple task using a this operator might look like:
+Airflow pipeline design rests on the foundational structures of `hooks` and `operators`. Hooks facilitate connections and repository-type actions, whereas operators use hooks in combination with domain-specific logic and error handling in order to accomplish a task. Airflow comes pre-packaged with many of these hooks and operators, all built to work with services we use regularly. For example, `BashOperator` allows you to run a bash command directly in-line. A simple task using a this operator might look like:
 
 ```python
 hello_world = BashOperator(
@@ -272,7 +272,7 @@ insert_row = PostgresOperator(
 
 Because of the great flexibility of Airflow, you can also use hooks to create custom operators, just as well as you can create custom hooks. In this post, we will create a custom `CloudSqlCsvExportOperator` using an existing `CloudSqlHook`, a hook designed to facilitate several types of operations on CloudSQL instances. First, we will use the `BashOperator` to simulate our workflow and check dependencies.
 
-In the DAG workflow, it is extremely advantageous to also create generic tasks that serve only as checkpoints in the workflow. This facilitates best practices like idempotency, task grouping, workflow readability, and traceability. This is accomplished by a stand-in operator called the `DummyOperator`. In the same effort, the `DummyOperator` is an excellent way to first build your workflow and visualize task dependencies. Combining this with a `BashOperator` allows us to add a "Hello, world" level of functionality to this. This is what we will do first.
+In the DAG workflow, it is extremely advantageous to also create generic tasks that serve only as checkpoints in the workflow. This facilitates best practices like idempotency, task grouping, workflow readability, and traceability. This is accomplished by a stand-in operator called the `DummyOperator`. Building your whole DAG first with all `DummyOperator` tasks is an excellent way to visualize task dependencies and control the flow of tasks. As a next step, combining this with a `BashOperator` allows us to add a "Hello, world" level of functionality to this and test the flow of the DAG itself. To do this:
 
 1. Open your DAG file `change_data_capture.py` in your favorite text editor. First we'll import a few modules and then set the basic workflow structure in order to visualize and test the flow.
 
@@ -343,15 +343,17 @@ In the DAG workflow, it is extremely advantageous to also create generic tasks t
 
     This workflow is simply creating a set of dependent tasks and instructing them to run in a pool with a single slot, thereby forcing them to run one at a time. Save the file. The bash commands will appear in the tasks logs when run. 
 
-2. Now, open the Airflow UI, click on your DAG in the list, then navigate to the `Graph View` . It should look something this:
+2. Open the Airflow UI, click on your DAG in the list, then navigate to the `Graph View` . It should look something this:
 
     ![Graph View](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-20_at_10.57.19_AM.png)
 
-3. You can now switch `Off` to `On`  and choose `Trigger DAG` to see this workflow run then verify each export task runs one at a time by looking at the `started` time for each. 
+3. Switch `Off` to `On`  and choose `Trigger DAG` to see this workflow run, then verify each export task runs one at a time by looking at the `started` time for each. 
 
 <span style="display:block;text-align:center;">![](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-20_at_10.58.55_AM.png)</span>
 
-If it doesn't run, check your start date is set to the past, not the future. If your DAG is not in the list and doesn't appear after a minute, you may have a syntax error in your python file. If it's good, we turn the DAG back to `Off` and start building in functionality.
+If it doesn't run, check that your start date is set to the past, not the future. If your DAG is not in the list and doesn't appear after a minute, you may have a syntax error in your python file.
+
+Once the DAG is running as expected, we can turn the DAG back to `Off` and start building in functionality.
 
 ## Step 8: Build the CloudSqlCsvExportOperator
 
@@ -364,7 +366,7 @@ In the `plugins` directory, create a new file with the path:
 │   │   │   └── gcp_cloudsql_export_operator.py
 ```
 
-As long as you add this in the plugins directory, the path can be arbitrary, but this is a recommended format for modularization. 
+The path is arbitrary once you add this in your `plugins` directory, but this is a recommended format for modularization. 
 
 1. Copy-paste the following code into your python file:
 
@@ -467,13 +469,13 @@ As long as you add this in the plugins directory, the path can be arbitrary, but
 
 ## Step 9: Implement Watermarking and Execution Dates
 
-In data synchronization, a [watermark can be defined as](https://en.wikipedia.org/wiki/Watermark_(data_synchronization)):
+In data synchronization, a [watermark](https://en.wikipedia.org/wiki/Watermark_(data_synchronization)) can be defined as:
 
 > An object of a predefined format which provides a point of reference for two systems/datasets attempting to establish delta/incremental synchronization; any object in the queried data source which was created, modified/changed, and/or deleted after the watermark value was established will be qualified as "above watermark" and could/should be returned to a delta-querying partner.
 
 Change data in the concept of time-series or events can be looked at by the associated events and their `event_timestamp`. Therefore, we can use event timestamps in increments as high and low watermarks to establish delta synchronizations.
 
- > *Note: Transactional or non-time series change data can be included here by adding soft deletes (`deleted_at` fields) then watermarking by `deleted_at` and `updated_at` timestamps as per the granularity of timing necessary.*
+ > **Note:** Transactional or non-time series change data can be included here by adding soft deletes (`deleted_at` fields) then watermarking by `deleted_at` and `updated_at` timestamps as per the granularity of timing necessary.
 
 Airflow has out of the box event timestamps to help with this. When used in combination with the aforementioned source `event_timestamps`, they become extremely helpful in watermarking and partitioning the extracted data. In other words: For all of our task runs, Airflow hands us a value that we can dynamically assign watermarks with and use in our queries. In particular, the `execution_date` is discussed and used here. 
 
@@ -537,7 +539,9 @@ If you have done this before, you might be thinking we will need to adjust for h
     )
     ```
 
-    The `ordinal_position` field is how you will be able to assign column names to header fields in the CSV file. The `params.tables` assignment will come in the DAG file. Note, it is also possible to join tables here (in the need for immediate denormalization) by a `UNION SELECT` on this to the join query with an assigned table name. Now we're able to include functionality in our Airflow tasks.
+    The `ordinal_position` field is how you will be able to assign column names to header fields in the CSV file. The `params.tables` assignment will come in the DAG file. With that in place, we're now able to include functionality in our Airflow tasks.
+
+    > **Note:** It's also possible to join tables here (in the need for immediate denormalization) by running a `UNION SELECT` on this to the join query with an assigned table name.
 
 ## Step 10: Build Operators into the Tasks
 
@@ -562,7 +566,7 @@ We now need to import our operator, import the `os` package, and tell Airflow wh
     offload_export = False # True for serverless, more expensive and longer running, but offloads completely
     ```
 
-    >*Note: All of these strings will be added later as a JSON-serialized airflow variable, which can be configured through the Airflow UI.*
+    > **Note:** All of these strings will be added later as a JSON-serialized airflow variable, which can be configured through the Airflow UI.
 
 2. Add the `template_searchpath` parameter to your `DAG` definition like so:
 
@@ -610,7 +614,7 @@ We now need to import our operator, import the `os` package, and tell Airflow wh
     )
     ```
 
-    > *Notice here how we also used `execution_date` to construct the GCS keypath. You'll see another macro there as well `{{ts_nodash}}`, which is the equivalent to `execution_date.isoformat()` with special characters and spaces removed, useful for time-based object keys.*
+    > **Note:** Notice here how we also used `execution_date` to construct the GCS keypath. You'll see another macro there as well `{{ts_nodash}}`, which is the equivalent to `execution_date.isoformat()` with special characters and spaces removed, useful for time-based object keys.
 
 4. Change the  `export_table` tasks to show the following:
 
@@ -645,11 +649,11 @@ We now need to import our operator, import the `os` package, and tell Airflow wh
         get_schema >> export_table >> complete_export
     ```
 
-    As mentioned above, all source code here is [available for download on github](https://github.com/astronomer/cdc-cloudsql-airflow-demo). Now it's time to check that everything is set up by using the render tool.
+    As mentioned above, all source code here is [available for download on github](https://github.com/astronomer/cdc-cloudsql-airflow-demo). Now it's time to check that everything works by using the render tool.
 
 ## Step 11: Render Template Check
 
-In your terminal, you can use the Astro CLI to render all templating using the following format:
+In your terminal, you can use the Astro CLI to render all templating using a command with the following format:
 
 ```bash
 astro dev run render <dag-id> <task-id> 'execution_date'
@@ -682,7 +686,7 @@ your_gcs_bucket
 your_gcs_bucket/cloudsql_export/raw/table_1/2021/1/14/table_1_20210114T130000.csv
 ```
 
-We see our SQL Query, our bucket, and the full `gcs_keypath` fully rendered based on our `execution_date` chosen. Try the same for `get_schema`. When complete, the success of such signal this DAG is now ready to be run. 
+We see our SQL Query, our bucket, and the full `gcs_keypath` fully rendered based on our `execution_date` chosen. Try the same for `get_schema`. If this templating renders correctly, then the DAG is now ready to be run. 
 
 ## Step 12: Implement Scheduling and Timing
 
@@ -749,7 +753,7 @@ To do this:
 
 ### Step 13: Intro to Dynamic Configs with Airflow Variables
 
-Airflow Variables are simple key-value fields that can be added through the Airflow UI and parsed in your DAG. They are useful for adding dynamic configuration values to your DAG file. With this, it's extremely important to realize every loop of the scheduler will parse it, making a connection to the database each time. To make this efficient, it's recommended to add a single JSON-serialized variable, then access individual values as items in a dictionary. To convert our hard-coded strings:
+Airflow Variables are simple key-value fields that can be added through the Airflow UI and parsed in your DAG. They are useful for adding dynamic configuration values to your DAG file. With this, it's extremely important to realize that on every loop of the scheduler a query is made to the database for each variable. To make this efficient, it's recommended to add a single JSON-serialized variable, then access individual values as items in a dictionary. To convert our hard-coded strings:
 
 1. Navigate to the DAG python file `change_data_capture.py` and locate the string configs.
     
