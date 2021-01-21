@@ -1,7 +1,7 @@
 ---
 title: Change Data Capture with Apache Airflow: Part 1
 slug: change-data-capture-with-apache-airflow
-description: Implementing production-grade change data capture in near real-time on Goolge CloudSQL with Apache Airflow.
+description: Implementing production-grade change data capture in near real-time on Google CloudSQL with Apache Airflow.
 heroImagePath: ../assets/cdc-cloudsql-1/cdc-cloudsql-airflow-hero-1.png
 authors:
   - Rob Deeb
@@ -68,28 +68,9 @@ This will query `database_name` (only one allowed at a time) using the enclosed 
 
 The [Astronomer CLI](https://github.com/astronomer/astro-cli) is the easiest way to run Apache Airflow on your machine. From the CLI, you can establish a local testing environment regardless of where you'll be deploying to from there.
 
-There are two ways to install any version of the Astronomer CLI:
-
-- cURL
-- [Homebrew](https://brew.sh/)
-
 ### Prerequisites
 
 The Astronomer CLI installation process requires [Docker](https://www.docker.com/) (v18.09 or higher).
-
-### Install with Homebrew
-
-If you have Homebrew installed, from your terminal run:
-
-```bash
-brew install astronomer/tap/astro
-```
-
-To install a specific version of the Astro CLI, you'll have to specify `@major.minor.patch`. To install v0.16.1, for example, run:
-
-```python
-brew install astronomer/tap/astro@0.16.1
-```
 
 ### Install with cURL
 
@@ -99,30 +80,7 @@ To install the latest version of the Astronomer CLI, run:
 curl -sSL https://install.astronomer.io | sudo bash
 ```
 
-To install a specific version of the Astronomer CLI, specify `-s -- major.minor.patch` as a flag at the end of the cURL command. To install v0.16.1, for example, run:
-
-```bash
-curl -sSL https://install.astronomer.io | sudo bash -s -- v0.16.1
-```
-
-### Confirm the Install
-
-To make sure that you have the Astronomer CLI installed on your machine, run:
-
-```bash
-astro version
-```
-
-If the installation was successful, you should see the version of the CLI that you installed in the output:
-
-```bash
-Astro CLI Version: 0.15.0
-Git Commit: c4fdeda96501ac9b1f3526c97a1c5c9b3f890d71
-```
-
-For a breakdown of subcommands and corresponding descriptions, you can always run `$ astro` or `$ astro --help`.
-
-  >*For more information on installing the Astronomer CLI, please check out the page the [Astronomer CLI Quickstart](https://www.astronomer.io/docs/cloud/stable/develop/cli-quickstart).*
+  > *For alternative installation methods, read our [install guide](https://www.astronomer.io/docs/cloud/stable/develop/cli-quickstart).*
 
 ## Step 2: GCP Access - CloudSQL to GCS
 
@@ -142,26 +100,32 @@ Starting with CloudSQL and GCS:
     serviceAccountEmailAddress: <stuff>@gcp-sa-cloud-sql.iam.gserviceaccount.com
     ```
 
-3. Open your GCP Storage Browser and navigate to your destination GCS bucket, or create one, and `Edit Bucket Permissions`. 
-<span style="display:block;text-align:center;">
-  <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-19_at_1.38.19_PM.png" style="max-width:50%;">
-</span>
+3. Open your GCP Storage Browser and navigate to your destination GCS bucket, or create one, and `Edit Bucket Permissions`.
 
-4. Take the value for `serviceAccountEmailAddress` and add it as `Storage Object Admin` to your  GCS bucket. 
-<span style="display:block;text-align:center;">
-  <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_3.57.37_PM.png" style="float:left;max-width:50%;">
-  <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_3.56.24_PM.png" style="float:left;max-width:50%;">
-</span><br clear="all">
+    <!-- markdownlint-disable MD033 -->
+    <span style="display:block;text-align:center;">
+      <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-19_at_1.38.19_PM.png" style="max-width:50%;">
+    </span>
+
+4. Take the value for `serviceAccountEmailAddress` and add it as `Storage Object Admin` to your  GCS bucket.
+
+    <!-- markdownlint-disable MD033 -->
+    <span style="display:block;text-align:center;">
+      <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_3.57.37_PM.png" style="float:left;max-width:50%;">
+      <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_3.56.24_PM.png" style="float:left;max-width:50%;">
+    </span><br clear="all">
 
 ## Step 3: GCP Access - CloudSQL Export API Service Account
 
 Next, you'll need to facilitate CloudSQL API access for your Airflow Instance by creating a service account to be used in Airflow. To do so: 
 
 1. Create a service account in your source GCP project and grant it the role of `Cloud SQL Admin`.
-<span style="display:block;text-align:center;">
-  <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.18.14_PM.png" style="float:left;max-width:50%;">
-  <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.10.24_PM.png" style="float:left;max-width:50%;">
-</span><br clear="all">
+
+    <!-- markdownlint-disable MD033 -->
+    <span style="display:block;text-align:center;">
+      <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.18.14_PM.png" style="float:left;max-width:50%;">
+      <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.10.24_PM.png" style="float:left;max-width:50%;">
+    </span><br clear="all">
 
 2. In the menu for the service account, select `Actions -> Create Key`. This will provide you the necessary keyfile JSON for your airflow instance. Grab the JSON (save it somewhere important and safe), and bring it to your Airflow Deployment. 
 
@@ -349,11 +313,12 @@ In the DAG workflow, it is extremely advantageous to also create generic tasks t
 
 3. Switch `Off` to `On`  and choose `Trigger DAG` to see this workflow run, then verify each export task runs one at a time by looking at the `started` time for each. 
 
-<span style="display:block;text-align:center;">![](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-20_at_10.58.55_AM.png)</span>
+    <!-- markdownlint-disable MD033 -->
+    <span style="display:block;text-align:center;">![Schedule Dates](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-20_at_10.58.55_AM.png)</span>
 
-If it doesn't run, check that your start date is set to the past, not the future. If your DAG is not in the list and doesn't appear after a minute, you may have a syntax error in your python file.
+    If it doesn't run, check that your start date is set to the past, not the future. If your DAG is not in the list and doesn't appear after a minute, you may have a syntax error in your python file.
 
-Once the DAG is running as expected, we can turn the DAG back to `Off` and start building in functionality.
+    Once the DAG is running as expected, we can turn the DAG back to `Off` and start building in functionality.
 
 ## Step 8: Build the CloudSqlCsvExportOperator
 
@@ -696,6 +661,7 @@ When a DAG starts at its scheduled time, it begins at the end of the interval ch
 
 For a visual example, the image below shows the task tree of a particular DAG in which this concept can be observed. The first line, `Run: 2021-01-19, 21:00:00 UTC`, shows the `execution_date` from an hourly scheduled DAG, set as `schedule_interval='@hourly'`. Notice `Started: 2021-01-19T22:00:16xxx` is an hour (a single interval) after the schedule date. That is, it starts one `schedule_interval` later than the `execution_date`.
 
+<!-- markdownlint-disable MD033 -->
 <span style="display:block;text-align:center;">
   <img src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-19_at_2.48.37_PM.png" width=400> 
 </span>
@@ -708,11 +674,13 @@ schedule_interval = '@hourly',
 catchup = False
 ```
 
-You would see the first run at `2021-01-14T14:00:00+00:00` if the current date were before that and before the `start_date`. If the current calendar date was after the `start_date`, you would see the first run start at the beginning of the most recent hour. 
+If the current calendar date was before the `start_date`, you would see the first run begin on the clock at `2021-01-14T14:00:00+00:00`, but the `execution_date` will be set as `2021-01-13T13:00:00+00:00`. If the current calendar date was after the `start_date`, you would see the first run start at the beginning of the most recent hour and the execution date is one hour less. If a task fails and you re-run it, the `execution_date` doesn't change.
 
-> This is powerful because you can use that hard interval to further refine your watermarks and obtain data created **right up until the DAG starts running**. With that, you now have near-real time change data capture capabilities. Furthermore, the consistency and high-availability allows for SLAs to be set on this data (and in Airflow), something extremely difficult in a streaming solution.
+> **Note:** At the time of writing, the relative measurement of the `execution_date`, the `schedule_interval`, and the calendar date is currently up for discussion in the Airflow community and you are encouraged to share your thoughts. Information about joining the mailing list can be found [here](https://airflow.apache.org/docs/apache-airflow/stable/project.html#:~:text=Developer's%20mailing%20list%3A%20dev%2Dsubscribe,subscribe%40airflow.apache.org). 
 
-To do this:
+This concept as a whole is powerful because you can use that hard interval to further refine your watermarks and obtain data created **right up until the DAG starts running**. With that, you now have near-real time change data capture capabilities. Furthermore, the consistency and high-availability allows for SLAs to be set on this data (and in Airflow), something extremely difficult in a streaming solution.
+
+To adjust your watermarks for near-real-time:
 
 1. If your interval is always going to be the same, in `table_1.sql`, you could hardcode your `low_watermark` adjustment to be:
     
@@ -931,7 +899,7 @@ Once you commit your changes to git and merge to branches as needed, you are rea
 
 ### Create an Airflow Deployment
 
-To create an Airflow Deployment on Astronomer, log into [Astronomer Cloud](https://app.gcp0001.us-east4.astronomer.io/), open your Workspace, and click **New Deployment**.
+To create an Airflow Deployment on Astronomer, start a free trial of [Astronomer Cloud](https://astronomer.io/get-astronomer), open your Workspace, and click **New Deployment**.
 
 ![New Deployments](https://assets2.astronomer.io/main/docs/deploying-code/v0.23-deployments.png)
 
