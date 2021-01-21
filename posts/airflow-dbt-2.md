@@ -162,6 +162,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
     ```
 
 3. Finally, we create an Airflow DAG file for each group of models that reads the associated pickle file, creates the required dbt model run/test tasks, and then sets dependencies between them as specified in the pickle file.
+
     ```python
     default_dag_args = {
     "start_date": datetime.datetime(2020, 11, 24),
