@@ -429,7 +429,7 @@ The path is arbitrary once you add this in your `plugins` directory, but this is
                                  project_id=self.project_id)
     ```
 
-2. Save your new custom operator. Note how some the parameters in the API call indicate this is configurable. You can now use the same code with a different values for `gcs_bucket`, `gcs_keypath`, `export_query`, `project_id`, and `gcp_connection`, making this operator reusable for any variation of this workflow. You can even modify it to fulfill a different component of the same workflow. 
+2. Save your new custom operator. Note how some of the parameters in the API call indicate this is configurable. You can now use the same code with a different values for `gcs_bucket`, `gcs_keypath`, `export_query`, `project_id`, and `gcp_connection`, making this operator reusable for any variation of this workflow. You can even modify it to fulfill a different component of the same workflow. 
 
 ## Step 9: Implement Watermarking and Execution Dates
 
@@ -441,7 +441,7 @@ Change data in the concept of time-series or events can be looked at by the asso
 
  > **Note:** Transactional or non-time series change data can be included here by adding soft deletes (`deleted_at` fields) then watermarking by `deleted_at` and `updated_at` timestamps as per the granularity of timing necessary.
 
-Airflow has out of the box event timestamps to help with this. When used in combination with the aforementioned source `event_timestamps`, they become extremely helpful in watermarking and partitioning the extracted data. In other words: For all of our task runs, Airflow hands us a value that we can dynamically assign watermarks with and use in our queries. In particular, the `execution_date` is discussed and used here. 
+Airflow has out of the box event timestamps to help with this. When used in combination with the aforementioned source `event_timestamp`, they become extremely helpful in watermarking and partitioning the extracted data; in other words, for all of our task runs, Airflow hands us a value that we can dynamically assign watermarks with and use in our queries. In particular, the `execution_date` is discussed and used here.
 
 The `execution_date` is a `pendulum.Pendulum` object available via a jinja templated macro as `{{ execution_date }}`. It's defined as a standard time relative to that which the DAG was scheduled to run at, independent of when it started or was re-run.
 
@@ -654,7 +654,7 @@ We see our SQL Query, our bucket, and the full `gcs_keypath` fully rendered base
 
 ## Step 12: Implement Scheduling and Timing
 
-Scheduling and timing in Airflow possesses a few relative time-based parameters that need to be defined and thought through together to fully grasp. In `Step 9`, we introduced one of them: the `execution_date`. Now we must add in the interval those are scheduled to execute in, called the `schedule_interval`. It's important to understand how they relate together with the time it is on the clock.
+Scheduling and timing in Airflow possesses a few relative time-based parameters that need to be defined and thought through together to fully grasp. In `Step 9`, we introduced one of them: the `execution_date`. Now we must add the interval in which those are scheduled to execute, called the `schedule_interval`. It's important to understand how they relate together with the time it is on the clock.
 
 When a DAG starts at its scheduled time, it begins at the end of the interval chosen. So for `schedule_interval='@hourly'` and an `execution_date` of `2021-01-14T13:00:00+00:00`, the DAG would actually be starting at `2021-01-14T14:00:00+00:00`. 
 
