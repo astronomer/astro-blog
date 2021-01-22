@@ -101,20 +101,29 @@ Starting with CloudSQL and GCS:
     ```
 
 3. Open your GCP Storage Browser and navigate to your destination GCS bucket, or create one, and `Edit Bucket Permissions`.
-    
-    ![Bucket Permissions](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-19_at_1.38.19_PM.png =400x)
+
+    <!-- markdownlint-disable MD033 -->
+    <p align="left">
+      <img alt="Browser" width="40%" src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-19_at_1.38.19_PM.png">
+    </p>
 
 4. Take the value for `serviceAccountEmailAddress` and add it as `Storage Object Admin` to your  GCS bucket.
     
-    ![Select Role](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_3.56.24_PM.png =400x)
+    <!-- markdownlint-disable MD033 -->
+    <p align="left">
+      <img alt="Select Role" width="40%" src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_3.56.24_PM.png">
+    </p>
 
 ## Step 3: GCP Access - CloudSQL Export API Service Account
 
 Next, you'll need to facilitate CloudSQL API access for your Airflow Instance by creating a service account to be used in Airflow. To do so: 
 
 1. Create a service account in your source GCP project and grant it the role of `Cloud SQL Admin`.
-
-    ![Grant Access](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.10.24_PM.png =400x)
+    
+    <!-- markdownlint-disable MD033 -->
+    <p align="left">
+      <img alt="Service Account" width="40%" src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.10.24_PM.png">
+    </p>
 
 2. In the menu for the service account, select `Actions -> Create Key`. This will provide you the necessary keyfile JSON for your airflow instance. Grab the JSON (save it somewhere important and safe), and bring it to your Airflow Deployment. 
 
@@ -302,7 +311,9 @@ In the DAG workflow, it is extremely advantageous to also create generic tasks t
 3. Switch `Off` to `On`  and choose `Trigger DAG` to see this workflow run, then verify each export task runs one at a time by looking at the `started` time for each. 
 
     <!-- markdownlint-disable MD033 -->
-    <span style="display:block;text-align:center;">![Schedule Dates](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-20_at_10.58.55_AM.png)</span>
+    <p align="center">
+      <img alt="Schedule Dates" width="60%" src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-20_at_10.58.55_AM.png">
+    </p>
 
     If it doesn't run, check that your start date is set to the past, not the future. If your DAG is not in the list and doesn't appear after a minute, you may have a syntax error in your python file.
 
@@ -649,7 +660,10 @@ When a DAG starts at its scheduled time, it begins at the end of the interval ch
 
 For a visual example, the image below shows the task tree of a particular DAG in which this concept can be observed. The first line, `Run: 2021-01-19, 21:00:00 UTC`, shows the `execution_date` from an hourly scheduled DAG, set as `schedule_interval='@hourly'`. Notice `Started: 2021-01-19T22:00:16xxx` is an hour (a single interval) after the schedule date. That is, it starts one `schedule_interval` later than the `execution_date`.
 
-![Schedules](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-19_at_2.48.37_PM.png =400x) 
+<!-- markdownlint-disable MD033 -->
+<p align="center">
+  <img alt="Browser" width="60%" src="../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-19_at_2.48.37_PM.png">
+</p>
 
 The `start_date` you set in the DAG definition also follows this logic. If you choose:
 
