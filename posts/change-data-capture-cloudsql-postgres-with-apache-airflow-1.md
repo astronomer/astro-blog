@@ -193,7 +193,7 @@ Now we need to add the service account JSON from GCP to Airflow to create a conn
 
     ![Connections](../assets/cdc-cloudsql-1/cdc_cloudsql_airflow_2021-01-13_at_4.25.24_PM.png)
 
-Keep the `Conn Id` handy. You will use that in your Airflow DAG to reference this connection. When you're ready, save this connection to finalize your access management. 
+    Keep the `Conn Id` handy. You will use that in your Airflow DAG to reference this connection. When you're ready, save this connection to finalize your access management. 
 
 ## Step 6: Configure Pooling
 
@@ -453,7 +453,7 @@ Essentially, a basic version of the templated SQL query might look something lik
 {%- set low_watermark =  execution_date.subtract(hours=1) -%}
 SELECT * FROM some_schema.table_1
 WHERE event_timestamp AT TIME ZONE 'UTC' >= '{{ low_watermark }}' AT TIME ZONE 'UTC'
-AND event_timestamp AT TIME ZONE 'UTC' < '{{ execution_date }}'
+AND event_timestamp AT TIME ZONE 'UTC' < '{{ execution_date }}' AT TIME ZONE 'UTC'
 ```
 
 If you have done this before, you might be thinking we will need to adjust for how the `execution_date` is calculated relative to the schedule interval. We will do that in `Step 12`. First, we need to template our SQL. To do so:
@@ -478,7 +478,7 @@ If you have done this before, you might be thinking we will need to adjust for h
     {%- set low_watermark =  execution_date.subtract(hours=1) -%}
     SELECT * FROM some_schema.table_1
     WHERE event_timestamp AT TIME ZONE 'UTC' >= '{{ low_watermark }}' AT TIME ZONE 'UTC'
-    AND event_timestamp AT TIME ZONE 'UTC' < '{{ execution_date }}'
+    AND event_timestamp AT TIME ZONE 'UTC' < '{{ execution_date }}' AT TIME ZONE 'UTC'
     ```
 
 3. Combine all tables into a single schema CSV by adding the following to the  `get_schema.sql` (and changing `some_schema`):
@@ -637,7 +637,7 @@ Afterwards, we should see our templating print out:
 # ----------------------------------------------------------
 SELECT * FROM some_schema.table_1
 WHERE event_timestamp AT TIME ZONE 'UTC' >= '2021-01-14T12:00:00+00:00' AT TIME ZONE 'UTC'
-AND event_timestamp AT TIME ZONE 'UTC' < '2021-01-14T13:00:00+00:00'
+AND event_timestamp AT TIME ZONE 'UTC' < '2021-01-14T13:00:00+00:00' AT TIME ZONE 'UTC'
 
 # ----------------------------------------------------------
 # property: gcs_bucket
@@ -688,7 +688,7 @@ To adjust your watermarks for near-real-time:
     {%- set high_watermark =  execution_date.add(hours=1) -%}
     SELECT * FROM some_schema.table_1
     WHERE event_timestamp AT TIME ZONE 'UTC' >= '{{ low_watermark }}' AT TIME ZONE 'UTC'
-    AND event_timestamp AT TIME ZONE 'UTC' < '{{ high_watermark }}'
+    AND event_timestamp AT TIME ZONE 'UTC' < '{{ high_watermark }}' AT TIME ZONE 'UTC'
     ```
 
     which you would see renders to
@@ -699,7 +699,7 @@ To adjust your watermarks for near-real-time:
     # ----------------------------------------------------------
     SELECT * FROM some_schema.table_1
     WHERE event_timestamp AT TIME ZONE 'UTC' >= '2021-01-14T13:00:00+00:00' AT TIME ZONE 'UTC'
-    AND event_timestamp AT TIME ZONE 'UTC' < '2021-01-14T14:00:00+00:00'
+    AND event_timestamp AT TIME ZONE 'UTC' < '2021-01-14T14:00:00+00:00' AT TIME ZONE 'UTC'
     ```
 
     getting you changes in the previous hour. 
@@ -713,7 +713,7 @@ To adjust your watermarks for near-real-time:
     {%- set high_watermark =  execution_date.add(minutes=30) -%}
     SELECT * FROM some_schema.table_1
     WHERE event_timestamp AT TIME ZONE 'UTC' >= '{{ low_watermark }}' AT TIME ZONE 'UTC'
-    AND event_timestamp AT TIME ZONE 'UTC' < '{{ high_watermark }}'
+    AND event_timestamp AT TIME ZONE 'UTC' < '{{ high_watermark }}' AT TIME ZONE 'UTC'
     ```
 
     In a future post, I will show you how to set these dynamically through the UI as to allow interval changes and full scans when needed.
