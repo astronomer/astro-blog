@@ -5,7 +5,7 @@ description: Implementing production-grade change data capture in near real-time
 heroImagePath: ../assets/cdc-cloudsql-1/cdc-cloudsql-airflow-hero-1.png
 authors:
   - Rob Deeb
-date: 2020-01-21T12:00:00.000Z
+date: 2021-01-21T12:00:00.000Z
 ---
 > **Note:** All of the code in this post is available in [this Github repository](https://github.com/astronomer/cdc-cloudsql-airflow-demo) and can be run locally using the Astronomer CLI.
 
