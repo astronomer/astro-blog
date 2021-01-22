@@ -64,7 +64,7 @@ This will query `database_name` (only one allowed at a time) using the enclosed 
 
 ## Step 1: Set Up Airflow
 
-> *If you already have the Astronomer CLI installed you can skip to Step 2*
+> If you already have the Astronomer CLI installed you can skip to Step 2
 
 The [Astronomer CLI](https://github.com/astronomer/astro-cli) is the easiest way to run Apache Airflow on your machine. From the CLI, you can establish a local testing environment regardless of where you'll be deploying to from there.
 
@@ -80,7 +80,7 @@ To install the latest version of the Astronomer CLI, run:
 curl -sSL https://install.astronomer.io | sudo bash
 ```
 
-  > *For alternative installation methods, read our [install guide](https://www.astronomer.io/docs/cloud/stable/develop/cli-quickstart).*
+  > For alternative installation methods, read our [install guide](https://www.astronomer.io/docs/cloud/stable/develop/cli-quickstart).
 
 ## Step 2: GCP Access - CloudSQL to GCS
 
@@ -129,15 +129,14 @@ Next, you'll need to facilitate CloudSQL API access for your Airflow Instance by
 
 2. In the menu for the service account, select `Actions -> Create Key`. This will provide you the necessary keyfile JSON for your airflow instance. Grab the JSON (save it somewhere important and safe), and bring it to your Airflow Deployment. 
 
-    > **Note:** If you are running airflow on astronomer Cloud and your GCP is running in VPC, you will need to give access to the following IP addresses:
+    If you are running airflow on astronomer Cloud and your GCP is running in VPC, you will need to give access to the following IP addresses:
 
-    > 
     - `35.245.140.149`
     - `35.245.44.221`
     - `34.86.203.139`
     - `35.199.31.94`
 
-    > *For more information on VPC access, [you can visit the Astronomer page on VPC Access here.](https://www.astronomer.io/docs/cloud/stable/manage-astronomer/vpc-access)*
+    For more information on VPC access, you can visit the Astronomer page on VPC Access [here](https://www.astronomer.io/docs/cloud/stable/manage-astronomer/vpc-access).
 
 ## Step 4: Initialize Your Airflow Project
 
@@ -179,7 +178,7 @@ If you are already familiar with creating a new Airflow project, you can skip to
     astro dev start
     ```
 
-4. Once the containers are built and the webserver starts, you can access the UI at  `[localhost:8080](http://localhost:8080)` and login with `admin:admin`.
+4. Once the containers are built and the webserver starts, you can access the UI at `http://localhost:8080` and login with `admin:admin`.
 
 ## Step 5: Create a Connection to GCP
 
@@ -210,7 +209,7 @@ Now all we have to do is add the name of the pool to our task definitions, which
 
 ## Step 7: Build Your Pipeline in Airflow
 
-  > *If you are familiar with the foundational concepts of Airflow, you can skip to the next subsection for the `DAG Workflow`.*
+  > If you are familiar with the foundational concepts of Airflow, you can skip to the next subsection for the `DAG Workflow`.
 
 Airflow pipeline design rests on the foundational structures of `hooks` and `operators`. Hooks facilitate connections and repository-type actions, whereas operators use hooks in combination with domain-specific logic and error handling in order to accomplish a task. Airflow comes pre-packaged with many of these hooks and operators, all built to work with services we use regularly. For example, `BashOperator` allows you to run a bash command directly in-line. A simple task using a this operator might look like:
 
