@@ -8,8 +8,6 @@ authors:
 date: 2018-03-14T00:00:00.000Z
 ---
 
-**Update**: Since this blog post was published, we've made big improvements to our new managed Airflow service, Astronomer Cloud. [Check out the product page](https://astronomer.io/cloud) and [start a free trial](https://www.astronomer.io/trial/).
-
 ### The Problem with ETL
 
 The past few years have brought a dramatic shift in the data landscape—as data gets bigger and faster, many organizations find themselves spending more time centralizing and preparing data sets for analytics than generating insights. In order to combat this, companies have invested heavily in extract, transform, load (or ETL) tools, but old-school drag-and-drop tools no longer cut it for savvy data teams who need a more flexible solution. 
@@ -34,11 +32,6 @@ Proliferation of SaaS silos and internal straddling of cloud/on-premise data env
 
 ### We’ve made getting started with Airflow dead-simple
 
-1. [Sign up](https://www.astronomer.io/trial/) for a free trial.
-1. Determine what [plan](https://www.astronomer.io/pricing/) is appropriate for your needs.
-Provision your instance of Airflow on Astronomer
-1. Start writing Airflow data workflows in Python.
+[Get started](https://www.astronomer.io/get-astronomer) today!
 
-And if you don’t have any experience with Airflow but you want to investigate getting your team to get ramped up quickly, check out [Spacecamp](https://www.astronomer.io/blog/announcing-astronomer-spacecamp/), an immersive guided development course in all things Airflow. 
-
-Also, tune into our [Airflow Podcast](https://soundcloud.com/the-airflow-podcast) to hear from some of the project’s top contributors and users. 
+Also, tune into our [Airflow Podcast](https://www.astronomer.io/podcast/) to hear from some of the project’s top contributors and users. 
