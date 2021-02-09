@@ -83,7 +83,7 @@ We’re just as excited as you are about this release. For instructions on how t
 
 ### New to Astronomer?
 
-The best way to get to know our platform is by [starting a trial](https://www.astronomer.io/trial/).
+The best way to get to know our platform is by [starting a trial](https://www.astronomer.io/get-astronomer/).
 
 
 Otherwise, feel free to check out our [updated docs](https://www.astronomer.io/docs/), [post on our community forum](https://forum.astronomer.io/), or reach out to [Astronomer Support](https://support.astronomer.io/) with any and all feedback or questions.
