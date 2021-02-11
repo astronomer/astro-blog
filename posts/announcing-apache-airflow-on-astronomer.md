@@ -30,8 +30,8 @@ Astronomer caters to the needs and desires of modern open-source developers with
 
 Proliferation of SaaS silos and internal straddling of cloud/on-premise data environments means that data teams must be prepared to work with a variety of data in the cloud across technical and corporate barriers.
 
-### We’ve made getting started with Airflow dead-simple
+### Get Started with Apache Airflow
 
-[Get started](https://www.astronomer.io/get-astronomer) today!
+If you're interested in running Apache Airflow on Astronomer, [reach out to us](https://www.astronomer.io/get-astronomer) today. For guidelines on how to install Airflow on your local machine with Astronomer's open source CLI, follow [Get Started with Apache Airflow 2.0](https://www.astronomer.io/guides/get-started-airflow-2).
 
 Also, tune into our [Airflow Podcast](https://www.astronomer.io/podcast/) to hear from some of the project’s top contributors and users. 
