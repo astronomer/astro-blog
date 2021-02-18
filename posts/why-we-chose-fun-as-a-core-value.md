@@ -50,7 +50,7 @@ A family that stays together plays together, after all. Sounds simple, right? Wi
 
 Will having more fun at work actually make us more productive? We are betting on it.
 
-We're always looking for rising stars. Check out our latest openings [here](https://careers.astronomer.io/).
+We're always looking for rising stars. Check out our latest openings [here](https://www.astronomer.io/careers).
 
 **Bonus:** &nbsp;_Wallpapers are fun aren't they? Here are a few freebies..._
 
