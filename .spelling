@@ -832,6 +832,8 @@ v18.09
 CloudSqlCsvExportOperator
 modularization
 JSON-serialized
+dagrun
+templatable
  - posts/4-pillars-to-becoming-data-driven.md
 astronomer.io
 _

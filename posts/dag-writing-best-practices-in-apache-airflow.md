@@ -7,6 +7,7 @@ authors:
   - Eric Griffing
 date: 2021-02-23T19:55:15.051Z
 ---
+
 In Airflow, pipelines are called *directed acyclic graphs* (DAGs).
 
 We want to share the best practices with you when writing DAGs with Apache Airflow. Understanding these best practices at a high level will give you the knowledge to help you build your data pipelines correctly. 
