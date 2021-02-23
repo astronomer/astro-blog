@@ -1,7 +1,8 @@
 ---
 title: DAG Writing Best Practices in Apache Airflow
 description: "Learn the best practices when writing DAGs for Apache Airflow. We
-  help you get started fast with example DAGs. "
+  help you get started fast with example DAGs."
+slug: "dag-writing-best-practices-in-apache-airflow"
 heroImagePath: ../assets/dag-best-practices.png
 authors:
   - Eric Griffing
