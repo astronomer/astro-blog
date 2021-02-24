@@ -1,7 +1,6 @@
 ---
 title: DAG Writing Best Practices in Apache Airflow
-description: "Learn the best practices when writing DAGs for Apache Airflow. We
-  help you get started fast with example DAGs."
+description: "Learn the best practices for writing DAGs in Apache Airflow with a repo of example DAGs that you can run with the Astro CLI."
 slug: "dag-writing-best-practices-in-apache-airflow"
 heroImagePath: ../assets/dag-best-practices.png
 authors:
