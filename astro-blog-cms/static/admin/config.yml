@@ -13,6 +13,7 @@ collections:
     slug: '{{slug}}'
     create: true
     fields:
+      - { name: slug, label: URL slug }
       - { name: title, label: Title }
       - { name: description, label: Description, widget: string }
       - { name: heroImagePath, label: Hero Image Path, default: ../assets/blank.png }
