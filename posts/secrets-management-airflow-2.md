@@ -7,6 +7,7 @@ authors:
   - Eric Griffing
 date: 2021-03-08T21:27:57.498Z
 ---
+
 ## What are Airflow Secrets? 
 
 **Secrets** are sensitive information that are used as part of your DAG.
@@ -16,8 +17,6 @@ Types of Secrets:
 * **Variables** are a generic way to store and retrieve arbitrary content or settings as a simple **key value** store within Airflow.
 * **Connections** are information needed to connect to external systems. Must be stored in the format of a **URL-encoded URI**.
 * **Configurations** are Airflow Configurations that can be stored in your secrets backends.
-
-
 
 ## Where are all the Secrets? 
 
@@ -33,8 +32,6 @@ Types of Secrets:
 >
 > AIRFLOW\_CONN\_{CONN_ID}
 
-
-
 ### Airflow Metastore DB
 
 * Can be accessed from the Airflow UI, CLI, or API.
@@ -43,8 +40,6 @@ Types of Secrets:
 * Lives and dies with the Airflow Metastore DB.
 * Can be exported and imported easily.
 * Probably won’t be approved by many security teams in production.
-
-
 
 ![](../assets/img1.png)
 
@@ -55,8 +50,6 @@ Types of Secrets:
 ![](../assets/img3.png)
 
 ![](../assets/img4.png)
-
-
 
 ### Alternative Secrets Backend
 
