@@ -2,7 +2,7 @@
 slug: secrets-management-airflow-2
 title: Secrets Management in Airflow 2.0
 description: "The best practices for using Secrets with Apache Airflow 2.0 "
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/airmeet_0d5cfd74-6260-4bfc-916f-64ec13ccce05.png
 authors:
   - Eric Griffing
 date: 2021-03-08T21:27:57.498Z
