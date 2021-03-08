@@ -41,15 +41,15 @@ Types of Secrets:
 * Can be exported and imported easily.
 * Probably won’t be approved by many security teams in production.
 
-![](../assets/img1.png)
+![Curl 1](../assets/img1.png)
 
-![](../assets/img2.png)
+![Connections](../assets/img2.png)
 
 \---
 
-![](../assets/img3.png)
+![Airflow CLI Command](../assets/img3.png)
 
-![](../assets/img4.png)
+![FTP Conn](../assets/img4.png)
 
 ### Alternative Secrets Backend
 
@@ -73,7 +73,7 @@ IAM Integration allows you to connect to cloud resources implicitly with Service
 * **Flexible:** Cloud Service Accounts are tied to Kubernetes Service Accounts.
 * **Easy to manage:** Set it up once and just maintain permissions.
 
-![](../assets/img5secrets.png)
+![Secrets Architecture](../assets/img5secrets.png)
 
 ## So Where Should Secrets Be Kept?
 
