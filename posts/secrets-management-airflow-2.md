@@ -1,14 +1,14 @@
 ---
 slug: secrets-management-airflow-2
 title: Secrets Management in Airflow 2.0
-description: "Best practices for managinng Secrets with various backends in Apache Airflow 2.0. "
+description: "Best practices for managinng Secrets with various backends in
+  Apache Airflow 2.0. "
 heroImagePath: ../assets/airmeet_0d5cfd74-6260-4bfc-916f-64ec13ccce05.png
 authors:
   - Eric Griffing
 date: 2021-03-08T21:27:57.498Z
 ---
-
-## What are Airflow Secrets? 
+## What are Airflow Secrets?
 
 **Secrets** are sensitive information that are used as part of your DAG.
 
@@ -18,7 +18,15 @@ Types of Secrets:
 * **Connections** are information needed to connect to external systems. Must be stored in the format of a **URL-encoded URI**.
 * **Configurations** are Airflow Configurations that can be stored in your secrets backends.
 
-## Where are all the Secrets? 
+
+
+To get started check out our webinar below on the best practices for Secrets Management in Airflow 2.0. You can also use these [example DAGs](https://github.com/astronomer/webinar-secrets-management/tree/master) from the webinar. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mf2uTVe3GPA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+## Where are all the Secrets?
 
 ### Environment Variables
 
@@ -83,7 +91,7 @@ IAM Integration allows you to connect to cloud resources implicitly with Service
 * Ideally use an Alternative Secrets Backend whenever possible.
 * Use Airflow Metastore DB if you want to be able to see, access, and manage them directly from Airflow.
 
-## Best Practices 
+## Best Practices
 
 * Separation of Concerns
 * Use Airflow for what it does best.
@@ -92,6 +100,8 @@ IAM Integration allows you to connect to cloud resources implicitly with Service
 * Have a strategy for how to manage your Secrets and and controlling access.
 * Use the right combination of Secrets Backends.
 * Sensitive information should be in an Alternative Backend or integrated with IAM Roles.
+
+This repo contains an [example DAG and configurations](https://github.com/astronomer/webinar-secrets-management/tree/master) that were used in an Astronomer webinar on Secrets Management with Airflow 2.0.
 
 \
 The easiest way to get started with Apache Airflow 2.0 is by using the Astronomer CLI. To make it easy you can get up and running with Airflow by following our [Quickstart Guide.](https://www.astronomer.io/docs/cloud/stable/develop/cli-quickstart)
