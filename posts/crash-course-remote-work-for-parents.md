@@ -69,4 +69,4 @@ Best of luck!
 ✌️
 [Sam](https://www.linkedin.com/in/samantha-black/) is a Full-Stack Developer at Astronomer.
 
-Astronomer is hiring! If you’re looking for a remote first culture and love Airflow, apply at [https://careers.astronomer.io/](https://careers.astronomer.io/) or contact us at [humans@astronomer.io](humans@astronomer.io).
+Astronomer is hiring! If you’re looking for a remote first culture and love Airflow, apply at [https://www.astronomer.io/careers](https://www.astronomer.io/careers) or contact us at [humans@astronomer.io](humans@astronomer.io).
