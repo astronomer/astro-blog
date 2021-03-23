@@ -1,15 +1,18 @@
 ---
 slug: taskflow-api-in-airflow-2-0
 title: TaskFlow API in Airflow 2.0
-description: "Learn how the TaskFlow API in Airflow 2.0 enables a better DAG authoring experience."
+description: Learn how the TaskFlow API in Airflow 2.0 enables a better DAG
+  authoring experience.
 heroImagePath: ../assets/taskflowapi.png
 authors:
   - Eric Griffing
 date: 2021-03-23T17:58:40.803Z
 ---
-
 <!-- markdownlint-disable MD033 -->
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DljJg_lXBYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Here](https://www.notion.so/TaskFlow-API-The-New-Way-of-Creating-DAGs-b1b9dce5bd664fa084c6601741551f14) you will find the code used in the above webinar and instructions to setup your own Xcom backend!
 
 ## What is the TaskFlow API?
 
@@ -19,7 +22,7 @@ XComs could be used, but were hidden in execution functions inside the operator.
 
 The TaskFlow API is a functional API that allows you to explicitly declare message passing while implicitly declaring task dependencies. 
 
-## TaskFlow API Features 
+## TaskFlow API Features
 
 TaskFlow API Functionality Includes:
 
