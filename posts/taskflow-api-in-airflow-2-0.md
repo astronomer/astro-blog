@@ -1,5 +1,5 @@
 ---
-slug: taskflow-api-airflow
+slug: taskflow-api-in-airflow-2-0
 title: TaskFlow API in Airflow 2.0
 description: "Learn how the TaskFlow API in Airflow 2.0 makes DAGs easier to write. "
 heroImagePath: ../assets/taskflowapi.png
