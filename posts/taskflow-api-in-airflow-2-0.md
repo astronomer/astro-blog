@@ -44,7 +44,7 @@ TaskFlow API Functionality Includes:
 The TaskFlow API supports a new \`xcom_backend\` parameter, which allows you to
 
 * Store XComs external to Airflow
-* Implement your own serialization and deserialization methods.
+* Implement your own serialization and deserialization methods
 
 ## Future Work
 
