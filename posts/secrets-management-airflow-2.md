@@ -22,6 +22,7 @@ Types of Secrets:
 
 To get started check out our webinar below on the best practices for Secrets Management in Airflow 2.0. You can also use these [example DAGs](https://github.com/astronomer/webinar-secrets-management/tree/master) from the webinar. 
 
+<!-- markdownlint-disable MD033 -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Mf2uTVe3GPA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -99,5 +100,4 @@ IAM Integration allows you to connect to cloud resources implicitly with Service
 
 This repo contains an [example DAG and configurations](https://github.com/astronomer/webinar-secrets-management/tree/master) that were used in an Astronomer webinar on Secrets Management with Airflow 2.0.
 
-\
 The easiest way to get started with Apache Airflow 2.0 is by using the Astronomer CLI. To make it easy you can get up and running with Airflow by following our [Quickstart Guide.](https://www.astronomer.io/docs/cloud/stable/develop/cli-quickstart)
