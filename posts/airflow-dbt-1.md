@@ -225,4 +225,4 @@ At this point, we have identified and built a great DAG authoring experience at 
 - How do we handle models that need to have different schedule intervals?
 - How can we leverage our dbt transformation layer in the broader context of an ELT pipeline?
 
-In the next part of this series, we'll explore answers to these questions and dig into a few creative ways to take this authoring experience into a production-ready setup. Stay tuned...
+[In the next part of this series, we'll explore answers to these questions and dig into a few creative ways to take this authoring experience into a production-ready setup. Stay tuned...](https://www.astronomer.io/blog/airflow-dbt-2)
