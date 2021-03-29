@@ -35,17 +35,17 @@ Two things:
 
 As stated above, an Airflow DAG will execute at the completion of its `schedule_interval`, which means one `schedule_interval` [AFTER the start date](https://airflow.apache.org/scheduler.html). An hourly DAG, for example, will execute its 2:00 PM run when the clock strikes 3:00 PM. Why? Airflow can't ensure that all data corresponding to the 2:00 PM interval is present until the end of that hourly interval.
 
-This is specific to Apache Airflow, but an important one to remember - especially if you're using [default variables and macros](https://airflow.apache.org/docs/apache-airflow/stable/macros-ref.html).
+This quirk is specific to Apache Airflow, and it's important to remember — especially if you're using [default variables and macros](https://airflow.apache.org/docs/apache-airflow/stable/macros-ref.html).
 
-> **Note:** For those interested in following, [a proposal](https://cwiki.apache.org/confluence/display/AIRFLOW/AIP-39+Richer+scheduler_interval) to improve scheduling logic and terminology is currently being evaluated in the Airflow community.
+> **Note:** [A proposal](https://cwiki.apache.org/confluence/display/AIRFLOW/AIP-39+Richer+scheduler_interval) to improve scheduling logic and terminology is currently being evaluated in the Airflow community.
 
 ### Airflow Time Zones
 
-Airflow stores datetime information in UTC internally and in the database. This shouldn't come as a surprise given that the rest of your databases and APIs most likely also adhere to this format, but it's worth clarifying.
+Airflow stores datetime information in UTC internally and in the database. This behavior is shared by many databases and APIs, but it's worth clarifying.
 
 You should _not_ expect your DAG executions to correspond to your local timezone. If you're based in US Pacific Time, a DAG run of 19:00 will correspond to 12:00 local time.
 
-In recent releases, the project has added more time zone aware features to the Airflow UI. For more information, refer to [Airflow documentation](https://airflow.apache.org/docs/apache-airflow/2.0.1/timezone.html).
+In recent releases, the community has added more time zone-aware features to the Airflow UI. For more information, refer to [Airflow documentation](https://airflow.apache.org/docs/apache-airflow/2.0.1/timezone.html).
 
 ## 2. One of your DAGs isn't running.
 
@@ -53,9 +53,9 @@ If workflows on your Deployment are generally running smoothly but you find that
 
 ### Make sure you don't have `datetime.now()` as your start_date.
 
-It's intuitive to think that if you tell your DAG to start "now" that it'll execute "now." BUT, that doesn't take into account how Airflow itself actually reads `datetime.now()`.
+It's intuitive to think that if you tell your DAG to start "now" that it'll execute immediately. But that's not how Airflow reads `datetime.now()`.
 
-For a DAG to be executed, the `start_date` _must be_ a time in the past, otherwise Airflow will assume that it's not yet ready to execute. When Airflow evaluates your DAG file, it interprets `datetime.now()` as the current timestamp (i.e. NOT a time in the past) and decides that it's not ready to run. Since this will happen every time Airflow heartbeats (evaluates your DAG) every 5-10 seconds, it'll never run.
+For a DAG to be executed, the `start_date` _must be_ a time in the past, otherwise Airflow will assume that it's not yet ready to execute. When Airflow evaluates your DAG file, it interprets `datetime.now()` as the current timestamp (i.e. NOT a time in the past) and decides that it's not ready to run.
 
 To properly trigger your DAG to run, make sure to insert a fixed time in the past and set [catchup=False](https://github.com/apache/airflow/blob/v1-9-stable/airflow/models.py#L2865) if you don't want to perform a backfill.
 
@@ -63,17 +63,17 @@ To properly trigger your DAG to run, make sure to insert a fixed time in the pas
 
 ## 3. You're seeing a 503 Error on your Deployment.
 
-If you hop into your Airflow Deployment only to realize that your instance is entirely inaccessible via your web browser, it very likely has something to do with your Webserver. 
+If your Airflow Deployment is entirely inaccessible via web browser, you likely have a Webserver issue. 
 
-If you've already refreshed the page once or twice and continue to see a 503 error, read below for some Webserver related guidelines.
+If you've already refreshed the page once or twice and continue to see a 503 error, read below for some Webserver-related guidelines.
 
 ### Your Webserver might be crashing.
 
-A 503 error is generally indicative of an issue with your Deployment's Webserver, the core Airflow component responsible for rendering task state and task execution logs in the Airflow UI. If it's underpowered or otherwise experiencing an issue for any reason, you can generally expect it to affect UI loading time or web browser accessibility.
+A 503 error might indicate an issue with your Deployment's Webserver, which is the core Airflow component responsible for rendering task state and task execution logs in the Airflow UI. If it's underpowered or otherwise experiencing an issue, you can expect it to affect UI loading time or web browser accessibility.
 
-In our experience, a 503 specifically often indicates that your Webserver is crashing (at Astronomer, you might hear this referenced as a `CrashLoopBackOff` state). If you push up a deploy and your Webserver for any reason takes longer than a few seconds to start, it might hit a timeout period (10 secs by default) that "crashes" it before it has time to spin up. That triggers a retry, which crashes again, and so on and so forth.
+In our experience, a 503 often indicates that your Webserver is crashing (at Astronomer, you might hear this referenced as a `CrashLoopBackOff` state). If you push up a deploy and your Webserver for any reason takes longer than a few seconds to start, it might hit a timeout period (10 secs by default) that "crashes" it before it has time to spin up. That triggers a retry, which crashes again, and so on and so forth.
 
-If your Deployment finds itself in this state, it might be that your Webserver is hitting a memory limit when loading your DAGs, even while your Workers and Scheduler continue to execute tasks as expected.
+If your Deployment is in this state, your Webserver might be hitting a memory limit when loading your DAGs even as your Scheduler and Worker(s) continue to schedule and execute tasks.
 
 ### Increase Webserver resources.
 
@@ -83,15 +83,15 @@ If you're using Astronomer, we generally recommend keeping the Webserver at a mi
 
 ### Increase the Webserver Timeout period.
 
-If upping the Webserver resources doesn't seem to be having an effect (don't go crazy with it either), you might want to try increasing `web_server_master_timeout` or `web_server_worker_timeout`.
+If upping the Webserver resources doesn't seem to have an effect, you might want to try increasing `web_server_master_timeout` or `web_server_worker_timeout`.
 
 Raising those values will tell your Airflow Webserver to wait a bit longer to load before it hits you with a 503 (a timeout). You might still experience slow loading times if your Deployment is in fact underpowered, but you'll likely avoid hitting a 503.
 
 ### Avoid making requests outside of an operator.
 
-If you're making API calls, JSON requests or database requests _outside_ of an operator at a high frequency, your Webserver is much more likely to timeout.
+If you're making API calls, JSON requests, or database requests outside of an operator at a high frequency, your Webserver is much more likely to timeout.
 
-When Airflow interprets a file to look for any valid DAGs, it first runs all code at the top level (i.e. outside of operators) immediately. Even if the operator itself only gets executed at execution time, everything called *outside* of an operator is called every heartbeat, which can be quite taxing.
+When Airflow interprets a file to look for any valid DAGs, it first runs all code at the top level (i.e. outside of operators). Even if the operator itself only gets executed at execution time, everything called outside of an operator is called every heartbeat, which can be quite taxing.
 
 We'd recommend taking the logic you have currently running outside of an operator and moving it inside of a Python Operator if possible.
 
@@ -101,7 +101,7 @@ This leads us to a general best practice we've come to adopt.
 
 ### Be careful when using Sensors.
 
-If you're using Airflow 1.10.1 or a prior version, [Airflow sensors]() run continuously and occupy a task slot in perpetuity until they find what they're looking for, so they have a tendency to cause concurrency issues. Unless you truly never have more than a few tasks running concurrently, we generally recommend avoiding them unless you know it won't take too long for them to exit. 
+If you're running Airflow 1.10.1 or earlier, [Airflow sensors](https://www.astronomer.io/guides/what-is-a-sensor) run continuously and occupy a task slot in perpetuity until they find what they're looking for, often causing concurrency issues. Unless you never have more than a few tasks running concurrently, we recommend avoiding them unless you know it won't take too long for them to exit. 
 
 For example, if a worker can only run X number of tasks simultaneously and you have three sensors running, then you'll only be able to run X-3 tasks at any given point. Keep in mind that if you're running a sensor at all times, that limits how and when a scheduler restart can occur (or else it will fail the sensor).
 
@@ -116,7 +116,7 @@ Depending on your use case, we'd suggest considering the following:
 
 ## 5. Tasks are executing, but they're getting bottlenecked.
 
-If everything looks like it's running as expected but you're finding that your tasks are getting bottlenecked, we'd recommend taking a closer look at:
+If your tasks are stuck in a bottleneck, we'd recommend taking a closer look at:
 
 - Environment Variables and concurrency configurations
 - Worker and Scheduler resources
@@ -125,7 +125,7 @@ If everything looks like it's running as expected but you're finding that your t
 
 The potential root cause for a bottleneck and what exactly these values should be set at is specific to your setup. For example, are you running many DAGs at once, or one DAG with hundreds of concurrent tasks?
 
-Regardless of your use case, however, fine-tuning some configurations can help improve performance. Here's a breakdown of what you can look for:
+Regardless of your use case, however, setting a few [environment variables](https://airflow.apache.org/docs/apache-airflow/stable/howto/set-config.html) can help improve performance. Here's a breakdown of what you can look for:
 
 **a. Parallelism** ([parallelism](https://github.com/apache/airflow/blob/v1-10-stable/airflow/config_templates/default_airflow.cfg#L113))
    *  This determines how many task instances can be actively running in parallel _across_ DAGs given the resources available at any given time at the Deployment level. Think of this as "maximum active tasks anywhere."
