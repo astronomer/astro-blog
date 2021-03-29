@@ -15,6 +15,10 @@ Airflow's breadth and extensibility, however, can make it challenging to adopt -
 
 Whether you're new to Airfow or an experienced user, check out this list of common errors and some corresponding fixes to consider.
 
+> **Note:** [Airflow 2.0](https://www.astronomer.io/blog/introducing-airflow-2-0) was released in December of 2020 and addresses a significant number of pain points commmonly reported by users running previous versions. We strongly encourage all teams to upgrade to Airflow 2.0+ as soon as they're able.
+>
+> For quick guidelines on how to run Airflow 2.0 locally, refer to [Get Started with Airflow 2.0](https://www.astronomer.io/guides/get-started-airflow-2). For detailed instructions on the migration process, refer to [Upgrading to Airflow 2.0+](https://airflow.apache.org/docs/apache-airflow/stable/upgrading-to-2.html) from the Apache Airflow Project and [Upgrade to Airflow 2.0 on Astronomer](https://www.astronomer.io/docs/cloud/stable/customize-airflow/upgrade-to-airflow-2) if you're running on our platform. If you'd like help establishing a migration path, [reach out to us](https://www.astronomer.io/get-astronomer).
+
 ---
 
 ## 1. Your DAG isn't running at the time you expect it to.
@@ -103,15 +107,12 @@ For example, if a worker can only run X number of tasks simultaneously and you h
 
 Depending on your use case, we'd suggest considering the following:
 
-**a. Create a DAG that runs at a more frequent interval.**
-
-Possibly what the poke is set at - and skips downstream tasks if no file is found.
-
-**b. Trigger a [Lambda function](https://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction-function.html).**
+- Create a DAG that runs at a more frequent interval.
+- Trigger a [Lambda function](https://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction-function.html).
 
 > **Note:** Airflow v1.10.2's new sensor [`mode=reschedule`](https://github.com/apache/airflow/blob/1.10.2/airflow/sensors/base_sensor_operator.py#L46-L56) feature addresses this issue. If you have more sensors than worker slots, the sensor will now get thrown into a new `up_for_reschedule` state, thus unblocking a worker slot.
 >
-> If you're running Airflow 2.0+, consider [Smart Sensors](https://airflow.apache.org/docs/apache-airflow/2.0.1/smart-sensor.html?highlight=smart%20sensors).
+> If you're running Airflow 2.0+, [Smart Sensors](https://airflow.apache.org/docs/apache-airflow/2.0.1/smart-sensor.html?highlight=smart%20sensors).
 
 ## 5. Tasks are executing, but they're getting bottlenecked.
 
