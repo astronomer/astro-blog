@@ -125,7 +125,7 @@ If your tasks are stuck in a bottleneck, we'd recommend taking a closer look at:
 
 The potential root cause for a bottleneck and what exactly these values should be set at is specific to your setup. For example, are you running many DAGs at once, or one DAG with hundreds of concurrent tasks?
 
-Regardless of your use case, however, setting a few [environment variables](https://airflow.apache.org/docs/apache-airflow/stable/howto/set-config.html) can help improve performance. These environment variables are set in Airflow's `airflow.cfg` file. For all default values, [refer here](https://github.com/apache/airflow/blob/v2-0-stable/airflow/config_templates/default_airflow.cfg).
+Regardless of your use case, however, setting a few [environment variables](https://airflow.apache.org/docs/apache-airflow/stable/howto/set-config.html) can help improve performance. For most users, these environment variables are set in Airflow's `airflow.cfg` file. If you're running on Astronomer, you can also set these [via the Astronomer UI or your project's Dockerfile](https://www.astronomer.io/docs/cloud/stable/deploy/environment-variables). For all default values, [refer here](https://github.com/apache/airflow/blob/v2-0-stable/airflow/config_templates/default_airflow.cfg).
 
 #### Parallelism
 
