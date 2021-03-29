@@ -11,9 +11,9 @@ date: 2019-04-03T00:00:00.000Z
 
 Apache Airflow is the industry standard for workflow orchestration, handling use cases that range from machine learning model training to traditional ETL at scale. It's an incredibly flexible tool that powers mission critical projects for startups and Fortune 50 teams alike.
 
-With that said, the very tool that many regard as a powerful "blank canvas" can quickly become a double edged sword if you're just getting started. And, unfortunately, there isn't a particularly vast wealth of resources and best practices that offer assistance on day two operations and beyond.
+Airflow's breadth and extensibility, however, can make it challenging to adopt - especially for those looking for guidance beyond day one operations. In an effort to provide best practices and expand on existing resources, our team at Astronomer has collected some of the most common issues we see Airflow users face.
 
-In an effort to lower that gap, we've collected some of the most common issues we see Airflow users face. Whether you're new to the community or an experienced user, check out this list of common snags and some corresponding fixes to consider.
+Whether you're new to Airfow or an experienced user, check out this list of common errors and some corresponding fixes to consider.
 
 ---
 
@@ -21,7 +21,7 @@ In an effort to lower that gap, we've collected some of the most common issues w
 
 You wrote a new DAG that needs to run every hour and you're ready to turn it on. You set an hourly interval beginning today at 2pm, setting a reminder to check back in a couple of hours. You hop on at 3:30pm to find that while your DAG did in fact run, your logs indicate that there is only one recorded execution date for 2pm. Huh - what happened to the 3pm run?
 
-Before you jump into fixer-upper mode (you wouldn't be the first), rest assured that this is expected behavior. The functionality of the Airflow Scheduler can be counterintuitive, but you'll get the hang of it.
+Before you jump into debugging mode (you wouldn't be the first), rest assured that this is expected behavior. The functionality of the Airflow Scheduler can be counterintuitive, but you'll get the hang of it.
 
 Two things:
 - By design, an Airflow DAG will execute at the _completion_ of its `schedule_interval`.
@@ -29,7 +29,7 @@ Two things:
 
 ### Airflow's Schedule Interval
 
-As stated above, an Airflow DAG will execute at the _completion_ of its `schedule_interval`, which means one `schedule_interval` [AFTER the start date](https://airflow.apache.org/scheduler.html). An hourly DAG, for example, will execute its 2pm run when the clock strikes 3pm. Why? Airflow can't ensure that all data corresponding to the 2pm interval is present until the _end_ of that hourly interval.
+As stated above, an Airflow DAG will execute at the completion of its `schedule_interval`, which means one `schedule_interval` [AFTER the start date](https://airflow.apache.org/scheduler.html). An hourly DAG, for example, will execute its 2:00 PM run when the clock strikes 3:00 PM. Why? Airflow can't ensure that all data corresponding to the 2:00 PM interval is present until the end of that hourly interval.
 
 This is specific to Apache Airflow, but an important one to remember - especially if you're using [default variables and macros](https://airflow.apache.org/docs/apache-airflow/stable/macros-ref.html).
 
