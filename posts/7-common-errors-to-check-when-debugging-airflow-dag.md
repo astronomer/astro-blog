@@ -9,7 +9,7 @@ authors:
 date: 2019-04-03T00:00:00.000Z
 ---
 
-Apache Airflow has become the industry standard for workflow orchestration, handling use cases that range from machine learning model training to traditional ETL at scale. It's an incredibly flexible tool that powers mission critical projects for startups and Fortune 50 teams alike.
+Apache Airflow is the industry standard for workflow orchestration, handling use cases that range from machine learning model training to traditional ETL at scale. It's an incredibly flexible tool that powers mission critical projects for startups and Fortune 50 teams alike.
 
 With that said, the very tool that many regard as a powerful "blank canvas" can quickly become a double edged sword if you're just getting started. And, unfortunately, there isn't a particularly vast wealth of resources and best practices that offer assistance on day two operations and beyond.
 
@@ -122,7 +122,7 @@ If everything looks like it's running as expected but you're finding that your t
 
 ### Environment Variables and concurrency configurations.
 
-The potential root cause for a bottleneck and what exactlhy these values should be set at is specific to your setup. For example, are you running many DAGs at once, or one DAG with hundreds of concurrent tasks?
+The potential root cause for a bottleneck and what exactly these values should be set at is specific to your setup. For example, are you running many DAGs at once, or one DAG with hundreds of concurrent tasks?
 
 Regardless of your use case, however, fine-tuning some configurations can help improve performance. Here's a breakdown of what you can look for:
 
@@ -200,4 +200,5 @@ If you're using Astronomer, you can restart your scheduler by either:
 This list is based on our experience helping Astronomer customers with core Airflow issues, but we want to hear from you. Don't hesitate to reach out to us at humans@astronomer.io if we missed something that you think would be valuable to include.
 
 If you have follow up questions or are looking for Airflow support from our team, [reach out to us](https://www.astronomer.io/contact/?from=/).
+
 <!-- markdownlint-disable-file -->
