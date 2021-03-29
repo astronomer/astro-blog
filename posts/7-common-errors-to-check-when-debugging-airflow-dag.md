@@ -125,33 +125,27 @@ If your tasks are stuck in a bottleneck, we'd recommend taking a closer look at:
 
 The potential root cause for a bottleneck and what exactly these values should be set at is specific to your setup. For example, are you running many DAGs at once, or one DAG with hundreds of concurrent tasks?
 
-Regardless of your use case, however, setting a few [environment variables](https://airflow.apache.org/docs/apache-airflow/stable/howto/set-config.html) can help improve performance. Here's a breakdown of what you can look for:
+Regardless of your use case, however, setting a few [environment variables](https://airflow.apache.org/docs/apache-airflow/stable/howto/set-config.html) can help improve performance. These environment variables are set in Airflow's `airflow.cfg` file. For all default values, [refer here](https://github.com/apache/airflow/blob/v2-0-stable/airflow/config_templates/default_airflow.cfg).
 
-**a. Parallelism** ([parallelism](https://github.com/apache/airflow/blob/v1-10-stable/airflow/config_templates/default_airflow.cfg#L113))
-   *  This determines how many task instances can be actively running in parallel _across_ DAGs given the resources available at any given time at the Deployment level. Think of this as "maximum active tasks anywhere."
-   *   `ENV AIRFLOW__CORE__PARALLELISM=18`
+#### Parallelism
 
-**b. DAG Concurrency** ([dag_concurrency](https://github.com/apache/airflow/blob/v1-10-stable/airflow/config_templates/default_airflow.cfg#L116))
-   *  This determines how many task instances your scheduler is able to schedule at once per DAG. Think of this as "maximum tasks that can be scheduled at once, per DAG."
-   *   `ENV AIRFLOW__CORE__DAG_CONCURRENCY=16`
+Defined as `AIRFLOW__CORE__PARALLELISM`, [Parallelism](https://github.com/apache/airflow/blob/v2-0-stable/airflow/config_templates/default_airflow.cfg#L113) determines how many task instances can be actively running in parallel _across_ DAGs given the resources available at any given time at the Deployment level. Think of this as "maximum active tasks anywhere." To increase the limit of tasks set to run in parallel, set this value higher than its default of 32.
 
-**c. Non-Pooled Task Slot Count** ([Non_pooled_task_slot_count](https://github.com/apache/airflow/blob/v1-10-stable/airflow/config_templates/default_airflow.cfg#L123))
-   *   When not using pools, tasks are run in the "default pool", whose size is guided by this config element.
-   *   `ENV AIRFLOW__CORE__NON_POOLED_TASK_SLOT_COUNT=256`
+#### DAG Concurrency
 
-**d. Max Active Runs per DAG** ([max_active_runs_per_dag](https://github.com/apache/airflow/blob/v1-10-stable/airflow/config_templates/default_airflow.cfg#L126))
-   *   This one's self-explanatory, but it determines the maximum number of active DAG runs per DAG.
-   *   `ENV AIRFLOW__CORE__MAX_ACTIVE_RUNS 3`
+Defined as `ENV AIRFLOW__CORE__DAG_CONCURRENCY=`, [dag_concurrency](https://github.com/apache/airflow/blob/v2-0-stable/airflow/config_templates/default_airflow.cfg#L117) determines how many task instances your Scheduler is able to schedule at once per DAG. Think of this as "maximum tasks that can be scheduled at once, per DAG." The default is 16.
 
-**e. Worker Concurrency** ([worker_concurrency](https://github.com/apache/airflow/blob/v1-10-stable/airflow/config_templates/default_airflow.cfg#L361))
-   *   This determines how many tasks each _worker_ can run at any given time. The CeleryExecutor for example, will by default run a max of 16 tasks concurrently. Think of it as "How many tasks each of my workers can take on at any given time." 
-   *   It's important to note that this number will naturally be limited by dag_concurrency. If you have 1 worker and want it to match your Deployment's capacity, worker_concurrency = parallelism.
-   *  `ENV AIRFLOW__CELERY__WORKER_CONCURRENCY=9`
+#### Max Active Runs per DAG
 
-**f. Concurrency** ([concurrency](https://github.com/apache/airflow/blob/v1-9-stable/airflow/models.py#L2848))
-   * Not to be confused with the above. "Concurrency" here is set on the individual DAG level, and determines the number of tasks allowed to run concurrently _within_ a single DAG. This may also need to be tuned, but it will not work if defined as part of an `airflow.cfg` file.
+Defined as `AIRFLOW__CORE__MAX_ACTIVE_RUNS=`, [max_active_runs_per_dag](https://github.com/apache/airflow/blob/v2-0-stable/airflow/config_templates/default_airflow.cfg#L123) determines the maximum number of active DAG runs per DAG. The default value is 16.
 
-> **Pro-tip:** If you consider setting DAG or Deployment level concurrency configs to a low number to protect against API rate limits, we'd recommend instead using ["pools"](https://airflow.apache.org/concepts.html?highlight=pool) - they'll allow you to limit parallelism at the task level and won't limit scheduling or execution outside of the tasks that need it.
+#### Worker Concurrency
+
+Defined as `AIRFLOW__CELERY__WORKER_CONCURRENCY=9`, [worker_concurrency](https://github.com/apache/airflow/blob/v2-0-stable/airflow/config_templates/default_airflow.cfg#L676) determines how many tasks each Celery Worker can run at any given time. The Celery Executor will run a max of 16 tasks concurrently by default. Think of this as "how many tasks each of my workers can take on at any given time."
+
+It's important to note that this number will naturally be limited by `dag_concurrency`. If you have 1 Worker and want it to match your Deployment's capacity, `worker_concurrency` should be equal to `parallelism`. The default value is 16.
+
+> **Pro-tip:** If you consider setting DAG or deployment-level concurrency configurations to a low number to protect against API rate limits, we'd recommend instead using ["pools"](https://airflow.apache.org/concepts.html?highlight=pool) - they'll allow you to limit parallelism at the task level and won't limit scheduling or execution outside of the tasks that need it.
 
 ### Try Scaling up your Scheduler or adding a Worker.
 
