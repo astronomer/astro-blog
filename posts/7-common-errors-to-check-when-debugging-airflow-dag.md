@@ -149,7 +149,7 @@ It's important to note that this number will naturally be limited by `dag_concur
 
 ### Try Scaling up your Scheduler or adding a Worker.
 
-If tasks are getting bottlenecked and your concurrency configurations look alright, it might just be that your Scheduler is underpowered or that your Deployment could use another Celery Worker, assuming you're using the [Celery Executor](https://airflow.apache.org/docs/apache-airflow/2.0.1/executor/celery.html). If you're running on Astronomer, we generally recommend 5 AU as the default minimum for the Scheduler and 10 AU for Celery Workers.
+If tasks are getting bottlenecked and your concurrency configurations are already optimized, the issue might be that your Scheduler is underpowered or that your Deployment could use another Celery Worker, assuming you're using the [Celery Executor](https://airflow.apache.org/docs/apache-airflow/2.0.1/executor/celery.html). If you're running on Astronomer, we generally recommend 5 AU as the default minimum for the Scheduler and 10 AU for Celery Workers.
 
 Whether or not you scale your current resources or add an extra Celery Worker depends on your use case, but we generally recommend the following:
 
@@ -184,9 +184,9 @@ The frequency of restarts is defined in your airflow.cfg as `"run_duration"`. A 
 
 If you're using Astronomer, you can restart your scheduler by either:
 
-1. Inserting `AIRFLOW__SCHEDULER__RUN_DURATION={num_seconds_between_restarts} `as an Environment Variable in the Configure page of the Astronomer UI to set a recurring restart OR
+- Inserting `AIRFLOW__SCHEDULER__RUN_DURATION={num_seconds_between_restarts}` as an Environment Variable to set a recurring restart.
 
-2. Running `astro airflow deploy` via your CLI to immediately restart everything (if you're running Celery, there is a [Worker Termination Grace Period](https://forum.astronomer.io/t/what-is-the-worker-termination-grace-period-on-astronomers-ui/141) you can leverage here to minimize existing immediate task disruption)
+- Running `astro deploy` via the Astronomer CLI to restart all Airflow components. If you're running the Celery Executor, the [Worker Termination Grace Period](https://forum.astronomer.io/t/what-is-the-worker-termination-grace-period-on-astronomers-ui/141) can minimize task disruption.
 
 > **Note:** Scheduler performance was a critical part of the [Airflow 2.0 release](https://www.astronomer.io/blog/introducing-airflow-2-0) and has seen significant improvements since December of 2020. For more information, read [The Airflow 2.0 Scheduler](https://www.astronomer.io/blog/airflow-2-scheduler). 
 
