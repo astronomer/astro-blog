@@ -24,7 +24,7 @@ So we've made it easy for the data ecosystem to get involved with the Airflow co
 
 ### Providers and Modules
 
-The providers framework is a robust solution for interfacing with a large catalog of tools, but we found that a user's first exposure to the framework can be overwhelming. across hooks, operators, sensors, transfers, and providers, there are many different entities designed to do different things. To simplify the experience, we've introduced the concept of **Modules** to make the logical separation clear:
+The providers framework is a robust solution for interfacing with a large catalog of tools, but we found that a user's first exposure to the framework can be overwhelming. Across hooks, operators, sensors, transfers, and providers, there are many different entities designed to do different things. To simplify the experience, we've introduced the concept of **Modules** to make the logical separation clear:
 
 - **Providers** are the top-level python packages that users download to interface with a specific *service*. These package contain all relevant **modules** for a service.
 - **Modules** are specific pieces of provider packages that can be imported and used in a DAG or in an Airflow configuration file. The module abstraction includes the classic integration points that Airflow users know and love- hooks, operators, sensors, etc. At the time of writing this post, there are 700 modules available in the ecosystem, with more being added every day.
