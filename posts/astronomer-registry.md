@@ -16,7 +16,7 @@ The [Airflow providers framework](http://airflow.apache.org/docs/apache-airflow-
 
 But it doesn't stop there. The value of the provider framework also extends beyond the Airflow user to the service provider itself.
 
-The data ecosystem loves Airflow, as it allows service providers to fit their tools into highly-contextual pipelines that help enable broader business outcomes. An easy plug-and-play architecture allows folks to use tools the way they're *meant* *to be used,* which produces a more favorable outcome for all downstream data users.
+The data ecosystem loves Airflow, as it allows service providers to fit their tools into highly-contextual pipelines that help enable broader business outcomes. An easy plug-and-play architecture allows folks to use tools the way they're *meant to be used*, which produces a more favorable outcome for all downstream data users.
 
 So we've made it easy for the data ecosystem get involved with the Airflow community. With a [sample repository](https://github.com/astronomer/airflow-provider-sample/tree/main/sample_provider) and support from the Astronomer team, anyone, from a major technology company to an individual developer writing DAGs, can publish a provider on the Registry *from any public repository*. The Registry aggregates and curates the best bits of the ecosystem so that developers can easily discover and access the integrations they need.
 
