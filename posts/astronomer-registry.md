@@ -35,7 +35,7 @@ The providers framework is a robust solution for interfacing with a large catalo
 
 The Registry's goal is to consolidate only the most crucial information a user needs to get started with a provider package and its modules, including access instructions, required parameters, and example DAGs. Our goal is to help users easily conceptualize how providers and modules are used contextually in DAGs.
 
-Note that Registry documentation does *not* conflict or compete with core Airflow documentation; in fact, the docs rendered on the Registry are built from the same source as the Airflow docs! instead, the Registry amalgamates Airflow docs, example DAGs, and quick access instructions to improve discoverability and access for the community.
+Note that Registry documentation does *not* conflict or compete with core Airflow documentation; in fact, the docs rendered on the Registry are built from the same source as the Airflow docs! instead, the Registry amalgamates Airflow docs, example DAGs, and quick access instructions from both the core Airflow repository and third-party repositories to improve discoverability and access across the entire ecosystem.
 
 ![Navigation](../assets/registry-3.gif)
 
@@ -47,9 +47,9 @@ Through many user interviews, it became clear that discoverability is a major pa
 
 ### Partner Providers [Beta]
 
-Many companies have reached out asking for assistance in creating an Airflow Provider; we want to enable these teams to ship their own packages. The Registry allows partners in the data ecosystem to deliver high quality providers and modules to the Airflow community more quickly, with success metrics baked in.
+Many companies have reached out asking for assistance in creating an Airflow Provider for their tool. The Registry allows partners in the data ecosystem to deliver high quality providers and modules to the Airflow community more quickly, with success metrics baked in.
 
-We're proud to launch a beta program with a small batch of partners who have worked closely with us to define the build and release process, including [Great Expectations](http://greatexpectations.io) and [Fivetran](http://fivetran.com). We look forward to delivering many more of these packages in the coming months and working to bring more first-class integrations to the Airflow community.
+We're proud to launch a beta program with a small batch of partners who have worked closely with us to refine the build and release process, including [Great Expectations](http://greatexpectations.io) and [Fivetran](http://fivetran.com). We look forward to delivering many more of these packages in the coming months and working to bring more first-class integrations to the Airflow community.
 
 Please visit our [sample provider repo](https://github.com/astronomer/airflow-provider-sample) or more info and feel free to [get in touch](http://registry.astronomer.io/publish-provider) if you'd like to publish a provider package.
 
