@@ -89,7 +89,7 @@ Raising those values will tell your Airflow Webserver to wait a bit longer to lo
 
 ### Avoid making requests outside of an operator.
 
-If you're making API calls, JSON requests, or database requests outside of an operator at a high frequency, your Webserver is much more likely to timeout.
+If you're making API calls, JSON requests, or database requests outside of an Airflow operator at a high frequency, your Webserver is much more likely to timeout.
 
 When Airflow interprets a file to look for any valid DAGs, it first runs all code at the top level (i.e. outside of operators). Even if the operator itself only gets executed at execution time, everything called outside of an operator is called every heartbeat, which can be quite taxing.
 
@@ -112,9 +112,9 @@ Depending on your use case, we'd suggest considering the following:
 
 > **Note:** Airflow v1.10.2's new sensor [`mode=reschedule`](https://github.com/apache/airflow/blob/1.10.2/airflow/sensors/base_sensor_operator.py#L46-L56) feature addresses this issue. If you have more sensors than worker slots, the sensor will now get thrown into a new `up_for_reschedule` state, thus unblocking a worker slot.
 >
-> If you're running Airflow 2.0+, [Smart Sensors](https://airflow.apache.org/docs/apache-airflow/2.0.1/smart-sensor.html?highlight=smart%20sensors).
+> If you're running Airflow 2.0+, consider enabling [Smart Sensors](https://airflow.apache.org/docs/apache-airflow/2.0.1/smart-sensor.html?highlight=smart%20sensors). They significantly improve sensor functionality and are built to optimize resources and reduce cost.
 
-## 5. Tasks are executing, but they're getting bottlenecked.
+## 5. Tasks are executing slowly.
 
 If your tasks are stuck in a bottleneck, we'd recommend taking a closer look at:
 
@@ -158,7 +158,7 @@ Whether or not you scale your current resources or add an extra Celery Worker de
 
 For more information on the differences between Executors, we recommend reading [Airflow Executors: Explained](https://www.astronomer.io/guides/airflow-executors-explained/).
 
-## 6. You're Missing Logs.
+## 6. You're missing task logs.
 
 Generally speaking, logs fail to show up because of a process that died on your Scheduler or one or more of your Celery Workers.
 
@@ -178,22 +178,23 @@ A few things to try:
 
 ## 7. Tasks are slow to schedule and/or have stopped being scheduled altogether
 
-If your tasks are slower than usual to get scheduled, you'll want to check how often you've set your scheduler to restart. Airflow has an unfortunately well-known problem by which the scheduler's performance degrades over time and requires a quick restart to ensure optimal performance.
+If your tasks are slower than usual to get scheduled, you'll want to check how often you've set your Scheduler to restart. Airflow 1.10 has an unfortunately well-known problem by which the Scheduler's performance degrades over time and requires a quick restart to ensure optimal performance.
 
-The frequency of restarts is defined in your airflow.cfg as `"run_duration"`. A `run_duration` of -1 indicates that you never want your Scheduler to restart, whereas a `run_duration` of 3600 will restart your scheduler every hour. Check out [this forum post](https://forum.astronomer.io/t/how-can-i-schedule-automatic-scheduler-restarts/61) for more info. We generally restart our own schedulers about once a day, but the frequency at which you might is very much dependent on your particular use case. 
+### Set automatic Scheduler restarts.
 
-If you're using Astronomer, you can restart your scheduler by either:
+The frequency of restarts is defined in your `airflow.cfg` file as `run_duration`. A `run_duration` of -1 indicates that you never want your Scheduler to restart, whereas a `run_duration` of 3600 will restart your scheduler every hour. Check out [this forum post](https://forum.astronomer.io/t/how-can-i-schedule-automatic-scheduler-restarts/61) for more information. We generally recommend restarting your Scheduler once every 24 hours, but optimal frequency largely depends on your use case.
+
+If you're running Airflow on Astronomer, you can restart your scheduler by either:
 
 - Inserting `AIRFLOW__SCHEDULER__RUN_DURATION={num_seconds_between_restarts}` as an Environment Variable to set a recurring restart.
-
 - Running `astro deploy` via the Astronomer CLI to restart all Airflow components. If you're running the Celery Executor, the [Worker Termination Grace Period](https://forum.astronomer.io/t/what-is-the-worker-termination-grace-period-on-astronomers-ui/141) can minimize task disruption.
 
 > **Note:** Scheduler performance was a critical part of the [Airflow 2.0 release](https://www.astronomer.io/blog/introducing-airflow-2-0) and has seen significant improvements since December of 2020. For more information, read [The Airflow 2.0 Scheduler](https://www.astronomer.io/blog/airflow-2-scheduler). 
 
 ## Was this helpful?
 
-This list is based on our experience helping Astronomer customers with core Airflow issues, but we want to hear from you. Don't hesitate to reach out to us at humans@astronomer.io if we missed something that you think would be valuable to include.
+This list was curated by our team and based on our experience helping Astronomer customers, but we want to hear from you. Don't hesitate to reach out to us at humans@astronomer.io if we missed something that you think would be valuable to include.
 
-If you have follow up questions or are looking for Airflow support from our team, [reach out to us](https://www.astronomer.io/contact/?from=/).
+If you have follow up questions or are looking for Airflow support from our team, [reach out to us](https://www.astronomer.io/contact/).
 
 <!-- markdownlint-disable-file -->
