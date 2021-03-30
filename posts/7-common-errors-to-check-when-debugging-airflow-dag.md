@@ -162,7 +162,7 @@ For more information on the differences between Executors, we recommend reading 
 
 Generally speaking, logs fail to show up because of a process that died on your Scheduler or one or more of your Celery Workers.
 
-If you're missing logs, you might see something like the following:
+If you're missing logs, you might see something like this under "Log by attempts" in the Airflow UI:
 
 ```
 Failed to fetch log file from worker. Invalid URL 'http://:8793/log/staging_to_presentation_pipeline_v5/redshift_to_s3_Order_Payment_17461/2019-01-11T00:00:00+00:00/1.log': No host supplied
@@ -171,8 +171,8 @@ Failed to fetch log file from worker. Invalid URL 'http://:8793/log/staging_to_p
 A few things to try:
 
 1. Clear the task instance via the Airflow UI to see if logs show up. This will prompt your task to run again.
-2. Change the [`log_fetch_timeout_sec`](https://github.com/apache/airflow/blob/v1-10-stable/airflow/config_templates/default_airflow.cfg#L304) to something more than 5 seconds (default). This is the amount of time (in seconds) that the Webserver will wait for an initial handshake while fetching logs from other workers.
-3. Give your workers a little more power. If you're using Astronomer, you can do this in the `Configure` tab of the Astronomer UI.
+2. Change the [`log_fetch_timeout_sec`](https://github.com/apache/airflow/blob/v1-10-stable/airflow/config_templates/default_airflow.cfg#L304) to something more than 5 seconds (default). Defined in seconds, this is the amount of time that the Webserver will wait for an initial handshake while fetching logs from other workers.
+3. Give your workers a little more power. If you're using Astronomer, you can do this in the **Configure** tab of the Astronomer UI.
 4. Are you looking for a log from over 15 days ago? If you're using Astronomer, the log retention period is an Environment Variable we have hard-coded on our platform. For now, you won't have access to logs over 15 days old.
 5. Exec into one of your Celery workers to look for the log files. If you're running Airflow on Kubernetes or Docker, you can run use [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) or Docker commands to run `$ kubectl exec -it {worker_name} bash`. Log files should be in `~/logs`. From there, they'll be split up by DAG/TASK/RUN.
 
