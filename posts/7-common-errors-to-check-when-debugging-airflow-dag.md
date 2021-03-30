@@ -13,9 +13,9 @@ Apache Airflow is the industry standard for workflow orchestration, handling use
 
 Airflow's breadth and extensibility, however, can make it challenging to adopt - especially for those looking for guidance beyond day one operations. In an effort to provide best practices and expand on existing resources, our team at Astronomer has collected some of the most common issues we see Airflow users face.
 
-Whether you're new to Airfow or an experienced user, check out this list of common errors and some corresponding fixes to consider.
+Whether you're new to Airflow or an experienced user, check out this list of common errors and some corresponding fixes to consider.
 
-> **Note:** [Airflow 2.0](https://www.astronomer.io/blog/introducing-airflow-2-0) was released in December of 2020 and addresses a significant number of pain points commmonly reported by users running previous versions. We strongly encourage all teams to upgrade to Airflow 2.0+ as soon as they're able.
+> **Note:** [Airflow 2.0](https://www.astronomer.io/blog/introducing-airflow-2-0) was released in December of 2020 and addresses a significant number of pain points commonly reported by users running previous versions. We strongly encourage all teams to upgrade to Airflow 2.0+ as soon as they're able.
 >
 > For quick guidelines on how to run Airflow 2.0 locally, refer to [Get Started with Airflow 2.0](https://www.astronomer.io/guides/get-started-airflow-2). For detailed instructions on the migration process, refer to [Upgrading to Airflow 2.0+](https://airflow.apache.org/docs/apache-airflow/stable/upgrading-to-2.html) from the Apache Airflow Project and [Upgrade to Airflow 2.0 on Astronomer](https://www.astronomer.io/docs/cloud/stable/customize-airflow/upgrade-to-airflow-2) if you're running on our platform. If you'd like help establishing a migration path, [reach out to us](https://www.astronomer.io/get-astronomer).
 
@@ -118,10 +118,10 @@ Depending on your use case, we'd suggest considering the following:
 
 If your tasks are stuck in a bottleneck, we'd recommend taking a closer look at:
 
-- Environment Variables and concurrency configurations
+- Environment variables and concurrency configurations
 - Worker and Scheduler resources
 
-### Environment Variables and concurrency configurations.
+### Environment variables and concurrency configurations.
 
 The potential root cause for a bottleneck and what exactly these values should be set at is specific to your setup. For example, are you running many DAGs at once, or one DAG with hundreds of concurrent tasks?
 
