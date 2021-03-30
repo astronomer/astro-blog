@@ -35,7 +35,7 @@ The providers framework is a robust solution for interfacing with a large catalo
 
 The Registry's goal is to consolidate only the most crucial information a user needs to get started with a provider package and its modules, including access instructions, required parameters, and example DAGs. Our goal is to help users easily conceptualize how providers and modules are used contextually in DAGs.
 
-Note that Registry documentation does *not* conflict or compete with core Airflow documentation; in fact, the docs rendered on the Registry are built from the same source as the Airflow docs! instead, the Registry amalgamates Airflow docs, example DAGs, and quick access instructions from both the core Airflow repository and third-party repositories to improve discoverability and access across the entire ecosystem.
+Note that Registry documentation does *not* conflict or compete with core Airflow documentation; in fact, the docs rendered on the Registry are built from the same source as the Airflow docs! Instead, the Registry amalgamates Airflow docs, example DAGs, and quick access instructions from both the core Airflow repository and third-party repositories to improve discoverability and access across the entire ecosystem.
 
 ![Navigation](../assets/registry-3.gif)
 
@@ -62,4 +62,3 @@ There are a few items that we're particularly excited about working towards with
 - **Private Registry:** Public packages help a user get started with DAG authoring, but we know that many users want to go even further and share custom operator code they've written with their teammates. To meet this demand, we plan to build a first-class, authenticated experience that allows users to easily publish and share internal packages for their teammates to access and implement. ****
 
 We sincerely hope you enjoy what we've built. Please browse away, and if you're interested in becoming a beta tester for any of the above features, please don't hesitate to reach out to us at ecosystem@astronomer.io.
-
