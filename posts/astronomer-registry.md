@@ -51,7 +51,7 @@ Many companies have reached out asking for assistance in creating an Airflow Pro
 
 We're proud to launch a beta program with a small batch of partners who have worked closely with us to refine the build and release process, including [Great Expectations](http://greatexpectations.io) and [Fivetran](http://fivetran.com). We look forward to delivering many more of these packages in the coming months and working to bring more first-class integrations to the Airflow community.
 
-Please visit our [sample provider repo](https://github.com/astronomer/airflow-provider-sample) or more info and feel free to [get in touch](http://registry.astronomer.io/publish-provider) if you'd like to publish a provider package.
+Please visit our [sample provider repo](https://github.com/astronomer/airflow-provider-sample) for more info and feel free to [get in touch](http://registry.astronomer.io/publish-provider) if you'd like to publish a provider package.
 
 ## Looking Ahead
 
