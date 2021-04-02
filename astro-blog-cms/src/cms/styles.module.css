@@ -1,0 +1,15 @@
+@import '~@astronomer/spectra/dist/css/variables.css';
+
+.body {
+  display: flex;
+}
+
+.sidebar {
+  display: block;
+  flex: 0 0 25px;
+  padding-left: 3rem;
+}
+
+.postBody {
+  left: -25px;
+}

@@ -1,0 +1,27 @@
+@import '~@astronomer/spectra/dist/css/variables.css';
+
+.tag {
+  display: inline-block;
+  border-radius: var(--radius-m);
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--gray10) !important;
+  background-color: var(--white12) !important;
+}
+
+.link {
+  color: var(--c-status-neutral) !important;
+  background-color: color(var(--c-status-neutral) a(0.15)) !important;
+  border-bottom: 0 !important;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: var(--white12) !important;
+    background-color: var(--c-status-neutral) !important;
+  }
+}

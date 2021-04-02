@@ -1,0 +1,92 @@
+@import '~@astronomer/spectra/dist/css/variables.css';
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+
+  &.imageRight {
+    flex-direction: row-reverse;
+  }
+
+  &.imageLeft {
+    & .heroImage {
+      padding-left: 0;
+    }
+  }
+
+  @media (--max-m-viewport) {
+    display: block;
+    padding: 0;
+
+    /* Keeps hero image ABOVE of the content on mobile */
+    flex-direction: row-reverse;
+  }
+}
+
+.postDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+
+  & h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+
+  @media (--max-m-viewport) {
+    padding-left: 0;
+  }
+}
+
+.heroImage {
+  flex: 0 0 50%;
+  padding: 0 1rem;
+
+  @media (--max-m-viewport) {
+    padding: 0;
+    flex: 1;
+  }
+
+  & img {
+    min-width: 650px;
+
+    @media (--max-m-viewport) {
+      min-width: 100%;
+    }
+  }
+}
+
+.date {
+  pointer-events: none;
+  color: var(--gray10);
+  font-size: 12px;
+}
+
+.metaData {
+  display: flex;
+  align-items: center;
+
+  & time {
+    margin-right: 1rem;
+  }
+}
+
+.authors {
+  margin-top: 2rem;
+}
+
+.postBody {
+  padding: 0 20%;
+}
+
+.blogLink {
+  &:hover {
+    text-decoration: underline;
+    color: var(--purple10);
+  }
+}
+
+.sep {
+  margin: 3rem 0 3.5rem;
+}

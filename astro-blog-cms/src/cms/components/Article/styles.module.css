@@ -1,0 +1,122 @@
+@import '~@astronomer/spectra/dist/css/variables.css';
+
+.article {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.65rem;
+
+  & + .article {
+    margin-top: 2rem;
+  }
+
+  & h1 {
+    margin: 0;
+    font-size: var(--font-xl);
+    line-height: 1.25em;
+    color: var(--c-text-heading);
+  }
+
+  & h2 {
+    margin: calc(1.65rem * 1.5) 0 0;
+    font-size: var(--font-ml);
+    font-weight: 600;
+    line-height: 1.25em;
+    color: var(--c-text-heading);
+  }
+
+  & h3 {
+    margin: 1.65rem 0 0;
+    font-size: var(--font-m);
+    font-weight: 600;
+    line-height: 1.25em;
+    color: var(--c-text-heading);
+  }
+
+  & h4 {
+    margin: 1.65rem 0 0;
+    font-size: var(--font-m);
+    line-height: 1.25em;
+    color: var(--c-text-heading);
+  }
+
+  & p {
+    margin: calc(1.65rem / 2) 0 0;
+  }
+
+  & table,
+  & pre,
+  & img,
+  & ul,
+  & ol,
+  & p + p,
+  & ul + p,
+  & ol + p,
+  & table + p,
+  & blockquote p {
+    margin: 1.65rem 0 0;
+  }
+
+  & li {
+    margin: 0;
+
+    & + li {
+      margin: 0.5rem 0 0;
+    }
+
+    & code {
+      position: relative;
+      margin-bottom: 0;
+    }
+  }
+
+  & img {
+    max-width: 100%;
+    border-radius: var(--radius-m);
+  }
+
+  & p > img {
+    margin-top: 0; /* Prevent double-spacing when images get nested in grafs */
+  }
+
+  & a {
+    color: var(--c-link);
+    border-bottom: 1px solid currentColor;
+
+    &:hover,
+    &:focus {
+      color: var(--c-link-hover);
+    }
+
+    & img,
+    & picture {
+      border: 0;
+    }
+  }
+
+  & blockquote {
+    margin: 1.65rem 0 0;
+    padding: 1rem 2rem;
+    border: 2px solid rgba(255, 161, 26, 0.75);
+    border-radius: var(--radius-m);
+    background-color: rgba(255, 161, 26, 0.25) !important;
+
+    & p {
+      margin: 0;
+      color: var(--purple10);
+
+      & + p {
+        margin: 1.65rem 0 0;
+      }
+    }
+
+    & a {
+      color: var(--gold11) !important;
+      border-color: var(--gold10) !important;
+    }
+
+    & code {
+      background-color: rgba(255, 161, 26, 0.25) !important;
+    }
+  }
+}

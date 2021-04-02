@@ -1,0 +1,19 @@
+@import '~@astronomer/spectra/dist/css/variables.css';
+
+.imageBG {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.image {
+  height: auto;
+  width: 100%;
+}
+
+.image,
+.imageBG {
+  border-radius: var(--radius-l);
+  overflow: hidden;
+}
