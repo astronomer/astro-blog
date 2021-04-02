@@ -25,4 +25,4 @@ const ArticlePreview = ({ entry, widgetFor }) => (
   </>
 );
 
-CMS.registerPreviewTemplate('articles', ArticlePreview)
+CMS.registerPreviewTemplate('posts', ArticlePreview)
