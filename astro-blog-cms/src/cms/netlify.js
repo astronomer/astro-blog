@@ -1,5 +1,8 @@
 import CMS from 'netlify-cms-app';
 import React from 'react';
+import unified from 'unified';
+import parse from 'remark-parse';
+import remark2react from 'remark-react';
 
 import Article from './components/Article';
 import BlogPostHeader from './components/BlogPostHeader';
@@ -19,6 +22,14 @@ const PostPreview = ({ entry, getAsset, widgetsFor }) => (
       <div className={s.sidebar}>{' '}</div>
       <Article className={s.postBody}>
         <div dangerouslySetInnerHTML={{ __html: widgetsFor('body') }} />
+        <div>
+          {
+            unified()
+              .use(parse)
+              .use(remark2react)
+              .processSync(widgetsFor('body')).result
+          }
+        </div>
       </Article>
     </div>
   </>
