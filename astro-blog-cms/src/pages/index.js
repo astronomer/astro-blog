@@ -10,6 +10,7 @@ export default function Home() {
       </div>
       <div className='button'>
         <Button
+          as="a"
           label="Continue to Blog CMS"
           to="/admin/"
           type="external"

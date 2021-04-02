@@ -18,7 +18,23 @@ img {
 body {
   background-color: var(--purple11);
   font-weight: 300;
-  overflow-x: hidden;
+  margin: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top {
+  max-width: 400px
+}
+
+.button {
+  padding-top: 3rem;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 pre,
