@@ -1,8 +1,6 @@
 import CMS from 'netlify-cms-app';
 import React from 'react';
-import unified from 'unified';
-import parse from 'remark-parse';
-import remark2react from 'remark-react';
+import MDX from 'mdx-scoped-runtime';
 
 import Article from './components/Article';
 import BlogPostHeader from './components/BlogPostHeader';
