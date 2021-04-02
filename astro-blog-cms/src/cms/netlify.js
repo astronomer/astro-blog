@@ -9,7 +9,6 @@ import s from './styles.module.css';
 
 const PostPreview = ({ entry, getAsset, widgetFor }) => (
   <div className={s.postContainer}>
-    {console.log(widgetFor('body'))}
     <div className={s.postHeader}>
       <BlogPostHeader
         entry={entry}
@@ -20,7 +19,13 @@ const PostPreview = ({ entry, getAsset, widgetFor }) => (
     <div className={s.body}>
       <div className={s.sidebar}>{' '}</div>
       <Article className={s.postBody}>
-        <MDX>{entry.getIn(['data', 'body'])}</MDX>
+        <MDX
+          components={{
+            img: (props) => <img src={getAsset(props.src)} alt={props.alt} title={props.title} />,
+          }}
+        >
+          {entry.getIn(['data', 'body'])}
+        </MDX>
       </Article>
     </div>
   </div>
