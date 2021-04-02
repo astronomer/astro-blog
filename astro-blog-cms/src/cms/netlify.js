@@ -22,14 +22,7 @@ const PostPreview = ({ entry, getAsset, widgetFor }) => (
     <div className={s.body}>
       <div className={s.sidebar}>{' '}</div>
       <Article className={s.postBody}>
-        <div>
-          {
-            unified()
-              .use(parse)
-              .use(remark2react)
-              .processSync(widgetFor('body')).result
-          }
-        </div>
+        <MDX>{entry.getIn(['data', 'body'])}</MDX>
       </Article>
     </div>
   </>
