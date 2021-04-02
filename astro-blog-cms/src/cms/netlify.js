@@ -1,6 +1,7 @@
 import CMS from 'netlify-cms-app';
 import React from 'react';
 import MDX from 'mdx-scoped-runtime';
+import ReactPrismjs from '@uiw/react-prismjs';
 
 import Article from './components/Article';
 import BlogPostHeader from './components/BlogPostHeader';
@@ -22,6 +23,7 @@ const PostPreview = ({ entry, getAsset, widgetFor }) => (
         <MDX
           components={{
             img: (props) => <img src={getAsset(props.src)} alt={props.alt} title={props.title} />,
+            code: (props) => <ReactPrismjs language={props.class.replace('language-', '')} source={props.children} />,
           }}
         >
           {entry.getIn(['data', 'body'])}
