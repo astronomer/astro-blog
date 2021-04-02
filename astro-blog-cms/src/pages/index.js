@@ -10,11 +10,10 @@ export default function Home() {
       </div>
       <div className='button'>
         <Button
-          as="a"
+          as="button"
           label="Continue to Blog CMS"
           to="/admin/"
           type="external"
-          gatsby
         />
       </div>
     </body>

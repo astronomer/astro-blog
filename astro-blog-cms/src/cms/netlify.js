@@ -23,7 +23,6 @@ const PostPreview = ({ entry, getAsset, widgetFor }) => (
         <MDX
           components={{
             img: (props) => <img src={getAsset(props.src)} alt={props.alt} title={props.title} />,
-            code: (props) => <ReactPrismjs language={props.class.replace('language-', '')} source={props.children} />,
           }}
         >
           {entry.getIn(['data', 'body'])}
