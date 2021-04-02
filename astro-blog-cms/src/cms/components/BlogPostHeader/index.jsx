@@ -9,8 +9,8 @@ import BlogImage from '../BlogImage';
 
 import s from './styles.module.css';
 
-const BlogLatestPost = ({ entry, orientation = 'imageLeft' }) => {
-  const hero = entry.getIn(['data', 'heroImagePath']);
+const BlogLatestPost = ({ entry, getAsset, orientation = 'imageLeft' }) => {
+  const hero = getAsset(entry.getIn(['data', 'heroImagePath']));
   return (
     <>
       <div className={cn(s.postHeader, s[orientation])}>

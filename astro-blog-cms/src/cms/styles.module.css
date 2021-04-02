@@ -1,3 +1,11 @@
+/* Variables */
+@import "~@astronomer/spectra/dist/css/fonts/goodSans.css";
+@import "~@astronomer/spectra/dist/css/variables.css";
+@import "~@astronomer/spectra/dist/css/mixins.css";
+
+/* Root styles */
+@import "~@astronomer/spectra/dist/css/base.css";
+
 .body {
   display: flex;
 }
