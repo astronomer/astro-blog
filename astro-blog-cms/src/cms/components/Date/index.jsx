@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Date = ({ value, format, ...otherProps }) => (
   <time dateTime={value} {...otherProps}>
-    {value}
+    {value.toString()}
   </time>
 );
 

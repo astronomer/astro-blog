@@ -6,7 +6,7 @@ import BlogPostHeader from './components/BlogPostHeader';
 
 import s from './styles.module.css';
 
-const ArticlePreview = ({ entry, widgetFor }) => (
+const PostPreview = ({ entry, widgetFor }) => (
   <>
     <div className={s.postHeader}>
       <BlogPostHeader
@@ -15,9 +15,7 @@ const ArticlePreview = ({ entry, widgetFor }) => (
       />
     </div>
     <div className={s.body}>
-      <div className={s.sidebar}>
-        [social share]
-      </div>
+      <div className={s.sidebar}>{' '}</div>
       <Article className={s.postBody}>
         <div dangerouslySetInnerHTML={{ __html: widgetFor('body') }} />
       </Article>
@@ -25,4 +23,4 @@ const ArticlePreview = ({ entry, widgetFor }) => (
   </>
 );
 
-CMS.registerPreviewTemplate('posts', ArticlePreview)
+CMS.registerPreviewTemplate('blog', PostPreview);
