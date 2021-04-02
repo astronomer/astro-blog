@@ -25,7 +25,7 @@ const PostPreview = ({ entry, getAsset, widgetFor }) => (
         <MDX>{entry.getIn(['data', 'body'])}</MDX>
       </Article>
     </div>
-  </>
+  </div>
 );
 
 CMS.registerPreviewTemplate('blog', PostPreview);
