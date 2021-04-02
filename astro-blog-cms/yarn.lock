@@ -9,14 +9,13 @@
   dependencies:
     tslib "~2.0.1"
 
-"@astronomer/spectra@^0.0.21":
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/@astronomer/spectra/-/spectra-0.0.21.tgz#8c4c3801053810d5645e0cc2f67b4778f01c2d55"
-  integrity sha512-1votwPGYDc+EC418k/Tvd0/3ZsGlGj6I1aEtD9Bre8n0373ZHOiq4ykDG82/Nb/XYUzn3eFaWHQSHshxAKtjzQ==
+"@astronomer/spectra@^0.0.27":
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/@astronomer/spectra/-/spectra-0.0.27.tgz#c96c7fa62d9f8dd4c2557bf0bdadf9afc92a5aaf"
+  integrity sha512-yklN+Ym4/ZfVV9W4er34K6n2jPsgi5TgPQVy5Csa8WjJRWz4PLXvoElsJmfXR5ikYYKBLQWIi6VTLIuqCLYPLA==
   dependencies:
-    "@tippy.js/react" "^3.1.1"
+    "@tippyjs/react" "^4.2.0"
     classnames "^2.2.6"
-    gatsby-link "^2.4.13"
     react-copy-to-clipboard "^5.0.2"
     react-icons "^3.10.0"
     react-spring "^8.0.27"
@@ -1418,6 +1417,11 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
+"@popperjs/core@^2.8.3":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.2.tgz#adea7b6953cbb34651766b0548468e743c6a2353"
+  integrity sha512-VZMYa7+fXHdwIq1TDhSXoVmSPEGM/aa+6Aiq3nVVJ9bXr24zScr+NlKFKC3iPljA7ho/GAZr+d2jOf5GIRC30Q==
+
 "@reach/alert@^0.1.2":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@reach/alert/-/alert-0.1.5.tgz#4da79add0055fa4295f51e5295ed3b80257e9153"
@@ -1496,13 +1500,12 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tippy.js/react@^3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@tippy.js/react/-/react-3.1.1.tgz#027e4595e55f31430741fe8e0d92aaddfbe47efd"
-  integrity sha512-KF45vW/jKh/nBXk/2zzTFslv/T46zOMkIoDJ56ymZ+M00yHttk58J5wZ29oqGqDIUnobWSZD+cFpbR4u/UUvgw==
+"@tippyjs/react@^4.2.0":
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/@tippyjs/react/-/react-4.2.5.tgz#9b5837db93a1cac953962404df906aef1a18e80d"
+  integrity sha512-YBLgy+1zznBNbx4JOoOdFXWMLXjBh9hLPwRtq3s8RRdrez2l3tPBRt2m2909wZd9S1KUeKjOOYYsnitccI9I3A==
   dependencies:
-    prop-types "^15.6.2"
-    tippy.js "^5.1.1"
+    tippy.js "^6.3.1"
 
 "@turist/fetch@^7.1.7":
   version "7.1.7"
@@ -5677,7 +5680,7 @@ gatsby-legacy-polyfills@^0.0.6:
   dependencies:
     core-js-compat "^3.6.5"
 
-gatsby-link@^2.4.13, gatsby-link@^2.4.16:
+gatsby-link@^2.4.16:
   version "2.4.16"
   resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.4.16.tgz#e0dda6c6e8450412dca94989f8d3d583d3734b83"
   integrity sha512-wsccuSOIAjhRDQRKmIj2+FUNR94QEBnELki0giN+lLKvWB3EO8mXjTIccXC0bMpe8VQcBlv3DHpUo72EAkkFAg==
@@ -9796,11 +9799,6 @@ pnp-webpack-plugin@^1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.16.0:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
-  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
-
 portfinder@^1.0.26:
   version "1.0.28"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.28.tgz#67c4622852bd5374dd1dd900f779f53462fac778"
@@ -12561,12 +12559,12 @@ tinycolor2@^1.4.1:
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
   integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
 
-tippy.js@^5.1.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-5.2.1.tgz#e08d7332c103a15e427124d710d881fca82365d6"
-  integrity sha512-66UT6JRVn3dXNCORE+0UvUK3JZqV/VhLlU6HTDm3FmrweUUFUxUGvT8tUQ7ycMp+uhuLAwQw6dBabyC+iKf/MA==
+tippy.js@^6.3.1:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.3.1.tgz#3788a007be7015eee0fd589a66b98fb3f8f10181"
+  integrity sha512-JnFncCq+rF1dTURupoJ4yPie5Cof978inW6/4S6kmWV7LL9YOSEVMifED3KdrVPEG+Z/TFH2CDNJcQEfaeuQww==
   dependencies:
-    popper.js "^1.16.0"
+    "@popperjs/core" "^2.8.3"
 
 tmp@^0.0.33:
   version "0.0.33"
