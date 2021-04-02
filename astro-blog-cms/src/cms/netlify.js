@@ -9,8 +9,9 @@ import BlogPostHeader from './components/BlogPostHeader';
 
 import s from './styles.module.css';
 
-const PostPreview = ({ entry, getAsset, widgetsFor }) => (
-  <>
+const PostPreview = ({ entry, getAsset, widgetFor }) => (
+  <div className={s.postContainer}>
+    {console.log(widgetFor('body'))}
     <div className={s.postHeader}>
       <BlogPostHeader
         entry={entry}
@@ -26,7 +27,7 @@ const PostPreview = ({ entry, getAsset, widgetsFor }) => (
             unified()
               .use(parse)
               .use(remark2react)
-              .processSync(widgetsFor('body')).result
+              .processSync(widgetFor('body')).result
           }
         </div>
       </Article>

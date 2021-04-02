@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
 
 const Date = ({ value, format, ...otherProps }) => (
   <time dateTime={value} {...otherProps}>
-    {value.toString()}
+    {dayjs(value).format(format)}
   </time>
 );
 

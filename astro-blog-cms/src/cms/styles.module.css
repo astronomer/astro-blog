@@ -6,6 +6,10 @@
 /* Root styles */
 @import "~@astronomer/spectra/dist/css/base.css";
 
+.postContainer {
+  background-color: var(--white10);
+}
+
 .body {
   display: flex;
 }
