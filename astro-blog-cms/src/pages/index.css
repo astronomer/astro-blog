@@ -56,6 +56,11 @@ button,
   -webkit-appearance: none !important;
 }
 
+.buttonGradient {
+  background: linear-gradient(90deg, var(--blue12) -7.69%, var(--blue09) 105.13%);
+  border: 2px solid var(--blue10);
+}
+
 li > code,
 p > code,
 p > a > code,

@@ -5,9 +5,18 @@
   background-position: center;
 }
 
+.imageWrapper {
+  position: relative;
+  display: block;
+  max-width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .image {
   height: auto;
   width: 100%;
+  vertical-align: middle;
 }
 
 .image,

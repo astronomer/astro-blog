@@ -9,7 +9,7 @@ import BlogImage from '../BlogImage';
 
 import s from './styles.module.css';
 
-const BlogLatestPost = ({ entry, getAsset, orientation = 'imageLeft' }) => {
+const BlogLatestPost = ({ entry, getAsset, orientation = 'imageRight' }) => {
   const hero = getAsset(entry.getIn(['data', 'heroImagePath']));
   return (
     <>

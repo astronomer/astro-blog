@@ -1,21 +1,23 @@
 import React from "react"
 import './index.css'
+import { Link } from 'gatsby';
 import { Button, AstroLogo } from "@astronomer/spectra";
 
 export default function Home() {
   return (
-    <body>
+    <div>
       <div className='top'>
         <AstroLogo />
       </div>
       <div className='button'>
         <Button
-          as="button"
+          as={Link}
           label="Continue to Blog CMS"
-          to="/admin/"
-          type="external"
+          style={{ color: 'white' }}
+          to="/admin"
+          className="buttonGradient"
         />
       </div>
-    </body>
+    </div>
   )
 }
