@@ -60,16 +60,18 @@ blockquote p {
     } */
 
 
-  }
+}
+
 .article li code {
   position: relative;
   margin-bottom: 0;
 }
 
-
 article img {
-  max-width: 800px;
+  max-width: 890px;
   border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .article p > img {
