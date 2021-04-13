@@ -13,7 +13,7 @@ const BlogLatestPost = ({ entry, getAsset, orientation = 'imageRight' }) => {
   const hero = getAsset(entry.getIn(['data', 'heroImagePath']));
   return (
     <>
-      <div className={cn(s.postHeader, s[orientation])}>
+      <div className={cn(s.postHeader, s.imageRight)}>
         {hero && (
           <div className={s.heroImage}>
             <Link to={entry.getIn(['data', 'slug'])}>

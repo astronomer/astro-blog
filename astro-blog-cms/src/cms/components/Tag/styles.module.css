@@ -18,10 +18,9 @@
   border-bottom: 0 !important;
   text-decoration: none;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
 
-  &:hover,
-  &:focus {
-    color: var(--white12) !important;
-    background-color: var(--c-status-neutral) !important;
-  }
+.link:hover, .link:focus {
+  color: var(--white12) !important;
+  background-color: var(--c-status-neutral) !important;
 }

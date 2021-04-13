@@ -4,7 +4,7 @@
   padding-top: 2rem;
 }
 
-.postHeader .imageRight {
+.imageRight {
   flex-direction: row-reverse;
 }
 
