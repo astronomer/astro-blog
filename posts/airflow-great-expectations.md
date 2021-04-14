@@ -10,7 +10,6 @@ date: 2020-11-23T00:00:00.000Z
 ---
 
 > You can now find the [Great Expectations Provider](https://registry.astronomer.io/providers/great-expectations) on the [Astronomer Registry](https://registry.astronomer.io), the discovery and distribution hub for Apache Airflow integrations created to aggregate and curate the best bits of the ecosystem.
-
 ## A Short History of Airflow Providers
 
 At Astronomer, we see Apache Airflow used in a variety of contexts. Whether it’s for ETL, machine learning (ML), CI, or analytics, we often work with folks extending Airflow to remove complexity from their end-to-end solution. An important driver of Airflow’s trusted adoption in the data orchestration space is the extensibility it brings both to teams at the start of their data journey as well as those operating at massive scale.  That extensibility is in large part due to the rich open-source integration ecosystem that surrounds Airflow and allows users to easily interact with third-party APIs and data systems. These integrations have always existed as a core part of the Airflow codebase and can be categorized into three major buckets:
