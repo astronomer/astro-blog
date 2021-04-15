@@ -3,7 +3,7 @@ slug: cloud-agronomics
 title: How Cloud Agronomics Processed 5x More Data with Airflow
 description: "Astronomer Platform integration with Microsoft Azure for an AgTech
   startup confronting climate change one pipeline at a time. "
-heroImagePath: ../assets/cloudagronomics.png
+heroImagePath: ../assets/cloudag2.png
 authors:
   - Ula Rydiger
 date: 2021-04-15T09:20:33.797Z
