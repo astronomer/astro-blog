@@ -8,5 +8,3 @@ authors:
   - Brandon Medina
 date: 2021-04-14T17:58:40.803Z
 ---
-
-Some content!
