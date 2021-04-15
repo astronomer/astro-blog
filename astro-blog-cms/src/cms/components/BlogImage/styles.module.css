@@ -1,0 +1,26 @@
+.imageBG {
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.imageWrapper {
+  position: relative;
+  display: block;
+  max-width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.image,
+.imageBG {
+  border-radius: 10px;
+  overflow: hidden;
+}
