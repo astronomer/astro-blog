@@ -3,8 +3,8 @@ import React from 'react';
 import MDX from 'mdx-scoped-runtime';
 import ReactPrismjs from '@uiw/react-prismjs';
 
-import Article from './components/Article';
-import BlogPostHeader from './components/BlogPostHeader';
+import Article from './components/ArticleCMS';
+import BlogPostHeader from './components/BlogPostHeaderCMS';
 
 import s from './styles.module.css';
 
