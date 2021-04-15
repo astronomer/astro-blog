@@ -8,11 +8,11 @@ authors:
   - Ula Rydiger
 date: 2021-04-15T09:20:33.797Z
 ---
-\- 5x bigger data volume being processed in the same time period
-
-\- 4x more structured data pipelines within the organization
-
-\- 10x higher YoY Annual Recurring Revenue in 2021 compared to 2020
+> - 5x bigger data volume being processed in the same time period
+>
+> - 4x more structured data pipelines within the organization
+>
+> - 10x higher YoY Annual Recurring Revenue in 2021 compared to 2020
 
 Key product values:
 
