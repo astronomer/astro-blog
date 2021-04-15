@@ -61,6 +61,7 @@ Additionally, Cloud Agronomics gets ongoing support for their data engineering t
 
 > “Astronomer makes Airflow so easy to use and get started with” — says Benjamin — “The abstractions they have provided on top of that — nobody holds a candle.”
 
+
 > “Astronomer’s expertise in working with advanced Airflow features and integrations such as Kubernetes functionality helped jumpstart our transition to Airflow. It would have been significantly harder to approach these problems on our own” — says Annie Weinmann, Data Engineer at Cloud Agronomics.
 
 Airflow allows Cloud Agronomics to automate their data pipelines and work management to provide a reliable way to operate their business at scale. They can now process discrete, smaller batches of data, saving compute time and making reprocessing easier, ultimately saving them time and money.
