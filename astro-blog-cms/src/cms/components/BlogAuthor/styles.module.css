@@ -1,0 +1,27 @@
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author + .author {
+  margin-top: 0.5rem;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #39354e;
+  font-size: 10px;
+  color: #e2e0df;
+  margin-right: 0.5rem;
+}
+
+.authorName {
+  color: #767574;
+  font-size: 14px;
+}

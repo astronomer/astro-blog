@@ -1,0 +1,25 @@
+/* Variables */
+@import "~@astronomer/spectra/dist/css/fonts/goodSans.css";
+@import "~@astronomer/spectra/dist/css/variables.css";
+@import "~@astronomer/spectra/dist/css/mixins.css";
+
+/* Root styles */
+@import "~@astronomer/spectra/dist/css/base.css";
+
+.postContainer {
+  background-color: var(--white10);
+}
+
+.body {
+  display: flex;
+}
+
+.sidebar {
+  display: block;
+  flex: 0 0 25px;
+  padding-left: 3rem;
+}
+
+.postBody {
+  left: -25px;
+}
