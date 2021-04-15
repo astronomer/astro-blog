@@ -47,10 +47,6 @@ To solve these problems, the client looked into different solutions that would:
 
 Apache Airflow caught their attention as a lot of Cloud Agronomics’ data engineers are Python experts. Additionally, Airflow has a massive community behind it, and therefore, easily accessible support. After looking into many similar tools, choosing Apache Airflow was a no-brainer as it turned out to be the most mature, scalable, flexible, and simplest one to use.
 
-![A DAG flow design prepared during one of the brainstorming sessions with the client](../assets/graphic_cloud.png "A DAG flow design prepared during one of the brainstorming sessions with the client")
-
-*A DAG flow design prepared during one of the brainstorming sessions with the client*
-
 ## Astronomer on Microsoft Azure
 
 Getting Airflow up and running and managing it on your own is difficult, which is why the company came to us for help. Having already been using our SaaS cloud service (Astronomer Cloud), they wanted to leverage the power of Microsoft Azure and [their partnership with Microsoft](https://www.microsoft.com/en-us/ai/ai-for-earth-cloud-agronomics) to run the Astronomer Platform in their own cloud. 
@@ -60,9 +56,7 @@ The switch went smoothly as our platform runs natively on Azure Kubernetes Servi
 Additionally, Cloud Agronomics gets ongoing support for their data engineering team with the Astronomer Platform.
 
 > “Astronomer makes Airflow so easy to use and get started with,” says Benjamin, “The abstractions they have provided on top of that — nobody holds a candle.”
-
-
-
+>
 > “Astronomer’s expertise in working with advanced Airflow features and integrations such as Kubernetes functionality helped jumpstart our transition to Airflow. It would have been significantly harder to approach these problems on our own,” says Annie Weinmann, Data Engineer at Cloud Agronomics.
 
 Airflow allows Cloud Agronomics to automate their data pipelines and work management to provide a reliable way to operate their business at scale. They can now process discrete, smaller batches of data, saving compute time and making reprocessing easier, ultimately saving them time and money.
