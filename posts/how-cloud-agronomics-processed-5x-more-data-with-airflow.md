@@ -8,11 +8,9 @@ authors:
   - Ula Rydiger
 date: 2021-04-15T09:20:33.797Z
 ---
-> - 5x bigger data volume being processed in the same time period
->
-> - 4x more structured data pipelines within the organization
->
-> - 10x higher YoY Annual Recurring Revenue in 2021 compared to 2020
+> * 5x bigger data volume being processed in the same time period
+> * 4x more structured data pipelines within the organization
+> * 10x higher YoY Annual Recurring Revenue in 2021 compared to 2020
 
 Key product values:
 
@@ -47,7 +45,7 @@ To solve these problems, the client looked into different solutions that would:
 
 Apache Airflow caught their attention as a lot of Cloud Agronomics’ data engineers are Python experts. Additionally, Airflow has a massive community behind it, and therefore, easily accessible support. After looking into many similar tools, choosing Apache Airflow was a no-brainer as it turned out to be the most mature, scalable, flexible, and simplest one to use.
 
-![A DAG flow design prepared during one of the brainstorming sessions with the client](../assets/graphic_1-1-.jpg "A DAG flow design prepared during one of the brainstorming sessions with the client")
+![A DAG flow design prepared during one of the brainstorming sessions with the client](../assets/graphic_cloud.png "A DAG flow design prepared during one of the brainstorming sessions with the client")
 
 *A DAG flow design prepared during one of the brainstorming sessions with the client*
 
