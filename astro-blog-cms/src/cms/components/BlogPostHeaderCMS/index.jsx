@@ -2,10 +2,10 @@ import React from 'react';
 import cn from 'classnames';
 import { Link } from 'gatsby';
 
-import Date from '../Date';
-import Tag from '../Tag';
-import BlogAuthor from '../BlogAuthor';
-import BlogImage from '../BlogImage';
+import Date from '../DateCMS';
+import Tag from '../TagCMS';
+import BlogAuthor from '../BlogAuthorCMS';
+import BlogImage from '../BlogImageCMS';
 
 import s from './styles.module.css';
 
