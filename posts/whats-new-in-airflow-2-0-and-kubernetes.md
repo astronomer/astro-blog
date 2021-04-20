@@ -199,11 +199,12 @@ k = KubernetesPodOperator(
 ```
 
 ## \
+
 KEDA Autoscaler 
 
-With Kubernetes Executer for every single task you launch, Airflow speaks to the Kubernetes API and launches a pod for that task and runs that pod to completion. This works fantastic for small to medium scale use cases. For really large scale cases, with thousands of tasks at a time, the Kubernetes Executor can become unwieldy. 
+With KubernetesExecutor for every single task you launch, Airflow speaks to the Kubernetes API and launches a pod for that task and runs that pod to completion. This works fantastic for small to medium scale use cases. For really large scale cases, with thousands of tasks at a time, the Kubernetes Executor can become unwieldy. 
 
-![Kubernetes Executor ](../assets/kube1.png)
+![KubernetesExecutor](../assets/kube1.png)
 
 The KEDA Autoscaler allows you to create custom autoscalers. At Astronomer we created a PostgreSQL autoscaler and donated it back to the KEDA project. 
 
