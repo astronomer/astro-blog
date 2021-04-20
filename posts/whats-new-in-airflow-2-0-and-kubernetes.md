@@ -2,7 +2,7 @@
 slug: whats-new-in-airflow-2-0-and-kubernetes
 title: What's New In Airflow 2.0 and Kubernetes
 description: "Learn about the improved Airflow 2.0 and Kubernetes updates. "
-heroImagePath: ../assets/kubernetes.png
+heroImagePath: ../assets/webinark8s.png
 authors:
   - Eric Griffing
 date: 2021-04-19T23:04:11.873Z
