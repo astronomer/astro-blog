@@ -20,11 +20,11 @@ Of course, the KubernetesExecutor is not optimal for all use cases. Since it sta
 
 ## New KubernetesExecutor Features
 
-### **The pod_template_file**
+### **The pod\_template\_file**
 
-In Airflow 1.10.12, we introduced the pod_template_file. This new way of storing all Kubernetes configs involved a rewrite of the KubernetesExecutor internals. However, this change has been worth it as Airflow admins now can use the entire Kubernetes API when generating templates for their data engineers.
+In Airflow 1.10.12, we introduced the pod\_template\_file. This new way of storing all Kubernetes configs involved a rewrite of the KubernetesExecutor internals. However, this change has been worth it as Airflow admins now can use the entire Kubernetes API when generating templates for their data engineers.
 
-This change also opens the door to the ability to maintain multiple pod_template_files in future Airflow releases. Users will be able to pick the pod_template_file that best matches their use case, much in the same way that users of the CeleryExecutor select separate queues.
+This change also opens the door to the ability to maintain multiple pod\_template\_files in future Airflow releases. Users will be able to pick the pod_template_file that best matches their use case, much in the same way that users of the CeleryExecutor select separate queues.
 
 This feature of launching pods based on pod_template_files merged with the 2.0 addition of fast follow task execution means that we can launch pods in Kubernetes that don't need to terminate after a single task executes. Instead, these pods can pick up new tasks much in the way that Celery workers do. The result is a significant speedup of task execution for the KubernetesExecutor.
 
@@ -34,13 +34,13 @@ Airflow 2.0 offers a new executor_config that is significantly more flexible to 
 
 It is worth noting that the legacy executor_config values will still work in Airflow 2.0 to minimize the breaking changes for migration. However, these will be deprecated and removed in a future version, so we recommend switching over as soon as possible.
 
-### **The pod_mutation_hook**
+### **The pod\_mutation\_hook**
 
-As introduced in 1.10.12, the new pod_mutation_hook takes a Kubernetes V1Pod object as a parameter and allows the Airflow admin to modify all pods using Kubernetes API before Airflow releases these pods. This hook applies to both pods created by the KubernetesExecutor and pods created by the KubernetePodOperator.
+As introduced in 1.10.12, the new pod\_mutation\_hook takes a Kubernetes V1Pod object as a parameter and allows the Airflow admin to modify all pods using Kubernetes API before Airflow releases these pods. This hook applies to both pods created by the KubernetesExecutor and pods created by the KubernetePodOperator.
 
 ### **A Simplified Design**
 
-We've now gone through the three major features of the KubernetesExecutor. We've seen how the pod_template_file gives full flexibility for creating initial pod templates, how the Kubernetes pod_override allows users to modify tasks on the fly, and how the pod_mutation_hook gives admin overrides before a pod is released. However, what I'm most excited about with these new features is how beautifully they work in a simplified design.
+We've now gone through the three major features of the KubernetesExecutor. We've seen how the pod\_template\_file gives full flexibility for creating initial pod templates, how the Kubernetes pod_override allows users to modify tasks on the fly, and how the pod_mutation_hook gives admin overrides before a pod is released. However, what I'm most excited about with these new features is how beautifully they work in a simplified design.
 
 Below we can see a diagram of how the architecture for how the KubernetesExecutor used to work.
 
