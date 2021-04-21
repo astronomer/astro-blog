@@ -3,7 +3,7 @@ slug: new-kubernetesexecutor
 title: The New KubernetesExecutor
 description: We give you a tour of the new features in the KubernetesExecutor
   2.0. Spoiler alert — it's faster, more flexible, and easier to understand.
-heroImagePath: ../assets/Danielk8s.jpg
+heroImagePath: ../assets/Danielk8s.png
 authors:
   - Daniel Imberman
 date: 2021-04-21T08:38:32.216Z
