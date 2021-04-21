@@ -3,7 +3,7 @@ slug: new-kubernetesexecutor
 title: The New KubernetesExecutor
 description: We give you a tour of the new features in the KubernetesExecutor
   2.0. Spoiler alert — it's faster, more flexible, and easier to understand.
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/Danielk8s.png
 authors:
   - Daniel Imberman
 date: 2021-04-21T08:38:32.216Z
@@ -44,13 +44,17 @@ We've now gone through the three major features of the KubernetesExecutor. We've
 
 Below we can see a diagram of how the architecture for how the KubernetesExecutor used to work.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cb145b0b-1bf7-4e77-ad15-5178b0d21c7c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cb145b0b-1bf7-4e77-ad15-5178b0d21c7c/Untitled.png)
+![A diagram showing how the architecture of the KubernetesExecutor used to work.](../assets/imagek8s1.png "A diagram showing how the architecture of the KubernetesExecutor used to work.")
+
+*[Source](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cb145b0b-1bf7-4e77-ad15-5178b0d21c7c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210421%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210421T085346Z&X-Amz-Expires=86400&X-Amz-Signature=fc0743407d77fbb814224a0aef9b7782fb38b3d5773dc53e7d89e4161032e3eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)*
 
 Looking back, it kind of feels like a factory that piece-by-piece creates a pod before launching it. The pod goes through at least four stages and three classes before it is serialized and launched. This design leaves lots of room for error and confusion.
 
 Let's compare that with design.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9feac212-cc51-4191-8201-af19d5470292/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9feac212-cc51-4191-8201-af19d5470292/Untitled.png)
+![Design of the old KubernetesExecutor.](../assets/imagek8s2.png "Design of the old KubernetesExecutor.")
+
+*[Source](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9feac212-cc51-4191-8201-af19d5470292/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210421%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210421T085241Z&X-Amz-Expires=86400&X-Amz-Signature=8892614ba0bb2af8908c54268997e939fb0de12d1a837e50316123409b4651b5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)*
 
 This new design is far more straightforward. Now we are merely taking an existing pod spec, allowing for one round of user overrides, and a round of admin overrides before launch. All three users are modifying the same V1pod object, which leads to better consistency across the organization.
 
