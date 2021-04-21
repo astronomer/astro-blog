@@ -22,25 +22,25 @@ Of course, the KubernetesExecutor is not optimal for all use cases. Since it sta
 
 ### **The pod\_template\_file**
 
-In Airflow 1.10.12, we introduced the pod\_template\_file. This new way of storing all Kubernetes configs involved a rewrite of the KubernetesExecutor internals. However, this change has been worth it as Airflow admins now can use the entire Kubernetes API when generating templates for their data engineers.
+In Airflow 1.10.12, we introduced the `pod_template_file`. This new way of storing all Kubernetes configs involved a rewrite of the KubernetesExecutor internals. However, this change has been worth it as Airflow admins now can use the entire Kubernetes API when generating templates for their data engineers.
 
-This change also opens the door to the ability to maintain multiple pod\_template\_files in future Airflow releases. Users will be able to pick the pod_template_file that best matches their use case, much in the same way that users of the CeleryExecutor select separate queues.
+This change also opens the door to the ability to maintain multiple `pod_template_files` in future Airflow releases. Users will be able to pick the `pod_template_file` that best matches their use case, much in the same way that users of the CeleryExecutor select separate queues.
 
-This feature of launching pods based on pod_template_files merged with the 2.0 addition of fast follow task execution means that we can launch pods in Kubernetes that don't need to terminate after a single task executes. Instead, these pods can pick up new tasks much in the way that Celery workers do. The result is a significant speedup of task execution for the KubernetesExecutor.
+This feature of launching pods based on `pod_template_files` merged with the 2.0 addition of fast follow task execution means that we can launch pods in Kubernetes that don't need to terminate after a single task executes. Instead, these pods can pick up new tasks much in the way that Celery workers do. The result is a significant speedup of task execution for the KubernetesExecutor.
 
 ### **The executor_config**
 
-Airflow 2.0 offers a new executor_config that is significantly more flexible to the user. Instead of being constrained by a Python dictionary with limited feature access, users can now use the entire Kubernetes API. We have decided to change the key value of the executor_config dictionary to "podOverride". We simultaneously thought that this key is more descriptive and that it leaves open the ability to add more options in the future.
+Airflow 2.0 offers a new `executor_config` that is significantly more flexible to the user. Instead of being constrained by a Python dictionary with limited feature access, users can now use the entire Kubernetes API. We have decided to change the key value of the `executor_config` dictionary to "podOverride". We simultaneously thought that this key is more descriptive and that it leaves open the ability to add more options in the future.
 
-It is worth noting that the legacy executor_config values will still work in Airflow 2.0 to minimize the breaking changes for migration. However, these will be deprecated and removed in a future version, so we recommend switching over as soon as possible.
+It is worth noting that the legacy `executor_confi`g values will still work in Airflow 2.0 to minimize the breaking changes for migration. However, these will be deprecated and removed in a future version, so we recommend switching over as soon as possible.
 
 ### **The pod\_mutation\_hook**
 
-As introduced in 1.10.12, the new pod\_mutation\_hook takes a Kubernetes V1Pod object as a parameter and allows the Airflow admin to modify all pods using Kubernetes API before Airflow releases these pods. This hook applies to both pods created by the KubernetesExecutor and pods created by the KubernetePodOperator.
+As introduced in 1.10.12, the new `pod_mutation_hook` takes a Kubernetes V1Pod object as a parameter and allows the Airflow admin to modify all pods using Kubernetes API before Airflow releases these pods. This hook applies to both pods created by the KubernetesExecutor and pods created by the KubernetePodOperator.
 
 ### **A Simplified Design**
 
-We've now gone through the three major features of the KubernetesExecutor. We've seen how the pod\_template\_file gives full flexibility for creating initial pod templates, how the Kubernetes pod_override allows users to modify tasks on the fly, and how the pod_mutation_hook gives admin overrides before a pod is released. However, what I'm most excited about with these new features is how beautifully they work in a simplified design.
+We've now gone through the three major features of the KubernetesExecutor. We've seen how the `pod_template_file` gives full flexibility for creating initial pod templates, how the Kubernetes `pod_override` allows users to modify tasks on the fly, and how the `pod_mutation_hook` gives admin overrides before a pod is released. However, what I'm most excited about with these new features is how beautifully they work in a simplified design.
 
 Below we can see a diagram of how the architecture for how the KubernetesExecutor used to work.
 
@@ -62,9 +62,9 @@ This new design is far more straightforward. Now we are merely taking an existin
 
 All of the features described above are clearly impactful for Airflow admins or DevOps engineers, but some of these new features are designed to be directly leveraged by data engineers as well.
 
-The biggest change for a data engineer who writes DAGs is likely the new executor_config with podOverride. Prior to this change, if an engineer wanted to override Kubernetes system defaults for specific tasks in their DAGs, they were limited in which features they could access without needing to use the KubernetesPodOperator to do so. Using the KubernetesPodOperator involved creating and building an entire Docker image to run each task, which could add complexity and effort. Now, with the new executor_config, engineers can access the entire Kubernetes API and use the podOverride to do things like mount volumes, add environment variables, add labels, set node affinities, etc. using any operator they wish.
+The biggest change for a data engineer who writes DAGs is likely the new `executor_config` with podOverride. Prior to this change, if an engineer wanted to override Kubernetes system defaults for specific tasks in their DAGs, they were limited in which features they could access without needing to use the KubernetesPodOperator to do so. Using the KubernetesPodOperator involved creating and building an entire Docker image to run each task, which could add complexity and effort. Now, with the new `executor_config`, engineers can access the entire Kubernetes API and use the podOverride to do things like mount volumes, add environment variables, add labels, set node affinities, etc. using any operator they wish.
 
-Take for example a case where we want to add a label, and an environment variable that will be used in a Python function to the pod running our task. With the new executor_config, we can actually pass this podOverride in super cleanly using the PythonOperator with the new TaskFlow API. That DAG would look something like this:
+Take for example a case where we want to add a label, and an environment variable that will be used in a Python function to the pod running our task. With the new `executor_config`, we can actually pass this podOverride in super cleanly using the PythonOperator with the new TaskFlow API. That DAG would look something like this:
 
 ```python
 from airflow.decorators import dag, task
