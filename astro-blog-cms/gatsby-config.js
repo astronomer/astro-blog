@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-module.exports = {
-  /* Your site config here */
+ module.exports = {
   plugins: ['gatsby-plugin-netlify-cms'],
-}
+ }
