@@ -4,7 +4,7 @@ title: How Can the Apache Airflow Certification Boost Your Career?
 description: Boost your career and learn to run a data pipeline by getting
   Apache Airflow certified with the Astronomer Certification for Apache Airflow
   Fundamentals.
-heroImagePath: ../assets/certification.png
+heroImagePath: ../assets/certfied.png
 authors:
   - Marc Lamberti
   - Ula Rydiger
