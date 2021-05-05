@@ -1,6 +1,6 @@
 ---
 slug: get-apache-airflow-certified
-title: Get Apache Airflow Certified! A Talk with Marc Lamberti
+title: How Can the Apache Airflow Certification Boost Your Career?
 description: Boost your career and learn to run a data pipeline by getting
   Apache Airflow certified with the Astronomer Certification for Apache Airflow
   Fundamentals.
