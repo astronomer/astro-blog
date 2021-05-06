@@ -6,8 +6,8 @@ description: Boost your career and learn to run a data pipeline by getting
   Fundamentals.
 heroImagePath: ../assets/certfied.png
 authors:
-  - Marc Lamberti-Head of Customer Training
-  - Ula Rydiger-Content Marketing Manager
+  - Marc Lamberti
+  - Ula Rydiger
 date: 2021-05-05T12:15:38.657Z
 ---
 > **3K<** exam attendees 
