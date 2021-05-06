@@ -16,7 +16,7 @@ date: 2021-05-05T12:15:38.657Z
 >
 > **700<** certifications issued (and growing!)
 
-Being certified for a tool that matters to many companies can really boost your career. Take Apache Airflow for example[. Mastering Airflow is one of the most in-demand and high-paid skills in the job market.](https://www.credly.com/skills/airflow)
+Being certified for a tool that matters to many companies can really boost your career. Take Apache Airflow for example[. Mastering Airflow is one of the most in-demand skills in the job market.](https://www.credly.com/skills/airflow)
 
 Today we talk to Marc Lamberti — Head of Customer Training at Astronomer and creator of [the Astronomer Certification for Apache Airflow Fundamentals. ](https://www.astronomer.io/certification/)He wants engineers like you to be able to jump into Airflow as easily and smoothly as possible and make sure they have everything they need to get started.
 
