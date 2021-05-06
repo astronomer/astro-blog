@@ -11,7 +11,9 @@ authors:
 date: 2021-05-05T12:15:38.657Z
 ---
 > **3K<** exam attendees 
+>
 > **3K<** preparation course attendees
+>
 > **700<** certifications issued (and growing!)
 
 Being certified for a tool that matters to many companies can really boost your career. Take Apache Airflow for example[. Mastering Airflow is one of the most in-demand and highest-paid skills in the job market.](https://www.credly.com/skills/airflow)
