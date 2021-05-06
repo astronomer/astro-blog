@@ -1,7 +1,7 @@
 ---
 slug: get-apache-airflow-certified
 title: Advance your career with Airflow Training & Certification
-description: Build your Apache Airflow® knowledge and expertise in the field of
+description: Build your Apache Airflow knowledge and expertise in the field of
   data orchestration by getting Astronomer Certified.
 heroImagePath: ../assets/certfied.png
 authors:
@@ -10,7 +10,7 @@ authors:
 date: 2021-05-05T12:15:38.657Z
 ---
 # Becoming Apache Airflow Certified
-Learn Apache Airflow® from Astronomer, the commercial developer of the Apache Airflow project. 
+Learn Apache Airflow from Astronomer, the commercial developer of the Apache Airflow project. 
 
 Being certified for Apache Airflow, which is an integral technology used by many companies, can help boost your career. Airflow has quickly become one of the [most in-demand skills in the job market.](https://www.credly.com/skills/airflow)
 
