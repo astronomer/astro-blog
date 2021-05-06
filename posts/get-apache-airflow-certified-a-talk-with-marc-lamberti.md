@@ -16,7 +16,7 @@ date: 2021-05-05T12:15:38.657Z
 >
 > **700<** certifications issued (and growing!)
 
-Being certified for a tool that matters to many companies can really boost your career. Take Apache Airflow for example[. Mastering Airflow is one of the most in-demand and highest-paid skills in the job market.](https://www.credly.com/skills/airflow)
+Being certified for a tool that matters to many companies can really boost your career. Take Apache Airflow for example[. Mastering Airflow is one of the most in-demand skills in the job market.](https://www.credly.com/skills/airflow)
 
 Today we talk to Marc Lamberti — Head of Customer Training at Astronomer and creator of [the Astronomer Certification for Apache Airflow Fundamentals. ](https://www.astronomer.io/certification/)He wants engineers like you to be able to jump into Airflow as easily and smoothly as possible and make sure they have everything they need to get started.
 
@@ -38,11 +38,7 @@ First of all, it’s a great way to assess and evaluate your skills, to know whe
 
 Usually, people are worried about whether they know enough to pass the certification and you might be asking the same question. Let me tell you, there’s everything you need in the Apache Airflow preparation course. I made it with engineers like you in mind. Also, people ask if they can retry taking the certification if they fail the first time. Luckily for them, they can retake the exam after one month for free. And finally, they ask when the next certification will come. For now, I can only say we’re working on it, so stay tuned;)
 
-
-
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6795036831458107392" height="770" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-
-
 
 ## Why did we create a certification program for Apache Airflow at Astronomer?
 
