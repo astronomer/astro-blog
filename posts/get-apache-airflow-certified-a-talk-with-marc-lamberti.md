@@ -1,6 +1,6 @@
 ---
 slug: get-apache-airflow-certified
-title: Validate your Airflow Skills With the Astronomer Certification
+title: Validate Your Airflow Skills With the Astronomer Certification
 description: Boost your career and learn to run a data pipeline by getting
   Apache Airflow certified with the Astronomer Certification for Apache Airflow
   Fundamentals.
