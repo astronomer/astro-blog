@@ -36,6 +36,8 @@ First of all, it’s a great way to assess and evaluate your skills, to know whe
 
 **<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6795036831458107392" height="800" width="80%" frameborder="0" allowfullscreen="" scrolling="no" title="Embedded post"></iframe>**
 
+*[See what else people are saying about the Astronomer Certification for Apache Airflow Fundamentals!](https://www.airflowcertified.com/)*
+
 ## Who should take the preparation course?
 
 I recommend the certification for Airflow users who have been using the tool for at least 3-4 months, and are looking to prove and enhance their basic knowledge and skills of the project. However, the preparation course is not only designed for passing the certification but also for people who are entirely new to Apache Airflow. Therefore, if you’re a beginner and want to learn how to get started with Airflow in only 3 hours—the prep course is for you.
