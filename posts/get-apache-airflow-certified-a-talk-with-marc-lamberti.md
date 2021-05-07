@@ -1,8 +1,9 @@
 ---
 slug: get-apache-airflow-certified
-title: Advance your career with Airflow Training & Certification
-description: Build your Apache Airflow knowledge and expertise in the field of
-  data orchestration by getting Astronomer Certified.
+title: Validate your Apache Airflow Skills with the Astronomer Certification
+description: Boost your career and learn to run a data pipeline by getting
+  Apache Airflow certified with the Astronomer Certification for Apache Airflow
+  Fundamentals.
 heroImagePath: ../assets/certfied.png
 authors:
   - Marc Lamberti
@@ -14,8 +15,6 @@ date: 2021-05-05T12:15:38.657Z
 Learn Apache Airflow from Astronomer, the commercial developer of the Apache Airflow project. 
 
 Being certified for Apache Airflow, which is an integral technology used by many companies, can help boost your career. Airflow has quickly become one of the [most in-demand skills in the job market.](https://www.credly.com/skills/airflow)
-
-## Why get Apache Airflow Certified by Astronomer?
 
 > **3,000+** exams registrations
 >
@@ -30,8 +29,6 @@ We talked with Marc Lamberti — Head of Customer Training at Astronomer and cre
 ## What is the goal for the Astronomer Certification for Apache Airflow Fundamentals?
 
 The goal of the course and exam is for engineers to be able to show that they have the ability to create functional data pipelines; they know how to get started with Airflow, how to run a data pipeline, run different tasks and monitor them. It gives you the fundamental knowledge to be able to move forward in your Apache Airflow career and proves to companies that you are able to jump on Airflow right away.
-
-Visit Airflowcertified.com to view current
 
 ## What are the key benefits of the certification?
 
@@ -62,7 +59,5 @@ I’ve received great feedback so far. Most of the people are very happy with th
 Right now Airflow is a hot topic and companies are adopting it at a great pace. This is why, if you’re an Airflow engineer it’s important to get certified to show them that you can use it. Apache Airflow, after all, is a central piece in a great deal of data stacks. 
 
 **<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6794578900199575553" height="800" width="80%" frameborder="0" allowfullscreen="" scrolling="no" title="Embedded post"></iframe>**
-
-## Ready to get started?
 
 Learn more about Astronomer's Airflow Certifications and sign up [here](https://academy.astronomer.io/).
