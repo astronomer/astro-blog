@@ -60,4 +60,4 @@ Right now Airflow is a hot topic and companies are adopting it at a great pace. 
 
 **<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6794578900199575553" height="800" width="80%" frameborder="0" allowfullscreen="" scrolling="no" title="Embedded post"></iframe>**
 
-Learn more about Astronomer's Airflow Certifications and sign up [here](https://academy.astronomer.io/).
+[Learn more about Astronomer's Airflow Certifications and sign up here.](https://academy.astronomer.io/)
