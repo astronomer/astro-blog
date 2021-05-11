@@ -50,7 +50,6 @@ As a result, Airflow + Ray users will know the code they are launching and have 
 
 To show the power of this integration, let’s start our data science pipeline where all data science pipelines start: a Jupyter notebook.
 
-
 ## Training an XGBoost model with Ray in a notebook
 
 In this example, we’ve created a basic Jupyter notebook model that pulls the HIGGS dataset, splits training and testing data, and creates/validates a model using the XGBoost on Ray, which scales XGBoost training onto a cluster using Ray. Everything here can run locally on a user’s laptop or via a remote Ray cluster with minimal work. This stack handles the experimentation aspect of model building very well, and we can now dive into how to turn his experiment into a production-ready Airflow DAG.
@@ -78,71 +77,71 @@ To convert our ML notebook to an Airflow DAG using the Ray decorator, we complet
 
 2. Turn each logical unit of work into its own Python function: 
 
-```python
-@ray.remote
-def train_model(
-        data
-):
-    train_df, validation_df = data
-    evallist = [(validation_df, 'eval')]
-    evals_result = {}
-    config = {
-        "tree_method": "hist",
-        "eval_metric": ["logloss", "error"],
-    }
-    write("Start training")
-    bst = xgboost_ray.train(
-        params=config,
-        dtrain=train_df,
-        evals_result=evals_result,
-        ray_params=xgb.RayParams(max_actor_restarts=1, num_actors=8, cpus_per_actor=2),
-        num_boost_round=100,
-        evals=evallist)
-    return bst
-```
+    ```python
+    @ray.remote
+    def train_model(
+            data
+    ):
+        train_df, validation_df = data
+        evallist = [(validation_df, 'eval')]
+        evals_result = {}
+        config = {
+            "tree_method": "hist",
+            "eval_metric": ["logloss", "error"],
+        }
+        write("Start training")
+        bst = xgboost_ray.train(
+            params=config,
+            dtrain=train_df,
+            evals_result=evals_result,
+            ray_params=xgb.RayParams(max_actor_restarts=1, num_actors=8, cpus_per_actor=2),
+            num_boost_round=100,
+            evals=evallist)
+        return bst
+    ```
 
 3. Add the `@ray_task` decorator to each of these functions. 
 
-```python
-@ray_task(**task_args)
-def train_model(
-        data
-):
-    train_df, validation_df = data
-    evallist = [(validation_df, 'eval')]
-    evals_result = {}
-    config = {
-        "tree_method": "hist",
-        "eval_metric": ["logloss", "error"],
-    }
-    bst = xgb.train(
-        params=config,
-        dtrain=train_df,
-        evals_result=evals_result,
-        ray_params=xgb.RayParams(max_actor_restarts=1, num_actors=8, cpus_per_actor=2),
-        num_boost_round=100,
-        evals=evallist)
-    return bst
-```
+    ```python
+    @ray_task(**task_args)
+    def train_model(
+            data
+    ):
+        train_df, validation_df = data
+        evallist = [(validation_df, 'eval')]
+        evals_result = {}
+        config = {
+            "tree_method": "hist",
+            "eval_metric": ["logloss", "error"],
+        }
+        bst = xgb.train(
+            params=config,
+            dtrain=train_df,
+            evals_result=evals_result,
+            ray_params=xgb.RayParams(max_actor_restarts=1, num_actors=8, cpus_per_actor=2),
+            num_boost_round=100,
+            evals=evallist)
+        return bst
+    ```
 
 4. Create a DAG function with the logical flow of data
 
-```python
-@dag(default_args=default_args, schedule_interval=None, start_date=days_ago(2), tags=['finished-modin-example'])
-def task_flow_xgboost_modin():
-    build_raw_df = load_dataframe()
-    data = create_data(build_raw_df)
-    trained_model = train_model(data)
+    ```python
+    @dag(default_args=default_args, schedule_interval=None, start_date=days_ago(2), tags=['finished-modin-example'])
+    def task_flow_xgboost_modin():
+        build_raw_df = load_dataframe()
+        data = create_data(build_raw_df)
+        trained_model = train_model(data)
 
-task_flow_xgboost_modin = task_flow_xgboost_modin()
-```
+    task_flow_xgboost_modin = task_flow_xgboost_modin()
+    ```
 
 5. Upload the DAG to Airflow, and your data pipeline is now a running Airflow DAG! 
 
-With maybe 20 minutes of work, a data scientist can turn a local Python script into a high-scale, reproducible pipeline with the power of Ray distributed computing and Airflow orchestration. These data engineers can then take advantage of Airflow [variables](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#variables), [connections](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#connections), scheduling intervals, and many other features that have made Airflow so ubiquitous with data teams requiring production-grade scheduling and orchestration.
+    With maybe 20 minutes of work, a data scientist can turn a local Python script into a high-scale, reproducible pipeline with the power of Ray distributed computing and Airflow orchestration. These data engineers can then take advantage of Airflow [variables](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#variables), [connections](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#connections), scheduling intervals, and many other features that have made Airflow so ubiquitous with data teams requiring production-grade scheduling and orchestration.
 
-A basic Ray workflow might now appear together with Airflow like this:
-![airflow-ui-ray-tune-xgboost](https://user-images.githubusercontent.com/307956/117888159-93bd5800-b266-11eb-84d0-b0acc7cb2d59.png)
+    A basic Ray workflow might now appear together with Airflow like this:
+    ![airflow-ui-ray-tune-xgboost](https://user-images.githubusercontent.com/307956/117888159-93bd5800-b266-11eb-84d0-b0acc7cb2d59.png)
 
 ### Passing data between tasks: faster with Plasma
 
@@ -229,6 +228,7 @@ def load_best_model_checkpoint(analysis):
 analysis = tune_model(data)
 best_checkpoint = load_best_model_checkpoint(analysis)
 ### Checkpointing Data using Ray
+```
 
 One major benefit Airflow can offer Ray users is the ability to rerun tasks with fault tolerant data storage. Ray uses a local plasma store on each worker process to keep data in memory for fast processing. This system works great when it comes to speedy processing of data, but can be lost if there is an issue with the Ray cluster. 
 
@@ -265,7 +265,9 @@ For those looking to further decrease their operational overhead, Anyscale offer
 
 Plugging into Airflow Ray Task API is will soon be as simple as changing:
 
-	RAY_URL=anyscale://&lt;your Anyscale cluster URL here>
+```yaml
+RAY_URL=anyscale://&lt;your Anyscale cluster URL here>
+```
 
 and everything will work just as in OSS, scaling up resources for your more parallel or higher-throughput scenarios, but with a few more features and a powerful API/SDK.
 
