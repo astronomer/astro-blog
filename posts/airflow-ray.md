@@ -24,6 +24,8 @@ However, when we look at achieving these goals, there’s a few more things we b
 *   **Minimal conversion.** Data scientists should be able to bring their code directly from Jupyter notebooks (and other, similar environments) and run it with minimal changes.
 *   **Large dataset handling**. ML models naturally involve large datasets, and moving large datasets between different tasks should be trivial.
 *   **Per-task scalability**. Data scientists should be able to request resources for the task at hand and have the system quickly and efficiently allocate them those resources, ie: GPUs for PyTorch, RAM for Dataframes, or CPU cores for XGBoost.
+*   **ML Ecosystem integration**. Data scientists should be able to easily integrate tools for recording, querying, and replicating experiments, as well as registering & deploying the resulting models.
+
 
 Fortunately, there exist a handful of open-source frameworks that can be combined with Airflow to create a first-class ML story. One that we’re particularly excited about is Ray.
 
@@ -59,7 +61,7 @@ In this example, we’ve created a basic Jupyter notebook model that pulls the H
 
 ## Running the Ray + Airflow with XGBoost example DAG
 
-Hop on over to [this repository](https://github.com/anyscale/airflow-provider-ray). Follow the directions there, and you should be up and running.
+Hop on over to [this repository](https://github.com/astronomer/ray-airflow-demo). Follow the directions there, and you should be up and running.
 
 Feel free to report bugs or issues -- we welcome your feedback! 
 
@@ -72,7 +74,7 @@ Let’s talk through how we adapted our notebook code in the first section to th
 
 To convert our ML notebook to an Airflow DAG using the Ray decorator, we completed the following steps:
 
-1. Add a Ray connection to your cluster to manage Ray cluster URLs and also add Ray params such as `num_cpu` and `num_gpu`.
+1. Add a Ray connection to your cluster to manage Ray cluster URLs
 
 2. Turn each logical unit of work into its own Python function: 
 
@@ -152,11 +154,12 @@ While this alpha release implements the Ray plasma store for passing data betwee
 
 ### Current Limitations
 
-The Ray Airflow Task API as shown above is currently in alpha, which means there will be some rough edges. We welcome any and all bug reports, suggestions, or PRs! You can find the code &lt;LINK HERE> and &lt;LINK HERE>.
+The Ray Airflow Task API as shown above is currently in alpha, which means there will be some rough edges. We welcome any and all bug reports, suggestions, or PRs! You can find the code [here](https://github.com/anyscale/airflow-provider-ray).
 
 
+## Looking Ahead: The Future of Airflow and Ray
 
-## More advanced usage: fault tolerance
+### More advanced usage: fault tolerance
 
 
 ### Checkpointing Data using Ray
@@ -185,7 +188,7 @@ def checkpoint_data_example():
 
 
 
-### Looking Ahead: Transferring data between Airflow and Ray
+### Transferring data between Airflow and Ray
 
 In future iterations of this decorator, we will create a function to easily transfer data from a local Airflow task to a ray task and back. This system will work with any [Custom Xcom Backend](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcom#custom-xcom-backend) (including a Ray Custom Xcom backend) to allow a fully native python experience for Airflow users.
 
