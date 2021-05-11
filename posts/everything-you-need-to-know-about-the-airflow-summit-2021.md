@@ -21,9 +21,9 @@ Astronomer is the proud sponsor and co-organizer along with Google, Amazon, Data
 ## Agenda sneak peek
 
 * What comes after Apache Airflow 2.0? The best people to answer that will be Ash Berlin-Taylor and Aizhamal Nurmamat kyzy, the keynote speakers! 
-* Asking yourself how to upgrade to Airflow 2.0? The ideal path will be presented by Kaxil Naik, one of the top committers of the Airflow Project 
-* Curious about productionizing ML Pipelines with Airflow, Kedro, and Great Expectations? Dive into the subject with Kenten Danas
-* Want to know how is Apache Airflow run at Wise—a fin-tech company with over 100 data scientists, developers and engineers involved? The story will be shared by Alexandra Abass.
+* Asking yourself how to upgrade to Airflow 2.0? The ideal path will be presented by [Kaxil Naik](https://airflowsummit.org/speakers/kaxil-naik/), one of the top committers of the Airflow Project 
+* Curious about productionizing ML Pipelines with Airflow, Kedro, and Great Expectations? Dive into the subject with[ Kenten Danas](https://airflowsummit.org/speakers/kenten-danas/)
+* Want to know how is Apache Airflow run at Wise—a fin-tech company with over 100 data scientists, developers and engineers involved? The story will be shared by [Alexandra Abass](https://airflowsummit.org/speakers/alexandra-abbas/).
 
 And that’s just the beginning! For more, check out the [Airflow Summit agenda!](https://airflowsummit.org/speakers/)
 
@@ -39,31 +39,21 @@ And that’s just the beginning! For more, check out the [Airflow Summit agenda!
 
 To give you a little taste of the event, we’ve asked our Team what are their expectations:
 
-
-
  Kaxil Naik, Manager of Airflow Engineering at Astronomer, Airflow PMC member & Committer,  and a Member of the Airflow Summit Program Committee 
 
 > *This year we have a week-long event with three hours of content each day. It’s super user-friendly and we did it to provide the attendees with the best experience possible. The conference will be hosted by local meetups from different parts of the world: Bay Area, Warsaw, London, Bangalore, Tokyo, Melbourne, Tel-Aviv.*
-
-
 
 Ry Walker, Founder & CTO at Astronomer, Apache Airflow Committer and the Member of the Airflow Summit Sponsorship Committee
 
 > *Airflow is at the center of many modern data platforms and that means it needs to work well with a lot of other tools. Hence our idea that the Airflow Summit 2021 should focus not only on Airflow but the whole ecosystem around it.*
 
-
-
 Ash Berlin-Taylor, Director of Airflow Engineering at Astronomer, Airflow PMC Member &  Committer 
 
 > *Last year I was blown away by just how big the summit was for the first time we ran it. It just shows the strength of the community. This year we want to make it as diverse as possible so if you feel like you want to speak at the event, reach out!*
 
-
-
 Kenten Danas - Field Engineer at Astronomer
 
 > *Airflow Summit is unique because of the community behind it. I can't think of another conference that has just such a huge base and such sort of a wide range of people using this tool in so many different ways. Seeing everybody coming together from all these different backgrounds is incredible. Every single week I hear a new use case for how Airflow is used in business. And that’s always a discovery! Different industries, different needs, different teams but all using Airflow daily.*
-
-
 
 Andrew Ettinger - Chief Revenue Officer at Astronomer.
 
