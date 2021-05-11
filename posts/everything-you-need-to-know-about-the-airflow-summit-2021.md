@@ -3,7 +3,7 @@ slug: airflow-summit-2021
 title: Everything You Need to Know about the Airflow Summit 2021
 description: "Join Airflow Summit 2021 —  a free online conference for the
   worldwide community of developers and users of Apache Airflow. "
-heroImagePath: ../assets/summit3.png
+heroImagePath: ../assets/summitcover2.png
 authors:
   - Joanna Kasprzak-Kajder
 date: 2021-05-11T09:23:32.376Z
