@@ -843,6 +843,28 @@ www.astronomer.io
 deserialization
 discoverability
 dockerfile
+PyTorch
+XGBoost
+performant
+gRPC
+Anyscale
+templatize
+MXNet
+Keras
+default_args
+Databand
+Aizhamal
+Nurmamat
+kedro
+Kenten
+Danas
+Abass
+Société
+Générale
+meetups
+Tel-Aviv
+Ettinger
+Lamberti
  - posts/4-pillars-to-becoming-data-driven.md
 astronomer.io
 _
@@ -1267,3 +1289,11 @@ heroImagePath
 cdc-cloudsql-1
 markdownlint
 
+ - posts/airflow-ray.md
+ray_task
+task_args
+checkpoint_source
+finished-modin-example
+checkpoint_data_example
+really_long_task
+s3_connection_id

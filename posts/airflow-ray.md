@@ -17,7 +17,7 @@ Machine learning (ML) has become a crucial part of companies across all industri
 
 One of the best measures of quality in a modern ML framework is the flexibility and agility it gives you. If using a well-built framework or tool, the time it takes to go from a training set to a working model in production can be measured in hours, and iterative improvements and additions are the norm. 
 
-Airflow on its own is a valuable tool for making ML models reliable and reusable. Using DAGs to help build models immediately brings benefits like **easy parameterization**, **SLAs & alerting**, **data watermarking & lineage capabilities**, and **robust scalability**.
+Airflow on its own is a valuable tool for making ML models reliable and reusable. Using DAGs to help build models immediately brings benefits like **easy parametrization**, **SLAs & alerting**, **data watermarking & lineage capabilities**, and **robust scalability**.
 
 However, when we look at achieving these goals, there’s a few more things we believe are crucial parts of the equation:
 
@@ -148,7 +148,7 @@ A basic Ray workflow might now appear together with Airflow like this:
 
 Experienced Airflow users will notice in the example above we appear to be passing entire dataframes between tasks without explicitly sending those data chunks to external storage. With traditional XCom, this would be essentially impossible because Airflow stores each piece of data sent between tasks in a single cell of the metadata DB. 
 
-To address this issue, we take advantage of one of Ray’s coolest features: data caching. To ensure fast data processing for ML, Ray utilizes a_ plasma store_ system that caches all data in memory on Ray workers. With the Ray decorator, Airflow only stores a hash pointing to the result of the last task (a Ray Object ID). This caching allows for data to stay in memory between tasks without ever leaving the RAM of the workers. No more writing and reading data from S3 between tasks!
+To address this issue, we get to take advantage of one of Ray's coolest features: the in-memory object store. To ensure efficient data processing for ML, Ray utilizes an object store system that enables fast data transfer and zero-copy reads. With the Ray decorator, Airflow will leverage the object store as a caching system, allowing for large data objects to stay within the RAM of the workers across multiple tasks. No more writing and reading data from S3 between tasks!
 
 While this alpha release implements the Ray plasma store for passing data between Ray tasks. Future releases will simplify moving data in and out of Ray from and to different data stores, and possibly even extend the Ray custom XCOM Backend for moving data between tasks using a multitude of different Airflow operators.
 
@@ -163,7 +163,7 @@ The Ray Airflow Task API as shown above is currently in alpha, which means there
 
 ### Hyperparameter Tuning
 
-Airflow has templating and dynamic parameterization capabilities, and when combined with [Ray Tune](https://docs.ray.io/en/master/tune/index.html), one can orchestrate and dynamically scale tuning an ML search space using any machine learning framework - including PyTorch, XGBoost, MXNet, and Keras - while easily integrating tools for recording, querying, and replicating experiments, as well as register & deploy the resulting models.
+Airflow has templating and dynamic parametrization capabilities, and when combined with [Ray Tune](https://docs.ray.io/en/master/tune/index.html), one can orchestrate and dynamically scale tuning an ML search space using any machine learning framework - including PyTorch, XGBoost, MXNet, and Keras - while easily integrating tools for recording, querying, and replicating experiments, as well as register & deploy the resulting models.
 
 An example using XGBoost and Tune might begin like:
 
