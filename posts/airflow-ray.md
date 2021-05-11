@@ -1,5 +1,5 @@
 ---
-slug: airflow-ray
+slug: airflow-ray-data-science-story
 title: "Airflow and Ray: A Data Science Story"
 description: We're pleased to announce a Ray provider for Apache Airflow that allows users to transform their Airflow DAGs into scalable machine learning pipelines.
 heroImagePath: ../assets/airflow-ray.png
@@ -210,4 +210,3 @@ Sign up for Anyscale [here](https://www.anyscale.com/product).
 Airflow + Ray is a powerful combination for writing your machine learning or data ETL pipelines. 
 
 We have released the alpha version of this integration in these repos &lt;HERE> and &lt;HERE>, so please give them a try if you like! We are actively developing this system so any feature requests or issues would be highly appreciated [here](https://github.com/anyscale/airflow-provider-ray/issues).
-
