@@ -15,7 +15,7 @@ date: 2021-5-12T00:00:00.000Z
 
 Machine learning (ML) has become a crucial part of companies across all industries, and as Airflow grows, we want to empower data science and engineering teams across the spectrum. With this in mind, it’s only natural that we turn our focus towards building an optimal Airflow + ML story.
 
-One of the best measures of quality in a modern machine learning framework is the flexibility and agility it gives you. If using a well-built framework or tool, the time it takes to go from a training set to a working model in production can be measured in hours, and iterative improvements and additions are the norm. 
+One of the best measures of quality in a modern ML framework is the flexibility and agility it gives you. If using a well-built framework or tool, the time it takes to go from a training set to a working model in production can be measured in hours, and iterative improvements and additions are the norm. 
 
 Airflow on its own is a valuable tool for making ML models reliable and reusable. Using DAGs to help build models immediately brings benefits like **easy parameterization**, **SLAs & alerting**, and **easy scalability**.
 
@@ -33,14 +33,14 @@ Fortunately, there exist a handful of open-source frameworks that can be combine
 
 Once running, users can allocate Ray resources on a per-function basis (e.g. give this function 2 CPUs and 1 GPU). If used correctly, Ray’s distributed computation combined with Airflow’s robust scheduling and orchestration make a perfect platform for rapid, reliable ML development and deployment.
 
-Ray is highly performant, and under the hood is written in C++ to quickly & automatically move  Python objects around the cluster using gRPC as new functions are called that require data from previous calls. All of this is abstracted away — as a user, you simply write Python code. 
+Ray is highly performant, and under the hood is written in C++ to quickly & automatically move Python objects around the cluster using gRPC as new functions are called that require data from previous calls. All of this is abstracted away — as a user, you simply write Python code. 
 
 
 ## Airflow + Ray: A match made in data science heaven
 
-Airflow and Ray need no special packages or setup to work together, but we found after working with many users, the same patterns came up again and again. We wanted to encapsulate best practices in a way that can standardize Airflow + Ray usage in a tested, scalable fashion.
+Airflow and Ray need no special packages or setup to work together, but we found after working with many users, the same patterns came up again and again. We wanted to encapsulate best practices in a way that can standardize Airflow + Ray usage in a tested, scalable way.
 
-Together with [Anyscale](https://www.anyscale.com/) (the maintainer of Ray), we are excited to introduce you  to the [Ray Provider for Apache Airflow](https://registry.astronomer-stage.io/providers/ray). 
+Together with the [Ray](https://ray.io/) and [Anyscale](https://www.anyscale.com/) teams, we are excited to introduce you  to the [Ray Provider for Apache Airflow](https://registry.astronomer-stage.io/providers/ray). 
 
 In this provider, we encapsulate all the Ray-specific setup/initialization code into decorators instead of an Operator by extending the [TaskFlow API](https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html#example-taskflow-api-etl-pipeline). This decorator allows Airflow users to keep all of their Ray code in Python functions and define task dependencies by moving data through python functions.
 
@@ -132,7 +132,6 @@ def task_flow_xgboost_modin():
     data = create_data(build_raw_df)
     trained_model = train_model(data)
 
-
 task_flow_xgboost_modin = task_flow_xgboost_modin()
 ```
 
@@ -146,7 +145,7 @@ With maybe 20 minutes of work, a data scientist can turn a local Python script i
 
 One thing that experienced Airflow users will notice in the example above is that we appear to be passing entire dataframes between tasks without explicitly sending those data chunks to external storage. With traditional XCom, this would be essentially impossible because Airflow stores each piece of data sent between tasks in a single cell of the metadata DB. 
 
-To address this issue, we get to take advantage of one of Ray’s coolest features: data caching. To ensure fast data processing for ML, Ray utilizes a_ plasma store_ system that caches all data in memory on Rray workers. With the Ray decorator, Airflow only stores a hash pointing to the result of the last task (a Ray Object ID). This caching system allows for data to stay in Ray between tasks without ever leaving the RAM of the workers. No more writing and reading data from S3 between tasks!
+To address this issue, we take advantage of one of Ray’s coolest features: data caching. To ensure fast data processing for ML, Ray utilizes a_ plasma store_ system that caches all data in memory on Ray workers. With the Ray decorator, Airflow only stores a hash pointing to the result of the last task (a Ray Object ID). This caching allows for data to stay in memory between tasks without ever leaving the RAM of the workers. No more writing and reading data from S3 between tasks!
 
 While this alpha release implements the Ray plasma store for passing data between Ray tasks. Future releases will simplify moving data in and out of Ray, and possibly even extend the Ray custom Xcom Backend for moving data between all Airflow tasks.
 
