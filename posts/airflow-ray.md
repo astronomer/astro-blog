@@ -53,7 +53,7 @@ To show the power of this integration, let’s start our data science pipeline w
 
 ## Training an XGBoost model with Ray in a notebook
 
-In this example, we’ve created a basic Jupyter notebook model that pulls the HIGGS dataset, splits training and testing data, and creates/validates a model using the XGBoost on Ray, which scales XGBoost training onto a cluster using Ray. Everything here can run locally on a user’s laptop or via a remote Ray cluster with minimal work. This stack handles the experimentation aspect of model building very well, but now comes the question of how we turn this experiment into a production-ready Airflow DAG.
+In this example, we’ve created a basic Jupyter notebook model that pulls the HIGGS dataset, splits training and testing data, and creates/validates a model using the XGBoost on Ray, which scales XGBoost training onto a cluster using Ray. Everything here can run locally on a user’s laptop or via a remote Ray cluster with minimal work. This stack handles the experimentation aspect of model building very well, and we can now dive into how to turn his experiment into a production-ready Airflow DAG.
 
 
 ![Ray Notebook](../assets/ray_notebook.png)
@@ -146,7 +146,7 @@ A basic Ray workflow might now appear together with Airflow like this:
 
 ### Passing data between tasks: faster with Plasma
 
-One thing that experienced Airflow users will notice in the example above is that we appear to be passing entire dataframes between tasks without explicitly sending those data chunks to external storage. With traditional XCom, this would be essentially impossible because Airflow stores each piece of data sent between tasks in a single cell of the metadata DB. 
+Experienced Airflow users will notice in the example above we appear to be passing entire dataframes between tasks without explicitly sending those data chunks to external storage. With traditional XCom, this would be essentially impossible because Airflow stores each piece of data sent between tasks in a single cell of the metadata DB. 
 
 To address this issue, we take advantage of one of Ray’s coolest features: data caching. To ensure fast data processing for ML, Ray utilizes a_ plasma store_ system that caches all data in memory on Ray workers. With the Ray decorator, Airflow only stores a hash pointing to the result of the last task (a Ray Object ID). This caching allows for data to stay in memory between tasks without ever leaving the RAM of the workers. No more writing and reading data from S3 between tasks!
 
@@ -263,17 +263,21 @@ In future iterations of this decorator, we will create a function to easily tran
 
 For those looking to further decrease their operational overhead, Anyscale offers a managed solution to hosting Ray clusters, as well as an API/SDK to programmatically control your ML infrastructure.
 
-Plugging into Airflow Ray Task API is then as simple as changing:
+Plugging into Airflow Ray Task API is will soon be as simple as changing:
 
 	RAY_URL=anyscale://&lt;your Anyscale cluster URL here>
 
-and everything will work just as in OSS, but with a few more features and a powerful API/SDK.
+and everything will work just as in OSS, scaling up resources for your more parallel or higher-throughput scenarios, but with a few more features and a powerful API/SDK.
 
-Sign up for Anyscale [here](https://www.anyscale.com/product).
+Sign up for the Anyscale beta [here](https://www.anyscale.com/product).
 
 
 ## Conclusions
 
 Airflow + Ray is a powerful combination for writing your machine learning or data ETL pipelines. 
 
-We have released the alpha version of this integration in these repos &lt;HERE> and &lt;HERE>, so please give them a try if you like! We are actively developing this system so any feature requests or issues would be highly appreciated [here](https://github.com/anyscale/airflow-provider-ray/issues).
+This alpha integration is just the beginning, and we can't wait to share more as we add new features and improvements.
+
+You can find the demo code for this post in [this repository](https://github.com/astronomer/ray-airflow-demo), and the code for the Airflow Ray provider in [this repo](https://github.com/anyscale/airflow-provider-ray).
+
+We are actively developing this system so any feature requests or issues would be highly appreciated [here](https://github.com/anyscale/airflow-provider-ray/issues)!
