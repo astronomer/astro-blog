@@ -17,7 +17,7 @@ Machine learning (ML) has become a crucial part of companies across all industri
 
 One of the best measures of quality in a modern ML framework is the flexibility and agility it gives you. If using a well-built framework or tool, the time it takes to go from a training set to a working model in production can be measured in hours, and iterative improvements and additions are the norm. 
 
-Airflow on its own is a valuable tool for making ML models reliable and reusable. Using DAGs to help build models immediately brings benefits like **easy parameterization**, **SLAs & alerting**, and **easy scalability**.
+Airflow on its own is a valuable tool for making ML models reliable and reusable. Using DAGs to help build models immediately brings benefits like **easy parameterization**, **SLAs & alerting**, **data watermarking & lineage capabilities**, and **robust scalability**.
 
 However, when we look at achieving these goals, there’s a few more things we believe are crucial parts of the equation:
 
@@ -137,11 +137,12 @@ def task_flow_xgboost_modin():
 task_flow_xgboost_modin = task_flow_xgboost_modin()
 ```
 
-
 5. Upload the DAG to Airflow, and your data pipeline is now a running Airflow DAG! 
 
-With maybe 20 minutes of work, a data scientist can turn a local Python script into a high-scale, reproducible pipeline with the power of Ray distributed computing and Airflow orchestration. These data engineers can then take advantage of Airflow [variables](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#variables), [connections](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#connections), scheduling intervals, and many other features that have made Airflow so ubiquitous with production-grade scheduling and orchestration.
+With maybe 20 minutes of work, a data scientist can turn a local Python script into a high-scale, reproducible pipeline with the power of Ray distributed computing and Airflow orchestration. These data engineers can then take advantage of Airflow [variables](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#variables), [connections](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#connections), scheduling intervals, and many other features that have made Airflow so ubiquitous with data teams requiring production-grade scheduling and orchestration.
 
+A basic Ray workflow might now appear together with Airflow like this:
+![airflow-ui-ray-tune-xgboost](https://user-images.githubusercontent.com/307956/117888159-93bd5800-b266-11eb-84d0-b0acc7cb2d59.png)
 
 ### Passing data between tasks: faster with Plasma
 
@@ -149,8 +150,7 @@ One thing that experienced Airflow users will notice in the example above is tha
 
 To address this issue, we take advantage of one of Ray’s coolest features: data caching. To ensure fast data processing for ML, Ray utilizes a_ plasma store_ system that caches all data in memory on Ray workers. With the Ray decorator, Airflow only stores a hash pointing to the result of the last task (a Ray Object ID). This caching allows for data to stay in memory between tasks without ever leaving the RAM of the workers. No more writing and reading data from S3 between tasks!
 
-While this alpha release implements the Ray plasma store for passing data between Ray tasks. Future releases will simplify moving data in and out of Ray, and possibly even extend the Ray custom Xcom Backend for moving data between all Airflow tasks.
-
+While this alpha release implements the Ray plasma store for passing data between Ray tasks. Future releases will simplify moving data in and out of Ray from and to different data stores, and possibly even extend the Ray custom XCOM Backend for moving data between tasks using a multitude of different Airflow operators.
 
 ### Current Limitations
 
@@ -161,7 +161,73 @@ The Ray Airflow Task API as shown above is currently in alpha, which means there
 
 ### More advanced usage: fault tolerance
 
+### Hyperparameter Tuning
 
+Airflow has templating and dynamic parameterization capabilities, and when combined with [Ray Tune](https://docs.ray.io/en/master/tune/index.html), one can orchestrate and dynamically scale tuning an ML search space using any machine learning framework - including PyTorch, XGBoost, MXNet, and Keras - while easily integrating tools for recording, querying, and replicating experiments, as well as register & deploy the resulting models.
+
+An example using XGBoost and Tune might begin like:
+
+```python
+@ray_task(**task_args)
+def tune_model(data):
+
+    search_space = {
+        # You can mix constants with search space objects.
+        "objective": "binary:logistic",
+        "eval_metric": ["logloss", "error"],
+        "max_depth": tune.randint(1, 9),
+        "min_child_weight": tune.choice([1, 2, 3]),
+        "subsample": tune.uniform(0.5, 1.0),
+        "eta": tune.loguniform(1e-4, 1e-1),
+    }
+
+    print("enabling aggressive early stopping of bad trials")
+    # This will enable aggressive early stopping of bad trials.
+    scheduler = ASHAScheduler(
+        max_t=10, grace_period=1, reduction_factor=2  # 10 training iterations
+    )
+
+    print("Tuning")
+
+    analysis = tune.run(
+        tune.with_parameters(train_model, data=data),
+        metric="eval-logloss",
+        mode="min",
+        local_dir=LOCAL_DIR,
+        # You can add "gpu": 0.1 to allocate GPUs
+        resources_per_trial=XGB_RAY_PARAMS.get_tune_resources(),
+        config=search_space,
+        num_samples=10,
+        scheduler=scheduler,
+    )
+
+    print("Done Tuning")
+
+    return analysis
+
+@ray_task(**task_args)
+def load_best_model_checkpoint(analysis):
+
+    print("Checking Analysis")
+
+    best_bst = xgb.Booster()
+
+    print(f"Analysis Best Result on eval-error is: {analysis.best_result['eval-error']}")
+    print("Loading Model with Best Params")
+
+    best_bst.load_model(os.path.join(
+        analysis.best_checkpoint, "model.xgb"))
+    accuracy = 1. - analysis.best_result["eval-error"]
+
+    print(f"Best model parameters: {analysis.best_config}")
+    print(f"Best model total accuracy: {accuracy:.4f}")
+
+    # We could now do further predictions with
+    # best_bst.predict(...)
+    return best_bst
+
+analysis = tune_model(data)
+best_checkpoint = load_best_model_checkpoint(analysis)
 ### Checkpointing Data using Ray
 
 One major benefit Airflow can offer Ray users is the ability to rerun tasks with fault tolerant data storage. Ray uses a local plasma store on each worker process to keep data in memory for fast processing. This system works great when it comes to speedy processing of data, but can be lost if there is an issue with the Ray cluster. 
@@ -169,8 +235,8 @@ One major benefit Airflow can offer Ray users is the ability to rerun tasks with
 By offering checkpoints, Airflow Ray users can point to steps in a DAG where data is persisted in an external store (e.g. S3). This fault tolerance will mean that if the task is re-run and the data is no longer available locally, the task will have the ability to pull the data from the persistent store.
 
 
-```
-@dag(default_args=default_args, schedule_interval=None, start_date=days_ago(2), tags=['finished-pandas-example'])
+```python
+@dag(default_args=default_args, schedule_interval=None, start_date=datetime(2021, 1, 1, 0, 0, 0), tags=['finished-modin-example'])
 def checkpoint_data_example():
     @ray_task(**task_args, checkpoint=True, checkpoint_source="s3_connection_id")
     def really_long_task(data):
