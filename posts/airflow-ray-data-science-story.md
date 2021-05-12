@@ -6,23 +6,25 @@ heroImagePath: ../assets/airflow-ray.png
 authors:
   - Daniel Imberman
   - Rob Deeb
+  - Richard Liaw
+  - Will Drevo
 date: 2021-5-12T00:00:00.000Z
 ---
 
 > You can now find the [Ray Provider](https://registry.astronomer.io/providers/ray) on the [Astronomer Registry](https://registry.astronomer.io), the discovery and distribution hub for Apache Airflow integrations created to aggregate and curate the best bits of the ecosystem.
 
-## The need for an Airflow + ML story
+## The Need for an Airflow + ML Story
 
-Machine learning (ML) has become a crucial part of companies across all industries, and as Airflow grows, we want to empower data science and engineering teams across the spectrum. With this in mind, it’s only natural that we turn our focus towards building an optimal Airflow + ML story.
+Machine learning (ML) has become a crucial part of companies across all industries. As the Airflow community grows, we want to empower data science and engineering teams across the board to evolve their data pipelines into high-value outcomes. With this in mind, it’s only natural that we turn our focus towards building an optimal Airflow + ML story.
 
-One of the best measures of quality in a modern ML framework is the flexibility and agility it gives you. If using a well-built framework or tool, the time it takes to go from a training set to a working model in production can be measured in hours, and iterative improvements and additions are the norm. 
+One of the best measures of quality in a modern ML framework is the flexibility and agility it allows data scientists and engineers. If using a well-built framework or tool, the time it takes to go from a training set to a working production model can be measured in hours instead of days, and iterative improvements and additions are the norm. 
 
-Airflow on its own is a valuable tool for making ML models reliable and reusable. Using DAGs to help build models immediately brings benefits like **easy parametrization**, **SLAs & alerting**, **data watermarking & lineage capabilities**, and **robust scalability**.
+On its own, Airflow is a valuable tool for making reliable and reusable ML models. Using DAGs to help build models immediately brings benefits like **easy parametrization**, **SLAs & alerting**, **data watermarking & lineage capabilities**, and **robust scalability**.
 
 However, when we look at achieving these goals, there’s a few more things we believe are crucial parts of the equation:
 
 *   **Minimal conversion.** Data scientists should be able to bring their code directly from Jupyter notebooks (and other, similar environments) and run it with minimal changes.
-*   **Large dataset handling**. ML models naturally involve large datasets, and moving large datasets between different tasks should be trivial.
+*   **Large dataset handling.** ML models naturally involve large datasets, and moving large datasets between different tasks should be trivial.
 *   **Per-task scalability**. Data scientists should be able to request resources for the task at hand and have the system quickly and efficiently allocate them those resources, ie: GPUs for PyTorch, RAM for Dataframes, or CPU cores for XGBoost.
 *   **ML Ecosystem integration**. Data scientists should be able to easily integrate tools for recording, querying, and replicating experiments, as well as registering & deploying the resulting models.
 
@@ -31,12 +33,11 @@ Fortunately, there exist a handful of open-source frameworks that can be combine
 
 ## Introducing Ray
 
-[Ray](https://ray.io/) is a cluster computing framework built with Python as a first-class citizen. Unlike systems like Spark, which require a complex cluster set-up and Java dependencies, Ray can run the same code on any machine from a user’s laptop to a highly powered AWS virtual machine with very minimal configuration. 
+[Ray](https://ray.io/) is a Python-first cluster computing framework that allows Python code, even with complex libraries or packages, to be distributed and run on clusters of infinite size. Unlike systems like Spark, which require a complex cluster set-up and Java dependencies, Ray can run the same code on any machine from a user’s laptop to a highly powered AWS virtual machine with very minimal configuration. 
 
 Once running, users can allocate Ray resources on a per-function basis (e.g. give this function 2 CPUs and 1 GPU). If used correctly, Ray’s distributed computation combined with Airflow’s robust scheduling and orchestration make a perfect platform for rapid, reliable ML development and deployment.
 
 Ray is highly performant, and under the hood is written in C++ to quickly & automatically move Python objects around the cluster using gRPC as new functions are called that require data from previous calls. All of this is abstracted away — as a user, you simply write Python code. 
-
 
 ## Airflow + Ray: A match made in data science heaven
 
@@ -57,7 +58,6 @@ In this example, we’ve created a basic Jupyter notebook model that pulls the H
 
 ![Ray Notebook](../assets/ray_notebook.png)
 
-
 ## Running the Ray + Airflow with XGBoost example DAG
 
 Hop on over to [this repository](https://github.com/astronomer/ray-airflow-demo). Follow the directions there, and you should be up and running.
@@ -65,7 +65,6 @@ Hop on over to [this repository](https://github.com/astronomer/ray-airflow-demo)
 Feel free to report bugs or issues -- we welcome your feedback! 
 
 Note that this code is alpha, and has only been tested on LocalExecutor. More improvements to come as the project moves to beta. 
-
 
 ## How to: From Notebook to Airflow DAG in five steps
 
@@ -143,18 +142,18 @@ To convert our ML notebook to an Airflow DAG using the Ray decorator, we complet
     A basic Ray workflow might now appear together with Airflow like this:
     ![airflow-ui-ray-tune-xgboost](https://user-images.githubusercontent.com/307956/117888159-93bd5800-b266-11eb-84d0-b0acc7cb2d59.png)
 
+
 ### Passing data between tasks: faster with Plasma
 
 Experienced Airflow users will notice in the example above we appear to be passing entire dataframes between tasks without explicitly sending those data chunks to external storage. With traditional XCom, this would be essentially impossible because Airflow stores each piece of data sent between tasks in a single cell of the metadata DB. 
 
 To address this issue, we get to take advantage of one of Ray's coolest features: the in-memory object store. To ensure efficient data processing for ML, Ray utilizes an object store system that enables fast data transfer and zero-copy reads. With the Ray decorator, Airflow will leverage the object store as a caching system, allowing for large data objects to stay within the RAM of the workers across multiple tasks. No more writing and reading data from S3 between tasks!
 
-While this alpha release implements the Ray plasma store for passing data between Ray tasks. Future releases will simplify moving data in and out of Ray from and to different data stores, and possibly even extend the Ray custom XCOM Backend for moving data between tasks using a multitude of different Airflow operators.
+While this alpha release implements the Ray plasma store for passing data between Ray tasks, future releases will simplify moving data in and out of Ray from and to different data stores, and possibly even extend the Ray custom Xcom Backend for moving data between tasks using a multitude of different Airflow operators.
 
 ### Current Limitations
 
 The Ray Airflow Task API as shown above is currently in alpha, which means there will be some rough edges. We welcome any and all bug reports, suggestions, or PRs! You can find the code [here](https://github.com/anyscale/airflow-provider-ray).
-
 
 ## Looking Ahead: The Future of Airflow and Ray
 
@@ -252,27 +251,23 @@ def checkpoint_data_example():
     deploy_model(model)
 ```
 
-
-
 ### Transferring data between Airflow and Ray
 
 In future iterations of this decorator, we will create a function to easily transfer data from a local Airflow task to a ray task and back. This system will work with any [Custom Xcom Backend](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html?highlight=xcom#custom-xcom-backend) (including a Ray Custom Xcom backend) to allow a fully native python experience for Airflow users.
-
 
 ### Running on Anyscale Cloud
 
 For those looking to further decrease their operational overhead, Anyscale offers a managed solution to hosting Ray clusters, as well as an API/SDK to programmatically control your ML infrastructure.
 
-Plugging into Airflow Ray Task API is will soon be as simple as changing:
+Plugging into the Airflow Ray Task API will soon be as simple as changing:
 
 ```yaml
 RAY_URL=anyscale://&lt;your Anyscale cluster URL here>
 ```
 
-and everything will work just as in OSS, scaling up resources for your more parallel or higher-throughput scenarios, but with a few more features and a powerful API/SDK.
+From there, everything will work just as it does in OSS, on the computing resources that you need for more parallel or higher-throughput scenarios.
 
 Sign up for the Anyscale beta [here](https://www.anyscale.com/product).
-
 
 ## Conclusions
 
