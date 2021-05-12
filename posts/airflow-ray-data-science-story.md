@@ -39,11 +39,11 @@ Once running, users can allocate Ray resources on a per-function basis (e.g. giv
 
 Ray is highly performant, and under the hood is written in C++ to quickly & automatically move Python objects around the cluster using gRPC as new functions are called that require data from previous calls. All of this is abstracted away — as a user, you simply write Python code. 
 
-## Airflow + Ray: A match made in data science heaven
+## Airflow + Ray: A Match Made in Data Science Heaven
 
 Airflow and Ray need no special packages or setup to work together, but we found after working with many users, the same patterns came up again and again. We wanted to encapsulate best practices in a way that can standardize Airflow + Ray usage in a tested, scalable way.
 
-Together with the [Ray](https://ray.io/) and [Anyscale](https://www.anyscale.com/) teams, we are excited to introduce you  to the [Ray Provider for Apache Airflow](https://registry.astronomer-stage.io/providers/ray). 
+Together with the [Ray](https://ray.io/) and [Anyscale](https://www.anyscale.com/) teams, we at Astronomer are excited to introduce you to the [Ray Provider for Apache Airflow](https://registry.astronomer.io/providers/ray). 
 
 In this provider, we encapsulate all the Ray-specific setup/initialization code into decorators instead of an Operator by extending the [TaskFlow API](https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html#example-taskflow-api-etl-pipeline). This decorator allows Airflow users to keep all of their Ray code in Python functions and define task dependencies by moving data through python functions.
 
@@ -72,7 +72,7 @@ Let’s talk through how we adapted our notebook code in the first section to th
 
 To convert our ML notebook to an Airflow DAG using the Ray decorator, we completed the following steps:
 
-1. Add a Ray connection to your cluster to manage Ray cluster URLs
+1. Add a Ray connection to your cluster to manage Ray cluster URLs.
 
 2. Turn each logical unit of work into its own Python function: 
 
@@ -142,6 +142,7 @@ To convert our ML notebook to an Airflow DAG using the Ray decorator, we complet
     A basic Ray workflow might now appear together with Airflow like this:
     ![airflow-ui-ray-tune-xgboost](https://user-images.githubusercontent.com/307956/117888159-93bd5800-b266-11eb-84d0-b0acc7cb2d59.png)
 
+    > Note: In the alpha release of the provider package, your Airflow environment will need to be running the [Ray XCom Backend](https://registry.astronomer.io/providers/ray/modules/raybackend) for the decorator to be fully functional.
 
 ### Passing data between tasks: faster with Plasma
 
@@ -265,7 +266,7 @@ RAY_URL=anyscale://&lt;your Anyscale cluster URL here>
 
 From there, everything will work just as it does in OSS, on the computing resources that you need for more parallel or higher-throughput scenarios.
 
-Sign up for the Anyscale beta [here](https://www.anyscale.com/product).
+[Sign up for the Anyscale beta here](https://www.anyscale.com/product).
 
 ## Conclusions
 
@@ -273,6 +274,6 @@ Airflow + Ray is a powerful combination for writing your machine learning or dat
 
 This alpha integration is just the beginning, and we can't wait to share more as we add new features and improvements.
 
-You can find the demo code for this post in [this repository](https://github.com/astronomer/ray-airflow-demo), and the code for the Airflow Ray provider in [this repo](https://github.com/anyscale/airflow-provider-ray).
+[You can find the demo code for this post in this repository](https://github.com/astronomer/ray-airflow-demo), and the [code for the Airflow Ray provider in this repository](https://github.com/anyscale/airflow-provider-ray).
 
-We are actively developing this system so any feature requests or issues would be highly appreciated [here](https://github.com/anyscale/airflow-provider-ray/issues)!
+We are actively developing this system so [any feature requests or issues would be highly appreciated- feel free to [open an issue directly on the repository](https://github.com/anyscale/airflow-provider-ray/issues) if you'd like to get involved!
