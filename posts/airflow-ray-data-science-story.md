@@ -157,8 +157,6 @@ The Ray Airflow Task API as shown above is currently in alpha, which means there
 
 ## Looking Ahead: The Future of Airflow and Ray
 
-### More advanced usage: fault tolerance
-
 ### Hyperparameter Tuning
 
 Airflow has templating and dynamic parametrization capabilities, and when combined with [Ray Tune](https://docs.ray.io/en/master/tune/index.html), one can orchestrate and dynamically scale tuning an ML search space using any machine learning framework - including PyTorch, XGBoost, MXNet, and Keras - while easily integrating tools for recording, querying, and replicating experiments, as well as register & deploy the resulting models.
