@@ -10,7 +10,7 @@ authors:
   - Ula Rydiger
 date: 2021-05-05T12:15:38.657Z
 ---
-# Becoming Apache Airflow Certified
+## Becoming Apache Airflow Certified
 
 Learn Apache Airflow from Astronomer, the commercial developer of the Apache Airflow project. 
 
@@ -24,6 +24,7 @@ Being certified for Apache Airflow, which is an integral technology used by many
 
 We talked with Marc Lamberti — Head of Customer Training at Astronomer and creator of the [Astronomer Certification for Apache Airflow Fundamentals.](https://www.astronomer.io/certification/) He wants to help data engineers get started with Airflow as easily and smoothly as possible and make sure they have everything they need to implement Airflow in their organizations.
 
+<!-- markdownlint-disable MD033 -->
 **<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6788077611340861441" height="800" width="80%" frameborder="0" allowfullscreen="" scrolling="no" title="Embedded post"></iframe>**
 
 ## What is the goal for the Astronomer Certification for Apache Airflow Fundamentals?
@@ -34,6 +35,7 @@ The goal of the course and exam is for engineers to be able to show that they ha
 
 First of all, it’s a great way to assess and evaluate your skills, to know where you are at. Secondly, it will help you refresh your knowledge of Airflow, go back to some fundamentals you might have missed or forgotten about. And lastly, the certification can help you show the companies that you are able to use Airflow on a daily basis—it’s the ultimate proof of your skills. 
 
+<!-- markdownlint-disable MD033 -->
 **<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6795036831458107392" height="800" width="80%" frameborder="0" allowfullscreen="" scrolling="no" title="Embedded post"></iframe>**
 
 *[See what else people are saying about the Astronomer Certification for Apache Airflow Fundamentals!](https://www.airflowcertified.com/)*
@@ -60,6 +62,7 @@ I’ve received great feedback so far. Most of the people are very happy with th
 
 Right now Airflow is a hot topic and companies are adopting it at a great pace. This is why, if you’re an Airflow engineer it’s important to get certified to show them that you can use it. Apache Airflow, after all, is a central piece in a great deal of data stacks. 
 
+<!-- markdownlint-disable MD033 -->
 **<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6794578900199575553" height="800" width="80%" frameborder="0" allowfullscreen="" scrolling="no" title="Embedded post"></iframe>**
 
 [Learn more about Astronomer's Airflow Certifications and sign up here.](https://academy.astronomer.io/)
