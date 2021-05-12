@@ -64,7 +64,7 @@ Hop on over to [this repository](https://github.com/astronomer/ray-airflow-demo)
 
 Feel free to report bugs or issues -- we welcome your feedback! 
 
-Note that this code is alpha, and has only been tested on LocalExecutor. More improvements to come as the project moves to beta. 
+Note that this code is alpha- more improvements to come as the project moves to beta. 
 
 ## How to: From Notebook to Airflow DAG in five steps
 
