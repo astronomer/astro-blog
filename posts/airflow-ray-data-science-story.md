@@ -15,7 +15,7 @@ date: 2021-5-12T00:00:00.000Z
 
 ## The Need for an Airflow + ML Story
 
-Machine learning (ML) has become a crucial part of companies across all industries. As the Airflow community grows, we want to empower data science and engineering teams across the board to evolve their data pipelines into high-value outcomes. With this in mind, it’s only natural that we turn our focus towards building an optimal Airflow + ML story.
+Machine learning (ML) has become a crucial part of the data ecosystem at companies across all industries. As the Airflow community grows, we want to empower data science and engineering teams across the board to evolve their data pipelines into high-value outcomes. With this in mind, it’s only natural that we turn our focus towards building an optimal Airflow + ML story.
 
 One of the best measures of quality in a modern ML framework is the flexibility and agility it allows data scientists and engineers. If using a well-built framework or tool, the time it takes to go from a training set to a working production model can be measured in hours instead of days, and iterative improvements and additions are the norm. 
 
