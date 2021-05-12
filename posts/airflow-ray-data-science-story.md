@@ -15,7 +15,7 @@ date: 2021-5-12T00:00:00.000Z
 
 ## The Need for an Airflow + ML Story
 
-Machine learning (ML) has become a crucial part of companies across all industries. As the Airflow community grows, we want to empower data science and engineering teams across the board to evolve their data pipelines into high-value outcomes. With this in mind, it’s only natural that we turn our focus towards building an optimal Airflow + ML story.
+Machine learning (ML) has become a crucial part of the data ecosystem at companies across all industries. As the Airflow community grows, we want to empower data science and engineering teams across the board to evolve their data pipelines into high-value outcomes. With this in mind, it’s only natural that we turn our focus towards building an optimal Airflow + ML story.
 
 One of the best measures of quality in a modern ML framework is the flexibility and agility it allows data scientists and engineers. If using a well-built framework or tool, the time it takes to go from a training set to a working production model can be measured in hours instead of days, and iterative improvements and additions are the norm.
 
@@ -64,7 +64,7 @@ Hop on over to [this repository](https://github.com/astronomer/ray-airflow-demo)
 
 Feel free to report bugs or issues -- we welcome your feedback!
 
-Note that this code is alpha, and has only been tested on LocalExecutor. More improvements to come as the project moves to beta.
+Note that this code is alpha- more improvements to come as the project moves to beta.
 
 ### From Notebook to Airflow DAG in Five Steps
 
@@ -263,7 +263,7 @@ For those looking to further decrease their operational overhead, Anyscale offer
 Plugging into the Airflow Ray Task API will soon be as simple as changing:
 
 ```yaml
-RAY_URL=anyscale://&lt;your Anyscale cluster URL here>
+RAY_URL=anyscale://<your Anyscale cluster URL here>
 ```
 
 From there, everything will work just as it does in OSS, on the computing resources that you need for more parallel or higher-throughput scenarios.
