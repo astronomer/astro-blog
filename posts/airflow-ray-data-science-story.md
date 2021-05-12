@@ -262,7 +262,7 @@ For those looking to further decrease their operational overhead, Anyscale offer
 Plugging into the Airflow Ray Task API will soon be as simple as changing:
 
 ```yaml
-RAY_URL=anyscale://&lt;your Anyscale cluster URL here>
+RAY_URL=anyscale://<your Anyscale cluster URL here>
 ```
 
 From there, everything will work just as it does in OSS, on the computing resources that you need for more parallel or higher-throughput scenarios.
