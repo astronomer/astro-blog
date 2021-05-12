@@ -20,7 +20,7 @@ Of course, the KubernetesExecutor is not optimal for all use cases. Since it sta
 
 ## New KubernetesExecutor Features
 
-### **The pod\_template\_file**
+### **The pod_template_file**
 
 In Airflow 1.10.12, we introduced the `pod_template_file`. This new way of storing all Kubernetes configs involved a rewrite of the KubernetesExecutor internals. However, this change has been worth it as Airflow admins now can use the entire Kubernetes API when generating templates for their data engineers.
 
@@ -34,7 +34,7 @@ Airflow 2.0 offers a new `executor_config` that is significantly more flexible t
 
 It is worth noting that the legacy `executor_confi`g values will still work in Airflow 2.0 to minimize the breaking changes for migration. However, these will be deprecated and removed in a future version, so we recommend switching over as soon as possible.
 
-### **The pod\_mutation\_hook**
+### **The pod_mutation_hook**
 
 As introduced in 1.10.12, the new `pod_mutation_hook` takes a Kubernetes V1Pod object as a parameter and allows the Airflow admin to modify all pods using Kubernetes API before Airflow releases these pods. This hook applies to both pods created by the KubernetesExecutor and pods created by the KubernetesPodOperator.
 
@@ -46,15 +46,11 @@ Below we can see a diagram of how the architecture for how the KubernetesExecuto
 
 ![A diagram showing how the architecture of the KubernetesExecutor used to work.](../assets/imagek8s1.png "A diagram showing how the architecture of the KubernetesExecutor used to work.")
 
-*[Source](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/cb145b0b-1bf7-4e77-ad15-5178b0d21c7c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210421%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210421T085346Z&X-Amz-Expires=86400&X-Amz-Signature=fc0743407d77fbb814224a0aef9b7782fb38b3d5773dc53e7d89e4161032e3eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)*
-
 Looking back, it kind of feels like a factory that piece-by-piece creates a pod before launching it. The pod goes through at least four stages and three classes before it is serialized and launched. This design leaves lots of room for error and confusion.
 
 Let's compare that with design.
 
 ![Design of the old KubernetesExecutor.](../assets/imagek8s2.png "Design of the old KubernetesExecutor.")
-
-*[Source](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9feac212-cc51-4191-8201-af19d5470292/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210421%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210421T085241Z&X-Amz-Expires=86400&X-Amz-Signature=8892614ba0bb2af8908c54268997e939fb0de12d1a837e50316123409b4651b5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)*
 
 This new design is far more straightforward. Now we are merely taking an existing pod spec, allowing for one round of user overrides, and a round of admin overrides before launch. All three users are modifying the same V1pod object, which leads to better consistency across the organization.
 
