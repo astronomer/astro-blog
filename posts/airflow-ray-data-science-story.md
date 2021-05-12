@@ -154,7 +154,7 @@ While this alpha release implements the Ray plasma store for passing data betwee
 
 ### Current Limitations
 
-The Ray Airflow Task API as shown above is currently in alpha, which means there will be some rough edges. We welcome any and all bug reports, suggestions, or PRs! You can find the code [here](https://github.com/anyscale/airflow-provider-ray).
+The Ray Provider for Airflow as demoed above is currently in alpha, which means there will be some rough edges. We welcome any and all bug reports, suggestions, or PRs! [You can find the code here](https://github.com/anyscale/airflow-provider-ray).
 
 ## Looking Ahead: The Future of Airflow and Ray
 
