@@ -36,7 +36,7 @@ It is worth noting that the legacy `executor_confi`g values will still work in A
 
 ### **The pod\_mutation\_hook**
 
-As introduced in 1.10.12, the new `pod_mutation_hook` takes a Kubernetes V1Pod object as a parameter and allows the Airflow admin to modify all pods using Kubernetes API before Airflow releases these pods. This hook applies to both pods created by the KubernetesExecutor and pods created by the KubernetePodOperator.
+As introduced in 1.10.12, the new `pod_mutation_hook` takes a Kubernetes V1Pod object as a parameter and allows the Airflow admin to modify all pods using Kubernetes API before Airflow releases these pods. This hook applies to both pods created by the KubernetesExecutor and pods created by the KubernetesPodOperator.
 
 ### **A Simplified Design**
 

@@ -226,6 +226,7 @@ def load_best_model_checkpoint(analysis):
 analysis = tune_model(data)
 best_checkpoint = load_best_model_checkpoint(analysis)
 ```
+
 ### Checkpointing Data using Ray
 
 One major benefit Airflow can offer Ray users is the ability to rerun tasks with fault tolerant data storage. Ray uses a local plasma store on each worker process to keep data in memory for fast processing. This system works great when it comes to speedy processing of data, but can be lost if there is an issue with the Ray cluster. 
