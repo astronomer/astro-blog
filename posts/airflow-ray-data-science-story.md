@@ -278,4 +278,4 @@ This alpha integration is just the beginning, and we can't wait to share more as
 
 [You can find the demo code for this post in this repository](https://github.com/astronomer/ray-airflow-demo), and the [code for the Airflow Ray provider in this repository](https://github.com/anyscale/airflow-provider-ray).
 
-We are actively developing this system so [any feature requests or issues would be highly appreciated- feel free to [open an issue directly on the repository](https://github.com/anyscale/airflow-provider-ray/issues) if you'd like to get involved!
+We are actively developing this system so any feature requests or issues would be highly appreciated- feel free to [open an issue directly on the repository](https://github.com/anyscale/airflow-provider-ray/issues) if you'd like to get involved!
