@@ -8,6 +8,8 @@ authors:
   - Joanna Kasprzak-Kajder
 date: 2021-05-11T09:23:32.376Z
 ---
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EsUevEuWi7c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Key takeaways
 
 It’s expected that more than 10K software engineers, data scientists, business intelligence analysts, and DevOps engineers will virtually attend the Airflow Summit 2021 (July 8th-16th). The stats speak for themselves, with the almost doubled number of talk submissions this year, we’re excited to see how the Airflow Summit will play out this time!
@@ -18,6 +20,10 @@ Astronomer is the proud sponsor and co-organizer along with Google, Amazon, Data
 
 [Ready to sign up? Register today! ](https://www.crowdcast.io/e/airflowsummit2021?utm_campaign=AstronomerMarketing&utm_source=Website&utm_medium=Bar)
 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZDACzTBIQtk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Agenda sneak peek
 
 * What comes after Apache Airflow 2.0? The best people to answer that will be Ash Berlin-Taylor and Aizhamal Nurmamat kyzy, the keynote speakers! 
@@ -27,6 +33,10 @@ Astronomer is the proud sponsor and co-organizer along with Google, Amazon, Data
 
 And that’s just the beginning! For more, check out the [Airflow Summit agenda!](https://airflowsummit.org/speakers/)
 
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yOxx-3YP_uU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## What are the top reasons for attending the Airflow Summit 2021? 
 
 * You will get a unique opportunity to witness the entire data-driven community all around the world showcasing their Airflow journey and uncovering the high-level usage of Airflow 
@@ -34,6 +44,10 @@ And that’s just the beginning! For more, check out the [Airflow Summit agenda!
 * You will be ready to lead the charge and stay at the forefront of data management—this event is centered around the latest trends and solutions, continuous innovation in the making!
 * You will enjoy deep technical dives, use cases, and panel discussion with the practitioners, Airflow Committers, and data scientists from all around the world!
 * You will be networking with Airflow enthusiasts spanned across the industries. Who knows what opportunities it may bring and what talents you may find?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NaCVLSz3ZFU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 ## Behind the scenes 
 
@@ -62,3 +76,7 @@ Andrew Ettinger - Chief Revenue Officer at Astronomer.
 Join us to participate, to listen, to learn and to network with your peers across the globe to help drive data to new levels!
 
 [Save your spot and register today! ](https://www.crowdcast.io/e/airflowsummit2021?utm_campaign=AstronomerMarketing&utm_source=Website&utm_medium=Bar)
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iz0Sfi1LDfM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
