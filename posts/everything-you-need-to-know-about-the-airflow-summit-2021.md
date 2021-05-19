@@ -8,6 +8,8 @@ authors:
   - Joanna Kasprzak-Kajder
 date: 2021-05-11T09:23:32.376Z
 ---
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EsUevEuWi7c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Key takeaways
 
 It’s expected that more than 10K software engineers, data scientists, business intelligence analysts, and DevOps engineers will virtually attend the Airflow Summit 2021 (July 8th-16th). The stats speak for themselves, with the almost doubled number of talk submissions this year, we’re excited to see how the Airflow Summit will play out this time!
