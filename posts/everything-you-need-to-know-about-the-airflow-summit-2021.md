@@ -8,7 +8,7 @@ authors:
   - Joanna Kasprzak-Kajder
 date: 2021-05-11T09:23:32.376Z
 ---
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EsUevEuWi7c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/EsUevEuWi7c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Key takeaways
 
@@ -22,7 +22,7 @@ Astronomer is the proud sponsor and co-organizer along with Google, Amazon, Data
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZDACzTBIQtk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ZDACzTBIQtk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Agenda sneak peek
 
@@ -35,7 +35,7 @@ And that’s just the beginning! For more, check out the [Airflow Summit agenda!
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yOxx-3YP_uU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/yOxx-3YP_uU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## What are the top reasons for attending the Airflow Summit 2021? 
 
@@ -45,7 +45,7 @@ And that’s just the beginning! For more, check out the [Airflow Summit agenda!
 * You will enjoy deep technical dives, use cases, and panel discussion with the practitioners, Airflow Committers, and data scientists from all around the world!
 * You will be networking with Airflow enthusiasts spanned across the industries. Who knows what opportunities it may bring and what talents you may find?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NaCVLSz3ZFU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/NaCVLSz3ZFU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
@@ -79,4 +79,4 @@ Join us to participate, to listen, to learn and to network with your peers acros
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iz0Sfi1LDfM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/iz0Sfi1LDfM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
