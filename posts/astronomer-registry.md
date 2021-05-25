@@ -6,7 +6,12 @@ heroImagePath: ../assets/registry.png
 authors:
   - Pete DeJoy
 date: 2021-03-30T17:58:40.803Z
+customjs:
+- https://fast.wistia.net/assets/external/E-v1.js
 ---
+
+<iframe src="https://fast.wistia.net/embed/iframe/w4vjgdxwf1" title="The Hub of Airflow Operators Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="360"></iframe>
+
 
 Today, we're excited to announce [The Astronomer Registry](http://registry.astronomer.io/): a discovery hub for Airflow providers designed to bridge the gap between the Airflow community and the broader data ecosystem.
 
