@@ -55,11 +55,8 @@ We're always looking for rising stars. Check out our latest openings [here](http
 **Bonus:** &nbsp;_Wallpapers are fun aren't they? Here are a few freebies..._
 
 ![havefun2560x1600GreenA.jpg](../assets/havefun2560x1600GreenA.jpg)  
-[Download Wallpaper](../assets/havefun2560x1600GreenA.jpg)
 
 ![havefun2560x1600WhiteA.jpg](../assets/havefun2560x1600WhiteA.jpg)  
-[Download Wallpaper](../assets/havefun2560x1600WhiteA.jpg)
 
 ![havefun2560x1600PurpleA.jpg](../assets/havefun2560x1600PurpleA.jpg "havefun2560x1600PurpleA.jpg")  
-[Download Wallpaper](../assets/havefun2560x1600PurpleA.jpg)
 

@@ -107,4 +107,4 @@ We want to thank everyone in the Apache Airflow and Astronomer communities for y
 
 [Daniel](https://www.linkedin.com/in/danielimberman?originalSubdomain=co) works for Astronomer as a full-time committer to the Apache Airflow Project.
 
-Astronomer is hiring! If you’re looking for a remote first culture and love Airflow, apply at <https://www.astronomer.io/careers> or contact us at [humans@astronomer.io](humans@astronomer.io).
+Astronomer is hiring! If you’re looking for a remote first culture and love Airflow, apply at <https://www.astronomer.io/careers> or contact us at [humans@astronomer.io](mailto:humans@astronomer.io).
