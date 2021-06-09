@@ -368,4 +368,4 @@ Let's just hope the performance increase isn't because of a bug!
 
 [Ash](https://www.linkedin.com/in/ashberlin/?originalSubdomain=uk) is an Airflow Team Lead at Astronomer and Project Management Committee member of Apache Airflow. Find him on Twitter [@AshBerlin](https://twitter.com/AshBerlin).
 
-Astronomer is hiring! If you’re looking for a remote first culture and love Airflow+Kubernetes, contact us at [humans@astronomer.io](humans@astronomer.io).
+Astronomer is hiring! If you’re looking for a remote first culture and love Airflow+Kubernetes, contact us at [humans@astronomer.io](mailto:humans@astronomer.io).
