@@ -46,6 +46,5 @@ Now, we plan to continue experimenting on what we’ll deliver depending on the 
 
 _\*If you know what that those phrases mean, you know that this is kind of a stretch. Ok, it's a pretty jerry-rigged description not corresponding to any real methodology … but it does, at face value, accurately describe what we did._
 
-![wallpapersA.jpg](../assets/wallpapersA.jpg)  
-Download wallpaper for [desktop](../assets/nps2560x1600b.jpg) or [mobile](../assets/nps1080x1920a.jpg)!
+![wallpapersA.jpg](../assets/wallpapersA.jpg)
 

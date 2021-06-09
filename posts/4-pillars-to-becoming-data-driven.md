@@ -64,8 +64,7 @@ Our world is&nbsp;entering a Data Revolution, and [it’s time to get ready](htt
 
 _If you still have questions or wonder how Astronomer can help, email me at_ [_brad@astronomer.io_](mailto:brad@astronomer.io)_._
 
-![mobilewallpaper-1.jpg](../assets/mobilewallpaper-1.jpg)  
-<../assets/wallpaperiPhone6a-1.jpg>
+![mobilewallpaper-1.jpg](../assets/mobilewallpaper-1.jpg)
 
 &nbsp;
 
