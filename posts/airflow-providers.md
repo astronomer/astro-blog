@@ -8,8 +8,8 @@ authors:
   - Eric Griffing
 date: 2021-04-06T20:23:50.045Z
 ---
-
 <!-- markdownlint-disable MD033 -->
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vEEn_dutW8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Airflow Provider Framework
@@ -22,9 +22,7 @@ In Airflow 2.0, Providers are decoupled from core Airflow releases:
 
 * Providers can now be independently versioned, maintained, and released
 * Users just \`pip install\` the provider package and then import modules into their DAG files
-* Providers can now be built from any public repository 
-
-
+* Providers can now be built from any public repository  
 
 ## The Astronomer Registry
 
