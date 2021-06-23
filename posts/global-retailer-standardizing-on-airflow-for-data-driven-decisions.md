@@ -3,7 +3,7 @@ slug: retail-case-study
 title: Global Retailer Standardizing On Airflow for Data-Driven Decisions
 description: Learn how a global retailer managed to standardize the processes of
   scheduling data pipelines within the organization with Apache Airflow.
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/retail.png
 authors:
   - Ula Rydiger
 date: 2021-06-23T08:40:43.193Z
