@@ -14,8 +14,6 @@ date: 2021-06-23T08:40:43.193Z
 * Reduced Day-2 operations
 * Enforced enterprise standards to drive greater security posture while maintaining flexibility
 
-
-
 As the global COVID-19 pandemic hit, companies around the world, particularly in retail, had to re-imagine doing business in new, innovative ways to attract consumers. It required them to seriously consider migration to the cloud, as well as redesign ways in which they’re leveraging data that enforce every decision.
 
 Astronomer’s client, a major retailer, faced the same challenges. They had to find a repeatable, consistent standard for all the teams to operate from, to reduce the complexity of their data, so they could focus on making informed decisions for:
@@ -25,13 +23,13 @@ Astronomer’s client, a major retailer, faced the same challenges. They had to 
 * Autostock shelving 
 * Sales and marketing expenses
 
-\> Did you know: While [total retail sales volumes fell by 1.9%](https://www.ons.gov.uk/economy/grossdomesticproductgdp/articles/impactofthecoronaviruscovid19pandemiconretailsalesin2020/2021-01-28) in 2020 (the largest annual fall on record), online sales rose to a record high of 33.9% as a share of all retail spending.
+> Did you know: While [total retail sales volumes fell by 1.9%](https://www.ons.gov.uk/economy/grossdomesticproductgdp/articles/impactofthecoronaviruscovid19pandemiconretailsalesin2020/2021-01-28) in 2020 (the largest annual fall on record), online sales rose to a record high of 33.9% as a share of all retail spending.
 
 ## The challenge
 
 The client was moving a significant number of workloads from on-prem to the cloud. However, the process was not standardized among the teams. Being a global company, they needed to create one way of scheduling data pipelines within the organization. Without the standardization layer, with a home-grown legacy, less flexible and non-extensible solutions, it was hard for the teams to communicate with each other and perform tasks fast and efficiently. The teams would spend thousands of hours trying to make the systems work manually, risking making uninformed business decisions based on wrong data.
 
-\> Did you know: Among the retail enterprises surveyed by Harvard Business Review Snowflake, only [5% qualified as data-driven organizations.](https://www.emarketer.com/content/why-data-is-key-to-retail-success)
+> Did you know: Among the retail enterprises surveyed by Harvard Business Review Snowflake, only [5% qualified as data-driven organizations.](https://www.emarketer.com/content/why-data-is-key-to-retail-success)
 
 ## The solution
 
