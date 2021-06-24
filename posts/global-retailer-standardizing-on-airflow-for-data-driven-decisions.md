@@ -37,7 +37,7 @@ Before approaching Astronomer and giving Apache Airflow a go, the retail giant h
 
 We helped the client migrate, stabilize, operationalize and integrate all their legacy workloads into the Astronomer platform. Now, the client has a way to drive a multi-tenant environment from a unified control plane, which enables any team in the world to spin up an Airflow environment on-demand tied to the company’s security, logging and monitoring.
 
-Giving development teams a standard way to interact with data reduced the operational overhead necessary to support their environments. With Astronomer, the client increased developer productivity, [reduced Day 2 Operations](https://www.astronomer.io/blog/cloud-agronomics), and ultimately accelerated the pace of data driven decision making on a global basis.
+Giving development teams a standard way to interact with data reduced the operational overhead necessary to support their environments. With Astronomer, the client increased developer productivity, [reduced Day 2 Operations](https://www.astronomer.io/blog/cloud-agronomics), and ultimately accelerated the pace of data-driven decision-making on a global basis.
 
 ## Leverage the power of data!
 
