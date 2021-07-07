@@ -56,6 +56,6 @@ Apart from the more efficient management and maintenance of Apache Airflow, the 
 
 ## Looking ahead
 
-Being an early-stage startup, Mage’s hope is to be able to scale up easily with Astronomer infrastructure—whether it will be smoothly operating 1000 DAGs, or deploying new resources without interruption.
+Being an early-stage startup, Mage’s hope is to be able to[ scale up easily with Astronomer infrastructure](https://www.astronomer.io/get-astronomer/)—whether it will be smoothly operating 1000 DAGs, or deploying new resources without interruption.
 
 > “I would recommend Astronomer to not only early-stage startups but also to bigger companies who deal with data,” sums up Johnson,”If you are already using Airflow it's worth looking into Astronomer if you want to ease the burden of managing it.”
