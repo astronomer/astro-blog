@@ -15,15 +15,9 @@ date: 2021-07-07T08:33:39.618Z
 * **Business impact** —saving time and resources (i.e. engineering hours), so the client can focus on more important things, like developing their product.
 * **Continuous innovation** — allowing the client to stay on top of Airflow advancements.
 
-
-
 [Mage,](https://m.mage.ai/) an early-stage startup, makes it easy for product developers with no prior experience to use AI and their data to make predictions. Their use cases include churn prevention, product recommendations, customer lifetime value, and more. Mage also helps developers incorporate machine learning into their apps. 
 
-
-
 The company’s goal is to equip businesses with accessible AI technology so they can deliver transformational customer experiences. To achieve that they decided to switch to the Astronomer Cloud offering to manage Apache Airflow easily and efficiently.
-
-
 
 ## Why Airflow
 
@@ -41,20 +35,16 @@ Additionally, as the number of DAGs in their Airflow cluster grew, the DAGs some
 
 Eventually, in order to scale up Airflow task processing efficiently, effectively, and with little maintenance they decided to go for a managed service. 
 
-
-
 ## Why Astronomer
 
-> Why Mage loves Astronomer:
-> 
-> * DAGs maintained in Git repositories — Astronomer allows the client to deploy DAGs directly from Git repos.
-> * Cloud-agnostic — with Astronomer the client is not limited to one cloud provider.
-> * Easy initial setup — easy-to-follow documentation and no need for additional security configuration when it comes to access keys or VPCs.
-> * Customer support — provided by Airflow experts.
-> * CI/CD integration — on Astronomer platform Airflow deployments can be integrated into CI/CD pipelines with various tools such as Jenkins or CircleCI.
-> * Quick deployments — accessible UI allowing the client to adjust resources easily from one page, and deploy changes within a few minutes. 
-
-
+> **Why Mage loves Astronomer:**
+>
+> * **DAGs maintained in Git repositories** — Astronomer allows the client to deploy DAGs directly from Git repos.
+> * **Cloud-agnostic** — with Astronomer the client is not limited to one cloud provider.
+> * **Easy initial setup** — easy-to-follow documentation and no need for additional security configuration when it comes to access keys or VPCs.
+> * **Customer support** — provided by Airflow experts.
+> * **CI/CD integration** — on Astronomer platform Airflow deployments can be integrated into CI/CD pipelines with various tools such as Jenkins or CircleCI.
+> * **Quick deployments** — accessible UI allowing the client to adjust resources easily from one page, and deploy changes within a few minutes. 
 
 After looking at different options, Mage signed up for a free trial at Astronomer. They also attended demo sessions with our support team to get a better idea of how to use the platform. Upon finishing the trial period, they decided that the Astronomer Cloud platform is the right tool for their needs.
 
@@ -63,8 +53,6 @@ Astronomer Cloud allows Mage to keep track of their resources— to set them up 
 > “As the company grows, we knew that scaling up all the task processes was going to be an issue so we wanted to switch to a managed service and minimize the amount of work that was done by us,” says Johnson, “With Astronomer, convenience is the main thing. Being able to quickly see what's going on and why.”
 
 Apart from the more efficient management and maintenance of Apache Airflow, the platform also allows users to stay on top of the Airflow updates and upgrade easily.
-
-
 
 ## Looking ahead
 
