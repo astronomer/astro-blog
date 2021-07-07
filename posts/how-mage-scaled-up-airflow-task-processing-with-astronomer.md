@@ -1,5 +1,5 @@
 ---
-slug: mage-airflow-task-processing
+slug: mage-apache-airflow-task-processing
 title: How Mage Scaled Up Airflow Task Processing with Astronomer
 description: A closer look into our cooperation with Mage—an AI tool for product
   developers. See how they leveraged Apache Airflow with Astronomer.
