@@ -3,7 +3,7 @@ slug: herman-miller-case-study
 title: How Herman Miller Eliminated Data Silos With a Centralized Data Strategy
 description: See how Herman Miller solved the issue of disparate data sources
   and inefficient data alerting and monitoring with Astronomer.
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/hmcover.png
 authors:
   - Ula Rydiger
 date: 2021-07-09T08:17:55.465Z
