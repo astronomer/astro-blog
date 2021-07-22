@@ -7,7 +7,6 @@ description: Our Field CTO, Viraj Parekh, shares insights on how sales and
 heroImagePath: ../assets/coverecom.png
 authors:
   - Ula Rydiger
-  - Viraj Parekh
 date: 2021-07-22T08:05:09.795Z
 ---
 Growth doesn’t come without its challenges and for the e-commerce industry, there’s no exception. Big competition worldwide, costs of advertising, shipping, low margins… However, nowadays it seems that the biggest challenge for the e-commerce industry is to be able to make sense of data — to understand their customers better and provide better service. 
