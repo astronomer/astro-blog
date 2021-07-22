@@ -4,7 +4,7 @@ title: How Data Pipelines Drive Improved Sales in E-commerce
 description: Our Field CTO, Viraj Parekh, shares insights on how sales and
   marketing operations in e-commerce can benefit from running functional data
   pipelines.
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/coverecom.png
 authors:
   - Ula Rydiger
   - Viraj Parekh
