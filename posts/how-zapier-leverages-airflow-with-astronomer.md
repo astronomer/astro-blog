@@ -3,7 +3,7 @@ slug: zapier
 title: How Zapier Leverages Airflow with Astronomer
 description: Discover the story of our cooperation with Zapier that provides
   seemingly endless options for point-and-click workflow automation.
-heroImagePath: ../assets/zapier.png
+heroImagePath: ../assets/zapier2.png
 authors:
   - Pete DeJoy
 date: 2021-06-07T12:42:15.679Z
