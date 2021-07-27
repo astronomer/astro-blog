@@ -16,7 +16,7 @@ The conference pictured the whole Airflow ecosystem and the power of the #commun
 
 The Summit was opened by Kaxil Naik, the Airflow PMC member & Committer and Manager - Airflow Engineering at Astronomer. He [shared his journey of becoming a leading contributor to Apache Airflow](https://www.crowdcast.io/e/airflowsummit2021/1). Interestingly, Kaxil's first PR to Airflow was a fixed typo, not yet knowing Python.
 
-![](https://lh4.googleusercontent.com/G7wBoZ8T0A6L0eMH2a9maGKobMkVUajAQxZZEB--Ud8s9-_Or0B0LXnGWGlilouqPgN6rOJill1Gp4abFwOkr_AVYpVP7i4qwrdw6vo45U3ewbh7z0SjCqXVLOuSTXlRwiiZ9DKM)
+![Speaker's first PR to Airflow was a fixed typo, not yet knowing Python.](https://lh4.googleusercontent.com/G7wBoZ8T0A6L0eMH2a9maGKobMkVUajAQxZZEB--Ud8s9-_Or0B0LXnGWGlilouqPgN6rOJill1Gp4abFwOkr_AVYpVP7i4qwrdw6vo45U3ewbh7z0SjCqXVLOuSTXlRwiiZ9DKM)
 
 Ry Walker, the Co-Founder of Astronomer, had a great discussion with Jey Sen, Data Platform Architect at Paypal, on [Airflow as the Foundation of a Multi-Faceted Data Platform](https://www.crowdcast.io/e/airflowsummit2021/5). It focused on building solid integrations with Airflow — one of the main themes of Airflow Summit 2021.
 
@@ -34,7 +34,7 @@ Ash Berlin-Taylor entered the virtual stage for the second time to give you a [d
 
 On the final day of the Airflow Summit 2021, Kenten Danas highlighted another great Airflow integration. This time for [productionizing Machine Learning Pipelines with Airflow, Kedro, and Great Expectations](https://www.crowdcast.io/e/airflowsummit2021/43).
 
-![Airflow-to tie it all together!](https://lh4.googleusercontent.com/rm_9FQtGio1PFsJPEMhn-bjNn-qA_qQxuSsqraQiRB3EvIfXco-gTjpHD1KjKaHbBKui4Om6Kse51Og2FWUthpohpycm2Yqm4YGmSisHN4cuKsH-oN5U7mLNyHi-Qox9r3ka9i6R "Airflow integrations")
+![Slide from the presentation on Productionizing Machine Learning Pipelines with Airflow, Kedro, and Great Expectations.](https://lh4.googleusercontent.com/rm_9FQtGio1PFsJPEMhn-bjNn-qA_qQxuSsqraQiRB3EvIfXco-gTjpHD1KjKaHbBKui4Om6Kse51Og2FWUthpohpycm2Yqm4YGmSisHN4cuKsH-oN5U7mLNyHi-Qox9r3ka9i6R "Airflow integrations")
 
 Kaxil was joined by Jarek Potiuk, Technical Advisor at Astronomer and Independent Open-Source Contributor and Advisor, in his third appearance. They talked about the reasons [why Airflow loves Kubernetes—starting](https://www.crowdcast.io/e/airflowsummit2021/51) from an official container image, through quick-start docker-compose configuration, culminating in April with the official Helm Chart for Airflow release.
 
