@@ -1,7 +1,7 @@
 ---
-slug: /airflowsummit-recap
+slug: airflowsummit-recap
 title: "Airflow Summit 2021 Highlights "
-description: Learn more about the biggest community-driven event around Apache Airflow!
+description: Learn about the biggest community-driven event around Apache Airflow 2021!
 heroImagePath: ../assets/summitrecap.png
 authors:
   - JoannaKasprzakKajder
