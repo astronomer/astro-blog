@@ -4,15 +4,19 @@ title: "Airflow Summit 2021 Highlights "
 description: Learn about the biggest community-driven event around Apache Airflow 2021!
 heroImagePath: ../assets/summitrecap.png
 authors:
-  - JoannaKasprzakKajder
-  - TomaszSzymonski
+  - Joanna Kasprzak-Kajder
+  - Tomasz Szymonski
 date: 2021-07-27T12:11:00.204Z
 ---
+# Airflow Summit 2021 - The power of the community
+
 Airflow Summit 2021 has just ended with a bang! We’ve reached 10K+ data-driven attendees from all around the world. The lineup covered topics from the first commits to the exciting future of Apache Airflow, and we couldn’t be happier about being a part of that inspiring event. Seven days of talks were hosted by the global network of meetups (shoutout to London, Warsaw, Bangalore, Tokyo, Bay Area, Tel Aviv, New York, Melbourne!) and moderated by the vibrant Airflow community.  “Community over the code” motto was genuinely alive, and we felt the immense energy coming from the organizers, speakers, and attendees. 
 
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6821793847308279808" height="691" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 The conference pictured the whole Airflow ecosystem and the power of the #community. We were impressed by the diverse group of speakers from various industries and presenting the Airflow journeys from many perspectives. With Pinterest, Societe Generale, PayPal, Wise on stage, it was visible that Airflow has its momentum. All the talks are available [here](https://airflowsummit.org/live/), and we've also compiled a short guide to the Astronomer's ones if you missed them! 
+
+## Astronomer on stage
 
 The Summit was opened by Kaxil Naik, the Airflow PMC member & Committer and Manager - Airflow Engineering at Astronomer. He [shared his journey of becoming a leading contributor to Apache Airflow](https://www.crowdcast.io/e/airflowsummit2021/1). Interestingly, Kaxil's first PR to Airflow was a fixed typo, not yet knowing Python.
 
