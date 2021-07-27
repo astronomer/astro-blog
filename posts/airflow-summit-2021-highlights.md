@@ -4,7 +4,8 @@ title: "Airflow Summit 2021 Highlights "
 description: Learn more about the biggest community-driven event around Apache Airflow!
 heroImagePath: ../assets/summitrecap.png
 authors:
-  - JoannaKasprzakKajderTomaszSzymonski
+  - JoannaKasprzakKajder
+  - TomaszSzymonski
 date: 2021-07-27T12:11:00.204Z
 ---
 Airflow Summit 2021 has just ended with a bang! We’ve reached 10K+ data-driven attendees from all around the world. The lineup covered topics from the first commits to the exciting future of Apache Airflow, and we couldn’t be happier about being a part of that inspiring event. Seven days of talks were hosted by the global network of meetups (shoutout to London, Warsaw, Bangalore, Tokyo, Bay Area, Tel Aviv, New York, Melbourne!) and moderated by the vibrant Airflow community.  “Community over the code” motto was genuinely alive, and we felt the immense energy coming from the organizers, speakers, and attendees. 
