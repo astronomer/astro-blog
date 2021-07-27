@@ -32,7 +32,7 @@ Two of the Astronomer's Founders, Ry Walker and Greg Neiheisel, shed light on [w
 
 Ash Berlin-Taylor entered the virtual stage for the second time to give you a [deep dive into the Apache Airflow Scheduler](https://www.crowdcast.io/e/airflowsummit2021/28) and tips for taming that complex beast. In another technical talk, Plinio Guzman, Ecosystem Architect at Astronomer, discussed [building secure, high-quality DAGs in the Airflow Ecosystem](https://www.crowdcast.io/e/airflowsummit2021/41).
 
-On the final day of Airflow Summit 2021, Kenten Danas highlighted another great Airflow integration. This time for [productionizing Machine Learning Pipelines with Airflow, Kedro, and Great Expectations](https://www.crowdcast.io/e/airflowsummit2021/43).
+On the final day of the Airflow Summit 2021, Kenten Danas highlighted another great Airflow integration. This time for [productionizing Machine Learning Pipelines with Airflow, Kedro, and Great Expectations](https://www.crowdcast.io/e/airflowsummit2021/43).
 
 ![Airflow-to tie it all together!](https://lh4.googleusercontent.com/rm_9FQtGio1PFsJPEMhn-bjNn-qA_qQxuSsqraQiRB3EvIfXco-gTjpHD1KjKaHbBKui4Om6Kse51Og2FWUthpohpycm2Yqm4YGmSisHN4cuKsH-oN5U7mLNyHi-Qox9r3ka9i6R "Airflow integrations")
 
