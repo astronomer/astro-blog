@@ -1,8 +1,8 @@
 ---
 slug: what-is-data-orchestration
 title: What is data orchestration and why is it essential for business
-description: "Find out what data orchestration is, discover the most significant
-  pain points it addresses, and learn how it can help your business grow. "
+description: Discover what data orchestration is, uncover the most significant
+  pain points it addresses, and learn how to help your business grow.
 heroImagePath: ../assets/dataorch2.png
 authors:
   - Julia Wrzosińska
@@ -10,7 +10,9 @@ date: 2021-07-29T13:33:20.440Z
 ---
 What do we mean by data orchestration and why does it matter? In this post, we define data orchestration, cover its benefits, what’s driving the push for ever more data orchestration and what annoying pain points data orchestration can address. We’d love to elaborate on self-driving music orchestras, too, but perhaps we’ll leave that for another day.
 
-# What is Data orchestration? 
+
+
+# What is Data orchestration?
 
 In the most straightforward words, data orchestration is an **automated process that takes data from multiple storage locations and programmatically allows you to author, schedule, and monitor data pipelines.** Data orchestration platforms create a perfectly in-tune orchestra of data management, giving you an opportunity to control the data, monitor systems, and acquire real-time insights. Orchestrators don’t require custom scripts, which takes a load of work off the IT teams’ shoulders. 
 
@@ -100,8 +102,6 @@ And the **Astronomer framework takes Apache Airflow up a notch**. Astronomer aut
 
 With Astronomer, you get to stay close to your data with virtually no effort whatsoever. Your tasks run, and you get to benefit from all the time you just saved! 
 
-
-
 > “*Without Astronomer, there would have been a lot more tweaking and adjusting to achieve the result we want. Our work as data scientists would have been a lot slower and more difficult. I don’t think there’s any company I wouldn’t recommend Astronomer to*".
 >
 > Mark Gergess, VP of Data & Analytics at Herman Miller [(click to see our case study)](https://www.astronomer.io/blog/herman-miller-case-study)
@@ -112,4 +112,4 @@ Data-driven applications are taking over the world, impacting our everyday lives
 
 Given the tremendous pace of technological advancement, the challenge for businesses now is no longer collecting the right data. The focus is rather on integrating new data analysis tools into their operations and strategies—as a result positioning themselves in a future where analytics has the potential to disrupt whole sectors. To fully benefit, companies must integrate analytics into their strategic vision and use the information to make better, quicker choices. And Astronomer data orchestration seems to be the best way to achieve this.
 
-Are you interested in taking your business to the next level and capitalizing on your data? [Click here ](https://www.astronomer.io/get-astronomer)and reach out to one of our experts, we’d love to chat!
+> Are you interested in taking your business to the next level and capitalizing on your data? [Click here ](https://www.astronomer.io/get-astronomer)and reach out to one of our experts, we’d love to chat!
