@@ -6,7 +6,7 @@ description: "Find out what data orchestration is, discover the most significant
 heroImagePath: ../assets/dataorch2.png
 authors:
   - Julia Wrzosińska
-date: 2021-07-29T13:23:43.119Z
+date: 2021-07-29T13:33:20.440Z
 ---
 What do we mean by data orchestration and why does it matter? In this post, we define data orchestration, cover its benefits, what’s driving the push for ever more data orchestration and what annoying pain points data orchestration can address. We’d love to elaborate on self-driving music orchestras, too, but perhaps we’ll leave that for another day.
 
