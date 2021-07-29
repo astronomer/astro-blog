@@ -1,9 +1,8 @@
 ---
 slug: what-is-data-orchestration
 title: What is data orchestration and why is it essential for business
-description: "Find out the most significant pain points data orchestration
-  addresses and discover how it can help your business grow. Fair warning: once
-  you try data orchestration, you won't be able to live without it!"
+description: "Find out what data orchestration is, discover the most significant
+  pain points it addresses, and learn how it can help your business grow. "
 heroImagePath: ../assets/dataorch2.png
 authors:
   - Julia Wrzosińska
