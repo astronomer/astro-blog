@@ -10,8 +10,6 @@ date: 2021-07-29T13:33:20.440Z
 ---
 What do we mean by data orchestration and why does it matter? In this post, we define data orchestration, cover its benefits, what’s driving the push for ever more data orchestration and what annoying pain points data orchestration can address. We’d love to elaborate on self-driving music orchestras, too, but perhaps we’ll leave that for another day.
 
-<br>
-
 # What is Data orchestration?
 
 In the most straightforward words, data orchestration is an **automated process that takes data from multiple storage locations and programmatically allows you to author, schedule, and monitor data pipelines.** Data orchestration platforms create a perfectly in-tune orchestra of data management, giving you an opportunity to control the data, monitor systems, and acquire real-time insights. Orchestrators don’t require custom scripts, which takes a load of work off the IT teams’ shoulders. 
@@ -32,7 +30,7 @@ The final step is to make the data available for the tools that need it. It’s 
 
 ![](../assets/5-benefits-of-data-orchestration.png)
 
-# <br>What is the goal of data orchestration?
+# What is the goal of data orchestration?
 
 > “*Data orchestration provides the answer to making your data more useful and available. But ultimately, it goes beyond simple data management. In the end, orchestration is about using data to drive actions, to create real business value*”.
 >
@@ -46,7 +44,7 @@ Turns out that it's not enough to simply acquire information from data - the rea
 
 The goal of data orchestration is simple. If you manage to collect the right data and get the right insights real-time, you will be able to **make data-driven decisions**, which will deliver real business value and results. The only way to do it successfully and efficiently is with data orchestration platforms.
 
-# <br>
+
 
 # The 7 biggest pain points addressed by data orchestration
 
@@ -90,15 +88,13 @@ Organizations are increasingly moving to hybrid and multi-cloud systems and bidd
 
 Developers surely know the struggle of manually building connectors between systems in order to create a smashing ecosystem for data pipelines. Since businesses use numerous datasets and systems, it often requires great migrations. In order to achieve that, the storage systems need to be connected. It can be quite a pickle for an IT team (time and effort-consuming), but it’s effortless for a proper data orchestration platform. With a well-functioning and interconnected ecosystem, it’s easy to access data for analysis. 
 
-# <br>
-
 # How data orchestration can help *you*?
 
 The capacity to use data more effectively can generate a true competitive advantage in today’s digital economy. So how can your company tackle big data issues and fully exploit your data assets? And how can you use these data assets to spur your ability to innovate? Data orchestration provides the answer to making your data more useful, available, and, in the end, more valuable. The business implications of failing to properly leverage data insights can be substantial, and nobody wants to stay behind.
 
 With data orchestration, you earn more time and resources to spend on valuable projects. The benefits imply shorter ramp-up times, easier installs, and speedy insights for data engineers, to name a few. Basically, your entire business improves with less effort from you. What’s not to like?
 
-# <br>
+
 
 # Why do companies trust Astronomer with their data orchestration?
 
@@ -112,7 +108,7 @@ With Astronomer, you get to stay close to your data with virtually no effort wha
 >
 > Mark Gergess, VP of Data & Analytics at Herman Miller [(click to see our case study)](https://www.astronomer.io/blog/herman-miller-case-study)
 
-# <br>
+
 
 # Summary
 
