@@ -48,7 +48,7 @@ The goal of data orchestration is simple. If you manage to collect the right dat
 
 Does your organization suffer from any of these?
 
-1. **Wasting time and recources on manual coding**
+1. **Wasting time and resources on manual coding**
 
 Developer productivity is the real issue here. Manual administration simply cannot effectively scale today's demands, with modern IT teams being responsible for maintaining hundreds to thousands of apps and servers.  There’s only so much manual coding a human being can produce - and the bigger the company grows, the more code there is to write. The more code, the more potential problems, bugs, freezes, etc. As the number of data pipelines increases, it becomes humanly impossible to solve all the problems in a blink of an eye and keep the inflow of real-time data alive. If only there was a tool that could orchestrate this process and take it off developers’ busy hands! Oh, wait. There is. That’s the exact reason data orchestration solutions are here!
 
@@ -62,7 +62,7 @@ Before the “analytics era”, IT teams would write code to orchestrate data an
 
 Proper data orchestration is a life-saver, **creating protocols for channeling inconsistent types of data across specific pipelines** - and delivering consolidation.
 
-3. **Daat scattered and siloed**
+3. **Data scattered and siloed**
 
 The goal of data orchestration is to **make the data useful**, basically. Too many businesses nowadays leave their data scattered and in data silos. Migrating siloed data between locations is often too hard to tackle. It’s difficult for companies to have a complete grasp of what their data is telling them. As a result, organizations often leave their data fragmented, in silos, or only harvest the lowest-hanging insight fruit. 
 
