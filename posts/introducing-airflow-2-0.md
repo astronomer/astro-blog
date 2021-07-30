@@ -164,8 +164,6 @@ Apache Airflow 2.0 doesn’t only bring some amazing new features—the data arc
 
 A common workflow for processing files is dropping them into an S3 bucket and performing a 3-step process for each file (before they’re being inserted into a data warehouse and used by data analysts). In this case, the pipeline has to run every 30 minutes and occasionally can be triggered on an ad-hoc basis (through an API).
 
-
-
 **Even though it’s very common, there’s a lot of places it can go wrong on Airflow 1.10. Here’s why:**
 
 * You’d need to use a Subdag to make the UI clean when you're showing the process. However, Subdags can be hard to manage. 
@@ -175,15 +173,9 @@ A common workflow for processing files is dropping them into an S3 bucket and pe
 * Airflow 1.10 has the web server parse DAGs, meaning it will need more resources as you add more workloads. 
 * Whatever bits of data you'd want to pass back and forth through an XCOM, the Airflow 1.10 XCOMs are pretty limited in their scope. They have to be stored within the Airflow database and can’t be externalized.
 
-
-
-![](https://lh4.googleusercontent.com/H2YozWvtEeyMwoNARK0omJbkhu-ePQu1v34kCiRAKnB3z1bOQw5yYRjpshoJsDmFK4-CoDiasV-Xrs3TurU5x-v_vSfRBHqUrhYrXpGq6jr-ctFpwKlsrAFYd2TPds_KJFcDKlVS)
-
-
+![A workflow on Airflow 1.10](https://lh4.googleusercontent.com/H2YozWvtEeyMwoNARK0omJbkhu-ePQu1v34kCiRAKnB3z1bOQw5yYRjpshoJsDmFK4-CoDiasV-Xrs3TurU5x-v_vSfRBHqUrhYrXpGq6jr-ctFpwKlsrAFYd2TPds_KJFcDKlVS)
 
 As you can see, as great as Airflow 1.10 is, it has some limitations.
-
-
 
 **Luckily, all that's different in Airflow 2.0:**
 
@@ -195,19 +187,11 @@ As you can see, as great as Airflow 1.10 is, it has some limitations.
 * The UI is stateless because all your DAGs in Airflow 2.0 are serialized in the database so that you don't have to spend resources cracking up your web server.  
 * Lastly, you can use external storage like S3 for your XCOMs so that if you want to pass large amounts of data back and forth you can do that with a clean developer experience without maintaining extra overhead. Plus, the data is backed up in S3, which is infinitely scalable.
 
-
-
-![](https://lh3.googleusercontent.com/GhOXIfjAjfzdXiR0_KDwEVNVhzDHc13oDLMSd0kLHtA5Hcgf9Xs6jQqn7DxXs8Vd0gt6qcZW0MNjidH7HKk7AfrMkQovnSyx23FzZMCZvfqBzu3T6zRyrmNG7DEOMAi2wYgbrqA0)
-
-
+![A workflow on Airflow 2.0](https://lh3.googleusercontent.com/GhOXIfjAjfzdXiR0_KDwEVNVhzDHc13oDLMSd0kLHtA5Hcgf9Xs6jQqn7DxXs8Vd0gt6qcZW0MNjidH7HKk7AfrMkQovnSyx23FzZMCZvfqBzu3T6zRyrmNG7DEOMAi2wYgbrqA0)
 
 To sum up, everything from writing and maintaining those workloads, to making sure that your jobs are on when they're supposed to without delay and that your data is actually there when you need it—Airflow 2.0 makes each step easier. 
 
-
-
-![](https://lh5.googleusercontent.com/m1GIeSbk2SoyMuP-QdyV-7jopEKw9kwFw09X4_0s_d1vHvzW5HZ9vMbULXUyLiWQV5mz5EjP7LZwC8-7PQi_6Wg0plMMrd63cs__W1QoVwY2KPQlPidoi9QIQeZnsGSjbTXTsQfI)
-
-
+![The comparison of Apache Airflow 1.10 and Airflow 2.0](https://lh5.googleusercontent.com/m1GIeSbk2SoyMuP-QdyV-7jopEKw9kwFw09X4_0s_d1vHvzW5HZ9vMbULXUyLiWQV5mz5EjP7LZwC8-7PQi_6Wg0plMMrd63cs__W1QoVwY2KPQlPidoi9QIQeZnsGSjbTXTsQfI)
 
 ## Get Started with Airflow 2.0
 
