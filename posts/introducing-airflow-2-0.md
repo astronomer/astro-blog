@@ -191,7 +191,7 @@ As you can see, as great as Airflow 1.10 is, it has some limitations.
 
 To sum up, everything from writing and maintaining those workloads, to making sure that your jobs are on when they're supposed to without delay and that your data is actually there when you need it—Airflow 2.0 makes each step easier. 
 
-![The comparison of Apache Airflow 1.10 and Airflow 2.0](https://lh5.googleusercontent.com/m1GIeSbk2SoyMuP-QdyV-7jopEKw9kwFw09X4_0s_d1vHvzW5HZ9vMbULXUyLiWQV5mz5EjP7LZwC8-7PQi_6Wg0plMMrd63cs__W1QoVwY2KPQlPidoi9QIQeZnsGSjbTXTsQfI)
+![The comparison of Apache Airflow 1.10 and Airflow 2.0](../assets/screenshot-2021-07-30-at-11.15.42.png)
 
 ## Get Started with Airflow 2.0
 
