@@ -1,6 +1,6 @@
 ---
 slug: what-is-data-orchestration
-title: What is data orchestration and why is it essential for business
+title: What Is Data Orchestration and Why Is It Essential for Business
 description: Discover what data orchestration is, learn the most significant
   pain points it addresses, and find out how to help your business grow.
 heroImagePath: ../assets/dataorch2.png
