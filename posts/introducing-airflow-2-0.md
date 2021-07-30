@@ -1,14 +1,15 @@
 ---
-title: Introducing Airflow 2.0
 slug: introducing-airflow-2-0
-description: 'A breakdown of the major features incorporated in Apache Airflow 2.0, including a refactored, highly-available Scheduler, over 30 UI/UX improvements, a new REST API and much more.'
+title: Introducing Airflow 2.0
+description: A breakdown of the major features incorporated in Apache Airflow
+  2.0, including a refactored, highly-available Scheduler, over 30 UI/UX
+  improvements, a new REST API and much more.
 heroImagePath: ../assets/airflow-2.jpg
 authors:
   - Paola Peraza Calderon
   - Vikram Koka
 date: 2020-10-29T00:00:00.000Z
 ---
-
 Apache Airflow was created by Airbnb’s Maxime Beauchemin as an open-source project in late 2014. It was brought into the Apache Software Foundation’s Incubator Program in March 2016 and saw growing success in the wake of Maxime’s well-known [“The Rise of the Data Engineer”](https://medium.com/free-code-camp/the-rise-of-the-data-engineer-91be18f1e603) blog post. By January of 2019, Airflow was [announced as a Top-Level Apache Project](https://blogs.apache.org/foundation/entry/the-apache-software-foundation-announces44) by the Foundation and is now concretely considered the industry’s leading workflow orchestration solution.
 
 Airflow’s strength as a tool for dataflow automation has grown for a few reasons:
@@ -75,7 +76,7 @@ For more information, reference [Airflow's REST API documentation](https://airfl
 
 ### Smart Sensors
 
-In the context of dependency management in Airflow, it’s been common for data engineers to design data pipelines that employ [*Sensors*](https://www.astronomer.io/guides/what-is-a-sensor/). Sensors are a special kind of Airflow Operator whose purpose is to wait on a particular trigger, such as a file landing at an expected location or an external task completing successfully. Although Sensors are idle for most of their execution time, they nonetheless hold a “worker slot” that can cost significant CPU and memory.
+In the context of dependency management in Airflow, it’s been common for data engineers to design data pipelines that employ *[Sensors](https://www.astronomer.io/guides/what-is-a-sensor/)*. Sensors are a special kind of Airflow Operator whose purpose is to wait on a particular trigger, such as a file landing at an expected location or an external task completing successfully. Although Sensors are idle for most of their execution time, they nonetheless hold a “worker slot” that can cost significant CPU and memory.
 
 The “Smart Sensor” introduced in Airflow 2.0 is an “early access” (subject to change) foundational feature that:
 
@@ -130,7 +131,7 @@ To learn more, refer to [Airflow documentation on Provider Packages](https://air
 
 ### Simplified Kubernetes Executor
 
-Airflow 2.0 includes a re-architecture of the [Kubernetes Executor](https://airflow.apache.org/docs/stable/executor/kubernetes.html) and [KubernetesPodOperator](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/), both of which allow users to dynamically launch tasks as individual Kubernetes Pods to optimize overall resource consumption.  
+Airflow 2.0 includes a re-architecture of the [Kubernetes Executor](https://airflow.apache.org/docs/stable/executor/kubernetes.html) and [KubernetesPodOperator](https://kubernetes.io/blog/2018/06/28/airflow-on-kubernetes-part-1-a-different-kind-of-operator/), both of which allow users to dynamically launch tasks as individual Kubernetes Pods to optimize overall resource consumption.\
 Given the known complexity users previously had to overcome to successfully leverage the Executor and Operator, we drove a concerted effort towards simplification that ultimately involved removing over 3,000 lines of code. The changes incorporated in Airflow 2.0 make the Executor and Operator easier to understand, faster to execute and offers far more flexibility in configuration.
 
 Data Engineers will now have access to the full Kubernetes API to create a yaml ‘pod_template_file’ instead of being restricted to a partial set of configurations through parameters defined in the airflow.cfg file. We’ve also replaced the `executor_config` dictionary with the `pod_override` parameter, which takes a Kubernetes V1Pod object for a clear 1:1 override setting.
@@ -156,6 +157,57 @@ Other highlights include:
 Many more Airflow UI changes are expected beyond Airflow 2.0, but we’re certainly excited to have gotten a head start.
 
 To learn more, refer to [Airflow documentation on the Airflow UI](https://airflow.apache.org/docs/apache-airflow/stable/ui.html).
+
+## Apache Airflow 1.10 vs. Apache Airflow 2.0
+
+Apache Airflow 2.0 doesn’t only bring some amazing new features—the data architecture layer changes to! Let’s have a look at how it compares to Airflow 1.10.
+
+A common workflow for processing files is dropping them into an S3 bucket and performing a 3-step process for each file (before they’re being inserted into a data warehouse and used by data analysts). In this case, the pipeline has to run every 30 minutes and occasionally can be triggered on an ad-hoc basis (through an API).
+
+
+
+**Even though it’s very common, there’s a lot of places it can go wrong on Airflow 1.10. Here’s why:**
+
+* You’d need to use a Subdag to make the UI clean when you're showing the process. However, Subdags can be hard to manage. 
+* You may want to trigger it on an ad-hoc basis from the API, but the API isn't officially supported in Airflow 1.10. 
+* If you use community-supported operators for your DAGs you'd have to upgrade your entire Airflow environment because they are tightly coupled on 1.10.  
+* Scheduling on Airflow 1.10 can cause SLA delays when you try to run on a massive scale.
+* Airflow 1.10 has the web server parse DAGs, meaning it will need more resources as you add more workloads. 
+* Whatever bits of data you'd want to pass back and forth through an XCOM, the Airflow 1.10 XCOMs are pretty limited in their scope. They have to be stored within the Airflow database and can’t be externalized.
+
+
+
+![](https://lh4.googleusercontent.com/H2YozWvtEeyMwoNARK0omJbkhu-ePQu1v34kCiRAKnB3z1bOQw5yYRjpshoJsDmFK4-CoDiasV-Xrs3TurU5x-v_vSfRBHqUrhYrXpGq6jr-ctFpwKlsrAFYd2TPds_KJFcDKlVS)
+
+
+
+As you can see, as great as Airflow 1.10 is, it has some limitations.
+
+
+
+**Luckily, all that's different in Airflow 2.0:**
+
+* You can use [TaskGroups that give you a clean UI but don’t make you lose performance as you do with Subdags.](https://www.astronomer.io/guides/task-groups)
+* The API is fully supported with more endpoints than ever, so you can trigger it on an ad-hoc basis. 
+* The community operators that you're using can be versioned independently of Airflow (if you just want to make a slight change to your community operator you can upgrade it without upgrading all of Airflow). 
+* As a data infrastructure engineer or a DevOps engineer, you don't have to upgrade Airflow frequently because your data engineers can upgrade the providers, the hooks, and operators on their own.
+* The scheduler is 20 times better on Airflow 2.0 and you can add more than one. As your number of files or the frequency in which you want to run your DAG increases, the scheduler can keep up with that. 
+* The UI is stateless because all your DAGs in Airflow 2.0 are serialized in the database so that you don't have to spend resources cracking up your web server.  
+* Lastly, you can use external storage like S3 for your XCOMs so that if you want to pass large amounts of data back and forth you can do that with a clean developer experience without maintaining extra overhead. Plus, the data is backed up in S3, which is infinitely scalable.
+
+
+
+![](https://lh3.googleusercontent.com/GhOXIfjAjfzdXiR0_KDwEVNVhzDHc13oDLMSd0kLHtA5Hcgf9Xs6jQqn7DxXs8Vd0gt6qcZW0MNjidH7HKk7AfrMkQovnSyx23FzZMCZvfqBzu3T6zRyrmNG7DEOMAi2wYgbrqA0)
+
+
+
+To sum up, everything from writing and maintaining those workloads, to making sure that your jobs are on when they're supposed to without delay and that your data is actually there when you need it—Airflow 2.0 makes each step easier. 
+
+
+
+![](https://lh5.googleusercontent.com/m1GIeSbk2SoyMuP-QdyV-7jopEKw9kwFw09X4_0s_d1vHvzW5HZ9vMbULXUyLiWQV5mz5EjP7LZwC8-7PQi_6Wg0plMMrd63cs__W1QoVwY2KPQlPidoi9QIQeZnsGSjbTXTsQfI)
+
+
 
 ## Get Started with Airflow 2.0
 
