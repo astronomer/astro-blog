@@ -2,8 +2,8 @@
 slug: airflow-dbt-3
 title: "Building a Scalable Analytics Architecture with Airflow and dbt: Part 3 "
 description: Learn how to build a scalable analytics architecture with Apache
-  Airflow and dbt—in the 3rd and final part of our series.
-heroImagePath: ../assets/component101.png
+  Airflow and dbt—in the third and final part of our series.
+heroImagePath: ../assets/part3.png
 authors:
   - Sam Bail
 date: 2021-08-06T08:33:57.241Z
@@ -22,8 +22,9 @@ The sample code we provided in the previous post demonstrates how to loop throug
 
 When used as shown in the sample code below, the utility provides a convenient shortcut to creating Airflow task groups with the respective dbt models that can be triggered in a DAG run. Note that this code snippet only shows part of the DAG file; you can find the whole file in the [demo repo](https://github.com/astronomer/airflow-dbt-demo).
 
-**dbt_advanced_utility.py**
+**dbt\_advanced\_utility.py**
 
+```
 `with dag:`
 
 ``
@@ -62,7 +63,7 @@ When used as shown in the sample code below, the utility provides a convenient s
 
 `start_dummy >> dbt_seed >> dbt_run_group >> dbt_test_group >> end_dummy`
 
-
+```
 
 One important fact to note here is that the DbtDagParser does not include a “dbt compile” step that updates the manifest.json file. Since the Airflow scheduler parses the DAG file periodically, having a compile step as part of the DAG creation could potentially incur some unnecessary load for the scheduler. We recommend adding a “dbt compile” step either as part of a CI/CD pipeline, or as part of a pipeline run in production before the Airflow DAG is run.
 
@@ -81,21 +82,13 @@ Using the jaffle_shop demo dbt project, the parser creates the following DAG inc
 
 One question that frequently comes up (or at the least we’ve been wondering ourselves!) is how mapping the dbt DAG into Airflow tasks impacts the DAG run time. It’s not entirely obvious whether this causes a performance hit due to any overhead of calling “dbt run” repeatedly as we mentioned in the [previous post](https://www.astronomer.io/blog/airflow-dbt-2), or can actually lead to improvements, or whether it really makes any difference at all. 
 
-
-
 In order to compare the performance, we ran a larger version of the jaffle_shop dataset with 10K customer records, 5M order records, and 10M payment records that we generated for this test. The dbt DAG structure is shown in the above screenshot, with the staging models being materialized as views, and the other two models being materialized as actual tables. The “dbt seed” task that loads the data was excluded from the runs since it’s not relevant here. The reported runtimes were simply taken from the Airflow UI and averaged across ten runs. Parallelism was set to 4 threads in the dbt profiles.yml, and the [default Airflow configuration that Astronomer provides](https://www.astronomer.io/guides/airflow-scaling-workers), i.e. 16 tasks per DAG. 
-
-
 
 Across the ten runs, we found that the mapped DAG took consistently longer to execute start to finish than the DAG containing only single tasks for “dbt run” and “dbt test” for the entire pipeline. On average, the mapped DAG took 1 minute 48 seconds to run, with only minimal fluctuations. The DAG containing a single “dbt run” task took an average of 34 seconds. We also ran some ad-hoc tests on a [KEDA cluster](https://www.astronomer.io/blog/the-keda-autoscaler) where we observed a similar pattern. The logs show that there is some non-neglible overhead per task when “dbt run” is called for each individual model.
 
 We can look at these tradeoffs from a use-case perspective for running your DAG: If you run the full dbt DAG frequently (say, for manual tests during development, or every few minutes in production) and the overall runtime is short, this overhead per task will likely add up. On the other hand, if the DAG runs every hour or even just daily, the overhead may be entirely negligible and well worth it for the benefit of having fine-grained control over each model, including retries, notifications, stopping the DAG run on model failure, etc. These are all operations that would otherwise happen late in the game once the full DAG run has finished, may need digging through logs for the entire DAG, or would require re-running individual models manually. The dbt DAG used for testing is also fairly linear, so a more parallelizable DAG structure may be advantageous here.
 
-
-
 Please keep in mind that this isn’t a highly scientific setup and depending on the hardware and amount of parallelization the dbt DAG structure allows, this might also look very different on a production system. The setup for the two DAGs (dbt_advanced_utility.py and dbt_single_task.py) can be found on a [branch in the repo](https://github.com/spbail/airflow-dbt-demo/tree/sam/perf_tests), but it does not include the data due to the file size. We encourage our users to run their own tests and [share their insights](https://astronomer.io/contact) with us! 
-
-
 
 ## Closing Thoughts
 
