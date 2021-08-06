@@ -3,7 +3,7 @@ slug: airflow-dbt-3
 title: "Building a Scalable Analytics Architecture with Airflow and dbt: Part 3 "
 description: Learn how to build a scalable analytics architecture with Apache
   Airflow and dbt—in the third and final part of our series.
-heroImagePath: ../assets/component101.png
+heroImagePath: ../assets/part3.png
 authors:
   - Sam Bail
 date: 2021-08-06T08:33:57.241Z
