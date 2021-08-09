@@ -10,17 +10,17 @@ date: 2021-08-09T11:57:33.863Z
 ---
 The times of day-long data transfers are a thing of the past (they should be, anyway). Today everyone is talking about modern data pipelines and automated solutions changing the game in a variety of industries. They allow the biggest volumes of data processed for valuable insights and data-driven decisions. Let us show you what exactly are data pipelines, what do they consist of and why you should get yourself one, too.
 
-
-
 ## What is a data pipeline?
 
 It's simple, really. To grasp how data pipelines work, consider any pipe that accepts something from a source and transports it somewhere else. Long story short, a data pipeline handles the flow of data from the initial source to the destination. What happens to the data along the journey is determined by the business use case, specific needs, and the final destination. A data pipeline can do basic data extraction and loading, or it can be as complex as training on datasets for machine learning solutions.
 
-To be more specific, let's say you own a business and - since you're a wise, innovative entrepreneur - you gather a variety of valuable data from your customers. You record their location, purchases, session recordings, interactions, bounce rates, and other factors from various sources. You have the data, but to get insights, create target personas, or simply measure engagement, you have to move it across systems. It requires complicated processes such as data mining, cloud storage, reformatting, and merging with other data sources. To handle such processes manually is a data engineer's nightmare - so that's where our data pipelines enter with a bang. What you get from a data pipeline is a smooth, automated flow of data from one station to the next. The end station can be a warehouse for analysis, but not necessarily - your pipeline can also route data into other applications or visualization tools. It's the ultimate assembly line! 
+
 
 > "A successful pipeline moves data efficiently, minimizing pauses and blockages between tasks, keeping every process along the way operational."
 >
 > Bas Harenslak, Solutions Architect at Astronomer
+
+To be more specific, let's say you own a business and - since you're a wise, innovative entrepreneur - you gather a variety of valuable data from your customers. You record their location, purchases, session recordings, interactions, bounce rates, and other factors from various sources. You have the data, but to get insights, create target personas, or simply measure engagement, you have to move it across systems. It requires complicated processes such as data mining, cloud storage, reformatting, and merging with other data sources. To handle such processes manually is a data engineer's nightmare - so that's where our data pipelines enter with a bang. What you get from a data pipeline is a smooth, automated flow of data from one station to the next. The end station can be a warehouse for analysis, but not necessarily - your pipeline can also route data into other applications or visualization tools. It's the ultimate assembly line! 
 
 ![](../assets/data-pipeline.png)
 
@@ -92,11 +92,9 @@ Giving your data engineers the ability to customize how your data pipelines run 
 
 ## How do businesses benefit from implementing Airflow?   
 
-Automated platforms make it easy to support even the most complex data management strategies. No more anxiety about in-house deployments - with Airflow you get an end-to-end, seamless environment for data collection, cleaning, and processing. You can grow your number of data sources and quit worrying about data silos. 
+Automated platforms make it easy to support even the most complex data management strategies. No more anxiety about in-house deployments - with Airflow you get an end-to-end, seamless environment for data collection, cleaning, and processing. You can grow your number of data sources and quit worrying about data silos. Airflow simplifies and automates data pipelines, reduces operational overhead, and smoothly integrates all the technologies in your stack. Moreover, Airflow gives you all the flexibility your data pipeline may need, as it is a Python-based platform. No limits!
 
-If you'd like to extract more value out of your data, at the same time putting less effort into it - this is a perfect solution. Real-time data visualization, adding numerous data sources, monitoring, and alerting are only a couple of useful benefits you will get from an automated data pipeline platform like Airflow.
-
-Moreover, Airflow gives you all the flexibility your data pipeline may need, as it is a Python-based platform. No limits!
+If you'd like to extract more value out of your data, at the same time putting less effort into it - this is a perfect solution. Real-time data visualization, adding numerous data sources, monitoring, and alerting are only a couple of useful benefits you will get from an automated data pipeline platform.
 
 ## Success story
 
