@@ -8,6 +8,10 @@ authors:
   - Julia Wrzosińska
 date: 2021-08-09T11:57:33.863Z
 ---
+The times of day-long data transfers are a thing of the past (they should be, anyway). Today everyone is talking about modern data pipelines and automated solutions changing the game in a variety of industries. They allow the biggest volumes of data processed for valuable insights and data-driven decisions. Let us show you what exactly are data pipelines, what do they consist of and why you should get yourself one, too.
+
+
+
 ## What is a data pipeline?
 
 It's simple, really. To grasp how data pipelines work, consider any pipe that accepts something from a source and transports it somewhere else. Long story short, a data pipeline handles the flow of data from the initial source to the destination. What happens to the data along the journey is determined by the business use case, specific needs, and the final destination. A data pipeline can do basic data extraction and loading, or it can be as complex as training on datasets for machine learning solutions.
@@ -86,8 +90,6 @@ As your data will likely have numerous jobs running in parallel and tons of vary
 
 Giving your data engineers the ability to customize how your data pipelines run and making them run on time can't be understated. Apache Airflow allows you to run a pipeline from source A to source B easily and lets you move faster as your developers work modularly and plug directly into whatever tooling they are using.
 
-
-
 ## How do businesses benefit from implementing Airflow?   
 
 Automated platforms make it easy to support even the most complex data management strategies. No more anxiety about in-house deployments - with Airflow you get an end-to-end, seamless environment for data collection, cleaning, and processing. You can grow your number of data sources and quit worrying about data silos. 
@@ -107,8 +109,6 @@ Our client Herman Miller had been using data pipelines written manually in a com
 They were looking for a solution that would offer data accuracy, strong alerting and monitoring, as well as easy developing and deploying of CI/CD. After comparing Airflow with other tools, it turned out that Airflow ticked all the boxes from data quality and a data monitoring perspective. The decision was a no-brainer - Herman Miller developed a perfect Airflow platform in cooperation with Astronomer.
 
 > "We are not focusing on the technology anymore—Airflow has allowed us to focus on using the data and making the most of it," says Mark.
->
->
 
 **Interested in taking your business to the next level and capitalizing on your data?** 
 
