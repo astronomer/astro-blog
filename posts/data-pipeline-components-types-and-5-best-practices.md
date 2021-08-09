@@ -1,5 +1,5 @@
 ---
-slug: data_pipeline
+slug: data-pipeline
 title: "Data Pipeline: Components, Types and Best Practices"
 description: What is all the data pipelines fuss about? Learn the basics and
   follow our best practices.
