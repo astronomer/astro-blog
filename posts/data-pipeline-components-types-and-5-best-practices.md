@@ -1,6 +1,6 @@
 ---
-slug: data_pipeline_basics
-title: "Data Pipeline: Components, Types and 5 Best Practices"
+slug: data_pipeline
+title: "Data Pipeline: Components, Types and Best Practices"
 description: What is all the data pipelines fuss about? Learn the basics and
   follow our best practices.
 heroImagePath: ../assets/pipelines.png
