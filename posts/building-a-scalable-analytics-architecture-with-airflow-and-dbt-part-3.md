@@ -8,7 +8,7 @@ authors:
   - Sam Bail
 date: 2021-08-06T08:33:57.241Z
 ---
-In our recent [blog post](https://www.astronomer.io/blog/airflow-dbt-1), we wrote about a pattern for running dbt transformation pipelines in an Airflow DAG by making use of dbt’s manifest.json file and mapping each dbt model to a task in an Airflow DAG. Along with the blog post, we provided some code snippets and a sample repo, which helped many of you getting started. We decided to take this work a little further and put together a utility package that can be used to generate Airflow DAGs from dbt models in a more convenient fashion. 
+In our recent blog posts ([Part 1](https://www.astronomer.io/blog/airflow-dbt-1) and [Part 2)](https://www.astronomer.io/blog/airflow-dbt-2), we wrote about a pattern for running dbt transformation pipelines in an Airflow DAG by making use of dbt’s manifest.json file and mapping each dbt model to a task in an Airflow DAG. Along with the blog post, we provided some code snippets and a sample repo, which helped many of you getting started. We decided to take this work a little further and put together a utility package that can be used to generate Airflow DAGs from dbt models in a more convenient fashion. 
 
 In this post, we’ll give you a brief overview of how to use the package and show you some sample configurations. All code in this post can also be found in the [demo repo on GitHub](https://github.com/astronomer/airflow-dbt-demo). And if you haven’t read the first two parts of this post yet, we recommend you [go back and read those first](https://www.astronomer.io/blog/airflow-dbt-1)!
 
@@ -22,7 +22,7 @@ The sample code we provided in the previous post demonstrates how to loop throug
 
 When used as shown in the sample code below, the utility provides a convenient shortcut to creating Airflow task groups with the respective dbt models that can be triggered in a DAG run. Note that this code snippet only shows part of the DAG file; you can find the whole file in the [demo repo](https://github.com/astronomer/airflow-dbt-demo).
 
-**dbt\_advanced\_utility.py**
+**dbt_advanced_utility.py**
 
 ```
 `with dag:`
@@ -62,7 +62,6 @@ When used as shown in the sample code below, the utility provides a convenient s
 ``
 
 `start_dummy >> dbt_seed >> dbt_run_group >> dbt_test_group >> end_dummy`
-
 ```
 
 One important fact to note here is that the DbtDagParser does not include a “dbt compile” step that updates the manifest.json file. Since the Airflow scheduler parses the DAG file periodically, having a compile step as part of the DAG creation could potentially incur some unnecessary load for the scheduler. We recommend adding a “dbt compile” step either as part of a CI/CD pipeline, or as part of a pipeline run in production before the Airflow DAG is run.
