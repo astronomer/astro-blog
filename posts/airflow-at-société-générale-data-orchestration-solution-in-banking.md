@@ -1,6 +1,6 @@
 ---
 slug: data-orchestration-societe-generale
-title: "Airflow at Société Générale: Data Orchestration Solution in Banking"
+title: "Airflow at Societe Generale: Data Orchestration Solution in Banking"
 description: A conversation with Societe Generale about their Airflow
   implementation and development of the data orchestration solution.
 heroImagePath: ../assets/societe2.png
