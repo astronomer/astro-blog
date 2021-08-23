@@ -68,6 +68,6 @@ We’re working hard to successfully [migrate from Airflow 1.X to Airflow 2.X.](
 
 \---
 
-If you’re looking to modernize your data stack and processes—baking industry or not—Astronomer is for you! Our experts will help you get started with Airflow, or, if you’re already using it, optimize and customize the tool to your needs. 
+If you’re looking to modernize your data stack and processes—banking industry or not—Astronomer is for you! Our experts will help you get started with Airflow, or, if you’re already using it, optimize and customize the tool to your needs. 
 
 [Get in touch with us today to learn more about how Airflow and Astronomer can help. ](https://www.astronomer.io/get-astronomer)
