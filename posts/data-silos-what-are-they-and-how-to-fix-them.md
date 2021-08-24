@@ -1,8 +1,8 @@
 ---
 slug: data-silos-what-are-they-how-to-fix-them
 title: "Data Silos: What Are They and How to Fix Them?"
-description: "Everything you need to know about data silos—how do they influence
-  your business, where do they come from, and how to fix them. "
+description: "Everything you need to know about data silos—how they influence
+  your business, where they come from, and how to fix them. "
 heroImagePath: ../assets/datasilos.png
 authors:
   - Ula Rydiger
