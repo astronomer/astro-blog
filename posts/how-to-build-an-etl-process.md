@@ -18,7 +18,7 @@ We’re not going to emphasize further how crucial it is for businesses to under
 
 ## ETL process steps
 
-This article focuses on ETL, which has been around for quite some time, but it’s worth mentioning that recently a different order of action is becoming more popular - ELT. What exactly are the steps of the ETL process? As we mentioned before, the answer is already encoded in the name:
+What exactly are the steps of the ETL process? As we mentioned before, the answer is already encoded in the name:
 
 1. **Extract** and copy the data.
 2. Filter and **transform** it.
@@ -74,9 +74,9 @@ ETL cleanses and organizes data to meet particular business intelligence objecti
 
 Using ETL is vital because information sources, whether structured SQL databases or unstructured NoSQL databases, rarely utilize the same or comparable formats. ETL exists to make the data an analyzable whole, but it’s more than that. Developing an automated ETL process provides an answer to a couple of fundamental business challenges. It enables you to process data without manual effort, which saves time and resources. It provides the control, monitoring, and scheduling of tasks. Most importantly, ETL pipelines bring data to a single standard into one centralized place, where the data is ready for high-quality business analytics. All these benefits deliver immediate business value by:
 
-1. Breaking down [data silos](https://www.astronomer.io/blog/data-silos-what-are-they-how-to-fix-them), 
-2. Making it easy to access and analyze data,
-3. Turning data into business intelligence,
+1. Breaking down [data silos](https://www.astronomer.io/blog/data-silos-what-are-they-how-to-fix-them).
+2. Making it easy to access and analyze data.
+3. Turning data into business intelligence.
 4. Providing a global view that helps to make data-driven decisions in less time.
 5. Achieving greater ROI (ETL implementations can result in a 5-year median [ROI of 112%](https://www.springpeople.com/blog/training-development-program-how-to-evaluate-roi/)). 
 
@@ -92,7 +92,9 @@ So the question is whether the data should be transformed before or after it is 
 
 ## ETL pipelines with Airflow
 
-ETL pipelines are one of the most widely utilized process workflows in businesses today, enabling them to benefit from deeper analytics and complete business information. By adopting Apache Airflow, companies may create, scale, and manage ETL pipelines more effectively. This workflow management software enables organizations to control their tasks in one location, monitor statuses, and maximize available resources, providing the most user-friendly UI. Most importantly, having your [data pipelines](https://www.astronomer.io/blog/data-pipeline) in code gives you great flexibility, and Airflow allows you to orchestrate in Python. At the same time, using [provider packages](https://www.astronomer.io/blog/astronomer-registry) and external Airflow services, you can implement a complex pipeline in Airflow without writing a lot of code. 
+ETL pipelines are one of the most widely utilized process workflows in businesses today, enabling them to benefit from deeper analytics and complete business information. By adopting Apache Airflow, companies may create, scale, and manage ETL pipelines more effectively. This workflow management software enables organizations to control their tasks in one location, monitor statuses, and maximize available resources, providing the most user-friendly UI. 
+
+Most importantly, having your [data pipelines](https://www.astronomer.io/blog/data-pipeline) in code gives you great flexibility, and Airflow allows you to orchestrate in Python. At the same time, using [provider packages](https://www.astronomer.io/blog/astronomer-registry) and external Airflow services, you can implement a complex pipeline in Airflow without writing a lot of code. 
 
 ## Astronomer - making Airflow even better
 
