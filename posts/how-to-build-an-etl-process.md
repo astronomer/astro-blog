@@ -6,7 +6,7 @@ description: Extract, transform, load. Discover the vital steps and methods of
 heroImagePath: ../assets/etl.png
 authors:
   - Julia Wrzosińska
-date: 2021-09-03T09:24:29.603Z
+date: 2021-09-03T09:44:13.602Z
 ---
 ## What is the ETL process?
 
