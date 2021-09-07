@@ -14,8 +14,6 @@ CRED is an exclusive community for India’s most trustworthy and creditworthy i
 
 CRED as an institution has a high reputation of providing a wide variety of product offerings from lifestyle to personal finances to its members. The strong ethos of upholding and meeting such requirements is imperative for business to effectively scale the demanding needs. 
 
-
-
 ## The challenge
 
 The foundational setup used by [CRED](https://cred.club/)’s data and analytics team was based on an open source project Apache Nifi—a platform that can collect and act on data in real time. As the increasing need to keep this foundation pitch-perfect continued to become prevalent, the Data and Analytics team faced some operational hazards and the vast majority of those involved quality checks and lack of ownership of data pipelines. To overcome this barrier, CRED needed a robust solution that could be easily scaled and had rich feature sets.
@@ -28,18 +26,16 @@ Looking at the evolving technology landscape, CRED decided to strike out Apache 
 
 ![Project's key benefits](../assets/credbaner.png)
 
-Embarking on the Astronomer for a real long term solution, Gautam and Omesh had to ensure whether some of the key features, such as: email integration, slack integration, CI/CD integration, unit tests, role-based access control, were natively supported by Astronomer. This checklist was instantly assured by the Astronomer team.
+Embarking on the Astronomer for a real long-term solution, Gautam and Omesh had to ensure whether some of the key features, such as: email integration, slack integration, CI/CD integration, unit tests, role-based access control, were natively supported by Astronomer. This checklist was instantly assured by the Astronomer team.
 
-With Astronomer CRED was able to:
+**With Astronomer CRED was able to:**
 
 1. Follow the software engineering cycle with code checking, peer reviews, CI/CD and therefore minimize the number of errors in production.
 2. Create a pipeline framework — which allows them to create generic pipelines that can be used and built many times without affecting the rest.
 3. Develop a set of custom operators—thanks to which CRED developers don’t have to keep reinventing the same components. “Astronomer Registry of existing custom hooks and operators helped us a lot with this task,” says Omesh Patil, “It’s a great initiative, available to everyone.”
 4. Separate Airflow deployments for each team—which helped the separation of concern. Developers can deal with their environments, perform tests, updates etc., and if something goes wrong, only a few DAGs are affected. “It minimizes the risk, “says Omesh, “I have never seen that feature in Airflow before.”
 
-
-
-“Before, our pipelines were split, some things were done on Cron, some on NiFi, some on other tools. We wanted to bring it all together with Airflow.” says Omesh, Data Architect, CRED.
+“Before Airflow, our pipelines were split, some things were done on Cron, some on NiFi, some on other tools. We wanted to bring it all together,” says Omesh, Data Architect, CRED.
 
 With NiFi, CRED developers had to make a copy of all the pipelines and use it for their specific use cases. If they wanted to change something, for example, upgrade to a newer Airflow version, they needed to update both copies.
 
