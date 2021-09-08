@@ -8,6 +8,9 @@ authors:
   - Ula Rydiger
 date: 2021-09-07T08:40:06.880Z
 ---
+
+<iframe src="https://fast.wistia.net/embed/iframe/auno45aggr" title="CREDfinal Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
+
 ![Astronomer product values](../assets/cred.png)
 
 CRED is an exclusive community for India’s most trustworthy and creditworthy individuals, where the members are rewarded for good financial behavior. CRED was born out of a need to bring back the focus on trust, the idea being to create a community centered around this virtue. A community that constantly strives to become more virtuous in this regard till they finally scale their behavior to create a utopia where being trustworthy is the norm and not the exception. To build a community like this requires a community of its own; a community special in its own way, working towards making this vision come true. 
