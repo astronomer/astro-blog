@@ -8,6 +8,11 @@ authors:
   - Ula Rydiger
 date: 2021-08-17T08:23:56.495Z
 ---
+
+
+<iframe src="https://fast.wistia.net/embed/iframe/nvd11jeetu" title="Societe - teaser video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
+
+
 # Apache Airflow at Societe Generale
 
 We’ve had the pleasure to sit down with Alaeddine Maaoui, Product Owner at Societe Generale, for a chat about Apache Airflow. Societe Generale is a multinational investment bank and financial services company based in Paris.
