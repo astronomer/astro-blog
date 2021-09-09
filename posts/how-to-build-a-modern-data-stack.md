@@ -1,6 +1,6 @@
 ---
 slug: build-a-modern-data-stack
-title: How to build a modern data stack
+title: How to Build a Modern Data Stack
 description: Breaking down what a modern data stack means in practice. We
   discuss four core components, five reasons to set it up, and how to
   orchestrate it.
