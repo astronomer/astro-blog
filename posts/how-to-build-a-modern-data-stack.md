@@ -4,7 +4,7 @@ title: How to build a modern data stack
 description: Breaking down what a modern data stack means in practice. We
   discuss four core components, five reasons to set it up, and how to
   orchestrate it.
-heroImagePath: ../assets/moderndatastack.pngc
+heroImagePath: ../assets/moderndatastack.png
 authors:
   - Julia Wrzosińska
 date: 2021-09-09T13:03:32.011Z
