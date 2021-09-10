@@ -13,8 +13,6 @@ Apache Airflow continues to win vs. other [workflow orchestration](https://www.a
 * An active and expanding community
 * Deep, proven functionality
 
-
-
 ### Community
 
 As a result, thousands of companies — including Fortune 500s, tech giants, and early-stage startups — are adopting Airflow as their preferred tool to programmatically author, schedule, and monitor workflows.
@@ -24,8 +22,6 @@ The Airflow community is strong, healthy, and vibrant, with over 1700 code contr
 ![](https://lh5.googleusercontent.com/dALZcTB81897wQiZ9CYznWzd70JRiP_7d9kOeyf0AsO4d6Wv5dAFcWb7seGvshEPN1KtO43xF8JXW9P4njTu3ZwgxfJNnlcMYySd2aabkKq7Xc_l--MrFjNzNACYGHNrYCK0mG7q=s0)
 
 [Source](https://github.com/apache/airflow/graphs/contributors)
-
-
 
 The velocity of Github stars for Airflow [continues to accelerate](https://star-history.t9t.io/#apache/airflow) - currently exceeding 23k.
 
@@ -40,8 +36,6 @@ The Airflow project was already gaining momentum in 2018 thanks to open-source a
 In 2019, an elevated level of activity has been driven by companies like Astronomer, Google, Polidea, and GoDataDriven, who dedicated significant resources to the project, including an expanded group of people working on the project full-time.
 
 In 2020, project activity was taken to a new level as the team pushed to 2.0.
-
-
 
 ### Functionality
 
@@ -86,10 +80,8 @@ Additionally, the community also implemented new features in Airflow 2.1. Some o
 
 \- DAG Calendar View
 
-\- cross-DAG dependencies view
+\- Cross-DAG dependencies view
 
 \- Auto-refresh on Tree View
-
-
 
 With an accelerating number of committers and companies implementing Apache Airflow as part of their Modern Data Stack, the future is bright.
