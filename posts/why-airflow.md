@@ -3,7 +3,7 @@ slug: why-airflow
 title: Why Airflow?
 description: Airflow continues to win due to an active and expanding community,
   and very deep, proven functionality.
-heroImagePath: ../assets/1573246544-screen-shot-2019-11-08-at-3-55-29-pm.jpg
+heroImagePath: ../assets/whyairflow.png
 authors:
   - Ry Walker
 date: 2019-12-03T00:00:00.000Z
