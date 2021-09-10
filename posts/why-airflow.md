@@ -1,55 +1,95 @@
 ---
-title: Why Airflow?
 slug: why-airflow
-description: 'Airflow continues to win due to an active and expanding community, and very deep, proven functionality.'
+title: Why Airflow?
+description: Airflow continues to win due to an active and expanding community,
+  and very deep, proven functionality.
 heroImagePath: ../assets/1573246544-screen-shot-2019-11-08-at-3-55-29-pm.jpg
 authors:
   - Ry Walker
 date: 2019-12-03T00:00:00.000Z
 ---
+Apache Airflow continues to win vs. other [workflow orchestration](https://www.astronomer.io/blog/what-is-data-orchestration) tools due to two main factors:
 
-> Content updated December 2020
+* An active and expanding community
+* Deep, proven functionality
 
-Apache Airflow continues to win vs. other workflow orchestration tools due to two main factors:
 
-- An active and expanding community
-- Very deep, proven functionality
 
 ### Community
 
 As a result, thousands of companies — including Fortune 500s, tech giants, and early-stage startups — are adopting Airflow as their preferred tool to programmatically author, schedule, and monitor workflows.
 
-The Airflow community is strong, healthy, and vibrant, with over 1,400 code contributors — and growing at a healthy pace.
+The Airflow community is strong, healthy, and vibrant, with over 1700 code contributors — and growing at a healthy pace.
 
-![Airflow Cumulative Contributors](../assets/airflow_cumulative_contributors_12_17_2020.png)
+![](https://lh5.googleusercontent.com/dALZcTB81897wQiZ9CYznWzd70JRiP_7d9kOeyf0AsO4d6Wv5dAFcWb7seGvshEPN1KtO43xF8JXW9P4njTu3ZwgxfJNnlcMYySd2aabkKq7Xc_l--MrFjNzNACYGHNrYCK0mG7q=s0)
+
+[Source](https://github.com/apache/airflow/graphs/contributors)
 
 
-The velocity of Github stars for Airflow [continues to accelerate](https://star-history.t9t.io/#apache/airflow).
 
-![Airflow Github Stars](../assets/airflow_stars_12_17_2020.png)
+The velocity of Github stars for Airflow [continues to accelerate](https://star-history.t9t.io/#apache/airflow) - currently exceeding 23k.
 
-And as the project accelerated towards our recent 2.0 release, it entered an extend second "golden age" that has now extended eight quarters, eclipsing the rate of commits from the early days when the first generation of project developers Maxime, Bolke, Jeremiah, Chris, Sid and Arthur were originally working on it.
+![](https://lh4.googleusercontent.com/si29InT0CPaeHUlM-xK1skHz4N3f5u3GZCRI4dBvuSOD8Ep1iVh1xjlaRti9um2go_7IPiAoPHcpCIo8Sm2bgS0eH9gfiP5BxdMtAA3jaI4QIwXE-U6lOID7ZUOn5hmsJqdeb93g=s0)
 
-![Airflow Commits By Quarter](../assets/airflow_commits_by_quarter_12_17_2020.png)
+[Source](https://star-history.t9t.io/#apache/airflow)
+
+As the project accelerated towards the major 2.0 release, it entered a second "golden age" eclipsing the rate of commits from the early days when the first generation of project developers Maxime Beauchemin, Bolke de Bruin, Jeremiah Lowin, Chris Riccomini, Sid Anand, and Arthur Wiedmer were originally working on it.
 
 The Airflow project was already gaining momentum in 2018 thanks to open-source activities in companies like Airbnb, Lyft, Twitter, Glassdoor, and [many, many others](https://github.com/apache/airflow#who-uses-apache-airflow).
 
-In 2019, an elevated level of activity has been driven by companies like Astronomer, Google, Polidea, and GoDataDriven, who are dedicating significant resources to the project, including an expanded group of people working on the project full-time.
+In 2019, an elevated level of activity has been driven by companies like Astronomer, Google, Polidea, and GoDataDriven, who dedicated significant resources to the project, including an expanded group of people working on the project full-time.
 
-In 2020, project activity has been taken to a new level as the team pushed to 2.0.
+In 2020, project activity was taken to a new level as the team pushed to 2.0.
+
+
 
 ### Functionality
 
-Along the way, Airflow has accumulated an [impressive amount of functionality](https://airflow.apache.org/concepts.html) that solves many data engineering challenges both on-prem and on any cloud provider. Being built on the backs of numerous data engineers working to solve countless edge cases, it’s a complete solution.
+Airflow has accumulated an [impressive amount of functionality](https://airflow.apache.org/concepts.html) that solves many data engineering challenges both on-prem and on any cloud provider. Being built on the backs of numerous data engineers working to solve countless edge cases, it’s a complete solution.
 
-While all Airflow functionality isn’t evenly polished, work is now in motion to ensure that that isn’t true for much longer. The community is working on a multitude of projects including:
+Along with [Airflow. 2.0,](https://www.astronomer.io/blog/introducing-airflow-2-0) came the following improvements:
 
-- [Speeding up the scheduler](https://www.astronomer.io/blog/airflow-2-scheduler)
-- [Speeding up the web server](https://cwiki.apache.org/confluence/display/AIRFLOW/AIP-24+DAG+Persistence+in+DB+using+JSON+for+Airflow+Webserver+and+%28optional%29+Scheduler)
-- [Integrating with Knative](https://github.com/astronomer/airflow/pull/72)
-- [An official production Docker image](https://cwiki.apache.org/confluence/display/AIRFLOW/AIP-26+Production-ready+Airflow+Docker+Image)
-- [A full REST API](https://airflow.apache.org/docs/apache-airflow/stable/stable-rest-api-ref.html)
-- [A refreshed UI](https://github.com/apache/airflow/pull/11195)
-- Building a new UI
+1. **A New Scheduler**
 
-So while Airflow isn’t perfect, its deep functionality and strong community pose a big challenge to “fresh start” alternatives. And with an accelerating number of people and organizations pouring energy into and committing to Airflow, the future is bright.
+With the new Scheduler, you can expect faster performance with near-zero task latency. By launching Scheduler replicas you increase task throughput and ensure high availability.
+
+2. **Full REST API**
+
+Full REST API allows you to build programmatic services around your Airflow environment with Airflow's new API, now featuring a robust permissions framework. 
+
+3. **Smart Sensors**
+
+You can now fit Airflow to event-driven paradigms with resource-saving sensors that operate as single, long-running tasks and don't take up a worker slot.
+
+4. **TaskFlow API**
+
+Use TaskFlow API to pass information between tasks with clean, efficient code that's abstracted from the task dependency layer. The feature includes support for custom XCom backends.
+
+5. **Task Groups**
+
+Task Groups replace SubDAGs as a new way to group tasks in the Airflow UI. They don't affect task execution behavior and do not limit parallelism.
+
+6. **Independent Providers**
+
+In Airflow 2.0 you can pull the latest version of any Provider at any time, or follow an easy contribution process to build your own and install it as a Python package.
+
+7. **Simplified Kubernetes Executor**
+
+Now users can make the most of the \`pod_override\` parameter for easy 1:1 overrides and the new yaml \`pod_template_file\`, which replaces configs set in \`airflow.cfg\`.
+
+8. **UI/UX Improvements**
+
+A new look for the Airflow UI, now boasting a clean, modern color palette and an auto-refresh toggle in the Graph view.
+
+\
+Additionally, the community also implemented new features in Airflow 2.1. Some of the most noteworthy ones are:
+
+\- DAG Calendar View
+
+\- cross-DAG dependencies view
+
+\- Auto-refresh on Tree View
+
+
+
+With an accelerating number of committers and companies implementing Apache Airflow as part of their Modern Data Stack, the future is bright.
