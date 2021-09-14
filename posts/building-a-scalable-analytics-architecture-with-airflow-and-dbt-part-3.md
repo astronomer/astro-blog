@@ -22,46 +22,28 @@ The sample code we provided in the previous post demonstrates how to loop throug
 
 When used as shown in the sample code below, the utility provides a convenient shortcut to creating Airflow task groups with the respective dbt models that can be triggered in a DAG run. Note that this code snippet only shows part of the DAG file; you can find the whole file in the [demo repo](https://github.com/astronomer/airflow-dbt-demo).
 
-**dbt_advanced_utility.py**
+**dbt\_advanced\_utility.py**
 
-```
-`with dag:`
+```python
+with dag:
 
-``
+    start_dummy = DummyOperator(task_id='start')
+    dbt_seed = BashOperator(
+        task_id='dbt_seed',
+        bash_command=f'dbt {DBT_GLOBAL_CLI_FLAGS} seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}'
+    )
+    end_dummy = DummyOperator(task_id='end')
 
-`start_dummy = DummyOperator(task_id='start')`
+    dag_parser = DbtDagParser(dag=dag,
+                              dbt_global_cli_flags=DBT_GLOBAL_CLI_FLAGS,
+                              dbt_project_dir=DBT_PROJECT_DIR,
+                              dbt_profiles_dir=DBT_PROJECT_DIR,
+                              dbt_target=DBT_TARGET
+                              )
+    dbt_run_group = dag_parser.get_dbt_run_group()
+    dbt_test_group = dag_parser.get_dbt_test_group()
 
-`dbt_seed = BashOperator(`
-
-`task_id='dbt_seed',`
-
-`bash_command=f'dbt {DBT_GLOBAL_CLI_FLAGS} seed --profiles-dir {DBT_PROJECT_DIR} --project-dir {DBT_PROJECT_DIR}'`
-
-`)`
-
-`end_dummy = DummyOperator(task_id='end')`
-
-``
-
-`dag_parser = DbtDagParser(dag=dag,`
-
-`dbt_global_cli_flags=DBT_GLOBAL_CLI_FLAGS,`
-
-`dbt_project_dir=DBT_PROJECT_DIR,`
-
-`dbt_profiles_dir=DBT_PROJECT_DIR,`
-
-`dbt_target=DBT_TARGET`
-
-`)`
-
-`dbt_run_group = dag_parser.get_dbt_run_group()`
-
-`dbt_test_group = dag_parser.get_dbt_test_group()`
-
-``
-
-`start_dummy >> dbt_seed >> dbt_run_group >> dbt_test_group >> end_dummy`
+    start_dummy >> dbt_seed >> dbt_run_group >> dbt_test_group >> end_dummy
 ```
 
 One important fact to note here is that the DbtDagParser does not include a “dbt compile” step that updates the manifest.json file. Since the Airflow scheduler parses the DAG file periodically, having a compile step as part of the DAG creation could potentially incur some unnecessary load for the scheduler. We recommend adding a “dbt compile” step either as part of a CI/CD pipeline, or as part of a pipeline run in production before the Airflow DAG is run.
