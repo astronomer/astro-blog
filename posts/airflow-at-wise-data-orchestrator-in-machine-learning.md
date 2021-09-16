@@ -3,7 +3,7 @@ slug: apache-airflow-wise
 title: "Airflow at Wise: Data Orchestrator in Machine Learning"
 description: "A talk with Alexandra Abbas—a Machine Learning Engineer at
   Wise—about how they leverage Apache Airflow in their ML initiatives. "
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/wisecover.png
 authors:
   - Joanna Kasprzak-Kajder
 date: 2021-09-16T09:17:52.317Z
