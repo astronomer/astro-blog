@@ -9,8 +9,6 @@ authors:
   - Julia Wrzosińska
 date: 2021-09-22T11:57:06.498Z
 ---
-# Apache Airflow vs. Apache NiFi
-
 Apache Airflow and Apache NiFi are, in fact, two whistles to a somewhat different tune. Still, you may be wondering which one is better suited for your expectations and goals. By the end of this article, you will no longer have doubts. 
 
 Although essentially different, both Apache Airflow and Apache NiFi are tools designed to manage the golden asset of most organizations: Data
@@ -75,5 +73,3 @@ Long story short, there is no "better" tool. It all depends on your exact needs 
 Astronomer enables you to centrally develop, orchestrate, and monitor your data workflows with best-in-class open source technology. With [multiple provider packages in our registry](https://registry.astronomer.io/providers/), it's intuitive and straightforward to take off with your ETL pipelines and take full advantage of your data. 
 
 > Would you like to get in touch with one of our experts? [Let's connect and get you started!](https://www.astronomer.io/get-astronomer)
->
->
