@@ -1,6 +1,6 @@
 ---
-slug: airflow-vs-nifi
-title: Apache Airflow vs. Apache NiFi
+slug: apache-nifi-vs-airflow
+title: Apache NiFi vs. Apache Airflow
 description: "Overview and comparison study of two popular ETL tools for
   managing the golden asset of most organisations: data. Can these two be
   compared at all? "
