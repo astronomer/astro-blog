@@ -11,7 +11,7 @@ date: 2021-09-22T11:57:06.498Z
 ---
 Apache Airflow and Apache NiFi are, in fact, two whistles to a somewhat different tune. Still, you may be wondering which one is better suited for your expectations and goals. By the end of this article, you will no longer have doubts. 
 
-Although essentially different, both Apache Airflow and Apache NiFi are tools designed to manage the golden asset of most organizations: Data
+Although essentially different, both Apache Airflow and Apache NiFi are tools designed to manage the golden asset of most organizations: Data.
 
 As the data volumes keep expanding, enterprises create a rising need for data warehousing projects and advanced analytics solutions. ETL (Extract, Transform, Load) is a critical component of a [modern data stack](https://www.astronomer.io/blog/build-a-modern-data-stack), as it guarantees that data is successfully integrated across many databases and applications. Both Airflow and NiFi are crème de la crème among the most popular [ETL tools](https://www.astronomer.io/blog/build-an-etl-process). In order to choose the right tool for your needs, you have to ask yourself - what exactly are you going to do with your data? But before that, let's go through the background and get to know these two pets.
 
