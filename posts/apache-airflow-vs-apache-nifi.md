@@ -28,7 +28,7 @@ Apache Airflow is a super-flexible task scheduler and [data orchestrator](https:
 * Code-first: Airflow and all the workflows are written in Python (although each step can be written in any language), which allows to dynamically generate DAGs. Workflows defined as code are easier to test, maintain and collaborate on. Customization of complex transformations doesn't get any simpler than this. Moreover, Python allows for effortless collaboration with data scientists.
 * Rich UI: The user interface is really intuitive and a truly functional way to access the metadata. It makes it easy to turn schedules on and off, visualize DAG's progress, make SQL queries, watch pipelines in production, monitor them, and resolve emerging issues at once. Due to rich visualization components, you can see all of the running pipelines and follow their progress. Everything is very lean and elegant. A powerful Jinja engine for templating makes it possible to parametrize scripts. 
 * Scalability: It's easy to define operators and executors, and you can modify the library to meet the amount of abstraction that best suits your context. Airflow offers multiple methods for horizontal scaling. 
-* Open-source community
+* Very active, constantly growing open-source community.
 
 ## Airflow Limitations
 
