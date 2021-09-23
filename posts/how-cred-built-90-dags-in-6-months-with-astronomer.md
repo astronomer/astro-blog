@@ -8,7 +8,6 @@ authors:
   - Ula Rydiger
 date: 2021-09-07T08:40:06.880Z
 ---
-
 <iframe src="https://fast.wistia.net/embed/iframe/auno45aggr" title="CREDfinal Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
 
 ![Astronomer product values](../assets/cred.png)
@@ -19,7 +18,7 @@ CRED as an institution has a high reputation of providing a wide variety of prod
 
 ## The challenge
 
-The foundational setup used by [CRED](https://cred.club/)’s data and analytics team was based on an open source project Apache Nifi—a platform that can collect and act on data in real time. As the increasing need to keep this foundation pitch-perfect continued to become prevalent, the Data and Analytics team faced some operational hazards and the vast majority of those involved quality checks and lack of ownership of data pipelines. To overcome this barrier, CRED needed a robust solution that could be easily scaled and had rich feature sets.
+The foundational setup used by [CRED](https://cred.club/)’s data and analytics team was based on an open source project [Apache Nifi](https://www.astronomer.io/blog/apache-nifi-vs-airflow)—a platform that can collect and act on data in real time. As the increasing need to keep this foundation pitch-perfect continued to become prevalent, the Data and Analytics team faced some operational hazards and the vast majority of those involved quality checks and lack of ownership of data pipelines. To overcome this barrier, CRED needed a robust solution that could be easily scaled and had rich feature sets.
 
 Looking at the evolving technology landscape, CRED decided to strike out Apache Airflow by developing a local environment using the [Astronomer CLI](https://www.astronomer.io/cli-quickstart). CRED and Astronomer developers collaborated for a demonstration of proof of concept by setting up an Astronomer cluster on AWS cloud. Data Engineering Lead Gautam Doulani and Data Architect Omesh Patil who recently joined CRED, had immense hands-on experience of using Apache Airflow. This enabled both team members to consistently focus on tool’s development and seek additional assistance from the Astronomer team.
 
