@@ -9,11 +9,9 @@ authors:
   - Sundar Bandepalli
 date: 2021-09-29T09:26:33.790Z
 ---
-According to McKinsey, banks today are under big economic pressure. [According to their research](https://www.mckinsey.com/industries/financial-services/our-insights/analytics-in-banking-time-to-realize-the-value), 54% of the top 500 institutions worldwide are priced below book value. Because of this trend, the banking industry entered the era of digitalization. However, as FinTech continues to advance, banks need to find new ways to stay in the game.
+Banks today are under big economic pressure. [According to McKinsey,](https://www.mckinsey.com/industries/financial-services/our-insights/analytics-in-banking-time-to-realize-the-value) 54% of the top 500 institutions worldwide are priced below book value. Because of this trend, the banking industry entered the era of digitalization. However, as FinTech continues to advance, banks need to find new ways to stay in the game.
 
 We speak with Sundar Bandepalli, Field Engineer at Astronomer, about the problems facing the banking industry and how a modern tool like Apache Airflow can help.
-
-
 
 ## How has the world of banking changed over the years?
 
@@ -23,15 +21,11 @@ Technology has always been a double-edged sword for the banking industry—thank
 
 > “The role of data in the banking industry has changed massively over the years. Data powers both AI, machine learning, and robotic process automation. You simply can’t succeed in the market without well-managed data and analytics.” - Daragh Fitzpatrick, consulting partner at [Nousot](https://nousot.com/).
 
-
-
 ## What has been the biggest challenge for the banking industry?
 
 Apart from staying ahead of the fintech competition by differentiating the service and having to adjust quickly to the ever-changing market, there’s a challenge of data. 
 
 Banks deal with petabytes of information about their customers, however, they may struggle with using that data efficiently to make predictions and provide valuable service. The majority of banks still use legacy tools and services that are hard to scale and maintain. Not to mention different teams using their own tools and datasets, causing [data silos](https://www.astronomer.io/blog/data-silos-what-are-they-how-to-fix-them). 
-
-
 
 ## What should banks do to overcome those challenges?
 
@@ -52,8 +46,6 @@ You and your teams can also use Airflow to develop a centralized data platform o
 When it comes to AI, Airflow can help here too. By nature, working with machine learning models requires automation and orchestration for repeated model training, testing, evaluation, and likely integration with other services to acquire and prepare data. With [Apache Airflow](https://www.astronomer.io/airflow/) you can easily orchestrate each step of your pipeline, integrate with services that clean your data, and store and publish your results using simple Python scripts for “configuration as code”.
 
 And finally, Airflow gives the development teams a standard way to interact with data—adding governance rules, making it clear who owns what data and how to access it. 
-
-
 
 ## What are the examples of banks currently using Airflow?
 
