@@ -25,7 +25,11 @@ Technology has always been a double-edged sword for the banking industry—thank
 
 Apart from staying ahead of the fintech competition by differentiating the service and having to adjust quickly to the ever-changing market, there’s a challenge of data. 
 
-Banks deal with petabytes of information about their customers, however, they may struggle with using that data efficiently to make predictions and provide valuable service. The majority of banks still use legacy tools and services that are hard to scale and maintain. Not to mention different teams using their own tools and datasets, causing [data silos](https://www.astronomer.io/blog/data-silos-what-are-they-how-to-fix-them). 
+Banks deal with petabytes of information about their customers, however, they may struggle with making the most of that data—to make predictions and provide valuable service. The majority of banks still use legacy tools and services that are hard to scale and maintain. Not to mention different teams using their own tools and datasets, causing [data silos](https://www.astronomer.io/blog/data-silos-what-are-they-how-to-fix-them). 
+
+Additionally, many of the banks cannot benefit from the power of the cloud due to regulatory issues and heavy investments in their own on-premise infrastructure which makes the challenge of modernising their stack even more difficult.
+
+
 
 ## What should banks do to overcome those challenges?
 
@@ -40,6 +44,8 @@ Perhaps with the right data orchestration tool, the TSB Bank could have detected
 ## How can Apache Airflow help?
 
 Apache Airflow is an open source, community-supported, Python-based [data orchestrator](https://www.astronomer.io/blog/what-is-data-orchestration) that can be an answer to a lot of problems of the data teams in the banking industry. For example, instead of migrating everything at once to a modern data stack, you can ease the process by combining Airflow with your legacy tools, making them work side by side.
+
+For many banks, keeping their data on-premise is still the only option, as cloud processing might not be available to them due to the heavy-regulated environment. Airlfow's advantage is that you can modernize your data stack without migrating to the cloud.
 
 You and your teams can also use Airflow to develop a centralized data platform or a data mesh that fits your needs—bringing together data, governance rules, and business logic that had previously been scattered throughout different parts of the organization.
 
