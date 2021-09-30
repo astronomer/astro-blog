@@ -1,8 +1,8 @@
 ---
 slug: future-of-banking-apache-airflow
 title: "The Future of Banking: How Can Apache Airflow Help?"
-description: Learn what are the challenges of the banking industry today, and
-  how Apache Airflow can help with digital transformation.
+description: Discover today's challenges of the banking industry, and how Apache
+  Airflow can help with digital transformation.
 heroImagePath: ../assets/coverbanking.png
 authors:
   - Ula Rydiger
