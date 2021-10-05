@@ -54,7 +54,7 @@ Real-time data processing is the trendiest trend in the Big Data industry. It de
    As we mentioned before, the main goal of implementing Big Data Architecture is to get insights from it and make data-driven decisions. The analysis layer is the essential layer in the Big Data architecture for enabling users to evaluate Big Data. To acquire important insights, this analysis layer interacts with the storage layer. Structured data is simple to manage, but unstructured data requires the use of specialized technologies to analyze. The final analysis output is received by the BI tools, which allow for creating a report or a dashboard based on the insights.
 5. **Bonus layer - Orchestration**
 
-Most big data solutions are made up of repetitive data processing activities wrapped in workflows that convert source data, transfer data across various sources, load processed data into an analytical data store, or send the findings directly to a report or dashboard. Automating these operations is a must. There is no better tool for [data orchestration](https://www.astronomer.io/blog/what-is-data-orchestration) than Apache Airflow.
+   Most big data solutions are made up of repetitive data processing activities wrapped in workflows that convert source data, transfer data across various sources, load processed data into an analytical data store, or send the findings directly to a report or dashboard. Automating these operations is a must. There is no better tool for [data orchestration](https://www.astronomer.io/blog/what-is-data-orchestration) than Apache Airflow.
 
 ## Big Data Architecture Use Cases (and who exactly is it for?)
 
