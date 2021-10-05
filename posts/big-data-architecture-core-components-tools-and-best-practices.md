@@ -9,7 +9,7 @@ authors:
   - Julia Wrzosińska
 date: 2021-10-05T15:47:51.513Z
 ---
-Lately, there has been a lot of buzz on how businesses are carrying out their strategies based on striking Big Data analytics findings. They make it seem easy - *just look into the data and leverage it*! However, not so many people discuss the need to develop a powerful strategy for data analysis - the Big Data Architecture.
+Lately, there has been a lot of buzz on how businesses are carrying out their strategies based on striking Big Data analytics findings. They make it seem easy - *just look into the data and leverage it!* However, not so many people discuss the need to develop a powerful strategy for data analysis - the Big Data Architecture.
 
 The vast majority of articles on Big Data Architecture begin with “*big data is everywhere around us.*” That’s a fact; however, what truly matters is how this big data is managed. It can be ubiquitous yet still essentially worthless if there is no proper architecture to handle the dataflow. 
 
@@ -17,11 +17,11 @@ The architecture used to be a technical decision, but times have changed since t
 
 ## What is Big Data Architecture?
 
-According to the English dictionary, architecture is *the art or science of building*, as well as *a unifying, coherent structure*. And big data is, quite intuitively, a concept of data sets so large that they cannot be handled by traditional processing technologies. Together, they create the Big Data Architecture - the physical and logical structure dictating how high volumes of data are ingested, processed, stored, and, ultimately, accessed.
-
-In other words, Data Architecture is a collection of policies that offers a solid basis for the business model. Many processes have guidelines in Data Architecture. Data collection, consumption, processing, storage, and integration with other systems are all part of this process. Big data architectural framework can act as a design for infrastructures and solutions, logically outlining how big data solutions will operate, the components that will be used, how the information will flow, and security aspects. Nowadays, any organization's strategy is dependent on the efficient utilization of data. 
+According to the English dictionary, architecture is *the art or science of building*, as well as *a unifying, coherent structure*. And big data is, quite intuitively, a concept of datasets so large that they cannot be handled by traditional processing technologies. Together, they create the Big Data Architecture - the physical and logical structure dictating how high volumes of data are ingested, processed, stored, and, ultimately, accessed.
 
 **Big Data Architecture is the silent *“how”* of implementing a big data strategy.**
+
+In other words, Data Architecture is a collection of policies that offers a solid basis for the business model. Many processes have guidelines in Data Architecture, such as data collection, consumption, processing, storage, and integration with other systems. Big data architectural framework can act as a design for infrastructures and solutions, logically outlining how big data solutions will operate, the components that will be used, how the information will flow, and security aspects. Nowadays, any organization's strategy is dependent on the efficient utilization of data. 
 
 ## Big Data Processing
 
@@ -33,7 +33,7 @@ Because the data is so large, the architecture requires using a batch processing
 
 * **Real-time processing of big data in motion**
 
-Real-time data processing is the trendiest trend in the Big Data industry. It describes feeding real-time data into data storage for processing. To achieve this, the architecture must incorporate a system for capturing and storing real-time data, which requires a robust and reliable system. 
+Real-time data processing is the trendiest trend in the Big Data industry. It describes feeding real-time data into data storage for processing. To achieve this, the architecture must incorporate a robust and reliable system for capturing and storing real-time data.
 
 * **Big data exploration**
 * **Machine learning and predictive analytics**
