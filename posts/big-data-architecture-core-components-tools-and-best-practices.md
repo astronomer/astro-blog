@@ -60,7 +60,7 @@ Real-time data processing is the trendiest trend in the Big Data industry. It de
 
 Who is big data architecture for? Who can benefit most from implementing it? The answer is quite obvious - it’s companies who collect big amounts of data, including companies who suffer from [siloed data](https://www.astronomer.io/blog/data-silos-what-are-they-how-to-fix-them). However, what can be counterintuitive, is that these aren’t necessarily only big companies and enterprises. We could imagine a small internet-based company having a lot of data as well as a traditional big business generating data because they have so much activity going on. It’s not based on the size of the company at all, moreover, an interesting artifact is that it was really rather small companies that started the Big Data revolution. So everyone who has a reason to collect data potentially is a big data company! It’s only a matter of time when they realize it.
 
-> "For some organizations, facing hundreds of gigabytes of data for the first time may trigger a need to reconsider data management options. For others, it may take tens or hundreds of terabytes before data size becomes a significant consideration." 
+> *For some organizations, facing hundreds of gigabytes of data for the first time may trigger a need to reconsider data management options. For others, it may take tens or hundreds of terabytes before data size becomes a significant consideration.*
 >
 > Roger Magoulas, Senior Director Data Strategy at Astronomer
 
@@ -76,7 +76,7 @@ In [FinTech](https://www.astronomer.io/blog/CRED-case-study) or Banking, Big Dat
 
 The biggest challenges include having the rigor and discipline to explore the data and understand its limitations, including what's missing. Yes, it may seem counterintuitive, but there's a tendency when people are working with a dataset, they think that it explains their entire universe - and it often doesn't. And if they don't acknowledge what’s missing, then they are going to think the answer is more complete than it actually is. Of course - the more data sources, the more accurate the insights will be, especially when it comes to Machine Learning. But all the data in the world won’t give you better decisions without proper critical thinking and awareness that correlation does not equal causation.
 
-> I think that there's a way that people think of big data as an answer to their problems. And it's never the whole story. Big data is one LEGO piece in a bigger puzzle for insights. It can provide you with more accurate or more useful information, but you still need to think about it qualitatively. In a lot of ways, what people should be doing with Big Data is figuring out what questions their data doesn’t answer, rather than what it does.
+> *I think that there's a way that people think of big data as an answer to their problems. And it's never the whole story. Big data is one LEGO piece in a bigger puzzle for insights. It can provide you with more accurate or more useful information, but you still need to think about it qualitatively. In a lot of ways, what people should be doing with Big Data is figuring out what questions their data doesn’t answer, rather than what it does.*
 >
 > Roger Magoulas, Senior Director Data Strategy at Astronomer
 
