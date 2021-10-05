@@ -1,9 +1,9 @@
 ---
 slug: big-data-architecture
 title: "Big Data Architecture: Core Components, Use Cases and Limitations"
-description: Is Big Data Architecture the answer to business problems, or just a
-  crucial piece of a bigger puzzle? Discover our insights on the topic in this
-  short blog post!
+description: Is Big Data Architecture the answer to major business problems, or
+  just a crucial piece of a bigger puzzle? Discover our insights on the topic in
+  this short blog post!
 heroImagePath: ../assets/architecture.png
 authors:
   - Julia Wrzosińska
