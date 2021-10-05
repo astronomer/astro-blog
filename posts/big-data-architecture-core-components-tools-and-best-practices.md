@@ -1,15 +1,15 @@
 ---
 slug: big-data-architecture
 title: "Big Data Architecture: Core Components, Use Cases and Limitations"
-description: Is Big Data Architecture the answer to business problems, or just a
-  crucial piece of a bigger puzzle? Discover our insights on the topic in this
-  short blog post!
+description: Is Big Data Architecture the answer to major business problems, or
+  just a crucial piece of a bigger puzzle? Discover our insights on the topic in
+  this short blog post!
 heroImagePath: ../assets/architecture.png
 authors:
   - Julia Wrzosińska
 date: 2021-10-05T15:47:51.513Z
 ---
-Lately, many people have been talking about how businesses are carrying out their strategies based on striking Big Data analytics findings. They make it seem easy - *just look into the data and leverage it*! However, not so many people discuss the need to develop a powerful strategy for data analysis - the Big Data Architecture.
+Lately, there has been a lot of buzz on how businesses are carrying out their strategies based on striking Big Data analytics findings. They make it seem easy - *just look into the data and leverage it*! However, not so many people discuss the need to develop a powerful strategy for data analysis - the Big Data Architecture.
 
 The vast majority of articles on Big Data Architecture begin with “*big data is everywhere around us.*” That’s a fact; however, what truly matters is how this big data is managed. It can be ubiquitous yet still essentially worthless if there is no proper architecture to handle the dataflow. 
 
