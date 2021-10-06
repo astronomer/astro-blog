@@ -8,6 +8,9 @@ authors:
   - Joanna Kasprzak-Kajder
 date: 2021-09-16T09:17:52.317Z
 ---
+
+<iframe src="https://fast.wistia.net/embed/iframe/f1sg00nkxc" title="Societe - teaser video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
+
 Wise is a global technology company, building the best way to move money around the world. With the Wise account, people and businesses can hold 55 currencies, move money between countries and spend money abroad. Ten million people and businesses use Wise, which processes over £5 billion in cross-border transactions every month, saving customers over £1 billion a year.
 
 We've had a chance to talk to Alexandra Abbas, a Machine Learning Engineer from Wise, to discuss how Apache Airflow fits into the bigger data management picture and uncover the story behind machine learning practices at one of the leading fintech organizations.  
