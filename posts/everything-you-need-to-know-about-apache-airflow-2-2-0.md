@@ -23,7 +23,9 @@ In celebration of the highly anticipated release, we’ve put together an overvi
 
 ## Airflow 2.2.0 New Features
 
-### AIP-39: Custom Timetables
+![](../assets/12102021_astroblog_pic3.png)
+
+## AIP-39: Custom Timetables
 
 Any heavy Airflow user would agree that this feature has been a long time coming!
 
@@ -49,7 +51,7 @@ It includes:
 
 The trading hours timetable allows users to run DAGs based on the start and end of trading hours for NYSE and Nasdaq. It includes historic trading hours as well as holidays and half-days where the markets have irregular hours. 
 
-### AIP-40: Deferrable Tasks
+## AIP-40: Deferrable Tasks
 
 Do you know the feeling of tasks or sensors clogging up worker resources when waiting for external systems and events? Airbnb introduced smart sensors, the first tackle of this issue. Deferrable tasks go further than sensors - they are perfect for anything that submits a job to an external system then polls for status.
 
@@ -60,6 +62,8 @@ To enable this functionality, a new component called the triggerer, which is the
 ### Custom @task decorators and @task.docker
 
 The '@task.docker' decorator allows for running a function inside a docker container. Airflow handles putting the code into the container and returning xcom. This is especially beneficial when there are competing dependencies between Airflow and tasks that must run.
+
+![](../assets/12102021_astroblog_pic2.png)
 
 ### Other features
 
