@@ -29,11 +29,11 @@ In celebration of the highly anticipated release, we’ve put together an overvi
 
 Any heavy Airflow user would agree that this feature has been a long time coming!
 
-Cron expressions got us as far as regular time intervals, which is only convenient for predictable data actions. Before Airflow 2.2.0, it was impossible to schedule data activities from Monday to Friday and stop them from running over the weekend, but now that custom timetables are finally here, the scheduling sky is the limit! This super useful feature allows looking at a given data for a specific period of time, which can be really useful. 
+Cron expressions got us as far as regular time intervals, which is only convenient for predictable data actions. Before Airflow 2.2.0, it was impossible to schedule data activities from Monday to Friday and stop them from running over the weekend. Now that the custom timetables are finally here, the scheduling sky is the limit! With this feature it's also now possible to look at a given data for a specific period of time. 
 
-* #### New concept alert: data_interval
+### New concept alert: data_interval
 
-##### **A period of data that a task should operate on.**
+#### **A period of data that a task should operate on.**
 
 Since the concept of *execution_date* was confusing to every new user, a better version is now available. No more "*why didn’t my DAG run yet?"*, as this feature has been replaced with *data_interval*, which is the period of data that a task should operate on. 
 
@@ -45,7 +45,7 @@ It includes:
 
 ![](../assets/timetables.png)
 
-#### Bonus for Astronomer Customers only:
+### Bonus for Astronomer Customers only:
 
 ### NYSE Trading Timetable
 
@@ -83,7 +83,7 @@ The '@task.docker' decorator allows for running a function inside a docker conta
 
 Overall, the new release contains 30 new features, 84 improvements, 85 bug fixes, and many internal and doc changes. Check out the [full list](https://airflow.apache.org/docs/apache-airflow/stable/changelog.html).
 
-**Details**:
+### **Details**:
 
 📦 PyPI: <https://pypi.org/project/apache-airflow/2.2.0/>\
 📚 Docs: <https://airflow.apache.org/docs/apache-airflow/2.2.0/>\
