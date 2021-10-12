@@ -12,7 +12,7 @@ As most of you know, Apache Airflow took off in 2014 as an open-source tool from
 
 [Airflow 2.0](http://astronomer.io/blog/introducing-airflow-2-0) was released in December 2020, and 11 months later we’re happy to announce that the second upgrade of this version is finally live! **Say *hello* to Airflow 2.2.0.** The new release combines two new big features and a whole lot of small quality-of-life improvements to make Airflow even more powerful. Contributors also managed to fix some long-standing complaints. 
 
-We’re extremely proud to say that the authors of most new features are a part of the Astronomer crew! Specifically:
+We’re extremely proud to say that the authors of most new features are a part of the Astronomer crew! Specifically, our team participated in launching:
 
 * AIP-39 - Custom Timetables / Richer scheduling intervals
 * AIP-40 Deferrable Operators
@@ -48,8 +48,6 @@ It includes:
 ##### NYSE Trading Timetable
 
 The trading hours timetable allows users to run DAGs based on the start and end of trading hours for NYSE and Nasdaq. It includes historic trading hours as well as holidays and half-days where the markets have irregular hours. 
-
-
 
 ### AIP-40: Deferrable Tasks
 
