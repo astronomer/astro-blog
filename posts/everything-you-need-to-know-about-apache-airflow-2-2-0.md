@@ -35,13 +35,13 @@ Cron expressions got us as far as regular time intervals, which is only convenie
 
 ##### **A period of data that a task should operate on.**
 
-Since the concept of "execution_date" was confusing to every new user, a better version is now available. No more “why didn’t my DAG run yet?!”, as this feature has been replaced with data_interval, which is the period of data that a task should operate on. 
+Since the concept of *execution_date* was confusing to every new user, a better version is now available. No more "*why didn’t my DAG run yet?"*, as this feature has been replaced with *data_interval*, which is the period of data that a task should operate on. 
 
 It includes:
 
-* logical_date (aka execution_date)
-* data_interval_start (same value as execution_date for cron)
-* data_interval_end (aka next_execution_date)
+* *logical_date* (aka execution_date)
+* *data_interval_start* (same value as execution_date for cron)
+* *data_interval_end* (aka next_execution_date)
 
 ![](../assets/timetables.png)
 
