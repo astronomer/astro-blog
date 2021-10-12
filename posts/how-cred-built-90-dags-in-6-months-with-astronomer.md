@@ -3,7 +3,7 @@ slug: CRED-case-study
 title: " How CRED Built 90+ DAGs in 6 months with Astronomer"
 description: "Check out the story of CRED—a FinTech company based in India—and
   learn how they leveraged the power of Apache Airflow. "
-heroImagePath: ../assets/CRED2.png
+heroImagePath: ../assets/cred2.png
 authors:
   - Ula Rydiger
 date: 2021-09-07T08:40:06.880Z
