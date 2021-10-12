@@ -2,7 +2,8 @@
 slug: apache-airflow-2.2.0-is-here
 title: Everything You Need to Know about Apache Airflow 2.2.0
 description: It's alive! Discover the major Airflow 2.2.0 features including
-  customisable timetables, deferrable tasks, Airflow standalone and many more.
+  customisable timetables, deferrable tasks, Airflow standalone CLI command and
+  many more.
 heroImagePath: ../assets/cover3.png
 authors:
   - Julia Wrzosińska
@@ -14,10 +15,10 @@ As most of you know, Apache Airflow took off in 2014 as an open-source tool from
 
 We’re extremely proud to say that the authors of most new features are a part of the Astronomer crew! Specifically, our team participated in launching:
 
-* AIP-39 - Custom Timetables / Richer scheduling intervals
+* AIP-39 Custom Timetables / Richer scheduling intervals
 * AIP-40 Deferrable Operators
-* Dag Params
-* Airflow standalone
+* Dag Params and Validation
+* Airflow Standalone CLI Command
 
 In celebration of the highly anticipated release, we’ve put together an overview of major Airflow 2.2.0 features below. Let's get to know the long-awaited new goodies!
 
@@ -39,9 +40,9 @@ Since the concept of *execution_date* was confusing to every new user, a better 
 
 It includes:
 
-* *logical\_date* (aka execution\_date)
-* *data\_interval\_start* (same value as execution\_date for cron)
-* *data\_interval\_end* (aka next\_execution\_date)
+* *logical_date* (aka execution_date)
+* *data_interval_start* (same value as execution_date for cron)
+* *data_interval_end* (aka next_execution_date)
 
 ![](../assets/timetables.png)
 
@@ -67,10 +68,10 @@ The '@task.docker' decorator allows for running a function inside a docker conta
 
 ## Other features
 
-* **Validation of DAG params** (Only with manually triggered DAGs!)
+* **Validation of DAG params** (Only with manually triggered DAGs)
 
   It is now possible to apply validation on DAG params by passing a param object for each param. Sets the stage for future params-related functionalities!
-* **Airflow standalone.**
+* **Airflow standalone CLI command.**
 
   Run all the airflow components (migrations, scheduler, webserver, triggerer, etc) directly without a docker. Perfect for local development.
 * **Testing Connections from the UI.**
