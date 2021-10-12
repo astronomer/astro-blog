@@ -43,7 +43,7 @@ It includes:
 * data_interval_start (same value as execution_date for cron)
 * data_interval_end (aka next_execution_date)
 
-![](https://lh5.googleusercontent.com/yWsZ_ZpMRSl77g1-XmmAytyCgpK9smcR1sxbQmcpJ5oGcOjFJq3k0zESuExN-OrMfwQdtntNz0BGmw44hcQgl2VW50YitE8IzIQ2y0b2ZAw_EdsAG3DqnhBT44PDCdFfb4KS0Wnw=s0)
+![](../assets/12102021_astroblog_pic1.png)
 
 #### Bonus for Astronomer Customers only:
 
