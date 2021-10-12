@@ -1,8 +1,8 @@
 ---
 slug: apache-airflow-2.2.0-is-here
 title: Everything You Need to Know about Apache Airflow 2.2.0
-description: Major Airflow 2.2.0 features in a nutshell, including customisable
-  timetables, deferrable tasks, Airflow standalone and much more.
+description: Discover the major Airflow 2.2.0 features in a nutshell, including
+  customisable timetables, deferrable tasks, Airflow standalone and much more.
 heroImagePath: ../assets/cover2.png
 authors:
   - Julia Wrzosińska
