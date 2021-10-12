@@ -3,7 +3,7 @@ slug: apache-airflow-2.2.0-is-here
 title: Everything You Need to Know about Apache Airflow 2.2.0
 description: Discover the major Airflow 2.2.0 features in a nutshell, including
   customisable timetables, deferrable tasks, Airflow standalone and much more.
-heroImagePath: ../assets/cover2.png
+heroImagePath: ../assets/cover3.png
 authors:
   - Julia Wrzosińska
 date: 2021-10-12T11:35:48.896Z
@@ -12,7 +12,7 @@ As most of you know, Apache Airflow took off in 2014 as an open-source tool from
 
 [Airflow 2.0](http://astronomer.io/blog/introducing-airflow-2-0) was released in December 2020, and 11 months later we’re happy to announce that the second upgrade of this version is finally live! **Say *hello* to Airflow 2.2.0.** The new release combines two new big features and a whole lot of small quality-of-life improvements to make Airflow even more powerful. Contributors also managed to fix some long-standing complaints. 
 
-We’re extremely proud to say that the authors of most new features are a part of the Astronomer crew! Specifically:
+We’re extremely proud to say that the authors of most new features are a part of the Astronomer crew! Specifically, our team participated in launching:
 
 * AIP-39 - Custom Timetables / Richer scheduling intervals
 * AIP-40 Deferrable Operators
@@ -23,7 +23,9 @@ In celebration of the highly anticipated release, we’ve put together an overvi
 
 ## Airflow 2.2.0 New Features
 
-### AIP-39: Custom Timetables
+![](../assets/12102021_astroblog_pic3.png)
+
+## AIP-39: Custom Timetables
 
 Any heavy Airflow user would agree that this feature has been a long time coming!
 
@@ -49,9 +51,7 @@ It includes:
 
 The trading hours timetable allows users to run DAGs based on the start and end of trading hours for NYSE and Nasdaq. It includes historic trading hours as well as holidays and half-days where the markets have irregular hours. 
 
-
-
-### AIP-40: Deferrable Tasks
+## AIP-40: Deferrable Tasks
 
 Do you know the feeling of tasks or sensors clogging up worker resources when waiting for external systems and events? Airbnb introduced smart sensors, the first tackle of this issue. Deferrable tasks go further than sensors - they are perfect for anything that submits a job to an external system then polls for status.
 
@@ -62,6 +62,8 @@ To enable this functionality, a new component called the triggerer, which is the
 ### Custom @task decorators and @task.docker
 
 The '@task.docker' decorator allows for running a function inside a docker container. Airflow handles putting the code into the container and returning xcom. This is especially beneficial when there are competing dependencies between Airflow and tasks that must run.
+
+![](../assets/12102021_astroblog_pic2.png)
 
 ### Other features
 
