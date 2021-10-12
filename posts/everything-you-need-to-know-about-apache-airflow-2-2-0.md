@@ -39,9 +39,9 @@ Since the concept of *execution_date* was confusing to every new user, a better 
 
 It includes:
 
-* *logical_date* (aka execution_date)
-* *data_interval_start* (same value as execution_date for cron)
-* *data_interval_end* (aka next_execution_date)
+* *logical\_date* (aka execution\_date)
+* *data\_interval\_start* (same value as execution\_date for cron)
+* *data\_interval\_end* (aka next\_execution\_date)
 
 ![](../assets/timetables.png)
 
