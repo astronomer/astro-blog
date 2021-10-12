@@ -65,7 +65,7 @@ The '@task.docker' decorator allows for running a function inside a docker conta
 
 ![](../assets/12102021_astroblog_pic2.png)
 
-### Other features
+## Other features
 
 * **Validation of DAG params** (Only with manually triggered DAGs!)
 
