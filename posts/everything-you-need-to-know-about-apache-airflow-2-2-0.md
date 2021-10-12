@@ -19,9 +19,9 @@ We’re extremely proud to say that the authors of most new features are a part 
 * Dag Params
 * Airflow standalone
 
-In celebration of the highly anticipated release, we’ve put together an overview of major Airflow 2.0 features below. Let's get to know the long-awaited new goodies!
+In celebration of the highly anticipated release, we’ve put together an overview of major Airflow 2.2.0 features below. Let's get to know the long-awaited new goodies!
 
-## Airflow 2.2.0 New Features
+## What's New in Airflow 2.2.0?
 
 ![](../assets/12102021_astroblog_pic3.png)
 
