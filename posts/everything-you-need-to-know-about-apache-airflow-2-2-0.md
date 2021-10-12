@@ -43,11 +43,11 @@ It includes:
 * data_interval_start (same value as execution_date for cron)
 * data_interval_end (aka next_execution_date)
 
-![](../assets/12102021_astroblog_pic1.png)
+![](../assets/timetables.png)
 
 #### Bonus for Astronomer Customers only:
 
-##### NYSE Trading Timetable
+### NYSE Trading Timetable
 
 The trading hours timetable allows users to run DAGs based on the start and end of trading hours for NYSE and Nasdaq. It includes historic trading hours as well as holidays and half-days where the markets have irregular hours. 
 
