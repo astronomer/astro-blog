@@ -3,7 +3,7 @@ slug: bbc-data-orchestration
 title: Airflow at BBC—Data Orchestration Solution in Media
 description: A conversation with the BBC's Principal Data Engineer about how
   Apache Airflow helps them deliver personalized experiences to the audience.
-heroImagePath: ../assets/BBC2.png
+heroImagePath: ../assets/bbc2.png
 authors:
   - Ula Rydiger
 date: 2021-10-14T08:06:57.748Z
