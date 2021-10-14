@@ -1,10 +1,9 @@
 ---
 slug: bbc-data-orchestration
 title: Airflow at BBC—Data Orchestration Solution in Media
-description: Boost your career and learn to run a data pipeline by getting
-  Apache Airflow certified with the Astronomer Certification for Apache Airflow
-  Fundamentals.
-heroImagePath: ../assets/blank.png
+description: A conversation with the BBC's Principal Data Engineer about how
+  Apache Airflow helps them deliver personalized experiences to the audience.
+heroImagePath: ../assets/BBC2.png
 authors:
   - Ula Rydiger
 date: 2021-10-14T08:06:57.748Z
