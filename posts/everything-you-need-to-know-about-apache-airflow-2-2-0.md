@@ -23,6 +23,10 @@ We’re extremely proud to say that the authors of most new features are a part 
 
 In celebration of the highly anticipated release, we’ve put together an overview of major Airflow 2.2.0 features below. Let's get to know the long-awaited new goodies!
 
+If you’re not into reading today, here is a recording from our webinar on Airflow 2.2 which will surely answer all your questions!
+
+<iframe src="https://fast.wistia.net/embed/iframe/vv6r1yervh" title="Societe - teaser video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="100%" style="aspect-ratio: 16/9"></iframe>
+
 ## What's New in Airflow 2.2.0?
 
 ![](../assets/12102021_astroblog_pic3.png)
