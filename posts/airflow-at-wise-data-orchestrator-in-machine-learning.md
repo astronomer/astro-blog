@@ -20,7 +20,7 @@ We've had a chance to talk to Alexandra Abbas, a Machine Learning Engineer from 
 
 ## What is your role at Wise, and how does the data team structure look?
 
-I'm a Machine Learning Engineer, and I work in the Platform Tribe at [Wise](https://wise.com/). Within this department, I work in the machine learning platform team. My team consists of four machine learning engineers, and we are responsible for building the infrastructure for data scientists and maintaining the Platform. We don’t have one data science team; all the data scientists are scattered across the organization in different departments such as marketing, customer support and product analytics, amongst others. Our Head of Data Science connects all our efforts and makes sure that data scientists get a valuable and practical platform to work on.
+I'm a Machine Learning Engineer, and I work in the Platform Tribe at [Wise](https://wise.com). Within this department, I work in the machine learning platform team. My team consists of four machine learning engineers, and we are responsible for building the infrastructure for data scientists and maintaining the Platform. We don’t have one data science team; all the data scientists are scattered across the organization in different departments such as marketing, customer support and product analytics, amongst others. Our Head of Data Science connects all our efforts and makes sure that data scientists get a valuable and practical platform to work on.
 
 > “The biggest goal for us is to move towards stream machine learning and have an end-to-end streaming system utilizing Apache Kafka and Apache Flink. This would allow us to move features to production much quicker than before and enable cross-functional team collaboration.”
 
