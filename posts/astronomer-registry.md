@@ -10,6 +10,7 @@ customjs:
 - https://fast.wistia.net/assets/external/E-v1.js
 ---
 
+<!-- markdownlint-disable MD033 -->
 <iframe src="https://fast.wistia.net/embed/iframe/w4vjgdxwf1" title="The Hub of Airflow Operators Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
 
 Today, we're excited to announce [The Astronomer Registry](http://registry.astronomer.io/): a discovery hub for Airflow providers designed to bridge the gap between the Airflow community and the broader data ecosystem.
@@ -55,7 +56,7 @@ Many companies have reached out asking for assistance in creating an Airflow Pro
 
 We're proud to launch a beta program with a small batch of partners who have worked closely with us to refine the build and release process, including [Great Expectations](http://greatexpectations.io) and [Fivetran](http://fivetran.com). We look forward to delivering many more of these packages in the coming months and working to bring more first-class integrations to the Airflow community.
 
-Please visit our [sample provider repo](https://github.com/astronomer/airflow-provider-sample) for more info and feel free to [get in touch](http://registry.astronomer.io/publish-provider) if you'd like to publish a provider package.
+Please visit our [sample provider repo](https://github.com/astronomer/airflow-provider-sample) for more info and feel free to [get in touch](http://registry.astronomer.io/publish) if you'd like to publish a provider package.
 
 ## Looking Ahead
 

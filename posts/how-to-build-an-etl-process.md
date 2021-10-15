@@ -8,6 +8,7 @@ authors:
   - Julia Wrzosińska
 date: 2021-09-03T09:44:13.602Z
 ---
+<!-- markdownlint-disable MD036 MD029 -->
 ## What is the ETL process?
 
 Extract. Transform. Load. It’s as simple as that. ETL processing may be viewed as a processing framework for managing all the data within an organization and arranging it into a structured form. This type of control system involves obtaining and securing data from numerous sources (*extract*), followed by integrating and cleansing (*transform*), and finally storing the data in its final form and place, where it can be efficiently accessed and analyzed (*load*). 

@@ -55,8 +55,9 @@ And finally, Airflow gives the development teams a standard way to interact with
 
 ## What are the examples of banks currently using Airflow?
 
+<!-- markdown-link-check-disable -->
 [Societe Generale](https://www.astronomer.io/blog/data-orchestration-societe-generale) first comes to mind. The French bank uses Airflow for standard ETL and ELT use cases and also to easily interact with their private and public cloud. There’s also [ING,](https://www.ing.com/Home.htm) [Bexs Bank](https://www.bexs.com.br/en), [National Bank of Canada](https://nbc.ca/), [Orange Bank,](https://www.orangebank.fr/) [Paraná Banco](https://paranabanco.com.br/) and [more!](https://github.com/apache/airflow/blob/main/INTHEWILD.md)
-
+<!-- markdown-link-check-enable --> 
 \---
 
 Of course, it’s impossible to cover all the challenges the banking industry faces in one article, but fear not- we have excellent experts on board to discuss how Airflow and data orchestration can help. [Get in touch today!](https://www.astronomer.io/get-astronomer)

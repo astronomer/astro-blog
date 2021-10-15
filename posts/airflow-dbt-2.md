@@ -26,6 +26,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
 
 1. We leverage the selectors.yml file ([introduced in dbt 0.18](https://docs.getdbt.com/reference/node-selection/yaml-selectors/)) in order to define a set of model selectors for each Airflow DAG schedule we want to create. We then use dbt's tagging feature to tag every one of our models with a desired schedule interval.
 
+    <!-- markdownlint-disable MD031 -->
    ```python
    selectors:
      - name: "standard_schedule"
@@ -34,7 +35,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
        definition: "tag:late_schedule"
      - name: "hourly_schedule"
        definition: "tag:hourly_schedule"
-   ```
+    ```
 2. We then use our CI/CD provider to run a Python script that:
 
    1. Runs `dbt compile` to create a fresh copy of `manifest.json`

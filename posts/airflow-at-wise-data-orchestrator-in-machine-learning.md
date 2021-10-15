@@ -9,6 +9,7 @@ authors:
 date: 2021-09-16T09:17:52.317Z
 ---
 
+<!-- markdownlint-disable MD033 -->
 <iframe src="https://fast.wistia.net/embed/iframe/f1sg00nkxc" title="Societe - teaser video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
 
 Wise is a global technology company, building the best way to move money around the world. With the Wise account, people and businesses can hold 55 currencies, move money between countries and spend money abroad. Ten million people and businesses use Wise, which processes over £5 billion in cross-border transactions every month, saving customers over £1 billion a year.
@@ -18,8 +19,9 @@ We've had a chance to talk to Alexandra Abbas, a Machine Learning Engineer from 
 
 
 ## What is your role at Wise, and how does the data team structure look?
-
-I'm a Machine Learning Engineer, and I work in the Platform Tribe at [Wise](https://wise.com/). Within this department, I work in the machine learning platform team. My team consists of four machine learning engineers, and we are responsible for building the infrastructure for data scientists and maintaining the Platform. We don’t have one data science team; all the data scientists are scattered across the organization in different departments such as marketing, customer support and product analytics, amongst others. Our Head of Data Science connects all our efforts and makes sure that data scientists get a valuable and practical platform to work on.
+<!-- markdown-link-check-disable --> 
+I'm a Machine Learning Engineer, and I work in the Platform Tribe at [Wise](https://wise.com). Within this department, I work in the machine learning platform team. My team consists of four machine learning engineers, and we are responsible for building the infrastructure for data scientists and maintaining the Platform. We don’t have one data science team; all the data scientists are scattered across the organization in different departments such as marketing, customer support and product analytics, amongst others. Our Head of Data Science connects all our efforts and makes sure that data scientists get a valuable and practical platform to work on.
+<!-- markdown-link-check-enable --> 
 
 > “The biggest goal for us is to move towards stream machine learning and have an end-to-end streaming system utilizing Apache Kafka and Apache Flink. This would allow us to move features to production much quicker than before and enable cross-functional team collaboration.”
 

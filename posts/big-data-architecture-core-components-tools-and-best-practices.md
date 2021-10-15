@@ -23,6 +23,7 @@ According to the English dictionary, architecture is *the art or science of buil
 
 In other words, Data Architecture is a collection of policies that offers a solid basis for the business model. Many processes have guidelines in Data Architecture, such as data collection, consumption, processing, storage, and integration with other systems. Big data architectural framework can act as a design for infrastructures and solutions, logically outlining how big data solutions will operate, the components that will be used, how the information will flow, and security aspects. Nowadays, any organization's strategy is dependent on the efficient utilization of data. 
 
+<!-- markdownlint-disable MD045 -->
 ![](../assets/bigdata2.png)
 
 ## Big Data Processing

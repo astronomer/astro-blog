@@ -8,6 +8,7 @@ authors:
   - Ula Rydiger
 date: 2021-09-07T08:40:06.880Z
 ---
+<!-- markdownlint-disable MD033 -->
 <iframe src="https://fast.wistia.net/embed/iframe/auno45aggr" title="CREDfinal Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
 
 ![Astronomer product values](../assets/cred.png)
