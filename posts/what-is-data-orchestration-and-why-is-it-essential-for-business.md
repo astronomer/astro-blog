@@ -8,7 +8,7 @@ authors:
   - Julia Wrzosińska
 date: 2021-07-29T13:33:20.440Z
 ---
-<!-- markdownlint-disable MD029  -->
+<!-- markdownlint-disable MD029 MD025 MD045 -->
 What do we mean by data orchestration and why does it matter? In this post, we define data orchestration, cover its benefits, what’s driving the push for ever more data orchestration and what annoying pain points data orchestration can address. We’d love to elaborate on self-driving music orchestras, too, but perhaps we’ll leave that for another day.
 
 # What is data orchestration?
