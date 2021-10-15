@@ -9,6 +9,8 @@ authors:
   - Julia Wrzosińska
 date: 2021-09-09T13:03:32.011Z
 ---
+<!-- markdownlint-disable MD045 MD029 MD047 -->
+
 In today’s digital world, economists have declared data one of the most valuable business resources. Companies that will manage to unlock the value of their datasets will leap miles ahead of their competition. But how to deliver value rapidly when there’s an entire data infrastructure to build first? 
 
 Indeed, historically establishing end-to-end data tools and infrastructures used to be a costly, time-consuming endeavor. However, with the development of self-service data suppliers for enterprises, cloud-based warehouses, and open-source frameworks, businesses of all sizes may quickly modernize their data stack, drastically reducing time-to-insights. Especially if they add the [orchestration](https://www.astronomer.io/blog/what-is-data-orchestration) layer!

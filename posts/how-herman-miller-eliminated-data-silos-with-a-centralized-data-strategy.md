@@ -8,6 +8,7 @@ authors:
   - Ula Rydiger
 date: 2021-07-09T08:17:55.465Z
 ---
+<!-- markdownlint-disable MD033 MD045 -->
 
 <iframe src="https://fast.wistia.net/embed/iframe/4o2f8gf1xm" title="HermanMiller Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
 

@@ -8,7 +8,7 @@ authors:
   - Ula Rydiger
 date: 2021-07-07T08:33:39.618Z
 ---
-
+<!-- markdownlint-disable MD033 -->
 <iframe src="https://fast.wistia.net/embed/iframe/1vs4z9omab" title="Mage Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="450"></iframe>
 
 **Astronomer product values:**

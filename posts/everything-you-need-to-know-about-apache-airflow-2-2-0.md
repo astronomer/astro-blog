@@ -9,6 +9,7 @@ authors:
   - Julia Wrzosińska
 date: 2021-10-12T11:35:48.896Z
 ---
+<!-- markdownlint-disable MD033 MD045 MD026 -->
 As most of you know, Apache Airflow took off in 2014 as an open-source tool from the very first commit - and still remains this way. The Airflow community is strong, healthy, and vibrant, with over 1700 code contributors — and growing at a healthy pace, ensuring 24/7 support. Any kind of big architectural upgrade or a fundamental change to the way Airflow operates goes through the Airflow Improvement Proposal (AIP) process and a vote. It ensures that the big fundamental improvements get by in front of the community.
 
 [Airflow 2.0](http://astronomer.io/blog/introducing-airflow-2-0) was released in December 2020, and 11 months later we’re happy to announce that the second upgrade of this version is finally live! **Say *hello* to Airflow 2.2.0.** The new release combines two new big features and a whole lot of small quality-of-life improvements to make Airflow even more powerful. Contributors also managed to fix some long-standing complaints. 
@@ -24,7 +25,6 @@ In celebration of the highly anticipated release, we’ve put together an overvi
 
 ## What's New in Airflow 2.2.0?
 
-<!-- markdownlint-disable MD045 -->
 ![](../assets/12102021_astroblog_pic3.png)
 
 ## AIP-39: Custom Timetables
@@ -47,7 +47,6 @@ It includes:
 
 ![](../assets/timetables.png)
 
-<!-- markdownlint-disable MD026 -->
 ### Bonus for Astronomer Customers only:
 
 ### NYSE Trading Timetable

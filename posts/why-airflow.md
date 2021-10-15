@@ -8,6 +8,8 @@ authors:
   - Ry Walker
 date: 2019-12-03T00:00:00.000Z
 ---
+<!-- markdownlint-disable MD045 MD029 -->
+
 Apache Airflow continues to win vs. other [workflow orchestration](https://www.astronomer.io/blog/what-is-data-orchestration) tools due to two main factors:
 
 * An active and expanding community
