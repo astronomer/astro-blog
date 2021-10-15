@@ -8,6 +8,7 @@ authors:
   - Ula Rydiger
 date: 2021-06-23T08:40:43.193Z
 ---
+<!-- markdownlint-disable MD026 -->
 **Astronomer product values:**
 
 * Increased developer productivity

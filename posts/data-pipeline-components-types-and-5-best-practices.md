@@ -22,6 +22,7 @@ It's simple, really. To grasp how data pipelines work, consider any pipe that ac
 
 To be more specific, let's say you own a business and - since you're a wise, innovative entrepreneur - you gather a variety of valuable data from your customers. You record their location, purchases, session recordings, interactions, bounce rates, and other factors from various sources. You have the data, but to get insights, create target personas, or simply measure engagement, you have to move it across systems. It requires complicated processes such as data mining, cloud storage, reformatting, and merging with other data sources. To handle such processes manually is a data engineer's nightmare - so that's where our data pipelines enter with a bang. What you get from a data pipeline is a smooth, automated flow of data from one station to the next. The end station can be a warehouse for analysis, but not necessarily - your pipeline can also route data into other applications or visualization tools. It's the ultimate assembly line! 
 
+<!-- markdownlint-disable MD045 -->
 ![](../assets/data-pipeline.png)
 
 ## Why are data pipelines important?
@@ -50,6 +51,7 @@ So let's get past the basics! Starting off with a list of data pipeline componen
 
 Now that you know the components of data pipelines, let's have a look at their specificity. It is crucial to note that data pipeline types are not mutually exclusive. A data pipeline can have all of the properties of two distinct kinds - it can be cloud-native batch processing or open-source real-time processing, etc. Mix and match all the way! The main types of data pipelines include: 
 
+<!-- markdownlint-disable MD029 -->
 1. **Batch**
 
 When organizations need to transfer large amounts of data at regular times, batch processing is what they need. Batch tasks are generally scheduled to run on a regular basis (for example, every 24 hours) or when the volume of data hits a certain threshold.

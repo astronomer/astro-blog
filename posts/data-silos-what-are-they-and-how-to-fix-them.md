@@ -34,7 +34,7 @@ In this article, we dive deep into what data silos are, what causes them, and wh
 
 First, in order to solve the issue of data silos, you need to understand what causes them. Here we’ve gathered 4 most common reasons for data silos: 
 
-
+<!-- markdownlint-disable MD029 -->
 
 1. Overloaded centralized data team 
 

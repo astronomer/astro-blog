@@ -24,6 +24,7 @@ In celebration of the highly anticipated release, we’ve put together an overvi
 
 ## What's New in Airflow 2.2.0?
 
+<!-- markdownlint-disable MD045 -->
 ![](../assets/12102021_astroblog_pic3.png)
 
 ## AIP-39: Custom Timetables
@@ -46,6 +47,7 @@ It includes:
 
 ![](../assets/timetables.png)
 
+<!-- markdownlint-disable MD026 -->
 ### Bonus for Astronomer Customers only:
 
 ### NYSE Trading Timetable
