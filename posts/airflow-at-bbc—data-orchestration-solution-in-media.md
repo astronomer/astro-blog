@@ -9,6 +9,7 @@ authors:
 date: 2021-10-14T08:06:57.748Z
 ---
 
+<!-- markdownlint-disable MD033 -->
 <iframe src="https://fast.wistia.net/embed/iframe/5yl5pu3obl" title="Societe - teaser video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="100%" style="aspect-ratio: 16/9"></iframe>
 
 We’re happy to share a post-Airflow Summit talk with Tatiana Al-Chueyr Pereira Martins, Principal Data Engineer at BBC— a leading UK broadcaster. Tatiana’s Datalab team is responsible for delivering personalized experiences to the BBC audience, which involves use cases surrounding machine learning, software engineering, data engineering, and DevOps. Bringing all the tasks together proved to be a challenge, so the team decided to implement Apache Airflow in their Data Stack.
