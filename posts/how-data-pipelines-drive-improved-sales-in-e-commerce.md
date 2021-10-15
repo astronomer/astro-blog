@@ -19,9 +19,9 @@ Today, we talk to [Viraj Parekh](mailto:viraj@astronomer.io), Field CTO at Astro
 Due to COVID-19 e-commerce has gotten more competitive than it was even a year ago. Even companies Nike and Adidas have really accelerated their shipping. This is why data became table stakes. You can't do anything unless you have the right type of consumer data about how people are using your product, how your marketing is going— basically everything that's involved in running an e-commerce company.
 
 
-<!-- markdown-link-check-disable-next-line --> 
+<!-- markdown-link-check-disable -->
 [\>  It is estimated that 95% of purchases will be made online by 2040.](https://www.nasdaq.com/articles/uk-online-shopping-and-e-commerce-statistics-2017-2017-03-14)
-
+<!-- markdown-link-check-enable --> 
 
 
 ## What has been the biggest challenge in terms of data in e-commerce so far?
