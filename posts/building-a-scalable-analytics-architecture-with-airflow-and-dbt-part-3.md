@@ -22,8 +22,10 @@ The sample code we provided in the previous post demonstrates how to loop throug
 
 When used as shown in the sample code below, the utility provides a convenient shortcut to creating Airflow task groups with the respective dbt models that can be triggered in a DAG run. Note that this code snippet only shows part of the DAG file; you can find the whole file in the [demo repo](https://github.com/astronomer/airflow-dbt-demo).
 
+<!-- markdownlint-disable MD036 -->
 **dbt_advanced_utility.py**
 
+<!-- markdownlint-disable MD040 -->
 ```
 `with dag:`
 

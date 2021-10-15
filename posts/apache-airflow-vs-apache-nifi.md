@@ -15,6 +15,7 @@ Although essentially different, both Apache Airflow and Apache NiFi are tools de
 
 As the data volumes keep expanding, enterprises create a rising need for data warehousing projects and advanced analytics solutions. ETL (Extract, Transform, Load) is a critical component of a [modern data stack](https://www.astronomer.io/blog/build-a-modern-data-stack), as it guarantees that data is successfully integrated across many databases and applications. Both Airflow and NiFi are *crème de la crème* among the most popular [ETL tools](https://www.astronomer.io/blog/build-an-etl-process). In order to choose the right tool for your needs, you have to ask yourself - what exactly are you going to do with your data? But before that, let's go through the background and get to know these two pets.
 
+<!-- markdownlint-disable MD045 -->
 ![](../assets/nifinifi.png)
 
 ## Apache Airflow Basics
@@ -23,6 +24,7 @@ Some people claim that Airflow is "cron on steroids," but to be more precise, Ai
 
 Apache Airflow is a super-flexible task scheduler and [data orchestrator](https://www.astronomer.io/blog/what-is-data-orchestration) suitable for most everyday tasks. Airflow can run ETL/ELT jobs, train Machine Learning models, track systems, notify, complete database backups, power functions within multiple APIs, and more. Organizations typically use the platform to create workflows as directed acyclic graphs (DAGs) of tasks. Sounds complicated? It really shouldn't - rich command-line utilities make conducting complex DAG operations a breeze. The Airflow scheduler performs tasks on an array of workers while adhering to specific requirements. 
 
+<!-- markdownlint-disable MD026 -->
 ## Key Benefits of Airflow:
 
 * Code-first: Airflow and all the workflows are written in Python (although each step can be written in any language), which allows to dynamically generate DAGs. Workflows defined as code are easier to test, maintain and collaborate on. Customization of complex transformations doesn't get any simpler than this. Moreover, Python allows for effortless collaboration with data scientists.
