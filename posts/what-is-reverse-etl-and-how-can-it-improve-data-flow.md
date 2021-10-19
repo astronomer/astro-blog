@@ -83,7 +83,7 @@ You can then use the Astronomer Registry--an awesome library of building blocks 
 Additionally, the Astronomer Registry contains a rich library of certified and contextual DAGs that make it easy to see how different Airflow Providers can be stitched together as part of a full use case. A use case like the one above can be seen on the Astronomer Registry [here](https://registry.astronomer.io/dags/census-sync-dw-to-marketing). In particular, the \`CensusOperator\` and \`CensusSensor\` are used to trigger a Census sync and monitor its status as an Airflow task.
 
 ```
-# This syncs the ``marketing.campaigns.customers_for_reengagement\`\` table data to the marketing platform.
+# This syncs the ``marketing.campaigns.customers_for_reengagement`` table data to the marketing platform.
 
     trigger_census_sync_to_marketing_platform = CensusOperator(
 
