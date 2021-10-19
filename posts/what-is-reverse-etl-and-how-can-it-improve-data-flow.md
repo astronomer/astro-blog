@@ -2,7 +2,7 @@
 slug: reverse-etl
 title: What is Reverse ETL and How Can It Improve Data Flow?
 description: abc
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/Frame71.png
 authors:
   - Sarah
 date: 2021-10-19T13:03:05.560Z
