@@ -1,7 +1,8 @@
 ---
 slug: reverse-etl
 title: What is Reverse ETL and How Can It Improve Data Flow?
-description: abc
+description: Find out what is reverse ETL and how to use Census and Airflow
+  together to improve data orchestration.
 heroImagePath: ../assets/Frame71.png
 authors:
   - Sarah
