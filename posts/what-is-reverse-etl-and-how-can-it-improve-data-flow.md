@@ -121,8 +121,6 @@ Automating workflows will allow your employees to sleep better and have more tim
 **\
 Have questions about my experience with these tools or data stacks in general? I’m happy to chat on [Twitter](https://twitter.com/sarahmk125) or [LinkedIn](https://www.linkedin.com/in/sarah-krasnik/).**
 
+**\----**
 
-
-**About the author**
-
-Sarah Krasnik leads data engineering at Perpay, and is an active writer and member of the data community. She has a passion for building and scaling modern data stacks and constantly thinking about what’s next in the data tooling world.
+**About the author:** Sarah Krasnik leads data engineering at Perpay, and is an active writer and member of the data community. She has a passion for building and scaling modern data stacks and constantly thinking about what’s next in the data tooling world.
