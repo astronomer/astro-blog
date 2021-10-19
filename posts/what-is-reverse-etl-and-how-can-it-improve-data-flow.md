@@ -5,7 +5,7 @@ description: Find out what is reverse ETL and how to use Census and Airflow
   together to improve data orchestration.
 heroImagePath: ../assets/Frame71.png
 authors:
-  - Sarah
+  - Sarah Krasnik
 date: 2021-10-19T13:03:05.560Z
 ---
 Analytics teams strive to create clean, aggregated, and tested data products. When they leverage modern data tooling, these teams can confidently and reliably expose data in numerous different ways to business users.
@@ -14,11 +14,7 @@ At Perpay, we aim to enable members of the organization to make data-driven deci
 
 In this article, I’ll break down how you too can use Iterable to upgrade your customer experience thanks to two excellent tools: [Census](https://www.getcensus.com/) (my reverse ETL of choice) and the [Astronomer Registry](https://registry.astronomer.io/).
 
-
-
 # ETL vs. reverse ETL: What’s the difference? 
-
-
 
 I’ll defer to the experts over at Census for the [official reverse ETL definition](https://blog.getcensus.com/what-is-reverse-etl/): 
 
@@ -84,39 +80,35 @@ You can then use the Astronomer Registry--an awesome library of building blocks 
 
 ![](https://lh4.googleusercontent.com/545mtGtJhhAqFn04Fd8xe63iVe7sW-ZIWj7q2M1XW9q5u7j9tOW0UP00Zq9vnYVaWguEwJQBWpfVw2Az6u0bmmMvPCUKm-PPVpejRZtec0b7dZh-y6IeF27XsdSKUIlF26bfCWSH=s1600)
 
-
-
 Additionally, the Astronomer Registry contains a rich library of certified and contextual DAGs that make it easy to see how different Airflow Providers can be stitched together as part of a full use case. A use case like the one above can be seen on the Astronomer Registry [here](https://registry.astronomer.io/dags/census-sync-dw-to-marketing). In particular, the \`CensusOperator\` and \`CensusSensor\` are used to trigger a Census sync and monitor its status as an Airflow task.
 
+```
+\# This syncs the \`\`marketing.campaigns.customers_for_reengagement\`\` table data to the marketing platform.
+
+    trigger_census_sync_to_marketing_platform = CensusOperator(
+
+        task_id="trigger_census_sync_to_marketing_platform",
+
+        sync_id=8290,
+
+    )
 
 
-```    # This syncs the ``marketing.campaigns.customers_for_reengagement`` table data to the marketing platform.```
 
-`    trigger_census_sync_to_marketing_platform = CensusOperator(`
+\# Checks the status of the Census sync run for completion every 30 seconds.  This operator uses the
 
-`        task_id="trigger_census_sync_to_marketing_platform",`
+\# \`\`sync_run_id\`\` returned from the \`\`CensusOperator\`\` task as an XComArg.
 
-`        sync_id=8290,`
+    wait_for_census_sync = CensusSensor(
 
-`    )`
+        task_id="wait_for_census_sync",
 
-````
+        sync_run_id=trigger_census_sync_to_marketing_platform.output,
 
-`    # Checks the status of the Census sync run for completion every 30 seconds.  This operator uses the`
+        poke_interval=30,
 
-```    # ``sync_run_id`` returned from the ``CensusOperator`` task as an XComArg.```
-
-`    wait_for_census_sync = CensusSensor(`
-
-`        task_id="wait_for_census_sync",`
-
-`        sync_run_id=trigger_census_sync_to_marketing_platform.output,`
-
-`        poke_interval=30,`
-
-`    )`
-
-
+    )
+```
 
 With that, data teams can focus on what data to send and just choosing how often, while not being stuck in the weeds of figuring out how to send it through an in-house integration. With automated orchestration, data in third party tools can be fresh as a daisy.
 
@@ -126,10 +118,11 @@ Speaking from personal experience, you don’t want to miss the opportunity to s
 
 Automating workflows will allow your employees to sleep better and have more time to truly deliver value.
 
-Have questions about my experience with these tools or data stacks in general? I’m happy to chat on [Twitter](https://twitter.com/sarahmk125) or [LinkedIn](https://www.linkedin.com/in/sarah-krasnik/).
+**\
+Have questions about my experience with these tools or data stacks in general? I’m happy to chat on [Twitter](https://twitter.com/sarahmk125) or [LinkedIn](https://www.linkedin.com/in/sarah-krasnik/).**
 
-\--
 
-***About the author:***
 
-*Sarah leads data engineering at Perpay, and is an active writer and member of the data community. She has a passion for building and scaling modern data stacks and constantly thinking about what’s next in the data tooling world.*
+**About the author**
+
+Sarah Krasnik leads data engineering at Perpay, and is an active writer and member of the data community. She has a passion for building and scaling modern data stacks and constantly thinking about what’s next in the data tooling world.
