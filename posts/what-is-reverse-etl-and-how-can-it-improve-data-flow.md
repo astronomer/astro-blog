@@ -8,6 +8,7 @@ authors:
   - Sarah Krasnik
 date: 2021-10-19T13:03:05.560Z
 ---
+
 Analytics teams strive to create clean, aggregated, and tested data products. When they leverage modern data tooling, these teams can confidently and reliably expose data in numerous different ways to business users.
 
 At Perpay, we aim to enable members of the organization to make data-driven decisions. We believe people are most effective when first-party data accompanies information found in tools the particular business user uses most. For our marketing team, that tool is [Iterable](https://iterable.com/): a cross-channel marketing platform optimizing for customer experience.
@@ -16,11 +17,11 @@ In this article, I’ll break down how you too can use Iterable to upgrade your 
 
 # ETL vs. reverse ETL: What’s the difference? 
 
-I’ll defer to the experts over at Census for the [official reverse ETL definition](https://blog.getcensus.com/what-is-reverse-etl/): 
+I’ll defer to the experts over at Census for the [official reverse ETL definition](https://blog.getcensus.com/what-is-reverse-etl/):
 
-Reverse ETL syncs data from a system of records like a warehouse to a system of actions like CRM, MAP, and other SaaS apps to operationalize data. 
+Reverse ETL syncs data from a system of records like a warehouse to a system of actions like CRM, MAP, and other SaaS apps to operationalize data.
 
-If you’re familiar with “traditional” ETL, this definition probably isn’t too surprising (many folks early on thought of reverse ETL as reverse Fivetran). 
+If you’re familiar with “traditional” ETL, this definition probably isn’t too surprising (many folks early on thought of reverse ETL as reverse Fivetran).
 
 However, if you’re not as familiar with ETL, let’s take a second to break the two apart. ETL stands for extract, transform, load. It’s the process of taking data from third-party systems and loading it into a data warehouse, the centralized repository of a company's information. ETL is not a new concept, as it started gaining popularity in the 1970s, and more recently, has taken the form of ELT (extract and load, then transform).
 
@@ -36,13 +37,13 @@ Most organizations have gotten on the BI train by adopting Looker, Power BI, Mod
 
 However, visualizations are only as good as the actions they enable when people look at the dashboards. Thus, human consumption of the BI tool inherently limits automation, and that’s where reverse ETL comes in.
 
-Reverse ETL makes analytics operational by setting data-driven business stakeholders up for success, giving them the tools needed to automate as many workflows as possible and effectively freeing data insights from the confines of dashboards. 
+Reverse ETL makes analytics operational by setting data-driven business stakeholders up for success, giving them the tools needed to automate as many workflows as possible and effectively freeing data insights from the confines of dashboards.
 
 Take your marketing team, for example. They probably look at a dashboard to get a list of users newly eligible for a particular product pretty often. This list, to be actionable, must be uploaded to a tool like Iterable, and the eligibility email campaign must be triggered manually. What if the person who usually uploads the list is on vacation, or just forgets? Why should your product suffer from a single person taking time off?
 
 The data in the list changes, but the process itself doesn’t change. If this screams automation potential, then you’re right! This upload is reverse ETL, just a manual flavor of it. Tools like Census aim to automate this particular step, allowing the underlying data to dictate the content of the list dynamically as it changes while keeping the process constant.
 
-However, there’s another piece to this puzzle. Even if the process itself is automated, a human may still need to trigger it. That’s where automatic data orchestration comes in.  
+However, there’s another piece to this puzzle. Even if the process itself is automated, a human may still need to trigger it. That’s where automatic data orchestration comes in.
 
 ## What is data orchestration?
 
@@ -72,11 +73,11 @@ At Perpay, we’re laser-focused on providing more accessibility for everyday pu
 
 Upstream, we have ETLs loading data into our warehouse and data transformations running on top of that.
 
-Downstream, sending data directly to Iterable lets marketing build workflows triggered automatically with dynamic adjustment based on the information available. While you can take the more DIY road, as we have at Perpay with our stack, there are resources and tools available to help you get up and running faster that are worth exploring. 
+Downstream, sending data directly to Iterable lets marketing build workflows triggered automatically with dynamic adjustment based on the information available. While you can take the more DIY road, as we have at Perpay with our stack, there are resources and tools available to help you get up and running faster that are worth exploring.
 
 For example, if you’re working with your marketing team to improve cross-channel marketing efforts and customer experience, your less-DIY stack may look like using Fivetran for ETL to enable a single-source-of-truth data warehouse, with dbt building data models on top of all that data.
 
-You can then use the Astronomer Registry--an awesome library of building blocks for Apache Airflow. The Registry lets you grab the providers for each of the tools you use to get up and running even faster, including the official [Census Provider](https://registry.astronomer.io/providers/census?type=Operators), so you can trigger the reverse ETL task directly after the data update task to ensure freshness. 
+You can then use the Astronomer Registry--an awesome library of building blocks for Apache Airflow. The Registry lets you grab the providers for each of the tools you use to get up and running even faster, including the official [Census Provider](https://registry.astronomer.io/providers/census?type=Operators), so you can trigger the reverse ETL task directly after the data update task to ensure freshness.
 
 ![](https://lh4.googleusercontent.com/545mtGtJhhAqFn04Fd8xe63iVe7sW-ZIWj7q2M1XW9q5u7j9tOW0UP00Zq9vnYVaWguEwJQBWpfVw2Az6u0bmmMvPCUKm-PPVpejRZtec0b7dZh-y6IeF27XsdSKUIlF26bfCWSH=s1600)
 
@@ -118,8 +119,7 @@ Speaking from personal experience, you don’t want to miss the opportunity to s
 
 Automating workflows will allow your employees to sleep better and have more time to truly deliver value.
 
-**\
-Have questions about my experience with these tools or data stacks in general? I’m happy to chat on [Twitter](https://twitter.com/sarahmk125) or [LinkedIn](https://www.linkedin.com/in/sarah-krasnik/).**
+Have questions about my experience with these tools or data stacks in general? I’m happy to chat on [Twitter](https://twitter.com/sarahmk125) or [LinkedIn](https://www.linkedin.com/in/sarah-krasnik/).
 
 **\----**
 
