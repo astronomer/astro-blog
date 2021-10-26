@@ -88,7 +88,9 @@ This simplified [example](https://registry.astronomer.io/dags/xcom-gcs-ds) inclu
 4. Train and Validate
 5. Fit final model
 
-![](https://lh4.googleusercontent.com/7m0S_9BOLGjJLkY6h9Jyx3u_ueAT2qM4-ShOfy4-hpdZ8cWo20p5KDcIpBPd2kQbh1y1JIyqy2PTIFULAesGgRolaWpuwI5-ms_LwBCxDkTYdbinADsXrIHbW_ABPYUFqs-tqRO0=s1600)Each of these steps produces an intermediary data set that is saved to Google Cloud Storage (GCS) and gets passed to the subsequent task using [XComs](https://www.astronomer.io/guides/custom-xcom-backends). This has the added benefit of creating trackable and reusable data sets as artifacts for each stage of the pipeline that can be analyzed and audited at any time for data quality, data lineage, and model maintenance or monitoring.
+![](https://lh4.googleusercontent.com/7m0S_9BOLGjJLkY6h9Jyx3u_ueAT2qM4-ShOfy4-hpdZ8cWo20p5KDcIpBPd2kQbh1y1JIyqy2PTIFULAesGgRolaWpuwI5-ms_LwBCxDkTYdbinADsXrIHbW_ABPYUFqs-tqRO0=s1600)
+
+Each of these steps produces an intermediary data set that is saved to Google Cloud Storage (GCS) and gets passed to the subsequent task using [XComs](https://www.astronomer.io/guides/custom-xcom-backends). This has the added benefit of creating trackable and reusable data sets as artifacts for each stage of the pipeline that can be analyzed and audited at any time for data quality, data lineage, and model maintenance or monitoring.
 
 Each Airflow task executes code to do the following:![](https://lh6.googleusercontent.com/XgQvf4LSi7DrxUx5x8QHSxqEQx1wiNiz6xzCcStdpvpl82PCo6lIma_Im4Bctl7S6EBOfHjElIKoK06DiVg0gjQroza_pIouYXb0JG6FmDQ7iM-oV_Q1G4CO1rx9OHRIQFyEtKGG=s1600)
 
