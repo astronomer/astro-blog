@@ -298,4 +298,4 @@ Learn more about how Airflow and Astronomer can help your machine learning proce
 
 \----
 
-*The article was created thanks to [Steven Hillion](https://www.linkedin.com/in/shillion/), Head of Data at Astronomer.*
+*The article was created with the help of [Steven Hillion](https://www.linkedin.com/in/shillion/), Head of Data at Astronomer.*
