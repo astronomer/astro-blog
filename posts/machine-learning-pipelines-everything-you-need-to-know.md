@@ -3,7 +3,7 @@ slug: machine-learning-pipelines-everything-you-need-to-know
 title: "Machine Learning Pipelines: Everything You Need to Know"
 description: "Learn what is the process of building a ML pipeline, what are the
   steps, and how to do it with Airflow and Astronomer.  "
-heroImagePath: ../assets/mlpipelines.png
+heroImagePath: ../assets/mlp.png
 authors:
   - Ula Rydiger
   - Faisal Hoda
