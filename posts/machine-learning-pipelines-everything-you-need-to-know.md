@@ -5,14 +5,11 @@ description: "Learn what is the process of building a ML pipeline, what are the
   steps, and how to do it with Airflow and Astronomer.  "
 heroImagePath: ../assets/mlpipelines.png
 authors:
-  - Steven Hillion
   - Ula Rydiger
   - Faisal Hoda
 date: 2021-10-26T10:44:47.187Z
 ---
 # What is a Machine Learning pipeline?
-
-
 
 Machine Learning pipelines are data pipelines that involve the execution of machine learning algorithms, typically for the training of predictive models. Machine learning (ML) engineers use ML pipelines to build models that learn from data to help answer questions in order to:
 
@@ -43,8 +40,6 @@ Machine learning is a complicated process that traditionally has been done as pa
 
 Secondly, if you’re a data scientist or a data engineer, remember to think about how the ML model is going to be deployed. Instead of keeping the process of building and training models offsite in the data science “lab,”it’s better to make sure the model is an integral part of the business environment. Often, operational business environments don’t have access to the same data that data scientists have when they’re training the model. This is why it’s important for data science projects to start with a clear understanding of how a model will be deployed and the business requirements. Instead of thinking “how can we build the best possible model?”, it’s better to ask “how can we have the biggest impact on the business?”.
 
-
-
 For example, let’s say you’re working on a predictive maintenance model for a car to inform drivers if something is not working, giving them recommendations on what to do (e.g. “possible tire problems: contact the workshop”). For your company to be able to make real-time recommendations, the model needs to run inside the car. But that means it probably won’t have access to prior service records or data from other vehicles. So there’s no point including those in the model, as useful as they might be in improving accuracy.
 
 ## Automated ML pipelines
@@ -67,15 +62,11 @@ Airflow can help both in the experimentation (semi-manual) and the production (f
 
 When building ML pipelines with Airflow, you gain:
 
-
-
 1. **Flexibility** - You can connect Airflow to any tool. Additionally, Airflow automatically triggers a retry if an error occurs, and won’t pull data until the issue is solved. 
 2. **Reproducibility of pipelines** - Reuse the same code for different machine learning models and datasets, solving the problem of complexity.
 3. **Productionized ML pipelines** - Airflow gives you the ability to build production-ready pipelines for ML models.
 4. **Improved CI/CD** - Once you’ve built a model, you can just kick off the pipeline, as Airflow handles independent pieces for you automatically in a CI/CD fashion. 
 5. **Easier experimentation stage** - Some datasets take hours to pull, but with Airflow, you don’t have to do it manually. Just come back when the initial analytics is done.
-
-
 
 ## How to build a Machine Learning pipeline with Apache Airflow and Astronomer
 
@@ -134,7 +125,7 @@ DAG Example**
 
 Git repo: <https://github.com/astronomer/ds-ml-example-dags>
 
-````
+```
 from airflow.decorators import task, dag
 from airflow.providers.google.cloud.hooks.bigquery import BigQueryHook
 
@@ -301,8 +292,10 @@ def using_gcs_for_xcom_ds():
 	# fit(train(feature_engineering(preprocessing(load_data()))))
     
 dag = using_gcs_for_xcom_ds()
-
-
-````
+```
 
 Learn more about how Airflow and Astronomer can help your machine learning processes. Get in touch with our experts to schedule an introductory [call.](https://www.astronomer.io/get-astronomer)
+
+\----
+
+*The article was created thanks to [Steven Hillion](https://www.linkedin.com/in/shillion/), Head of Data at Astronomer.*
