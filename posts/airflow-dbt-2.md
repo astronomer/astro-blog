@@ -26,7 +26,6 @@ Because all of our dbt models are still running on the schedule of a single Airf
 
 1. We leverage the selectors.yml file ([introduced in dbt 0.18](https://docs.getdbt.com/reference/node-selection/yaml-selectors/)) in order to define a set of model selectors for each Airflow DAG schedule we want to create. We then use dbt's tagging feature to tag every one of our models with a desired schedule interval.
 
-    <!-- markdownlint-disable MD031 -->
    ```python
    selectors:
      - name: "standard_schedule"
@@ -35,7 +34,7 @@ Because all of our dbt models are still running on the schedule of a single Airf
        definition: "tag:late_schedule"
      - name: "hourly_schedule"
        definition: "tag:hourly_schedule"
-    ```
+   ```
 2. We then use our CI/CD provider to run a Python script that:
 
    1. Runs `dbt compile` to create a fresh copy of `manifest.json`
@@ -244,3 +243,5 @@ And voila! We have ourselves and end-to-end ELT pipeline that:
 ## Closing Thoughts
 
 While the system we have in place today is an excellent MVP that delivers the desired experience for our team, there is always progress to be made at the intersection of Airflow and dbt. For now, we look forward to memorializing this defined process as a supported usage pattern, but we look forward to building upon this integration going forward to create a beautiful experience for our users. As we continue on this journey, we would love to hear from other folks in the community who have encountered a similar challenge and/or have built an effective solution, so please [reach out](https://astronomer.io/contact) if you're open to brainstorming together.
+
+We decided to take the topic of building a scalable analytics architecture with Airflow and dbt a little further and put together a utility package that can be used to generate Airflow DAGs from dbt models in a more convenient fashion.[ In part 3](https://www.astronomer.io/blog/airflow-dbt-3) we give you a brief overview of how to use the package and show you some sample configurations.
