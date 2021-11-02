@@ -3,7 +3,7 @@ slug: "Datasembly: From One Airflow Instance to Multiple Deployments with Astron
 title: "Datasembly: From One Airflow Instance to Multiple Deployments with Astronomer"
 description: Learn how Datasembly went from using native Airflow to cooperating
   with Astronomer.
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/datasembly.png
 authors:
   - Ula Rydiger
 date: 2021-11-02T09:44:27.909Z
