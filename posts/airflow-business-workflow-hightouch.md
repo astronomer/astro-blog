@@ -38,6 +38,18 @@ So how does this work in practice? [In Airflow, a standard ELT or ETL workflow m
 For example, **Mattermost**, an open-source messaging platform, created an operational
 workflow to help their sales team stay on top of new leads. The initial trigger of this workflow is a user creating a new workspace within the Mattermost cloud app. Then, when that new data is detected in their data warehouse, that user is converted from a Lead to a Contact in Salesforce. Then, an opportunity is created for that contact’s company and an account manager is assigned. Finally, a task is created for that account manager to reach out to the contact with information on Mattermost’s paid plans.
 
+
+
+1. Airflow runs dbt "Hourly Job" to create tables of records that need to be updated/created in Salesforce.
+
+2. Hightouch sync via API call when the dbt jobs finish.
+
+3. Salesforce data is updated/created via Hightouch Bulk API.
+
+4. Stitch sync Salesforce data into Snowflake (every 15 minutes).
+
+
+
 ![Airflow DBT Stich Salesforce Hightouch](../assets/astro_blog_11032021.png)
 
 ## Airflow + Reverse ETL
