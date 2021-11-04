@@ -1,14 +1,14 @@
 ---
 slug: airflow-business-workflow-hightouch
-title: "Democratizing the Data Stack—Airflow for Business Workflows"
-description: Learn how Hightouch drives action in marketing & sales teams with Reverse ETL, SQL, and Apache Airflow
+title: Democratizing the Data Stack—Airflow for Business Workflows
+description: Learn how Hightouch drives action in marketing & sales teams with
+  Reverse ETL, SQL, and Apache Airflow
 heroImagePath: ../assets/Cover_Hightouch.png
 authors:
   - Viraj Parekh
   - Kashish Gupta
 date: 2021-10-28T15:38:57.241Z
 ---
-
 As data has become more relevant to all parts of a business, SQL has risen as a universal access layer that allows anyone to get the data they need to do their job. This is a democratizing force as data is no longer stuck in the hands of an engineer — it can be used by anyone in the company to answer questions about the business. Today, using Reverse ETL tools like Hightouch and modern orchestrators like Apache Airflow takes the power of SQL to the next level.
 
 ## Operational Workflows & Analytics Workflows
@@ -19,9 +19,9 @@ On the other hand, [operational data workflows](https://hightouch.io/blog/what-i
 
 The rise of operational data workflows is only possible due to key changes in modern data warehouses. Warehouses are now:
 
-- more affordable (you only pay for compute at query run time)
-- more accessible (you don’t need full time staff to maintain your warehouse with SaaS solutions)
-- faster than ever (shared compute allows for nearly infinite compute).
+* more affordable (you only pay for compute at query run time)
+* more accessible (you don’t need full time staff to maintain your warehouse with SaaS solutions)
+* faster than ever (shared compute allows for nearly infinite compute).
 
 As companies standardized on these warehouses, they became the central store for business data, models, and key metrics (e.g: ARR and LTV). Naturally, analysts responsible for these metrics started to see the potential within the warehouse as a means for activating their own workflows and projects. With the warehouse as the source of truth, **reverse ETL empowers analysts to use SQL as both an access layer AND as an action layer.**
 
@@ -33,12 +33,12 @@ There are some pipelines that data engineers are always going to be responsible 
 
 ## Using Airflow for Operational Workflows: Case Studies
 
-So how does this work in practice? [In Airflow, a standard ELT or ETL workflow might hit an external API in the first task, pull that data to a data lake (S3) in the next one, load it into the data warehouse downstream, and end with a few transforms to put it into a materialized view](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake). So far, this is an analytic data workflow - the data is being prepped for analysis. From there, a single Airflow task with a Hightouch operator can be [used to operationalize the workflow by _pushing_ to an external tool](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake-hightouch).
+So how does this work in practice? [In Airflow, a standard ELT or ETL workflow might hit an external API in the first task, pull that data to a data lake (S3) in the next one, load it into the data warehouse downstream, and end with a few transforms to put it into a materialized view](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake). So far, this is an analytic data workflow - the data is being prepped for analysis. From there, a single Airflow task with a Hightouch operator can be [used to operationalize the workflow by *pushing* to an external tool](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake-hightouch).
 
 For example, **Mattermost**, an open-source messaging platform, created an operational
 workflow to help their sales team stay on top of new leads. The initial trigger of this workflow is a user creating a new workspace within the Mattermost cloud app. Then, when that new data is detected in their data warehouse, that user is converted from a Lead to a Contact in Salesforce. Then, an opportunity is created for that contact’s company and an account manager is assigned. Finally, a task is created for that account manager to reach out to the contact with information on Mattermost’s paid plans.
 
-![Airflow DBT Stich Salesforce Hightouch](../assets/airflow-business-workflow-hightouch/image1.jpg)
+![Airflow DBT Stich Salesforce Hightouch](../assets/astro_blog_11032021.png)
 
 ## Airflow + Reverse ETL
 
