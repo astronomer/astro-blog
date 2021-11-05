@@ -68,6 +68,8 @@ When building ML pipelines with Airflow, you gain:
 4. **Improved CI/CD** - Once you’ve built a model, you can just kick off the pipeline, as Airflow handles independent pieces for you automatically in a CI/CD fashion. 
 5. **Easier experimentation stage** - Some datasets take hours to pull, but with Airflow, you don’t have to do it manually. Just come back when the initial analytics is done.
 
+   [Learn more about how Airflow can help with machine learning here.](https://www.astronomer.io/use-cases/machine-learning/)
+
 ## How to build a Machine Learning pipeline with Apache Airflow and Astronomer
 
 In Airflow each pipeline is constructed as a DAG (Directed Acyclic Graph). This allows for a predictable flow for task execution and their resulting data outputs. 
