@@ -8,9 +8,9 @@ authors:
   - Julia Wrzosińska
 date: 2021-11-17T12:59:22.265Z
 ---
-The need to compare data tools and to keep hunting for the perfect one seems never-ending. We get it - choosing the right data management tool for a business is a virtually final decision. Once you go all-in with a data orchestrator, moving to another tool would be a waste of time, money, and resources. That's why it's worthwhile to find out which workflow manager is ideally suited for your specific needs and ready to grow with you. Today, we will help you choose by looking into the differences and similarities between two of our favorites: [Apache Airflow](https://airflow.apache.org/) and [Apache Beam](https://beam.apache.org/). 
+The need to compare data tools and to keep hunting for the perfect one seems never-ending. We get it - choosing the right data management tool for a business is a virtually final decision. Once you go all-in with a data orchestrator, moving to another tool would be a waste of time, money, and resources. That's why it's worthwhile to find out which workflow manager is ideally suited for *your* specific needs and ready to grow with you. Today, we will help you choose by looking into the differences and similarities between two of our favorites: [Apache Airflow](https://airflow.apache.org/) and [Apache Beam](https://beam.apache.org/). 
 
-![](../assets/astronomer_blogpost_17112021-1-.png)
+![](../assets/astronomer_blogpost_17112021-2-.png)
 
 ## Airflow vs. Beam
 
