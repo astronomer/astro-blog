@@ -8,25 +8,15 @@ authors:
   - Julia Wrzosińska
 date: 2021-11-17T12:59:22.265Z
 ---
- 
-
- 
-
 The need to compare data tools and to keep hunting for the perfect one seems never-ending. We get it - choosing the right data management tool for a business is a virtually final decision. Once you go all-in with a data orchestrator, moving to another tool would be a waste of time, money, and resources. That's why it's worthwhile to find out which workflow manager is ideally suited for your specific needs and ready to grow with you. Today, we will help you choose by looking into the differences and similarities between two of our favorites: [Apache Airflow](https://airflow.apache.org/) and [Apache Beam](https://beam.apache.org/). 
 
- 
-
-![](https://lh6.googleusercontent.com/QeWVKZnO9P1QOZ2AB8wDnQLyvIOGuHEVVka4rYdHiDd9BOsLhC-c4Dzbdgom_z3Ok1zuxjdj1U7C2icC21yhia0DncMLix5nNu-LjyBOMc71cMqH3UCGioSB-UGhSNBUkzcsDRRo)
-
- 
+![](../assets/astronomer_blogpost_17112021-1-.png)
 
 ## Airflow vs. Beam
 
 On the surface, Apache Airflow and Apache Beam may look similar. Both were designed to organize steps of processing the data, to ensure that these steps are executed in the correct order. Both tools visualize the stages and dependencies in the form of directed acyclic graphs (DAGs) through a graphical user interface (GUI). Both are open-source, too. Airflow seems to have a broader reach with [23.5K GitHub stars](https://github.com/apache/airflow) and 9.5k forks, and more contributors. It's probably because it has more applications, as by nature Airflow serves different purposes than Beam. 
 
 **When digging a little deeper, we will find significant differences in the capabilities of these two tools and the programming models they support. Although they have some overlapping use cases, there are many things that only one can handle well. Let's have a look!**
-
-  
 
 ## Apache Airflow Basics
 
@@ -50,15 +40,11 @@ In Airflow, every task is part of a DAG (directed acyclic graph). Tasks can cons
 * Airflow was designed as a batch orchestrator, meaning streaming use cases are not thoroughly supported. Quoting the Airflow docs page: "Airflow is not a data streaming solution."
 * Airflow is somewhat complex to set up and manage following its distributed nature; however, this has been mitigated by using managed services. Moreover, the community also did a great job releasing Helm Chart that allows you to set up distributed Kubernetes deployment with ease.
 
- 
-
 ## Apache Beam Basics
 
  Apache Beam is more of an abstraction layer than a framework. It serves as a wrapper for Apache Spark, Apache Flink, Google Cloud Dataflow, and others, supporting a more or less similar programming model. The intent is that once someone learns Beam, they can run on multiple backends without getting to know them well. Beam creates batch and streaming data processing jobs, becoming an engine for dataflow, also basing the process on DAGs. The DAG nodes create a (potentially branching) pipeline. The DAG nodes are all active simultaneously, passing data pieces from one to the next as each performs some processing on it. Because of the unified model, batch and stream data are processed within Beam in the same way. 
 
 One of the main reasons to use Beam is the ability to switch between multiple runners such as Apache Spark, Apache Flink, Samza, and Google Cloud Dataflow. Without Beam, a unified programming model, varied runners have different capabilities, making it difficult to provide a portable API. Beam attempts to strike a delicate balance by actively incorporating advances from these runners into the Beam model while simultaneously engaging with the community to influence these runners' roadmaps. The Direct Runner runs pipelines to ensure that they comply with the Apache Beam paradigm as precisely as possible. Runners are provided with smarts - the more, the better.
-
- 
 
 ## Key Benefits of Beam
 
@@ -73,8 +59,6 @@ One of the main reasons to use Beam is the ability to switch between multiple ru
 * Beam Model has to be updated whenever capabilities of underlying execution engines (Spark, Flink, Samza, etc.) change. This means that it will always be a bit behind when those release new, significant features. Moreover, some of the features might simply not be available or possible to use due to the unified model of Beam. Plus, you are limited to using only the tools that Beam supports. 
 * Due to the unified model, the performance of Beam might not be the same as using the underlying services directly. Almost by definition, such unification brings some performance penalty (although the Beam community has done a great job improving that in recent years).
 * Quite often, Beam uses a sledgehammer to kill a fly. The resources need to be provisioned from fresh VMs in Google Cloud Platform dataflow, the most commonly used Beam runtime, which takes 3-4 mins. DAGs running operators, like in Airflow, can often do the work in much less time. 
-
- 
 
 ## Summary
 
