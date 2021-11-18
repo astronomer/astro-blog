@@ -35,11 +35,11 @@ There are some pipelines that data engineers are always going to be responsible 
 
 So how does this work in practice? [In Airflow, a standard ELT or ETL workflow might hit an external API in the first task, pull that data to a data lake (S3) in the next one, load it into the data warehouse downstream, and end with a few transforms to put it into a materialized view](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake).
 
-[![modern-elt-salesforce-to-snowflake.png](../assets/airflow-business-workflow-hightouch/modern-elt-salesforce-to-snowflake.png)](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake)
+![modern-elt-salesforce-to-snowflake.png](../assets/airflow-business-workflow-hightouch/modern-elt-salesforce-to-snowflake.png)
 
 So far, this is an analytic data workflow - the data is being prepped for analysis. From there, a single Airflow task with a Hightouch operator can be [used to operationalize the workflow by *pushing* to an external tool](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake-hightouch).
 
-[![modern-elt-salesforce-to-snowflake-hightouch.png](../assets/airflow-business-workflow-hightouch/modern-elt-salesforce-to-snowflake-hightouch.png)](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake-hightouch)
+![modern-elt-salesforce-to-snowflake-hightouch.png](../assets/airflow-business-workflow-hightouch/modern-elt-salesforce-to-snowflake-hightouch.png)
 
 For example, **Mattermost**, an open-source messaging platform, created an operational
 workflow to help their sales team stay on top of new leads. The initial trigger of this workflow is a user creating a new workspace within the Mattermost cloud app. Then, when that new data is detected in their data warehouse, that user is converted from a Lead to a Contact in Salesforce. Then, an opportunity is created for that contact’s company and an account manager is assigned. Finally, a task is created for that account manager to reach out to the contact with information on Mattermost’s paid plans.
