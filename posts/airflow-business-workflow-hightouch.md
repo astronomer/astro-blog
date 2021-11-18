@@ -3,7 +3,7 @@ slug: airflow-business-workflow-hightouch
 title: Democratizing the Data Stack—Airflow for Business Workflows
 description: Learn how Hightouch drives action in marketing & sales teams with
   Reverse ETL, SQL, and Apache Airflow
-heroImagePath: ../assets/Cover_Hightouch.png
+heroImagePath: ../assets/airflow-business-workflow-hightouch/hightouch_cover.png
 authors:
   - Viraj Parekh
   - Kashish Gupta
@@ -61,3 +61,5 @@ workflow to help their sales team stay on top of new leads. The initial trigger 
 ## Airflow + Reverse ETL
 
 The Airflow [Hightouch Provider](https://registry.astronomer.io/providers/hightouch) includes a production ready hook and operator that can be plugged right into your pipelines. To get started with Airflow + Hightouch, check out [these docs](https://hightouch.io/docs/integrations/airflow/) and sign up for [Hightouch](https://hightouch.io/) and [Astronomer](https://www.astronomer.io/get-astronomer/).
+
+Photo by: [Jason Goodman](https://unsplash.com/@jasongoodman_youxventures)
