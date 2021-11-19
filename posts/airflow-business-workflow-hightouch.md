@@ -3,7 +3,7 @@ slug: airflow-business-workflow-hightouch
 title: Democratizing the Data Stack—Airflow for Business Workflows
 description: Learn how Hightouch drives action in marketing & sales teams with
   Reverse ETL, SQL, and Apache Airflow
-heroImagePath: ../assets/Cover_Hightouch.png
+heroImagePath: ../assets/airflow-business-workflow-hightouch/hightouch_cover.png
 authors:
   - Viraj Parekh
   - Kashish Gupta
@@ -33,7 +33,13 @@ There are some pipelines that data engineers are always going to be responsible 
 
 ## Using Airflow for Operational Workflows: Case Studies
 
-So how does this work in practice? [In Airflow, a standard ELT or ETL workflow might hit an external API in the first task, pull that data to a data lake (S3) in the next one, load it into the data warehouse downstream, and end with a few transforms to put it into a materialized view](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake). So far, this is an analytic data workflow - the data is being prepped for analysis. From there, a single Airflow task with a Hightouch operator can be [used to operationalize the workflow by *pushing* to an external tool](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake-hightouch).
+So how does this work in practice? [In Airflow, a standard ELT or ETL workflow might hit an external API in the first task, pull that data to a data lake (S3) in the next one, load it into the data warehouse downstream, and end with a few transforms to put it into a materialized view](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake).
+
+![modern-elt-salesforce-to-snowflake.png](../assets/airflow-business-workflow-hightouch/modern-elt-salesforce-to-snowflake.png)
+
+So far, this is an analytic data workflow - the data is being prepped for analysis. From there, a single Airflow task with a Hightouch operator can be [used to operationalize the workflow by *pushing* to an external tool](https://registry.astronomer.io/dags/modern-elt-salesforce-to-snowflake-hightouch).
+
+![modern-elt-salesforce-to-snowflake-hightouch.png](../assets/airflow-business-workflow-hightouch/modern-elt-salesforce-to-snowflake-hightouch.png)
 
 For example, **Mattermost**, an open-source messaging platform, created an operational
 workflow to help their sales team stay on top of new leads. The initial trigger of this workflow is a user creating a new workspace within the Mattermost cloud app. Then, when that new data is detected in their data warehouse, that user is converted from a Lead to a Contact in Salesforce. Then, an opportunity is created for that contact’s company and an account manager is assigned. Finally, a task is created for that account manager to reach out to the contact with information on Mattermost’s paid plans.
@@ -55,3 +61,5 @@ workflow to help their sales team stay on top of new leads. The initial trigger 
 ## Airflow + Reverse ETL
 
 The Airflow [Hightouch Provider](https://registry.astronomer.io/providers/hightouch) includes a production ready hook and operator that can be plugged right into your pipelines. To get started with Airflow + Hightouch, check out [these docs](https://hightouch.io/docs/integrations/airflow/) and sign up for [Hightouch](https://hightouch.io/) and [Astronomer](https://www.astronomer.io/get-astronomer/).
+
+Photo by: [Jason Goodman](https://unsplash.com/@jasongoodman_youxventures)
