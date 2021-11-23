@@ -3,7 +3,7 @@ slug: machine-learning-pipeline-orchestration
 title: Machine Learning Pipeline Orchestration
 description: Everything you need to know about MLO, told by the expert Santona
   Tuli—Staff Data Scientist at Astronomer.
-heroImagePath: ../assets/blank.png
+heroImagePath: ../assets/interviewsantona.png
 authors:
   - Santona Tuli
 date: 2021-11-23T09:51:40.472Z
