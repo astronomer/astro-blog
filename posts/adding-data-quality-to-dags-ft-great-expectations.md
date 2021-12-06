@@ -29,7 +29,7 @@ Adding data quality to pipelines doesn’t have to happen all at once. By implem
 
 Now that we understand at a high level what to look for and how to look for it, let’s dive into a couple specific unit test cases to get your first iteration of data quality set. Using the [NYC taxi dataset](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page), we see that taxi trips involve this data:
 
-![Taxi Trip Sample Data](../assets/taxi-trip-sample-data-1.png)
+![Taxi Trip Sample Data](../assets/adding-data-quality-to-dags-ft-great-expectations/taxi-trip-sample-data-1.png "taxi-trip-sample-data-1")
 
 Let’s say we talk to our business experts about the data and learn that every ride should have at least one passenger and the length of the ride should not be null. These are great examples of low-hanging fruit for our first iteration as the expectation of the data is very clear and specific, and that data outside of the expectation is a certain indicator that something is very wrong. In Great Expectations, the tests for these columns simply looks like:
 
@@ -64,7 +64,7 @@ For advanced cases with Great Expectations, instead of just looking at simple ex
 
 Looking again at the NYC taxi data below, we can come up with an acceptance test for our data at the table level.
 
-![Taxi Trip Sample Data](../assets/taxi-trip-sample-data-2.png)
+![Taxi Trip Sample Data](../assets/adding-data-quality-to-dags-ft-great-expectations/taxi-trip-sample-data-2.png)
 
 For instance, perhaps we’d like to see if the distribution of our taxi trip distances remains similar from month to month. We could look at the distribution of our trip_distance column in January, and confirm that the distribution in February hasn’t diverged too much, using both of the previously mentioned Expectations to our Expectation Suite:
 
@@ -84,6 +84,7 @@ Where data quality tasks are run matters. When using a tool like Great Expectati
 If you’re using Write-Audit-Publish, a pattern to ensure that bad data doesn’t make it to production, then keeping the checks within the same DAG as the pipeline is ideal. You can use checkpoints to test data in batches on staging, moving failing data to an error table, or dropping it altogether. This pattern works in cases where the tests should be “close” to the data, and for ensuring that transformations in the pipeline are happening correctly. In terms of scheduling, it means that your data quality is always scheduled along with the pipeline, so critical pipelines running frequently would highly benefit from this pattern.
 
 ![Example DAG With No Data Quality](../assets/adding-data-quality-to-dags-ft-great-expectations/example-dag-no-dq.png)
+
 ![Example DAG With Data Quality](../assets/adding-data-quality-to-dags-ft-great-expectations/example-dag-dq.png)
 
 The two examples above show how easy it is to add Great Expectations operators to a working ETL pipeline. More information about how to use the `GreatExpectationsBigQueryOperator` can be found in the [Astronomer Registry](https://registry.astronomer.io/providers/great-expectations/modules/greatexpectationsbigqueryoperator).
@@ -92,7 +93,7 @@ The two examples above show how easy it is to add Great Expectations operators t
 
 This scenario is great for running checkpoints or test suites on entire tables, especially for more complex metrics like statistical analyses. As a separate DAG, multiple suites can be run on many tables simultaneously, and dependencies between test suites can be respected. This is generally better for cases where data are known to be populated at certain intervals, or data in a warehouse needs to be checked at regular intervals. For example, weekly table checks for tables that get populated by hourly or daily jobs. This data may be less critical, or may simply not be ready for checks right away (say there’s a dependency between datasets that get populated at different times). The DAGs can also be kicked off after completion of a pipeline for a post-hoc check; it’s better to run checks this way on data that aren’t critical, so if the data are wrong, the whole warehouse isn’t tainted.
 
-![Example Data Quality DAG With Multiple Great Expectations Operators](../assets/example-dag-ge-standalone.png)
+![Example Data Quality DAG With Multiple Great Expectations Operators](../assets/adding-data-quality-to-dags-ft-great-expectations/example-dag-ge-standalone.png)
 
 The above example DAG shows how to serially run a set of Great Expectation suites as its own DAG. More information on how to use the `GreatExpectationsOperator` can be found on the [Astronomer Registry](https://registry.astronomer.io/providers/great-expectations/modules/greatexpectationsoperator).
 
