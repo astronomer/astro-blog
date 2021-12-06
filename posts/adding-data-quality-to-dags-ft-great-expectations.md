@@ -1,7 +1,7 @@
 ---
 title: Adding Data Quality to DAGs ft. Great Expectations
 slug: adding-data-quality-to-dags-ft-great-expectations
-description: ''
+description: 'Adding data quality to DAGs is an iterative process, and Great Expectations is a preferred tool to use for that process.'
 heroImagePath:
 authors:
   - Benji Lampel
