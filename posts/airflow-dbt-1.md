@@ -12,7 +12,7 @@ authors:
 date: 2020-12-22T23:44:00.000Z
 ---
 
-> **Note:** All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using the Astronomer CLI.
+> **Note:** All of the code in this post is available in [this Github repository](https://github.com/astronomer/airflow-dbt-demo) and can be run locally using [the Astro CLI](https://github.com/astronomer/astro-cli).
 
 ## Editor's Note
 
@@ -20,7 +20,7 @@ At Astronomer, we're often asked how to integrate Apache Airflow with specialize
 
 In chatting with a handful of Astronomer customers who have spent time exploring solutions at the intersection of Airflow and dbt, we discovered that our friends at [Updater](https://updater.com) have built a particularly great experience for authoring, scheduling, and deploying dbt models to their Airflow environment.
 
-With that, we collaborated with [John Lynch](https://www.linkedin.com/in/john-lynch-31146579/), Senior Data Engineer, and [Flavien Bessede](https://www.linkedin.com/in/flavienbessede/), Data Engineering Manager at Updater to turn the brilliant work they've done into this two-part series covering the various approaches, considered limitations, and final output of a team who has put endless thought into building a scalable data architecture at the intersection of dbt and Airflow. We hope you enjoy.
+With that, we collaborated with [John Lynch](https://www.linkedin.com/in/john-lynch-31146579/), Senior Data Engineer, and [Flavien Bessede](https://www.linkedin.com/in/flavienbessede/), Data Engineering Manager at Updater to turn the brilliant work they've done into this three-part series covering the various approaches, considered limitations, and final output of a team who has put endless thought into building a scalable data architecture at the intersection of dbt and Airflow. We hope you enjoy.
 <!-- markdownlint-disable MD033 -->
 <hr/>
 
@@ -87,13 +87,13 @@ This Airflow DAG has two tasks:
 
 ![Beginner dbt DAG](../assets/airflow-dbt-1/dbt-basic-dag.png)
 
-We end up with simple workflow that runs and tests a dbt model seamlessly. **That is, until your dbt footprint scales and you need more granular control.**.
+We end up with simple workflow that runs and tests a dbt model seamlessly. **That is, until your dbt footprint scales and you need more granular control.**
 
 ### Growing Pains
 
 When you're just getting started with a small dbt project, a model failure in Airflow isn't much of an issue and you can debug it the same way you'd handle troubleshooting any other Airflow: by taking a peek at your Airflow logs, determining the expected dbt model output, identifying the failing model, fixing it, deploying your new code, and then re-running your Airflow task to rebuild your dbt models. As your dbt project grows and you want to invoke an increasing number of models, however, things start to get complicated.
 
-Imagine a case in which you would like to execute and test 50 dbt models on a daily basis using the DAG we defined above. As you monitor the status of your daily DAG (which now takes 2 hours to run because it needs to execute these 50 models) and hope for success , you get a dreaded Airflow task failure slack notification *just* as the DAG is about to finish running. You jump through the usual hoops of looking through Airflow logs and you notice that the _final_ model in your workflow failed because you accidentally merged in some broken code. You fix the code and deploy it, but you soon realize that rerunning a single `BashOperator` Airflow task will not only rerun your broken model, but it will also rerun entire dbt project! And thus, you instead re-run your model and find yourself waiting for another two hours, praying for success once again.
+Imagine a case in which you would like to execute and test 50 dbt models on a daily basis using the DAG we defined above. As you monitor the status of your daily DAG (which now takes 2 hours to run because it needs to execute these 50 models) and hope for success, you get a dreaded Airflow task failure slack notification *just* as the DAG is about to finish running. You jump through the usual hoops of looking through Airflow logs and you notice that the _final_ model in your workflow failed because you accidentally merged in some broken code. You fix the code and deploy it, but you soon realize that rerunning a single `BashOperator` Airflow task will not only rerun your broken model, but it will also rerun entire dbt project! And thus, you instead re-run your model and find yourself waiting for another two hours, praying for success once again.
 
 As Airflow users may already know, the problem here is that Airflow doesn't know anything about your dbt DAG. As far as Airflow is concerned, the `dbt run` task is just some arbitrary shell command that happens to take a very long time to run. Moreover, Airflow best practices call for tasks to be *atomic*, meaning each task should be responsible for one operation that can be re-run independently of the others. Because this approach consolidates multiple dbt models into a single monolithic task, it limits the granular control users are accustomed to with their Airflow workloads in the context of dbt modeling.
 
@@ -101,7 +101,7 @@ As Airflow users may already know, the problem here is that Airflow doesn't know
 
 A natural first step is to try to break down your monolithic dbt Airflow DAG into a collection of smaller DAGs that each run a subset of your dbt models. If you have a `staging` folder and a `marts` folder in your dbt project (as suggested in this [wonderful article](https://discourse.getdbt.com/t/how-we-structure-our-dbt-projects/355) by the dbt folks) you could create two Airflow DAGs: one to run all of your `staging` models by calling `dbt run --models staging` via the `BashOperator` and another to run all of your `marts` models in the same way.
 
-Once you've split up your `dbt run` commands into two separate DAGs, you'll need a way to make sure that all of your `marts` models run *only* *after* all of your `staging` models finish running. To set up interdependency between DAGs in Airflow, you can invoke a [Sensor](https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#sensors) that waits for your first DAG to finish before it triggers the second.
+Once you've split up your `dbt run` commands into two separate DAGs, you'll need a way to make sure that all of your `marts` models run *only* *after* all of your `staging` models finish running. To set up interdependency between DAGs in Airflow, you can invoke a [Sensor](https://airflow.apache.org/docs/apache-airflow/stable/concepts/sensors.html) that waits for your first DAG to finish before it triggers the second.
 
 This approach works decently well, but again it quickly breaks down at scale. The more models and Airflow DAGs you have to run, the more complicated it becomes to monitor and validate interdependent sensors. Soon enough, your team will begin relying on mental gymnastics to track dependencies between groups of models in each DAG. Moreover, the approach we're outlining here greatly undermines one of dbt's greatest strengths: model dependency management. dbt amazingly allows you to naturally define dependencies between models in code via a [`ref()` function](https://docs.getdbt.com/reference/dbt-jinja-functions/ref/) and then takes care of running everything in the right order under the hood. If we leverage the setup described above with multiple Airflow DAGs running their own subgroups of models, we inadvertently waste cycles worrying about the order of our tasks without taking advantage of core dbt functionality to alleviate that very problem.
 
