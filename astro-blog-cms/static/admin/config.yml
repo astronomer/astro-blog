@@ -14,9 +14,14 @@ collections:
     create: true
     fields:
       - { name: slug, label: URL slug }
-      - { name: title, label: Title }
-      - { name: description, label: Description, widget: string }
-      - { name: heroImagePath, label: Hero Image Path, default: ../assets/blank.png }
+      - { name: template, label: Template, widget: select, options: ['Default', 'Case Study'] }
+      - { name: metaTitle, label: SEO Title }
+      - { name: metaDescription, label: SEO Description }
+      - { name: metaTags, label: SEO Tags }
+      - { name: metaImage, label: SEO Image }
+      - { name: title, label: Post Title }
+      - { name: description, label: Post Excerpt, widget: string }
+      - { name: heroImagePath, label: Hero Image, default: ../assets/blank.png }
       - { name: authors, label: Authors, widget: list }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
