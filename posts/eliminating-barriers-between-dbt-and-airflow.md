@@ -11,13 +11,22 @@ date: 2022-11-30T00:00:00.000Z
 
 > All code in this post can be found in [this GitHub repository](https://github.com/astronomer/airflow-dbt-blog). 
 
-In August 2021, we published the final part of a 3-part blog post ([Part 1](https://www.astronomer.io/blog/airflow-dbt-1), 
-[Part 2](https://www.astronomer.io/blog/airflow-dbt-2), [Part 3](https://www.astronomer.io/blog/airflow-dbt-3/)). These 
-blogs became instrumental to the guidance that we provided to our customers on how to run dbt transformation pipelines 
-within an Airflow DAG. Since that time, there have been rapid changes to both Airflow and dbt, as well as obvious pain 
-points when embedding dbt projects in an Airflow environment.
+In August 2021, we published the final part of a 3-part blog post. These 
+blogs became instrumental to the guidance we provided to our customers when running dbt transformation pipelines in 
+Airflow. Since then, there have been rapid changes to both Airflow and dbt and obvious pain points when embedding dbt 
+projects in an Airflow environment.
 
-In this post, we'll provide guidance to alleviate those pain points and share methods used internally at Astronomer to 
+> Read the original dbt blogs (from Astronomer) here:
+> 
+> - [Part 1](https://www.astronomer.io/blog/airflow-dbt-1): Building a Scalable Analytics Architecture With Airflow and 
+>dbt
+> - [Part 2](https://www.astronomer.io/blog/airflow-dbt-2): Building a Scalable Analytics Architecture With Airflow and 
+>dbt: Part 2
+> - [Part 3](https://www.astronomer.io/blog/airflow-dbt-3/): Building a Scalable Analytics Architecture With Airflow and 
+>dbt: Part 3
+>
+
+In this post, we'll guide you to alleviate those pain points and share methods used internally at Astronomer to 
 leverage dbt models in Airflow.
 
 
@@ -29,15 +38,15 @@ leverage dbt models in Airflow.
 > dependent packages. This, in turn, may break other dependencies and push the problem to another set of packages.
 > -- [Wikipedia](https://en.wikipedia.org/wiki/Dependency_hell)
 
-By nature of what each of these platforms provide, dbt and Airflow share many common packages (one of the most 
-prevalent of these is [Jinja](https://jinja.palletsprojects.com)). In working with our customers we found that whenever 
+By nature of what each of these platforms provides, dbt and Airflow share many standard packages (one of the most 
+prevalent of these is [Jinja](https://jinja.palletsprojects.com)). Working with our customers, we found that whenever 
 a new shiny update was released for either Airflow or dbt, those updates would clash and prevent Airflow images 
 from building due to *Dependency Hell*.
 
-The solution to this issue is quite elegant but also simple. To keep Airflow and dbt dependencies from clashing 
-with each other, we began using a [Python Virtual Environment](https://docs.python.org/3/library/venv.html) to isolate 
-them. In the self-same *Dockerfile* that is pulling the Astronomer managed Airflow image, we can add 
-additional steps to create a virtual environment for dbt core:
+The solution to this issue is quite elegant but also simple. To keep Airflow and dbt dependencies from clashing, we used 
+a [Python Virtual Environment](https://docs.python.org/3/library/venv.html) to isolate them. In the self-same 
+*Dockerfile* that is pulling the Astronomer-managed Airflow image, we can add additional steps to create a virtual 
+environment for dbt core:
 
 ```dockerfile
 # /airflow_project/Dockerfile
@@ -69,10 +78,10 @@ RUN chmod +x /usr/bin/dbt
 USER astro
 ```
 
-Now that we've added these layers in our `Dockerfile`, a virtual environment for dbt is created when creating our
-sandbox (done by running `astro dev start`).
+Now that we've added these layers in our `Dockerfile`, a virtual environment for dbt initializes when our sandbox is 
+built (done by running `astro dev start`).
 
-So what would this look like when running a dbt command in a DAG? Simply use a [BashOperator](https://registry.astronomer.io/providers/apache-airflow/modules/bashoperator) 
+So what would this look like when running a dbt command in a DAG? Use a [BashOperator](https://registry.astronomer.io/providers/apache-airflow/modules/bashoperator) 
 to run the dbt command:
 
 ```python
@@ -152,9 +161,9 @@ on this topic may be helpful, but ultimately this is what our team at Astronomer
 Notice that we have multiple projects nested in that `include/dbt` parent directory. These are two example projects 
 provided by dbt labs
 
-1. [jaffle_shop](https://github.com/dbt-labs/jaffle_shop) - jaffle_shop is a fictional ecommerce store. This dbt project 
-transforms raw data from an app database into a customers and orders model ready for analytics.
-2. [mrr-playbook](https://github.com/dbt-labs/mrr-playbook) -  This dbt project is a worked example to demonstrate how 
+1. [jaffle_shop](https://github.com/dbt-labs/jaffle_shop) - jaffle_shop is a fictional eCommerce store. This dbt project 
+transforms raw data from an app database into a customer and orders model ready for analytics.
+2. [mrr-playbook](https://github.com/dbt-labs/mrr-playbook) -  This dbt project is a working example demonstrating how 
 to model subscription revenue.
 
 With this structure, we are ready to parse those projects and their associated models within Airflow.
@@ -172,7 +181,7 @@ test commands in that model (this will allow us to create cross DAG dependencies
 - Pass a set of default environment variables to each dbt `BashOperator` (necessary for authenticating to the data 
 warehouse defined in our [profiles.yml](https://docs.getdbt.com/reference/profiles.yml)).
 
-With those goals in mind, here is the resulting script looks like in practice:
+With those goals in mind, here is what the resulting script looks like:
 
 ```python
 # airflow_project/include/utils/dbt_dag_parser.py
@@ -376,7 +385,7 @@ task group model:
 ![DAG including two task groups for the “dbt_run” and “dbt_test” tasks](../assets/eliminating-barriers-between-dbt-and-airflow/expanded_dbt_model.png)
 
 Our dbt utility parser also creates the following datasets off of each `dbt test` BashOperator. These can be viewed in 
-the `Browse >> DAG Dependencies` menu as well as the `Datasets` menu and are important for setting cross DAG 
+the `Browse >> DAG Dependencies` menu as well as the `Datasets` menu and are essential for setting cross DAG 
 dependencies:
 
 ![DAG Dependencies view for the jaffle_shop DAG](../assets/eliminating-barriers-between-dbt-and-airflow/resulting_datasets.png)
