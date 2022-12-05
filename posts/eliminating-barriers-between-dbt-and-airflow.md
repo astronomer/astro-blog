@@ -40,12 +40,12 @@ leverage dbt models in Airflow.
 
 By nature of what each of these platforms provides, dbt and Airflow share many standard packages (one of the most 
 prevalent of these is [Jinja](https://jinja.palletsprojects.com)). Working with our customers, we found that whenever 
-a new shiny update was released for either Airflow or dbt, those updates would clash and prevent Airflow images 
-from building due to *Dependency Hell*.
+a new shiny update dropped for Airflow or dbt, those updates would clash and prevent Airflow images from building due to 
+*Dependency Hell*.
 
 The solution to this issue is quite elegant but also simple. To keep Airflow and dbt dependencies from clashing, we used 
 a [Python Virtual Environment](https://docs.python.org/3/library/venv.html) to isolate them. In the self-same 
-*Dockerfile* that is pulling the Astronomer-managed Airflow image, we can add additional steps to create a virtual 
+*Dockerfile* that is pulls the Astronomer-managed Airflow image, we can add additional steps to create a virtual 
 environment for dbt core:
 
 ```dockerfile
@@ -78,8 +78,8 @@ RUN chmod +x /usr/bin/dbt
 USER astro
 ```
 
-Now that we've added these layers in our `Dockerfile`, a virtual environment for dbt initializes when our sandbox is 
-built (done by running `astro dev start`).
+Now that we've added these layers in our `Dockerfile`, a virtual environment for dbt initializes when our sandbox builds 
+(done by running `astro dev start`).
 
 So what would this look like when running a dbt command in a DAG? Use a [BashOperator](https://registry.astronomer.io/providers/apache-airflow/modules/bashoperator) 
 to run the dbt command:
@@ -110,15 +110,16 @@ with DAG(
 
 ## Structuring your dbt projects in Airflow
 
-A common headache that our customers have run into is how to structure a directory of multiple dbt projects *within 
-Airflow*. [dbt's official documentation](https://docs.getdbt.com/guides/best-practices/how-we-structure/1-guide-overview) 
-on this topic may be helpful, but ultimately this is what our team at Astronomer ended up doing:
+Our customers have encountered a common headache: how to structure a directory of multiple dbt projects *within Airflow*. 
+We found [dbt's official documentation](https://docs.getdbt.com/guides/best-practices/how-we-structure/1-guide-overview) 
+on this topic helpful, but ultimately this is what our team at Astronomer ended up doing:
 
 ```markdown
 ├── Dockerfile
 ├── README.md
 ├── airflow_settings.yaml
 ├── dags
+│   ├── attribution-playbook.py
 │   ├── dbt_manifest_create.py
 │   ├── extract_dag.py
 │   ├── jaffle_shop.py
@@ -127,6 +128,14 @@ on this topic may be helpful, but ultimately this is what our team at Astronomer
 │   └── mrr-playbook.py
 ├── include
 │   ├── dbt
+│   │   ├── attribution-playbook
+│   │   │   ├── README.md
+│   │   │   ├── analysis
+│   │   │   ├── data
+│   │   │   ├── dbt_packages
+│   │   │   ├── dbt_project.yml
+│   │   │   ├── logs
+│   │   │   └── models
 │   │   ├── jaffle_shop
 │   │   │   ├── LICENSE
 │   │   │   ├── README.md
@@ -158,13 +167,17 @@ on this topic may be helpful, but ultimately this is what our team at Astronomer
         └── test_dag_integrity.py
 ```
 
-Notice that we have multiple projects nested in that `include/dbt` parent directory. These are two example projects 
-provided by dbt labs
+Notice that we have multiple projects nested in that `include/dbt` parent directory. Each of these projects has its own 
+`dbt_project.yml` files and dbt standard directories (i.e., `models`, `macros`, `data`). These projects originated 
+from [dbt labs](https://github.com/dbt-labs) and are simply example projects with dummy data. For more links to each 
+project, see below:
 
 1. [jaffle_shop](https://github.com/dbt-labs/jaffle_shop) - jaffle_shop is a fictional eCommerce store. This dbt project 
 transforms raw data from an app database into a customer and orders model ready for analytics.
 2. [mrr-playbook](https://github.com/dbt-labs/mrr-playbook) -  This dbt project is a working example demonstrating how 
 to model subscription revenue.
+3. [attribution-playbook](http://github.com/dbt-labs/attribution-playbook) - This dbt project is a working example to 
+demonstrate how to model customer attribution.
 
 With this structure, we are ready to parse those projects and their associated models within Airflow.
 
@@ -175,9 +188,9 @@ This utility parses through the well-known dbt [manifest.json](https://docs.getd
 file to dynamically generate `BashOperators` for each model of a dbt project embedded in Airflow. Using this as a 
 starting point, we can modify it to accomplish the following goals:
 
-- Add a parameter to filter down to a specific dbt project
+- Add a parameter to filter down to a specific dbt project.
 - Create an [Airflow Dataset](https://airflow.apache.org/docs/apache-airflow/stable/concepts/datasets.html) for the dbt 
-test commands in that model (this will allow us to create cross DAG dependencies off of specific steps in our model).
+test commands in that model (this will allow us to create cross-DAG dependencies off of specific steps in our model).
 - Pass a set of default environment variables to each dbt `BashOperator` (necessary for authenticating to the data 
 warehouse defined in our [profiles.yml](https://docs.getdbt.com/reference/profiles.yml)).
 
@@ -330,7 +343,7 @@ def load_dbt_manifest(project_dir):
     return file_content
 ```
 
-This `DbtDagParser` can now be called in an Airflow DAG to dynamically generate that dbt Model in Airflow:
+This `DbtDagParser` can now be called in an Airflow DAG to generate that dbt Model in Airflow:
 
 ```python
 #/airflow_project/dags/jaffle_shop.py
@@ -379,29 +392,29 @@ The graph view for this DAG would render as this:
 
 ![DAG including multiple task groups for each dbt model](../assets/eliminating-barriers-between-dbt-and-airflow/dbt_advanced_dag_graph_view.png)
 
-Each dbt model contains bash operators for the `dbt run` and `dbt test` commands. These can be seen by clicking on the 
+Each dbt model contains BashOperators for the `dbt run` and `dbt test` commands. These are viewable by clicking on the 
 task group model:
 
 ![DAG including two task groups for the “dbt_run” and “dbt_test” tasks](../assets/eliminating-barriers-between-dbt-and-airflow/expanded_dbt_model.png)
 
-Our dbt utility parser also creates the following datasets off of each `dbt test` BashOperator. These can be viewed in 
-the `Browse >> DAG Dependencies` menu as well as the `Datasets` menu and are essential for setting cross DAG 
-dependencies:
+Our dbt utility parser also creates the following datasets from each `dbt test` BashOperator. These datasets are 
+viewable in the `Browse >> DAG Dependencies` menu, as well as the `Datasets` menu, and are essential for setting 
+cross-DAG dependencies:
 
 ![DAG Dependencies view for the jaffle_shop DAG](../assets/eliminating-barriers-between-dbt-and-airflow/resulting_datasets.png)
 
 ## Setting Cross DAG Dependencies
 
-With the release of Airflow 2.4, a new method of creating cross-dag dependencies was introduced. [Datasets](https://airflow.apache.org/docs/apache-airflow/stable/concepts/datasets.html) 
-provide Airflow users the ability to schedule a DAG based upon a task updating a dataset. In our case, the task being a 
-`BashOperator` running our dbt models. In the dbt Parser utility, we ensured datasets were generated off of each test model. 
-Making them callable to any downstream Airlfow DAGs. But why does this matter?
+The release of Airflow 2.4 introduced a new method of creating cross-DAG dependencies. [Datasets](https://airflow.apache.org/docs/apache-airflow/stable/concepts/datasets.html) 
+allow Airflow users to schedule a DAG when an upstream task updates a dataset. In our case, the Airflow task is a 
+`BashOperator` running our dbt models. In the dbt parser utility, we ensured datasets emit off of each test 
+model (making them callable to any downstream Airflow DAGs) -- but why does this matter?
 
-It matters because dbt can now be used as the *Transform* step of traditional ETL/ELT workflows (and Airflow can be used 
-to orchestrate the *Extract* & *Load* steps).
+It matters because we can now utilize dbt in the Transform step of our traditional ETL/ELT workflows (and utilize 
+Airflow to orchestrate the *Extract* & *Load* steps).
 
-So, if in our Airflow deployment we have other (non-dbt) dags that were responsible for data ingestion, loading, reverse
-etl's, etc. then they could be intermingled with our embedded dbt models. When we set up these dependencies between our 
+So, if in our Airflow deployment, we have other (non-dbt) DAGs responsible for data ingestion, loading, reverse
+ETLs, then they could be intermingled with our embedded dbt models. When we set up these dependencies between our 
 dbt DAGs and our non-dbt DAGs, our `DAG Dependencies` view tells the ETL story:
 
 ![DAG Dependencies view for the jaffle_shop DAG](../assets/eliminating-barriers-between-dbt-and-airflow/dag_dependencies_etl.png)
@@ -409,6 +422,7 @@ dbt DAGs and our non-dbt DAGs, our `DAG Dependencies` view tells the ETL story:
 - `extract_dag`: could represent ingestion from an endpoint, database, or similar
 - `jaffle_shop`: dbt model 1
 - `mrr-playbook`: dbt model 2
+- `attribution-playbook`: dbt model 3
 - `load_dag_a`: DAG that needs to run downstream of dbt model(s)
 - `load_dag_b`: DAG that needs to run downstream of dbt model(s)
 
